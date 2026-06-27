@@ -3,8 +3,9 @@ let songs = [];
 const artistFilter = document.getElementById("artist-filter");
 const languageFilter = document.getElementById("language-filter");
 const songList = document.getElementById("song-list");
+const tagSearch = document.getElementById("tag-search");
 
-fetch("sscdbg.json?v=${Date.now()}")
+fetch(`sscdbg.json?v=${Date.now()}`)
   .then(response => response.json())
   .then(data => {
     songs = data;
@@ -16,7 +17,6 @@ fetch("sscdbg.json?v=${Date.now()}")
 
 function makeArtistFilter() {
   const artists = [...new Set(songs.map(song => song.artist))];
-
   artists.sort();
 
   artists.forEach(artist => {
@@ -29,7 +29,6 @@ function makeArtistFilter() {
 
 function makeLanguageFilter() {
   const languages = [...new Set(songs.flatMap(song => song.language))];
-
   languages.sort();
 
   languages.forEach(language => {
@@ -42,10 +41,12 @@ function makeLanguageFilter() {
 
 artistFilter.addEventListener("change", applyFilters);
 languageFilter.addEventListener("change", applyFilters);
+tagSearch.addEventListener("input", applyFilters);
 
 function applyFilters() {
   const selectedArtist = artistFilter.value;
   const selectedLanguage = languageFilter.value;
+  const keyword = tagSearch.value.trim().toLowerCase();
 
   const filteredSongs = songs.filter(song => {
     if (selectedArtist !== "all" && song.artist !== selectedArtist) {
@@ -57,6 +58,18 @@ function applyFilters() {
       !song.language.includes(selectedLanguage)
     ) {
       return false;
+    }
+
+    if (keyword) {
+      const titleMatch = song.title.toLowerCase().includes(keyword);
+      const artistMatch = song.artist.toLowerCase().includes(keyword);
+      const tagMatch = song.tags.some(tag =>
+        tag.toLowerCase().includes(keyword)
+      );
+
+      if (!titleMatch && !artistMatch && !tagMatch) {
+        return false;
+      }
     }
 
     return true;
@@ -78,29 +91,29 @@ function renderSongs(songArray) {
       <p>Language: ${song.language.join(", ")}</p>
       <p>Tags: ${song.tags.join(", ")}</p>
 
-      ${
-        song.memo
-        ? `<p><strong>Memo: ${song.memo}</strong></p>`
-        : ""
-      }
+      ${song.memo ? `<p><strong>Memo:</strong> ${song.memo}</p>` : ""}
 
       ${
         song.links && song.links.length > 0
-        ? `
-            ${song.links
-              .map(
-                link => `<a href="${link.url}" target="_blank">${link.title}</a>`
-              )
-              .join("<br>")}
+          ? `
+            <div>
+              ${song.links
+                .map(
+                  link =>
+                    `<a href="${link.url}" target="_blank">${link.title}</a>`
+                )
+                .join("<br>")}
+            </div>
           `
           : ""
       }
 
       <div>
         ${song.youtube
-          .map(video => `
-            <a href="${video.url}" target="_blank">${video.title}</a>
-          `)
+          .map(
+            video =>
+              `<a href="${video.url}" target="_blank">${video.title}</a>`
+          )
           .join("<br>")}
       </div>
 

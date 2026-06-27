@@ -3,9 +3,9 @@
     "id": 1,
     "title": "Dschinghis Khan",
     "year": 1979,
-    "artist" : "Dschinghis Khan",
+    "artist": ["Dschinghis Khan"],
     "language" : ["독일어"],
-    "tags": ["독일", "디스코"],
+    "tags": ["독일", "디스코", "유럽", "몽골"],
     "memo": "디스코 밴드 징기스 칸의 동명의 대표곡. 몽골의 정복자 칭기즈 칸(징기스 칸)에 관한 노래",
     "youtube": [
       {
@@ -18,9 +18,9 @@
     "id": 2,
     "title": "Machu Picchu",
     "year": 1980,
-    "artist" : "Dschinghis Khan",
+    "artist": ["Dschinghis Khan"],
     "language" : ["독일어"],
-    "tags": ["독일", "디스코"],
+    "tags": ["독일", "디스코", "유럽", "잉카"],
     "memo": "징기스 칸의 덜 유명한 곡. 잉카 문명의 몰락에 관한 전설에 관해 노래한다.",
     "links": [
       {
@@ -39,9 +39,9 @@
     "id": 3,
     "title": "Moskau",
     "year": 1979,
-    "artist" : "Dschinghis Khan",
+    "artist": ["Dschinghis Khan"],
     "language" : ["독일어"],
-    "tags": ["독일", "디스코"],
+    "tags": ["독일", "디스코", "유럽", "러시아"],
     "memo": "징기스 칸의 또다른 대표곡. 주제는 모스크바, 때문에 러시아 곡으로 오해받기도 한다.",
     "youtube": [
       {
@@ -54,9 +54,9 @@
     "id": 4,
     "title": "Pistolero",
     "year": 1981,
-    "artist" : "Dschinghis Khan",
+    "artist": ["Dschinghis Khan"],
     "language" : ["독일어"],
-    "tags": ["독일", "디스코"],
+    "tags": ["독일", "디스코", "유럽", "멕시코"],
     "memo": "징기스 칸의 덜 유명한 곡. 서부 개척시대의 멕시코를 주제로 한다.",
     "youtube": [
       {
@@ -69,9 +69,9 @@
     "id": 5,
     "title": "Nur ein Wort",
     "year": 2005,
-    "artist" : "Wir sind Helden",
+    "artist": ["Wir sind Helden"],
     "language" : ["독일어"],
-    "tags": ["독일", "팝"],
+    "tags": ["독일", "팝", "유럽"],
     "memo": "중독성 있는 독일 팝. 역재생한 뮤직비디오가 특이하다.",
     "youtube": [
       {
@@ -82,11 +82,11 @@
   },
   {
     "id": 6,
-    "title": "The girl from Ipanema",
+    "title": "The girl from Ipanema(Gatora de Ipanema)",
     "year": 1964,
-    "artist" : "Antônio Carlos Jobim",
+    "artist": ["Antônio Carlos Jobim","Stan Getz","João Gilberto", "Astrud Gilberto"],
     "language" : ["포르투갈어", "영어"],
-    "tags": ["브라질", "보사노바"],
+    "tags": ["브라질", "보사노바", "남아메리카"],
     "memo": "보사노바의 전설 조빙의 대표곡.",
     "links": [
       {
@@ -103,11 +103,11 @@
   },
   {
     "id": 7,
-    "title": "Dragostea din tei",
+    "title": "Dragostea din tei(보리수나무 아래에서의 사랑)",
     "year": 2003,
-    "artist" : "O-Zone",
+    "artist": ["O-Zone"],
     "language" : ["루마니아어"],
-    "tags": ["몰도바", "댄스"],
+    "tags": ["몰도바", "댄스", "유럽"],
     "memo": "'누마누마', 몰도바 최고의 글로벌 히트.",
     "links": [
       {
@@ -130,9 +130,9 @@
     "id": 8,
     "title": "Griechischer Wein",
     "year": 1974,
-    "artist" : "Udo Jürgens",
+    "artist": ["Udo Jürgens"],
     "language" : ["독일어"],
-    "tags": ["오스트리아", "팝","그리스"],
+    "tags": ["오스트리아", "독일", "팝","그리스", "유럽"],
     "memo": "서독의 그리스인 노동자들의 애환을 담은 곡. 독일인들의 국민가요 중 하나",
     "youtube": [
       {
@@ -145,9 +145,9 @@
     "id": 9,
     "title": "Canopée",
     "year": 2017,
-    "artist" : "Polo&Pan",
+    "artist": ["Polo&Pan","Victoria Lafaurie"],
     "language" : ["프랑스어"],
-    "tags": ["프랑스", "일렉트로닉"],
+    "tags": ["프랑스", "일렉트로닉", "유럽"],
     "memo": "자연으로의 회귀 + 전자음악.",
     "links": [
       {
@@ -165,9 +165,9 @@
     "id": 10,
     "title": "Ani Kuni",
     "year": 2021,
-    "artist" : "Polo&Pan",
+    "artist": ["Polo&Pan","아라파호 찬송가"],
     "language" : ["아라파호어"],
-    "tags": ["프랑스", "일렉트로닉"],
+    "tags": ["프랑스", "일렉트로닉", "유럽", "북아메리카"],
     "memo": "미국 와이오밍/오클라호마 지역 원주민 아라파호족의 멜로디를 차용한 전자음악.",
     "youtube": [
       {
@@ -180,24 +180,28 @@
     "id": 11,
     "title": "Comme d'habitude",
     "year": 1967,
-    "artist" : "Claude François",
+    "artist": ["Claude François"],
     "language" : ["프랑스어"],
-    "tags": ["프랑스", "샹송"],
-    "memo": "프랭크 시나트라 - My Way의 원곡. '습관처럼'",
+    "tags": ["프랑스", "샹송", "번안", "유럽"],
+    "memo": "My Way의 원곡. '습관처럼'",
     "youtube": [
       {
         "title": "Lyric Video",
         "url": "https://www.youtube.com/watch?v=qjpRSREHX1Y"
+      },
+      {
+        "title": "프랭크 시나트라 - My Way (번안곡)",
+        "url": "https://www.youtube.com/watch?v=qQzdAsjWGPg"
       }
     ]
   },
   {
     "id": 12,
-    "title": "ça pik un peu quand même",
+    "title": "Ça pik un peu quand même",
     "year": 2026,
-    "artist" : "Miki",
+    "artist": ["Miki"],
     "language" : ["프랑스어"],
-    "tags": ["프랑스", "일렉트로팝"],
+    "tags": ["프랑스", "일렉트로팝", "유럽"],
     "memo": "프랑스-한국 혼혈 싱어송라이터 miki의 곡. 뮤비가 인상적(?)임.",
     "youtube": [
       {
@@ -210,9 +214,9 @@
     "id": 13,
     "title": "Drunten im Unterland",
     "year": 1836,
-    "artist" : "슈바벤 민요",
+    "artist": ["슈바벤 민요"],
     "language" : ["독일어"],
-    "tags": ["독일", "민요", "번안"],
+    "tags": ["독일", "민요", "번안", "유럽"],
     "memo": "독일 슈바벤 지방의 민요. 한국어 번안곡명은 '옹달샘'.",
     "links": [
       {
@@ -227,6 +231,163 @@
       {
         "title": "Vreni & Rudi",
         "url": "https://www.youtube.com/watch?v=VV33wq7S0xk"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Aloha ʻOe(알로하 오에)",
+    "year": 1878,
+    "artist": ["Liliʻuokalani"],
+    "language" : ["하와이어","영어"],
+    "tags": ["미국", "민요", "하와이", "오세아니아"],
+    "memo": "하와이의 여왕이 만든, 하와이를 대표하는 이별 노래.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/43"
+      }
+    ],"youtube": [
+      {
+        "title": "The Rose Ensemble",
+        "url": "https://www.youtube.com/watch?v=_-lv7IjDsQU"
+      },
+      {
+        "title": "Tia Carrere",
+        "url": "https://www.youtube.com/watch?v=v6cYHXcWAN0"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Pokarekare Ana",
+    "year": 1914,
+    "artist": ["뉴질랜드 민요"],
+    "language" : ["마오리어"],
+    "tags": ["뉴질랜드", "민요", "오세아니아", "번안"],
+    "memo": "뉴질랜드 마오리족의 사랑 노래. 세계대전을 통해 마오리 전사들에게서 전 세계로 퍼진 곡. 한국어 번안곡명은 '연가'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/103"
+      }
+    ],"youtube": [
+      {
+        "title": "Hayley Westenra",
+        "url": "https://www.youtube.com/watch?v=9GXua6gD4Hc"
+      },
+      {
+        "title": "The Kiwi Sound",
+        "url": "https://www.youtube.com/watch?v=nqr4wamt1-g"
+      },
+      {
+        "title": "Civilization 6 OST - Pōkarekare Ana; Ka Mate",
+        "url": "https://www.youtube.com/watch?v=b7-XfrpjfFg"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Im Himmel Gibt's Kein Bier",
+    "year": 1956,
+    "artist": ["Ralph Maria Siegel"],
+    "language" : ["독일어"],
+    "tags": ["독일","권주가","유럽"],
+    "memo": "술자리 노래; 천국에는 맥주가 없기에, 우리는 지금 여기서 마신다. 영어 제목 'In Heaven There Is No Beer'",
+    "youtube": [
+      {
+        "title": "Alfons Bauer, Otto Storr, Comedian Quartet, Fred Rauch",
+        "url": "https://www.youtube.com/watch?v=Q_Pn8vWLwF0"
+      },
+      {
+        "title": "영화 Die Fischerin vom Bodensee(1956)",
+        "url": "https://www.youtube.com/watch?v=xf42pd2d6Dw"
+      },
+      {
+        "title": "케냐의 Rolling Tunes가 부른, 어쩌면 가장 잘 알려진 버전. 영어 + 키쿠유어",
+        "url": "https://www.youtube.com/watch?v=iZ62leeztW4"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "幽霊東京(유령도쿄)",
+    "year": 2019,
+    "artist": ["Ayase"],
+    "language" : ["일본어"],
+    "tags": ["일본", "보컬로이드", "아시아"],
+    "memo": "YOASOBI의 작곡가 Ayase의 보컬로이드(하츠네 미쿠) 곡.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/26"
+      }
+    ],"youtube": [
+      {
+        "title": "하츠네 미쿠(初音ミク)",
+        "url": "https://youtu.be/lWl5viCqGSc?si=_6XCUIWqcjp68Y8I"
+      },
+      {
+        "title": "Ayase 본인 커버",
+        "url": "https://youtu.be/DtBoAqkIJzI?si=uppQRVIvoE3VsB3D"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "テレキャスタービーボーイ(텔레캐스터 비보이)",
+    "year": 2019,
+    "artist": ["Three(すりぃ)"],
+    "language" : ["일본어"],
+    "tags": ["일본", "보컬로이드", "아시아"],
+    "memo": "스리이의 보컬로이드() 곡. 트랜스젠더에 대한 은유?",
+    "youtube": [
+      {
+        "title": "카가미네 렌(鏡音レン), long ver. (+MV)",
+        "url": "https://www.youtube.com/watch?v=i-DZukWFR64"
+      },
+      {
+        "title": "카가미네 렌(鏡音レン), short ver.",
+        "url": "https://www.youtube.com/watch?v=pWLhidOSYOs"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Группа крови(혈액형)",
+    "year": 1988,
+    "artist": ["Kino(Кино)"],
+    "language" : ["러시아어"],
+    "tags": ["소련", "러시아", "유럽", "락"],
+    "memo": "소련의 락 밴드 키노의 대표곡. 전쟁 반대의 메시지",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/29"
+      }
+    ],"youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=xtxjm7ciwmc"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Rain",
+    "year": 2017,
+    "artist": ["SEKAI NO OWARI"],
+    "language" : ["일본어"],
+    "tags": ["일본", "JPOP", "아시아"],
+    "memo": "SEKAI NO OWARI의, 개인적으로 좋아하는 노래.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://youtu.be/qKymy-TvdVE?si=ZEhRBxR6e5CBTx_E"
+      },
+      {
+        "title": "Short ver. PV; 영화 메리와 마녀의 꽃(2017)",
+        "url": "https://www.youtube.com/watch?v=PBlOi5OVcKs"
       }
     ]
   }
