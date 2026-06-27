@@ -16,7 +16,7 @@ fetch(`sscdbg.json?v=${Date.now()}`)
   });
 
 function makeArtistFilter() {
-  const artists = [...new Set(songs.map(song => song.artist))];
+  const artists = [...new Set(songs.flatMap(song => song.artist))];
   artists.sort();
 
   artists.forEach(artist => {
@@ -49,7 +49,10 @@ function applyFilters() {
   const keyword = tagSearch.value.trim().toLowerCase();
 
   const filteredSongs = songs.filter(song => {
-    if (selectedArtist !== "all" && song.artist !== selectedArtist) {
+    if (
+      selectedArtist !== "all" &&
+      !song.artist.includes(selectedArtist)
+    ) {
       return false;
     }
 
@@ -62,7 +65,11 @@ function applyFilters() {
 
     if (keyword) {
       const titleMatch = song.title.toLowerCase().includes(keyword);
-      const artistMatch = song.artist.toLowerCase().includes(keyword);
+
+      const artistMatch = song.artist.some(artist =>
+        artist.toLowerCase().includes(keyword)
+      );
+
       const tagMatch = song.tags.some(tag =>
         tag.toLowerCase().includes(keyword)
       );
@@ -86,10 +93,17 @@ function renderSongs(songArray) {
 
     item.innerHTML = `
       <h2>${song.id}. ${song.title}</h2>
-      <p>Artist: ${song.artist}</p>
+      <p>Artist: ${song.artist.join(", ")}</p>
       <p>Year: ${song.year}</p>
       <p>Language: ${song.language.join(", ")}</p>
-      <p>Tags: ${song.tags.join(", ")}</p>
+      <p>
+        Tags:
+        ${
+          song.tags
+            .map(tag => `<span class="tag">${tag}</span>`)
+            .join(" ")
+        }
+      </p>
 
       ${song.memo ? `<p><strong>Memo:</strong> ${song.memo}</p>` : ""}
 
@@ -98,10 +112,7 @@ function renderSongs(songArray) {
           ? `
             <div>
               ${song.links
-                .map(
-                  link =>
-                    `<a href="${link.url}" target="_blank">${link.title}</a>`
-                )
+                .map(link => `<a href="${link.url}" target="_blank">${link.title}</a>`)
                 .join("<br>")}
             </div>
           `
@@ -110,10 +121,7 @@ function renderSongs(songArray) {
 
       <div>
         ${song.youtube
-          .map(
-            video =>
-              `<a href="${video.url}" target="_blank">${video.title}</a>`
-          )
+          .map(video => `<a href="${video.url}" target="_blank">${video.title}</a>`)
           .join("<br>")}
       </div>
 
