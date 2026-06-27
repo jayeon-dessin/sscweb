@@ -8,7 +8,12 @@ const tagSearch = document.getElementById("tag-search");
 fetch(`sscdbg.json?v=${Date.now()}`)
   .then(response => response.json())
   .then(data => {
-    songs = data;
+    songs = data.map(song => ({
+      ...song,
+      artist: Array.isArray(song.artist) ? song.artist : [song.artist],
+      language: Array.isArray(song.language) ? song.language : [song.language],
+      tags: Array.isArray(song.tags) ? song.tags : []
+    }));
 
     makeArtistFilter();
     makeLanguageFilter();
@@ -16,8 +21,11 @@ fetch(`sscdbg.json?v=${Date.now()}`)
   });
 
 function makeArtistFilter() {
-  const artists = [...new Set(songs.flatMap(song => song.artist))];
-  artists.sort();
+  artistFilter.innerHTML = `<option value="all">전체</option>`;
+
+  const artists = [...new Set(songs.flatMap(song => song.artist))]
+    .filter(Boolean)
+    .sort();
 
   artists.forEach(artist => {
     const option = document.createElement("option");
@@ -28,8 +36,11 @@ function makeArtistFilter() {
 }
 
 function makeLanguageFilter() {
-  const languages = [...new Set(songs.flatMap(song => song.language))];
-  languages.sort();
+  languageFilter.innerHTML = `<option value="all">전체</option>`;
+
+  const languages = [...new Set(songs.flatMap(song => song.language))]
+    .filter(Boolean)
+    .sort();
 
   languages.forEach(language => {
     const option = document.createElement("option");
@@ -42,6 +53,12 @@ function makeLanguageFilter() {
 artistFilter.addEventListener("change", applyFilters);
 languageFilter.addEventListener("change", applyFilters);
 tagSearch.addEventListener("input", applyFilters);
+
+tagSearch.addEventListener("keydown", event => {
+  if (event.key === "Enter") {
+    applyFilters();
+  }
+});
 
 function applyFilters() {
   const selectedArtist = artistFilter.value;
@@ -98,11 +115,7 @@ function renderSongs(songArray) {
       <p>Language: ${song.language.join(", ")}</p>
       <p>
         Tags:
-        ${
-          song.tags
-            .map(tag => `<span class="tag">${tag}</span>`)
-            .join(" ")
-        }
+        ${song.tags.map(tag => `<span class="tag">${tag}</span>`).join(" ")}
       </p>
 
       ${song.memo ? `<p><strong>Memo:</strong> ${song.memo}</p>` : ""}

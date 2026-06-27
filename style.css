@@ -65,6 +65,38 @@ h1 {
     color: #999;
 }
 
+/* ---------- 검색 ---------- */
+
+.search-bar {
+    margin-bottom: 28px;
+}
+
+.search-bar input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 18px;
+
+    font-size: 16px;
+
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+
+    background: white;
+
+    transition: all .2s;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #4f8ef7;
+    box-shadow: 0 0 0 3px rgba(79,142,247,.15);
+}
+
+.search-bar input::placeholder {
+    color: #888;
+}
+
 /* ---------- 카드 ---------- */
 
 #song-list > div {

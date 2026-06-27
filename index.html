@@ -6,24 +6,29 @@
   <title>세소찾더보기</title>
 </head>
 <body>
-  <h1>곡 리스트</h1>
+  <h1>세소찾 더보기</h1>
 
-  <label for="artist-filter">Artist:</label>
-  <select id="artist-filter">
-    <option value="all">전체</option>
-  </select>
+  <div class="filter-bar">
+    <label for="artist-filter">Artist</label>
+    <select id="artist-filter">
+      <option value="all">전체</option>
+    </select>
 
-  <label for="language-filter">Language:</label>
-  <select id="language-filter">
-    <option value="all">전체</option>
-  </select>
+    <label for="language-filter">Language</label>
+    <select id="language-filter">
+      <option value="all">전체</option>
+    </select>
 
-  <label for="tag-search">검색:</label>
-  <input
-    type="text"
-    id="tag-search"
-    placeholder="제목, 아티스트, 태그 검색"
-  />
+  </div>
+
+  <div class="search-bar">
+    <input
+        type="text"
+        id="tag-search"
+        placeholder="검색"
+    />
+  </div>
+
   <hr>
 
   <div id="song-list"></div>
