@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "Dschinghis Khan",
     "year": 1979,
     "artist": ["Dschinghis Khan"],
@@ -15,7 +14,6 @@
     ]
   },
   {
-    "id": 2,
     "title": "Machu Picchu",
     "year": 1980,
     "artist": ["Dschinghis Khan"],
@@ -36,7 +34,6 @@
     ]
   },
   {
-    "id": 3,
     "title": "Moskau",
     "year": 1979,
     "artist": ["Dschinghis Khan"],
@@ -51,7 +48,6 @@
     ]
   },
   {
-    "id": 4,
     "title": "Pistolero",
     "year": 1981,
     "artist": ["Dschinghis Khan"],
@@ -66,7 +62,6 @@
     ]
   },
   {
-    "id": 5,
     "title": "Nur ein Wort",
     "year": 2005,
     "artist": ["Wir sind Helden"],
@@ -81,7 +76,6 @@
     ]
   },
   {
-    "id": 6,
     "title": "The girl from Ipanema(Gatora de Ipanema)",
     "year": 1964,
     "artist": ["Antônio Carlos Jobim","Stan Getz","João Gilberto", "Astrud Gilberto"],
@@ -102,7 +96,6 @@
     ]
   },
   {
-    "id": 7,
     "title": "Dragostea din tei(보리수나무 아래에서의 사랑)",
     "year": 2003,
     "artist": ["O-Zone"],
@@ -127,7 +120,6 @@
     ]
   },
   {
-    "id": 8,
     "title": "Griechischer Wein",
     "year": 1974,
     "artist": ["Udo Jürgens"],
@@ -142,7 +134,6 @@
     ]
   },
   {
-    "id": 9,
     "title": "Canopée",
     "year": 2017,
     "artist": ["Polo&Pan","Victoria Lafaurie"],
@@ -162,7 +153,6 @@
     ]
   },
   {
-    "id": 10,
     "title": "Ani Kuni",
     "year": 2021,
     "artist": ["Polo&Pan","아라파호 찬송가"],
@@ -177,7 +167,6 @@
     ]
   },
     {
-    "id": 11,
     "title": "Comme d'habitude",
     "year": 1967,
     "artist": ["Claude François"],
@@ -196,7 +185,6 @@
     ]
   },
   {
-    "id": 12,
     "title": "Ça pik un peu quand même",
     "year": 2026,
     "artist": ["Miki"],
@@ -211,7 +199,6 @@
     ]
   },
   {
-    "id": 13,
     "title": "Drunten im Unterland",
     "year": 1836,
     "artist": ["슈바벤 민요"],
@@ -235,7 +222,6 @@
     ]
   },
   {
-    "id": 14,
     "title": "Aloha ʻOe(알로하 오에)",
     "year": 1878,
     "artist": ["Liliʻuokalani"],
@@ -259,7 +245,6 @@
     ]
   },
   {
-    "id": 15,
     "title": "Pokarekare Ana",
     "year": 1914,
     "artist": ["뉴질랜드 민요"],
@@ -287,13 +272,12 @@
     ]
   },
   {
-    "id": 16,
-    "title": "Im Himmel Gibt's Kein Bier",
+    "title": "Im Himmel Gibt's Kein Bier(In Heaven There Is No Beer)",
     "year": 1956,
     "artist": ["Ralph Maria Siegel"],
     "language" : ["독일어"],
     "tags": ["독일","권주가","유럽"],
-    "memo": "술자리 노래; 천국에는 맥주가 없기에, 우리는 지금 여기서 마신다. 영어 제목 'In Heaven There Is No Beer'",
+    "memo": "술자리 노래; 천국에는 맥주가 없기에, 우리는 지금 여기서 마신다.",
     "youtube": [
       {
         "title": "Alfons Bauer, Otto Storr, Comedian Quartet, Fred Rauch",
@@ -304,13 +288,12 @@
         "url": "https://www.youtube.com/watch?v=xf42pd2d6Dw"
       },
       {
-        "title": "케냐의 Rolling Tunes가 부른, 어쩌면 가장 잘 알려진 버전. 영어 + 키쿠유어",
+        "title": "케냐의 Rolling Tunes가 부른, 가장 잘 알려진 버전. 영어 + 키쿠유어",
         "url": "https://www.youtube.com/watch?v=iZ62leeztW4"
       }
     ]
   },
   {
-    "id": 17,
     "title": "幽霊東京(유령도쿄)",
     "year": 2019,
     "artist": ["Ayase"],
@@ -334,13 +317,12 @@
     ]
   },
   {
-    "id": 18,
     "title": "テレキャスタービーボーイ(텔레캐스터 비보이)",
     "year": 2019,
     "artist": ["Three(すりぃ)"],
     "language" : ["일본어"],
     "tags": ["일본", "보컬로이드", "아시아"],
-    "memo": "스리이의 보컬로이드() 곡. 트랜스젠더에 대한 은유?",
+    "memo": "스리이의 보컬로이드(카가미네 렌) 곡. 트랜스젠더에 대한 은유?",
     "youtube": [
       {
         "title": "카가미네 렌(鏡音レン), long ver. (+MV)",
@@ -353,7 +335,6 @@
     ]
   },
   {
-    "id": 19,
     "title": "Группа крови(혈액형)",
     "year": 1988,
     "artist": ["Kino(Кино)"],
@@ -373,7 +354,6 @@
     ]
   },
   {
-    "id": 20,
     "title": "Rain",
     "year": 2017,
     "artist": ["SEKAI NO OWARI"],

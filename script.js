@@ -15,6 +15,12 @@ fetch(`sscdbg.json?v=${Date.now()}`)
       tags: Array.isArray(song.tags) ? song.tags : []
     }));
 
+    // 랜덤으로 섞기 (Fisher-Yates)
+    for (let i = songs.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [songs[i], songs[j]] = [songs[j], songs[i]];
+    }
+
     makeArtistFilter();
     makeLanguageFilter();
     renderSongs(songs);
@@ -109,7 +115,7 @@ function renderSongs(songArray) {
     const item = document.createElement("div");
 
     item.innerHTML = `
-      <h2>${song.id}. ${song.title}</h2>
+      <h2>${song.title}</h2>
       <p>Artist: ${song.artist.join(", ")}</p>
       <p>Year: ${song.year}</p>
       <p>Language: ${song.language.join(", ")}</p>
