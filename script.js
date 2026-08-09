@@ -11,7 +11,16 @@ const countryList = document.getElementById("country-list");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
 const backButton = document.getElementById("back-to-countries");
-
+const decorativeFlags = [
+  "KR", "DZ", "AR", "AU", "AT", "BA", "BY", "BE", "BJ", "BA",
+  "BR", "CV", "CA", "CN", "CO", "CU", "DK",
+  "EG", "FI", "FR", "GE", "DE", "GR",
+  "IS", "IN", "ID", "IR", "IE", "IT", "JM", "JP",
+  "KZ", "KE", "ML", "MX", "MD", "MN", "NL",
+  "NZ", "NG", "KP", "NO", "PK", "PH", "PL",
+  "RU", "ZA", "ES", "SE", "SY", "TW", "TH",
+  "TT", "TR", "GB", "US", "VN", 
+];
 // -------------------------------------
 // 국가 코드 → 한국어 국가명
 // -------------------------------------
@@ -84,6 +93,21 @@ fetch(`sscdbg.json?v=${Date.now()}`)
     );
   });
 
+
+function renderDecorativeFlags() {
+  const flagStrip = document.getElementById("flag-strip");
+
+  const shuffled = [...decorativeFlags]
+    .sort(() => Math.random() - 0.5);
+
+  flagStrip.innerHTML = shuffled
+    .map(code =>
+      `<span class="fi fi-${code.toLowerCase()}"></span>`
+    )
+    .join("");
+}
+
+renderDecorativeFlags();
 
 // -------------------------------------
 // 국가 목록 출력

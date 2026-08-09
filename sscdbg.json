@@ -679,5 +679,49 @@
         "url": "https://www.youtube.com/watch?v=M2cckDmNLMI"
       }
     ]
+  },
+  {
+    "title": "Water No Get Enemy",
+    "year": 1975,
+    "artist": ["Fela Kuti"],
+    "language" : ["요루바어","나이지리아피진영어"],
+    "countries": ["NG"],
+    "tags": ["아프로비트", "아프리카"],
+    "memo": "물에게는 적이 없다 - 물의 생명력, 그리고 '흑인의 힘'과 저항에 관한 은유",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/40"
+      }
+    ],"youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=IQBC5URoF0s"
+      }
+    ]
+  },
+  {
+    "title": "Waterloo",
+    "year": 1974,
+    "artist": ["ABBA"],
+    "language" : ["스웨덴어","영어"],
+    "countries": ["SE"],
+    "tags": ["유로비전","나폴레옹","유럽"],
+    "memo": "나폴레옹의 마지막 전투, 워털루 전투에 빗댄 사랑 이야기. 1974 유로비전 우승",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/41"
+      }
+    ],"youtube": [
+      {
+        "title": "MV(영어 버전)",
+        "url": "https://www.youtube.com/watch?v=Sj_9CiNkkn4"
+      },
+      {
+        "title": "음원(스웨덴어 버전)",
+        "url": "https://www.youtube.com/watch?v=7BXyboCMDS4"
+      }
+    ]
   }
 ]
