@@ -164,10 +164,10 @@
   {
     "title": "Ani Kuni",
     "year": 2021,
-    "artist": ["Polo&Pan","아라파호 찬송가"],
+    "artist": ["Polo&Pan"],
     "language" : ["아라파호어"],
     "countries": ["FR","US"],
-    "tags": ["일렉트로닉", "유럽", "북아메리카"],
+    "tags": ["일렉트로닉", "유럽", "북아메리카", "아라파호"],
     "memo": "미국 와이오밍/오클라호마 지역 원주민 아라파호족의 멜로디를 차용한 전자음악.",
     "youtube": [
       {
@@ -213,10 +213,10 @@
   {
     "title": "Drunten im Unterland",
     "year": 1836,
-    "artist": ["슈바벤 민요"],
+    "artist": ["민요"],
     "language" : ["독일어"],
     "countries": ["DE"],
-    "tags": ["민요", "번안", "유럽"],
+    "tags": ["민요", "번안", "유럽", "슈바벤"],
     "memo": "독일 슈바벤 지방의 민요. 한국어 번안곡명은 '옹달샘'.",
     "links": [
       {
@@ -336,7 +336,7 @@
   {
     "title": "テレキャスタービーボーイ(텔레캐스터 비보이)",
     "year": 2019,
-    "artist": ["Three(すりぃ)"],
+    "artist": ["すりぃ(Three)"],
     "language" : ["일본어"],
     "countries": ["JP"],
     "tags": ["보컬로이드", "아시아"],
@@ -355,7 +355,7 @@
   {
     "title": "Группа крови(혈액형)",
     "year": 1988,
-    "artist": ["Kino(Кино)"],
+    "artist": ["Кино(Kino)"],
     "language" : ["러시아어"],
     "countries": ["RU"],
     "tags": ["소련", "유럽", "락"],
@@ -388,6 +388,295 @@
       {
         "title": "Short ver. PV; 영화 메리와 마녀의 꽃(2017)",
         "url": "https://www.youtube.com/watch?v=PBlOi5OVcKs"
+      }
+    ]
+  },
+  {
+    "title": "當年情(당년정)",
+    "year": 1986,
+    "artist": ["張國榮(장국영)"],
+    "language" : ["광동어"],
+    "countries": ["HK","CN"],
+    "tags": ["홍콩", "아시아"],
+    "memo": "영화 <영웅본색> 주제가. 홍콩 느와르를 대표하는 곡",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/29"
+      }
+    ],
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=cYo047rraQw"
+      }
+    ]
+  },
+  {
+    "title": "奔向未來日子(분향미래일자)",
+    "year": 1988,
+    "artist": ["張國榮(장국영)"],
+    "language" : ["광동어"],
+    "countries": ["HK","CN"],
+    "tags": ["홍콩", "아시아"],
+    "memo": "영화 <영웅본색 2> 주제가. 비관적이고 허무한 분위기",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=vAW4ACzUBEQ"
+      }
+    ]
+  },
+  {
+    "title": "男兒當自強(남아당자강)",
+    "year": 1990,
+    "artist": ["林子祥(임자상)"],
+    "language" : ["광동어"],
+    "countries": ["HK","CN"],
+    "tags": ["홍콩", "아시아"],
+    "memo": "중국 장쑤성 전통 연주곡을 편곡한 노래. 영화 <황비홍> 주제가.",
+    "youtube": [
+      {
+        "title": "원곡(?)",
+        "url": "https://www.youtube.com/watch?v=Gz2Jq8iYruI"
+      },
+      {
+        "title": "MV, 락 버전 느낌",
+        "url": "https://www.youtube.com/watch?v=U_EgeFUTbW4"
+      }
+    ]
+  },
+  {
+    "title": "Sogno di Volare(하늘을 나는 꿈)",
+    "year": 2016,
+    "artist": ["Christopher Tin"],
+    "language" : ["이탈리아어"],
+    "countries": ["US","IT"],
+    "tags": ["게임음악", "이탈리아"],
+    "memo": "게임 <문명 6> 주제가. 레오나르도 다빈치의(것으로 알려진) 노트를 바탕으로 하여, 인류의 비행에 대한 꿈을 표현했다.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/32"
+      }
+    ],
+    "youtube": [
+      {
+        "title": "음원 (Angel City Chorale, Cappella SF, Macedonian Symphonic Orchestra)",
+        "url": "https://www.youtube.com/watch?v=WQYN2P3E06s"
+      },
+      {
+        "title": "MV (Royal Opera Chorus, Royal Philharmonic Orchestra, Anna Lapwood)",
+        "url": "https://www.youtube.com/watch?v=Q0pBzowOKU4&rco=1"
+      }
+    ]
+  },
+  {
+    "title": "Θά 'ρθεις σαν αστραπή(당신은 번개처럼 오시리라)",
+    "year": 1998,
+    "artist": ["Σταμάτης Σπανουδάκης(Stamatis Spanoudakis)"],
+    "language" : ["그리스어"],
+    "countries": ["GR"],
+    "tags": ["동로마제국", "콘스탄티노폴리스","유럽"],
+    "memo": "콘스탄티노폴리스 함락과 동로마 제국의 멸망, 그리고 콘스탄티누스 11세에 관한 전설.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/36"
+      }
+    ],
+    "youtube": [
+      {
+        "title": "Dionysis Apostolatos, 아테네 헤로데스 아티쿠스 극장 공연",
+        "url": "https://www.youtube.com/watch?v=EFZ-Y0u_wkI"
+      },
+      {
+        "title": "영어 번역, 널리 알려진 버전",
+        "url": "https://www.youtube.com/watch?v=6gar6MONCKs"
+      }
+    ]
+  },
+  {
+    "title": "Norwegian Wood (This Bird Has Flown)",
+    "year": 1965,
+    "artist": ["The Beatles"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["잉글랜드", "노르웨이","유럽"],
+    "memo": "비틀즈의 <러버 소울> 수록곡, 존 레논 작곡. Wood는 숲이 아니라 목재. 인도 전통 악기 시타르 소리가 들어간다.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/37"
+      }
+    ],
+    "youtube": [
+      {
+        "title": "Remastered 2009",
+        "url": "https://www.youtube.com/watch?v=Y_V6y1ZCg_8"
+      }
+    ]
+  },
+  {
+    "title": "Hey Jude",
+    "year": 1968,
+    "artist": ["The Beatles"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["잉글랜드","유럽"],
+    "memo": "비틀즈의 대표곡. 폴 매카트니 작곡",
+    "youtube": [
+      {
+        "title": "MV (Remastered 2015)",
+        "url": "https://www.youtube.com/watch?v=A_MjCqQoLLA"
+      },
+      {
+        "title": "음원 (Remastered 2015)",
+        "url": "https://www.youtube.com/watch?v=mQER0A0ej0M"
+      },
+      {
+        "title": "폴 매카트니 라이브, 2010년 런던 하이드 파크",
+        "url": "https://www.youtube.com/watch?v=tRnFHfI7WAQ"
+      }
+    ]
+  },
+  {
+    "title": "Yellow Submarine",
+    "year": 1966,
+    "artist": ["The Beatles"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["잉글랜드","유럽"],
+    "memo": "잠수함 소리가 들어간, 비틀즈의 동요스러운 노래. 레논-매카트니 작곡. 개인적으로 좋아한다.",
+    "youtube": [
+      {
+        "title": "MV (Remastered 2015)",
+        "url": "https://www.youtube.com/watch?v=m2uTFF_3MaA"
+      }
+    ]
+  },
+  {
+    "title": "Here Comes the Sun",
+    "year": 1969,
+    "artist": ["The Beatles"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["잉글랜드","유럽"],
+    "memo": "11집 Abbey Road 수록곡, 조지 해리슨 작곡. 어두운 날들은 지나고 밝은 태양이 찾아올 것",
+    "youtube": [
+      {
+        "title": "MV (Remastered 2009)",
+        "url": "https://www.youtube.com/watch?v=xUNqsfFUwhY"
+      }
+    ]
+  },
+  {
+    "title": "Let It Be",
+    "year": 1970,
+    "artist": ["The Beatles"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["잉글랜드","유럽"],
+    "memo": "폴 매카트니 작곡, 비틀즈의 마지막 앨범 <Let It Be>의 타이틀곡. 그냥 내버려 두자.",
+    "youtube": [
+      {
+        "title": "MV (Remastered 2015)",
+        "url": "https://www.youtube.com/watch?v=CGj85pVzRJs"
+      }
+    ]
+  },
+  {
+    "title": "Ob-La-Di, Ob-La-Da",
+    "year": 1968,
+    "artist": ["The Beatles"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["잉글랜드","유럽"],
+    "memo": "폴 매카트니 작곡, 9집 <The Beatles> 수록곡. 제목은 딱히 의미 있는 말은 아니다.",
+    "youtube": [
+      {
+        "title": "음원 (Remastered 2009)",
+        "url": "https://www.youtube.com/watch?v=_J9NpHKrKMw"
+      }
+    ]
+  },
+  {
+    "title": "春雷(춘뢰)",
+    "year": 2017,
+    "artist": ["米津玄師(요네즈 켄시)"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["JPOP", "아시아"],
+    "memo": "요네즈 켄시 4집 <BOOTLEG> 수록곡. '봄의 우레'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/39"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=zkNzxsaCunU"
+      }
+    ]
+  },
+  {
+    "title": "かいじゅうのマーチ(괴수의 행진곡)",
+    "year": 2017,
+    "artist": ["米津玄師(요네즈 켄시)"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["JPOP", "아시아"],
+    "memo": "요네즈 켄시 4집 <BOOTLEG> 수록곡. 개인적으로 좋아해서 등록했다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=_AfZwbht5yE"
+      }
+    ]
+  },
+  {
+    "title": "ピースサイン(피스 사인)",
+    "year": 2017,
+    "artist": ["米津玄師(요네즈 켄시)"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["JPOP", "아시아", "애니메이션"],
+    "memo": "<나의 히어로 아카데미아> 오프닝곡. 4집 <BOOTLEG> 수록",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=9aJVr5tTTWk"
+      }
+    ]
+  },
+  {
+    "title": "Lemon",
+    "year": 2018,
+    "artist": ["米津玄師(요네즈 켄시)"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["JPOP", "아시아"],
+    "memo": "요네즈 켄시의 대표곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=SX_ViT4Ra7k"
+      }
+    ]
+  },
+  {
+    "title": "KICK BACK",
+    "year": 2022,
+    "artist": ["米津玄師(요네즈 켄시)"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["JPOP", "아시아","애니메이션"],
+    "memo": "애니메이션 <체인소 맨> 오프닝. 그냥 질러버리는 광기어린 곡",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=M2cckDmNLMI"
       }
     ]
   }

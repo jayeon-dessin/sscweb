@@ -113,8 +113,6 @@ function renderCountries() {
     );
 
   countries.forEach(code => {
-    const normalizedCode = code.trim().toLowerCase();
-
     const count = songs.filter(song =>
       song.countries.includes(code)
     ).length;
@@ -123,10 +121,10 @@ function renderCountries() {
     button.className = "country-card";
 
     button.innerHTML = `
-      <span class="country-flag fi fi-${normalizedCode}"></span>
+      <span class="country-flag fi fi-${code.toLowerCase()}"></span>
 
       <span class="country-name">
-        ${getCountryName(code.trim().toUpperCase())}
+        ${getCountryName(code)}
       </span>
 
       <span class="country-count">
