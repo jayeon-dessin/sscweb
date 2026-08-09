@@ -261,10 +261,10 @@
   {
     "title": "Pokarekare Ana",
     "year": 1914,
-    "artist": ["뉴질랜드 민요"],
+    "artist": ["민요"],
     "language" : ["마오리어"],
     "countries": ["NZ"],
-    "tags": ["민요", "오세아니아", "번안"],
+    "tags": ["민요", "오세아니아"],
     "memo": "뉴질랜드 마오리족의 사랑 노래. 세계대전을 통해 마오리 전사들에게서 전 세계로 퍼진 곡. 한국어 번안곡명은 '연가'",
     "links": [
       {
@@ -378,7 +378,7 @@
     "artist": ["SEKAI NO OWARI"],
     "language" : ["일본어"],
     "countries": ["JP"],
-    "tags": ["JPOP", "아시아"],
+    "tags": ["JPOP", "아시아","영화음악"],
     "memo": "SEKAI NO OWARI의, 개인적으로 좋아하는 노래.",
     "youtube": [
       {
@@ -397,7 +397,7 @@
     "artist": ["張國榮(장국영)"],
     "language" : ["광동어"],
     "countries": ["HK","CN"],
-    "tags": ["홍콩", "아시아"],
+    "tags": ["홍콩", "아시아","영화음악"],
     "memo": "영화 <영웅본색> 주제가. 홍콩 느와르를 대표하는 곡",
     "links": [
       {
@@ -418,7 +418,7 @@
     "artist": ["張國榮(장국영)"],
     "language" : ["광동어"],
     "countries": ["HK","CN"],
-    "tags": ["홍콩", "아시아"],
+    "tags": ["홍콩", "아시아","영화음악"],
     "memo": "영화 <영웅본색 2> 주제가. 비관적이고 허무한 분위기",
     "youtube": [
       {
@@ -433,7 +433,7 @@
     "artist": ["林子祥(임자상)"],
     "language" : ["광동어"],
     "countries": ["HK","CN"],
-    "tags": ["홍콩", "아시아"],
+    "tags": ["홍콩","아시아","영화음악"],
     "memo": "중국 장쑤성 전통 연주곡을 편곡한 노래. 영화 <황비홍> 주제가.",
     "youtube": [
       {
@@ -452,7 +452,7 @@
     "artist": ["Christopher Tin"],
     "language" : ["이탈리아어"],
     "countries": ["US","IT"],
-    "tags": ["게임음악", "이탈리아"],
+    "tags": ["게임음악","이탈리아","클래식"],
     "memo": "게임 <문명 6> 주제가. 레오나르도 다빈치의(것으로 알려진) 노트를 바탕으로 하여, 인류의 비행에 대한 꿈을 표현했다.",
     "links": [
       {
@@ -477,7 +477,7 @@
     "artist": ["Σταμάτης Σπανουδάκης(Stamatis Spanoudakis)"],
     "language" : ["그리스어"],
     "countries": ["GR"],
-    "tags": ["동로마제국", "콘스탄티노폴리스","유럽"],
+    "tags": ["동로마제국", "콘스탄티노폴리스","유럽","클래식"],
     "memo": "콘스탄티노폴리스 함락과 동로마 제국의 멸망, 그리고 콘스탄티누스 11세에 관한 전설.",
     "links": [
       {
@@ -502,7 +502,7 @@
     "artist": ["The Beatles"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["잉글랜드", "노르웨이","유럽"],
+    "tags": ["락","잉글랜드", "노르웨이","유럽"],
     "memo": "비틀즈의 <러버 소울> 수록곡, 존 레논 작곡. Wood는 숲이 아니라 목재. 인도 전통 악기 시타르 소리가 들어간다.",
     "links": [
       {
@@ -523,7 +523,7 @@
     "artist": ["The Beatles"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["잉글랜드","유럽"],
+    "tags": ["락","잉글랜드","유럽"],
     "memo": "비틀즈의 대표곡. 폴 매카트니 작곡",
     "youtube": [
       {
@@ -546,7 +546,7 @@
     "artist": ["The Beatles"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["잉글랜드","유럽"],
+    "tags": ["유럽"],
     "memo": "잠수함 소리가 들어간, 비틀즈의 동요스러운 노래. 레논-매카트니 작곡. 개인적으로 좋아한다.",
     "youtube": [
       {
@@ -561,7 +561,7 @@
     "artist": ["The Beatles"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["잉글랜드","유럽"],
+    "tags": ["락","잉글랜드","유럽"],
     "memo": "11집 Abbey Road 수록곡, 조지 해리슨 작곡. 어두운 날들은 지나고 밝은 태양이 찾아올 것",
     "youtube": [
       {
@@ -576,7 +576,7 @@
     "artist": ["The Beatles"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["잉글랜드","유럽"],
+    "tags": ["락","잉글랜드","유럽"],
     "memo": "폴 매카트니 작곡, 비틀즈의 마지막 앨범 <Let It Be>의 타이틀곡. 그냥 내버려 두자.",
     "youtube": [
       {
@@ -591,7 +591,7 @@
     "artist": ["The Beatles"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["잉글랜드","유럽"],
+    "tags": ["락","유럽"],
     "memo": "폴 매카트니 작곡, 9집 <The Beatles> 수록곡. 제목은 딱히 의미 있는 말은 아니다.",
     "youtube": [
       {
@@ -706,7 +706,7 @@
     "artist": ["ABBA"],
     "language" : ["스웨덴어","영어"],
     "countries": ["SE"],
-    "tags": ["유로비전","나폴레옹","유럽"],
+    "tags": ["디스코","유로비전","나폴레옹","유럽"],
     "memo": "나폴레옹의 마지막 전투, 워털루 전투에 빗댄 사랑 이야기. 1974 유로비전 우승",
     "links": [
       {
@@ -721,6 +721,199 @@
       {
         "title": "음원(스웨덴어 버전)",
         "url": "https://www.youtube.com/watch?v=7BXyboCMDS4"
+      }
+    ]
+  },
+  {
+    "title": "Dancing Queen",
+    "year": 1976,
+    "artist": ["ABBA"],
+    "language" : ["영어"],
+    "countries": ["SE"],
+    "tags": ["디스코","유럽"],
+    "memo": "ABBA 최고의 히트곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=xFrGuyw1V8s"
+      },
+      {
+        "title": "1976년 스웨덴 왕립 오페라 극장 공연",
+        "url": "https://www.youtube.com/watch?v=XN9lgrT8eVc"
+      },
+      {
+        "title": "영화 <맘마 미아!> 버전",
+        "url": "https://www.youtube.com/watch?v=QRoWiTcO7dk"
+      }
+    ]
+  },
+  {
+    "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+    "year": 1979,
+    "artist": ["ABBA"],
+    "language" : ["디스코","영어"],
+    "countries": ["SE"],
+    "tags": ["디스코","유럽"],
+    "memo": "신디사이저 도입부가 인상적인 곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=XEjLoHdbVeE"
+      }
+    ]
+  },
+    {
+    "title": "Mamma Mia",
+    "year": 1975,
+    "artist": ["ABBA"],
+    "language" : ["락","영어"],
+    "countries": ["SE"],
+    "tags": ["유럽"],
+    "memo": "동명의 3집 앨범 타이틀곡. 뮤지컬 <맘마 미아!>의 제목이 이 곡에서 유래했다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=unfzfe8f9NI"
+      },
+      {
+        "title": "영화 <맘마 미아> 버전(메릴 스트립)",
+        "url": "https://www.youtube.com/watch?v=DUjB9LTtzGg"
+      }
+    ]
+  },
+    {
+    "title": "I Have a Dream",
+    "year": 1979,
+    "artist": ["ABBA"],
+    "language" : ["영어"],
+    "countries": ["SE"],
+    "tags": ["유럽"],
+    "memo": "아바의 잔잔한 곡 중 하나. 마지막 부분은 스톡홀름 국제학교 어린이 합창단이 참여",
+    "youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=ER_3h03omdE"
+      }
+    ]
+  },
+  {
+    "title": "Bailando",
+    "year": 2014,
+    "artist": ["Enrique Iglesias","Descemer Bueno","Gente De Zona"],
+    "language" : ["스페인어"],
+    "countries": ["ES","CU"],
+    "tags": ["라틴팝","유럽","북아메리카"],
+    "memo": "라틴팝을 대표하는 곡 중 하나. '춤추며'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/42"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=NUsoVlDFqZg"
+      }
+    ]
+  },
+  {
+    "title": "Súbeme la Radio",
+    "year": 2017,
+    "artist": ["Enrique Iglesias","Descemer Bueno","Zion & Lennox"],
+    "language" : ["스페인어"],
+    "countries": ["ES","CU","PR"],
+    "tags": ["라틴팝","유럽","북아메리카"],
+    "memo": "엔리케 이글레시아스의 대표곡. '라디오 볼륨을 키워 줘'",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=9sg-A-eS6Ig"
+      },
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=dczdR4laGwc"
+      }
+    ]
+  },
+  {
+    "title": "(I Can’t Get No) Satisfaction",
+    "year": 1965,
+    "artist": ["Rolling Stones"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["락","잉글랜드","유럽"],
+    "memo": "롤링 스톤스의 대표곡",
+    "youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=nrIPxlFzDi0"
+      }
+    ]
+  },
+  {
+    "title": "कश्मीर में तू कन्याकुमारी(Kashmir Main Tu Kanyakumari)",
+    "year": 2013,
+    "artist": ["Sunidhi Chauhan, Arijit Singh, Neeti Mohan"],
+    "language" : ["힌디어"],
+    "countries": ["IN"],
+    "tags": ["영화음악","발리우드","아시아"],
+    "memo": "영화 <첸나이 익스프레스> 삽입곡.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/46"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=dodDteh-m3Q"
+      }
+    ]
+  },
+  {
+    "title": "Ievan Polkka",
+    "year": "19세기?",
+    "artist": ["민요"],
+    "language" : ["핀란드어"],
+    "countries": ["FI"],
+    "tags": ["민요","폴카","보컬로이드","유럽"],
+    "memo": "중독성 있는 핀한드 사보(Savo) 지역 노래. 하츠네 미쿠의 '파돌리기송'으로도 잘 알려져 있다.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/47"
+      }
+    ],"youtube": [
+      {
+        "title": "Loituma 버전",
+        "url": "https://www.youtube.com/watch?v=hqthspSKZV8"
+      },
+      {
+        "title": "Arttu Suuntala 버전",
+        "url": "https://www.youtube.com/watch?v=UQrBt1rqPDM"
+      },
+      {
+        "title": "하츠네 미쿠 버전. '파돌리기'",
+        "url": "https://www.youtube.com/watch?v=widZEAJc0QM"
+      }
+    ]
+  },
+  {
+    "title": "Säkkijärven Polkka",
+    "year": "19세기?",
+    "artist": ["민요"],
+    "language" : ["핀란드어"],
+    "countries": ["FI"],
+    "tags": ["민요","폴카","계속전쟁","유럽"],
+    "memo": "카렐리야 Säkkijärvi 지역 민요, Viljo Vesterinen에 의해 대중화. 겨울전쟁 기간 동안 핀란드군이 소련군의 무선 지뢰 기폭을 방해하기 위해 반복하여 송출했다.",
+    "youtube": [
+      {
+        "title": "Eemeli 버전",
+        "url": "https://www.youtube.com/watch?v=xrBLSmuhTSs"
+      },
+      {
+        "title": "1939년 Viljo Vesterinen, Dallapé 오케스트라 버전 (보컬X)",
+        "url": "https://www.youtube.com/watch?v=gZx1zl_sVTI"
       }
     ]
   }

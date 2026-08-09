@@ -17,9 +17,9 @@ const decorativeFlags = [
   "EG", "FI", "FR", "GE", "DE", "GR",
   "IS", "IN", "ID", "IR", "IE", "IT", "JM", "JP",
   "KZ", "KE", "ML", "MX", "MD", "MN", "NL",
-  "NZ", "NG", "KP", "NO", "PK", "PH", "PL",
+  "NZ", "NG", "KP", "NO", "PK", "PH", "PL", "PR",
   "RU", "ZA", "ES", "SE", "SY", "TW", "TH",
-  "TT", "TR", "UA", "GB", "US", "VN", 
+  "TT", "TR", "UA", "GB", "US", "VN"
 ];
 // -------------------------------------
 // 국가 코드 → 한국어 국가명

@@ -104,11 +104,11 @@ h1 {
     gap: 5px;
 
     max-width: 800px;
-    margin: 40px auto 30px;
+    margin: 30px auto 30px;
 }
 
 #flag-strip .fi {
-    font-size: 1.0rem;
+    font-size: 1.2rem;
 }
 
 .country-flag {
