@@ -76,12 +76,8 @@ fetch(`sscdbg.json?v=${Date.now()}`)
 
     // 곡 순서 랜덤
     for (let i = songs.length - 1; i > 0; i--) {
-      const j = Math.floor(
-        Math.random() * (i + 1)
-      );
-
-      [songs[i], songs[j]] =
-        [songs[j], songs[i]];
+      const j = Math.floor(Math.random() * (i + 1));
+      [songs[i], songs[j]] = [songs[j], songs[i]];
     }
 
     // 첫 화면에서도 전체 Artist / Language 표시
@@ -325,25 +321,16 @@ backButton.addEventListener("click", () => {
 
 function applyFilters() {
 
-  const selectedArtist =
-    artistFilter.value;
+  const selectedArtist = artistFilter.value;
+  const selectedLanguage = languageFilter.value;
+  const keyword = tagSearch.value.trim().toLowerCase();
 
-  const selectedLanguage =
-    languageFilter.value;
-
-  const keyword =
-    tagSearch.value
-      .trim()
-      .toLowerCase();
-
-  // 필터가 하나라도 적용됐는지
   const hasFilter =
     selectedArtist !== "all" ||
     selectedLanguage !== "all" ||
     keyword !== "";
 
-  // 국가도 선택 안 했고 검색/필터도 아무것도 없으면
-  // 국가 선택 화면으로 돌아가기
+  // 국가 선택도 없고 필터도 없으면 국가 목록
   if (!selectedCountry && !hasFilter) {
 
     countryView.style.display = "block";
@@ -354,8 +341,7 @@ function applyFilters() {
 
   const filteredSongs = songs.filter(song => {
 
-    // 국가를 선택한 경우
-    // 해당 국가의 곡만 대상으로 함
+    // 국가를 골랐으면 그 국가 안에서만
     if (
       selectedCountry &&
       !song.countries.includes(selectedCountry)
@@ -379,11 +365,11 @@ function applyFilters() {
       return false;
     }
 
-    // 검색어
+    // 텍스트 검색
     if (keyword) {
 
       const titleMatch =
-        String(song.title ?? "")
+        String(song.title)
           .toLowerCase()
           .includes(keyword);
 
@@ -413,11 +399,13 @@ function applyFilters() {
     return true;
   });
 
-  // 결과가 있으므로 국가 선택 화면 숨김
+
+  // 국가 목록 대신 곡 목록 표시
   countryView.style.display = "none";
   songsView.style.display = "block";
 
-  // 국가 선택 여부에 따라 제목 변경
+
+  // 제목
   if (selectedCountry) {
 
     countryTitle.innerHTML = `
@@ -428,7 +416,7 @@ function applyFilters() {
   } else {
 
     countryTitle.textContent =
-      "검색 결과";
+      `검색 결과 (${filteredSongs.length}곡)`;
 
   }
 
