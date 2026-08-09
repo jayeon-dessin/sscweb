@@ -12,22 +12,6 @@ const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
 const backButton = document.getElementById("back-to-countries");
 
-
-// -------------------------------------
-// 국가 코드 → 국기
-// -------------------------------------
-
-function codeToFlag(code) {
-  return code
-    .toUpperCase()
-    .replace(/./g, char =>
-      String.fromCodePoint(
-        127397 + char.charCodeAt()
-      )
-    );
-}
-
-
 // -------------------------------------
 // 국가 코드 → 한국어 국가명
 // -------------------------------------
@@ -147,9 +131,7 @@ function renderCountries() {
 
 
     button.innerHTML = `
-      <span class="country-flag">
-        ${codeToFlag(code)}
-      </span>
+      <span class="country-flag fi fi-${code.toLowerCase()}"></span>
 
       <span class="country-name">
         ${getCountryName(code)}
@@ -159,7 +141,6 @@ function renderCountries() {
         ${count}곡
       </span>
     `;
-
 
     button.addEventListener("click", () => {
       selectCountry(code);
@@ -183,8 +164,10 @@ function selectCountry(code) {
   songsView.style.display = "block";
 
 
-  countryTitle.textContent =
-    `${codeToFlag(code)} ${getCountryName(code)}`;
+  countryTitle.innerHTML = `
+    <span class="fi fi-${code.toLowerCase()}"></span>
+    ${getCountryName(code)}
+  `;
 
 
   const countrySongs = songs.filter(song =>

@@ -99,9 +99,8 @@ h1 {
 
 .country-flag {
     font-size: 3.5rem;
-    line-height: 1.15;
-
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    border-radius: 4px;
 }
 
 
