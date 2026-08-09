@@ -1,7 +1,7 @@
 /* ---------- 전체 ---------- */
 
 body {
-    font-family: "Noto Sans KR", Arial, sans-serif;
+    font-family: "Noto Sans", "Noto Sans KR", Arial, sans-serif;
     background: #f5f7fa;
     color: #222;
 
@@ -91,15 +91,31 @@ h1 {
 }
 
 
-/* 키보드 선택 */
-
 .country-card:focus-visible {
     outline: 3px solid rgba(79, 142, 247, 0.35);
     outline-offset: 3px;
 }
 
+.song-country {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 
-/* 국기 */
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.song-country .fi {
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#archive-stats {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin: 8px 0 20px;
+}
 
 #flag-strip {
     display: flex;
@@ -124,18 +140,12 @@ h1 {
     overflow: hidden;
 }
 
-
-/* 국가명 */
-
 .country-name {
     font-size: 1.05rem;
     font-weight: 700;
 
     color: #2c3e50;
 }
-
-
-/* 몇 곡인지 */
 
 .country-count {
     font-size: 0.85rem;

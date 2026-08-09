@@ -84,10 +84,8 @@ fetch(`sscdbg.json?v=${Date.now()}`)
     makeArtistFilter(songs);
     makeLanguageFilter(songs);
 
-    // 제목 아래 장식용 국기
+    renderArchiveStats();
     renderDecorativeFlags();
-
-    // 국가 목록 표시
     renderCountries();
   })
 
@@ -98,9 +96,18 @@ fetch(`sscdbg.json?v=${Date.now()}`)
     );
   });
 
-// -------------------------------------
-// 제목 아래 장식용 국기
-// -------------------------------------
+function renderArchiveStats() {
+  const stats = document.getElementById("archive-stats");
+
+  const countries = [
+    ...new Set(
+      songs.flatMap(song => song.countries)
+    )
+  ].filter(Boolean);
+
+  stats.textContent =
+    `총 ${songs.length}곡 · ${countries.length}개 국가·지역`;
+}
 
 function renderDecorativeFlags() {
 
@@ -132,7 +139,6 @@ function renderCountries() {
   songsView.style.display = "none";
   countryList.innerHTML = "";
 
-  // 모든 곡의 countries를 하나로 합친 뒤 중복 제거
   const countries = [
     ...new Set(
       songs.flatMap(song => song.countries)
@@ -464,6 +470,18 @@ function renderSongs(songArray) {
       <p>
         Language:
         ${song.language.join(", ")}
+      </p>
+
+      <p class="song-countries">
+        Country/Region:
+        ${song.countries
+          .map(code => `
+            <span class="song-country">
+              <span class="fi fi-${code.toLowerCase()}"></span>
+              ${getCountryName(code)}
+            </span>
+          `)
+          .join(" ")}
       </p>
 
       <p>
