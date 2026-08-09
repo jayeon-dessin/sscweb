@@ -25,7 +25,6 @@ function getCountryName(code) {
   return regionNames.of(code);
 }
 
-
 // -------------------------------------
 // JSON 불러오기
 // -------------------------------------
@@ -64,7 +63,6 @@ fetch(`sscdbg.json?v=${Date.now()}`)
         : []
     }));
 
-
     // 곡 순서 랜덤
     for (let i = songs.length - 1; i > 0; i--) {
       const j = Math.floor(
@@ -74,7 +72,6 @@ fetch(`sscdbg.json?v=${Date.now()}`)
       [songs[i], songs[j]] =
         [songs[j], songs[i]];
     }
-
 
     // 첫 화면
     renderCountries();
@@ -101,7 +98,6 @@ function renderCountries() {
 
   countryList.innerHTML = "";
 
-
   // 모든 곡의 countries를 하나로 합친 뒤 중복 제거
   const countries = [
     ...new Set(
@@ -116,25 +112,21 @@ function renderCountries() {
       )
     );
 
-
   countries.forEach(code => {
+    const normalizedCode = code.trim().toLowerCase();
 
     const count = songs.filter(song =>
       song.countries.includes(code)
     ).length;
 
-
-    const button =
-      document.createElement("button");
-
+    const button = document.createElement("button");
     button.className = "country-card";
 
-
     button.innerHTML = `
-      <span class="country-flag fi fi-${code.toLowerCase()}"></span>
+      <span class="country-flag fi fi-${normalizedCode}"></span>
 
       <span class="country-name">
-        ${getCountryName(code)}
+        ${getCountryName(code.trim().toUpperCase())}
       </span>
 
       <span class="country-count">
@@ -145,7 +137,6 @@ function renderCountries() {
     button.addEventListener("click", () => {
       selectCountry(code);
     });
-
 
     countryList.appendChild(button);
   });
@@ -163,30 +154,24 @@ function selectCountry(code) {
   countryView.style.display = "none";
   songsView.style.display = "block";
 
-
   countryTitle.innerHTML = `
-    <span class="fi fi-${code.toLowerCase()}"></span>
-    ${getCountryName(code)}
+    <span class="fi fi-${code.trim().toLowerCase()}"></span>
+    ${getCountryName(code.trim().toUpperCase())}
   `;
-
 
   const countrySongs = songs.filter(song =>
     song.countries.includes(code)
   );
 
-
   makeArtistFilter(countrySongs);
   makeLanguageFilter(countrySongs);
-
 
   artistFilter.value = "all";
   languageFilter.value = "all";
   tagSearch.value = "";
 
-
   renderSongs(countrySongs);
 }
-
 
 // -------------------------------------
 // Artist 필터 만들기
@@ -197,7 +182,6 @@ function makeArtistFilter(songArray) {
   artistFilter.innerHTML =
     `<option value="all">전체</option>`;
 
-
   const artists = [
     ...new Set(
       songArray.flatMap(song => song.artist)
@@ -206,9 +190,7 @@ function makeArtistFilter(songArray) {
     .filter(Boolean)
     .sort();
 
-
   artists.forEach(artist => {
-
     const option =
       document.createElement("option");
 
@@ -225,10 +207,8 @@ function makeArtistFilter(songArray) {
 // -------------------------------------
 
 function makeLanguageFilter(songArray) {
-
   languageFilter.innerHTML =
     `<option value="all">전체</option>`;
-
 
   const languages = [
     ...new Set(
@@ -240,9 +220,7 @@ function makeLanguageFilter(songArray) {
       a.localeCompare(b, "ko")
     );
 
-
   languages.forEach(language => {
-
     const option =
       document.createElement("option");
 
@@ -252,7 +230,6 @@ function makeLanguageFilter(songArray) {
     languageFilter.appendChild(option);
   });
 }
-
 
 // -------------------------------------
 // 필터 이벤트
@@ -273,17 +250,14 @@ tagSearch.addEventListener(
   applyFilters
 );
 
-
 // -------------------------------------
 // 국가 목록으로 돌아가기
 // -------------------------------------
 
 backButton.addEventListener("click", () => {
-
   artistFilter.value = "all";
   languageFilter.value = "all";
   tagSearch.value = "";
-
   renderCountries();
 });
 
@@ -293,24 +267,18 @@ backButton.addEventListener("click", () => {
 // -------------------------------------
 
 function applyFilters() {
-
   if (!selectedCountry) {
     return;
   }
 
-
   const selectedArtist =
     artistFilter.value;
-
   const selectedLanguage =
     languageFilter.value;
-
   const keyword =
     tagSearch.value.trim().toLowerCase();
 
-
   const filteredSongs = songs.filter(song => {
-
 
     // 선택한 국가
     if (
@@ -321,7 +289,6 @@ function applyFilters() {
       return false;
     }
 
-
     // 아티스트
     if (
       selectedArtist !== "all" &&
@@ -329,7 +296,6 @@ function applyFilters() {
     ) {
       return false;
     }
-
 
     // 언어
     if (
@@ -339,15 +305,12 @@ function applyFilters() {
       return false;
     }
 
-
     // 검색
     if (keyword) {
-
       const titleMatch =
         song.title
           .toLowerCase()
           .includes(keyword);
-
 
       const artistMatch =
         song.artist.some(artist =>
@@ -356,14 +319,12 @@ function applyFilters() {
             .includes(keyword)
         );
 
-
       const tagMatch =
         song.tags.some(tag =>
           tag
             .toLowerCase()
             .includes(keyword)
         );
-
 
       if (
         !titleMatch &&
@@ -374,29 +335,22 @@ function applyFilters() {
       }
     }
 
-
     return true;
   });
 
-
   renderSongs(filteredSongs);
 }
-
 
 // -------------------------------------
 // 곡 목록 출력
 // -------------------------------------
 
 function renderSongs(songArray) {
-
   songList.innerHTML = "";
 
-
   songArray.forEach(song => {
-
     const item =
       document.createElement("div");
-
 
     item.innerHTML = `
       <h2>${song.title}</h2>
@@ -474,7 +428,6 @@ function renderSongs(songArray) {
           : ""
       }
     `;
-
 
     songList.appendChild(item);
   });
