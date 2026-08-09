@@ -8,30 +8,42 @@
 <body>
   <h1>세소찾 더보기</h1>
 
-  <div class="filter-bar">
-    <label for="artist-filter">Artist</label>
-    <select id="artist-filter">
-      <option value="all">전체</option>
-    </select>
-
-    <label for="language-filter">Language</label>
-    <select id="language-filter">
-      <option value="all">전체</option>
-    </select>
-
+  <!-- 첫 화면: 국가 목록 -->
+  <div id="country-view">
+    <div id="country-list"></div>
   </div>
 
-  <div class="search-bar">
-    <input
+  <!-- 국가 선택 후: 곡 목록 -->
+  <div id="songs-view" style="display: none;">
+
+    <button id="back-to-countries">
+      ← 국가 선택으로
+    </button>
+
+    <h2 id="country-title"></h2>
+
+    <div class="filter-bar">
+      <label for="artist-filter">Artist</label>
+      <select id="artist-filter">
+        <option value="all">전체</option>
+      </select>
+
+      <label for="language-filter">Language</label>
+      <select id="language-filter">
+        <option value="all">전체</option>
+      </select>
+    </div>
+
+    <div class="search-bar">
+      <input
         type="text"
         id="tag-search"
         placeholder="검색"
-    />
+      />
+    </div>
+
+    <div id="song-list"></div>
   </div>
-
-  <hr>
-
-  <div id="song-list"></div>
 
   <script src="script.js"></script>
 </body>

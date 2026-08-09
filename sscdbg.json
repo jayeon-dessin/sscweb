@@ -4,6 +4,7 @@
     "year": 1979,
     "artist": ["Dschinghis Khan"],
     "language" : ["독일어"],
+    "countries": ["DE"],
     "tags": ["독일", "디스코", "유럽", "몽골"],
     "memo": "디스코 밴드 징기스 칸의 동명의 대표곡. 몽골의 정복자 칭기즈 칸(징기스 칸)에 관한 노래",
     "youtube": [
@@ -18,7 +19,8 @@
     "year": 1980,
     "artist": ["Dschinghis Khan"],
     "language" : ["독일어"],
-    "tags": ["독일", "디스코", "유럽", "잉카"],
+    "countries": ["DE"],
+    "tags": ["디스코", "유럽", "잉카"],
     "memo": "징기스 칸의 덜 유명한 곡. 잉카 문명의 몰락에 관한 전설에 관해 노래한다.",
     "links": [
       {
@@ -38,7 +40,8 @@
     "year": 1979,
     "artist": ["Dschinghis Khan"],
     "language" : ["독일어"],
-    "tags": ["독일", "디스코", "유럽", "러시아"],
+    "countries": ["DE"],
+    "tags": ["디스코", "유럽", "러시아"],
     "memo": "징기스 칸의 또다른 대표곡. 주제는 모스크바, 때문에 러시아 곡으로 오해받기도 한다.",
     "youtube": [
       {
@@ -52,7 +55,8 @@
     "year": 1981,
     "artist": ["Dschinghis Khan"],
     "language" : ["독일어"],
-    "tags": ["독일", "디스코", "유럽", "멕시코"],
+    "countries": ["DE"],
+    "tags": ["디스코", "유럽", "멕시코"],
     "memo": "징기스 칸의 덜 유명한 곡. 서부 개척시대의 멕시코를 주제로 한다.",
     "youtube": [
       {
@@ -66,7 +70,8 @@
     "year": 2005,
     "artist": ["Wir sind Helden"],
     "language" : ["독일어"],
-    "tags": ["독일", "팝", "유럽"],
+    "countries": ["DE"],
+    "tags": ["팝", "유럽"],
     "memo": "중독성 있는 독일 팝. 역재생한 뮤직비디오가 특이하다.",
     "youtube": [
       {
@@ -80,7 +85,8 @@
     "year": 1964,
     "artist": ["Antônio Carlos Jobim","Stan Getz","João Gilberto", "Astrud Gilberto"],
     "language" : ["포르투갈어", "영어"],
-    "tags": ["브라질", "보사노바", "남아메리카"],
+    "countries": ["BR"],
+    "tags": ["보사노바", "남아메리카"],
     "memo": "보사노바의 전설 조빙의 대표곡.",
     "links": [
       {
@@ -100,7 +106,8 @@
     "year": 2003,
     "artist": ["O-Zone"],
     "language" : ["루마니아어"],
-    "tags": ["몰도바", "댄스", "유럽"],
+    "countries": ["MD"],
+    "tags": ["댄스", "유럽"],
     "memo": "'누마누마', 몰도바 최고의 글로벌 히트.",
     "links": [
       {
@@ -124,7 +131,8 @@
     "year": 1974,
     "artist": ["Udo Jürgens"],
     "language" : ["독일어"],
-    "tags": ["오스트리아", "독일", "팝","그리스", "유럽"],
+    "countries": ["AT", "DE"],
+    "tags": ["팝","그리스","유럽"],
     "memo": "서독의 그리스인 노동자들의 애환을 담은 곡. 독일인들의 국민가요 중 하나",
     "youtube": [
       {
@@ -138,7 +146,8 @@
     "year": 2017,
     "artist": ["Polo&Pan","Victoria Lafaurie"],
     "language" : ["프랑스어"],
-    "tags": ["프랑스", "일렉트로닉", "유럽"],
+    "countries": ["FR"],
+    "tags": ["일렉트로닉", "유럽"],
     "memo": "자연으로의 회귀 + 전자음악.",
     "links": [
       {
@@ -157,7 +166,8 @@
     "year": 2021,
     "artist": ["Polo&Pan","아라파호 찬송가"],
     "language" : ["아라파호어"],
-    "tags": ["프랑스", "일렉트로닉", "유럽", "북아메리카"],
+    "countries": ["FR","US"],
+    "tags": ["일렉트로닉", "유럽", "북아메리카"],
     "memo": "미국 와이오밍/오클라호마 지역 원주민 아라파호족의 멜로디를 차용한 전자음악.",
     "youtube": [
       {
@@ -171,7 +181,8 @@
     "year": 1967,
     "artist": ["Claude François"],
     "language" : ["프랑스어"],
-    "tags": ["프랑스", "샹송", "번안", "유럽"],
+    "countries": ["FR"],
+    "tags": ["샹송", "번안", "유럽"],
     "memo": "My Way의 원곡. '습관처럼'",
     "youtube": [
       {
@@ -189,7 +200,8 @@
     "year": 2026,
     "artist": ["Miki"],
     "language" : ["프랑스어"],
-    "tags": ["프랑스", "일렉트로팝", "유럽"],
+    "countries": ["FR"],
+    "tags": ["일렉트로팝", "유럽"],
     "memo": "프랑스-한국 혼혈 싱어송라이터 miki의 곡. 뮤비가 인상적(?)임.",
     "youtube": [
       {
@@ -203,7 +215,8 @@
     "year": 1836,
     "artist": ["슈바벤 민요"],
     "language" : ["독일어"],
-    "tags": ["독일", "민요", "번안", "유럽"],
+    "countries": ["DE"],
+    "tags": ["민요", "번안", "유럽"],
     "memo": "독일 슈바벤 지방의 민요. 한국어 번안곡명은 '옹달샘'.",
     "links": [
       {
@@ -226,7 +239,8 @@
     "year": 1878,
     "artist": ["Liliʻuokalani"],
     "language" : ["하와이어","영어"],
-    "tags": ["미국", "민요", "하와이", "오세아니아"],
+    "countries": ["US"],
+    "tags": ["민요", "하와이", "오세아니아"],
     "memo": "하와이의 여왕이 만든, 하와이를 대표하는 이별 노래.",
     "links": [
       {
@@ -249,7 +263,8 @@
     "year": 1914,
     "artist": ["뉴질랜드 민요"],
     "language" : ["마오리어"],
-    "tags": ["뉴질랜드", "민요", "오세아니아", "번안"],
+    "countries": ["NZ"],
+    "tags": ["민요", "오세아니아", "번안"],
     "memo": "뉴질랜드 마오리족의 사랑 노래. 세계대전을 통해 마오리 전사들에게서 전 세계로 퍼진 곡. 한국어 번안곡명은 '연가'",
     "links": [
       {
@@ -276,7 +291,8 @@
     "year": 1956,
     "artist": ["Ralph Maria Siegel"],
     "language" : ["독일어"],
-    "tags": ["독일","권주가","유럽"],
+    "countries": ["DE"],
+    "tags": ["권주가","유럽"],
     "memo": "술자리 노래; 천국에는 맥주가 없기에, 우리는 지금 여기서 마신다.",
     "youtube": [
       {
@@ -298,7 +314,8 @@
     "year": 2019,
     "artist": ["Ayase"],
     "language" : ["일본어"],
-    "tags": ["일본", "보컬로이드", "아시아"],
+    "countries": ["JP"],
+    "tags": ["보컬로이드", "아시아"],
     "memo": "YOASOBI의 작곡가 Ayase의 보컬로이드(하츠네 미쿠) 곡.",
     "links": [
       {
@@ -321,7 +338,8 @@
     "year": 2019,
     "artist": ["Three(すりぃ)"],
     "language" : ["일본어"],
-    "tags": ["일본", "보컬로이드", "아시아"],
+    "countries": ["JP"],
+    "tags": ["보컬로이드", "아시아"],
     "memo": "스리이의 보컬로이드(카가미네 렌) 곡. 트랜스젠더에 대한 은유?",
     "youtube": [
       {
@@ -339,7 +357,8 @@
     "year": 1988,
     "artist": ["Kino(Кино)"],
     "language" : ["러시아어"],
-    "tags": ["소련", "러시아", "유럽", "락"],
+    "countries": ["RU"],
+    "tags": ["소련", "유럽", "락"],
     "memo": "소련의 락 밴드 키노의 대표곡. 전쟁 반대의 메시지",
     "links": [
       {
@@ -358,7 +377,8 @@
     "year": 2017,
     "artist": ["SEKAI NO OWARI"],
     "language" : ["일본어"],
-    "tags": ["일본", "JPOP", "아시아"],
+    "countries": ["JP"],
+    "tags": ["JPOP", "아시아"],
     "memo": "SEKAI NO OWARI의, 개인적으로 좋아하는 노래.",
     "youtube": [
       {
