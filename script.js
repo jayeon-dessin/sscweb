@@ -19,7 +19,7 @@ const decorativeFlags = [
   "KZ", "KE", "ML", "MX", "MD", "MN", "NL",
   "NZ", "NG", "KP", "NO", "PK", "PH", "PL",
   "RU", "ZA", "ES", "SE", "SY", "TW", "TH",
-  "TT", "TR", "GB", "US", "VN", 
+  "TT", "TR", "UA", "GB", "US", "VN", 
 ];
 // -------------------------------------
 // 국가 코드 → 한국어 국가명
@@ -96,9 +96,6 @@ fetch(`sscdbg.json?v=${Date.now()}`)
 
 function renderDecorativeFlags() {
   const flagStrip = document.getElementById("flag-strip");
-
-  const shuffled = [...decorativeFlags]
-    .sort(() => Math.random() - 0.5);
 
   flagStrip.innerHTML = shuffled
     .map(code =>
