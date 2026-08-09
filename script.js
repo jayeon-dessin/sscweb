@@ -97,7 +97,7 @@ fetch(`sscdbg.json?v=${Date.now()}`)
 function renderDecorativeFlags() {
   const flagStrip = document.getElementById("flag-strip");
 
-  flagStrip.innerHTML = shuffled
+  flagStrip.innerHTML = decorativeFlags
     .map(code =>
       `<span class="fi fi-${code.toLowerCase()}"></span>`
     )
