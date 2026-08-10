@@ -18,7 +18,7 @@ body {
     margin: var(--space-7) auto;
     padding: 0 var(--space-5);
 
-    line-height: 1.6;
+    line-height: 16;
 }
 
 h1 {
