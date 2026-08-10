@@ -463,27 +463,22 @@ function renderSongs(songArray) {
     const item = document.createElement("div");
 
     item.innerHTML = `
-      <h2>${song.title}</h2>
-
       <div class="song-content">
 
         <!-- 왼쪽: 기본 정보 -->
         <div class="song-info">
+          <h2>${song.title}</h2>
 
           <div class="song-meta">
-
             <div class="song-meta-line">
 
               <span>${song.artist.join(", ")}</span>
-
               <span class="meta-divider">·</span>
 
               <span>${song.year}</span>
-
               <span class="meta-divider">·</span>
 
               <span>${song.language.join(", ")}</span>
-
               <span class="meta-divider">·</span>
 
               <span class="song-countries">
