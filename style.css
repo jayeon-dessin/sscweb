@@ -1,4 +1,13 @@
-/* ---------- 전체 ---------- */
+:root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 40px;
+    --space-8: 48px;
+}
 
 body {
     font-family: "Noto Sans", "Noto Sans KR", Arial, sans-serif;
@@ -6,15 +15,16 @@ body {
     color: #222;
 
     max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: var(--space-7) auto;
+    padding: 0 var(--space-5);
 
     line-height: 1.6;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 35px;
+    margin: 0 0 var(--space-5);
+
     font-family: "Gowun Batang", serif;
     font-size: 2.5rem;
     color: #222;
@@ -22,8 +32,8 @@ h1 {
 
 .site-description {
     text-align: center;
+    margin: 0;
 }
-
 
 /* ========================================
    국가 선택 화면
@@ -73,6 +83,42 @@ h1 {
         box-shadow 0.2s;
 }
 
+.song-meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: var(--space-6);
+    row-gap: var(--space-3);
+
+    margin-bottom: var(--space-4);
+}
+
+.meta-item {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+
+    min-width: 0;
+}
+
+.meta-label {
+    flex: 0 0 auto;
+
+    font-weight: 600;
+    color: #555;
+}
+
+.meta-label::after {
+    content: ":";
+}
+
+.meta-tags {
+    grid-column: 1 / -1;
+}
+
+.song-memo {
+    margin-top: var(--space-4);
+}
 
 /* 마우스 올렸을 때 */
 
@@ -99,9 +145,10 @@ h1 {
 .song-country {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
 
-    margin-right: 10px;
+    gap: var(--space-1);
+    margin-right: var(--space-2);
+
     white-space: nowrap;
 }
 
@@ -114,26 +161,65 @@ h1 {
     text-align: center;
     color: #888;
     font-size: 0.9rem;
-    margin: 8px 0 20px;
+    margin: var(--space-2) 0 var(--space-5);
 }
 
 #flag-strip {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5px;
+
+    gap: var(--space-1);
 
     max-width: 1000px;
-    margin: 30px auto 30px;
+
+    margin:
+        var(--space-5)
+        auto
+        var(--space-6);
 }
 
 #flag-strip .fi {
     font-size: 1.2rem;
 }
 
+.country-card {
+    appearance: none;
+
+    border: none;
+    background: white;
+
+    border-radius: 16px;
+
+    padding:
+        var(--space-5)
+        var(--space-4);
+
+    min-height: 150px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--space-2);
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
 .country-flag {
     font-size: 3.5rem;
-    margin-bottom: 8px;
+
+    margin-bottom: var(--space-2);
+
     border: 1px solid #d0d0d0;
     border-radius: 3px;
 
@@ -160,8 +246,10 @@ h1 {
 #country-title {
     text-align: center;
 
-    margin-top: 15px;
-    margin-bottom: 25px;
+    margin:
+        var(--space-4)
+        0
+        var(--space-5);
 
     font-size: 1.8rem;
     color: #2c3e50;
@@ -174,12 +262,13 @@ h1 {
     border: 1px solid #d0d7de;
     background: white;
 
-    padding: 9px 14px;
+    padding:
+        var(--space-2)
+        var(--space-4);
 
     border-radius: 10px;
 
     font-size: 14px;
-
     cursor: pointer;
 
     color: #444;
@@ -225,24 +314,20 @@ h1 {
 }
 
 .filter-bar select {
-    padding: 10px 14px;
+    padding:
+        var(--space-2)
+        var(--space-3);
 
     border-radius: 10px;
-
     border: 1px solid #ccc;
-
     background: white;
-
     font-size: 15px;
-
     cursor: pointer;
 }
 
 .filter-bar select:focus {
     outline: none;
-
     border-color: #4f8ef7;
-
     box-shadow:
         0 0 0 3px rgba(79, 142, 247, 0.15);
 }
@@ -253,20 +338,20 @@ h1 {
 ======================================== */
 
 .search-bar {
-    margin-bottom: 28px;
+    margin-bottom: var(--space-6);
 }
 
 .search-bar input {
     width: 100%;
-
     box-sizing: border-box;
 
-    padding: 14px 18px;
+    padding:
+        var(--space-3)
+        var(--space-4);
 
     font-size: 16px;
 
     border: 1px solid #d0d7de;
-
     border-radius: 12px;
 
     background: white;
@@ -297,9 +382,8 @@ h1 {
 
     border-radius: 16px;
 
-    padding: 24px;
-
-    margin-bottom: 22px;
+    padding: var(--space-5);
+    margin-bottom: var(--space-5);
 
     box-shadow:
         0 3px 12px rgba(0, 0, 0, 0.08);
@@ -317,15 +401,18 @@ h1 {
 }
 
 #song-list h2 {
-    margin-top: 0;
-    margin-bottom: 14px;
+    margin:
+        0
+        0
+        var(--space-4);
 
     color: #2c3e50;
 }
 
 #song-list p {
-    margin: 7px 0;
+    margin: var(--space-2) 0;
 }
+
 
 strong {
     color: #333;
@@ -357,14 +444,15 @@ a:hover {
     display: inline-block;
 
     background: #eef4ff;
-
     color: #2563eb;
 
     border-radius: 999px;
 
-    padding: 4px 10px;
+    padding:
+        var(--space-1)
+        var(--space-2);
 
-    margin: 3px;
+    margin: var(--space-1);
 
     font-size: 0.9rem;
 }
@@ -373,54 +461,44 @@ a:hover {
 /* ========================================
    모바일
 ======================================== */
-
 @media (max-width: 600px) {
 
     body {
-        margin-top: 25px;
-        padding: 0 14px;
+        margin-top: var(--space-5);
+        padding: 0 var(--space-4);
     }
 
     h1 {
         font-size: 1.9rem;
-        margin-bottom: 25px;
+        margin-bottom: var(--space-5);
     }
 
     #country-list {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
 
-        gap: 12px;
+        gap: var(--space-3);
     }
 
     .country-card {
         min-height: 125px;
 
-        padding: 16px 10px;
-    }
-
-    .country-flag {
-        font-size: 3rem;
-    }
-
-    .country-name {
-        font-size: 0.95rem;
-    }
-
-    .filter-bar {
-        align-items: stretch;
-    }
-
-    .filter-bar label {
-        width: 100%;
-    }
-
-    .filter-bar select {
-        width: 100%;
+        padding:
+            var(--space-4)
+            var(--space-2);
     }
 
     #song-list > div {
-        padding: 19px;
+        padding: var(--space-4);
+    }
+    
+    .song-meta {
+        grid-template-columns: 1fr;
+        gap: var(--space-2);
+    }
+
+    .meta-tags {
+        grid-column: auto;
     }
 }
 

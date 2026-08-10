@@ -457,41 +457,51 @@ function renderSongs(songArray) {
     item.innerHTML = `
       <h2>${song.title}</h2>
 
-      <p>
-        Artist:
-        ${song.artist.join(", ")}
-      </p>
+      <div class="song-meta">
 
-      <p>
-        Year:
-        ${song.year}
-      </p>
+        <div class="meta-item">
+          <span class="meta-label">Artist</span>
+          <span>${song.artist.join(", ")}</span>
+        </div>
 
-      <p>
-        Language:
-        ${song.language.join(", ")}
-      </p>
+        <div class="meta-item">
+          <span class="meta-label">Year</span>
+          <span>${song.year}</span>
+        </div>
 
-      <p class="song-countries">
-        Country/Region:
-        ${song.countries
-          .map(code => `
-            <span class="song-country">
-              <span class="fi fi-${code.toLowerCase()}"></span>
-              ${getCountryName(code)}
-            </span>
-          `)
-          .join(" ")}
-      </p>
+        <div class="meta-item">
+          <span class="meta-label">Language</span>
+          <span>${song.language.join(", ")}</span>
+        </div>
 
-      <p>
-        Tags:
-        ${song.tags
-          .map(tag =>
-            `<span class="tag">${tag}</span>`
-          )
-          .join(" ")}
-      </p>
+        <div class="meta-item">
+          <span class="meta-label">Country/Region</span>
+
+          <span class="song-countries">
+            ${song.countries
+              .map(code => `
+                <span class="song-country">
+                  <span class="fi fi-${code.toLowerCase()}"></span>
+                  ${getCountryName(code)}
+                </span>
+              `)
+              .join(" ")}
+          </span>
+        </div>
+
+        <div class="meta-item meta-tags">
+          <span class="meta-label">Tags</span>
+
+          <span>
+            ${song.tags
+              .map(tag =>
+                `<span class="tag">${tag}</span>`
+              )
+              .join(" ")}
+          </span>
+        </div>
+
+      </div>
 
       ${
         song.memo
