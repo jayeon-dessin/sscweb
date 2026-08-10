@@ -81,7 +81,7 @@
     ]
   },
   {
-    "title": "The girl from Ipanema(Gatora de Ipanema)",
+    "title": "The girl from Ipanema (Gatora de Ipanema)",
     "year": 1964,
     "artist": ["Antônio Carlos Jobim","Stan Getz","João Gilberto", "Astrud Gilberto"],
     "language" : ["포르투갈어", "영어"],
@@ -102,7 +102,7 @@
     ]
   },
   {
-    "title": "Dragostea din tei(보리수나무 아래에서의 사랑)",
+    "title": "Dragostea din tei (보리수나무 아래에서의 사랑)",
     "year": 2003,
     "artist": ["O-Zone"],
     "language" : ["루마니아어"],
@@ -213,7 +213,7 @@
   {
     "title": "Drunten im Unterland",
     "year": 1836,
-    "artist": ["민요"],
+    "artist": ["독일 민요"],
     "language" : ["독일어"],
     "countries": ["DE"],
     "tags": ["민요", "번안", "유럽", "슈바벤"],
@@ -235,7 +235,7 @@
     ]
   },
   {
-    "title": "Aloha ʻOe(알로하 오에)",
+    "title": "Aloha ʻOe",
     "year": 1878,
     "artist": ["Liliʻuokalani"],
     "language" : ["하와이어","영어"],
@@ -261,7 +261,7 @@
   {
     "title": "Pokarekare Ana",
     "year": 1914,
-    "artist": ["민요"],
+    "artist": ["마오리 민요"],
     "language" : ["마오리어"],
     "countries": ["NZ"],
     "tags": ["민요", "오세아니아"],
@@ -310,7 +310,7 @@
     ]
   },
   {
-    "title": "幽霊東京(유령도쿄)",
+    "title": "幽霊東京 (유령도쿄)",
     "year": 2019,
     "artist": ["Ayase"],
     "language" : ["일본어"],
@@ -334,7 +334,7 @@
     ]
   },
   {
-    "title": "テレキャスタービーボーイ(텔레캐스터 비보이)",
+    "title": "テレキャスタービーボーイ (텔레캐스터 비보이)",
     "year": 2019,
     "artist": ["すりぃ(Three)"],
     "language" : ["일본어"],
@@ -353,7 +353,7 @@
     ]
   },
   {
-    "title": "Группа крови(혈액형)",
+    "title": "Группа крови (혈액형)",
     "year": 1988,
     "artist": ["Кино(Kino)"],
     "language" : ["러시아어"],
@@ -392,7 +392,7 @@
     ]
   },
   {
-    "title": "當年情(당년정)",
+    "title": "當年情 (당년정)",
     "year": 1986,
     "artist": ["張國榮(장국영)"],
     "language" : ["광동어"],
@@ -413,7 +413,7 @@
     ]
   },
   {
-    "title": "奔向未來日子(분향미래일자)",
+    "title": "奔向未來日子 (분향미래일자)",
     "year": 1988,
     "artist": ["張國榮(장국영)"],
     "language" : ["광동어"],
@@ -428,7 +428,7 @@
     ]
   },
   {
-    "title": "男兒當自強(남아당자강)",
+    "title": "男兒當自強 (남아당자강)",
     "year": 1990,
     "artist": ["林子祥(임자상)"],
     "language" : ["광동어"],
@@ -447,7 +447,7 @@
     ]
   },
   {
-    "title": "Sogno di Volare(하늘을 나는 꿈)",
+    "title": "Sogno di Volare (하늘을 나는 꿈)",
     "year": 2016,
     "artist": ["Christopher Tin"],
     "language" : ["이탈리아어"],
@@ -472,7 +472,7 @@
     ]
   },
   {
-    "title": "Θά 'ρθεις σαν αστραπή(당신은 번개처럼 오시리라)",
+    "title": "Θά 'ρθεις σαν αστραπή (당신은 번개처럼 오시리라)",
     "year": 1998,
     "artist": ["Σταμάτης Σπανουδάκης(Stamatis Spanoudakis)"],
     "language" : ["그리스어"],
@@ -502,8 +502,8 @@
     "artist": ["The Beatles"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["락","잉글랜드", "노르웨이","유럽"],
-    "memo": "비틀즈의 <러버 소울> 수록곡, 존 레논 작곡. Wood는 숲이 아니라 목재. 인도 전통 악기 시타르 소리가 들어간다.",
+    "tags": ["락", "노르웨이","유럽"],
+    "memo": "비틀즈의 <러버 소울> 수록곡, 존 레논 작곡. 인도 전통 악기 시타르 소리가 들어간다.",
     "links": [
       {
         "title": "블로그 해설",
@@ -523,7 +523,7 @@
     "artist": ["The Beatles"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["락","잉글랜드","유럽"],
+    "tags": ["락","유럽"],
     "memo": "비틀즈의 대표곡. 폴 매카트니 작곡",
     "youtube": [
       {
@@ -561,7 +561,7 @@
     "artist": ["The Beatles"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["락","잉글랜드","유럽"],
+    "tags": ["락","유럽"],
     "memo": "11집 Abbey Road 수록곡, 조지 해리슨 작곡. 어두운 날들은 지나고 밝은 태양이 찾아올 것",
     "youtube": [
       {
@@ -576,7 +576,7 @@
     "artist": ["The Beatles"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["락","잉글랜드","유럽"],
+    "tags": ["락","유럽"],
     "memo": "폴 매카트니 작곡, 비틀즈의 마지막 앨범 <Let It Be>의 타이틀곡. 그냥 내버려 두자.",
     "youtube": [
       {
@@ -601,7 +601,7 @@
     ]
   },
   {
-    "title": "春雷(춘뢰)",
+    "title": "春雷 (춘뢰)",
     "year": 2017,
     "artist": ["米津玄師(요네즈 켄시)"],
     "language" : ["일본어"],
@@ -621,7 +621,7 @@
     ]
   },
   {
-    "title": "かいじゅうのマーチ(괴수의 행진곡)",
+    "title": "かいじゅうのマーチ (괴수의 행진곡)",
     "year": 2017,
     "artist": ["米津玄師(요네즈 켄시)"],
     "language" : ["일본어"],
@@ -636,7 +636,7 @@
     ]
   },
   {
-    "title": "ピースサイン(피스 사인)",
+    "title": "ピースサイン (피스 사인)",
     "year": 2017,
     "artist": ["米津玄師(요네즈 켄시)"],
     "language" : ["일본어"],
@@ -841,7 +841,7 @@
     "artist": ["Rolling Stones"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["락","잉글랜드","유럽"],
+    "tags": ["락","유럽"],
     "memo": "롤링 스톤스의 대표곡",
     "youtube": [
       {
@@ -851,7 +851,7 @@
     ]
   },
   {
-    "title": "कश्मीर में तू कन्याकुमारी(Kashmir Main Tu Kanyakumari)",
+    "title": "कश्मीर में तू कन्याकुमारी (Kashmir Main Tu Kanyakumari)",
     "year": 2013,
     "artist": ["Sunidhi Chauhan, Arijit Singh, Neeti Mohan"],
     "language" : ["힌디어"],
@@ -873,7 +873,7 @@
   {
     "title": "Ievan Polkka",
     "year": "19세기?",
-    "artist": ["민요"],
+    "artist": ["핀란드 민요"],
     "language" : ["핀란드어"],
     "countries": ["FI"],
     "tags": ["민요","폴카","보컬로이드","유럽"],
@@ -901,7 +901,7 @@
   {
     "title": "Säkkijärven Polkka",
     "year": "19세기?",
-    "artist": ["민요"],
+    "artist": ["핀란드 민요"],
     "language" : ["핀란드어"],
     "countries": ["FI"],
     "tags": ["민요","폴카","계속전쟁","유럽"],

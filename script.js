@@ -459,55 +459,42 @@ function renderSongs(songArray) {
 
       <div class="song-meta">
 
-        <div class="meta-item">
-          <span class="meta-label">Artist</span>
-          <span>${song.artist.join(", ")}</span>
-        </div>
+        <div class="song-meta-line">
 
-        <div class="meta-item">
-          <span class="meta-label">Year</span>
-          <span>${song.year}</span>
-        </div>
+        <span>${song.artist.join(", ")}</span>
+        <span class="meta-divider">·</span>
 
-        <div class="meta-item">
-          <span class="meta-label">Language</span>
-          <span>${song.language.join(", ")}</span>
-        </div>
+        <span>${song.year}</span>
+        <span class="meta-divider">·</span>
 
-        <div class="meta-item">
-          <span class="meta-label">Country/Region</span>
+        <span>${song.language.join(", ")}</span>
+        <span class="meta-divider">·</span>
 
-          <span class="song-countries">
-            ${song.countries
-              .map(code => `
-                <span class="song-country">
-                  <span class="fi fi-${code.toLowerCase()}"></span>
-                  ${getCountryName(code)}
-                </span>
-              `)
-              .join(" ")}
-          </span>
-        </div>
+        <span class="song-countries">
+          ${song.countries
+            .map(code => `
+              <span class="song-country">
+                <span class="fi fi-${code.toLowerCase()}"></span>
+                ${getCountryName(code)}
+              </span>
+            `)
+            .join(" ")}
+        </span>
 
-        <div class="meta-item meta-tags">
-          <span class="meta-label">Tags</span>
+      </div>
 
-          <span>
-            ${song.tags
-              .map(tag =>
-                `<span class="tag">${tag}</span>`
-              )
-              .join(" ")}
-          </span>
-        </div>
-
+      <div class="song-tags">
+        ${song.tags
+          .map(tag =>
+            `<span class="tag">${tag}</span>`
+          )
+          .join(" ")}
       </div>
 
       ${
         song.memo
           ? `
             <p>
-              <strong>Memo:</strong>
               ${song.memo}
             </p>
           `

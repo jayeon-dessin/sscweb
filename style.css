@@ -83,41 +83,9 @@ h1 {
         box-shadow 0.2s;
 }
 
-.song-meta {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    column-gap: var(--space-6);
-    row-gap: var(--space-3);
-
-    margin-bottom: var(--space-4);
-}
-
-.meta-item {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-2);
-
-    min-width: 0;
-}
-
-.meta-label {
-    flex: 0 0 auto;
-
-    font-weight: 600;
-    color: #555;
-}
-
-.meta-label::after {
-    content: ":";
-}
-
-.meta-tags {
-    grid-column: 1 / -1;
-}
-
 .song-memo {
-    margin-top: var(--space-4);
+    margin: var(--space-4) 0;
+    color: #333;
 }
 
 /* 마우스 올렸을 때 */
@@ -142,19 +110,41 @@ h1 {
     outline-offset: 3px;
 }
 
+.song-meta-line {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: var(--space-2);
+
+    margin-bottom: var(--space-3);
+
+    color: #444;
+}
+
+.meta-divider {
+    color: #aaa;
+}
+
+.song-countries {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
 .song-country {
     display: inline-flex;
     align-items: center;
-
     gap: var(--space-1);
-    margin-right: var(--space-2);
-
-    white-space: nowrap;
 }
 
 .song-country .fi {
-    font-size: 1rem;
+    font-size: 0.95rem;
     border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.song-tags {
+    margin-bottom: var(--space-4);
 }
 
 #archive-stats {
@@ -491,14 +481,38 @@ a:hover {
     #song-list > div {
         padding: var(--space-4);
     }
-    
-    .song-meta {
-        grid-template-columns: 1fr;
-        gap: var(--space-2);
+
+     .song-meta-line {
+        gap: var(--space-1) var(--space-2);
+        font-size: 0.95rem;
     }
 
-    .meta-tags {
-        grid-column: auto;
+    .meta-divider {
+        display: none;
+    }
+
+    .song-meta-line > span {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .song-countries {
+        width: 100%;
+        margin-top: var(--space-1);
+    }
+
+    .song-tags {
+        margin-top: var(--space-2);
+        margin-bottom: var(--space-3);
+    }
+
+    .song-memo {
+        margin: var(--space-3) 0;
+    }
+
+    #song-list h2 {
+        font-size: 1.35rem;
+        line-height: 1.35;
     }
 }
 
