@@ -434,114 +434,112 @@ function applyFilters() {
 // -------------------------------------
 
 function renderSongs(songArray) {
+  item.innerHTML = `
+    <h2>${song.title}</h2>
 
-  songList.innerHTML = "";
+    <div class="song-content">
 
-  // 검색 결과 없음
-  if (songArray.length === 0) {
-
-    songList.innerHTML = `
-      <div class="no-results">
-        검색 결과가 없습니다.
-      </div>
-    `;
-
-    return;
-  }
-
-  songArray.forEach(song => {
-
-    const item =
-      document.createElement("div");
-
-    item.innerHTML = `
-      <h2>${song.title}</h2>
-
-      <div class="song-meta">
+      <!-- 왼쪽 column -->
+      <div class="song-info">
 
         <div class="song-meta-line">
 
-        <span>${song.artist.join(", ")}</span>
-        <span class="meta-divider">·</span>
+          <span>
+            ${song.artist.join(", ")}
+          </span>
 
-        <span>${song.year}</span>
-        <span class="meta-divider">·</span>
+          <span class="meta-divider">·</span>
 
-        <span>${song.language.join(", ")}</span>
-        <span class="meta-divider">·</span>
+          <span>
+            ${song.year}
+          </span>
 
-        <span class="song-countries">
-          ${song.countries
-            .map(code => `
-              <span class="song-country">
-                <span class="fi fi-${code.toLowerCase()}"></span>
-                ${getCountryName(code)}
-              </span>
-            `)
+          <span class="meta-divider">·</span>
+
+          <span>
+            ${song.language.join(", ")}
+          </span>
+
+          <span class="meta-divider">·</span>
+
+          <span class="song-countries">
+            ${song.countries
+              .map(code => `
+                <span class="song-country">
+                  <span class="fi fi-${code.toLowerCase()}"></span>
+                  ${getCountryName(code)}
+                </span>
+              `)
+              .join(" ")}
+          </span>
+
+        </div>
+
+
+        <div class="song-tags">
+          ${song.tags
+            .map(tag =>
+              `<span class="tag">${tag}</span>`
+            )
             .join(" ")}
-        </span>
+        </div>
 
       </div>
 
-      <div class="song-tags">
-        ${song.tags
-          .map(tag =>
-            `<span class="tag">${tag}</span>`
-          )
-          .join(" ")}
+
+      <!-- 오른쪽 column -->
+      <div class="song-details">
+
+        ${
+          song.memo
+            ? `
+              <p class="song-memo">
+                ${song.memo}
+              </p>
+            `
+            : ""
+        }
+
+
+        <div class="song-links">
+
+          ${
+            song.links.length > 0
+              ? song.links
+                  .map(link =>
+                    `<a
+                      href="${link.url}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      ${link.title}
+                    </a>`
+                  )
+                  .join("")
+              : ""
+          }
+
+
+          ${
+            song.youtube.length > 0
+              ? song.youtube
+                  .map(video =>
+                    `<a
+                      href="${video.url}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      ${video.title}
+                    </a>`
+                  )
+                  .join("")
+              : ""
+          }
+
+        </div>
+
       </div>
 
-      ${
-        song.memo
-          ? `
-            <p>
-              ${song.memo}
-            </p>
-          `
-          : ""
-      }
-
-      ${
-        song.links.length > 0
-          ? `
-            <div>
-              ${song.links
-                .map(link =>
-                  `<a
-                    href="${link.url}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    ${link.title}
-                  </a>`
-                )
-                .join("<br>")}
-            </div>
-          `
-          : ""
-      }
-
-      ${
-        song.youtube.length > 0
-          ? `
-            <div>
-              ${song.youtube
-                .map(video =>
-                  `<a
-                    href="${video.url}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    ${video.title}
-                  </a>`
-                )
-                .join("<br>")}
-            </div>
-          `
-          : ""
-      }
-    `;
-
-    songList.appendChild(item);
-  });
+    </div>
+  `;
 }
