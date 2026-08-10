@@ -342,6 +342,10 @@ h1 {
     min-width: 0;
 }
 
+.song-meta {
+    margin-bottom: var(--space-3);
+}
+
 .song-meta-line {
     display: flex;
     flex-wrap: wrap;
@@ -349,12 +353,18 @@ h1 {
 
     gap: var(--space-2);
 
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-1);
 
     color: #444;
 }
 
-.meta-divider {
+.song-songwriters {
+    font-size: 0.82rem;
+    color: #888;
+    line-height: 1.4;
+}
+
+meta-divider {
     color: #aaa;
 }
 

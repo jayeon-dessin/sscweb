@@ -3,9 +3,10 @@
     "title": "Dschinghis Khan",
     "year": 1979,
     "artist": ["Dschinghis Khan"],
+    "songwriters": ["Ralph Siegel", "Bernd Meinunger"],
     "language" : ["독일어"],
     "countries": ["DE"],
-    "tags": ["독일", "디스코", "유럽", "몽골"],
+    "tags": ["디스코", "유럽", "몽골"],
     "memo": "디스코 밴드 징기스 칸의 동명의 대표곡. 몽골의 정복자 칭기즈 칸(징기스 칸)에 관한 노래",
     "youtube": [
       {
@@ -18,6 +19,7 @@
     "title": "Machu Picchu",
     "year": 1980,
     "artist": ["Dschinghis Khan"],
+    "songwriters": ["Ralph Siegel", "Bernd Meinunger"],
     "language" : ["독일어"],
     "countries": ["DE"],
     "tags": ["디스코", "유럽", "잉카"],
@@ -39,6 +41,7 @@
     "title": "Moskau",
     "year": 1979,
     "artist": ["Dschinghis Khan"],
+    "songwriters": ["Ralph Siegel", "Bernd Meinunger"],
     "language" : ["독일어"],
     "countries": ["DE"],
     "tags": ["디스코", "유럽", "러시아"],
@@ -54,6 +57,7 @@
     "title": "Pistolero",
     "year": 1981,
     "artist": ["Dschinghis Khan"],
+    "songwriters": ["Ralph Siegel", "Bernd Meinunger"],
     "language" : ["독일어"],
     "countries": ["DE"],
     "tags": ["디스코", "유럽", "멕시코"],
@@ -69,6 +73,7 @@
     "title": "Nur ein Wort",
     "year": 2005,
     "artist": ["Wir sind Helden"],
+    "songwriters": ["Judith Holofernes", "Pola Roy", "Mark Tavassol", "Jean-Michel Tourette"],
     "language" : ["독일어"],
     "countries": ["DE"],
     "tags": ["팝", "유럽"],
@@ -81,11 +86,12 @@
     ]
   },
   {
-    "title": "The girl from Ipanema (Gatora de Ipanema)",
+    "title": "The girl from Ipanema (Garota de Ipanema)",
     "year": 1964,
-    "artist": ["Antônio Carlos Jobim","Stan Getz","João Gilberto", "Astrud Gilberto"],
+    "artist": ["Antônio Carlos Jobim","Astrud Gilberto","João Gilberto","Stan Getz"],
+    "songwriters": ["Antônio Carlos Jobim", "Vinícius de Moraes", "Norman Gimbel"],
     "language" : ["포르투갈어", "영어"],
-    "countries": ["BR"],
+    "countries": ["BR","US"],
     "tags": ["보사노바", "남아메리카"],
     "memo": "보사노바의 전설 조빙의 대표곡.",
     "links": [
@@ -105,6 +111,7 @@
     "title": "Dragostea din tei (보리수나무 아래에서의 사랑)",
     "year": 2003,
     "artist": ["O-Zone"],
+    "songwriters": ["Dan Bălan"],
     "language" : ["루마니아어"],
     "countries": ["MD"],
     "tags": ["댄스", "유럽"],
@@ -131,6 +138,7 @@
     "year": 1974,
     "artist": ["Udo Jürgens"],
     "language" : ["독일어"],
+    "songwriters": ["Udo Jürgens", "Michael Kunze"],
     "countries": ["AT", "DE"],
     "tags": ["팝","그리스","유럽"],
     "memo": "서독의 그리스인 노동자들의 애환을 담은 곡. 독일인들의 국민가요 중 하나",
@@ -145,6 +153,7 @@
     "title": "Canopée",
     "year": 2017,
     "artist": ["Polo&Pan","Victoria Lafaurie"],
+    "songwriters": ["Alexandre Grynszpan", "Paul Armand-Delille"],
     "language" : ["프랑스어"],
     "countries": ["FR"],
     "tags": ["일렉트로닉", "유럽"],
@@ -165,6 +174,7 @@
     "title": "Ani Kuni",
     "year": 2021,
     "artist": ["Polo&Pan"],
+    "songwriters": ["Traditional","Alexandre Grynszpan","Paul Armand-Delille"],
     "language" : ["아라파호어"],
     "countries": ["FR","US"],
     "tags": ["일렉트로닉", "유럽", "북아메리카", "아라파호"],
@@ -180,6 +190,7 @@
     "title": "Comme d'habitude",
     "year": 1967,
     "artist": ["Claude François"],
+    "songwriters": ["Claude François","Jacques Revaux","Gilles Thibaut"],
     "language" : ["프랑스어"],
     "countries": ["FR"],
     "tags": ["샹송", "번안", "유럽"],
@@ -199,6 +210,7 @@
     "title": "Ça pik un peu quand même",
     "year": 2026,
     "artist": ["Miki"],
+    "songwriters": ["Miki", "Tristan Salvati"],
     "language" : ["프랑스어"],
     "countries": ["FR"],
     "tags": ["일렉트로팝", "유럽"],
@@ -213,7 +225,8 @@
   {
     "title": "Drunten im Unterland",
     "year": 1836,
-    "artist": ["독일 민요"],
+    "artist": [],
+    "songwriters": ["Traditional","Gottfried Hartmann Weigle"],
     "language" : ["독일어"],
     "countries": ["DE"],
     "tags": ["민요", "번안", "유럽", "슈바벤"],
@@ -237,7 +250,8 @@
   {
     "title": "Aloha ʻOe",
     "year": 1878,
-    "artist": ["Liliʻuokalani"],
+    "artist": [],
+    "songwriters": ["Liliʻuokalani"],
     "language" : ["하와이어","영어"],
     "countries": ["US"],
     "tags": ["민요", "하와이", "오세아니아"],
@@ -261,7 +275,8 @@
   {
     "title": "Pokarekare Ana",
     "year": 1914,
-    "artist": ["마오리 민요"],
+    "artist": [],
+    "songwriters": ["Traditional"],
     "language" : ["마오리어"],
     "countries": ["NZ"],
     "tags": ["민요", "오세아니아"],
@@ -279,20 +294,17 @@
       {
         "title": "The Kiwi Sound",
         "url": "https://www.youtube.com/watch?v=nqr4wamt1-g"
-      },
-      {
-        "title": "Civilization 6 OST - Pōkarekare Ana; Ka Mate",
-        "url": "https://www.youtube.com/watch?v=b7-XfrpjfFg"
       }
     ]
   },
   {
     "title": "Im Himmel Gibt's Kein Bier(In Heaven There Is No Beer)",
     "year": 1956,
-    "artist": ["Ralph Maria Siegel"],
+    "artist": [""],
+    "songwriters": ["Ralph Maria Siegel","Ernst Neubach"],
     "language" : ["독일어"],
     "countries": ["DE"],
-    "tags": ["권주가","유럽"],
+    "tags": ["권주가","유럽","폴카"],
     "memo": "술자리 노래; 천국에는 맥주가 없기에, 우리는 지금 여기서 마신다.",
     "youtube": [
       {
@@ -312,7 +324,8 @@
   {
     "title": "幽霊東京 (유령도쿄)",
     "year": 2019,
-    "artist": ["Ayase"],
+    "artist": ["Ayase", "Hatsune Miku(初音ミク)"],
+    "songwriters": ["Ayase"],
     "language" : ["일본어"],
     "countries": ["JP"],
     "tags": ["보컬로이드", "아시아"],
@@ -336,7 +349,8 @@
   {
     "title": "テレキャスタービーボーイ (텔레캐스터 비보이)",
     "year": 2019,
-    "artist": ["すりぃ(Three)"],
+    "artist": ["Three(すりぃ)", "Kagamine Len(鏡音レン)"],
+    "songwriters": ["すりぃ"],
     "language" : ["일본어"],
     "countries": ["JP"],
     "tags": ["보컬로이드", "아시아"],
@@ -355,7 +369,8 @@
   {
     "title": "Группа крови (혈액형)",
     "year": 1988,
-    "artist": ["Кино(Kino)"],
+    "artist": ["Kino(Кино)"],
+    "songwriters": ["Виктор Цой"],
     "language" : ["러시아어"],
     "countries": ["RU"],
     "tags": ["소련", "유럽", "락"],
@@ -376,6 +391,7 @@
     "title": "Rain",
     "year": 2017,
     "artist": ["SEKAI NO OWARI"],
+    "songwriters": ["Nakajin", "Fukase", "Saori"],
     "language" : ["일본어"],
     "countries": ["JP"],
     "tags": ["JPOP", "아시아","영화음악"],
@@ -394,10 +410,11 @@
   {
     "title": "當年情 (당년정)",
     "year": 1986,
-    "artist": ["張國榮(장국영)"],
+    "artist": ["Leslie Chung(張國榮)"],
+    "songwriters": ["顧嘉煇", "黃霑"],
     "language" : ["광동어"],
-    "countries": ["HK","CN"],
-    "tags": ["홍콩", "아시아","영화음악"],
+    "countries": ["HK"],
+    "tags": ["아시아","영화음악"],
     "memo": "영화 <영웅본색> 주제가. 홍콩 느와르를 대표하는 곡",
     "links": [
       {
@@ -415,10 +432,11 @@
   {
     "title": "奔向未來日子 (분향미래일자)",
     "year": 1988,
-    "artist": ["張國榮(장국영)"],
+    "artist": ["Leslie Chung(張國榮)"],
+    "songwriters": ["顧嘉煇", "黃霑"],
     "language" : ["광동어"],
-    "countries": ["HK","CN"],
-    "tags": ["홍콩", "아시아","영화음악"],
+    "countries": ["HK"],
+    "tags": ["아시아","영화음악"],
     "memo": "영화 <영웅본색 2> 주제가. 비관적이고 허무한 분위기",
     "youtube": [
       {
@@ -430,10 +448,11 @@
   {
     "title": "男兒當自強 (남아당자강)",
     "year": 1990,
-    "artist": ["林子祥(임자상)"],
+    "artist": ["George Lam(林子祥)"],
+    "songwriters": ["Traditional", "黃霑"],
     "language" : ["광동어"],
     "countries": ["HK","CN"],
-    "tags": ["홍콩","아시아","영화음악"],
+    "tags": ["아시아","영화음악"],
     "memo": "중국 장쑤성 전통 연주곡을 편곡한 노래. 영화 <황비홍> 주제가.",
     "youtube": [
       {
@@ -450,8 +469,9 @@
     "title": "Sogno di Volare (하늘을 나는 꿈)",
     "year": 2016,
     "artist": ["Christopher Tin"],
+    "songwriters": ["Christopher Tin", "Leonardo da Vinci (text source)"],
     "language" : ["이탈리아어"],
-    "countries": ["US","IT"],
+    "countries": ["US"],
     "tags": ["게임음악","이탈리아","클래식"],
     "memo": "게임 <문명 6> 주제가. 레오나르도 다빈치의(것으로 알려진) 노트를 바탕으로 하여, 인류의 비행에 대한 꿈을 표현했다.",
     "links": [
@@ -474,7 +494,8 @@
   {
     "title": "Θά 'ρθεις σαν αστραπή (당신은 번개처럼 오시리라)",
     "year": 1998,
-    "artist": ["Σταμάτης Σπανουδάκης(Stamatis Spanoudakis)"],
+    "artist": ["Stamatis Spanoudakis(Σταμάτης Σπανουδάκης)"],
+    "songwriters": ["Σταμάτης Σπανουδάκης"],
     "language" : ["그리스어"],
     "countries": ["GR"],
     "tags": ["동로마제국", "콘스탄티노폴리스","유럽","클래식"],
@@ -500,9 +521,10 @@
     "title": "Norwegian Wood (This Bird Has Flown)",
     "year": 1965,
     "artist": ["The Beatles"],
+    "songwriters": ["John Lennon", "Paul McCartney"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["락", "노르웨이","유럽"],
+    "tags": ["락","노르웨이","유럽"],
     "memo": "비틀즈의 <러버 소울> 수록곡, 존 레논 작곡. 인도 전통 악기 시타르 소리가 들어간다.",
     "links": [
       {
@@ -521,6 +543,7 @@
     "title": "Hey Jude",
     "year": 1968,
     "artist": ["The Beatles"],
+    "songwriters": ["John Lennon", "Paul McCartney"],
     "language" : ["영어"],
     "countries": ["GB"],
     "tags": ["락","유럽"],
@@ -544,6 +567,7 @@
     "title": "Yellow Submarine",
     "year": 1966,
     "artist": ["The Beatles"],
+    "songwriters": ["John Lennon", "Paul McCartney"],
     "language" : ["영어"],
     "countries": ["GB"],
     "tags": ["유럽"],
@@ -559,6 +583,7 @@
     "title": "Here Comes the Sun",
     "year": 1969,
     "artist": ["The Beatles"],
+    "songwriters": ["George Harrison"],
     "language" : ["영어"],
     "countries": ["GB"],
     "tags": ["락","유럽"],
@@ -574,6 +599,7 @@
     "title": "Let It Be",
     "year": 1970,
     "artist": ["The Beatles"],
+    "songwriters": ["John Lennon", "Paul McCartney"],
     "language" : ["영어"],
     "countries": ["GB"],
     "tags": ["락","유럽"],
@@ -589,6 +615,7 @@
     "title": "Ob-La-Di, Ob-La-Da",
     "year": 1968,
     "artist": ["The Beatles"],
+    "songwriters": ["John Lennon", "Paul McCartney"],
     "language" : ["영어"],
     "countries": ["GB"],
     "tags": ["락","유럽"],
@@ -603,7 +630,8 @@
   {
     "title": "春雷 (춘뢰)",
     "year": 2017,
-    "artist": ["米津玄師(요네즈 켄시)"],
+    "artist": ["Kenshi Yonezu(米津玄師)"],
+    "songwriters": ["米津玄師"],
     "language" : ["일본어"],
     "countries": ["JP"],
     "tags": ["JPOP", "아시아"],
@@ -623,7 +651,8 @@
   {
     "title": "かいじゅうのマーチ (괴수의 행진곡)",
     "year": 2017,
-    "artist": ["米津玄師(요네즈 켄시)"],
+    "artist": ["Kenshi Yonezu(米津玄師)"],
+    "songwriters": ["米津玄師"],
     "language" : ["일본어"],
     "countries": ["JP"],
     "tags": ["JPOP", "아시아"],
@@ -638,7 +667,8 @@
   {
     "title": "ピースサイン (피스 사인)",
     "year": 2017,
-    "artist": ["米津玄師(요네즈 켄시)"],
+    "artist": ["Kenshi Yonezu(米津玄師)"],
+    "songwriters": ["米津玄師"],
     "language" : ["일본어"],
     "countries": ["JP"],
     "tags": ["JPOP", "아시아", "애니메이션"],
@@ -653,7 +683,8 @@
   {
     "title": "Lemon",
     "year": 2018,
-    "artist": ["米津玄師(요네즈 켄시)"],
+    "artist": ["Kenshi Yonezu(米津玄師)"],
+    "songwriters": ["米津玄師"],
     "language" : ["일본어"],
     "countries": ["JP"],
     "tags": ["JPOP", "아시아"],
@@ -668,7 +699,8 @@
   {
     "title": "KICK BACK",
     "year": 2022,
-    "artist": ["米津玄師(요네즈 켄시)"],
+    "artist": ["Kenshi Yonezu(米津玄師)"],
+    "songwriters": ["米津玄師"],
     "language" : ["일본어"],
     "countries": ["JP"],
     "tags": ["JPOP", "아시아","애니메이션"],
@@ -684,6 +716,7 @@
     "title": "Water No Get Enemy",
     "year": 1975,
     "artist": ["Fela Kuti"],
+    "songwriters": ["Fela Kuti"],
     "language" : ["요루바어","나이지리아피진영어"],
     "countries": ["NG"],
     "tags": ["아프로비트", "아프리카"],
@@ -704,6 +737,11 @@
     "title": "Waterloo",
     "year": 1974,
     "artist": ["ABBA"],
+    "songwriters": [
+      "Benny Andersson",
+      "Björn Ulvaeus",
+      "Stig Anderson"
+    ],
     "language" : ["스웨덴어","영어"],
     "countries": ["SE"],
     "tags": ["디스코","유로비전","나폴레옹","유럽"],
@@ -728,6 +766,11 @@
     "title": "Dancing Queen",
     "year": 1976,
     "artist": ["ABBA"],
+    "songwriters": [
+      "Benny Andersson",
+      "Björn Ulvaeus",
+      "Stig Anderson"
+    ],
     "language" : ["영어"],
     "countries": ["SE"],
     "tags": ["디스코","유럽"],
@@ -751,7 +794,11 @@
     "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
     "year": 1979,
     "artist": ["ABBA"],
-    "language" : ["디스코","영어"],
+    "songwriters": [
+      "Benny Andersson",
+      "Björn Ulvaeus"
+    ],
+    "language" : ["영어"],
     "countries": ["SE"],
     "tags": ["디스코","유럽"],
     "memo": "신디사이저 도입부가 인상적인 곡.",
@@ -766,9 +813,14 @@
     "title": "Mamma Mia",
     "year": 1975,
     "artist": ["ABBA"],
-    "language" : ["락","영어"],
+    "songwriters": [
+      "Benny Andersson",
+      "Björn Ulvaeus",
+      "Stig Anderson"
+    ],
+    "language" : ["영어"],
     "countries": ["SE"],
-    "tags": ["유럽"],
+    "tags": ["락","유럽"],
     "memo": "동명의 3집 앨범 타이틀곡. 뮤지컬 <맘마 미아!>의 제목이 이 곡에서 유래했다.",
     "youtube": [
       {
@@ -785,6 +837,10 @@
     "title": "I Have a Dream",
     "year": 1979,
     "artist": ["ABBA"],
+    "songwriters": [
+      "Benny Andersson",
+      "Björn Ulvaeus"
+    ],
     "language" : ["영어"],
     "countries": ["SE"],
     "tags": ["유럽"],
@@ -800,6 +856,12 @@
     "title": "Bailando",
     "year": 2014,
     "artist": ["Enrique Iglesias","Descemer Bueno","Gente De Zona"],
+    "songwriters": [
+      "Enrique Iglesias",
+      "Descemer Bueno",
+      "Alexander Delgado",
+      "Randy Malcom Martínez"
+    ],
     "language" : ["스페인어"],
     "countries": ["ES","CU"],
     "tags": ["라틴팝","유럽","북아메리카"],
@@ -820,8 +882,17 @@
     "title": "Súbeme la Radio",
     "year": 2017,
     "artist": ["Enrique Iglesias","Descemer Bueno","Zion & Lennox"],
+    "songwriters": [
+      "Enrique Iglesias",
+      "Descemer Bueno",
+      "Carlos Ortiz",
+      "Félix Ortiz",
+      "Gabriel Pizarro",
+      "Juan Rivera",
+      "Luis Ortiz"
+    ],
     "language" : ["스페인어"],
-    "countries": ["ES","CU","PR","US"],
+    "countries": ["ES","CU","PR"],
     "tags": ["라틴팝","유럽","북아메리카"],
     "memo": "엔리케 이글레시아스의 대표곡. '라디오 볼륨을 키워 줘'",
     "youtube": [
@@ -838,7 +909,8 @@
   {
     "title": "(I Can’t Get No) Satisfaction",
     "year": 1965,
-    "artist": ["Rolling Stones"],
+    "artist": ["The Rolling Stones"],
+    "songwriters": ["Mick Jagger", "Keith Richards"],
     "language" : ["영어"],
     "countries": ["GB"],
     "tags": ["락","유럽"],
@@ -854,6 +926,11 @@
     "title": "कश्मीर में तू कन्याकुमारी (Kashmir Main Tu Kanyakumari)",
     "year": 2013,
     "artist": ["Sunidhi Chauhan, Arijit Singh, Neeti Mohan"],
+    "songwriters": [
+      "Vishal Dadlani",
+      "Shekhar Ravjiani",
+      "Amitabh Bhattacharya"
+    ],
     "language" : ["힌디어"],
     "countries": ["IN"],
     "tags": ["영화음악","발리우드","아시아"],
@@ -873,7 +950,8 @@
   {
     "title": "Ievan Polkka",
     "year": "19세기?",
-    "artist": ["핀란드 민요"],
+    "artist": [],
+    "songwriters": ["Traditional", "Eino Kettunen"],
     "language" : ["핀란드어"],
     "countries": ["FI"],
     "tags": ["민요","폴카","보컬로이드","유럽"],
@@ -901,7 +979,8 @@
   {
     "title": "Säkkijärven Polkka",
     "year": "19세기?",
-    "artist": ["핀란드 민요"],
+    "artist": [],
+    "songwriters": ["Traditional", "Reino Helismaa"],
     "language" : ["핀란드어"],
     "countries": ["FI"],
     "tags": ["민요","폴카","계속전쟁","유럽"],
@@ -914,6 +993,256 @@
       {
         "title": "1939년 Viljo Vesterinen, Dallapé 오케스트라 버전 (보컬X)",
         "url": "https://www.youtube.com/watch?v=gZx1zl_sVTI"
+      }
+    ]
+  },
+  {
+    "title": "Nessun Dorma (아무도 잠들지 말라)",
+    "year": "1926",
+    "artist": [],
+    "songwriters": ["Giacomo Puccini","Giuseppe Adami","Renato Simoni"],
+    "language" : ["이탈리아어"],
+    "countries": ["IT"],
+    "tags": ["오페라","유럽"],
+    "memo": "푸치니의 오페라 <투란도트> 3막 아리아.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/48"
+      }
+    ],"youtube": [
+      {
+        "title": "Luciano Pavarotti, 1994년 LA Three Tenors 콘서트",
+        "url": "https://www.youtube.com/watch?v=cWc7vYjgnTs"
+      },
+      {
+        "title": "Luciano Pavarotti, 2006 토리노 올림픽 개막식",
+        "url": "https://www.youtube.com/watch?v=rxxHvW0oNpU"
+      }
+    ]
+  },
+  {
+    "title": "'O Sole Mio",
+    "year": "1898",
+    "artist": [],
+    "songwriters": ["Eduardo di Capua","Alfredo Mazzucchi","Giovanni Capurro"],
+    "language" : ["나폴리어"],
+    "countries": ["IT"],
+    "tags": ["가곡","유럽","나폴리"],
+    "memo": "나폴리의 가곡, '오 나의 태양'.",
+    "youtube": [
+      {
+        "title": "The Three Tenors, 1994년 LA 콘서트",
+        "url": "https://www.youtube.com/watch?v=ERD4CbBDNI0"
+      },
+      {
+        "title": "Bryan Adams & Luciano Pavarotti, 1994년 모데나.",
+        "url": "https://www.youtube.com/watch?v=5a0juQ0aeGI"
+      }
+    ]
+  },
+  {
+    "title": "Brindisi (Libiamo ne' lieti calici, 축배의 노래)",
+    "year": "1853",
+    "artist": [],
+    "songwriters": ["Giuseppe Verdi","Francesco Maria Piave"],
+    "language" : ["이탈리아어"],
+    "countries": ["IT"],
+    "tags": ["오페라","유럽","권주가"],
+    "memo": "베르디의 오페라 <라 트라비아타> 1막의 활기찬 술 노래.",
+    "youtube": [
+      {
+        "title": "The Three Tenors, 1994년 LA 콘서트",
+        "url": "https://www.youtube.com/watch?v=l7eHO_PEWLk"
+      },
+      {
+        "title": "Metropolitan Opera, 2018",
+        "url": "https://www.youtube.com/watch?v=afhAqMeeQJk"
+      }
+    ]
+  },
+  {
+    "title": "La donna è mobile (여자의 마음)",
+    "year": "1851",
+    "artist": [],
+    "songwriters": ["Giuseppe Verdi","Francesco Maria Piave"],
+    "language" : ["이탈리아어"],
+    "countries": ["IT"],
+    "tags": ["오페라","유럽"],
+    "memo": "베르디의 오페라 <라골레토> 3막 노래.",
+    "youtube": [
+      {
+        "title": "Luciano Pavarotti, 영화 <리골레토>(1983)",
+        "url": "https://www.youtube.com/watch?v=xCFEk6Y8TmM"
+      }
+    ]
+  },
+  {
+    "title": "تملي معاك (Tamally Maak)",
+    "year": "2000",
+    "artist": ["Amr Diab(عمرو دياب)"],
+    "songwriters": ["Sherif Tag", "Ahmed Ali Moussa"],
+    "language" : ["아랍어"],
+    "countries": ["EG"],
+    "tags": ["아랍팝","아프리카"],
+    "memo": "언젠가부터 알게 된 이집트를 대표하는 가요 중 하나. '언제나 당신과 함께'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/50"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=EgmXTmj62ic"
+      },
+      {
+        "title": "Serge Nikol & Etric Lyons 커버",
+        "url": "https://www.youtube.com/watch?v=572u3bz-RFw"
+      }
+    ]
+  },
+  {
+    "title": "نور العين (Nour El Ein/Nour El Ain)",
+    "year": "1996",
+    "artist": ["Amr Diab(عمرو دياب)"],
+    "songwriters": ["Nasser El Mezdawy", "Ahmed Sheta"],
+    "language" : ["아랍어"],
+    "countries": ["EG"],
+    "tags": ["아랍팝","아프리카"],
+    "memo": "아므르 디압의 대표곡 중 하나. '눈빛'",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=KLJA-srM_yM"
+      }
+    ]
+  },
+  {
+    "title": "world.execute(me)",
+    "year": "2016",
+    "artist": ["Mili"],
+    "songwriters": ["momocashew", "Yamato Kasai"],
+    "language" : ["영어"],
+    "countries": ["JP","CA"],
+    "tags": ["Java"],
+    "memo": "Java 형식의 가사가 특이한 곡. 세소찾 특별편",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/51"
+      }
+    ],"youtube": [
+      {
+        "title": "Java 가사",
+        "url": "https://www.youtube.com/watch?v=ESx_hy1n7HA"
+      }
+    ]
+  },
+  {
+    "title": "Mask Off",
+    "year": "2017",
+    "artist": ["Future"],
+    "songwriters": ["Future", "Metro Boomin", "Tommy Butler"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["힙합","북아메리카"],
+    "memo": "개인적으로 좋아하는 힙합 곡",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=xvZqHgFz51I"
+      }
+    ]
+  },
+  {
+    "title": "Take Me Home, Country Roads",
+    "year": "1971",
+    "artist": ["John Denver"],
+    "songwriters": ["Bill Danoff", "Taffy Nivert", "John Denver"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["컨트리","웨스트버지니아","북아메리카"],
+    "memo": "컨트리 장르 중 가장 유명한 곡. 시골길 운전에 필수",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=1vrEljMfXYo"
+      }
+    ]
+  },
+  {
+    "title": "Tennessee Whiskey",
+    "year": "1981",
+    "artist": ["David Allan Coe"],
+    "songwriters": ["Dean Dillon","Linda Hargrove"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["컨트리","테네시","북아메리카"],
+    "memo": "연인을 다양한 술에 비유하는, 감미로운 사랑 노래.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/52"
+      }
+    ],"youtube": [
+      {
+        "title": "David Allan Coe (1981)",
+        "url": "https://www.youtube.com/watch?v=_t4tUeqjcjI"
+      },
+      {
+        "title": "George Jones (1983)",
+        "url": "https://www.youtube.com/watch?v=ggkyQ8RqOvc"
+      },
+      {
+        "title": "Chris Stapleton (2015), 가장 인기가 많은 버전.",
+        "url": "https://www.youtube.com/watch?v=4zAThXFOy2c"
+      }
+    ]
+  },
+  {
+    "title": "For Evigt",
+    "year": "2016",
+    "artist": ["Volbeat","Johan Olsen"],
+    "songwriters": ["Michael Poulsen"],
+    "language" : ["덴마크어","영어"],
+    "countries": ["DK"],
+    "tags": ["락","유럽"],
+    "memo": "밴드 하다가 알게 된 신나는 락 음악. '영원히'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/53"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=TAhyZegVkhw"
+      }
+    ]
+  },
+  {
+    "title": "月亮代表我的心",
+    "year": "1973",
+    "artist": ["Chen Fen-Lan(陳芬蘭)"],
+    "songwriters": ["孫儀","翁清溪"],
+    "language" : ["중국어"],
+    "countries": ["TW"],
+    "tags": ["팝","아시아"],
+    "memo": "'달빛이 나의 마음을 대신해요'. 등려군(鄧麗君, Teresa Teng)의 리메이크 버전이 유명하다.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/55"
+      }
+    ],"youtube": [
+      {
+        "title": "진분란 (원곡)",
+        "url": "https://www.youtube.com/watch?v=ePbaa-6F-G4"
+      },
+      {
+        "title": "널리 알려진, 등려군 버전",
+        "url": "https://www.youtube.com/watch?v=bv_cEeDlop0"
       }
     ]
   }

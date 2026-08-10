@@ -6,6 +6,7 @@ const languageFilter = document.getElementById("language-filter");
 const songList = document.getElementById("song-list");
 const tagSearch = document.getElementById("tag-search");
 
+
 const countryView = document.getElementById("country-view");
 const countryList = document.getElementById("country-list");
 const songsView = document.getElementById("songs-view");
@@ -50,6 +51,12 @@ fetch(`sscdbg.json?v=${Date.now()}`)
       artist: Array.isArray(song.artist)
         ? song.artist
         : [song.artist],
+
+      songwriters: Array.isArray(song.songwriters)
+        ? song.songwriters
+        : song.songwriters
+          ? [song.songwriters]
+          : [],
 
       language: Array.isArray(song.language)
         ? song.language
@@ -386,6 +393,13 @@ function applyFilters() {
             .includes(keyword)
         );
 
+      const songwriterMatch =
+        song.songwriters.some(writer =>
+          String(writer)
+            .toLowerCase()
+            .includes(keyword)
+        );
+
       const tagMatch =
         song.tags.some(tag =>
           String(tag)
@@ -396,6 +410,7 @@ function applyFilters() {
       if (
         !titleMatch &&
         !artistMatch &&
+        !songwriterMatch &&
         !tagMatch
       ) {
         return false;
@@ -455,30 +470,44 @@ function renderSongs(songArray) {
         <!-- 왼쪽: 기본 정보 -->
         <div class="song-info">
 
-          <div class="song-meta-line">
+          <div class="song-meta">
 
-            <span>${song.artist.join(", ")}</span>
+            <div class="song-meta-line">
 
-            <span class="meta-divider">·</span>
+              <span>${song.artist.join(", ")}</span>
 
-            <span>${song.year}</span>
+              <span class="meta-divider">·</span>
 
-            <span class="meta-divider">·</span>
+              <span>${song.year}</span>
 
-            <span>${song.language.join(", ")}</span>
+              <span class="meta-divider">·</span>
 
-            <span class="meta-divider">·</span>
+              <span>${song.language.join(", ")}</span>
 
-            <span class="song-countries">
-              ${song.countries
-                .map(code => `
-                  <span class="song-country">
-                    <span class="fi fi-${code.toLowerCase()}"></span>
-                    ${getCountryName(code)}
-                  </span>
-                `)
-                .join("")}
-            </span>
+              <span class="meta-divider">·</span>
+
+              <span class="song-countries">
+                ${song.countries
+                  .map(code => `
+                    <span class="song-country">
+                      <span class="fi fi-${code.toLowerCase()}"></span>
+                      ${getCountryName(code)}
+                    </span>
+                  `)
+                  .join("")}
+              </span>
+
+            </div>
+
+            ${
+              song.songwriters.length > 0
+                ? `
+                  <div class="song-songwriters">
+                    ${song.songwriters.join(", ")}
+                  </div>
+                `
+                : ""
+            }
 
           </div>
 
