@@ -499,88 +499,112 @@ function renderRandomSong(song) {
         </button>
       </div>
 
-      <h2>${song.title}</h2>
 
-      <div class="random-song-meta">
+      <div class="song-content">
 
-        <span>${song.artist.join(", ")}</span>
-        <span class="meta-divider">·</span>
+        <!-- 왼쪽: 기본 정보 -->
+        <div class="song-info">
 
-        <span>${song.year}</span>
-        <span class="meta-divider">·</span>
+          <h2>${song.title}</h2>
 
-        <span>${song.language.join(", ")}</span>
-        <span class="meta-divider">·</span>
+          <div class="song-meta">
+            <div class="song-meta-line">
 
-        <span class="song-countries">
-          ${song.countries
-            .map(code => `
-              <span class="song-country">
-                <span class="fi fi-${code.toLowerCase()}"></span>
-                ${getCountryName(code)}
+              <span>${song.artist.join(", ")}</span>
+              <span class="meta-divider">·</span>
+
+              <span>${song.year}</span>
+              <span class="meta-divider">·</span>
+
+              <span>${song.language.join(", ")}</span>
+              <span class="meta-divider">·</span>
+
+              <span class="song-countries">
+                ${song.countries
+                  .map(code => `
+                    <span class="song-country">
+                      <span class="fi fi-${code.toLowerCase()}"></span>
+                      ${getCountryName(code)}
+                    </span>
+                  `)
+                  .join("")}
               </span>
-            `)
-            .join("")}
-        </span>
 
-      </div>
-
-      ${
-        song.songwriters?.length
-          ? `
-            <div class="random-song-songwriters">
-              ${song.songwriters.join(", ")}
             </div>
-          `
-          : ""
-      }
 
-      ${
-        song.memo
-          ? `
-            <p class="random-song-memo">
-              ${song.memo}
-            </p>
-          `
-          : ""
-      }
+            ${
+              song.songwriters?.length
+                ? `
+                  <div class="song-songwriters">
+                    ${song.songwriters.join(", ")}
+                  </div>
+                `
+                : ""
+            }
 
-      <div class="random-song-links">
+          </div>
 
-        ${
-          song.links?.length
-            ? song.links
-                .map(link => `
-                  <a
-                    href="${link.url}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    ${link.title}
-                  </a>
-                `)
-                .join("")
-            : ""
-        }
 
-        ${
-          song.youtube?.length
-            ? song.youtube
-                .map(video => `
-                  <a
-                    href="${video.url}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    ${video.title}
-                  </a>
-                `)
-                .join("")
-            : ""
-        }
+          <div class="song-tags">
+            ${song.tags
+              .map(tag =>
+                `<span class="tag">${tag}</span>`
+              )
+              .join("")}
+          </div>
 
+        </div>
+
+
+        <!-- 오른쪽: 설명 + 링크 -->
+        <div class="song-details">
+
+          ${
+            song.memo
+              ? `
+                <p class="song-memo">
+                  ${song.memo}
+                </p>
+              `
+              : ""
+          }
+
+          <div class="song-links">
+
+            ${
+              song.links?.length
+                ? song.links
+                    .map(link => `
+                      <a
+                        href="${link.url}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        ${link.title}
+                      </a>
+                    `)
+                    .join("")
+                : ""
+            }
+
+            ${
+              song.youtube?.length
+                ? song.youtube
+                    .map(video => `
+                      <a
+                        href="${video.url}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        ${video.title}
+                      </a>
+                    `)
+                    .join("")
+                : ""
+            }
+          </div>
+        </div>
       </div>
-
     </div>
   `;
 
