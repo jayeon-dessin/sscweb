@@ -1991,5 +1991,26 @@
         "url": "https://www.youtube.com/watch?v=Nn1IeHL5DHY"
       }
     ]
+  },
+  {
+    "title": "گل یخ (Gole Yakh)",
+    "year": "1973",
+    "artist": ["Kourosh Yaghmaei(کورش یغمایی)"],
+    "songwriters": ["Kourosh Yaghmaei","Mahdi Akhavan Langeroudi"],
+    "language" : ["페르시아어"],
+    "countries": ["IR"],
+    "tags": ["사이키델릭락","아시아"],
+    "memo": "얼음꽃(납매)에 비유한 사랑 이야기. 이란 락의 전설 쿠로시 야그마에이의 데뷔 앨범 대표곡.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/66"
+      }
+    ],"youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=EmhqVPXOKo4"
+      }
+    ]
   }
 ]
