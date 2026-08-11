@@ -12,7 +12,6 @@ const countryList = document.getElementById("country-list");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
 const backButton = document.getElementById("back-to-countries");
-const firstRandomSong = getRandomSong(songs);
 
 const decorativeFlags = [
   "KR", "DZ", "AR", "AU", "AT", "BA", "BY", "BE", "BJ",
@@ -95,6 +94,7 @@ fetch(`sscdbg.json?v=${Date.now()}`)
     renderArchiveStats();
     renderDecorativeFlags();
     renderCountries();
+    const firstRandomSong = getRandomSong(songs);
     renderRandomSong(firstRandomSong);
   })
 
@@ -326,9 +326,11 @@ backButton.addEventListener("click", () => {
   // 다시 전체 Artist / Language 목록으로 복구
   makeArtistFilter(songs);
   makeLanguageFilter(songs);
-
   renderCountries();
-  renderRandomSong(firstRandomSong);
+
+  const randomSong = getRandomSong(songs);
+  renderRandomSong(randomSong);
+  showRandomSong();
 });
 
 // -------------------------------------
@@ -346,16 +348,15 @@ function applyFilters() {
     selectedLanguage !== "all" ||
     keyword !== "";
 
-  hideRandomSong();
-
   // 국가 선택도 없고 필터도 없으면 국가 목록
   if (!selectedCountry && !hasFilter) {
-
     countryView.style.display = "block";
     songsView.style.display = "none";
-
+    showRandomSong();
     return;
   }
+
+  hideRandomSong();
 
   const filteredSongs = songs.filter(song => {
 

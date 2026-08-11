@@ -306,7 +306,7 @@ h1 {
 }
 
 #song-list > div.has-links {
-    background-color: #d4ecd4;
+    background-color: #ebf8eb;
 }
 
 #song-list > div:hover {
@@ -509,7 +509,7 @@ a:hover {
         width: 100%;
         margin-top: var(--space-1);
     }
-    
+
     #country-list {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
