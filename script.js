@@ -12,6 +12,7 @@ const countryList = document.getElementById("country-list");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
 const backButton = document.getElementById("back-to-countries");
+const firstRandomSong = getRandomSong(songs);
 
 const decorativeFlags = [
   "KR", "DZ", "AR", "AU", "AT", "BA", "BY", "BE", "BJ",
@@ -94,6 +95,7 @@ fetch(`sscdbg.json?v=${Date.now()}`)
     renderArchiveStats();
     renderDecorativeFlags();
     renderCountries();
+    renderRandomSong(firstRandomSong);
   })
 
   .catch(error => {
@@ -326,6 +328,7 @@ backButton.addEventListener("click", () => {
   makeLanguageFilter(songs);
 
   renderCountries();
+  renderRandomSong(firstRandomSong);
 });
 
 // -------------------------------------
@@ -342,6 +345,8 @@ function applyFilters() {
     selectedArtist !== "all" ||
     selectedLanguage !== "all" ||
     keyword !== "";
+
+  hideRandomSong();
 
   // 국가 선택도 없고 필터도 없으면 국가 목록
   if (!selectedCountry && !hasFilter) {
@@ -445,10 +450,168 @@ function applyFilters() {
 }
 
 // -------------------------------------
+// 랜덤 곡
+// -------------------------------------
+
+function getRandomSong(songArray) {
+  if (!songArray || songArray.length === 0) return null;
+
+  const previousTitle = sessionStorage.getItem("previousRandomSong");
+
+  let candidates = songArray.filter(
+    song => song.title !== previousTitle
+  );
+
+  if (candidates.length === 0) {
+    candidates = songArray;
+  }
+
+  const randomIndex = Math.floor(Math.random() * candidates.length);
+  const song = candidates[randomIndex];
+
+  sessionStorage.setItem(
+    "previousRandomSong",
+    song.title
+  );
+
+  return song;
+}
+
+function renderRandomSong(song) {
+  const randomSong = document.getElementById("random-song");
+
+  if (!randomSong || !song) return;
+
+  randomSong.innerHTML = `
+    <div class="random-song-card">
+
+      <div class="random-song-header">
+        <span class="random-song-label">
+          랜덤 곡
+        </span>
+
+        <button
+          type="button"
+          id="random-song-button"
+        >
+          다른 곡 보기
+        </button>
+      </div>
+
+      <h2>${song.title}</h2>
+
+      <div class="random-song-meta">
+
+        <span>${song.artist.join(", ")}</span>
+        <span class="meta-divider">·</span>
+
+        <span>${song.year}</span>
+        <span class="meta-divider">·</span>
+
+        <span>${song.language.join(", ")}</span>
+        <span class="meta-divider">·</span>
+
+        <span class="song-countries">
+          ${song.countries
+            .map(code => `
+              <span class="song-country">
+                <span class="fi fi-${code.toLowerCase()}"></span>
+                ${getCountryName(code)}
+              </span>
+            `)
+            .join("")}
+        </span>
+
+      </div>
+
+      ${
+        song.songwriters?.length
+          ? `
+            <div class="random-song-songwriters">
+              ${song.songwriters.join(", ")}
+            </div>
+          `
+          : ""
+      }
+
+      ${
+        song.memo
+          ? `
+            <p class="random-song-memo">
+              ${song.memo}
+            </p>
+          `
+          : ""
+      }
+
+      <div class="random-song-links">
+
+        ${
+          song.links?.length
+            ? song.links
+                .map(link => `
+                  <a
+                    href="${link.url}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    ${link.title}
+                  </a>
+                `)
+                .join("")
+            : ""
+        }
+
+        ${
+          song.youtube?.length
+            ? song.youtube
+                .map(video => `
+                  <a
+                    href="${video.url}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    ${video.title}
+                  </a>
+                `)
+                .join("")
+            : ""
+        }
+
+      </div>
+
+    </div>
+  `;
+
+  const button =
+    document.getElementById("random-song-button");
+
+  button?.addEventListener("click", () => {
+    const newSong = getRandomSong(songs);
+    renderRandomSong(newSong);
+  });
+}
+
+// 랜덤 곡 숨기기
+function hideRandomSong() {
+  document
+    .getElementById("random-song")
+    ?.classList.add("hidden");
+}
+
+// 랜덤 곡 다시 보여주기
+function showRandomSong() {
+  document
+    .getElementById("random-song")
+    ?.classList.remove("hidden");
+}
+
+// -------------------------------------
 // 곡 목록 출력
 // -------------------------------------
 function renderSongs(songArray) {
   songList.innerHTML = "";
+  hideRandomSong();
 
   if (songArray.length === 0) {
     songList.innerHTML = `

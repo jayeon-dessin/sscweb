@@ -306,7 +306,7 @@ h1 {
 }
 
 #song-list > div.has-links {
-    background-color: #96eb96;
+    background-color: #d4ecd4;
 }
 
 #song-list > div:hover {
@@ -489,6 +489,27 @@ a:hover {
         margin-bottom: var(--space-5);
     }
 
+    .random-song-card {
+        padding: var(--space-4);
+    }
+
+    .random-song-header {
+        align-items: flex-start;
+    }
+
+    .random-song-meta {
+        font-size: 0.95rem;
+    }
+
+    .random-song-meta .meta-divider {
+        display: none;
+    }
+
+    .random-song-meta .song-countries {
+        width: 100%;
+        margin-top: var(--space-1);
+    }
+    
     #country-list {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
@@ -556,4 +577,94 @@ a:hover {
 
 hr {
     display: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ========================================
+랜덤 곡
+======================================== */
+
+#random-song {
+    margin-bottom: var(--space-5);
+}
+
+.random-song-card {
+    padding: var(--space-5);
+
+    border: 1px solid #d8e5da;
+    border-radius: 12px;
+
+    background-color: #f3f9f3;
+}
+
+.random-song-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: var(--space-3);
+
+    margin-bottom: var(--space-3);
+}
+
+.random-song-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    color: #66806a;
+}
+
+.random-song-card h2 {
+    margin: 0 0 var(--space-2);
+}
+
+.random-song-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: var(--space-1) var(--space-2);
+}
+
+.random-song-songwriters {
+    margin-top: var(--space-1);
+
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.random-song-memo {
+    margin-top: var(--space-4);
+    margin-bottom: 0;
+
+    line-height: 1.6;
+}
+
+.random-song-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-2);
+
+    margin-top: var(--space-4);
+}
+
+#random-song-button {
+    border: none;
+    background: none;
+
+    padding: 0;
+
+    font: inherit;
+    font-size: 0.9rem;
+
+    cursor: pointer;
+    color: #66806a;
+}
+
+#random-song-button:hover {
+    text-decoration: underline;
 }
