@@ -10,7 +10,7 @@
     "memo": "디스코 밴드 징기스 칸의 동명의 대표곡. 몽골의 정복자 칭기즈 칸(징기스 칸)에 관한 노래",
     "youtube": [
       {
-        "title": "ZDF Starparade 14.06.1979",
+        "title": "ZDF Starparade 1979",
         "url": "https://www.youtube.com/watch?v=1AXlVZRpweI"
       }
     ]
@@ -48,7 +48,7 @@
     "memo": "징기스 칸의 또다른 대표곡. 주제는 모스크바, 때문에 러시아 곡으로 오해받기도 한다.",
     "youtube": [
       {
-        "title": "ZDF Starparade 14.06.1979",
+        "title": "ZDF Starparade 1979",
         "url": "https://www.youtube.com/watch?v=lyuFLU2Zqz0"
       }
     ]
@@ -144,7 +144,7 @@
     "memo": "서독의 그리스인 노동자들의 애환을 담은 곡. 독일인들의 국민가요 중 하나",
     "youtube": [
       {
-        "title": "ZDF Disco 01.02.1975",
+        "title": "ZDF Disco 1975",
         "url": "https://www.youtube.com/watch?v=D8hAhqDcVRA"
       }
     ]
@@ -213,7 +213,7 @@
     "songwriters": ["Miki", "Tristan Salvati"],
     "language" : ["프랑스어"],
     "countries": ["FR"],
-    "tags": ["일렉트로팝", "유럽"],
+    "tags": ["일렉트로닉", "유럽"],
     "memo": "프랑스-한국 혼혈 싱어송라이터 miki의 곡. 뮤비가 인상적(?)임.",
     "youtube": [
       {
@@ -1626,7 +1626,7 @@
   },
   {
     "title": "Empire State of Mind",
-    "year": "?",
+    "year": "2009",
     "artist": ["Jay-Z","Alicia Keys"],
     "songwriters": ["Shawn Carter","Alexander Shuckburgh","Janet Sewell-Ulepic",
                     "Angela Hunte","Alicia Keys","Sylvia Robinson","Bert Keyes"],
@@ -1863,6 +1863,132 @@
       {
         "title": "오스트리아 Styer에서의 합창 퍼포먼스",
         "url": "https://www.youtube.com/watch?v=3BS9ohD1R5g"
+      }
+    ]
+  },
+  {
+    "title": "La Seine",
+    "year": "2011",
+    "artist": ["Vanessa Paradis","-M-"],
+    "songwriters": ["Matthieu Chedid"],
+    "language" : ["프랑스어"],
+    "countries": ["FR"],
+    "tags": ["영화음악","유럽","애니메이션"],
+    "memo": "애니메이션 영화 <파리의 유령(Un monstre à Paris)> 삽입곡. '센 강'",
+    "youtube": [
+      {
+        "title": "MV(영화)",
+        "url": "https://www.youtube.com/watch?v=9Z-NbQvhzKM"
+      }
+    ]
+  },
+  {
+    "title": "Amour plastique",
+    "year": "2021",
+    "artist": ["VIDEOCLUB"],
+    "songwriters": ["Adèle Castillon","Esteban Capron","Matthieu Reynaud"],
+    "language" : ["프랑스어"],
+    "countries": ["FR"],
+    "tags": ["일렉트로닉","신스팝","유럽"],
+    "memo": "몽환적인 느낌의, VIDEOCLUB의 대표곡. 'There's nothing we can do' 밈으로도 유명하다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=5NjJLFI_oYs"
+      }
+    ]
+  },
+  {
+    "title": "Vem dançar kuduro",
+    "year": "2010",
+    "artist": ["Lucenzo","Big Ali"],
+    "songwriters": ["Lucenzo","Ali Fitzgerald Moore","Faouze Barkati","Fabrice Toigo"],
+    "language" : ["포르투갈어","스페인어","영어"],
+    "countries": ["FR","PT","US"],
+    "tags": ["댄스","유럽","북아메리카"],
+    "memo": "포르투갈계 프랑스인 Lucenzo의 대표곡. 쿠두루(Kuduro)는 앙골라의 음악 장르. 푸에르토리코의 Don Omar와 함께한 스페인어 버전 'Danza Kuduro'가 크게 흥행하였다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=uv9CjsQNtf4"
+      },
+      {
+        "title": "크게 흥행한 Don Omar의 'Danza Kuduro' 버전, MV",
+        "url": "https://www.youtube.com/watch?v=7zp1TbLFPp8"
+      }
+    ]
+  },
+  {
+    "title": "Mi Equilibrio Espiritual",
+    "year": "2003",
+    "artist": ["31 Minutos","Freddy Turbina"],
+    "songwriters": ["Producciones Aplaplac","Alvaro Díaz González","Daniel Castro Steinert",
+                    "Pablo Ignacio Ilabaca González","Pedro Pablo Peirano Olate",
+                    "Rodrigo Salvador","Salinas Marambio"],
+    "language" : ["스페인어"],
+    "countries": ["CL"],
+    "tags": ["락","남아메리카"],
+    "memo": "칠레의 어린이 TV 프로그램 <31 Minutos>의 삽입곡. 자전거 보조 바퀴를 뗀 것을 거대한 인생의 성취처럼 노래하는 유쾌한 곡",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=QOQ1CHBjxIU"
+      }
+    ]
+  },
+  {
+    "title": "残酷な天使のテーゼ",
+    "year": "1995",
+    "artist": ["Yoko Takahashi(高橋洋子)"],
+    "songwriters": ["及川眠子","佐藤英敏"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["애니메이션","JPOP","디스코","아시아"],
+    "memo": "<신세기 에반게리온> 오프닝곡. 소년이여 신화가 되어라!",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=o6wtDPVkKqI"
+      }
+    ]
+  },
+  {
+    "title": "Waterloo Road",
+    "year": "1968",
+    "artist": ["Jason Crest"],
+    "songwriters": ["Michael Antony Deighan","Mike Wilsh"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["번안","샹송","유럽"],
+    "memo": "샹젤리제(Les Champs-Élysées)의 원곡.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=L41mF1tANVU"
+      },
+      {
+        "title": "미국의 가수 Joe Dassin의 번안곡, Les Champs-Élysées(샹젤리제) (Lyric Video).",
+        "url": "https://www.youtube.com/watch?v=1JhYYUWOBBs"
+      }
+    ]
+  },
+  {
+    "title": "Sarà perché ti amo",
+    "year": "1981",
+    "artist": ["Ricchi e Poveri"],
+    "songwriters": ["Enzo Ghinazzi","Daniele Pace","Dario Farina"],
+    "language" : ["이탈리아어"],
+    "countries": ["IT"],
+    "tags": ["디스코","팝","산레모","유럽"],
+    "memo": "'그건 너를 사랑하기 때문이야'",
+    "youtube": [
+      {
+        "title": "Musicalmente 1981",
+        "url": "https://www.youtube.com/watch?v=IzlY6eehBoE"
+      },
+      {
+        "title": "Thommys Popshow extra 1983",
+        "url": "https://www.youtube.com/watch?v=Nn1IeHL5DHY"
       }
     ]
   }
