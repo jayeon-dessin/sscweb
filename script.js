@@ -461,6 +461,9 @@ function renderSongs(songArray) {
 
   songArray.forEach(song => {
     const item = document.createElement("div");
+    if (song.links?.length > 0) {
+      item.classList.add("has-links");
+    }
 
     item.innerHTML = `
       <div class="song-content">
@@ -533,7 +536,7 @@ function renderSongs(songArray) {
           <div class="song-links">
 
             ${
-              song.links.length > 0
+              song.links?.length > 0
                 ? song.links
                     .map(link => `
                       <a

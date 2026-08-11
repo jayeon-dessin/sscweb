@@ -298,7 +298,7 @@
     ]
   },
   {
-    "title": "Im Himmel Gibt's Kein Bier(In Heaven There Is No Beer)",
+    "title": "Im Himmel Gibt's Kein Bier",
     "year": 1956,
     "artist": [""],
     "songwriters": ["Ralph Maria Siegel","Ernst Neubach"],
@@ -388,6 +388,26 @@
     ]
   },
   {
+    "title": "Кончится лето",
+    "year": 1990,
+    "artist": ["Kino(Кино)"],
+    "songwriters": ["Виктор Цой"],
+    "language" : ["러시아어"],
+    "countries": ["RU"],
+    "tags": ["소련", "유럽", "락"],
+    "memo": "'여름이 끝나간다', 키노의 마지막 앨범 <Чёрный альбом>수록곡",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=8L9twaOEYhY"
+      },
+      {
+        "title": "영상 + 가사(영어 자막)",
+        "url": "https://www.youtube.com/watch?v=6VqiMQoMXmw"
+      }
+    ]
+  },
+  {
     "title": "Rain",
     "year": 2017,
     "artist": ["SEKAI NO OWARI"],
@@ -451,7 +471,7 @@
     "artist": ["George Lam(林子祥)"],
     "songwriters": ["Traditional", "黃霑"],
     "language" : ["광동어"],
-    "countries": ["HK","CN"],
+    "countries": ["HK"],
     "tags": ["아시아","영화음악"],
     "memo": "중국 장쑤성 전통 연주곡을 편곡한 노래. 영화 <황비홍> 주제가.",
     "youtube": [
@@ -466,14 +486,14 @@
     ]
   },
   {
-    "title": "Sogno di Volare (하늘을 나는 꿈)",
+    "title": "Sogno di Volare",
     "year": 2016,
     "artist": ["Christopher Tin"],
     "songwriters": ["Christopher Tin", "Leonardo da Vinci (text source)"],
     "language" : ["이탈리아어"],
     "countries": ["US"],
     "tags": ["게임음악","이탈리아","클래식"],
-    "memo": "게임 <문명 6> 주제가. 레오나르도 다빈치의(것으로 알려진) 노트를 바탕으로 하여, 인류의 비행에 대한 꿈을 표현했다.",
+    "memo": "'하늘을 나는 꿈', 게임 <문명 6> 주제가. 레오나르도 다빈치의(것으로 알려진) 노트를 바탕으로 하여, 인류의 비행에 대한 꿈을 표현했다.",
     "links": [
       {
         "title": "블로그 해설",
@@ -492,14 +512,14 @@
     ]
   },
   {
-    "title": "Θά 'ρθεις σαν αστραπή (당신은 번개처럼 오시리라)",
+    "title": "Θά 'ρθεις σαν αστραπή (Thá 'rtheis san astrapí)",
     "year": 1998,
     "artist": ["Stamatis Spanoudakis(Σταμάτης Σπανουδάκης)"],
     "songwriters": ["Σταμάτης Σπανουδάκης"],
     "language" : ["그리스어"],
     "countries": ["GR"],
     "tags": ["동로마제국", "콘스탄티노폴리스","유럽","클래식"],
-    "memo": "콘스탄티노폴리스 함락과 동로마 제국의 멸망, 그리고 콘스탄티누스 11세에 관한 전설.",
+    "memo": "콘스탄티노폴리스 함락과 동로마 제국의 멸망, 그리고 콘스탄티누스 11세에 관한 전설. '당신은 번개처럼 오시리라'",
     "links": [
       {
         "title": "블로그 해설",
@@ -949,7 +969,7 @@
   },
   {
     "title": "Ievan Polkka",
-    "year": "19세기?",
+    "year": "?",
     "artist": [],
     "songwriters": ["Traditional", "Eino Kettunen"],
     "language" : ["핀란드어"],
@@ -978,17 +998,21 @@
   },
   {
     "title": "Säkkijärven Polkka",
-    "year": "19세기?",
+    "year": "?",
     "artist": [],
     "songwriters": ["Traditional", "Reino Helismaa"],
     "language" : ["핀란드어"],
     "countries": ["FI"],
     "tags": ["민요","폴카","계속전쟁","유럽"],
-    "memo": "카렐리야 Säkkijärvi 지역 민요, Viljo Vesterinen에 의해 대중화. 겨울전쟁 기간 동안 핀란드군이 소련군의 무선 지뢰 기폭을 방해하기 위해 반복하여 송출했다.",
+    "memo": "카렐리야 Säkkijärvi 지역 민요, Viljo Vesterinen에 의해 대중화. 계속전쟁 기간 동안 핀란드군이 소련군의 무선 지뢰 기폭을 방해하기 위해 반복하여 송출했다.",
     "youtube": [
       {
         "title": "Eemeli 버전",
         "url": "https://www.youtube.com/watch?v=xrBLSmuhTSs"
+      },
+      {
+        "title": "Oulu Hotshots 버전 (영어 자막)",
+        "url": "https://www.youtube.com/watch?v=A14gZxbn0kM"
       },
       {
         "title": "1939년 Viljo Vesterinen, Dallapé 오케스트라 버전 (보컬X)",
@@ -997,14 +1021,14 @@
     ]
   },
   {
-    "title": "Nessun Dorma (아무도 잠들지 말라)",
+    "title": "Nessun Dorma",
     "year": "1926",
     "artist": [],
     "songwriters": ["Giacomo Puccini","Giuseppe Adami","Renato Simoni"],
     "language" : ["이탈리아어"],
     "countries": ["IT"],
     "tags": ["오페라","유럽"],
-    "memo": "푸치니의 오페라 <투란도트> 3막 아리아.",
+    "memo": "푸치니의 오페라 <투란도트> 3막 아리아. '아무도 잠들지 말라'",
     "links": [
       {
         "title": "블로그 해설",
@@ -1016,8 +1040,8 @@
         "url": "https://www.youtube.com/watch?v=cWc7vYjgnTs"
       },
       {
-        "title": "Luciano Pavarotti, 2006 토리노 올림픽 개막식",
-        "url": "https://www.youtube.com/watch?v=rxxHvW0oNpU"
+        "title": "Luciano Pavarotti, 1988 Metropolitan Opera(한국어 자막)",
+        "url": "https://www.youtube.com/watch?v=97SC9MZAFYA"
       }
     ]
   },
@@ -1042,14 +1066,14 @@
     ]
   },
   {
-    "title": "Brindisi (Libiamo ne' lieti calici, 축배의 노래)",
+    "title": "Brindisi (Libiamo ne' lieti calici)",
     "year": "1853",
     "artist": [],
     "songwriters": ["Giuseppe Verdi","Francesco Maria Piave"],
     "language" : ["이탈리아어"],
     "countries": ["IT"],
     "tags": ["오페라","유럽","권주가"],
-    "memo": "베르디의 오페라 <라 트라비아타> 1막의 활기찬 술 노래.",
+    "memo": "베르디의 오페라, <라 트라비아타> 1막의 '축배의 노래'.",
     "youtube": [
       {
         "title": "The Three Tenors, 1994년 LA 콘서트",
@@ -1058,18 +1082,22 @@
       {
         "title": "Metropolitan Opera, 2018",
         "url": "https://www.youtube.com/watch?v=afhAqMeeQJk"
+      },
+      {
+        "title": "아르떼방송교향악단, 강혜정&최성수 2012 (한국어 자막)",
+        "url": "https://www.youtube.com/watch?v=tEZM6xJu6_Q"
       }
     ]
   },
   {
-    "title": "La donna è mobile (여자의 마음)",
+    "title": "La donna è mobile",
     "year": "1851",
     "artist": [],
     "songwriters": ["Giuseppe Verdi","Francesco Maria Piave"],
     "language" : ["이탈리아어"],
     "countries": ["IT"],
     "tags": ["오페라","유럽"],
-    "memo": "베르디의 오페라 <라골레토> 3막 노래.",
+    "memo": "베르디의 오페라, <리골레토> 3막의 '여자의 마음'.",
     "youtube": [
       {
         "title": "Luciano Pavarotti, 영화 <리골레토>(1983)",
@@ -1126,7 +1154,7 @@
     "language" : ["영어"],
     "countries": ["JP","CA"],
     "tags": ["Java"],
-    "memo": "Java 형식의 가사가 특이한 곡. 세소찾 특별편",
+    "memo": "Java 형식의 가사가 특이한 곡.",
     "links": [
       {
         "title": "블로그 해설",
@@ -1222,7 +1250,63 @@
     ]
   },
   {
-    "title": "月亮代表我的心",
+    "title": "Video Killed The Radio Star",
+    "year": "1979",
+    "artist": ["The Buggles"],
+    "songwriters": ["Geoff Downes","Trevor Horn","Bruce Woolley"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["뉴웨이브","유럽"],
+    "memo": "비디오가 라디오를 죽였다. 미디어의 변화를 상징하는 곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=W8r-tXRLazs"
+      }
+    ]
+  },
+  {
+    "title": "Down Under",
+    "year": "1981",
+    "artist": ["Men at Work"],
+    "songwriters": ["Colin Hay","Ron Strykert"],
+    "language" : ["영어"],
+    "countries": ["AU"],
+    "tags": ["뉴웨이브","락","오세아니아"],
+    "memo": "비공식 국가 수준의, 호주를 상징하는 곡 중 하나. 코믹하면서도 비판적인 가사",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=XfR9iY5y94s"
+      },
+      {
+        "title": "Countdown 1981",
+        "url": "https://www.youtube.com/watch?v=u3w_zuWYtig"
+      }
+    ]
+  },
+  {
+    "title": "Go West",
+    "year": "1979",
+    "artist": ["Village People"],
+    "songwriters": ["Jacques Morali","Henri Belolo","Victor Willis"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["디스코","북아메리카"],
+    "memo": "서부 개척에 대한 19세기 격언에 기반한 곡. Pet Shop Boys 버전에서는 동구권의 붕괴를 상징한다.",
+    "youtube": [
+      {
+        "title": "MV (Village People)",
+        "url": "https://www.youtube.com/watch?v=1wc-AQJ2MYo"
+      },
+      {
+        "title": "영국의 신스팝 듀오 Pet Shop Boys 버전(1993)",
+        "url": "https://www.youtube.com/watch?v=LNBjMRvOB5M"
+      }
+    ]
+  },
+  {
+    "title": "月亮代表我的心 (월량대표아적심)",
     "year": "1973",
     "artist": ["Chen Fen-Lan(陳芬蘭)"],
     "songwriters": ["孫儀","翁清溪"],
@@ -1243,6 +1327,542 @@
       {
         "title": "널리 알려진, 등려군 버전",
         "url": "https://www.youtube.com/watch?v=bv_cEeDlop0"
+      },
+      {
+        "title": "등려군 버전, 한국어 자막",
+        "url": "https://www.youtube.com/watch?v=_V_CsbKdAE0"
+      }
+    ]
+  },
+  {
+    "title": "甜蜜蜜 (첨밀밀)",
+    "year": "1979",
+    "artist": ["Teresa Teng(鄧麗君)"],
+    "songwriters": ["Traditional","莊奴(庄奴)"],
+    "language" : ["중국어"],
+    "countries": ["TW"],
+    "tags": ["팝","민요","번안","아시아"],
+    "memo": "등려군의 중화권을 대표하는 사랑노래, 원곡은 인도네시아 민요 'Dayung Sampan'. 동명의 영화로 인해 한국에서도 흥행했다.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=KrAc3uKfgQs"
+      },
+      {
+        "title": "MV(?)",
+        "url": "https://www.youtube.com/watch?v=5eF8oOWtsk4"
+      }
+    ]
+  },
+  {
+    "title": "Ríe y Llora",
+    "year": "2003",
+    "artist": ["Celia Cruz"],
+    "songwriters": ["Sergio George","Fernando Osorio"],
+    "language" : ["스페인어"],
+    "countries": ["CU","US"],
+    "tags": ["라틴팝","북아메리카"],
+    "memo": "어릴 적 처음 들은 살사 곡. '웃고 울고'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/59"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=83S-KtvGM2M"
+      },
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=0WqdUWjJSRc"
+      }
+    ]
+  },
+  {
+    "title": "Uhaw",
+    "year": "2022",
+    "artist": ["Dilaw"],
+    "songwriters": ["Johnvie Dela Rosa","Leonard Obero"],
+    "language" : ["타갈로그어"],
+    "countries": ["PH"],
+    "tags": ["블루스 락","아시아"],
+    "memo": "Dilaw의 대표곡. '목마름'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/56"
+      }
+    ],"youtube": [
+      {
+        "title": "원곡 (Lyric Video), 비교적 느리고 잔잔함",
+        "url": "https://www.youtube.com/watch?v=y2w1MkoAzz4"
+      },
+      {
+        "title": "MV - Uhaw (Tayong Lahat)",
+        "url": "https://www.youtube.com/watch?v=rWF42VRvsLg"
+      }
+    ]
+  },
+  {
+    "title": "Raining in Manila",
+    "year": "2023",
+    "artist": ["Lola Amour"],
+    "songwriters": ["Pio Dumayas","Raymond King"],
+    "language" : ["타갈로그어","영어"],
+    "countries": ["PH"],
+    "tags": ["시티팝","아시아"],
+    "memo": "친구를 타국으로 떠나보내는 마음에 관하여.",
+    "youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=dglBgJSMr-E"
+      },
+      {
+        "title": "라이브 (The Cozy Cove)",
+        "url": "https://www.youtube.com/watch?v=fKHxj1gFvFE"
+      }
+    ]
+  },
+  {
+    "title": "Катюша (Katyusha)",
+    "year": "1938",
+    "artist": [],
+    "songwriters": ["Матвей Блантер","Михаил Исаковский"],
+    "language" : ["러시아어"],
+    "countries": ["RU"],
+    "tags": ["민요","군가","유럽","소련"],
+    "memo": "2차 세계대전 기간 소련에서 유행한 국민 노래. 카츄샤는 예카테리나의 애칭",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/61"
+      }
+    ],"youtube": [
+      {
+        "title": "Alexandrov Ensemble(Red Army Choir)",
+        "url": "https://www.youtube.com/watch?v=sqgP8xBcz2g"
+      },
+      {
+        "title": "Георгий Виноградов 버전 (한국어 자막)",
+        "url": "https://www.youtube.com/watch?v=Rc0WOYHReSA"
+      }
+    ]
+  },
+  {
+    "title": "Vô Tư",
+    "year": "2022",
+    "artist": ["Anh Quân Idol"],
+    "songwriters": ["Khắc Anh"],
+    "language" : ["베트남어"],
+    "countries": ["VN"],
+    "tags": ["발라드","아시아"],
+    "memo": "'닛몰캐쉬'의 틱톡 영상으로 한국에서 유명해진 베트남 곡. '걱정 없이'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/62"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=fjzw1WUgT8I"
+      },
+      {
+        "title": "리믹스 버전 : Vô Tư (Quyền Hải Phòng)",
+        "url": "https://www.youtube.com/watch?v=8aULpVPdr9o"
+      }
+    ]
+  },
+  {
+    "title": "2 Phút Hơn",
+    "year": "2020",
+    "artist": ["Pháo"],
+    "songwriters": ["Pháo"],
+    "language" : ["베트남어"],
+    "countries": ["VN"],
+    "tags": ["일렉트로닉","아시아"],
+    "memo": "틱톡 '제로투 댄스'로 유명해진 곡. '2분 더'",
+    "youtube": [
+      {
+        "title": "원곡",
+        "url": "https://www.youtube.com/watch?v=IF7iwRZ_pJM"
+      },
+      {
+        "title": "가장 잘 알려진, KAIZ 리믹스 버전",
+        "url": "https://www.youtube.com/watch?v=yoZy2E17-50"
+      }
+    ]
+  },
+  {
+    "title": "Калинка (Kalinka)",
+    "year": "1860",
+    "artist": [],
+    "songwriters": ["Иван Ларионов"],
+    "language" : ["러시아어"],
+    "countries": ["RU"],
+    "tags": ["민요","게임음악"],
+    "memo": "템포와 강약 조절이 인상적인 러시아 민요, '칼린카'는 양백당나무의 열매 이름. 테트리스 BGM으로도 사용되어 유명하다.",
+    "youtube": [
+      {
+        "title": "Alexandrov Ensemble(Red Army Choir)",
+        "url": "https://www.youtube.com/watch?v=oCc7ySI9YMw"
+      },
+      {
+        "title": "아타리 테트리스 BGM",
+        "url": "https://www.youtube.com/watch?v=mgUdwsQyY_s"
+      }
+    ]
+  },
+  {
+    "title": "Njet Molotoff",
+    "year": "1942",
+    "artist": [],
+    "songwriters": ["Matti Jurva", "Tatu Pekkarinen"],
+    "language" : ["핀란드어","러시아어"],
+    "countries": ["FI"],
+    "tags": ["프로파간다","군가","계속전쟁","유럽"],
+    "memo": "소련군과 소련 외무장관 몰로토프를 풍자한 핀란드의 전시 프로파간다 노래. 선율은 러시아 민요 'Ухарь-купец'에 기반함",
+    "youtube": [
+      {
+        "title": "Solistiyhtye Suomi 버전",
+        "url": "https://www.youtube.com/watch?v=WNtgV4J-ayA"
+      },
+      {
+        "title": "가사 (영어 자막)",
+        "url": "https://www.youtube.com/watch?v=sD4loScPD0Y"
+      }
+    ]
+  },
+  {
+    "title": "Jerusalema",
+    "year": "2019",
+    "artist": ["Master KG","Nomcebo"],
+    "songwriters": ["Kgaogelo Moagi","Nomcebo"],
+    "language" : ["줄루어"],
+    "countries": ["ZA"],
+    "tags": ["예루살렘","종교음악","아프리카","가스펠","하우스"],
+    "memo": "댄스 챌린지를 통해 세계적으로 흥행한, 성가 기반의 신나는 하우스 곡. 성지 예루살렘에 대한 노래",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/64"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=fCZVL_8D048"
+      },
+      {
+        "title": "리믹스 버전 (Burna Boy, Nomcebo)",
+        "url": "https://www.youtube.com/watch?v=9-RhCvYpxqc"
+      }
+    ]
+  },
+  {
+    "title": "Hej sokoły (Гей соколи)",
+    "year": "?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["폴란드어","우크라이나어"],
+    "countries": ["PL","UA"],
+    "tags": ["카자크","민요","유럽"],
+    "memo": "카자크의 작별에 관한, 폴란드/우크라이나 지역 민요. '매들이여'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/65"
+      }
+    ],"youtube": [
+      {
+        "title": "폴란드어 버전, 아카펠라 (가사 + 영어 자막)",
+        "url": "https://www.youtube.com/watch?v=ZzZ1qmXZBuY"
+      },
+      {
+        "title": "우크라이나어 버전, 악기 추가",
+        "url": "https://www.youtube.com/watch?v=rZSoQSdMb8A"
+      }
+    ]
+  },
+  {
+    "title": "Їхав козак за Дунай (Yikhav Kozak za Dunai)",
+    "year": "1790",
+    "artist": [],
+    "songwriters": ["Семен Климовський"],
+    "language" : ["우크라이나어"],
+    "countries": ["UA"],
+    "tags": ["카자크","민요","유럽"],
+    "memo": "우크라이나 민요, '카자크는 다뉴브 강을 건넜다'. 한국 음악 교과서에 수록되기도 했다.",
+    "youtube": [
+      {
+        "title": "마이보로다 우크라이나 국립 반두라 카펠라 버전, 가사 포함",
+        "url": "https://www.youtube.com/watch?v=l3p-j6kYwCw"
+      },
+      {
+        "title": "Anatoly Solovyanenko + Alexandrov Ensemble 버전 (1988)",
+        "url": "https://www.youtube.com/watch?v=E3hFsGLsN_c"
+      }
+    ]
+  },
+  {
+    "title": "山对山来崖对崖 (弥渡山歌, 미두산가)",
+    "year": "?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["중국어"],
+    "countries": ["CN"],
+    "tags": ["윈난성","민요","아시아"],
+    "memo": "리믹스로 유명해진 중국 윈난(운남)성 미두(弥渡)현 민요. 중국 민간전설 '양축설화'에 기반한 가사",
+    "youtube": [
+      {
+        "title": "대충 오래된 민요 녹음본.",
+        "url": "https://www.youtube.com/watch?v=YO6vU4ewasc"
+      },
+      {
+        "title": "가장 유명한 YANGYINYUE(羊音乐) 리믹스 버전",
+        "url": "https://www.youtube.com/watch?v=eIQqtWOA12c"
+      }
+    ]
+  },
+  {
+    "title": "Empire State of Mind",
+    "year": "?",
+    "artist": ["Jay-Z","Alicia Keys"],
+    "songwriters": ["Shawn Carter","Alexander Shuckburgh","Janet Sewell-Ulepic",
+                    "Angela Hunte","Alicia Keys","Sylvia Robinson","Bert Keyes"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["뉴욕","힙합","북아메리카"],
+    "memo": "'Empire State' 뉴욕을 위한 헌정곡.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/68"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=vk6014HuxcE"
+      }
+    ]
+  },
+  {
+    "title": "7 элемент (The 7th Element)",
+    "year": "2001",
+    "artist": ["Витас (Vitas)"],
+    "songwriters": ["Витас"],
+    "language" : ["러시아어"],
+    "countries": ["RU"],
+    "tags": ["신스팝","유럽"],
+    "memo": "외계에서 온 듯한 복장과 음악. 가사에서는 '이 노래를 들려주러 왔어'를 반복한다.",
+    "youtube": [
+      {
+        "title": "MV(?)",
+        "url": "https://www.youtube.com/watch?v=989-7xsRLR4"
+      }
+    ]
+  },
+  {
+    "title": "Gdzie jest biały węgorz",
+    "year": "2015",
+    "artist": ["Cypis"],
+    "songwriters": ["Cypis"],
+    "language" : ["폴란드어"],
+    "countries": ["PL"],
+    "tags": ["힙합","유럽"],
+    "memo": "마약 중독자의 노래, '하얀 장어(코카인) 어딨어?'. 춤추는 소(Polish Cow) 밈으로 유명하다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=qrxv0JNVtgY"
+      },
+      {
+        "title": "가사+한국어 자막 (+춤추는 소)",
+        "url": "https://www.youtube.com/watch?v=X-8RjJMmmfE"
+      }
+    ]
+  },
+  {
+    "title": "Baba Yetu",
+    "year": "2005",
+    "artist": ["Christopher Tin"],
+    "songwriters": ["Christopher Tin"],
+    "language" : ["스와힐리어"],
+    "countries": ["US"],
+    "tags": ["게임음악","가스펠"],
+    "memo": "스와힐리어 주기도문, 게임 <문명 4> 테마곡.",
+    "youtube": [
+      {
+        "title": "MV, Soweto Gospel Choir",
+        "url": "https://www.youtube.com/watch?v=IJiHDmyhE1A"
+      },
+      {
+        "title": "Cadogan Hall 2016",
+        "url": "https://www.youtube.com/watch?v=noneMROp_E8"
+      }
+    ]
+  },
+  {
+    "title": "Nunca Es Suficiente",
+    "year": "2015",
+    "artist": ["Natalia Lafourcade"],
+    "songwriters": ["Daniela Azpiazu","Natalia Lafourcade","Anthony López"],
+    "language" : ["스페인어"],
+    "countries": ["MX"],
+    "tags": ["라틴팝","북아메리카"],
+    "memo": "애인에 대한 원망, '충분하지 않아'.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/99"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=410cZw2YI0g"
+      },
+      {
+        "title": "Los Ángeles Azules와 함께한 쿰비아 버전 (라이브)",
+        "url": "https://www.youtube.com/watch?v=k76BgIb89-s"
+      }
+    ]
+  },
+  {
+    "title": "Lonely At The Top",
+    "year": "2023",
+    "artist": ["Asake"],
+    "songwriters": ["Ahmed Ololade","Olamide Adedeji"],
+    "language" : ["요루바어","나이지리아피진영어"],
+    "countries": ["NG"],
+    "tags": ["아프로비츠","아프리카"],
+    "memo": "성공한 뒤 윗공기를 마시며 느끼는 고독에 관하여.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/110"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=bbVZo4Yw7pI"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=3JQA7W_dLUg"
+      },
+      {
+        "title": "미국의 R&B 가수 H.E.R.와 함께한 리믹스 버전",
+        "url": "https://www.youtube.com/watch?v=McsBZRXg8B0"
+      }
+    ]
+  },
+  {
+    "title": "Greensleeves",
+    "year": "?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["영어"],
+    "countries": ["UK"],
+    "tags": ["민요","유럽"],
+    "memo": "잘 알려진 영국 민요. 헨리 8세가 작곡하였다는 전설이 있으며, 셰익스피어의 작품에서도 언급된다.",
+    "youtube": [
+      {
+        "title": "Celtic Ladies 버전",
+        "url": "https://www.youtube.com/watch?v=kdjYlrvVFNo"
+      },
+      {
+        "title": "Peter Hollens, Tim Foust 버전",
+        "url": "https://www.youtube.com/watch?v=-3iE4IStfRs"
+      },
+      {
+        "title": "The King's Singers, 2008 BBC Proms Concert, Royal Albert Hall London",
+        "url": "https://www.youtube.com/watch?v=twix9KfES9Y"
+      }
+    ]
+  },
+  {
+    "title": "Прощание славянки (Farewell of Slavianka)",
+    "year": "1912",
+    "artist": [],
+    "songwriters": ["Василий Агапкин"],
+    "language" : ["러시아어"],
+    "countries": ["RU"],
+    "tags": ["군가","유럽"],
+    "memo": "'슬라브 여인의 작별' - 러시아 제국 시대부터 군인들 사이에서 인기를 끈 곡. 가사는 여러 버전이 있다. 탐보프 주의 주가",
+    "youtube": [
+      {
+        "title": "1967년 작사된 소련 버전 (Alexandrov Ensemble)",
+        "url": "https://www.youtube.com/watch?v=h9_8YyFl-uY"
+      },
+      {
+        "title": "1997년 작사된 백군 버전 (영어 자막)",
+        "url": "https://www.youtube.com/watch?v=iXnc0JrWkOA"
+      }
+    ]
+  },
+  {
+    "title": "夜に駆ける (밤을 달리다)",
+    "year": "2019",
+    "artist": ["YOASOBI"],
+    "songwriters": ["Ayase"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["JPOP","아시아"],
+    "memo": "신나는 자살 노래. 단편소설 <타나토스의 유혹(タナトスの誘惑)>을 바탕으로 함.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=by4SYYWlhEs"
+      },
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=x8VYWazR5mE"
+      }
+    ]
+  },
+  {
+    "title": "Hoppípolla",
+    "year": "2005",
+    "artist": ["Sigur Rós"],
+    "songwriters": ["Jón Þór Birgisson","Orri Páll Dýrason","Georg Hólm","Kjartan Sveinsson"],
+    "language" : ["아이슬란드어"],
+    "countries": ["IS"],
+    "tags": ["포스트락","유럽"],
+    "memo": "물웅덩이에 뛰어들기, 그리고 희망. Sigur Rós의 대표곡",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/77"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=JAYb8ZyjzD0"
+      }
+    ]
+  },
+  {
+    "title": "Stille Nacht, heilige Nacht",
+    "year": "1818",
+    "artist": [""],
+    "songwriters": ["Franz Xaver Gruber","Joseph Mohr"],
+    "language" : ["독일어"],
+    "countries": ["AT"],
+    "tags": ["캐롤","유럽"],
+    "memo": "고요한 밤, 거룩한 밤.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/82"
+      }
+    ],"youtube": [
+      {
+        "title": "독일어 가사 (Clare College Singers)",
+        "url": "https://www.youtube.com/watch?v=9p97sxREC00"
+      },
+      {
+        "title": "오스트리아 Styer에서의 합창 퍼포먼스",
+        "url": "https://www.youtube.com/watch?v=3BS9ohD1R5g"
       }
     ]
   }

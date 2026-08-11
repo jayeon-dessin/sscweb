@@ -305,6 +305,10 @@ h1 {
         box-shadow 0.2s;
 }
 
+#song-list > div.has-links {
+    background-color: #96eb96;
+}
+
 #song-list > div:hover {
     transform: translateY(-2px);
 
