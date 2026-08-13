@@ -15,12 +15,12 @@ const backButton = document.getElementById("back-to-countries");
 
 const decorativeFlags = [
   "KR", "DZ", "AR", "AU", "AT", "BA", "BY", "BE", "BJ",
-  "BR", "CV", "CA", "CL", "CN", "CO", "CU", "DK",
+  "BR", "CV", "CA", "CL", "CN", "CO", "HR", "CU", "CD", "DK",
   "EG", "FI", "FR", "GE", "DE", "GR",
   "IS", "IN", "ID", "IR", "IE", "IT", "JM", "JP",
   "KZ", "KE", "ML", "MX", "MD", "MN", "NL",
   "NZ", "NG", "KP", "NO", "PK", "PH", "PL", "PT", "PR",
-  "RU", "ZA", "ES", "SE", "SY", "TW", "TH",
+  "RU", "RS", "ZA", "ES", "SE", "SY", "TW", "TH",
   "TT", "TR", "UA", "GB", "US", "VN"
 ];
 
@@ -728,6 +728,7 @@ function renderSongs(songArray) {
                 ? song.links
                     .map(link => `
                       <a
+                        class="blog-link"
                         href="${link.url}"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -744,6 +745,7 @@ function renderSongs(songArray) {
                 ? song.youtube
                     .map(video => `
                       <a
+                        class="youtube-link"
                         href="${video.url}"
                         target="_blank"
                         rel="noopener noreferrer"

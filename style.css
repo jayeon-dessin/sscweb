@@ -306,7 +306,7 @@ h1 {
 }
 
 #song-list > div.has-links {
-    background-color: #eff7ff;
+    background-color: #fffbef;
 }
 
 #song-list > div:hover {
@@ -449,6 +449,14 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.blog-link {
+    color: #c64111;
+}
+
+.youtube-link {
+    color: #c94b4b;
 }
 
 
@@ -594,10 +602,10 @@ hr {
 .random-song-card {
     padding: var(--space-5);
 
-    border: 1px solid #d8e5da;
+    border: 1px solid #e5d8d8;
     border-radius: 12px;
 
-    background-color: #f3f8f9;
+    background-color: #f9f3f3;
 }
 
 .random-song-header {
@@ -614,7 +622,7 @@ hr {
     font-size: 0.85rem;
     font-weight: 600;
 
-    color: #667a80;
+    color: #806966;
 }
 
 .random-song-card h2 {
@@ -662,7 +670,7 @@ hr {
     font-size: 0.9rem;
 
     cursor: pointer;
-    color: #66806a;
+    color: #806966;
 }
 
 #random-song-button:hover {

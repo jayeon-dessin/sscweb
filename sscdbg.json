@@ -1959,7 +1959,7 @@
     "songwriters": ["Michael Antony Deighan","Mike Wilsh"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["번안","샹송","유럽"],
+    "tags": ["번안","샹송","유럽","샹젤리제"],
     "memo": "샹젤리제(Les Champs-Élysées)의 원곡.",
     "youtube": [
       {
@@ -2010,6 +2010,229 @@
       {
         "title": "음원",
         "url": "https://www.youtube.com/watch?v=EmhqVPXOKo4"
+      }
+    ]
+  },
+  {
+    "title": "Yolele",
+    "year": "1995",
+    "artist": ["Papa Wemba"],
+    "songwriters": ["Papa Wemba","Kanza Lokua"],
+    "language" : ["링갈라어"],
+    "countries": ["CD"],
+    "tags": ["룸바","아프리카"],
+    "memo": "자존심 때문에 사랑을 말하지 않은 것을 후회하는 룸바 곡.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/159"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=QemzwQ839tE"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=tXursFK5KsY"
+      }
+    ]
+  },
+  {
+    "title": "Oh! Asmara",
+    "year": "2023",
+    "artist": ["Kobo Kanaeru"],
+    "songwriters": ["Kobo Kanaeru"],
+    "language" : ["마인어"],
+    "countries": ["ID"],
+    "tags": ["버추얼","아시아"],
+    "memo": "버추얼 유튜버 코보 카나에루의 곡. '오! 사랑이여'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/69"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=DR43SQx8Ybc"
+      }
+    ]
+  },
+  {
+    "title": "Lacrimosa",
+    "year": "1791",
+    "artist": [""],
+    "songwriters": ["Wolfgang Amadeus Mozart","Franz Xaver Süssmayr"],
+    "language" : ["라틴어"],
+    "countries": ["AT"],
+    "tags": ["레퀴엠","유럽","클래식"],
+    "memo": "모차르트의 레퀴엠 D단조 K.626 부속가(Sequentia) 중 Lacrimosa. 모차르트는 미완성 상태로 사망했고, 남은 부분은 쥐스마이어가 완성함.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/70"
+      }
+    ],"youtube": [
+      {
+        "title": "Symphony Orchestra & Grand Choir of the Collegium Musicum Berlin",
+        "url": "https://www.youtube.com/watch?v=MafAZeag1_0"
+      },
+      {
+        "title": "RIAS Chamber Choir · Berlin Radio Symphony Orchestra",
+        "url": "https://www.youtube.com/watch?v=BzsrqaLgdpk"
+      }
+    ]
+  },
+  {
+    "title": "Lacrimosa",
+    "year": "1791",
+    "artist": [""],
+    "songwriters": ["Wolfgang Amadeus Mozart","Franz Xaver Süssmayr"],
+    "language" : ["라틴어"],
+    "countries": ["AT"],
+    "tags": ["레퀴엠","유럽","클래식"],
+    "memo": "모차르트의 레퀴엠 D단조 K.626 부속가(Sequentia) 중 Lacrimosa. 모차르트는 미완성 상태로 사망했고, 남은 부분은 쥐스마이어가 완성함.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/70"
+      }
+    ],"youtube": [
+      {
+        "title": "Symphony Orchestra & Grand Choir of the Collegium Musicum Berlin",
+        "url": "https://www.youtube.com/watch?v=MafAZeag1_0"
+      },
+      {
+        "title": "RIAS Chamber Choir · Berlin Radio Symphony Orchestra",
+        "url": "https://www.youtube.com/watch?v=BzsrqaLgdpk"
+      }
+    ]
+  },
+  {
+    "title": "プラスティック ラブ(Plastic Love)",
+    "year": "1984",
+    "artist": ["Mariya Takeuchi (竹内 まりや)"],
+    "songwriters": ["竹内 まりや"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["시티팝","아시아"],
+    "memo": "일본 시티 팝을 대표하는 명곡 중 하나.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/72"
+      }
+    ],"youtube": [
+      {
+        "title": "MV (2021)",
+        "url": "https://www.youtube.com/watch?v=T_lC2O1oIew"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=u6y5NSiRPOw"
+      }
+    ]
+  },
+  {
+    "title": "真夜中のドア〜 Stay With Me",
+    "year": "1979",
+    "artist": ["Miki Matsubara (松原 みき)"],
+    "songwriters": ["林 哲司","高原 徳子"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["시티팝","아시아"],
+    "memo": "마츠바라 미키의 데뷔곡, 일본 시티 팝 하면 생각나는 노래.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=9YnxXEE-fvU"
+      },
+      {
+        "title": "Club Mix + 공연 영상",
+        "url": "https://www.youtube.com/watch?v=QNYT9wVwQ8A"
+      }
+    ]
+  },
+  {
+    "title": "Bosanska Artiljerija",
+    "year": "1992",
+    "artist": ["Muhamed Brkić Hamo"],
+    "songwriters": ["Muhamed Brkić Hamo","Faik Bahtijarević"],
+    "language" : ["세르보크로아트어"],
+    "countries": ["BA"],
+    "tags": ["유고전쟁","유럽","터보포크"],
+    "memo": "정신 나갈 것 같이 강렬한 보스니아산 전시 애국 음악.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/73"
+      }
+    ],"youtube": [
+      {
+        "title": "음원(?)",
+        "url": "https://www.youtube.com/watch?v=yRGgl9KT9rE"
+      },
+      {
+        "title": "영상 + 영어 자막",
+        "url": "https://www.youtube.com/watch?v=GW6GSa14xXI"
+      }
+    ]
+  },
+  {
+    "title": "Караџићу, води Србе своје (Karadžiću, vodi Srbe svoje)",
+    "year": "1993",
+    "artist": ["Željko Grmuša (Жељко Грмуша)"],
+    "songwriters": ["Жељко Грмуша","Ненад Тинтор","Слободан Врга","?"],
+    "language" : ["세르보크로아트어"],
+    "countries": ["RS"],
+    "tags": ["프로파간다","유럽","터보포크","유고전쟁","케밥"],
+    "memo": "세르비아의 전시 反크로아티아, 反이슬람 애국(?) 음악, 'Remove Kebab' 밈으로 유명하다. 원제목은 '카라지치여, 세르비아인을 보우하소서'. 공격적인 가사에 주의",
+    "youtube": [
+      {
+        "title": "MV(?) (다국어 자막 제공)",
+        "url": "https://www.youtube.com/watch?v=chA5IiTB4wg"
+      }
+    ]
+  },
+  {
+    "title": "Bojna Čavoglave",
+    "year": "1992",
+    "artist": ["Marko Perković"],
+    "songwriters": ["Marko Perković"],
+    "language" : ["세르보크로아트어"],
+    "countries": ["HR"],
+    "tags": ["유럽","터보포크","유고전쟁"],
+    "memo": "크로아티아의 전시 애국 음악. 어깨에 총올리고 노래부르는 MV가 인상적.",
+    "youtube": [
+      {
+        "title": "MV(?) (영어 자막)",
+        "url": "https://www.youtube.com/watch?v=tN1oZifRv28"
+      }
+    ]
+  },
+  {
+    "title": "Jambo Bwana",
+    "year": "1982",
+    "artist": ["Them Mushrooms"],
+    "songwriters": ["Teddy Kalanda Harrison"],
+    "language" : ["스와힐리어"],
+    "countries": ["KE"],
+    "tags": ["팝","아프리카"],
+    "memo": "뎀 머쉬룸즈의 호텔 팝. 케냐에 온 방문객을 환영하는 내용",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/74"
+      }
+    ],"youtube": [
+      {
+        "title": "음원(?)",
+        "url": "https://www.youtube.com/watch?v=vUrVeRGo5IM"
+      },
+      {
+        "title": "MSANII MUSIC GROUP 버전",
+        "url": "https://www.youtube.com/watch?v=5mL5UuqyGA4"
       }
     ]
   }
