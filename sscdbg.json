@@ -1112,7 +1112,7 @@
     "songwriters": ["Sherif Tag", "Ahmed Ali Moussa"],
     "language" : ["아랍어"],
     "countries": ["EG"],
-    "tags": ["아랍팝","아프리카"],
+    "tags": ["팝","아프리카"],
     "memo": "언젠가부터 알게 된 이집트를 대표하는 가요 중 하나. '언제나 당신과 함께'",
     "links": [
       {
@@ -1137,7 +1137,7 @@
     "songwriters": ["Nasser El Mezdawy", "Ahmed Sheta"],
     "language" : ["아랍어"],
     "countries": ["EG"],
-    "tags": ["아랍팝","아프리카"],
+    "tags": ["팝","아프리카"],
     "memo": "아므르 디압의 대표곡 중 하나. '눈빛'",
     "youtube": [
       {
@@ -2840,6 +2840,469 @@
       {
         "title": "MV",
         "url": "https://www.youtube.com/watch?v=djV11Xbc914"
+      }
+    ]
+  },
+  {
+    "title": "Afirika",
+    "year": "2002",
+    "artist": ["Angélique Kidjo"],
+    "songwriters": ["Angélique Kidjo","Jean Hebrail"],
+    "language" : ["퐁어","요루바어"],
+    "countries": ["BJ"],
+    "tags": ["아프리카","팝"],
+    "memo": "아프리카에 축복을.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/143"
+      }
+    ],"youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=CvRudfA5mxw"
+      },
+      {
+        "title": "그래미 세레머니 공연 (2020)",
+        "url": "https://www.youtube.com/watch?v=JbS5H083kXM"
+      }
+    ]
+  },
+  {
+    "title": "Rum and Coca-Cola",
+    "year": "1943",
+    "artist": ["Lord Invader"],
+    "songwriters": ["Lord Invader","Lionel Belasco"],
+    "language" : ["영어"],
+    "countries": ["TT"],
+    "tags": ["북아메리카","칼립소"],
+    "memo": "미군 주둔과 매춘으로 망가지는 사회에 대한 노래. 긍정적으로 개사된 Andrews Sisters 버전이 미국에서 크게 흥행하였다.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/144"
+      }
+    ],"youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=8-CE4xYIyng"
+      },
+      {
+        "title": "미국의 The Andrews Sisters가 개사한 버전",
+        "url": "https://www.youtube.com/watch?v=WiayZdPESno"
+      }
+    ]
+  },
+  {
+    "title": "Prisionero",
+    "year": "2007",
+    "artist": ["Miranda!"],
+    "songwriters": ["Ale Sergi"],
+    "language" : ["스페인어"],
+    "countries": ["AR"],
+    "tags": ["남아메리카","신스팝","일렉트로닉"],
+    "memo": "연인에게 용서를 구하는 내용.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/145"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=SlCLHax4Y50"
+      },
+      {
+        "title": "멕시코 가수 Cristian Castro와 함께 부른 버전 (2023)",
+        "url": "https://www.youtube.com/watch?v=tUwcFogDJ4c"
+      }
+    ]
+  },
+  {
+    "title": "Warni Warni",
+    "year": "2013",
+    "artist": ["Omar Souleyman (عمر سليمان)"],
+    "songwriters": ["Omar Souleyman","Traditional"],
+    "language" : ["쿠르드어","아랍어"],
+    "countries": ["SY"],
+    "tags": ["아시아","다브케","일렉트로닉"],
+    "memo": "쿠르드/아랍 멜로디의 전자음악적 재해석.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/152"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=lVlgMEFu1PI"
+      }
+    ]
+  },
+  {
+    "title": "Volevo essere un duro",
+    "year": "2025",
+    "artist": ["Lucio Corsi"],
+    "songwriters": ["Lucio Corsi","Tommaso Ottomano"],
+    "language" : ["이탈리아어"],
+    "countries": ["IT"],
+    "tags": ["유럽","산레모","유로비전"],
+    "memo": "'터프한 사람이 되고 싶었어'. 어릴 적 꿈꾸던 이상향, 그리고 좌절에 관한 이야기.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/153"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=vkWEvDK45pE"
+      },
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=yu3aL4pIB2g"
+      },
+      {
+        "title": "라이브 (유로비전 2025)",
+        "url": "https://www.youtube.com/watch?v=Vlu5XXDwHos"
+      }
+    ]
+  },
+  {
+    "title": "Kamlee (کملی)",
+    "year": "2012",
+    "artist": ["Hadiqa Kiani","Rohail Hyatt"],
+    "songwriters": ["Hadiqa Kiani","Rohail Hyatt"],
+    "language" : ["펀자브어"],
+    "countries": ["PK"],
+    "tags": ["아시아","수피"],
+    "memo": "18세기 신학자 Bulleh Shah의 시를 바탕으로 한 곡. 그대는 사원과 모스크로 달려가지만, 그대 마음속에는 한 번도 들어서지 못했구나.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/157"
+      }
+    ],"youtube": [
+      {
+        "title": "Coke Studio Pakistan",
+        "url": "https://www.youtube.com/watch?v=9oGSq6iGSjQ"
+      }
+    ]
+  },
+  {
+    "title": "Судно",
+    "year": "2018",
+    "artist": ["Molchat Doma (Молчат Дома)"],
+    "songwriters": ["Raman Kamahortsau","Yahor Shkutko","Boris Ryzhy"],
+    "language" : ["러시아어"],
+    "countries": ["BY"],
+    "tags": ["두머","유럽","포스트펑크"],
+    "memo": "몰찻 도마 2집의 대표곡 '요강'. 죽음을 앞두고 병실에 누운 환자의 독백. 러시아 시인 보리스 리지의 시에서 발췌",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/158"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=91GTuZWCQmY"
+      }
+    ]
+  },
+  {
+    "title": "На Дне",
+    "year": "2018",
+    "artist": ["Molchat Doma (Молчат Дома)"],
+    "songwriters": ["Raman Kamahortsau","Yahor Shkutko"],
+    "language" : ["러시아어"],
+    "countries": ["BY"],
+    "tags": ["두머","유럽","포스트펑크"],
+    "memo": "몰찻 도마 2집, '밑바닥에서'. 중독성 있는 신스.",
+    "youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=haBeRluizqI"
+      }
+    ]
+  },
+  {
+    "title": "Ich hab die Nacht geträumet",
+    "year": "18c?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["독일어"],
+    "countries": ["DE"],
+    "tags": ["유럽","민요"],
+    "memo": "'어젯밤에 악몽을 꿨어요'. 누군가가 죽는 꿈을 꾸었다는 내용의, 왠지 섬뜩한 독일 민요.",
+    "youtube": [
+      {
+        "title": "Wolfgang König, Veronika te Reh",
+        "url": "https://www.youtube.com/watch?v=KBoGR4dhnaQ"
+      }
+    ]
+  },
+  {
+    "title": "Enjoy Enjaami",
+    "year": "2021",
+    "artist": ["Dhee","Arivu"],
+    "songwriters": ["Arivu","Santhosh Narayanan"],
+    "language" : ["타밀어"],
+    "countries": ["IN"],
+    "tags": ["아시아","팝","힙합"],
+    "memo": "타밀족의 스리랑카 이주와 관련된, 인간과 땅의 이야기. 뮤비 연출이 돋보인다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=eYq7WapuDLU"
+      }
+    ]
+  },
+  {
+    "title": "3 Daqat (ثلاث دقات)",
+    "year": "2017",
+    "artist": ["Abu","Yousra"],
+    "songwriters": ["Abu","Tamer Habib"],
+    "language" : ["아랍어"],
+    "countries": ["EG"],
+    "tags": ["아프리카","팝"],
+    "memo": "'3번의 심장박동'. 잔잔한 이집트산 사랑노래.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=ejvpVhvKesM"
+      }
+    ]
+  },
+  {
+    "title": "Bare En Dreng",
+    "year": "2024",
+    "artist": ["URO"],
+    "songwriters": ["Jeppe Kronback","Morten Jepsen"],
+    "language" : ["덴마크어"],
+    "countries": ["DK"],
+    "tags": ["유럽","팝"],
+    "memo": "'그저 남자애'. 핀에어 타다가 발굴한 덴마크 노래.",
+    "youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=8toPejaIVrU"
+      }
+    ]
+  },
+  {
+    "title": "Boa Me",
+    "year": "2024",
+    "artist": ["FUSE ODG","Ed Sheeran","Mugeez"],
+    "songwriters": ["Ed Sheeran","Joseph Addison","Mugeez Abdul Rashid","Nana Richard Abiona"],
+    "language" : ["영어","트위어"],
+    "countries": ["GH","GB"],
+    "tags": ["유럽","아프리카","아프로비츠"],
+    "memo": "에드 시런이 참여한 가나 스타일의 아프로비츠 곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=vtIFDniOWjY"
+      }
+    ]
+  },
+  {
+    "title": "Calm Down",
+    "year": "2022",
+    "artist": ["Rema"],
+    "songwriters": ["Divine Ikubor","Andre Vibez","Michael Hunter"],
+    "language" : ["나이지리아피진영어"],
+    "countries": ["NG"],
+    "tags": ["아프리카","아프로비츠"],
+    "memo": "2022년 크게 히트한 아프로비츠 곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=CQLsdm1ZYAw"
+      },
+      {
+        "title": "미국의 가수 Selena Gomez와 함께한 버전. (MV)",
+        "url": "https://www.youtube.com/watch?v=WcIcVapfqXw"
+      }
+    ]
+  },
+  {
+    "title": "Billie Jean",
+    "year": "1982",
+    "artist": ["Michael Jackson"],
+    "songwriters": ["Michael Jackson"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","팝","댄스"],
+    "memo": "'황제' 마이클 잭슨의 대표곡. 안 넣으면 섭섭해서 넣었다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=Zi_XLOBDo_Y"
+      }
+    ]
+  },
+  {
+    "title": "Hava Nagila (הָבָה נָגִילָה)",
+    "year": "1918",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["히브리어"],
+    "countries": ["IL"],
+    "tags": ["아시아","민요"],
+    "memo": "'기뻐하자'. 유대인 공동체에서, 행사 등에 불려 온 축가(민요). 인터넷에서는 유대인을 상징하는 음악이 되어 버린 듯.",
+    "youtube": [
+      {
+        "title": "Barry & Batya Segal",
+        "url": "https://www.youtube.com/watch?v=sdNJ6djL1c4"
+      },
+      {
+        "title": "London Festival Orchestra, London Festival Chorus (가사 + 영어 자막 + 수상한? 영상)",
+        "url": "https://www.youtube.com/watch?v=cWPPedsKMUc"
+      }
+    ]
+  },
+  {
+    "title": "O Susanna",
+    "year": "1848",
+    "artist": [],
+    "songwriters": ["Stephen Foster"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","포크","민스트럴"],
+    "memo": "미국 남부를 상징하는 곡 중 하나. 동요로 사용되기도 한다.",
+    "youtube": [
+      {
+        "title": "Connie Francis",
+        "url": "https://www.youtube.com/watch?v=GUPRVkhBtVA"
+      },
+      {
+        "title": "2nd South Carolina String Band",
+        "url": "https://www.youtube.com/watch?v=VTQ8C2wIEj8"
+      },
+      {
+        "title": "원곡 가사 그대로 부른 버전. 인종차별적 가사에 주의",
+        "url": "https://www.youtube.com/watch?v=qSIj17xbAyk"
+      }
+    ]
+  },
+  {
+    "title": "Ghareeb Alay (غريب عليّ)",
+    "year": "2022",
+    "artist": ["Elyanna (اليانا)", "Balti (بلصي)"],
+    "songwriters": ["Nasari Atweh","Sari Abboud","Martin Sinote","Elian Marjiya","Feras Marjiya","Mohamad Salah Balti"],
+    "language" : ["아랍어"],
+    "countries": ["PS","TN","CL"],
+    "tags": ["아시아","아프리카","팝","힙합"],
+    "memo": "'네가 낯설어', 멀어져 낯설어진 관계를 노래한다. 칠레-팔레스타인 가수 Elyanna와 튀니지 래퍼 Balti의 합작.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=oRC1K7uUBZ8"
+      }
+    ]
+  },
+  {
+    "title": "Venceremos",
+    "year": "1970",
+    "artist": ["Quilapayún"],
+    "songwriters": ["Sergio Ortega","Claudio Iturra"],
+    "language" : ["스페인어"],
+    "countries": ["CL"],
+    "tags": ["포크","남아메리카","누에바칸시온","민중가요"],
+    "memo": "'승리하리라', 살바도르 아옌데의 선거운동에 사용된 곡. 시위 현장에서도 자주 쓰인다.",
+    "youtube": [
+      {
+        "title": "Quilapayun 버전 (원곡?)",
+        "url": "https://www.youtube.com/watch?v=57tWbzDdx2s"
+      },
+      {
+        "title": "Víctor Jara가 개사한 선거운동 버전",
+        "url": "https://www.youtube.com/watch?v=R48LH-bQlzc"
+      }
+    ]
+  },
+  {
+    "title": "No Volveré",
+    "year": "1991",
+    "artist": ["Antonio Aguilar"],
+    "songwriters": ["Ernesto Cortazar","Manuel Esperon Gonzalez"],
+    "language" : ["스페인어"],
+    "countries": ["MX"],
+    "tags": ["북아메리카","란체라"],
+    "memo": "'돌아오지 않을 거야', 끝난 사랑에 다시 돌아가지 않겠다는 결심. 마리아치 반주가 좋다.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=1B7QQeuSUV0"
+      }
+    ]
+  },
+  {
+    "title": "No Volveré",
+    "year": "1940s?",
+    "artist": [],
+    "songwriters": ["Ernesto Cortazar","Manuel Esperon Gonzalez"],
+    "language" : ["스페인어"],
+    "countries": ["MX"],
+    "tags": ["북아메리카","란체라"],
+    "memo": "'돌아오지 않을 거야', 끝난 사랑에 미련을 갖지 않겠다는 결심. 멕시코를 대표하는 음악 중 하나.",
+    "youtube": [
+      {
+        "title": "Pedro Infante 버전 (1955? 영화)",
+        "url": "https://www.youtube.com/watch?v=uLw2MKPYIU8"
+      },
+      {
+        "title": "Antonio Aguilar 버전",
+        "url": "https://www.youtube.com/watch?v=1B7QQeuSUV0"
+      }
+    ]
+  },
+  {
+    "title": "Вместе весело шагать",
+    "year": "1978",
+    "artist": [],
+    "songwriters": ["Владимир Шаинский","Михаил Матусовский"],
+    "language" : ["러시아어"],
+    "countries": ["RU"],
+    "tags": ["유럽","동요","소련"],
+    "memo": "'함께 걷는 건 즐겁다'는, 소련의 어린이 노래. 동요 치곤 멜로디가 신기하다.",
+    "youtube": [
+      {
+        "title": "Большой детский хор ЦТ и ВР (1978)",
+        "url": "https://www.youtube.com/watch?v=k8cOCtPqjPc"
+      }
+    ]
+  },
+  {
+    "title": "Deus, Pátria, Rei",
+    "year": "20c?",
+    "artist": [],
+    "songwriters": ["José Campos e Sousa", "Fernando Tavares Rodrigues"],
+    "language" : ["포르투갈어"],
+    "countries": ["PT"],
+    "tags": ["유럽","왕당파"],
+    "memo": "'하느님, 조국, 국왕', 포르투갈 왕정의 복귀를 지지하는 음악. 사실 내용은 잘 모르겠고 곡이 그냥 좋다.",
+    "youtube": [
+      {
+        "title": "가사 (영어 자막)",
+        "url": "https://www.youtube.com/watch?v=v-gkeL51a4c"
+      }
+    ]
+  },
+  {
+    "title": "Negro y Azul",
+    "year": "2008",
+    "artist": ["Los Cuates de Sinaloa"],
+    "songwriters": ["José Pepe Garza, Vince Gilligan"],
+    "language" : ["스페인어"],
+    "countries": ["US","MX"],
+    "tags": ["북아메리카","드라마"],
+    "memo": "'검정과 파랑'. <브레이킹 배드> 시즌2 동명의 에피소드에서 등장하는 곡.",
+    "youtube": [
+      {
+        "title": "MV (영어 자막)",
+        "url": "https://www.youtube.com/watch?v=_ykOTpzuZN0"
       }
     ]
   }

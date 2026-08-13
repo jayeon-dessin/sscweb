@@ -17,11 +17,11 @@ const decorativeFlags = [
   "KR", "DZ", "AR", "AU", "AT", "BA", "BY", "BE", "BJ",
   "BR", "CV", "CA", "CM", "CL", "CN", "CO", "HR", "CU", "CD",
   "DK", "EG", "FI", "FR", "GE", "DE", "GR",
-  "IS", "IN", "ID", "IR", "IE", "IT", "JM", "JP",
+  "IS", "IN", "ID", "IR", "IE", "IL", "IT", "JM", "JP",
   "KZ", "KE", "ML", "MX", "MD", "MN", "NL",
-  "NZ", "NG", "KP", "NO", "PK", "PH", "PL", "PT", "PR",
+  "NZ", "NG", "KP", "NO", "PK", "PS", "PH", "PL", "PT", "PR",
   "RU", "RS", "SO", "ZA", "ES", "SE", "SY", "TW", "TH",
-  "TT", "TR", "UA", "GB", "US", "VN"
+  "TT", "TN", "TR", "UA", "GB", "US", "VN"
 ];
 
 // -------------------------------------
@@ -576,6 +576,7 @@ function renderRandomSong(song) {
                 ? song.links
                     .map(link => `
                       <a
+                        class="blog-link"
                         href="${link.url}"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -592,6 +593,7 @@ function renderRandomSong(song) {
                 ? song.youtube
                     .map(video => `
                       <a
+                        class="youtube-link"
                         href="${video.url}"
                         target="_blank"
                         rel="noopener noreferrer"
