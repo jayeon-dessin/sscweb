@@ -969,7 +969,7 @@
   },
   {
     "title": "Ievan Polkka",
-    "year": "?",
+    "year": "19c?",
     "artist": [],
     "songwriters": ["Traditional", "Eino Kettunen"],
     "language" : ["핀란드어"],
@@ -998,7 +998,7 @@
   },
   {
     "title": "Säkkijärven Polkka",
-    "year": "?",
+    "year": "19c?",
     "artist": [],
     "songwriters": ["Traditional", "Reino Helismaa"],
     "language" : ["핀란드어"],
@@ -1561,7 +1561,7 @@
   },
   {
     "title": "Hej sokoły (Гей соколи)",
-    "year": "?",
+    "year": "19c?",
     "artist": [],
     "songwriters": ["Traditional"],
     "language" : ["폴란드어","우크라이나어"],
@@ -1758,7 +1758,7 @@
   },
   {
     "title": "Greensleeves",
-    "year": "?",
+    "year": "1580?",
     "artist": [],
     "songwriters": ["Traditional"],
     "language" : ["영어"],
@@ -2020,7 +2020,7 @@
     "songwriters": ["Papa Wemba","Kanza Lokua"],
     "language" : ["링갈라어"],
     "countries": ["CD"],
-    "tags": ["룸바","아프리카"],
+    "tags": ["콩고룸바","아프리카"],
     "memo": "자존심 때문에 사랑을 말하지 않은 것을 후회하는 룸바 곡.",
     "links": [
       {
@@ -2085,35 +2085,10 @@
     ]
   },
   {
-    "title": "Lacrimosa",
-    "year": "1791",
-    "artist": [""],
-    "songwriters": ["Wolfgang Amadeus Mozart","Franz Xaver Süssmayr"],
-    "language" : ["라틴어"],
-    "countries": ["AT"],
-    "tags": ["레퀴엠","유럽","클래식"],
-    "memo": "모차르트의 레퀴엠 D단조 K.626 부속가(Sequentia) 중 Lacrimosa. 모차르트는 미완성 상태로 사망했고, 남은 부분은 쥐스마이어가 완성함.",
-    "links": [
-      {
-        "title": "블로그 해설",
-        "url": "https://jdessin.tistory.com/70"
-      }
-    ],"youtube": [
-      {
-        "title": "Symphony Orchestra & Grand Choir of the Collegium Musicum Berlin",
-        "url": "https://www.youtube.com/watch?v=MafAZeag1_0"
-      },
-      {
-        "title": "RIAS Chamber Choir · Berlin Radio Symphony Orchestra",
-        "url": "https://www.youtube.com/watch?v=BzsrqaLgdpk"
-      }
-    ]
-  },
-  {
     "title": "プラスティック ラブ(Plastic Love)",
     "year": "1984",
-    "artist": ["Mariya Takeuchi (竹内 まりや)"],
-    "songwriters": ["竹内 まりや"],
+    "artist": ["Mariya Takeuchi (竹内まりや)"],
+    "songwriters": ["竹内まりや"],
     "language" : ["일본어"],
     "countries": ["JP"],
     "tags": ["시티팝","아시아"],
@@ -2137,8 +2112,8 @@
   {
     "title": "真夜中のドア〜 Stay With Me",
     "year": "1979",
-    "artist": ["Miki Matsubara (松原 みき)"],
-    "songwriters": ["林 哲司","高原 徳子"],
+    "artist": ["Miki Matsubara (松原みき)"],
+    "songwriters": ["林哲司","高原徳子"],
     "language" : ["일본어"],
     "countries": ["JP"],
     "tags": ["시티팝","아시아"],
@@ -2183,7 +2158,7 @@
     "title": "Караџићу, води Србе своје (Karadžiću, vodi Srbe svoje)",
     "year": "1993",
     "artist": ["Željko Grmuša (Жељко Грмуша)"],
-    "songwriters": ["Жељко Грмуша","Ненад Тинтор","Слободан Врга","?"],
+    "songwriters": ["Жељко Грмуша","Ненад Тинтор","Слободан Врга"],
     "language" : ["세르보크로아트어"],
     "countries": ["RS"],
     "tags": ["프로파간다","유럽","터보포크","유고전쟁","케밥"],
@@ -2233,6 +2208,638 @@
       {
         "title": "MSANII MUSIC GROUP 버전",
         "url": "https://www.youtube.com/watch?v=5mL5UuqyGA4"
+      }
+    ]
+  },
+  {
+    "title": "No Woman No Cry",
+    "year": "1974",
+    "artist": ["Bob Marley and the Wailers"],
+    "songwriters": ["Bob Marley","Vincent Ford"],
+    "language" : ["영어","자메이카파트와"],
+    "countries": ["JM"],
+    "tags": ["레게","북아메리카"],
+    "memo": "레게 하면 생각나는 곡. '모든 게 괜찮아질 테니, 울지 말아요'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/79"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=IT8XvzIfi4U"
+      },
+      {
+        "title": "Live At The Rainbow (1977)",
+        "url": "https://www.youtube.com/watch?v=mZ6VezKMoRY"
+      }
+    ]
+  },
+  {
+    "title": "장군님 축지법 쓰신다",
+    "year": "1996",
+    "artist": [],
+    "songwriters": ["정렬","김운룡"],
+    "language" : ["한국어"],
+    "countries": ["KP"],
+    "tags": ["프로파간다","아시아"],
+    "memo": "한국에서도 유명한, 북한의 이상한 김일성-김정일 찬양곡. 요즘은 잘 안쓴다는 것 같다.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/80"
+      }
+    ],"youtube": [
+      {
+        "title": "MV(?)",
+        "url": "https://www.youtube.com/watch?v=-iEfP_cbfQw"
+      }
+    ]
+  },
+  {
+    "title": "천리마 달린다",
+    "year": "1966",
+    "artist": [],
+    "songwriters": ["남응손","김길학"],
+    "language" : ["한국어"],
+    "countries": ["KP"],
+    "tags": ["프로파간다","아시아"],
+    "memo": "천리마 운동 찬가, 해외에서 인기가 많은 편.",
+    "youtube": [
+      {
+        "title": "보천보전자악단 버전 (보컬 김광숙)",
+        "url": "https://www.youtube.com/watch?v=_OPWJac4krMw"
+      }
+    ]
+  },
+  {
+    "title": "C'est la vie",
+    "year": "1996",
+    "artist": ["Khaled"],
+    "songwriters": ["RedOne","Alex Papaconstantinou","Bilal Hajji","Björn Djupström","AJ Junior"],
+    "language" : ["아랍어","프랑스어"],
+    "countries": ["DZ"],
+    "tags": ["라이","아프리카"],
+    "memo": "신나는 알제리 라이. 인생은 원래 그런 거니까 즐겨라!",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/80"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=t-_SbDuqxQc"
+      },
+      {
+        "title": "미국의 가수 Marc Anthony의 스페인어 번안곡, Vivir Mi Vida(MV)",
+        "url": "https://www.youtube.com/watch?v=YXnjy5YlDwk"
+      }
+    ]
+  },
+  {
+    "title": "Kobe (কবে)",
+    "year": "2011",
+    "artist": ["Nemesis"],
+    "songwriters": ["Nemesis"],
+    "language" : ["벵골어"],
+    "countries": ["BD"],
+    "tags": ["락","아시아"],
+    "memo": "방글라데시 락. '언제쯤'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/84"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=t-_SbDuqxQc"
+      },
+      {
+        "title": "어쿠스틱 버전(Quarantine Sessions)",
+        "url": "https://www.youtube.com/watch?v=FATYJIlaiiI"
+      }
+    ]
+  },
+  {
+    "title": "Por Una Cabeza",
+    "year": "1935",
+    "artist": ["Carlos Gardel"],
+    "songwriters": ["Carlos Gardel","Alfredo Le Pera"],
+    "language" : ["스페인어"],
+    "countries": ["AR"],
+    "tags": ["남아메리카","탱고"],
+    "memo": "아르헨티나 탱고. 번안도 자주 된다. '머리 하나 차이로'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/88"
+      }
+    ],"youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=hM8qB3l0Q7g"
+      }
+    ]
+  },
+  {
+    "title": "Mo Ghile Mear",
+    "year": "1972",
+    "artist": [],
+    "songwriters": ["Traditional","Seán Clárach Mac Dómhnaill"],
+    "language" : ["아일랜드어"],
+    "countries": ["IE"],
+    "tags": ["켈트","유럽","민요"],
+    "memo": "민속 멜로디 + 자코바이트의 난을 바탕으로 한 시에서 가사를 발췌한, 사랑하는 이를 기리는 노래. '나의 용맹한 그대'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/86"
+      }
+    ],"youtube": [
+      {
+        "title": "Choral Scholars of University College Dublin",
+        "url": "https://www.youtube.com/watch?v=zxjvNUNXhkU"
+      },
+      {
+        "title": "영어 번역 버전(Celtic Woman)",
+        "url": "https://www.youtube.com/watch?v=VcCVjiKfDk8"
+      }
+    ]
+  },
+  {
+    "title": "Treaty",
+    "year": "1991",
+    "artist": ["Yothu Yindi"],
+    "songwriters": ["Paul Kelly","Mandawuy Yunupingu","Stuart Kellaway","Cal Williams","Gurrumul Yunupingu","Milkayngu Mununggurr","Banula Marika","Peter Garrett"],
+    "language" : ["영어","욜릉우어"],
+    "countries": ["AR"],
+    "tags": ["락","오세아니아","조약"],
+    "memo": "호주 원주민과 이주민 사이 '조약'에 대한 곡. 욜릉우어파 두왈어 방언인 Gumatj어 가사가 포함됨.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/89"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=Jf-jHCdafZY"
+      }
+    ]
+  },
+  {
+    "title": "Djarimirri",
+    "year": "2008?",
+    "artist": ["Gurrumul"],
+    "songwriters": ["Geoffrey Gurrumul Yunupingu"],
+    "language" : ["영어","욜릉우어"],
+    "countries": ["AR"],
+    "tags": ["락","오세아니아","조약"],
+    "memo": "욜릉우 전통 찬가를 바탕으로 한, 호주 원주민이자 맹인 아티스트 Gurrumul의 대표곡. 잔잔한 멜로디가 듣기 좋다.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=txrL17BnMcg"
+      },
+      {
+        "title": "Live at Darwin Festival (2006)",
+        "url": "https://www.youtube.com/watch?v=bawDFY8G-o4"
+      }
+    ]
+  },
+  {
+    "title": "แว่นกันแดด (Sunglasses)",
+    "year": "2018",
+    "artist": ["FOLK9"],
+    "songwriters": ["FOLK9"],
+    "language" : ["태국어"],
+    "countries": ["TH"],
+    "tags": ["사이키델릭팝","아시아"],
+    "memo": "태국 밴드 FOLK9의 히트곡. '선글라스'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/90"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=W28LV238Wao"
+      }
+    ]
+  },
+  {
+    "title": "Europapa",
+    "year": "2024",
+    "artist": ["Joost Klein"],
+    "songwriters": ["Paul Elstak","Teun de Kruif","Thijmen Melissant","Joost Klein","Donny Ellerström","Tim Haars"],
+    "language" : ["네덜란드어"],
+    "countries": ["NL"],
+    "tags": ["댄스","유럽","유로비전"],
+    "memo": "2024 유로비전 참가곡. 별도의 논란으로 실격되었지만 곡 히트는 성공했다.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/95"
+      }
+    ],"youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=RV1Y7CPSNS4"
+      },
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=gT2wY0DjYGo"
+      }
+    ]
+  },
+  {
+    "title": "Adımız miskindir bizim",
+    "year": "1973",
+    "artist": ["Mazhar Ve Fuat"],
+    "songwriters": ["Mazhar Alanson","Yunus Emre"],
+    "language" : ["튀르키예어"],
+    "countries": ["TR"],
+    "tags": ["아시아","시","사이키델릭락","아나톨리안락"],
+    "memo": "중세 시인 Yunus Emre의 시에서 가져온 가사. '우리의 이름은 나태'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/100"
+      }
+    ],"youtube": [
+      {
+        "title": "영상(Anatolian Rock Revival Project)",
+        "url": "https://www.youtube.com/watch?v=zbeErgE4quA"
+      },
+      {
+        "title": "MFÖ 버전",
+        "url": "https://www.youtube.com/watch?v=u-hCfror6aE"
+      }
+    ]
+  },
+  {
+    "title": "Sodade",
+    "year": "1950s",
+    "artist": [],
+    "songwriters": ["Armando Zeferino Soares"],
+    "language" : ["카보베르데크리올"],
+    "countries": ["CV"],
+    "tags": ["아프리카","모르나","상투메프린시페"],
+    "memo": "카보베르데를 떠나 상투메에서 일하는 사람과 그 가족들의 애환. '그리움'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/101"
+      }
+    ],"youtube": [
+      {
+        "title": "널리 알려진 Cesária Évora 버전",
+        "url": "https://www.youtube.com/watch?v=ku_WZoTtT8Q"
+      },
+      {
+        "title": "Cesária Évora & Bonga",
+        "url": "https://www.youtube.com/watch?v=d5tZBNPLE10"
+      }
+    ]
+  },
+  {
+    "title": "განდაგანა (Gandagana)",
+    "year": "?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["조지아어"],
+    "countries": ["GE"],
+    "tags": ["아시아","민요"],
+    "memo": "조지아 아자리야(Adjara) 지방 민요.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/102"
+      }
+    ],"youtube": [
+      {
+        "title": "Basiani Ensemble",
+        "url": "https://www.youtube.com/watch?v=hLoH1eKY9-U"
+      },
+      {
+        "title": "Basiani Ensemble, 상트페테르부르크 Oktiabrsky Hall (2016)",
+        "url": "https://www.youtube.com/watch?v=jENBgIEc5AY"
+      }
+    ]
+  },
+  {
+    "title": "Yuve Yuve Yu",
+    "year": "2019",
+    "artist": ["The HU"],
+    "songwriters": ["Dashdondog Bayarmagnai","Temuulen Naranbaatar","Galbadrakh Tsendbaatar","Nyamjantsan Galsanjamts","Enkhsaikhan Batjargal"],
+    "language" : ["몽골어"],
+    "countries": ["MN"],
+    "tags": ["아시아","메탈"],
+    "memo": "몽골식 메탈. 옛 유산과 가치를 잃어버린 현대인에 대한 일침, '어째서인가?'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/106"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=v4xZUr0BEfE"
+      }
+    ]
+  },
+  {
+    "title": "Wolf Totem",
+    "year": "2018",
+    "artist": ["The HU"],
+    "songwriters": ["Dashdondog Bayarmagnai","Temuulen Naranbaatar","Galbadrakh Tsendbaatar","Nyamjantsan Galsanjamts","Enkhsaikhan Batjargal"],
+    "language" : ["몽골어"],
+    "countries": ["MN"],
+    "tags": ["아시아","메탈"],
+    "memo": "몽골 왕자 초그트가 쓴 시를 바탕으로 한, 첫 글자가 반복되는 가사.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=jM8dCGIm6yc"
+      }
+    ]
+  },
+  {
+    "title": "Tous Les Mêmes",
+    "year": "2013",
+    "artist": ["Stromae"],
+    "songwriters": ["Stromae"],
+    "language" : ["프랑스어"],
+    "countries": ["BE"],
+    "tags": ["유럽","일렉트로닉","팝"],
+    "memo": "연인 간의 갈등. 남녀 반반으로 분장한 뮤비가 인상적이다. '다 똑같아'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/109"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=CAMWdvo71ls"
+      }
+    ]
+  },
+  {
+    "title": "Papaoutai",
+    "year": "2013",
+    "artist": ["Stromae"],
+    "songwriters": ["Stromae"],
+    "language" : ["프랑스어"],
+    "countries": ["BE"],
+    "tags": ["유럽","댄스","콩고룸바"],
+    "memo": "아버지의 부재에 관한 노래, 스트로마에의 대표곡. Papa, où t'es?(아빠, 어디에 있어?) AI로 만든 합창 버전이 갑자기 인기를 많이 끌기도 했다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=oiKj0Z_Xnjc"
+      }
+    ]
+  },
+  {
+    "title": "Alors on danse",
+    "year": "2009",
+    "artist": ["Stromae"],
+    "songwriters": ["Stromae"],
+    "language" : ["프랑스어"],
+    "countries": ["BE"],
+    "tags": ["유럽","팝","댄스"],
+    "memo": "스트로마에의 신나는 댄스곡. '그리고 우리는 춤춘다'",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=VHoT4N43jK8"
+      }
+    ]
+  },
+  {
+    "title": "Ma Meilleure Ennemie",
+    "year": "2024",
+    "artist": ["Stromae","Pomme"],
+    "songwriters": ["Stromae","Pomme","Alexander Seaver","Luc Van Haver"],
+    "language" : ["프랑스어"],
+    "countries": ["BE","FR"],
+    "tags": ["유럽","애니메이션"],
+    "memo": "애니메이션 <아케인 2> 삽입곡. 작중 에코와 파우더 사이를 나타내는 노래. '나의 최고의 적'",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=VHoT4N43jK8"
+      },
+      {
+        "title": "영국의 밴드 Coldplay 피처링 버전.",
+        "url": "https://www.youtube.com/watch?v=XbLemOwzdxk"
+      }
+    ]
+  },
+  {
+    "title": "Dónde están los ladrones",
+    "year": "1998",
+    "artist": ["Shakira"],
+    "songwriters": ["Luis Fernando Ochoa","Shakira"],
+    "language" : ["스페인어"],
+    "countries": ["CO"],
+    "tags": ["남아메리카","라틴팝","락"],
+    "memo": "샤키라의 초창기 곡. '도둑들은 어디에?'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/115"
+      }
+    ],"youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=Guakc4LU00U"
+      }
+    ]
+  },
+  {
+    "title": "Ojos Así",
+    "year": "2013",
+    "artist": ["Shakira"],
+    "songwriters": ["Shakira","Pablo Flores","Javier Garza"],
+    "language" : ["스페인어","아랍어"],
+    "countries": ["CO"],
+    "tags": ["남아메리카","일렉트로닉","팝"],
+    "memo": "중동풍 멜로디와 아랍어 가사가 들어간, 샤키라의 독특한 곡 중 하나. '(당신의) 그 눈'",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=5BzkbSq7pww"
+      }
+    ]
+  },
+  {
+    "title": "Waka Waka (This Time for Africa)",
+    "year": "2010",
+    "artist": ["Shakira","Freshlyground"],
+    "songwriters": ["Golden Sounds","Shakira","John Hill"],
+    "language" : ["영어","팡어","코사어"],
+    "countries": ["CM","ZA","CO"],
+    "tags": ["아프리카","월드컵","팝","남아메리카"],
+    "memo": "카메룬의 군가 Zangaléwa를 샘플링한 메가히트곡. 2010년 남아공 월드컵 주제가",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=pRpeEdMmmQ0"
+      },
+      {
+        "title": "원곡(Golden Sounds)",
+        "url": "https://www.youtube.com/watch?v=EpHQAw6eCOY"
+      }
+    ]
+  },
+  {
+    "title": "Wavin' Flag",
+    "year": "2009",
+    "artist": ["K'naan"],
+    "songwriters": ["K'naan"],
+    "language" : ["영어"],
+    "countries": ["SO","CA"],
+    "tags": ["아프리카","월드컵","북아메리카"],
+    "memo": "원래 소말리아에 대한 곡이었으나, 2010년 남아공 월드컵 당시 코카콜라의 프로모션 곡으로 크게 흥행.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=WTJSt4wP2ME"
+      }
+    ]
+  },
+  {
+    "title": "Sastanàqqàm",
+    "year": "2017",
+    "artist": ["Tinariwen"],
+    "songwriters": ["Tinariwen"],
+    "language" : ["타마셰크어"],
+    "countries": ["ML","DZ"],
+    "tags": ["아프리카","블루스"],
+    "memo": "데저트 블루스 곡. '사막이여, 네게 묻는다'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/117"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=vACZA9dGvV4"
+      }
+    ]
+  },
+  {
+    "title": "免我蹉跎苦 (면아차타고)",
+    "year": "2024",
+    "artist": ["Isabelle Huang(黄龄)"],
+    "songwriters": ["自游诗","学松"],
+    "language" : ["중국어"],
+    "countries": ["CN"],
+    "tags": ["아시아","팝"],
+    "memo": "고통에서 벗어나게 해주소서.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/119"
+      }
+    ],"youtube": [
+      {
+        "title": "가사",
+        "url": "https://www.youtube.com/watch?v=nng_xxMXzZE"
+      }
+    ]
+  },
+  {
+    "title": "Rasputin",
+    "year": "1978",
+    "artist": ["Boney M."],
+    "songwriters": ["Frank Farian","George Reyam","Fred Jay"],
+    "language" : ["영어"],
+    "countries": ["DE"],
+    "tags": ["러시아","유럽","북아메리카","디스코"],
+    "memo": "러시아 제국 말기의 수도승 라스푸틴에 얽힌 이야기.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/134"
+      }
+    ],"youtube": [
+      {
+        "title": "Sopot Festival (1979)",
+        "url": "https://www.youtube.com/watch?v=16y1AkoZkmQ"
+      }
+    ]
+  },
+  {
+    "title": "Mahabbatym (Махаббатым)",
+    "year": "1978",
+    "artist": ["MOLDANAZAR"],
+    "songwriters": ["MOLDANAZAR"],
+    "language" : ["카자흐어"],
+    "countries": ["KZ"],
+    "tags": ["아시아","인디"],
+    "memo": "몰다나자르의 잔잔한 사랑노래.",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/138"
+      }
+    ],"youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=QQgH4IRbMSs"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=am0iiRPajxU"
+      }
+    ]
+  },
+  {
+    "title": "Sámiid Ædnan",
+    "year": "1980",
+    "artist": ["Sverre Kjelsberg","Mattis Hætta"],
+    "songwriters": ["Sverre Kjelsberg","Mattis Hætta","Ragnar Olsen"],
+    "language" : ["노르웨이어","사미어"],
+    "countries": ["NO"],
+    "tags": ["유럽","유로비전"],
+    "memo": "1980년 유로비전 참가곡. 수력발전소 건설로 인한 사미인 주거 지역 파괴 문제, 그리고 그에 대한 시위가 배경이 되는 곡이다. '사미의 땅'",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/139"
+      }
+    ],"youtube": [
+      {
+        "title": "유로비전 1980",
+        "url": "https://www.youtube.com/watch?v=b0L81ql8QGY"
+      },
+      {
+        "title": "음원. 요이크 부분이 조금 다르다.",
+        "url": "https://www.youtube.com/watch?v=Ufhy6QaKDaI"
+      }
+    ]
+  },
+  {
+    "title": "Take On Me",
+    "year": "1984",
+    "artist": ["a-ha"],
+    "songwriters": ["Pål Waaktaar","Magne Furuholmen","Morten Harket"],
+    "language" : ["영어"],
+    "countries": ["NO"],
+    "tags": ["유럽","신스팝"],
+    "memo": "인트로 신스 사운드가 매우 유명한 곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=djV11Xbc914"
       }
     ]
   }
