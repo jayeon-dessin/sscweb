@@ -214,7 +214,7 @@
     "language" : ["프랑스어"],
     "countries": ["FR"],
     "tags": ["일렉트로닉", "유럽"],
-    "memo": "프랑스-한국 혼혈 싱어송라이터 miki의 곡. 뮤비가 인상적(?)임.",
+    "memo": "프랑스 싱어송라이터 miki의 곡. 뮤비가 인상적(?)임.",
     "youtube": [
       {
         "title": "MV",
@@ -3439,8 +3439,8 @@
     "year": "1997",
     "artist": ["МАЙАМИ"],
     "songwriters": ["Салакаев Валерий","Ярославцев Владимир","Дворецкий Дмитрий"],
-    "language" : ["몽골어"],
-    "countries": ["MN"],
+    "language" : ["러시아어"],
+    "countries": ["RU"],
     "tags": ["유럽","팝","오스트레일리아"],
     "memo": "호주에 가고 싶어하는 노래. 호주를 '다섯 번째 대륙'이라고 부른다.",
     "youtube": [
@@ -3747,6 +3747,78 @@
       {
         "title": "음원",
         "url": "https://www.youtube.com/watch?v=abkHMHfvXiM"
+      }
+    ]
+  },
+  {
+    "title": "W moim ogródecku",
+    "year": "?",
+    "artist": [""],
+    "songwriters": ["Traditional"],
+    "language" : ["폴란드어"],
+    "countries": ["PL"],
+    "tags": ["유럽","민요"],
+    "memo": "'나의 정원에서', 폴란드 민요.",
+    "youtube": [
+      {
+        "title": "가장 유명한 Rokiczanka 버전. (2013)",
+        "url": "https://www.youtube.com/watch?v=hp4endJMu1E"
+      }
+    ]
+  },
+  {
+    "title": "Guantanamera",
+    "year": "1929",
+    "artist": [""],
+    "songwriters": ["José Martí","Joseíto Fernández"],
+    "language" : ["스페인어"],
+    "countries": ["CU"],
+    "tags": ["북아메리카","과히라손"],
+    "memo": "'관타나모 여인', 애국적 메시지를 담은 쿠바의 국민 노래. 호세 마르티의 시를 가사로 함.",
+    "youtube": [
+      {
+        "title": "Compay Segundo",
+        "url": "https://www.youtube.com/watch?v=oEJtFGdKc5M"
+      },
+      {
+        "title": "대중적으로 성공한, 미국의 The Sandpipers 버전.",
+        "url": "https://www.youtube.com/watch?v=Jm1anurhbeg"
+      }
+    ]
+  },
+  {
+    "title": "Isa Lei",
+    "year": "1910s?",
+    "artist": [""],
+    "songwriters": ["Traditional"],
+    "language" : ["피지어"],
+    "countries": ["FJ"],
+    "tags": ["오세아니아","민요"],
+    "memo": "피지의 작별 노래. 멜로디는 통가 민요에서 유래했다고도 한다.",
+    "youtube": [
+      {
+        "title": "호주의 포크 밴드 The Seekers 버전. (1967)",
+        "url": "https://www.youtube.com/watch?v=sW73Ii9i1NI"
+      },
+      {
+        "title": "Toberua Serenaders?",
+        "url": "https://www.youtube.com/watch?v=qV3NJYx3OIM"
+      }
+    ]
+  },
+  {
+    "title": "DTMF",
+    "year": "2025",
+    "artist": ["Bad Bunny"],
+    "songwriters": ["Benito Martínez","Marco Borrero","Scott Dittrich","Tyler Spry","Benjamin Falik"],
+    "language" : ["스페인어"],
+    "countries": ["PR"],
+    "tags": ["북아메리카","레게톤","힙합","팝"],
+    "memo": "'사진을 더 많이 찍어둘 걸'. 함께해온 소중한 사람들과 더 많이 사진을 찍어 두지 못한 것에 대한 후회.",
+    "youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=4X4uckVyk9o"
       }
     ]
   }

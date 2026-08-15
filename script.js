@@ -16,7 +16,7 @@ const backButton = document.getElementById("back-to-countries");
 const decorativeFlags = [
   "KR", "AF", "DZ", "AR", "AU", "AT", "BA", "BY", "BE", "BJ",
   "BR", "CV", "CA", "CM", "CL", "CN", "CO", "HR", "CU", "CD",
-  "DK", "EG", "EE", "FI", "FR", "GE", "DE", "GH", "GR",
+  "DK", "EG", "EE", "FJ", "FI", "FR", "GE", "DE", "GH", "GR",
   "IS", "IN", "ID", "IR", "IE", "IL", "IT", "JM", "JP",
   "KZ", "KE", "ML", "MX", "MD", "MN", "NL",
   "NZ", "NG", "KP", "NO", "PK", "PS", "PH", "PL", "PT", "PR",
