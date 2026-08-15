@@ -500,6 +500,11 @@ a:hover {
         margin-bottom: var(--space-5);
     }
 
+    .search-bar {
+        margin-left: var(--space-2);
+        margin-right: var(--space-2);
+    }
+    
     .random-song-card {
         padding: var(--space-4);
     }
