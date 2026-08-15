@@ -1913,7 +1913,7 @@
         "url": "https://www.youtube.com/watch?v=uv9CjsQNtf4"
       },
       {
-        "title": "크게 흥행한 Don Omar의 'Danza Kuduro' 버전, MV",
+        "title": "유명한 Don Omar의 'Danza Kuduro' 버전, MV",
         "url": "https://www.youtube.com/watch?v=7zp1TbLFPp8"
       }
     ]
@@ -2396,7 +2396,7 @@
     "artist": ["Gurrumul"],
     "songwriters": ["Geoffrey Gurrumul Yunupingu"],
     "language" : ["영어","욜릉우어"],
-    "countries": ["AR"],
+    "countries": ["AU"],
     "tags": ["락","오세아니아","조약"],
     "memo": "욜릉우 전통 찬가를 바탕으로 한, 호주 원주민이자 맹인 아티스트 Gurrumul의 대표곡. 잔잔한 멜로디가 듣기 좋다.",
     "youtube": [
@@ -3244,22 +3244,6 @@
   },
   {
     "title": "No Volveré",
-    "year": "1991",
-    "artist": ["Antonio Aguilar"],
-    "songwriters": ["Ernesto Cortazar","Manuel Esperon Gonzalez"],
-    "language" : ["스페인어"],
-    "countries": ["MX"],
-    "tags": ["북아메리카","란체라"],
-    "memo": "'돌아오지 않을 거야', 끝난 사랑에 다시 돌아가지 않겠다는 결심. 마리아치 반주가 좋다.",
-    "youtube": [
-      {
-        "title": "음원",
-        "url": "https://www.youtube.com/watch?v=1B7QQeuSUV0"
-      }
-    ]
-  },
-  {
-    "title": "No Volveré",
     "year": "1940s?",
     "artist": [],
     "songwriters": ["Ernesto Cortazar","Manuel Esperon Gonzalez"],
@@ -3302,7 +3286,7 @@
     "language" : ["포르투갈어"],
     "countries": ["PT"],
     "tags": ["유럽","왕당파"],
-    "memo": "'하느님, 조국, 국왕', 포르투갈 왕정의 복귀를 지지하는 음악. 사실 내용은 잘 모르겠고 곡이 그냥 좋다.",
+    "memo": "'하나님, 조국, 국왕', 포르투갈 왕정의 복귀를 지지하는 음악. 사실 내용은 잘 모르겠고 곡이 그냥 좋다.",
     "youtube": [
       {
         "title": "가사 (영어 자막)",
