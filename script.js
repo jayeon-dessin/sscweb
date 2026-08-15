@@ -14,13 +14,13 @@ const countryTitle = document.getElementById("country-title");
 const backButton = document.getElementById("back-to-countries");
 
 const decorativeFlags = [
-  "KR", "DZ", "AR", "AU", "AT", "BA", "BY", "BE", "BJ",
+  "KR", "AF", "DZ", "AR", "AU", "AT", "BA", "BY", "BE", "BJ",
   "BR", "CV", "CA", "CM", "CL", "CN", "CO", "HR", "CU", "CD",
-  "DK", "EG", "FI", "FR", "GE", "DE", "GR",
+  "DK", "EG", "EE", "FI", "FR", "GE", "DE", "GH", "GR",
   "IS", "IN", "ID", "IR", "IE", "IL", "IT", "JM", "JP",
   "KZ", "KE", "ML", "MX", "MD", "MN", "NL",
   "NZ", "NG", "KP", "NO", "PK", "PS", "PH", "PL", "PT", "PR",
-  "RU", "RS", "SO", "ZA", "ES", "SE", "SY", "TW", "TH",
+  "RU", "SA", "RS", "SO", "ZA", "ES", "SE", "SY", "TW", "TH",
   "TT", "TN", "TR", "UA", "GB", "US", "VN"
 ];
 

@@ -44,7 +44,7 @@
     "songwriters": ["Ralph Siegel", "Bernd Meinunger"],
     "language" : ["독일어"],
     "countries": ["DE"],
-    "tags": ["디스코", "유럽", "러시아"],
+    "tags": ["디스코", "유럽", "러시아","밈"],
     "memo": "징기스 칸의 또다른 대표곡. 주제는 모스크바, 때문에 러시아 곡으로 오해받기도 한다.",
     "youtube": [
       {
@@ -60,11 +60,11 @@
     "songwriters": ["Ralph Siegel", "Bernd Meinunger"],
     "language" : ["독일어"],
     "countries": ["DE"],
-    "tags": ["디스코", "유럽", "멕시코"],
+    "tags": ["디스코","유럽","멕시코"],
     "memo": "징기스 칸의 덜 유명한 곡. 서부 개척시대의 멕시코를 주제로 한다.",
     "youtube": [
       {
-        "title": "Die Pyramide 26.01.1981",
+        "title": "Die Pyramide 1981",
         "url": "https://www.youtube.com/watch?v=UiyB1PriUus"
       }
     ]
@@ -92,7 +92,7 @@
     "songwriters": ["Antônio Carlos Jobim", "Vinícius de Moraes", "Norman Gimbel"],
     "language" : ["포르투갈어", "영어"],
     "countries": ["BR","US"],
-    "tags": ["보사노바", "남아메리카"],
+    "tags": ["보사노바","남아메리카"],
     "memo": "보사노바의 전설 조빙의 대표곡.",
     "links": [
       {
@@ -1153,7 +1153,7 @@
     "songwriters": ["momocashew", "Yamato Kasai"],
     "language" : ["영어"],
     "countries": ["JP","CA"],
-    "tags": ["Java"],
+    "tags": ["Java","인디"],
     "memo": "Java 형식의 가사가 특이한 곡.",
     "links": [
       {
@@ -1456,7 +1456,7 @@
     "songwriters": ["Khắc Anh"],
     "language" : ["베트남어"],
     "countries": ["VN"],
-    "tags": ["발라드","아시아"],
+    "tags": ["발라드","아시아","밈"],
     "memo": "'닛몰캐쉬'의 틱톡 영상으로 한국에서 유명해진 베트남 곡. '걱정 없이'",
     "links": [
       {
@@ -1481,7 +1481,7 @@
     "songwriters": ["Pháo"],
     "language" : ["베트남어"],
     "countries": ["VN"],
-    "tags": ["일렉트로닉","아시아"],
+    "tags": ["일렉트로닉","아시아","밈"],
     "memo": "틱톡 '제로투 댄스'로 유명해진 곡. '2분 더'",
     "youtube": [
       {
@@ -1611,7 +1611,7 @@
     "songwriters": ["Traditional"],
     "language" : ["중국어"],
     "countries": ["CN"],
-    "tags": ["윈난성","민요","아시아"],
+    "tags": ["윈난성","민요","아시아","밈"],
     "memo": "리믹스로 유명해진 중국 윈난(운남)성 미두(弥渡)현 민요. 중국 민간전설 '양축설화'에 기반한 가사",
     "youtube": [
       {
@@ -1653,7 +1653,7 @@
     "songwriters": ["Витас"],
     "language" : ["러시아어"],
     "countries": ["RU"],
-    "tags": ["신스팝","유럽"],
+    "tags": ["신스팝","유럽","밈"],
     "memo": "외계에서 온 듯한 복장과 음악. 가사에서는 '이 노래를 들려주러 왔어'를 반복한다.",
     "youtube": [
       {
@@ -1669,7 +1669,7 @@
     "songwriters": ["Cypis"],
     "language" : ["폴란드어"],
     "countries": ["PL"],
-    "tags": ["힙합","유럽"],
+    "tags": ["힙합","유럽","밈"],
     "memo": "마약 중독자의 노래, '하얀 장어(코카인) 어딨어?'. 춤추는 소(Polish Cow) 밈으로 유명하다.",
     "youtube": [
       {
@@ -1889,7 +1889,7 @@
     "songwriters": ["Adèle Castillon","Esteban Capron","Matthieu Reynaud"],
     "language" : ["프랑스어"],
     "countries": ["FR"],
-    "tags": ["일렉트로닉","신스팝","유럽"],
+    "tags": ["일렉트로닉","신스팝","유럽","밈"],
     "memo": "몽환적인 느낌의, VIDEOCLUB의 대표곡. 'There's nothing we can do' 밈으로도 유명하다.",
     "youtube": [
       {
@@ -2066,7 +2066,7 @@
     "songwriters": ["Wolfgang Amadeus Mozart","Franz Xaver Süssmayr"],
     "language" : ["라틴어"],
     "countries": ["AT"],
-    "tags": ["레퀴엠","유럽","클래식"],
+    "tags": ["레퀴엠","유럽","클래식","밈"],
     "memo": "모차르트의 레퀴엠 D단조 K.626 부속가(Sequentia) 중 Lacrimosa. 모차르트는 미완성 상태로 사망했고, 남은 부분은 쥐스마이어가 완성함.",
     "links": [
       {
@@ -2136,7 +2136,7 @@
     "songwriters": ["Muhamed Brkić Hamo","Faik Bahtijarević"],
     "language" : ["세르보크로아트어"],
     "countries": ["BA"],
-    "tags": ["유고전쟁","유럽","터보포크"],
+    "tags": ["유고전쟁","유럽","터보포크","밈"],
     "memo": "정신 나갈 것 같이 강렬한 보스니아산 전시 애국 음악.",
     "links": [
       {
@@ -2161,7 +2161,7 @@
     "songwriters": ["Жељко Грмуша","Ненад Тинтор","Слободан Врга"],
     "language" : ["세르보크로아트어"],
     "countries": ["RS"],
-    "tags": ["프로파간다","유럽","터보포크","유고전쟁","케밥"],
+    "tags": ["프로파간다","유럽","터보포크","유고전쟁","케밥","밈"],
     "memo": "세르비아의 전시 反크로아티아, 反이슬람 애국(?) 음악, 'Remove Kebab' 밈으로 유명하다. 원제목은 '카라지치여, 세르비아인을 보우하소서'. 공격적인 가사에 주의",
     "youtube": [
       {
@@ -2177,7 +2177,7 @@
     "songwriters": ["Marko Perković"],
     "language" : ["세르보크로아트어"],
     "countries": ["HR"],
-    "tags": ["유럽","터보포크","유고전쟁"],
+    "tags": ["유럽","터보포크","유고전쟁","밈"],
     "memo": "크로아티아의 전시 애국 음악. 어깨에 총올리고 노래부르는 MV가 인상적.",
     "youtube": [
       {
@@ -2231,7 +2231,7 @@
         "url": "https://www.youtube.com/watch?v=IT8XvzIfi4U"
       },
       {
-        "title": "Live At The Rainbow (1977)",
+        "title": "Live At The Rainbow 1977",
         "url": "https://www.youtube.com/watch?v=mZ6VezKMoRY"
       }
     ]
@@ -2405,7 +2405,7 @@
         "url": "https://www.youtube.com/watch?v=txrL17BnMcg"
       },
       {
-        "title": "Live at Darwin Festival (2006)",
+        "title": "Live at Darwin Festival 2006",
         "url": "https://www.youtube.com/watch?v=bawDFY8G-o4"
       }
     ]
@@ -2526,7 +2526,7 @@
         "url": "https://www.youtube.com/watch?v=hLoH1eKY9-U"
       },
       {
-        "title": "Basiani Ensemble, 상트페테르부르크 Oktiabrsky Hall (2016)",
+        "title": "Basiani Ensemble, 상트페테르부르크 Oktiabrsky Hall 2016",
         "url": "https://www.youtube.com/watch?v=jENBgIEc5AY"
       }
     ]
@@ -2772,7 +2772,7 @@
       }
     ],"youtube": [
       {
-        "title": "Sopot Festival (1979)",
+        "title": "Sopot Festival 1979",
         "url": "https://www.youtube.com/watch?v=16y1AkoZkmQ"
       }
     ]
@@ -2863,7 +2863,7 @@
         "url": "https://www.youtube.com/watch?v=CvRudfA5mxw"
       },
       {
-        "title": "그래미 세레머니 공연 (2020)",
+        "title": "그래미 세레머니 공연 2020",
         "url": "https://www.youtube.com/watch?v=JbS5H083kXM"
       }
     ]
@@ -2963,7 +2963,7 @@
         "url": "https://www.youtube.com/watch?v=yu3aL4pIB2g"
       },
       {
-        "title": "라이브 (유로비전 2025)",
+        "title": "라이브, 유로비전 2025",
         "url": "https://www.youtube.com/watch?v=Vlu5XXDwHos"
       }
     ]
@@ -2985,6 +2985,26 @@
     ],"youtube": [
       {
         "title": "Coke Studio Pakistan",
+        "url": "https://www.youtube.com/watch?v=9oGSq6iGSjQ"
+      }
+    ]
+  },
+  {
+    "title": "Bibi Sanam Jaanam (بی‌بی صنم جانم)",
+    "year": "?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["다리어"],
+    "countries": ["AF"],
+    "tags": ["아시아","민요"],
+    "memo": "아프가니스탄 다리어 민요. '나의 사랑하는 여인이여, 나의 시스탄의 석류여...'",
+    "youtube": [
+      {
+        "title": "Sandaraa (라이브, 뉴욕 2018)",
+        "url": "https://www.youtube.com/watch?v=hZbSl4q_e_Q"
+      },
+      {
+        "title": "파키스탄 듀오 Zeb & Haniya의 현대적인 버전. (Coke Studio Pakistan)",
         "url": "https://www.youtube.com/watch?v=9oGSq6iGSjQ"
       }
     ]
@@ -3269,7 +3289,7 @@
     "memo": "'함께 걷는 건 즐겁다'는, 소련의 어린이 노래. 동요 치곤 멜로디가 신기하다.",
     "youtube": [
       {
-        "title": "Большой детский хор ЦТ и ВР (1978)",
+        "title": "Большой детский хор ЦТ и ВР, 1978",
         "url": "https://www.youtube.com/watch?v=k8cOCtPqjPc"
       }
     ]
@@ -3303,6 +3323,430 @@
       {
         "title": "MV (영어 자막)",
         "url": "https://www.youtube.com/watch?v=_ykOTpzuZN0"
+      }
+    ]
+  },
+  {
+    "title": "Khooneye Ma (خونه ی ما)",
+    "year": "2014",
+    "artist": ["Marjan Farsad (مرجان فرساد)"],
+    "songwriters": ["Marjan Farsad"],
+    "language" : ["페르시아어"],
+    "countries": ["IR","CA"],
+    "tags": ["아시아","인디","팝"],
+    "memo": "'우리의 집'. 멀리 떨어진 고향을 그리는 노래.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=f0-fPwuPpAk"
+      }
+    ]
+  },
+  {
+    "title": "Қайда?",
+    "year": "2017",
+    "artist": ["Erke Esmahan (Ерке Есмахан)"],
+    "songwriters": ["Erke Esmahan"],
+    "language" : ["카자흐어"],
+    "countries": ["KZ"],
+    "tags": ["아시아","팝"],
+    "memo": "'어디에?'. 운명의 상대를 찾아 헤매는 곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=YPufRvMNw14"
+      }
+    ]
+  },
+  {
+    "title": "Cha Cha Cha",
+    "year": "2023",
+    "artist": ["Käärijä"],
+    "songwriters": ["Jere Pöyhönen","Johannes Naukkarinen","Aleksi Nurmi","Jukka Sorsa"],
+    "language" : ["핀란드어"],
+    "countries": ["FI"],
+    "tags": ["유럽","유로비전","댄스","일렉트로닉"],
+    "memo": "2023 유로비전 참가곡, 술을 마신 후의 해방감. 무대가 인상적(?)이다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=U-b5gDWVnps"
+      },
+      {
+        "title": "라이브, 유로비전 2023",
+        "url": "https://www.youtube.com/watch?v=l6rS8Dv5g-8"
+      }
+    ]
+  },
+  {
+    "title": "Espresso Macchiato",
+    "year": "2025",
+    "artist": ["Tommy Cash"],
+    "songwriters": ["Tomas Tammemets","Johannes Naukkarinen"],
+    "language" : ["이탈리아어","영어"],
+    "countries": ["EE"],
+    "tags": ["유럽","유로비전","댄스","팝"],
+    "memo": "2025 유로비전 참가곡. 이탈리아에 대한 스테레오타입을 이용한 살짝 돌아버린 음악(과 춤).",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=5MS_Fczs_98"
+      },
+      {
+        "title": "라이브, 유로비전 2025",
+        "url": "https://www.youtube.com/watch?v=9b9Z5HSCXOI"
+      }
+    ]
+  },
+  {
+    "title": "Ој ружице румена (Oj Ružice Rumena)",
+    "year": "?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["세르보크로아트어"],
+    "countries": ["RS"],
+    "tags": ["유럽","민요"],
+    "memo": "'오, 붉은 장미여', 세르비아 민요. 멀리 떠난 남편을 그리워하는 노래.",
+    "youtube": [
+      {
+        "title": "가사 (영어 자막)",
+        "url": "https://www.youtube.com/watch?v=a3UocEFUjbU"
+      }
+    ]
+  },
+  {
+    "title": "Чингис Xааний Mагтаал (Chinggis khaanii Magtaal)",
+    "year": "?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["몽골어"],
+    "countries": ["MN"],
+    "tags": ["아시아","민요","몽골"],
+    "memo": "칭기즈 칸에 대한 노래. 몽골 전통 창법을 들어볼 수 있다.",
+    "youtube": [
+      {
+        "title": "Batzorig Vaanchig",
+        "url": "https://www.youtube.com/watch?v=p_5yt5IX38I"
+      },
+      {
+        "title": "Khusugtun, 스튜디오 버전",
+        "url": "https://www.youtube.com/watch?v=J5jI59BQjzs"
+      }
+    ]
+  },
+  {
+    "title": "Австралия (오스트레일리아)",
+    "year": "1997",
+    "artist": ["МАЙАМИ"],
+    "songwriters": ["Салакаев Валерий","Ярославцев Владимир","Дворецкий Дмитрий"],
+    "language" : ["몽골어"],
+    "countries": ["MN"],
+    "tags": ["유럽","팝","오스트레일리아"],
+    "memo": "호주에 가고 싶어하는 노래. 호주를 '다섯 번째 대륙'이라고 부른다.",
+    "youtube": [
+      {
+        "title": "원곡",
+        "url": "https://www.youtube.com/watch?v=LDFghYcxDdo"
+      },
+      {
+        "title": "밈(meme)화된, 배속 버전",
+        "url": "https://www.youtube.com/watch?v=jfvbMHAPHFY"
+      }
+    ]
+  },
+  {
+    "title": "Beat It",
+    "year": "1982",
+    "artist": ["Michael Jackson"],
+    "songwriters": ["Michael Jackson"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","팝","댄스"],
+    "memo": "마이클 잭슨 6집의 대표곡 중 하나. 전주가 좋다",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=oRdxUFDoQe0"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=kOn-HdEg6AQ"
+      }
+    ]
+  },
+  {
+    "title": "L'internationale (인터내셔널가)",
+    "year": "1888",
+    "artist": [],
+    "songwriters": ["Eugène Pottier","Pierre De Geyter"],
+    "language" : ["프랑스어"],
+    "countries": ["FR"],
+    "tags": ["유럽","민중가요","사회주의"],
+    "memo": "사회주의, 국제주의를 상징하는 민중가요. 다양한 언어로 번역되어 불려진다.",
+    "youtube": [
+      {
+        "title": "프랑스어 원곡 (영어 자막)",
+        "url": "https://www.youtube.com/watch?v=IcS_sjbJNDI"
+      },
+      {
+        "title": "러시아어(소련) 버전",
+        "url": "https://www.youtube.com/watch?v=t8EMx7Y16Vo"
+      },
+      {
+        "title": "독일어(동독) 버전",
+        "url": "https://www.youtube.com/watch?v=L9Sy6BP_CNY"
+      }
+    ]
+  },
+  {
+    "title": "Bella Ciao",
+    "year": "1953",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["이탈리아어"],
+    "countries": ["IT"],
+    "tags": ["유럽","민중가요"],
+    "memo": "이탈리아 노동요에서 유래한, 레시스텐차를 위한 헌정곡. 다만 2차대전 당시 불리지는 않은 듯하다.",
+    "youtube": [
+      {
+        "title": "Fonola Band",
+        "url": "https://www.youtube.com/watch?v=4CI3lhyNKfo"
+      },
+      {
+        "title": "Trieste Partisan Choir (영어 자막)",
+        "url": "https://www.youtube.com/watch?v=cUAP-fE81zs"
+      },
+      {
+        "title": "Manu Pilas, 드라마 <종이의 집> 버전.",
+        "url": "https://www.youtube.com/watch?v=4JVaRloezno"
+      }
+    ]
+  },
+  {
+    "title": "Bohemian Rhapsody",
+    "year": "1975",
+    "artist": ["Queen"],
+    "songwriters": ["Freddie Mercury"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["유럽","락"],
+    "memo": "퀸의 대표곡. 곡 스타일이 다양하게 바뀌는 것이 재밌다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ"
+      },
+      {
+        "title": "Queen Rock Montreal Live Concert 1981",
+        "url": "https://www.youtube.com/watch?v=PadKCVBIN94"
+      }
+    ]
+  },
+  {
+    "title": "Прощай навеки, последняя любовь",
+    "year": "1989",
+    "artist": ["Фристайл"],
+    "songwriters": ["Вадима Казаченко"],
+    "language" : ["러시아어"],
+    "countries": ["RU","UA"],
+    "tags": ["유럽","디스코","소련","일렉트로닉"],
+    "memo": "'마지막 사랑이여, 영원히 안녕'. 어째서인지 소련에 작별을 고하는 곡으로 자주 사용된다.",
+    "youtube": [
+      {
+        "title": "영상 + 가사 (영어 자막)",
+        "url": "https://www.youtube.com/watch?v=XcO8KV4gSlA"
+      },
+      {
+        "title": "2008년 공연 영상",
+        "url": "https://www.youtube.com/watch?v=-RPJYbIXadY"
+      }
+    ]
+  },
+  {
+    "title": "Come Out, Ye Black and Tans",
+    "year": "1972",
+    "artist": [],
+    "songwriters": ["Dominic Behan","Piaras Mac Gearailt"],
+    "language" : ["영어"],
+    "countries": ["IE"],
+    "tags": ["유럽","민요"],
+    "memo": "'덤벼라, Black and Tans!'. 영국군을 비꼬면서 덤빌 테면 덤벼 보라는 곡.",
+    "youtube": [
+      {
+        "title": "The Wolfe Tones",
+        "url": "https://www.youtube.com/watch?v=j_nuOyxMrMQ"
+      },
+      {
+        "title": "The Irish Descendants",
+        "url": "https://www.youtube.com/watch?v=FCnGD6xv5ik"
+      },
+      {
+        "title": "Derek Warfield (개인적으로 좋아하는 버전)",
+        "url": "https://www.youtube.com/watch?v=nmxueMo9qMU"
+      }
+    ]
+  },
+  {
+    "title": "Meatball Submarine",
+    "year": "2016",
+    "artist": ["Mili"],
+    "songwriters": ["Mili","momocashew"],
+    "language" : ["영어"],
+    "countries": ["CA","JP"],
+    "tags": ["인디"],
+    "memo": "미트볼 서브마린(샌드위치)를 소재로 한, 연인을 찾아가는 노래라는 듯하다.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=NPoYb4mbiOg"
+      }
+    ]
+  },
+  {
+    "title": "Daisy Bell (Bicycle Built For Two)",
+    "year": "1892",
+    "artist": [],
+    "songwriters": ["Harry Dacre"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["밈","뮤직홀","보컬로이드"],
+    "memo": "'데이지'. 1961년 컴퓨터(IBM 7094)가 음성합성엔진으로 부른 첫 번째 곡으로 더 유명하다.",
+    "youtube": [
+      {
+        "title": "IBM 7094",
+        "url": "https://www.youtube.com/watch?v=uerNtYhgzSw"
+      },
+      {
+        "title": "Nat King Cole 버전",
+        "url": "https://www.youtube.com/watch?v=jsz09z1_AI0"
+      }
+    ]
+  },
+  {
+    "title": "I Am the Very Model of a Modern Major-General (Major General's Song)",
+    "year": "1879",
+    "artist": [],
+    "songwriters": ["Arthur Sullivan","W.S.Gilbert"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["코믹오페라","유럽"],
+    "memo": "코믹 오페라 <The Pirates of Penzance>에서 투스타가 부르는 코믹한 자기소개곡. 부르면 숨찰 것 같다.",
+    "youtube": [
+      {
+        "title": "Stratford Festival 1985",
+        "url": "https://www.youtube.com/watch?v=hlTisI_HSgw"
+      },
+      {
+        "title": "English National Opera",
+        "url": "https://www.youtube.com/watch?v=Rs3dPaz9nAo"
+      }
+    ]
+  },
+  {
+    "title": "La Cucaracha",
+    "year": "19c?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["스페인어"],
+    "countries": ["MX"],
+    "tags": ["민요","민중가요","북아메리카","멕시코혁명"],
+    "memo": "스페인 민요에서 유래하여, 멕시코 혁명기에 인기를 얻으며 다양한 가사가 붙은 곡.",
+    "youtube": [
+      {
+        "title": "The Mariachis",
+        "url": "https://www.youtube.com/watch?v=SHYUkAthMN0"
+      }
+    ]
+  },
+  {
+    "title": "La Vie en rose",
+    "year": "1947",
+    "artist": ["Édith Piaf"],
+    "songwriters": ["Louiguy","Édith Piaf"],
+    "language" : ["프랑스어"],
+    "countries": ["FR"],
+    "tags": ["샹송","유럽"],
+    "memo": "'장밋빛 인생', 에디트 피아프의 대표곡 중 하나.",
+    "youtube": [
+      {
+        "title": "라이브 1954",
+        "url": "https://www.youtube.com/watch?v=rzeLynj1GYM"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=qPU8mENUBXk"
+      }
+    ]
+  },
+  {
+    "title": "Non, je ne regrette rien",
+    "year": "1960",
+    "artist": ["Édith Piaf"],
+    "songwriters": ["Charles Dumont","Michel Vaucaire"],
+    "language" : ["프랑스어"],
+    "countries": ["FR"],
+    "tags": ["샹송","유럽"],
+    "memo": "'아니요, 전혀 후회하지 않아요.'",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=Q3Kvu6Kgp88"
+      }
+    ]
+  },
+  {
+    "title": "Hymne à l'amour",
+    "year": "1950",
+    "artist": ["Édith Piaf"],
+    "songwriters": ["Marguerite Monnot","Édith Piaf"],
+    "language" : ["프랑스어"],
+    "countries": ["FR"],
+    "tags": ["샹송","유럽"],
+    "memo": "'사랑의 찬가'. 에디트 피아프 곡 중 개인적으로 가장 좋아한다.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=sgBldNsK-xw"
+      },
+      {
+        "title": "캐나다 가수 Céline Dion 버전, 2024 올림픽",
+        "url": "https://www.youtube.com/watch?v=9wQ-GYnKPYM"
+      }
+    ]
+  },
+  {
+    "title": "Con te partirò",
+    "year": "1995",
+    "artist": ["Andrea Bocelli"],
+    "songwriters": ["Francesco Sartori","Lucio Quarantotto"],
+    "language" : ["이탈리아어"],
+    "countries": ["IT"],
+    "tags": ["오페라팝","유럽","번안"],
+    "memo": "'그대와 함께 떠나리'. 영어 번안곡인 'Time To Say Goodbye'로 더 유명하다.",
+    "youtube": [
+      {
+        "title": "Live from Piazza Dei Cavalieri 1997",
+        "url": "https://www.youtube.com/watch?v=TdWEhMOrRpQ"
+      },
+      {
+        "title": "영국의 소프라노 Sarah Brightman과 함께 부른, Time To Say Goodbye 버전 (Live From Teatro Del Silenzio 2007)",
+        "url": "https://www.youtube.com/watch?v=4L_yCwFD6Jo"
+      }
+    ]
+  },
+  {
+    "title": "لايف ستايل سامري (Lifestyle Samry)",
+    "year": "2015",
+    "artist": ["Majed Al Esa (ماجد العيسى)"],
+    "songwriters": ["Traditional","Majed Al Esa"],
+    "language" : ["아랍어"],
+    "countries": ["SA"],
+    "tags": ["아시아","민요"],
+    "memo": "사우디 전통 Samri 리듬의 현대적 재해석.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=abkHMHfvXiM"
       }
     ]
   }
