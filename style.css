@@ -495,14 +495,22 @@ a:hover {
         padding: 0 var(--space-4);
     }
 
+    .filter-bar {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        gap: var(--space-3) var(--space-4);
+    }
+
+    .filter-bar select {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
     h1 {
         font-size: 1.9rem;
         margin-bottom: var(--space-5);
-    }
-
-    .search-bar {
-        margin-left: var(--space-2);
-        margin-right: var(--space-2);
     }
     
     .random-song-card {
