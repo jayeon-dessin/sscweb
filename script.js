@@ -828,6 +828,59 @@ function showRandomSong() {
     ?.classList.remove("hidden");
 }
 
+function getYouTubeId(url) {
+  if (!url) return null;
+
+  try {
+    const parsedUrl = new URL(url);
+
+    // 일반 주소
+    // https://www.youtube.com/watch?v=VIDEO_ID
+    if (
+      parsedUrl.hostname === "www.youtube.com" ||
+      parsedUrl.hostname === "youtube.com" ||
+      parsedUrl.hostname === "m.youtube.com"
+    ) {
+      if (parsedUrl.pathname === "/watch") {
+        return parsedUrl.searchParams.get("v");
+      }
+
+      // https://youtube.com/shorts/VIDEO_ID
+      if (parsedUrl.pathname.startsWith("/shorts/")) {
+        return parsedUrl.pathname.split("/")[2];
+      }
+
+      // https://youtube.com/embed/VIDEO_ID
+      if (parsedUrl.pathname.startsWith("/embed/")) {
+        return parsedUrl.pathname.split("/")[2];
+      }
+    }
+
+    // https://youtu.be/VIDEO_ID
+    if (parsedUrl.hostname === "youtu.be") {
+      return parsedUrl.pathname.slice(1).split("/")[0];
+    }
+  } catch {
+    return null;
+  }
+
+  return null;
+}
+
+function getSongThumbnail(song) {
+  if (!song.links) return null;
+
+  for (const link of song.links) {
+    const videoId = getYouTubeId(link.url);
+
+    if (videoId) {
+      return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    }
+  }
+
+  return null;
+}
+
 // -------------------------------------
 // 곡 목록 출력
 // -------------------------------------
@@ -846,14 +899,37 @@ function renderSongs(songArray) {
 
   songArray.forEach(song => {
     const item = document.createElement("div");
-    if (song.links?.length > 0) {
+
+    if (song.links?.length > 0 || song.youtube?.length > 0) {
       item.classList.add("has-links");
     }
+
+    const thumbnail = getSongThumbnail(song);
 
     item.innerHTML = `
       <div class="song-content">
 
-        <!-- 왼쪽: 기본 정보 -->
+        <!-- 썸네일 -->
+        ${
+          thumbnail
+            ? `
+              <div class="song-thumbnail">
+                <img
+                  src="${thumbnail}"
+                  alt="${song.title} 썸네일"
+                  loading="lazy"
+                >
+              </div>
+            `
+            : `
+              <div class="song-thumbnail song-thumbnail-empty">
+                <span>♪</span>
+              </div>
+            `
+        }
+
+
+        <!-- 기본 정보 -->
         <div class="song-info">
           <h2>${song.title}</h2>
 
@@ -883,7 +959,7 @@ function renderSongs(songArray) {
             </div>
 
             ${
-              song.songwriters.length > 0
+              song.songwriters?.length > 0
                 ? `
                   <div class="song-songwriters">
                     ${song.songwriters.join(", ")}
@@ -895,7 +971,7 @@ function renderSongs(songArray) {
           </div>
 
           <div class="song-tags">
-            ${song.tags
+            ${(song.tags ?? [])
               .map(tag =>
                 `<span class="tag">${tag}</span>`
               )
@@ -905,7 +981,7 @@ function renderSongs(songArray) {
         </div>
 
 
-        <!-- 오른쪽: 설명 + 링크 -->
+        <!-- 설명 + 링크 -->
         <div class="song-details">
 
           ${
@@ -938,7 +1014,7 @@ function renderSongs(songArray) {
             }
 
             ${
-              song.youtube.length > 0
+              song.youtube?.length > 0
                 ? song.youtube
                     .map(video => `
                       <a

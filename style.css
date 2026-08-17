@@ -333,15 +333,43 @@ h1 {
 /* ---------- 곡 카드 내부 레이아웃 ---------- */
 
 .song-content {
-    display: grid;
+  display: grid;
 
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(300px, 0.9fr);
+  grid-template-columns:
+    160px
+    minmax(200px, 0.8fr)
+    minmax(250px, 1.2fr);
 
-    gap: var(--space-6);
+  gap: var(--space-5);
+  align-items: start;
+}
 
-    align-items: start;
+.song-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+  border-radius: 8px;
+
+  background: #f1f1f1;
+}
+
+.song-thumbnail img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.song-thumbnail-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+  color: #aaa;
 }
 
 
@@ -572,6 +600,11 @@ a:hover {
     .song-content {
         grid-template-columns: 1fr;
         gap: var(--space-4);
+    }
+
+    .song-thumbnail {
+        width: 100%;
+        max-width: 320px;
     }
 
     .song-details {

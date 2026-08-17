@@ -324,7 +324,7 @@
   {
     "title": "幽霊東京 (유령도쿄)",
     "year": 2019,
-    "artist": ["Ayase", "Hatsune Miku(初音ミク)"],
+    "artist": ["Ayase", "Hatsune Miku (初音ミク)"],
     "songwriters": ["Ayase"],
     "language" : ["일본어"],
     "countries": ["JP"],
@@ -349,7 +349,7 @@
   {
     "title": "テレキャスタービーボーイ (텔레캐스터 비보이)",
     "year": 2019,
-    "artist": ["Three(すりぃ)", "Kagamine Len(鏡音レン)"],
+    "artist": ["Three (すりぃ)", "Kagamine Len (鏡音レン)"],
     "songwriters": ["すりぃ"],
     "language" : ["일본어"],
     "countries": ["JP"],
@@ -369,7 +369,7 @@
   {
     "title": "Группа крови (혈액형)",
     "year": 1988,
-    "artist": ["Kino(Кино)"],
+    "artist": ["Kino (Кино)"],
     "songwriters": ["Виктор Цой"],
     "language" : ["러시아어"],
     "countries": ["RU"],
@@ -390,7 +390,7 @@
   {
     "title": "Кончится лето",
     "year": 1990,
-    "artist": ["Kino(Кино)"],
+    "artist": ["Kino (Кино)"],
     "songwriters": ["Виктор Цой"],
     "language" : ["러시아어"],
     "countries": ["RU"],
@@ -430,7 +430,7 @@
   {
     "title": "當年情 (당년정)",
     "year": 1986,
-    "artist": ["Leslie Chung(張國榮)"],
+    "artist": ["Leslie Chung (張國榮)"],
     "songwriters": ["顧嘉煇", "黃霑"],
     "language" : ["광동어"],
     "countries": ["HK"],
@@ -452,7 +452,7 @@
   {
     "title": "奔向未來日子 (분향미래일자)",
     "year": 1988,
-    "artist": ["Leslie Chung(張國榮)"],
+    "artist": ["Leslie Chung (張國榮)"],
     "songwriters": ["顧嘉煇", "黃霑"],
     "language" : ["광동어"],
     "countries": ["HK"],
@@ -468,7 +468,7 @@
   {
     "title": "男兒當自強 (남아당자강)",
     "year": 1990,
-    "artist": ["George Lam(林子祥)"],
+    "artist": ["George Lam (林子祥)"],
     "songwriters": ["Traditional", "黃霑"],
     "language" : ["광동어"],
     "countries": ["HK"],
@@ -514,7 +514,7 @@
   {
     "title": "Θά 'ρθεις σαν αστραπή (Thá 'rtheis san astrapí)",
     "year": 1998,
-    "artist": ["Stamatis Spanoudakis(Σταμάτης Σπανουδάκης)"],
+    "artist": ["Stamatis Spanoudakis (Σταμάτης Σπανουδάκης)"],
     "songwriters": ["Σταμάτης Σπανουδάκης"],
     "language" : ["그리스어"],
     "countries": ["GR"],
@@ -650,7 +650,7 @@
   {
     "title": "春雷 (춘뢰)",
     "year": 2017,
-    "artist": ["Kenshi Yonezu(米津玄師)"],
+    "artist": ["Kenshi Yonezu (米津玄師)"],
     "songwriters": ["米津玄師"],
     "language" : ["일본어"],
     "countries": ["JP"],
@@ -671,7 +671,7 @@
   {
     "title": "かいじゅうのマーチ (괴수의 행진곡)",
     "year": 2017,
-    "artist": ["Kenshi Yonezu(米津玄師)"],
+    "artist": ["Kenshi Yonezu (米津玄師)"],
     "songwriters": ["米津玄師"],
     "language" : ["일본어"],
     "countries": ["JP"],
@@ -687,7 +687,7 @@
   {
     "title": "ピースサイン (피스 사인)",
     "year": 2017,
-    "artist": ["Kenshi Yonezu(米津玄師)"],
+    "artist": ["Kenshi Yonezu (米津玄師)"],
     "songwriters": ["米津玄師"],
     "language" : ["일본어"],
     "countries": ["JP"],
@@ -703,7 +703,7 @@
   {
     "title": "Lemon",
     "year": 2018,
-    "artist": ["Kenshi Yonezu(米津玄師)"],
+    "artist": ["Kenshi Yonezu (米津玄師)"],
     "songwriters": ["米津玄師"],
     "language" : ["일본어"],
     "countries": ["JP"],
@@ -719,7 +719,7 @@
   {
     "title": "KICK BACK",
     "year": 2022,
-    "artist": ["Kenshi Yonezu(米津玄師)"],
+    "artist": ["Kenshi Yonezu (米津玄師)"],
     "songwriters": ["米津玄師"],
     "language" : ["일본어"],
     "countries": ["JP"],
@@ -757,11 +757,7 @@
     "title": "Waterloo",
     "year": 1974,
     "artist": ["ABBA"],
-    "songwriters": [
-      "Benny Andersson",
-      "Björn Ulvaeus",
-      "Stig Anderson"
-    ],
+    "songwriters": ["Benny Andersson","Björn Ulvaeus","Stig Anderson"],
     "language" : ["스웨덴어","영어"],
     "countries": ["SE"],
     "tags": ["디스코","유로비전","나폴레옹","유럽"],
@@ -786,11 +782,7 @@
     "title": "Dancing Queen",
     "year": 1976,
     "artist": ["ABBA"],
-    "songwriters": [
-      "Benny Andersson",
-      "Björn Ulvaeus",
-      "Stig Anderson"
-    ],
+    "songwriters": ["Benny Andersson","Björn Ulvaeus","Stig Anderson"],
     "language" : ["영어"],
     "countries": ["SE"],
     "tags": ["디스코","유럽"],
@@ -814,10 +806,7 @@
     "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
     "year": 1979,
     "artist": ["ABBA"],
-    "songwriters": [
-      "Benny Andersson",
-      "Björn Ulvaeus"
-    ],
+    "songwriters": ["Benny Andersson","Björn Ulvaeus"],
     "language" : ["영어"],
     "countries": ["SE"],
     "tags": ["디스코","유럽"],
@@ -833,11 +822,7 @@
     "title": "Mamma Mia",
     "year": 1975,
     "artist": ["ABBA"],
-    "songwriters": [
-      "Benny Andersson",
-      "Björn Ulvaeus",
-      "Stig Anderson"
-    ],
+    "songwriters": ["Benny Andersson","Björn Ulvaeus","Stig Anderson"],
     "language" : ["영어"],
     "countries": ["SE"],
     "tags": ["락","유럽"],
@@ -857,10 +842,7 @@
     "title": "I Have a Dream",
     "year": 1979,
     "artist": ["ABBA"],
-    "songwriters": [
-      "Benny Andersson",
-      "Björn Ulvaeus"
-    ],
+    "songwriters": ["Benny Andersson","Björn Ulvaeus"],
     "language" : ["영어"],
     "countries": ["SE"],
     "tags": ["유럽"],
@@ -876,12 +858,7 @@
     "title": "Bailando",
     "year": 2014,
     "artist": ["Enrique Iglesias","Descemer Bueno","Gente De Zona"],
-    "songwriters": [
-      "Enrique Iglesias",
-      "Descemer Bueno",
-      "Alexander Delgado",
-      "Randy Malcom Martínez"
-    ],
+    "songwriters": ["Enrique Iglesias","Descemer Bueno","Alexander Delgado","Randy Malcom Martínez"],
     "language" : ["스페인어"],
     "countries": ["ES","CU"],
     "tags": ["라틴팝","유럽","북아메리카"],
@@ -902,15 +879,7 @@
     "title": "Súbeme la Radio",
     "year": 2017,
     "artist": ["Enrique Iglesias","Descemer Bueno","Zion & Lennox"],
-    "songwriters": [
-      "Enrique Iglesias",
-      "Descemer Bueno",
-      "Carlos Ortiz",
-      "Félix Ortiz",
-      "Gabriel Pizarro",
-      "Juan Rivera",
-      "Luis Ortiz"
-    ],
+    "songwriters": ["Enrique Iglesias","Descemer Bueno","Carlos Ortiz","Félix Ortiz","Gabriel Pizarro","Juan Rivera","Luis Ortiz"],
     "language" : ["스페인어"],
     "countries": ["ES","CU","PR"],
     "tags": ["라틴팝","유럽","북아메리카"],
@@ -1108,7 +1077,7 @@
   {
     "title": "تملي معاك (Tamally Maak)",
     "year": "2000",
-    "artist": ["Amr Diab(عمرو دياب)"],
+    "artist": ["Amr Diab (عمرو دياب)"],
     "songwriters": ["Sherif Tag", "Ahmed Ali Moussa"],
     "language" : ["아랍어"],
     "countries": ["EG"],
@@ -1133,7 +1102,7 @@
   {
     "title": "نور العين (Nour El Ein/Nour El Ain)",
     "year": "1996",
-    "artist": ["Amr Diab(عمرو دياب)"],
+    "artist": ["Amr Diab (عمرو دياب)"],
     "songwriters": ["Nasser El Mezdawy", "Ahmed Sheta"],
     "language" : ["아랍어"],
     "countries": ["EG"],
@@ -1308,7 +1277,7 @@
   {
     "title": "月亮代表我的心 (월량대표아적심)",
     "year": "1973",
-    "artist": ["Chen Fen-Lan(陳芬蘭)"],
+    "artist": ["Chen Fen-Lan (陳芬蘭)"],
     "songwriters": ["孫儀","翁清溪"],
     "language" : ["중국어"],
     "countries": ["TW"],
@@ -1337,7 +1306,7 @@
   {
     "title": "甜蜜蜜 (첨밀밀)",
     "year": "1979",
-    "artist": ["Teresa Teng(鄧麗君)"],
+    "artist": ["Teresa Teng (鄧麗君)"],
     "songwriters": ["Traditional","莊奴(庄奴)"],
     "language" : ["중국어"],
     "countries": ["TW"],
@@ -1939,7 +1908,7 @@
   {
     "title": "残酷な天使のテーゼ (잔혹한 천사의 테제)",
     "year": "1995",
-    "artist": ["Yoko Takahashi(高橋洋子)"],
+    "artist": ["Yoko Takahashi (高橋洋子)"],
     "songwriters": ["及川眠子","佐藤英敏"],
     "language" : ["일본어"],
     "countries": ["JP"],
@@ -1995,7 +1964,7 @@
   {
     "title": "گل یخ (Gole Yakh)",
     "year": "1973",
-    "artist": ["Kourosh Yaghmaei(کورش یغمایی)"],
+    "artist": ["Kourosh Yaghmaei (کورش یغمایی)"],
     "songwriters": ["Kourosh Yaghmaei","Mahdi Akhavan Langeroudi"],
     "language" : ["페르시아어"],
     "countries": ["IR"],
@@ -2375,7 +2344,7 @@
     "artist": ["Yothu Yindi"],
     "songwriters": ["Paul Kelly","Mandawuy Yunupingu","Stuart Kellaway","Cal Williams","Gurrumul Yunupingu","Milkayngu Mununggurr","Banula Marika","Peter Garrett"],
     "language" : ["영어","욜릉우어"],
-    "countries": ["AR"],
+    "countries": ["AU"],
     "tags": ["락","오세아니아","조약"],
     "memo": "호주 원주민과 이주민 사이 '조약'에 대한 곡. 욜릉우어파 두왈어 방언인 Gumatj어 가사가 포함됨.",
     "links": [
@@ -2738,7 +2707,7 @@
   {
     "title": "免我蹉跎苦 (면아차타고)",
     "year": "2024",
-    "artist": ["Isabelle Huang(黄龄)"],
+    "artist": ["Isabelle Huang (黄龄)"],
     "songwriters": ["自游诗","学松"],
     "language" : ["중국어"],
     "countries": ["CN"],
