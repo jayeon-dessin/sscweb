@@ -40,8 +40,8 @@
     <input
       type="text"
       id="tag-search"
-      aria-label="곡, 아티스트, 작곡·작사자, 태그 검색"
-      placeholder="곡, 아티스트, 작곡·작사자, 태그 검색"
+      aria-label="곡, 아티스트, 작곡·작사자, 태그, 설명 검색"
+      placeholder="곡, 아티스트, 작곡·작사자, 태그, 설명 검색"
     />
   </div>
 
@@ -49,7 +49,19 @@
 
   <!-- 국가 선택 -->
   <div id="country-view">
+
+    <div class="country-controls">
+      <label for="country-sort">국가 정렬</label>
+
+      <select id="country-sort">
+        <option value="name">가나다순</option>
+        <option value="count-desc">곡 많은 순</option>
+        <option value="count-asc">곡 적은 순</option>
+      </select>
+    </div>
+
     <div id="country-list"></div>
+
   </div>
 
   <!-- 국가 선택 후: 곡 목록 -->

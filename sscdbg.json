@@ -414,7 +414,7 @@
     "songwriters": ["Nakajin", "Fukase", "Saori"],
     "language" : ["일본어"],
     "countries": ["JP"],
-    "tags": ["JPOP", "아시아","영화음악"],
+    "tags": ["JPOP", "아시아","애니메이션","영화음악"],
     "memo": "SEKAI NO OWARI의, 개인적으로 좋아하는 노래.",
     "youtube": [
       {
@@ -590,7 +590,7 @@
     "songwriters": ["John Lennon", "Paul McCartney"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["유럽"],
+    "tags": ["유럽","어린이"],
     "memo": "잠수함 소리가 들어간, 비틀즈의 동요스러운 노래. 레논-매카트니 작곡. 개인적으로 좋아한다.",
     "youtube": [
       {
@@ -1937,7 +1937,7 @@
     ]
   },
   {
-    "title": "残酷な天使のテーゼ",
+    "title": "残酷な天使のテーゼ (잔혹한 천사의 테제)",
     "year": "1995",
     "artist": ["Yoko Takahashi(高橋洋子)"],
     "songwriters": ["及川眠子","佐藤英敏"],
@@ -3189,7 +3189,7 @@
     "songwriters": ["Stephen Foster"],
     "language" : ["영어"],
     "countries": ["US"],
-    "tags": ["북아메리카","포크","민스트럴"],
+    "tags": ["북아메리카","포크","민스트럴","어린이"],
     "memo": "미국 남부를 상징하는 곡 중 하나. 동요로 사용되기도 한다.",
     "youtube": [
       {
@@ -3269,7 +3269,7 @@
     "songwriters": ["Владимир Шаинский","Михаил Матусовский"],
     "language" : ["러시아어"],
     "countries": ["RU"],
-    "tags": ["유럽","동요","소련"],
+    "tags": ["유럽","어린이","소련"],
     "memo": "'함께 걷는 건 즐겁다'는, 소련의 어린이 노래. 동요 치곤 멜로디가 신기하다.",
     "youtube": [
       {
@@ -3327,7 +3327,7 @@
     ]
   },
   {
-    "title": "Қайда?",
+    "title": "Қайда? (Qaida)",
     "year": "2017",
     "artist": ["Erke Esmahan (Ерке Есмахан)"],
     "songwriters": ["Erke Esmahan"],
@@ -3805,5 +3805,389 @@
         "url": "https://www.youtube.com/watch?v=4X4uckVyk9o"
       }
     ]
-  }
+  },
+  {
+    "title": "Imouha",
+    "year": "2024",
+    "artist": ["Etran de L'Aïr"],
+    "songwriters": ["Moussa Ibra"],
+    "language" : ["타마셰크어"],
+    "countries": ["NE"],
+    "tags": ["아프리카","블루스"],
+    "memo": "뮤비가 인상적(?)인 니제르 투아레그의 데저트 블루스 곡.",
+    "youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=JSHd5mm7qNI"
+      }
+    ]
+  },
+  {
+    "title": "Night Boat to Cairo",
+    "year": "1979",
+    "artist": ["Madness"],
+    "songwriters": ["Graham Mcpherson","Michael Barson"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["유럽","스카","이집트"],
+    "memo": "이집트에 온 영국군을 표현한 병맛 뮤비.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=lLLL1KxpYMA"
+      }
+    ]
+  },
+  {
+    "title": " Khayal (خيال)",
+    "year": "2024",
+    "artist": ["Kazdoura"],
+    "songwriters": ["Kazdoura"],
+    "language" : ["아랍어"],
+    "countries": ["LB","SY","CA"],
+    "tags": ["아시아","사이키델릭락","포크","인디"],
+    "memo": "현대적인 뮤비를 갖춘 전통 아랍 음악 베이스의 곡. 시리아-레바논 출신의 캐나다 밴드",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=xA1TJrx5ZI8"
+      }
+    ]
+  },
+  {
+    "title": "Клетка",
+    "year": "2018",
+    "artist": ["Molchat Doma (Молчат Дома)"],
+    "songwriters": ["Raman Kamahortsau","Yahor Shkutko","Pavel Kazlou"],
+    "language" : ["러시아어"],
+    "countries": ["BY"],
+    "tags": ["유럽","두머","포스트펑크"],
+    "memo": "'층계'. 두드려도 열리지 않는 아파트의 문",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=c69eHlQrKaY"
+      }
+    ]
+  },
+  {
+    "title": "Танцевать",
+    "year": "2018",
+    "artist": ["Molchat Doma (Молчат Дома)"],
+    "songwriters": ["Raman Kamahortsau","Yahor Shkutko"],
+    "language" : ["러시아어"],
+    "countries": ["BY"],
+    "tags": ["유럽","두머","포스트펑크"],
+    "memo": "'춤추기', 그러나 춤출 수 없는...",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=nwBi5YVO004"
+      }
+    ]
+  },
+  {
+    "title": "踊り子 (무희)",
+    "year": "2021",
+    "artist": ["Vaundy"],
+    "songwriters": ["Vaundy"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["아시아","JPOP"],
+    "memo": "두루루루 두루루루 두루루",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=7HgJIAUtICU"
+      }
+    ]
+  },
+  {
+    "title": "おつかれSUMMER",
+    "year": "2003",
+    "artist": ["HALCALI"],
+    "songwriters": ["Tomoyuki Tanaka","Masayuki Kumahara"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["아시아","팝랩","JPOP"],
+    "memo": "카맛테 카맛테 와타시니 카맛테",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=ViFHruS6oO8"
+      },
+      {
+        "title": "THE FIRST TAKE",
+        "url": "https://www.youtube.com/watch?v=_YShE6reM_w"
+      }
+    ]
+  },
+  {
+    "title": "We are number one",
+    "year": "2014",
+    "artist": ["LazyTown"],
+    "songwriters": ["Máni Svavarsson"],
+    "language" : ["영어"],
+    "countries": ["IS"],
+    "tags": ["유럽","어린이","스카","밈"],
+    "memo": "아이슬란드의 어린이 TV LazyTown의 대표곡, 세계적으로 유명한 중독성 있는 멜로디.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=PfYnvDL0Qcw"
+      }
+    ]
+  },
+  {
+    "title": "Pata Pata",
+    "year": "1967",
+    "artist": ["Miriam Makeba"],
+    "songwriters": ["Miriam Makeba","Jerry Ragovoy"],
+    "language" : ["코사어"],
+    "countries": ["ZA"],
+    "tags": ["아프리카","팝","댄스"],
+    "memo": "미리암 마케바의 대표곡 중 하나. 1950년대부터 유행한 남아공 춤 스타일을 의미",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=JBJVVhn7iuo"
+      },
+      {
+        "title": "MV(?)",
+        "url": "https://www.youtube.com/watch?v=B9vgipLTYJQ"
+      }
+    ]
+  },
+  {
+    "title": "Conga",
+    "year": "1985",
+    "artist": ["Gloria Estefan","Miami Sound Machine"],
+    "songwriters": ["Enrique E. Garcia"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","라틴팝"],
+    "memo": "쿠바 출신 가수 Gloria Estefan의 대표곡.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=5SXX-pWzOY8"
+      },
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=54ItEmCnP80"
+      }
+    ]
+  },
+  {
+    "title": "Colombia, Mi Encanto",
+    "year": "2021",
+    "artist": ["Carlos Vives"],
+    "songwriters": ["Lin-Manuel Miranda"],
+    "language" : ["스페인어"],
+    "countries": ["CO"],
+    "tags": ["남아메리카","애니메이션","쿰비아","디즈니","영화음악"],
+    "memo": "콜롬비아를 배경으로 하는 애니메이션 영화 <엔칸토: 마법의 세계> 수록곡. 콜롬비아의 매력을 찬미한다",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=JYaRHGq2ydY"
+      },
+      {
+        "title": "MV (짧은 버전)",
+        "url": "https://www.youtube.com/watch?v=JOL2KS5BgM0"
+      }
+    ]
+  },
+  {
+    "title": "Real in Rio",
+    "year": "2011",
+    "artist": ["The Rio Singers","Jesse Eisenberg","Jamie Foxx","Anne Hathaway","George Lopez","will.i.am"],
+    "songwriters": ["Sérgio Mendes","John Powell","Carlinhos Brown","Mikael Mutti"],
+    "language" : ["영어"],
+    "countries": ["US","BR"],
+    "tags": ["남아메리카","애니메이션","삼바","힙합"],
+    "memo": "애니메이션 영화 <리오> 수록곡. 브라질스러운 매력을 잘 살렸다.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=FRE-yvXslbU"
+      },
+      {
+        "title": "포르투갈어 버전(+가사), 'Favo de Mel'",
+        "url": "https://www.youtube.com/watch?v=nVI1miHZV28"
+      }
+    ]
+  },
+  {
+    "title": "Le Festin",
+    "year": "2007",
+    "artist": ["Camille"],
+    "songwriters": ["Michael Giacchino"],
+    "language" : ["프랑스어"],
+    "countries": ["US","FR"],
+    "tags": ["유럽","애니메이션","샹송"],
+    "memo": "'축제', 애니메이션 영화 <라따뚜이> 수록곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=G3lSONLLx70"
+      }
+    ]
+  },
+  {
+    "title": "Mas Que Nada",
+    "year": "1963",
+    "artist": ["Jorge Ben"],
+    "songwriters": ["Jorge Ben"],
+    "language" : ["포르투갈어"],
+    "countries": ["BR"],
+    "tags": ["남아메리카","삼바","보사노바"],
+    "memo": "브라질 최고의 흥행곡 중 하나. Sérgio Mendes 버전이 크게 인기를 끌었다.",
+    "youtube": [
+      {
+        "title": "Jorge Ben 버전 (원곡)",
+        "url": "https://www.youtube.com/watch?v=mYupcZzLxCM"
+      },
+      {
+        "title": "Sérgio Mendes (Feat. Brasil '66) 버전",
+        "url": "https://www.youtube.com/watch?v=cXelMzaCmiQ"
+      }
+    ]
+  },
+  {
+    "title": "Three Little Birds",
+    "year": "1974",
+    "artist": ["Bob Marley and the Wailers"],
+    "songwriters": ["Bob Marley"],
+    "language" : ["영어"],
+    "countries": ["JM"],
+    "tags": ["레게","북아메리카"],
+    "memo": "아무 것도 걱정하지 말라는 또다른 레게 곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=HNBCVM4KbUM"
+      }
+    ]
+  },
+  {
+    "title": "Despacito",
+    "year": "2017",
+    "artist": ["Luis Fonsi","Daddy Yankee"],
+    "songwriters": ["Luis Fonsi","Erika Ender","Daddy Yankee"],
+    "language" : ["스페인어"],
+    "countries": ["PR"],
+    "tags": ["레게톤","라틴팝","북아메리카"],
+    "memo": "유튜브 최고 조회수의 그 곡. '천천히'",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=kJQP7kiw5Fk"
+      }
+    ]
+  },
+  {
+    "title": "Faded",
+    "year": "2015",
+    "artist": ["Alan Walker","Iselin Solheim"],
+    "songwriters": ["Alan Walker","Jesper Borgen","Anders Frøen","Gunnar Greve"],
+    "language" : ["영어"],
+    "countries": ["NO"],
+    "tags": ["하우스","일렉트로닉","유럽"],
+    "memo": "노르웨이 DJ 앨런 워커의 대표곡 중 하나.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=60ItHLz5WEA"
+      }
+    ]
+  },
+  {
+    "title": "Blinding Lights",
+    "year": "2019",
+    "artist": ["The Weeknd"],
+    "songwriters": ["Abel Tesfaye","Ahmad Balshe","Jason Quenneville","Max Martin","Oscar Holter"],
+    "language" : ["영어"],
+    "countries": ["CA"],
+    "tags": ["신스팝","댄스","북아메리카"],
+    "memo": "The Weeknd의 첫 번째 히트곡. 80년대스러운 신스",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=4NRXx6U8ABQ"
+      }
+    ]
+  },
+  {
+    "title": "APT.",
+    "year": "2024",
+    "artist": ["Rosé (로제)","Bruno Mars"],
+    "songwriters": ["Rosé","Amy Allen","Christopher Brody","BrownRogét Chahayed","Omer Fedi","Phillip Lawrence","Bruno Mars","Theron Thomas","Henry Walter","Michael Chapman","Nicholas Chinn"],
+    "language" : ["영어","한국어"],
+    "countries": ["KR","NZ","US"],
+    "tags": ["팝","팝락"],
+    "memo": "블랙핑크 로제와 브루노 마스의 콜라보. 술게임",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=ekr2nIex040"
+      }
+    ]
+  },
+  {
+    "title": "Big Dawgs",
+    "year": "2024",
+    "artist": ["Hanumankind","Kalmi"],
+    "songwriters": ["Sooraj Cherukat"],
+    "language" : ["영어"],
+    "countries": ["IN"],
+    "tags": ["힙합","아시아"],
+    "memo": "도입부(만) 매우 유명한 인도의 힙합 곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=hOHKltAiKXQ"
+      }
+    ]
+  },
+  {
+    "title": "Caramelldansen",
+    "year": "2001",
+    "artist": ["Caramell"],
+    "songwriters": ["Jorge Vasconcelo","Juha Myllylä"],
+    "language" : ["스웨덴어"],
+    "countries": ["SE"],
+    "tags": ["댄스","유럽","밈"],
+    "memo": "우마우마 댄스로 유명한, 스웨덴의 댄스곡",
+    "youtube": [
+      {
+        "title": "원곡",
+        "url": "https://www.youtube.com/watch?v=H2kdPzjbTkw"
+      },
+      {
+        "title": "약간 빨라진 리믹스, MV(?)",
+        "url": "https://www.youtube.com/watch?v=PDJLvF1dUek"
+      }
+    ]
+  },
+  {
+    "title": "Мой мармеладный",
+    "year": "2004",
+    "artist": ["Katya Lel (Катя Лель)"],
+    "songwriters": ["Максим Фадеев"],
+    "language" : ["러시아어"],
+    "countries": ["RU"],
+    "tags": ["유럽","팝"],
+    "memo": "'나의 마말레이드', 러시아어 과거형 연습하기 좋은 노래",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=Tn-z95ev64s"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=0JMdXFHo5SY"
+      }
+    ]
+  },
 ]

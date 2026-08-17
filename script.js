@@ -1,5 +1,6 @@
 let songs = [];
 let selectedCountry = null;
+let isRestoringState = false;
 
 const artistFilter = document.getElementById("artist-filter");
 const languageFilter = document.getElementById("language-filter");
@@ -11,6 +12,7 @@ const countryView = document.getElementById("country-view");
 const countryList = document.getElementById("country-list");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
+const countrySort =  document.getElementById("country-sort");
 const backButton = document.getElementById("back-to-countries");
 
 const decorativeFlags = [
@@ -18,8 +20,8 @@ const decorativeFlags = [
   "BR", "CV", "CA", "CM", "CL", "CN", "CO", "HR", "CU", "CD",
   "DK", "EG", "EE", "FJ", "FI", "FR", "GE", "DE", "GH", "GR",
   "IS", "IN", "ID", "IR", "IE", "IL", "IT", "JM", "JP",
-  "KZ", "KE", "ML", "MX", "MD", "MN", "NL",
-  "NZ", "NG", "KP", "NO", "PK", "PS", "PH", "PL", "PT", "PR",
+  "KZ", "KE", "LB", "ML", "MX", "MD", "MN", "NL", "NZ", "NE", 
+  "NG", "KP", "NO", "PK", "PS", "PH", "PL", "PT", "PR",
   "RU", "SA", "RS", "SO", "ZA", "ES", "SE", "SY", "TW", "TH",
   "TT", "TN", "TR", "UA", "GB", "US", "VN"
 ];
@@ -35,6 +37,131 @@ const regionNames = new Intl.DisplayNames(
 
 function getCountryName(code) {
   return regionNames.of(code);
+}
+
+// -------------------------------------
+// 현재 상태를 URL에 저장
+// -------------------------------------
+
+function updateURLState(addHistoryEntry = false) {
+
+  // URL을 복원하는 중에는 다시 URL을 수정하지 않음
+  if (isRestoringState) {
+    return;
+  }
+
+  const params = new URLSearchParams();
+
+  // 국가
+  if (selectedCountry) {
+    params.set("country", selectedCountry);
+  }
+
+  // Artist
+  if (artistFilter.value !== "all") {
+    params.set("artist", artistFilter.value);
+  }
+
+  // Language
+  if (languageFilter.value !== "all") {
+    params.set("language", languageFilter.value);
+  }
+
+  // 검색어
+  const keyword = tagSearch.value.trim();
+
+  if (keyword) {
+    params.set("q", keyword);
+  }
+
+  const queryString = params.toString();
+
+  const newURL = queryString
+    ? `${location.pathname}?${queryString}`
+    : location.pathname;
+
+  if (addHistoryEntry) {
+    history.pushState(null, "", newURL);
+  } else {
+    history.replaceState(null, "", newURL);
+  }
+}
+
+// -------------------------------------
+// URL에서 상태 불러오기
+// -------------------------------------
+
+function restoreStateFromURL() {
+
+  isRestoringState = true;
+
+  const params = new URLSearchParams(location.search);
+  const country = params.get("country");
+  const artist = params.get("artist");
+  const language = params.get("language");
+  const keyword = params.get("q");
+
+  // 우선 전체 상태로 초기화
+  selectedCountry = null;
+
+  makeArtistFilter(songs);
+  makeLanguageFilter(songs);
+
+  artistFilter.value = "all";
+  languageFilter.value = "all";
+  tagSearch.value = "";
+
+  // URL의 국가가 실제 데이터에 존재하는지 확인
+  const validCountry =
+    country &&
+    songs.some(song =>
+      song.countries.includes(country)
+    );
+
+  // 국가가 있으면 해당 국가 선택
+  if (validCountry) {
+    selectCountry(country);
+  } else {
+    renderCountries();
+  }
+
+  // Artist 복원
+  if (
+    artist &&
+    [...artistFilter.options].some(
+      option => option.value === artist
+    )
+  ) {
+    artistFilter.value = artist;
+  }
+
+  // Language 복원
+  if (
+    language &&
+    [...languageFilter.options].some(
+      option => option.value === language
+    )
+  ) {
+    languageFilter.value = language;
+  }
+
+  // 검색어 복원
+  if (keyword) {
+    tagSearch.value = keyword;
+  }
+
+  const hasFilter =
+    artistFilter.value !== "all" ||
+    languageFilter.value !== "all" ||
+    tagSearch.value.trim() !== "";
+
+  // 국가나 필터가 있으면 곡 목록 표시
+  if (validCountry || hasFilter) {
+    applyFilters();
+  } else {
+    showRandomSong();
+  }
+  isRestoringState = false;
 }
 
 // -------------------------------------
@@ -81,11 +208,6 @@ fetch(`sscdbg.json?v=${Date.now()}`)
         : []
     }));
 
-    // 곡 순서 랜덤
-    for (let i = songs.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [songs[i], songs[j]] = [songs[j], songs[i]];
-    }
 
     // 첫 화면에서도 전체 Artist / Language 표시
     makeArtistFilter(songs);
@@ -96,6 +218,7 @@ fetch(`sscdbg.json?v=${Date.now()}`)
     renderCountries();
     const firstRandomSong = getRandomSong(songs);
     renderRandomSong(firstRandomSong);
+    restoreStateFromURL();
   })
 
   .catch(error => {
@@ -136,6 +259,8 @@ function renderDecorativeFlags() {
     .join("");
 }
 
+
+
 // -------------------------------------
 // 국가 목록 출력
 // -------------------------------------
@@ -148,26 +273,65 @@ function renderCountries() {
   songsView.style.display = "none";
   countryList.innerHTML = "";
 
+  // 국가별 곡 수 계산
+  const countryCounts = new Map();
+
+  songs.forEach(song => {
+    song.countries.forEach(code => {
+
+      if (!code) return;
+
+      countryCounts.set(
+        code,
+        (countryCounts.get(code) || 0) + 1
+      );
+
+    });
+  });
+
   const countries = [
-    ...new Set(
-      songs.flatMap(song => song.countries)
-    )
-  ]
+    ...countryCounts.keys()
+  ];
 
-    .filter(Boolean)
+  // 정렬
+  const sortMode =
+    countrySort?.value || "name";
 
-    .sort((a, b) =>
+  if (sortMode === "count-desc") {
+
+    countries.sort((a, b) =>
+      countryCounts.get(b) - countryCounts.get(a) ||
       getCountryName(a).localeCompare(
         getCountryName(b),
         "ko"
       )
     );
 
+  } else if (sortMode === "count-asc") {
+
+    countries.sort((a, b) =>
+      countryCounts.get(a) - countryCounts.get(b) ||
+      getCountryName(a).localeCompare(
+        getCountryName(b),
+        "ko"
+      )
+    );
+
+  } else {
+
+    countries.sort((a, b) =>
+      getCountryName(a).localeCompare(
+        getCountryName(b),
+        "ko"
+      )
+    );
+
+  }
+
+
   countries.forEach(code => {
 
-    const count = songs.filter(song =>
-      song.countries.includes(code)
-    ).length;
+    const count = countryCounts.get(code);
 
     const button =
       document.createElement("button");
@@ -223,8 +387,41 @@ function selectCountry(code) {
   tagSearch.value = "";
 
   renderSongs(countrySongs);
+  updateURLState(true);
 }
 
+// 국가 선택시 URL 변경
+
+function updateURL() {
+  const params = new URLSearchParams();
+
+  if (selectedCountry) {
+    params.set("country", selectedCountry);
+  }
+
+  if (artistFilter.value !== "all") {
+    params.set("artist", artistFilter.value);
+  }
+
+  if (languageFilter.value !== "all") {
+    params.set("language", languageFilter.value);
+  }
+
+  const keyword = tagSearch.value.trim();
+
+  if (keyword) {
+    params.set("q", keyword);
+  }
+
+  const query = params.toString();
+
+  const newURL =
+    query
+      ? `${location.pathname}?${query}`
+      : location.pathname;
+
+  history.replaceState(null, "", newURL);
+}
 
 // -------------------------------------
 // Artist 필터 만들기
@@ -311,6 +508,11 @@ tagSearch.addEventListener(
   applyFilters
 );
 
+countrySort.addEventListener(
+  "change",
+  renderCountries
+);
+
 // -------------------------------------
 // 국가 목록으로 돌아가기
 // -------------------------------------
@@ -327,21 +529,39 @@ backButton.addEventListener("click", () => {
   makeArtistFilter(songs);
   makeLanguageFilter(songs);
   renderCountries();
+  updateURL();
 
   const randomSong = getRandomSong(songs);
   renderRandomSong(randomSong);
   showRandomSong();
+  updateURLState(true);
 });
+
+// 뒤로가기 버튼
+
+window.addEventListener(
+  "popstate",
+  restoreStateFromURL
+);
 
 // -------------------------------------
 // 필터 적용
 // -------------------------------------
 
+function normalizeSearchText(value) {
+  return String(value)
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "")
+    .toLocaleLowerCase();
+}
+
 function applyFilters() {
 
   const selectedArtist = artistFilter.value;
   const selectedLanguage = languageFilter.value;
-  const keyword = tagSearch.value.trim().toLowerCase();
+  const keyword = normalizeSearchText(
+    tagSearch.value.trim()
+  );
 
   const hasFilter =
     selectedArtist !== "all" ||
@@ -353,6 +573,7 @@ function applyFilters() {
     countryView.style.display = "block";
     songsView.style.display = "none";
     showRandomSong();
+    updateURLState();
     return;
   }
 
@@ -387,38 +608,17 @@ function applyFilters() {
     // 텍스트 검색
     if (keyword) {
 
-      const titleMatch =
-        String(song.title)
-          .toLowerCase()
-          .includes(keyword);
+      const searchableText = [
+        song.title,
+        ...song.artist,
+        ...song.songwriters,
+        ...song.tags,
+        song.memo,
+      ]
+        .map(normalizeSearchText)
+        .join(" ");
 
-      const artistMatch =
-        song.artist.some(artist =>
-          String(artist)
-            .toLowerCase()
-            .includes(keyword)
-        );
-
-      const songwriterMatch =
-        song.songwriters.some(writer =>
-          String(writer)
-            .toLowerCase()
-            .includes(keyword)
-        );
-
-      const tagMatch =
-        song.tags.some(tag =>
-          String(tag)
-            .toLowerCase()
-            .includes(keyword)
-        );
-
-      if (
-        !titleMatch &&
-        !artistMatch &&
-        !songwriterMatch &&
-        !tagMatch
-      ) {
+      if (!searchableText.includes(keyword)) {
         return false;
       }
     }
@@ -426,28 +626,23 @@ function applyFilters() {
     return true;
   });
 
-
   // 국가 목록 대신 곡 목록 표시
   countryView.style.display = "none";
   songsView.style.display = "block";
 
-
   // 제목
   if (selectedCountry) {
-
     countryTitle.innerHTML = `
       <span class="fi fi-${selectedCountry.toLowerCase()}"></span>
       ${getCountryName(selectedCountry)}
     `;
-
   } else {
-
     countryTitle.textContent =
       `검색 결과 (${filteredSongs.length}곡)`;
-
   }
 
   renderSongs(filteredSongs);
+  updateURLState();
 }
 
 // -------------------------------------
