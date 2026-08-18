@@ -2618,7 +2618,7 @@
     "language" : ["스페인어"],
     "countries": ["CO"],
     "tags": ["남아메리카","라틴팝","락"],
-    "memo": "샤키라의 초창기 곡. '도둑들은 어디에?'",
+    "memo": "샤키라의 초기 곡 중 하나. '도둑들은 어디에?'",
     "links": [
       {
         "title": "블로그 해설",
@@ -2648,22 +2648,22 @@
     ]
   },
   {
-    "title": "Waka Waka (This Time for Africa)",
-    "year": "2010",
-    "artist": ["Shakira","Freshlyground"],
-    "songwriters": ["Golden Sounds","Shakira","John Hill"],
-    "language" : ["영어","팡어","코사어"],
-    "countries": ["CM","ZA","CO"],
-    "tags": ["아프리카","월드컵","팝","남아메리카"],
-    "memo": "카메룬의 군가 Zangaléwa를 샘플링한 메가히트곡. 2010년 남아공 월드컵 주제가",
+    "title": "Zangaléwa",
+    "year": "1986",
+    "artist": ["Golden Sounds"],
+    "songwriters": ["Jean Paul Zé Bella","Victor Dooh Belley","Emile Kojidie","Annie Anzouer"],
+    "language" : ["팡어","에원도어","프랑스어","두알라어","카메룬피진영어"],
+    "countries": ["CM"],
+    "tags": ["아프리카","월드컵","마코사"],
+    "memo": "군가를 바탕으로 만들어진 곡, 여러 언어가 섞여 있다. 2010년 월드컵 주제가 Waka Waka의 원곡.",
     "youtube": [
       {
-        "title": "MV",
-        "url": "https://www.youtube.com/watch?v=pRpeEdMmmQ0"
+        "title": "원곡(Golden Sounds). 유명한 부분은 7분 28초부터",
+        "url": "https://www.youtube.com/watch?v=OdrEisrvY7g"
       },
       {
-        "title": "원곡(Golden Sounds)",
-        "url": "https://www.youtube.com/watch?v=EpHQAw6eCOY"
+        "title": "Shakira, Freshlyground - Waka Waka (This time for Africa)",
+        "url": "https://www.youtube.com/watch?v=pRpeEdMmmQ0"
       }
     ]
   },
@@ -4440,6 +4440,110 @@
       {
         "title": "THE GREAT VOICES OF BULGARIA(?)",
         "url": "https://www.youtube.com/watch?v=Skhaf0yQrQc"
+      }
+    ]
+  },
+  {
+    "title": "Ој Алија Aљо (Oj Alija Aljo)",
+    "year": "1993",
+    "artist": ["Коридор (Koridor)"],
+    "songwriters": ["Ljubisa Tovirac","M. Zoranovic"],
+    "language" : ["세르보크로아트어"],
+    "countries": ["RS"],
+    "tags": ["터보포크","유럽","유고전쟁"],
+    "memo": "보스니아 지도자 알리야 이제트베고비치를 까는 세르비아 노래.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=tFDpo62eqwU"
+      },
+      {
+        "title": "MV(?) (+ 러시아어, 영어 자막)",
+        "url": "https://www.youtube.com/watch?v=6dqs87wcATE"
+      }
+    ]
+  },
+  {
+    "title": "Mundian To Bach Ke (ਮੁੰਡਿਆਂ ਤੋਂ ਬੱਚ ਕੇ)",
+    "year": "2002",
+    "artist": ["Panjabi MC"],
+    "songwriters": ["Panjabi MC","Labh Janjua","Glen Larson","Stu Philips"],
+    "language" : ["펀자브어"],
+    "countries": ["GB","IN"],
+    "tags": ["방그라","아시아","힙합","밈"],
+    "memo": "인도 밈에 빠지지 않는, 펀자브계 영국 래퍼 Panjabi MC의 대표곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=x9WO2ieJMYk"
+      },
+      {
+        "title": "Straight Up Punjab 2019",
+        "url": "https://www.youtube.com/watch?v=H2gmeNH_oZ0"
+      }
+    ]
+  },
+  {
+    "title": "Tunak Tunak Tun (ਤੁਣਕ ਤੁਣਕ ਤੁਨ)",
+    "year": "1998",
+    "artist": ["Daler Mehndi"],
+    "songwriters": ["Daler Mehndi"],
+    "language" : ["펀자브어"],
+    "countries": ["IN"],
+    "tags": ["방그라","아시아","팝"],
+    "memo": "뚜루뚜루뚜 뚜루뚜루뚜... 뮤비도 인상적이다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=eZ2PtEx9-ls"
+      }
+    ]
+  },
+  {
+    "title": "Aal Izz Well",
+    "year": "2009",
+    "artist": ["Sonu Nigam","Swanand Kirkire","Shaan"],
+    "songwriters": ["Swanand Kirkire","Shantanu Moitra"],
+    "language" : ["힌디어","영어"],
+    "countries": ["IN"],
+    "tags": ["영화음악","아시아"],
+    "memo": "영화 <세 얼간이> 삽입곡. 알 이즈 웰",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=7PzwOiW8-n0"
+      }
+    ]
+  },
+  {
+    "title": "Give Me Some Sunshine",
+    "year": "2009",
+    "artist": ["Suraj Jagan","Sharman Joshi"],
+    "songwriters": ["Swanand Kirkire","Shantanu Moitra"],
+    "language" : ["힌디어","영어"],
+    "countries": ["IN"],
+    "tags": ["영화음악","아시아"],
+    "memo": "영화 <세 얼간이> 삽입곡. 내게도 햇볕을 내려 주세요",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=lbCRtrrMvSw"
+      }
+    ]
+  },
+  {
+    "title": "Ciega, Sordomuda",
+    "year": "1998",
+    "artist": ["Shakira"],
+    "songwriters": ["Shakira","Estéfano"],
+    "language" : ["스페인어"],
+    "countries": ["CO"],
+    "tags": ["남아메리카","팝락"],
+    "memo": "'장님, 귀머거리, 벙어리'. 사랑에 빠져 아무것도 하지 못하는 상태를 노래한다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=B3gbisdtJnA"
       }
     ]
   }
