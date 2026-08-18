@@ -4158,5 +4158,289 @@
         "url": "https://www.youtube.com/watch?v=0JMdXFHo5SY"
       }
     ]
+  },
+  {
+    "title": "Harder, Better, Faster, Stronger",
+    "year": "2001",
+    "artist": ["Daft Punk"],
+    "songwriters": ["Thomas Bangalter","Guy Manuel De Homem-Christo"],
+    "language" : ["영어"],
+    "countries": ["FR"],
+    "tags": ["유럽","디스코","하우스"],
+    "memo": "다프트 펑크를 상징하는 곡 중 하나. 반복적인 가사 구조가 특징",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=gAjR4_CbPpQ"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=yydNF8tuVmU"
+      }
+    ]
+  },
+  {
+    "title": "One More Time",
+    "year": "2000",
+    "artist": ["Daft Punk"],
+    "songwriters": ["Thomas Bangalter","Guy Manuel De Homem-Christo"],
+    "language" : ["영어"],
+    "countries": ["FR"],
+    "tags": ["유럽","디스코","하우스"],
+    "memo": "다프트 펑크의 히트곡 중 하나.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://youtu.be/FGBhQbmPwH8?si=Z8ZAJF-NWc32FhGC"
+      }
+    ]
+  },
+  {
+    "title": "Get Lucky",
+    "year": "2013",
+    "artist": ["Daft Punk","Pharrell Williams","Nile Rodgers"],
+    "songwriters": ["Thomas Bangalter","Guy Manuel De Homem-Christo","Pharrell Williams","Nile Rodgers"],
+    "language" : ["영어"],
+    "countries": ["FR"],
+    "tags": ["유럽","디스코","펑크","팝"],
+    "memo": "다프트 펑크 4집 수록곡, 멋진 일렉기타 리프.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://youtu.be/CCHdMIEGaaM?si=3PPYINChW_T4L0ck"
+      },
+      {
+        "title": "음원",
+        "url": "https://youtu.be/5NV6Rdv1a3I?si=5x19hB4dAJiYmxdS"
+      }
+    ]
+  },
+  {
+    "title": "925",
+    "year": "2020",
+    "artist": ["Ardhito Pramono"],
+    "songwriters": ["Ardhito Pramono"],
+    "language" : ["영어"],
+    "countries": ["ID"],
+    "tags": ["아시아","재즈"],
+    "memo": "'9 to 5'. 어딘가의 플리에서 찾은 인도네시아 재즈",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=wCiUm5XJ_LY"
+      }
+    ]
+  },
+  {
+    "title": "LA・LA・LA LOVE SONG",
+    "year": "1996",
+    "artist": ["Toshinobu Kubota (久保田利伸)"],
+    "songwriters": ["久保田利伸"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["아시아","R&B","팝"],
+    "memo": "90년대 일본어 알앤비. 일부 코러스는 나오미 캠벨이 맡았다. 한국에서도 다양한 리메이크(커버)로 인기가 있는 곡이다.",
+    "youtube": [
+      {
+        "title": "MV (Feat. Naomi Campbell)",
+        "url": "https://www.youtube.com/watch?v=YZ6wH-MqZvM"
+      }
+    ]
+  },
+  {
+    "title": "Desert Rose",
+    "year": "2018",
+    "artist": ["Lolo Zouaï"],
+    "songwriters": ["Lolo Zouaï","Stelios Phili"],
+    "language" : ["영어","프랑스어"],
+    "countries": ["US"],
+    "tags": ["유럽","R&B","팝"],
+    "memo": "알제리-프랑스 혼혈 가수 롤로 주아이의 초기 곡 중 하나. 사막과 같은 신비로운 분위기",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=MtdSUIZAARo"
+      }
+    ]
+  },
+  {
+    "title": "Moi",
+    "year": "2019",
+    "artist": ["Lolo Zouaï"],
+    "songwriters": ["Lolo Zouaï","Stelios Phili"],
+    "language" : ["영어","프랑스어"],
+    "countries": ["US"],
+    "tags": ["유럽","R&B","팝"],
+    "memo": "알제리-프랑스 혼혈 가수 롤로 주아이 1집 수록곡, 다문화적 정체성 속에서 소속감을 느끼지 못하는 삶을 표현. ",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=r5sPW726vBA"
+      }
+    ]
+  },
+  {
+    "title": "Moi",
+    "year": "2019",
+    "artist": ["Lolo Zouaï"],
+    "songwriters": ["Lolo Zouaï","Stelios Phili"],
+    "language" : ["영어","프랑스어"],
+    "countries": ["US"],
+    "tags": ["유럽","R&B","팝"],
+    "memo": "알제리-프랑스 혼혈 가수 롤로 주아이 1집 수록곡, 다문화적 정체성 속에서 소속감을 느끼지 못하는 삶을 표현. ",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=r5sPW726vBA"
+      }
+    ]
+  },
+  {
+    "title": "Santa Lucia",
+    "year": "?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["나폴리어"],
+    "countries": ["IT"],
+    "tags": ["가곡","유럽","나폴리"],
+    "memo": "나폴리의 가곡, 이탈리아어 버전이 좀더 유명하다.",
+    "youtube": [
+      {
+        "title": "나폴리어 버전, Roberto Murolo",
+        "url": "https://www.youtube.com/watch?v=q8S-joRy2Uc"
+      },
+      {
+        "title": "이탈리아어 버전, Andrea Bocelli",
+        "url": "https://www.youtube.com/watch?v=V4z9b9zVwPE"
+      }
+    ]
+  },
+  {
+    "title": "Feliz Navidad",
+    "year": "1970",
+    "artist": ["José Feliciano"],
+    "songwriters": ["José Feliciano"],
+    "language" : ["스페인어","영어"],
+    "countries": ["PR"],
+    "tags": ["캐롤","북아메리카"],
+    "memo": "너무나도 유명한 크리스마스 캐롤.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=N8NcQzMQN_U"
+      }
+    ]
+  },
+  {
+    "title": "Lover Boy",
+    "year": "2018",
+    "artist": ["Phum Viphurit (วิภูริศ ศิริทิพย์)"],
+    "songwriters": ["Phum Viphurit"],
+    "language" : ["영어"],
+    "countries": ["TH"],
+    "tags": ["아시아","인디"],
+    "memo": "태국 싱어송라이터 Phum의 히트곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=8HnLRrQ3RS4"
+      }
+    ]
+  },
+  {
+    "title": "Try Everything",
+    "year": "2016",
+    "artist": ["Shakira"],
+    "songwriters": ["Sia Furler","Tor Hermansen","Mikkel Eriksen"],
+    "language" : ["영어"],
+    "countries": ["CO","US"],
+    "tags": ["북아메리카","애니메이션","영화음악","팝"],
+    "memo": "애니메이션 영화 <주토피아> 수록곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=c6rP-YP4c5I"
+      }
+    ]
+  },
+  {
+    "title": "Birds of a Feather",
+    "year": "2024",
+    "artist": ["Billie Eilish"],
+    "songwriters": ["Billie Eilish","Finneas O'Connell"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","신스팝","인디"],
+    "memo": "빌리 아일리시 3집 대표곡, 같은 깃털의 새들이 함께 지내듯.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=V9PVRfjEBTI"
+      },
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=d5gf9dXbPi0"
+      }
+    ]
+  },
+  {
+    "title": "Llorando se fue",
+    "year": "1981",
+    "artist": ["Los Kjarkas"],
+    "songwriters": ["Los Kjarkas","Traditional"],
+    "language" : ["스페인어"],
+    "countries": ["BO"],
+    "tags": ["남아메리카","포크","팝","사야"],
+    "memo": "안데스 지역 멜로디를 차용한 남미 최고의 히트곡 중 하나. '울면서 떠났네'",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=xKau76yc4HE"
+      },
+      {
+        "title": "브라질 그룹 Kaoma의 포르투갈어 버전 (1989)",
+        "url": "https://www.youtube.com/watch?v=iyLdoQGBchQ"
+      }
+    ]
+  },
+  {
+    "title": "Ma non tutta la vita",
+    "year": "2024",
+    "artist": ["Ricchi e Poveri"],
+    "songwriters": ["Edwyn Clark Roberts","Stefano Marletta","Cheope"],
+    "language" : ["이탈리아어"],
+    "countries": ["IT"],
+    "tags": ["댄스","유럽", "산레모"],
+    "memo": "리키 에 포베리의 신곡. 널 기다려 줄게,'하지만 평생 동안은 아니야'. 2024 산레모",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=lhmB3KIXchA"
+      },
+      {
+        "title": "산레모 2024",
+        "url": "https://www.youtube.com/watch?v=NnhipXAux3M"
+      }
+    ]
+  },
+  {
+    "title": "Бре Петрунько (Bre Petrunko)",
+    "year": "?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language" : ["불가리아어"],
+    "countries": ["BG"],
+    "tags": ["민요","유럽"],
+    "memo": "불가리아의 민요 합창곡. 왠지 무섭다.",
+    "youtube": [
+      {
+        "title": "Koutev Bulgarian National Ensemble",
+        "url": "https://www.youtube.com/watch?v=R7tK12joH7w"
+      },
+      {
+        "title": "THE GREAT VOICES OF BULGARIA(?)",
+        "url": "https://www.youtube.com/watch?v=Skhaf0yQrQc"
+      }
+    ]
   }
 ]

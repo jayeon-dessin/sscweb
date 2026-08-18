@@ -16,14 +16,17 @@ const countrySort =  document.getElementById("country-sort");
 const backButton = document.getElementById("back-to-countries");
 
 const decorativeFlags = [
-  "KR", "AF", "DZ", "AR", "AU", "AT", "BA", "BY", "BE", "BJ",
-  "BR", "CV", "CA", "CM", "CL", "CN", "CO", "HR", "CU", "CD",
-  "DK", "EG", "EE", "FJ", "FI", "FR", "GE", "DE", "GH", "GR",
-  "IS", "IN", "ID", "IR", "IE", "IL", "IT", "JM", "JP",
-  "KZ", "KE", "LB", "ML", "MX", "MD", "MN", "NL", "NZ", "NE", 
-  "NG", "KP", "NO", "PK", "PS", "PH", "PL", "PT", "PR",
-  "RU", "SA", "RS", "SO", "ZA", "ES", "SE", "SY", "TW", "TH",
-  "TT", "TN", "TR", "UA", "GB", "US", "VN"
+  "KR", 
+  "AF", "DZ", "AR", "AU", "AT",
+  "BA", "BY", "BE", "BJ", "BO", "BR", "BG",
+  "CV", "CA", "CM", "CL", "CN", "CO", "HR","CU", "CD", 
+  "DK", "EG", "EE", "FJ", "FI", "FR", "GE", "DE", "GH", "GR", 
+  "IS", "IN", "ID", "IR", "IE", "IL", "IT", 
+  "JM", "JP", "KZ", "KE", "LB", "ML", "MX", "MD", "MN",
+  "NL", "NZ", "NE", "NG", "KP", "NO", 
+  "PK", "PS", "PH", "PL", "PT", "PR", "RU", 
+  "SA", "RS", "SO", "ZA", "ES", "SE", "SY", 
+  "TW", "TH", "TT", "TN", "TR", "UA", "GB", "US", "VN"
 ];
 
 // -------------------------------------
