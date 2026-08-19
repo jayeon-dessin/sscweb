@@ -1,15 +1,16 @@
 :root {
-  --bg: #0e0f0d;
-  --panel: #151713;
-  --panel-2: #1a1d18;
-  --text: #f2f0e8;
-  --muted: #9c9f94;
-  --faint: #666b61;
-  --line: #2b2f28;
-  --line-strong: #3c4137;
-  --accent: #d8ff66;
-  --accent-soft: rgba(216, 255, 102, 0.12);
-  --warm: #ff9f76;
+  --bg: #0b0d14;
+  --panel: #121521;
+  --panel-2: #171a29;
+  --text: #f1f2f8;
+  --muted: #9da2b5;
+  --faint: #666d85;
+  --line: #262b3d;
+  --line-strong: #39405a;
+  --accent: #8b7cff;
+  --accent-2: #5da8ff;
+  --accent-soft: rgba(139, 124, 255, 0.13);
+  --warm: #6f8cff;
   --max: 1180px;
   --radius: 22px;
 }
@@ -25,8 +26,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 12% -10%, rgba(216, 255, 102, 0.08), transparent 34rem),
-    radial-gradient(circle at 100% 28%, rgba(255, 159, 118, 0.06), transparent 28rem),
+    radial-gradient(circle at 12% -10%, rgba(93, 168, 255, 0.12), transparent 34rem),
+    radial-gradient(circle at 100% 28%, rgba(139, 124, 255, 0.10), transparent 28rem),
     var(--bg);
   color: var(--text);
   font-family: "Noto Sans KR", system-ui, sans-serif;
@@ -58,7 +59,6 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
-.hero-kicker,
 .section-kicker {
   margin: 0 0 14px;
   color: var(--accent);
@@ -106,22 +106,8 @@ h1 em {
 
 .hero-copy p {
   margin-bottom: 22px;
-  color: #c4c7bc;
+  color: #c5c8d4;
   font-size: 0.98rem;
-}
-
-.recommend-link {
-  display: inline-flex;
-  padding-bottom: 3px;
-  border-bottom: 1px solid var(--line-strong);
-  color: var(--text);
-  text-decoration: none;
-  font-size: 0.88rem;
-}
-
-.recommend-link:hover {
-  border-color: var(--accent);
-  color: var(--accent);
 }
 
 .hero-meta {
@@ -166,7 +152,7 @@ h1 em {
   padding: 12px;
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 18px;
-  background: rgba(20, 22, 18, 0.88);
+  background: rgba(16, 19, 31, 0.9);
   box-shadow: 0 18px 40px rgba(0,0,0,0.24);
   backdrop-filter: blur(16px);
 }
@@ -179,7 +165,7 @@ h1 em {
   padding: 0 14px;
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: #10120f;
+  background: #0f121d;
 }
 
 .search-mark {
@@ -200,7 +186,7 @@ h1 em {
 }
 
 .search-wrap input::placeholder {
-  color: #6f736a;
+  color: #70778d;
 }
 
 .filter-grid {
@@ -216,7 +202,7 @@ h1 em {
   padding: 0 10px 0 12px;
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: #10120f;
+  background: #0f121d;
 }
 
 .filter-field span {
@@ -243,7 +229,7 @@ h1 em {
 }
 
 select option {
-  background: #191b17;
+  background: #171a29;
   color: var(--text);
 }
 
@@ -262,8 +248,9 @@ select option {
   border: 1px solid var(--line-strong);
   border-radius: 28px;
   background:
-    radial-gradient(circle at 82% 18%, rgba(216, 255, 102, 0.16), transparent 28%),
-    linear-gradient(135deg, #171a15, #11130f 68%);
+    radial-gradient(circle at 82% 18%, rgba(139, 124, 255, 0.20), transparent 30%),
+    radial-gradient(circle at 68% 100%, rgba(93, 168, 255, 0.09), transparent 34%),
+    linear-gradient(135deg, #161a29, #0f121c 68%);
 }
 
 .spotlight-card::after {
@@ -271,7 +258,7 @@ select option {
   position: absolute;
   right: 34px;
   bottom: -64px;
-  color: rgba(216,255,102,0.055);
+  color: rgba(139,124,255,0.065);
   font-family: serif;
   font-size: 19rem;
   line-height: 1;
@@ -334,7 +321,7 @@ select option {
   max-width: 760px;
   margin: 0 0 22px;
   font-family: "Gowun Batang", serif;
-  font-size: clamp(2.6rem, 5vw, 5.3rem);
+  font-size: clamp(2.05rem, 4vw, 3.8rem);
   font-weight: 400;
   letter-spacing: -0.045em;
   line-height: 1.02;
@@ -345,12 +332,12 @@ select option {
   flex-wrap: wrap;
   gap: 8px 14px;
   align-items: center;
-  color: #c0c3b8;
+  color: #c1c5d2;
   font-size: 0.9rem;
 }
 
 .song-byline .separator {
-  color: #4e534a;
+  color: #4e556c;
 }
 
 .country-inline {
@@ -360,14 +347,17 @@ select option {
 }
 
 .country-inline .fi {
-  width: 18px;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 18px;
   border-radius: 2px;
+  background-size: cover;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.14);
 }
 
 .songwriters {
   margin: 10px 0 0;
-  color: #74796f;
+  color: #7b8297;
   font-size: 0.78rem;
 }
 
@@ -378,7 +368,7 @@ select option {
 
 .spotlight-notes p {
   margin-bottom: 22px;
-  color: #b3b7ac;
+  color: #b4b8c8;
   font-size: 0.9rem;
 }
 
@@ -395,7 +385,7 @@ select option {
   padding: 7px 11px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
-  color: #c8cbbf;
+  color: #c9cddd;
   text-decoration: none;
   font-size: 0.75rem;
   transition: border-color .18s, color .18s, background .18s;
@@ -419,7 +409,7 @@ select option {
 .songs-heading h2 {
   margin: 0;
   font-family: "Gowun Batang", serif;
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(1.65rem, 3vw, 2.6rem);
   font-weight: 400;
   letter-spacing: -0.045em;
 }
@@ -444,75 +434,57 @@ select option {
 
 .country-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .country-card {
   appearance: none;
-  min-height: 152px;
-  padding: 20px;
-  border: 0;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: transparent;
+  min-height: 112px;
+  padding: 14px 14px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(18, 21, 33, 0.48);
   color: var(--text);
   text-align: left;
-  transition: background .18s ease, color .18s ease;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
 }
 
 .country-card:hover,
 .country-card:focus-visible {
   outline: none;
-  background: var(--accent);
-  color: #11130f;
-}
-
-.country-card-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  align-items: flex-start;
-}
-
-.country-index {
-  color: var(--faint);
-  font-size: 0.72rem;
-  font-weight: 600;
-}
-
-.country-card:hover .country-index,
-.country-card:focus-visible .country-index,
-.country-card:hover .country-count,
-.country-card:focus-visible .country-count {
-  color: rgba(17,19,15,0.62);
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--accent-soft);
 }
 
 .country-flag {
-  width: 32px;
-  height: 23px;
-  border-radius: 3px;
+  display: block;
+  width: 64px;
+  height: 48px;
+  border-radius: 4px;
+  background-size: cover;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.16);
 }
 
 .country-card-bottom {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
-  align-items: end;
-  margin-top: 44px;
+  gap: 10px;
+  align-items: baseline;
+  margin-top: 12px;
 }
 
 .country-name {
   font-family: "Gowun Batang", serif;
-  font-size: 1.45rem;
-  letter-spacing: -0.035em;
+  font-size: 1.08rem;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
 }
 
 .country-count {
   color: var(--muted);
-  font-size: 0.76rem;
+  font-size: 0.7rem;
   white-space: nowrap;
 }
 
@@ -558,23 +530,16 @@ select option {
 
 .song-row {
   display: grid;
-  grid-template-columns: 58px minmax(0, 1.1fr) minmax(290px, 0.9fr);
-  gap: 26px;
-  padding: 28px 0 30px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 28px;
+  padding: 22px 0 24px;
   border-bottom: 1px solid var(--line);
 }
 
-.song-number {
-  padding-top: 5px;
-  color: var(--faint);
-  font-variant-numeric: tabular-nums;
-  font-size: 0.75rem;
-}
-
 .song-title {
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   font-family: "Gowun Batang", serif;
-  font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+  font-size: clamp(1.25rem, 2.1vw, 1.8rem);
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.15;
@@ -585,12 +550,12 @@ select option {
   flex-wrap: wrap;
   gap: 7px 11px;
   align-items: center;
-  color: #acb0a4;
+  color: #adb2c2;
   font-size: 0.82rem;
 }
 
 .song-meta-line .separator {
-  color: #484c44;
+  color: #4c5268;
 }
 
 .song-tags {
@@ -602,10 +567,10 @@ select option {
 
 .tag-button {
   padding: 5px 9px;
-  border: 1px solid #34392f;
+  border: 1px solid #343a50;
   border-radius: 999px;
   background: transparent;
-  color: #8f9488;
+  color: #9198ad;
   font-size: 0.7rem;
 }
 
@@ -623,7 +588,7 @@ select option {
 
 .song-memo {
   margin: 0 0 18px;
-  color: #a9ada2;
+  color: #aab0c1;
   font-size: 0.84rem;
   line-height: 1.72;
 }
@@ -665,15 +630,16 @@ select option {
   }
 
   .country-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .song-row {
-    grid-template-columns: 42px minmax(0, 1fr);
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .song-details {
-    grid-column: 2;
+    grid-column: auto;
     padding: 18px 0 0;
     border-left: 0;
     border-top: 1px solid var(--line);
@@ -737,15 +703,26 @@ select option {
   }
 
   .country-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .country-card {
-    min-height: 132px;
+    min-height: 104px;
+    padding: 12px;
+  }
+
+  .country-flag {
+    width: 56px;
+    height: 42px;
   }
 
   .country-card-bottom {
-    margin-top: 34px;
+    margin-top: 10px;
+  }
+
+  .country-name {
+    font-size: 0.98rem;
   }
 
   .section-head,
@@ -760,14 +737,14 @@ select option {
   }
 
   .song-row {
-    grid-template-columns: 28px minmax(0, 1fr);
-    gap: 12px;
-    padding: 22px 0 24px;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 20px 0 22px;
   }
 
   .song-details {
-    grid-column: 1 / -1;
-    margin-left: 40px;
+    grid-column: auto;
+    margin-left: 0;
   }
 
   .song-meta-line .separator {
@@ -782,4 +759,11 @@ select option {
   .site-footer {
     margin-top: 72px;
   }
+}
+
+
+/* Selected country title: explicit 4:3 flag ratio */
+#country-title .country-inline .fi {
+  width: 32px;
+  height: 24px;
 }

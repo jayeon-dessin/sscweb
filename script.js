@@ -177,12 +177,9 @@ function renderCountries() {
     return getCountryName(a).localeCompare(getCountryName(b), "ko");
   });
 
-  countryList.innerHTML = countries.map((code, index) => `
+  countryList.innerHTML = countries.map(code => `
     <button class="country-card" type="button" data-country="${escapeHTML(code)}">
-      <span class="country-card-top">
-        <span class="country-index">${String(index + 1).padStart(2, "0")}</span>
-        <span class="country-flag fi fi-${code.toLowerCase()}"></span>
-      </span>
+      <span class="country-flag fi fi-${code.toLowerCase()}"></span>
       <span class="country-card-bottom">
         <span class="country-name">${escapeHTML(getCountryName(code))}</span>
         <span class="country-count">${countryCounts.get(code)}곡</span>
@@ -366,10 +363,8 @@ function renderSongs(songArray) {
     return;
   }
 
-  songList.innerHTML = songArray.map((song, index) => `
+  songList.innerHTML = songArray.map(song => `
     <article class="song-row">
-      <div class="song-number">${String(index + 1).padStart(2, "0")}</div>
-
       <div class="song-main">
         <h3 class="song-title">${escapeHTML(song.title)}</h3>
 
