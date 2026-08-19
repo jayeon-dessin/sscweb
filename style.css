@@ -1,679 +1,785 @@
-button,
-input,
-select {
-    font: inherit;
+:root {
+  --bg: #0e0f0d;
+  --panel: #151713;
+  --panel-2: #1a1d18;
+  --text: #f2f0e8;
+  --muted: #9c9f94;
+  --faint: #666b61;
+  --line: #2b2f28;
+  --line-strong: #3c4137;
+  --accent: #d8ff66;
+  --accent-soft: rgba(216, 255, 102, 0.12);
+  --warm: #ff9f76;
+  --max: 1180px;
+  --radius: 22px;
 }
 
-:root {
-    --space-1: 4px;
-    --space-2: 8px;
-    --space-3: 12px;
-    --space-4: 16px;
-    --space-5: 24px;
-    --space-6: 32px;
-    --space-7: 40px;
-    --space-8: 48px;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Noto Sans", "Noto Sans KR", Arial, sans-serif;
-    background: #f5f7fa;
-    color: #222;
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% -10%, rgba(216, 255, 102, 0.08), transparent 34rem),
+    radial-gradient(circle at 100% 28%, rgba(255, 159, 118, 0.06), transparent 28rem),
+    var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans KR", system-ui, sans-serif;
+  line-height: 1.65;
+}
 
-    max-width: 1100px;
-    margin: var(--space-7) auto;
-    padding: 0 var(--space-5);
+button,
+input,
+select {
+  font: inherit;
+}
 
-    line-height: 1.6;
+button,
+select {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  width: min(calc(100% - 40px), var(--max));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 72px 0 34px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-kicker,
+.section-kicker {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: 72px;
+  align-items: end;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
 }
 
 h1 {
-    text-align: center;
-    margin: 0 0 var(--space-5);
-
-    font-family: "Gowun Batang", serif;
-    font-size: 2.5rem;
-    color: #222;
+  margin-bottom: 0;
+  font-family: "Gowun Batang", serif;
+  font-size: clamp(4.4rem, 10vw, 8.8rem);
+  font-weight: 400;
+  letter-spacing: -0.075em;
+  line-height: 0.78;
 }
 
-.site-description {
-    text-align: center;
-    margin: 0;
+h1 span,
+h1 em {
+  display: block;
 }
 
-/* ========================================
-   국가 선택 화면
-======================================== */
-
-#country-list {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fill, minmax(150px, 1fr));
-
-    gap: var(--space-4);
-    margin-bottom: var(--space-7);
+h1 em {
+  margin-left: 0.7em;
+  color: var(--accent);
+  font-style: normal;
 }
 
-/* 마우스 올렸을 때 */
-
-.country-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 9px 24px rgba(0, 0, 0, 0.13);
+.hero-copy {
+  padding-bottom: 6px;
 }
 
-
-/* 클릭할 때 */
-
-.country-card:active {
-    transform: translateY(-1px);
+.hero-copy p {
+  margin-bottom: 22px;
+  color: #c4c7bc;
+  font-size: 0.98rem;
 }
 
+.recommend-link {
+  display: inline-flex;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--line-strong);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.88rem;
+}
 
-.country-card:focus-visible {
-    outline: 3px solid rgba(79, 142, 247, 0.35);
-    outline-offset: 3px;
+.recommend-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  margin-top: 46px;
 }
 
 #archive-stats {
-    text-align: center;
-    color: #888;
-    font-size: 0.9rem;
-    margin: var(--space-2) 0 var(--space-5);
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
 }
 
 #flag-strip {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    gap: var(--space-1);
-
-    max-width: 1000px;
-
-    margin:
-        var(--space-5)
-        auto
-        var(--space-6);
+  display: flex;
+  gap: 7px;
+  overflow: hidden;
+  opacity: 0.72;
+  mask-image: linear-gradient(to right, #000 85%, transparent);
 }
 
 #flag-strip .fi {
-    font-size: 1.2rem;
+  flex: 0 0 auto;
+  width: 18px;
+  height: 13px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.14);
 }
 
-.country-card {
-    appearance: none;
-
-    border: none;
-    background: white;
-
-    border-radius: 16px;
-
-    padding:
-        var(--space-5)
-        var(--space-4);
-
-    min-height: 150px;
-
-    cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: var(--space-2);
-
-    box-shadow:
-        0 3px 12px rgba(0, 0, 0, 0.08);
-
-    transition:
-        transform 0.2s,
-        box-shadow 0.2s;
+.control-deck {
+  position: sticky;
+  top: 14px;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  margin: 24px 0 46px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  background: rgba(20, 22, 18, 0.88);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.24);
+  backdrop-filter: blur(16px);
 }
 
-.country-flag {
-    font-size: 3.5rem;
-    margin-bottom: var(--space-2);
-
-    border: 1px solid #d0d0d0;
-    border-radius: 3px;
-
-    overflow: hidden;
+.search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #10120f;
 }
 
-.country-name {
-    font-size: 1.05rem;
-    font-weight: 700;
-
-    color: #2c3e50;
+.search-mark {
+  color: var(--accent);
+  font-size: 1.3rem;
+  line-height: 1;
 }
 
-.country-count {
-    font-size: 0.85rem;
-    color: #888;
+.search-wrap input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.95rem;
 }
 
-
-/* ========================================
-   국가 선택 후 화면
-======================================== */
-
-#country-title {
-    text-align: center;
-
-    margin:
-        var(--space-4)
-        0
-        var(--space-5);
-
-    font-size: 1.8rem;
-    color: #2c3e50;
+.search-wrap input::placeholder {
+  color: #6f736a;
 }
 
-
-/* 국가 목록으로 돌아가기 버튼 */
-
-#back-to-countries {
-    border: 1px solid #d0d7de;
-    background: white;
-
-    padding:
-        var(--space-2)
-        var(--space-4);
-
-    border-radius: 10px;
-
-    font-size: 14px;
-    cursor: pointer;
-
-    color: #444;
-
-    transition:
-        background 0.2s,
-        border-color 0.2s;
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 10px;
 }
 
-#back-to-countries:hover {
-    background: #f0f3f7;
-    border-color: #bbb;
+.filter-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #10120f;
 }
 
-
-/* ========================================
-   필터
-======================================== */
-
-.filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-
-    align-items: center;
-
-    gap: var(--space-4);
-    margin-bottom: var(--space-4);
-    padding: var(--space-4);
-
-    background: white;
-
-    border-radius: 14px;
-
-    box-shadow:
-        0 2px 12px rgba(0, 0, 0, 0.08);
+.filter-field span {
+  color: var(--faint);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.filter-bar label {
-    font-weight: 600;
-    color: #444;
+.filter-field select,
+.sort-control select {
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
 }
 
-.filter-bar select {
-    padding:
-        var(--space-2)
-        var(--space-3);
-
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    background: white;
-    font-size: 15px;
-    cursor: pointer;
+.filter-field select {
+  width: 100%;
+  padding: 13px 0;
+  font-size: 0.85rem;
 }
 
-.filter-bar select:focus {
-    outline: none;
-    border-color: #4f8ef7;
-    box-shadow:
-        0 0 0 3px rgba(79, 142, 247, 0.15);
+select option {
+  background: #191b17;
+  color: var(--text);
 }
 
-
-/* ========================================
-   검색
-======================================== */
-
-.search-bar {
-    margin-bottom: var(--space-6);
+.spotlight {
+  margin-bottom: 72px;
 }
 
-.search-bar input {
-    width: 100%;
-    box-sizing: border-box;
-
-    padding:
-        var(--space-3)
-        var(--space-4);
-
-    font-size: 16px;
-
-    border: 1px solid #d0d7de;
-    border-radius: 12px;
-
-    background: white;
-
-    transition: all 0.2s;
+.spotlight.hidden {
+  display: none;
 }
 
-.search-bar input:focus {
-    outline: none;
-
-    border-color: #4f8ef7;
-
-    box-shadow:
-        0 0 0 3px rgba(79, 142, 247, 0.15);
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+  padding: 38px;
+  border: 1px solid var(--line-strong);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(216, 255, 102, 0.16), transparent 28%),
+    linear-gradient(135deg, #171a15, #11130f 68%);
 }
 
-.search-bar input::placeholder {
-    color: #888;
+.spotlight-card::after {
+  content: "♪";
+  position: absolute;
+  right: 34px;
+  bottom: -64px;
+  color: rgba(216,255,102,0.055);
+  font-family: serif;
+  font-size: 19rem;
+  line-height: 1;
+  pointer-events: none;
 }
 
-
-/* ========================================
-   곡 카드
-======================================== */
-
-#song-list > div {
-    background: white;
-
-    border-radius: 16px;
-
-    padding: var(--space-5);
-    margin-bottom: var(--space-5);
-
-    box-shadow:
-        0 3px 12px rgba(0, 0, 0, 0.08);
-
-    transition:
-        transform 0.2s,
-        box-shadow 0.2s;
+.spotlight-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
-#song-list > div.has-links {
-    background-color: #eff7ff;
+.spotlight-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
 }
 
-#song-list > div:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-#song-list h2 {
-    margin:
-        0
-        0
-        var(--space-4);
-
-    color: #2c3e50;
-}
-
-/* ---------- 곡 카드 내부 레이아웃 ---------- */
-
-.song-content {
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(300px, 0.9fr);
-
-    gap: var(--space-6);
-
-    align-items: start;
-}
-
-
-/* 왼쪽: 기본 정보 */
-
-.song-info {
-    min-width: 0;
-}
-
-.song-meta {
-    margin-bottom: var(--space-3);
-}
-
-.song-meta-line {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    gap: var(--space-2);
-
-    margin-bottom: var(--space-1);
-
-    color: #444;
-}
-
-.song-songwriters {
-    font-size: 0.82rem;
-    color: #888;
-    line-height: 1.4;
-}
-
-.meta-divider {
-    color: #aaa;
-}
-
-.song-countries {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    gap: var(--space-2);
-}
-
-.song-country {
-    display: inline-flex;
-    align-items: center;
-
-    gap: var(--space-1);
-
-    white-space: nowrap;
-}
-
-.song-country .fi {
-    font-size: 0.95rem;
-
-    border: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-.song-tags {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    gap: var(--space-1);
-}
-
-
-/* 오른쪽: 설명 + 링크 */
-
-.song-details {
-    min-width: 0;
-
-    padding-left: var(--space-5);
-
-    border-left: 1px solid #e5e7eb;
-}
-
-.song-memo {
-    margin: 0 0 var(--space-4);
-
-    color: #444;
-    line-height: 1.65;
-}
-
-.song-links {
-    display: flex;
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: var(--space-1);
-}
-
-strong {
-    color: #333;
-}
-
-
-/* ========================================
-   링크
-======================================== */
-
-a {
-    color: #2563eb;
-
-    text-decoration: none;
-
-    font-weight: 500;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.blog-link {
-    color: #a8725f;
-}
-
-.youtube-link {
-    color: #2563eb;
-}
-
-
-/* ========================================
-   태그
-======================================== */
-
-.tag {
-    display: inline-block;
-
-    background: #eef4ff;
-    color: #2563eb;
-
-    border-radius: 999px;
-
-    padding:
-        var(--space-1)
-        var(--space-2);
-
-    font-size: 0.9rem;
-}
-
-
-/* ========================================
-   모바일
-======================================== */
-@media (max-width: 750px) {
-
-    body {
-        margin-top: var(--space-5);
-        padding: 0 var(--space-4);
-    }
-
-    .filter-bar {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
-        align-items: center;
-        gap: var(--space-3) var(--space-4);
-    }
-
-    .filter-bar select {
-        width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-    }
-
-    h1 {
-        font-size: 1.9rem;
-        margin-bottom: var(--space-5);
-    }
-    
-    .random-song-card {
-        padding: var(--space-4);
-    }
-
-    .random-song-header {
-        align-items: flex-start;
-    }
-
-    #country-list {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: var(--space-3);
-    }
-
-    .country-card {
-        min-height: 125px;
-
-        padding:
-            var(--space-4)
-            var(--space-2);
-    }
-
-    #song-list > div {
-        padding: var(--space-4);
-    }
-
-     .song-meta-line {
-        gap: var(--space-1) var(--space-2);
-        font-size: 0.95rem;
-    }
-
-    .meta-divider {
-        display: none;
-    }
-
-    .song-meta-line > span {
-        display: inline-flex;
-        align-items: center;
-    }
-
-    .song-countries {
-        width: 100%;
-        margin-top: var(--space-1);
-    }
-
-    .song-tags {
-        margin-top: var(--space-2);
-        margin-bottom: var(--space-3);
-    }
-
-    #song-list h2 {
-        font-size: 1.35rem;
-        line-height: 1.35;
-    }
-
-    .song-content {
-        grid-template-columns: 1fr;
-        gap: var(--space-4);
-    }
-
-    .song-details {
-        padding-left: 0;
-        padding-top: var(--space-4);
-
-        border-left: none;
-        border-top: 1px solid #e5e7eb;
-    }
-}
-
-
-/* ---------- 구분선 ---------- */
-
-hr {
-    display: none;
-}
-
-.hidden {
-    display: none !important;
-}
-
-/* ========================================
-랜덤 곡
-======================================== */
-
-#random-song {
-    margin-bottom: var(--space-5);
-}
-
-.random-song-card {
-    padding: var(--space-5);
-
-    border: 1px solid #d8e5da;
-    border-radius: 12px;
-
-    background-color: #f3f8f9;
-}
-
-.random-song-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    gap: var(--space-3);
-
-    margin-bottom: var(--space-3);
-}
-
-.random-song-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-
-    color: #667a80;
-}
-
-.random-song-card h2 {
-    margin: 0 0 var(--space-2);
+.spotlight-label::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 18px var(--accent);
 }
 
 #random-song-button {
-    border: none;
-    background: none;
-
-    padding: 0;
-
-    font: inherit;
-    font-size: 0.9rem;
-
-    cursor: pointer;
-    color: #66806a;
+  padding: 8px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.8rem;
 }
 
 #random-song-button:hover {
-    text-decoration: underline;
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
-.country-controls {
+.spotlight-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 70px;
+  align-items: end;
+}
+
+.spotlight-title {
+  max-width: 760px;
+  margin: 0 0 22px;
+  font-family: "Gowun Batang", serif;
+  font-size: clamp(2.6rem, 5vw, 5.3rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.song-byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  color: #c0c3b8;
+  font-size: 0.9rem;
+}
+
+.song-byline .separator {
+  color: #4e534a;
+}
+
+.country-inline {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.country-inline .fi {
+  width: 18px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.14);
+}
+
+.songwriters {
+  margin: 10px 0 0;
+  color: #74796f;
+  font-size: 0.78rem;
+}
+
+.spotlight-notes {
+  padding-left: 26px;
+  border-left: 1px solid var(--line-strong);
+}
+
+.spotlight-notes p {
+  margin-bottom: 22px;
+  color: #b3b7ac;
+  font-size: 0.9rem;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.link-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: #c8cbbf;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: border-color .18s, color .18s, background .18s;
+}
+
+.link-chip:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 26px;
+}
+
+.section-head h2,
+.songs-heading h2 {
+  margin: 0;
+  font-family: "Gowun Batang", serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.sort-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.sort-control span {
+  color: var(--faint);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.sort-control select {
+  font-size: 0.82rem;
+}
+
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.country-card {
+  appearance: none;
+  min-height: 152px;
+  padding: 20px;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  transition: background .18s ease, color .18s ease;
+}
+
+.country-card:hover,
+.country-card:focus-visible {
+  outline: none;
+  background: var(--accent);
+  color: #11130f;
+}
+
+.country-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.country-index {
+  color: var(--faint);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.country-card:hover .country-index,
+.country-card:focus-visible .country-index,
+.country-card:hover .country-count,
+.country-card:focus-visible .country-count {
+  color: rgba(17,19,15,0.62);
+}
+
+.country-flag {
+  width: 32px;
+  height: 23px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.16);
+}
+
+.country-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: end;
+  margin-top: 44px;
+}
+
+.country-name {
+  font-family: "Gowun Batang", serif;
+  font-size: 1.45rem;
+  letter-spacing: -0.035em;
+}
+
+.country-count {
+  color: var(--muted);
+  font-size: 0.76rem;
+  white-space: nowrap;
+}
+
+#songs-view[hidden] {
+  display: none;
+}
+
+.songs-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.back-button {
+  padding: 0 0 5px;
+  border: 0;
+  border-bottom: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.back-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.result-context {
+  margin: 0;
+  color: var(--faint);
+  font-size: 0.78rem;
+}
+
+.songs-heading {
+  margin-bottom: 24px;
+}
+
+.song-list {
+  border-top: 1px solid var(--line-strong);
+}
+
+.song-row {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1.1fr) minmax(290px, 0.9fr);
+  gap: 26px;
+  padding: 28px 0 30px;
+  border-bottom: 1px solid var(--line);
+}
+
+.song-number {
+  padding-top: 5px;
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.75rem;
+}
+
+.song-title {
+  margin: 0 0 14px;
+  font-family: "Gowun Batang", serif;
+  font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+.song-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 11px;
+  align-items: center;
+  color: #acb0a4;
+  font-size: 0.82rem;
+}
+
+.song-meta-line .separator {
+  color: #484c44;
+}
+
+.song-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 18px;
+}
+
+.tag-button {
+  padding: 5px 9px;
+  border: 1px solid #34392f;
+  border-radius: 999px;
+  background: transparent;
+  color: #8f9488;
+  font-size: 0.7rem;
+}
+
+.tag-button:hover,
+.tag-button:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.song-details {
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+}
+
+.song-memo {
+  margin: 0 0 18px;
+  color: #a9ada2;
+  font-size: 0.84rem;
+  line-height: 1.72;
+}
+
+.song-row:hover .song-title {
+  color: var(--accent);
+}
+
+.no-results {
+  padding: 80px 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 100px;
+  padding: 26px 0 40px;
+  border-top: 1px solid var(--line);
+  color: var(--faint);
+  font-size: 0.72rem;
+}
+
+@media (max-width: 920px) {
+  .hero-grid,
+  .spotlight-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .hero-copy {
+    max-width: 620px;
+  }
+
+  .control-deck {
+    grid-template-columns: 1fr;
+  }
+
+  .country-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .song-row {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .song-details {
+    grid-column: 2;
+    padding: 18px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .spotlight-notes {
+    padding: 22px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--line-strong);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(calc(100% - 28px), var(--max));
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+
+  h1 {
+    font-size: clamp(3.75rem, 21vw, 6rem);
+  }
+
+  h1 em {
+    margin-left: 0.35em;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 34px;
+  }
+
+  #flag-strip {
+    width: 100%;
+  }
+
+  .control-deck {
+    position: relative;
+    top: auto;
+    margin-bottom: 34px;
+  }
+
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight {
+    margin-bottom: 54px;
+  }
+
+  .spotlight-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .spotlight-top {
+    margin-bottom: 34px;
+  }
+
+  .country-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .country-card {
+    min-height: 132px;
+  }
+
+  .country-card-bottom {
+    margin-top: 34px;
+  }
+
+  .section-head,
+  .songs-toolbar,
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .section-head {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  }
 
-    gap: var(--space-2);
+  .song-row {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 12px;
+    padding: 22px 0 24px;
+  }
 
-    margin-bottom: var(--space-4);
-}
+  .song-details {
+    grid-column: 1 / -1;
+    margin-left: 40px;
+  }
 
-.country-controls label {
-    font-size: 0.9rem;
-    color: #666;
-}
+  .song-meta-line .separator {
+    display: none;
+  }
 
-.country-controls select {
-    padding:
-        var(--space-2)
-        var(--space-3);
+  .country-inline {
+    width: 100%;
+    margin-top: 3px;
+  }
 
-    border: 1px solid #ccc;
-    border-radius: 10px;
-
-    background: white;
-
-    font-size: 0.9rem;
-    cursor: pointer;
+  .site-footer {
+    margin-top: 72px;
+  }
 }

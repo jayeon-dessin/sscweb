@@ -1,0 +1,679 @@
+button,
+input,
+select {
+    font: inherit;
+}
+
+:root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 40px;
+    --space-8: 48px;
+}
+
+body {
+    font-family: "Noto Sans", "Noto Sans KR", Arial, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+
+    max-width: 1100px;
+    margin: var(--space-7) auto;
+    padding: 0 var(--space-5);
+
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 var(--space-5);
+
+    font-family: "Gowun Batang", serif;
+    font-size: 2.5rem;
+    color: #222;
+}
+
+.site-description {
+    text-align: center;
+    margin: 0;
+}
+
+/* ========================================
+   국가 선택 화면
+======================================== */
+
+#country-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(150px, 1fr));
+
+    gap: var(--space-4);
+    margin-bottom: var(--space-7);
+}
+
+/* 마우스 올렸을 때 */
+
+.country-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 9px 24px rgba(0, 0, 0, 0.13);
+}
+
+
+/* 클릭할 때 */
+
+.country-card:active {
+    transform: translateY(-1px);
+}
+
+
+.country-card:focus-visible {
+    outline: 3px solid rgba(79, 142, 247, 0.35);
+    outline-offset: 3px;
+}
+
+#archive-stats {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin: var(--space-2) 0 var(--space-5);
+}
+
+#flag-strip {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: var(--space-1);
+
+    max-width: 1000px;
+
+    margin:
+        var(--space-5)
+        auto
+        var(--space-6);
+}
+
+#flag-strip .fi {
+    font-size: 1.2rem;
+}
+
+.country-card {
+    appearance: none;
+
+    border: none;
+    background: white;
+
+    border-radius: 16px;
+
+    padding:
+        var(--space-5)
+        var(--space-4);
+
+    min-height: 150px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--space-2);
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.country-flag {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-2);
+
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+
+    overflow: hidden;
+}
+
+.country-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+
+    color: #2c3e50;
+}
+
+.country-count {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+
+/* ========================================
+   국가 선택 후 화면
+======================================== */
+
+#country-title {
+    text-align: center;
+
+    margin:
+        var(--space-4)
+        0
+        var(--space-5);
+
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+
+/* 국가 목록으로 돌아가기 버튼 */
+
+#back-to-countries {
+    border: 1px solid #d0d7de;
+    background: white;
+
+    padding:
+        var(--space-2)
+        var(--space-4);
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    color: #444;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+}
+
+#back-to-countries:hover {
+    background: #f0f3f7;
+    border-color: #bbb;
+}
+
+
+/* ========================================
+   필터
+======================================== */
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+    padding: var(--space-4);
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.filter-bar label {
+    font-weight: 600;
+    color: #444;
+}
+
+.filter-bar select {
+    padding:
+        var(--space-2)
+        var(--space-3);
+
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-bar select:focus {
+    outline: none;
+    border-color: #4f8ef7;
+    box-shadow:
+        0 0 0 3px rgba(79, 142, 247, 0.15);
+}
+
+
+/* ========================================
+   검색
+======================================== */
+
+.search-bar {
+    margin-bottom: var(--space-6);
+}
+
+.search-bar input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding:
+        var(--space-3)
+        var(--space-4);
+
+    font-size: 16px;
+
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+
+    background: white;
+
+    transition: all 0.2s;
+}
+
+.search-bar input:focus {
+    outline: none;
+
+    border-color: #4f8ef7;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 142, 247, 0.15);
+}
+
+.search-bar input::placeholder {
+    color: #888;
+}
+
+
+/* ========================================
+   곡 카드
+======================================== */
+
+#song-list > div {
+    background: white;
+
+    border-radius: 16px;
+
+    padding: var(--space-5);
+    margin-bottom: var(--space-5);
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+#song-list > div.has-links {
+    background-color: #eff7ff;
+}
+
+#song-list > div:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+#song-list h2 {
+    margin:
+        0
+        0
+        var(--space-4);
+
+    color: #2c3e50;
+}
+
+/* ---------- 곡 카드 내부 레이아웃 ---------- */
+
+.song-content {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(300px, 0.9fr);
+
+    gap: var(--space-6);
+
+    align-items: start;
+}
+
+
+/* 왼쪽: 기본 정보 */
+
+.song-info {
+    min-width: 0;
+}
+
+.song-meta {
+    margin-bottom: var(--space-3);
+}
+
+.song-meta-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: var(--space-2);
+
+    margin-bottom: var(--space-1);
+
+    color: #444;
+}
+
+.song-songwriters {
+    font-size: 0.82rem;
+    color: #888;
+    line-height: 1.4;
+}
+
+.meta-divider {
+    color: #aaa;
+}
+
+.song-countries {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: var(--space-2);
+}
+
+.song-country {
+    display: inline-flex;
+    align-items: center;
+
+    gap: var(--space-1);
+
+    white-space: nowrap;
+}
+
+.song-country .fi {
+    font-size: 0.95rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.song-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: var(--space-1);
+}
+
+
+/* 오른쪽: 설명 + 링크 */
+
+.song-details {
+    min-width: 0;
+
+    padding-left: var(--space-5);
+
+    border-left: 1px solid #e5e7eb;
+}
+
+.song-memo {
+    margin: 0 0 var(--space-4);
+
+    color: #444;
+    line-height: 1.65;
+}
+
+.song-links {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: var(--space-1);
+}
+
+strong {
+    color: #333;
+}
+
+
+/* ========================================
+   링크
+======================================== */
+
+a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.blog-link {
+    color: #a8725f;
+}
+
+.youtube-link {
+    color: #2563eb;
+}
+
+
+/* ========================================
+   태그
+======================================== */
+
+.tag {
+    display: inline-block;
+
+    background: #eef4ff;
+    color: #2563eb;
+
+    border-radius: 999px;
+
+    padding:
+        var(--space-1)
+        var(--space-2);
+
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   모바일
+======================================== */
+@media (max-width: 750px) {
+
+    body {
+        margin-top: var(--space-5);
+        padding: 0 var(--space-4);
+    }
+
+    .filter-bar {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        gap: var(--space-3) var(--space-4);
+    }
+
+    .filter-bar select {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+        margin-bottom: var(--space-5);
+    }
+    
+    .random-song-card {
+        padding: var(--space-4);
+    }
+
+    .random-song-header {
+        align-items: flex-start;
+    }
+
+    #country-list {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: var(--space-3);
+    }
+
+    .country-card {
+        min-height: 125px;
+
+        padding:
+            var(--space-4)
+            var(--space-2);
+    }
+
+    #song-list > div {
+        padding: var(--space-4);
+    }
+
+     .song-meta-line {
+        gap: var(--space-1) var(--space-2);
+        font-size: 0.95rem;
+    }
+
+    .meta-divider {
+        display: none;
+    }
+
+    .song-meta-line > span {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .song-countries {
+        width: 100%;
+        margin-top: var(--space-1);
+    }
+
+    .song-tags {
+        margin-top: var(--space-2);
+        margin-bottom: var(--space-3);
+    }
+
+    #song-list h2 {
+        font-size: 1.35rem;
+        line-height: 1.35;
+    }
+
+    .song-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .song-details {
+        padding-left: 0;
+        padding-top: var(--space-4);
+
+        border-left: none;
+        border-top: 1px solid #e5e7eb;
+    }
+}
+
+
+/* ---------- 구분선 ---------- */
+
+hr {
+    display: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ========================================
+랜덤 곡
+======================================== */
+
+#random-song {
+    margin-bottom: var(--space-5);
+}
+
+.random-song-card {
+    padding: var(--space-5);
+
+    border: 1px solid #d8e5da;
+    border-radius: 12px;
+
+    background-color: #f3f8f9;
+}
+
+.random-song-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: var(--space-3);
+
+    margin-bottom: var(--space-3);
+}
+
+.random-song-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    color: #667a80;
+}
+
+.random-song-card h2 {
+    margin: 0 0 var(--space-2);
+}
+
+#random-song-button {
+    border: none;
+    background: none;
+
+    padding: 0;
+
+    font: inherit;
+    font-size: 0.9rem;
+
+    cursor: pointer;
+    color: #66806a;
+}
+
+#random-song-button:hover {
+    text-decoration: underline;
+}
+
+.country-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: var(--space-2);
+
+    margin-bottom: var(--space-4);
+}
+
+.country-controls label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.country-controls select {
+    padding:
+        var(--space-2)
+        var(--space-3);
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    background: white;
+
+    font-size: 0.9rem;
+    cursor: pointer;
+}

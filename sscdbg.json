@@ -2658,8 +2658,12 @@
     "memo": "군가를 바탕으로 만들어진 곡, 여러 언어가 섞여 있다. 2010년 월드컵 주제가 Waka Waka의 원곡.",
     "youtube": [
       {
-        "title": "원곡(Golden Sounds). 유명한 부분은 7분 28초부터",
+        "title": "원곡 뮤비(Golden Sounds). 유명한 부분은 7분 28초부터",
         "url": "https://www.youtube.com/watch?v=OdrEisrvY7g"
+      },
+      {
+        "title": "원곡 음원",
+        "url": "https://www.youtube.com/watch?v=Zmr4KAPk958"
       },
       {
         "title": "Shakira, Freshlyground - Waka Waka (This time for Africa)",
@@ -4544,6 +4548,78 @@
       {
         "title": "MV",
         "url": "https://www.youtube.com/watch?v=B3gbisdtJnA"
+      }
+    ]
+  },
+  {
+    "title": "The Spectre",
+    "year": "2017",
+    "artist": ["Alan Walker"],
+    "songwriters": ["Alan Walker","Anders Frøen","Jesper Borgen","Lars Kristian Rosness","Marcus Arnbekk","Gunnar Greve","Tommy LaVerdi"],
+    "language" : ["영어"],
+    "countries": ["NO"],
+    "tags": ["유럽","일렉트로닉","하우스"],
+    "memo": "2015년 싱글 Spectre의 리메이크. 헬로헬로",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=wJnBTPUQS5A"
+      }
+    ]
+  },
+  {
+    "title": "No Surprises",
+    "year": "1998",
+    "artist": ["Radiohead"],
+    "songwriters": ["Radiohead"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["유럽","얼터너티브락"],
+    "memo": "알람과 서프라이즈를 없애 주세요. 물이 차오르는 뮤비가 기억에 남는다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://youtu.be/u5CVsCnxyXg?si=0PYXgPyrsju80SNa"
+      }
+    ]
+  },
+  {
+    "title": "WAHALA",
+    "year": "2024",
+    "artist": ["Ckay","Olamide"],
+    "songwriters": ["Moonesawmy Devadasen","Bolatito Obisanya","Chukwuka Ekweani","Olamide Adedeji"],
+    "language" : ["나이지리아피진영어","요루바어","프랑스어"],
+    "countries": ["NG"],
+    "tags": ["아프리카","아프로비츠","힙합"],
+    "memo": "'문제/골칫거리'. 느긋하면서도 중독성 있는 아프로비츠",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://youtu.be/s_VxUDKsTfc?si=mRzShuYwF5AZQwLh"
+      },
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=7bjIixyVEjE"
+      }
+    ]
+  },
+  {
+    "title": "Macarena",
+    "year": "1993",
+    "artist": ["Los del Río"],
+    "songwriters": ["Rafael Ruíz","Antonio Romero"],
+    "language" : ["스페인어","영어"],
+    "countries": ["ES"],
+    "tags": ["유럽","플라멩코","댄스","팝"],
+    "memo": "마카레나가 바람 피는 이야기. 미국의 Bayside Boys가 리믹스한 버전이 세계적으로 인기를 끌었다.",
+    "youtube": [
+      {
+        "title": "원곡",
+        "url": "https://www.youtube.com/watch?v=uZW4vbIstoo"
+      },
+      {
+        "title": "MV (Bayside Boys Remix)",
+        "url": "https://www.youtube.com/watch?v=zWaymcVmJ-A"
       }
     ]
   }
