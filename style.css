@@ -30,7 +30,7 @@ body {
     radial-gradient(circle at 100% 28%, rgba(139, 124, 255, 0.10), transparent 28rem),
     var(--bg);
   color: var(--text);
-  font-family: "Noto Sans KR", system-ui, sans-serif;
+  font-family: "Noto Sans", "Noto Sans KR", Arial, sans-serif;
   line-height: 1.65;
 }
 
@@ -126,11 +126,25 @@ h1 em {
 }
 
 #flag-strip {
-  display: flex;
-  gap: 7px;
+  min-width: 0;
   overflow: hidden;
   opacity: 0.72;
-  mask-image: linear-gradient(to right, #000 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+
+.flag-track {
+  display: flex;
+  width: max-content;
+  animation: flag-marquee 34s linear infinite;
+  will-change: transform;
+}
+
+.flag-set {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 7px;
+  padding-right: 7px;
 }
 
 #flag-strip .fi {
@@ -139,6 +153,25 @@ h1 em {
   height: 13px;
   border-radius: 2px;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.14);
+}
+
+#flag-strip:hover .flag-track {
+  animation-play-state: paused;
+}
+
+@keyframes flag-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flag-track {
+    animation: none;
+  }
 }
 
 .control-deck {
@@ -320,7 +353,6 @@ select option {
 .spotlight-title {
   max-width: 760px;
   margin: 0 0 22px;
-  font-family: "Gowun Batang", serif;
   font-size: clamp(2.05rem, 4vw, 3.8rem);
   font-weight: 400;
   letter-spacing: -0.045em;
@@ -408,7 +440,6 @@ select option {
 .section-head h2,
 .songs-heading h2 {
   margin: 0;
-  font-family: "Gowun Batang", serif;
   font-size: clamp(1.65rem, 3vw, 2.6rem);
   font-weight: 400;
   letter-spacing: -0.045em;
@@ -434,14 +465,14 @@ select option {
 
 .country-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
 }
 
 .country-card {
   appearance: none;
-  min-height: 112px;
-  padding: 14px 14px 12px;
+  min-height: 94px;
+  padding: 10px 11px 9px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: rgba(18, 21, 33, 0.48);
@@ -472,19 +503,18 @@ select option {
   justify-content: space-between;
   gap: 10px;
   align-items: baseline;
-  margin-top: 12px;
+  margin-top: 9px;
 }
 
 .country-name {
-  font-family: "Gowun Batang", serif;
-  font-size: 1.08rem;
+  font-size: 0.94rem;
   letter-spacing: -0.025em;
   line-height: 1.25;
 }
 
 .country-count {
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   white-space: nowrap;
 }
 
@@ -538,8 +568,7 @@ select option {
 
 .song-title {
   margin: 0 0 10px;
-  font-family: "Gowun Batang", serif;
-  font-size: clamp(1.25rem, 2.1vw, 1.8rem);
+  font-size: clamp(1.18rem, 1.8vw, 1.55rem);
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.15;
@@ -630,7 +659,7 @@ select option {
   }
 
   .country-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .song-row {
@@ -708,8 +737,8 @@ select option {
   }
 
   .country-card {
-    min-height: 104px;
-    padding: 12px;
+    min-height: 96px;
+    padding: 10px;
   }
 
   .country-flag {
@@ -718,11 +747,11 @@ select option {
   }
 
   .country-card-bottom {
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
   .country-name {
-    font-size: 0.98rem;
+    font-size: 0.9rem;
   }
 
   .section-head,

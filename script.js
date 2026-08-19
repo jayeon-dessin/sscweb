@@ -103,9 +103,18 @@ function renderArchiveStats() {
 
 function renderDecorativeFlags() {
   const flagStrip = document.getElementById("flag-strip");
-  flagStrip.innerHTML = decorativeFlags
+  if (!flagStrip) return;
+
+  const flags = decorativeFlags
     .map(code => `<span class="fi fi-${code.toLowerCase()}"></span>`)
     .join("");
+
+  flagStrip.innerHTML = `
+    <div class="flag-track">
+      <div class="flag-set">${flags}</div>
+      <div class="flag-set" aria-hidden="true">${flags}</div>
+    </div>
+  `;
 }
 
 function makeArtistFilter(songArray) {
