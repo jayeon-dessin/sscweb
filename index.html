@@ -1,114 +1,76 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="dark">
-  <title>세소찾 더보기</title>
-
+  <title>세소찾더보기</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"
+  />
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="page-shell">
-    <header class="hero">
-      <div class="hero-grid">
-        <div>
-          <h1>
-            <span>세소찾</span>
-            <em>더보기</em>
-          </h1>
-        </div>
+  <h1>세소찾 더보기</h1>
+  <p class="site-description">
+  전 세계의 음악을 찾아볼 수 있는 개인 음악 아카이브입니다. 음악 선정에는 개인 취향이 (많이) 반영됩니다. 곡 추천: leecm0070@gmail.com
+  </p>
+  <p id="archive-stats"></p>
+  <div id="flag-strip"></div>
 
-        <div class="hero-copy">
-          <p>
-            전 세계의 음악을 찾아보는 개인 음악 아카이브입니다.<br>
-            음악 선정에는 개인 취향이 (많이) 반영됩니다.<br>
-            곡 추천 : leecm0070@gmail.com
-          </p>
-        </div>
-      </div>
+  <!-- 항상 보이는 필터 -->
+  <div class="filter-bar">
+    <label for="artist-filter">Artist</label>
+    <select id="artist-filter">
+      <option value="all">전체</option>
+    </select>
 
-      <div class="hero-meta">
-        <p id="archive-stats">아카이브 불러오는 중…</p>
-        <div id="flag-strip" aria-hidden="true"></div>
-      </div>
-    </header>
+    <label for="language-filter">Language</label>
+    <select id="language-filter">
+      <option value="all">전체</option>
+    </select>
+  </div>
 
-    <section class="control-deck" aria-label="아카이브 검색 및 필터">
-      <div class="search-wrap">
-        <span class="search-mark" aria-hidden="true">⌕</span>
-        <input
-          type="search"
-          id="tag-search"
-          aria-label="곡, 아티스트, 작곡·작사자, 태그, 설명 검색"
-          placeholder="곡, 아티스트, 작곡·작사자, 태그, 설명 검색"
-          autocomplete="off"
-        >
-      </div>
+  <!-- 항상 표시되는 검색창 -->
+  <div class="search-bar">
+    <input
+      type="text"
+      id="tag-search"
+      aria-label="곡, 아티스트, 작곡·작사자, 태그, 설명 검색"
+      placeholder="곡, 아티스트, 작곡·작사자, 태그, 설명 검색"
+    />
+  </div>
 
-      <div class="filter-grid">
-        <label class="filter-field" for="artist-filter">
-          <span>Artist</span>
-          <select id="artist-filter">
-            <option value="all">전체</option>
-          </select>
-        </label>
+  <section id="random-song"></section>
 
-        <label class="filter-field" for="language-filter">
-          <span>Language</span>
-          <select id="language-filter">
-            <option value="all">전체</option>
-          </select>
-        </label>
-      </div>
-    </section>
+  <!-- 국가 선택 -->
+  <div id="country-view">
 
-    <section id="random-song" class="spotlight" aria-live="polite"></section>
+    <div class="country-controls">
+      <label for="country-sort">국가 정렬</label>
 
-    <main>
-      <section id="country-view">
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">BROWSE BY PLACE</p>
-            <h2>국가 / 지역</h2>
-          </div>
+      <select id="country-sort">
+        <option value="name">가나다순</option>
+        <option value="count-desc">곡 많은 순</option>
+        <option value="count-asc">곡 적은 순</option>
+      </select>
+    </div>
 
-          <label class="sort-control" for="country-sort">
-            <span>정렬</span>
-            <select id="country-sort">
-              <option value="name">가나다순</option>
-              <option value="count-desc">곡 많은 순</option>
-              <option value="count-asc">곡 적은 순</option>
-            </select>
-          </label>
-        </div>
+    <div id="country-list"></div>
 
-        <div id="country-list" class="country-grid"></div>
-      </section>
+  </div>
 
-      <section id="songs-view" hidden>
-        <div class="songs-toolbar">
-          <button type="button" id="back-to-countries" class="back-button">← 국가 / 지역</button>
-          <p id="result-context" class="result-context"></p>
-        </div>
-
-        <div class="songs-heading">
-          <p class="section-kicker">ARCHIVE INDEX</p>
-          <h2 id="country-title"></h2>
-        </div>
-
-        <div id="song-list" class="song-list" aria-live="polite"></div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>세소찾 더보기</span>
-      <span>music, places, memory.</span>
-    </footer>
+  <!-- 국가 선택 후: 곡 목록 -->
+  <div id="songs-view" style="display: none;">
+    <button id="back-to-countries">
+      ← 국가/지역 선택으로
+    </button>
+    <h2 id="country-title"></h2>
+    <div id="song-list"></div>
   </div>
 
   <script src="script.js"></script>

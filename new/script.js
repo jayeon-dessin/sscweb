@@ -1,555 +1,55 @@
 let songs = [];
 let selectedCountry = null;
+let selectedTag = null;
 let isRestoringState = false;
 
 const artistFilter = document.getElementById("artist-filter");
 const languageFilter = document.getElementById("language-filter");
 const songList = document.getElementById("song-list");
 const tagSearch = document.getElementById("tag-search");
-
-
 const countryView = document.getElementById("country-view");
 const countryList = document.getElementById("country-list");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
-const countrySort =  document.getElementById("country-sort");
+const countrySort = document.getElementById("country-sort");
 const backButton = document.getElementById("back-to-countries");
+const resultContext = document.getElementById("result-context");
+const randomSongSection = document.getElementById("random-song");
 
 const decorativeFlags = [
-  "KR", 
-  "AF", "DZ", "AR", "AU", "AT",
-  "BD", "BY", "BE", "BJ", "BO", "BA", "BR", "BG",
-  "CV", "CM", "CA", "CL", "CN", "CO", "HR", "CU", "CD", 
-  "DK", "EG", "EE", "FJ", "FI", "FR", "GE", "DE", "GH", "GR", 
-  "HK", "IS", "IN", "ID", "IR", "IE", "IL", "IT", 
-  "JM", "JP", "KZ", "KE", "LB", "ML", "MX", "MD", "MN",
-  "NL", "NZ", "NE", "NG", "KP", "NO", 
-  "PK", "PS", "PH", "PL", "PT", "PR", "RU", 
-  "SA", "RS", "SO", "ZA", "ES", "SE", "SY", 
-  "TW", "TH", "TT", "TN", "TR", "UA", "GB", "US", "VN"
+  "KR", "AF", "DZ", "AR", "AU", "AT", "BD", "BY", "BE", "BJ", "BO",
+  "BA", "BR", "BG", "CV", "CM", "CA", "CL", "CN", "CO", "HR", "CU",
+  "CD", "DK", "EG", "EE", "FJ", "FI", "FR", "GE", "DE", "GH", "GR",
+  "HK", "IS", "IN", "ID", "IR", "IE", "IL", "IT", "JM", "JP", "KZ",
+  "KE", "LB", "ML", "MX", "MD", "MN", "NL", "NZ", "NE", "NG", "KP",
+  "NO", "PK", "PS", "PH", "PL", "PT", "PR", "RU", "SA", "RS", "SO",
+  "ZA", "ES", "SE", "SY", "TW", "TH", "TT", "TN", "TR", "UA", "GB",
+  "US", "VN"
 ];
 
-// -------------------------------------
-// 국가 코드 → 한국어 국가명
-// -------------------------------------
-
-const regionNames = new Intl.DisplayNames(
-  ["ko"],
-  { type: "region" }
-);
+const regionNames = new Intl.DisplayNames(["ko"], { type: "region" });
 
 function getCountryName(code) {
-  return regionNames.of(code);
+  return regionNames.of(code) || code;
 }
 
-// -------------------------------------
-// 현재 상태를 URL에 저장
-// -------------------------------------
-
-function updateURLState(addHistoryEntry = false) {
-
-  // URL을 복원하는 중에는 다시 URL을 수정하지 않음
-  if (isRestoringState) {
-    return;
-  }
-
-  const params = new URLSearchParams();
-
-  // 국가
-  if (selectedCountry) {
-    params.set("country", selectedCountry);
-  }
-
-  // Artist
-  if (artistFilter.value !== "all") {
-    params.set("artist", artistFilter.value);
-  }
-
-  // Language
-  if (languageFilter.value !== "all") {
-    params.set("language", languageFilter.value);
-  }
-
-  // 검색어
-  const keyword = tagSearch.value.trim();
-
-  if (keyword) {
-    params.set("q", keyword);
-  }
-
-  const queryString = params.toString();
-
-  const newURL = queryString
-    ? `${location.pathname}?${queryString}`
-    : location.pathname;
-
-  if (addHistoryEntry) {
-    history.pushState(null, "", newURL);
-  } else {
-    history.replaceState(null, "", newURL);
-  }
+function escapeHTML(value = "") {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
 
-// -------------------------------------
-// URL에서 상태 불러오기
-// -------------------------------------
-
-function restoreStateFromURL() {
-
-  isRestoringState = true;
-
-  const params = new URLSearchParams(location.search);
-  const country = params.get("country");
-  const artist = params.get("artist");
-  const language = params.get("language");
-  const keyword = params.get("q");
-
-  // 우선 전체 상태로 초기화
-  selectedCountry = null;
-
-  makeArtistFilter(songs);
-  makeLanguageFilter(songs);
-
-  artistFilter.value = "all";
-  languageFilter.value = "all";
-  tagSearch.value = "";
-
-  // URL의 국가가 실제 데이터에 존재하는지 확인
-  const validCountry =
-    country &&
-    songs.some(song =>
-      song.countries.includes(country)
-    );
-
-  // 국가가 있으면 해당 국가 선택
-  if (validCountry) {
-    selectCountry(country);
-  } else {
-    renderCountries();
+function safeURL(value = "") {
+  try {
+    const url = new URL(value, location.href);
+    return ["http:", "https:", "mailto:"].includes(url.protocol) ? url.href : "#";
+  } catch {
+    return "#";
   }
-
-  // Artist 복원
-  if (
-    artist &&
-    [...artistFilter.options].some(
-      option => option.value === artist
-    )
-  ) {
-    artistFilter.value = artist;
-  }
-
-  // Language 복원
-  if (
-    language &&
-    [...languageFilter.options].some(
-      option => option.value === language
-    )
-  ) {
-    languageFilter.value = language;
-  }
-
-  // 검색어 복원
-  if (keyword) {
-    tagSearch.value = keyword;
-  }
-
-  const hasFilter =
-    artistFilter.value !== "all" ||
-    languageFilter.value !== "all" ||
-    tagSearch.value.trim() !== "";
-
-  // 국가나 필터가 있으면 곡 목록 표시
-  if (validCountry || hasFilter) {
-    applyFilters();
-  } else {
-    showRandomSong();
-  }
-  isRestoringState = false;
 }
-
-// -------------------------------------
-// JSON 불러오기
-// -------------------------------------
-
-fetch(`sscdbg.json?v=${Date.now()}`)
-  .then(response => response.json())
-  .then(data => {
-
-    songs = data.map(song => ({
-      ...song,
-
-      artist: Array.isArray(song.artist)
-        ? song.artist
-        : [song.artist],
-
-      songwriters: Array.isArray(song.songwriters)
-        ? song.songwriters
-        : song.songwriters
-          ? [song.songwriters]
-          : [],
-
-      language: Array.isArray(song.language)
-        ? song.language
-        : [song.language],
-
-      countries: Array.isArray(song.countries)
-        ? song.countries
-        : song.countries
-          ? [song.countries]
-          : [],
-
-      tags: Array.isArray(song.tags)
-        ? song.tags
-        : [],
-
-      links: Array.isArray(song.links)
-        ? song.links
-        : [],
-
-      youtube: Array.isArray(song.youtube)
-        ? song.youtube
-        : []
-    }));
-
-
-    // 첫 화면에서도 전체 Artist / Language 표시
-    makeArtistFilter(songs);
-    makeLanguageFilter(songs);
-
-    renderArchiveStats();
-    renderDecorativeFlags();
-    renderCountries();
-    const firstRandomSong = getRandomSong(songs);
-    renderRandomSong(firstRandomSong);
-    restoreStateFromURL();
-  })
-
-  .catch(error => {
-    console.error(
-      "JSON을 불러오는 중 오류:",
-      error
-    );
-  });
-
-function renderArchiveStats() {
-  const stats = document.getElementById("archive-stats");
-
-  const countries = [
-    ...new Set(
-      songs.flatMap(song => song.countries)
-    )
-  ].filter(Boolean);
-
-  stats.textContent =
-    `총 ${songs.length}곡 · ${countries.length}개 국가·지역`;
-}
-
-function renderDecorativeFlags() {
-
-  const flagStrip =
-    document.getElementById("flag-strip");
-
-
-  if (!flagStrip) {
-    return;
-  }
-
-
-  flagStrip.innerHTML = decorativeFlags
-    .map(code =>
-      `<span class="fi fi-${code.toLowerCase()}"></span>`
-    )
-    .join("");
-}
-
-
-
-// -------------------------------------
-// 국가 목록 출력
-// -------------------------------------
-
-function renderCountries() {
-
-  selectedCountry = null;
-
-  countryView.style.display = "block";
-  songsView.style.display = "none";
-  countryList.innerHTML = "";
-
-  // 국가별 곡 수 계산
-  const countryCounts = new Map();
-
-  songs.forEach(song => {
-    song.countries.forEach(code => {
-
-      if (!code) return;
-
-      countryCounts.set(
-        code,
-        (countryCounts.get(code) || 0) + 1
-      );
-
-    });
-  });
-
-  const countries = [
-    ...countryCounts.keys()
-  ];
-
-  // 정렬
-  const sortMode =
-    countrySort?.value || "name";
-
-  if (sortMode === "count-desc") {
-
-    countries.sort((a, b) =>
-      countryCounts.get(b) - countryCounts.get(a) ||
-      getCountryName(a).localeCompare(
-        getCountryName(b),
-        "ko"
-      )
-    );
-
-  } else if (sortMode === "count-asc") {
-
-    countries.sort((a, b) =>
-      countryCounts.get(a) - countryCounts.get(b) ||
-      getCountryName(a).localeCompare(
-        getCountryName(b),
-        "ko"
-      )
-    );
-
-  } else {
-
-    countries.sort((a, b) =>
-      getCountryName(a).localeCompare(
-        getCountryName(b),
-        "ko"
-      )
-    );
-
-  }
-
-
-  countries.forEach(code => {
-
-    const count = countryCounts.get(code);
-
-    const button =
-      document.createElement("button");
-
-    button.className = "country-card";
-
-    button.innerHTML = `
-      <span class="country-flag fi fi-${code.toLowerCase()}"></span>
-
-      <span class="country-name">
-        ${getCountryName(code)}
-      </span>
-
-      <span class="country-count">
-        ${count}곡
-      </span>
-    `;
-
-    button.addEventListener("click", () => {
-      selectCountry(code);
-    });
-
-    countryList.appendChild(button);
-  });
-}
-
-// -------------------------------------
-// 국가 선택
-// -------------------------------------
-
-function selectCountry(code) {
-
-  selectedCountry = code;
-
-  countryView.style.display = "none";
-  songsView.style.display = "block";
-
-  countryTitle.innerHTML = `
-    <span class="fi fi-${code.toLowerCase()}"></span>
-    ${getCountryName(code)}
-  `;
-
-  const countrySongs = songs.filter(song =>
-    song.countries.includes(code)
-  );
-
-  // 선택한 국가에 존재하는 Artist / Language만 표시
-  makeArtistFilter(countrySongs);
-  makeLanguageFilter(countrySongs);
-
-  artistFilter.value = "all";
-  languageFilter.value = "all";
-  tagSearch.value = "";
-
-  renderSongs(countrySongs);
-  updateURLState(true);
-}
-
-// 국가 선택시 URL 변경
-
-function updateURL() {
-  const params = new URLSearchParams();
-
-  if (selectedCountry) {
-    params.set("country", selectedCountry);
-  }
-
-  if (artistFilter.value !== "all") {
-    params.set("artist", artistFilter.value);
-  }
-
-  if (languageFilter.value !== "all") {
-    params.set("language", languageFilter.value);
-  }
-
-  const keyword = tagSearch.value.trim();
-
-  if (keyword) {
-    params.set("q", keyword);
-  }
-
-  const query = params.toString();
-
-  const newURL =
-    query
-      ? `${location.pathname}?${query}`
-      : location.pathname;
-
-  history.replaceState(null, "", newURL);
-}
-
-// -------------------------------------
-// Artist 필터 만들기
-// -------------------------------------
-
-function makeArtistFilter(songArray) {
-
-  artistFilter.innerHTML =
-    `<option value="all">전체</option>`;
-
-  const artists = [
-    ...new Set(
-      songArray.flatMap(song => song.artist)
-    )
-  ]
-
-    .filter(Boolean)
-
-    .sort((a, b) =>
-      a.localeCompare(b, "ko")
-    );
-
-  artists.forEach(artist => {
-
-    const option =
-      document.createElement("option");
-
-    option.value = artist;
-    option.textContent = artist;
-
-    artistFilter.appendChild(option);
-  });
-}
-
-// -------------------------------------
-// Language 필터 만들기
-// -------------------------------------
-
-function makeLanguageFilter(songArray) {
-
-  languageFilter.innerHTML =
-    `<option value="all">전체</option>`;
-
-  const languages = [
-    ...new Set(
-      songArray.flatMap(song => song.language)
-    )
-  ]
-
-    .filter(Boolean)
-
-    .sort((a, b) =>
-      a.localeCompare(b, "ko")
-    );
-
-  languages.forEach(language => {
-
-    const option =
-      document.createElement("option");
-
-    option.value = language;
-    option.textContent = language;
-
-    languageFilter.appendChild(option);
-  });
-}
-
-// -------------------------------------
-// 필터 이벤트
-// -------------------------------------
-
-artistFilter.addEventListener(
-  "change",
-  applyFilters
-);
-
-languageFilter.addEventListener(
-  "change",
-  applyFilters
-);
-
-tagSearch.addEventListener(
-  "input",
-  applyFilters
-);
-
-countrySort.addEventListener(
-  "change",
-  renderCountries
-);
-
-// -------------------------------------
-// 국가 목록으로 돌아가기
-// -------------------------------------
-
-backButton.addEventListener("click", () => {
-
-  selectedCountry = null;
-
-  artistFilter.value = "all";
-  languageFilter.value = "all";
-  tagSearch.value = "";
-
-  // 다시 전체 Artist / Language 목록으로 복구
-  makeArtistFilter(songs);
-  makeLanguageFilter(songs);
-  renderCountries();
-  updateURL();
-
-  const randomSong = getRandomSong(songs);
-  renderRandomSong(randomSong);
-  showRandomSong();
-  updateURLState(true);
-});
-
-// 뒤로가기 버튼
-
-window.addEventListener(
-  "popstate",
-  restoreStateFromURL
-);
-
-// -------------------------------------
-// 필터 적용
-// -------------------------------------
 
 function normalizeSearchText(value) {
   return String(value)
@@ -558,412 +58,537 @@ function normalizeSearchText(value) {
     .toLocaleLowerCase();
 }
 
-function applyFilters() {
+function normalizeSong(song) {
+  return {
+    ...song,
+    artist: Array.isArray(song.artist) ? song.artist : [song.artist].filter(Boolean),
+    songwriters: Array.isArray(song.songwriters)
+      ? song.songwriters
+      : [song.songwriters].filter(Boolean),
+    language: Array.isArray(song.language) ? song.language : [song.language].filter(Boolean),
+    countries: Array.isArray(song.countries)
+      ? song.countries
+      : [song.countries].filter(Boolean),
+    tags: Array.isArray(song.tags) ? song.tags : [],
+    links: Array.isArray(song.links) ? song.links : [],
+    youtube: Array.isArray(song.youtube) ? song.youtube : []
+  };
+}
 
-  const selectedArtist = artistFilter.value;
-  const selectedLanguage = languageFilter.value;
-  const keyword = normalizeSearchText(
-    tagSearch.value.trim()
-  );
+fetch(`sscdbg.json?v=${Date.now()}`)
+  .then(response => {
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return response.json();
+  })
+  .then(data => {
+    songs = data.map(normalizeSong);
 
-  const hasFilter =
-    selectedArtist !== "all" ||
-    selectedLanguage !== "all" ||
-    keyword !== "";
+    makeArtistFilter(songs);
+    makeLanguageFilter(songs);
+    renderArchiveStats();
+    renderDecorativeFlags();
+    renderCountries();
+    renderRandomSong(getRandomSong(songs));
+    restoreStateFromURL();
+  })
+  .catch(error => {
+    console.error("JSON을 불러오는 중 오류:", error);
+    document.getElementById("archive-stats").textContent = "아카이브를 불러오지 못했습니다.";
+  });
 
-  // 국가 선택도 없고 필터도 없으면 국가 목록
-  if (!selectedCountry && !hasFilter) {
-    countryView.style.display = "block";
-    songsView.style.display = "none";
-    showRandomSong();
-    updateURLState();
-    return;
-  }
+function renderArchiveStats() {
+  const countries = new Set(songs.flatMap(song => song.countries).filter(Boolean));
+  document.getElementById("archive-stats").textContent =
+    `${songs.length} TRACKS  ·  ${countries.size} PLACES`;
+}
 
+function renderDecorativeFlags() {
+  const flagStrip = document.getElementById("flag-strip");
+  if (!flagStrip) return;
+
+  const flags = decorativeFlags
+    .map(code => `<span class="fi fi-${code.toLowerCase()}"></span>`)
+    .join("");
+
+  flagStrip.innerHTML = `
+    <div class="flag-track">
+      <div class="flag-set">${flags}</div>
+      <div class="flag-set" aria-hidden="true">${flags}</div>
+    </div>
+  `;
+}
+
+function makeArtistFilter(songArray) {
+  const current = artistFilter.value;
+  const artists = [...new Set(songArray.flatMap(song => song.artist))]
+    .filter(Boolean)
+    .sort((a, b) => a.localeCompare(b, "ko"));
+
+  artistFilter.innerHTML = [
+    `<option value="all">전체</option>`,
+    ...artists.map(artist =>
+      `<option value="${escapeHTML(artist)}">${escapeHTML(artist)}</option>`
+    )
+  ].join("");
+
+  if (artists.includes(current)) artistFilter.value = current;
+}
+
+function makeLanguageFilter(songArray) {
+  const current = languageFilter.value;
+  const languages = [...new Set(songArray.flatMap(song => song.language))]
+    .filter(Boolean)
+    .sort((a, b) => a.localeCompare(b, "ko"));
+
+  languageFilter.innerHTML = [
+    `<option value="all">전체</option>`,
+    ...languages.map(language =>
+      `<option value="${escapeHTML(language)}">${escapeHTML(language)}</option>`
+    )
+  ].join("");
+
+  if (languages.includes(current)) languageFilter.value = current;
+}
+
+function getCountryCounts() {
+  const counts = new Map();
+
+  songs.forEach(song => {
+    song.countries.forEach(code => {
+      if (!code) return;
+      counts.set(code, (counts.get(code) || 0) + 1);
+    });
+  });
+
+  return counts;
+}
+
+function renderCountries() {
+  selectedCountry = null;
+  selectedTag = null;
+  countryView.hidden = false;
+  songsView.hidden = true;
+  showRandomSong();
+
+  const countryCounts = getCountryCounts();
+  const countries = [...countryCounts.keys()];
+  const sortMode = countrySort.value;
+
+  countries.sort((a, b) => {
+    if (sortMode === "count-desc") {
+      return countryCounts.get(b) - countryCounts.get(a) ||
+        getCountryName(a).localeCompare(getCountryName(b), "ko");
+    }
+
+    if (sortMode === "count-asc") {
+      return countryCounts.get(a) - countryCounts.get(b) ||
+        getCountryName(a).localeCompare(getCountryName(b), "ko");
+    }
+
+    return getCountryName(a).localeCompare(getCountryName(b), "ko");
+  });
+
+  countryList.innerHTML = countries.map(code => `
+    <button class="country-card" type="button" data-country="${escapeHTML(code)}">
+      <span class="country-flag fi fi-${code.toLowerCase()}"></span>
+      <span class="country-card-bottom">
+        <span class="country-name">${escapeHTML(getCountryName(code))}</span>
+        <span class="country-count">${countryCounts.get(code)}곡</span>
+      </span>
+    </button>
+  `).join("");
+}
+
+function selectCountry(code, { pushHistory = true, resetFilters = true } = {}) {
+  selectedCountry = code;
+  selectedTag = null;
+  countryView.hidden = true;
+  songsView.hidden = false;
   hideRandomSong();
 
-  const filteredSongs = songs.filter(song => {
+  const countrySongs = songs.filter(song => song.countries.includes(code));
 
-    // 국가를 골랐으면 그 국가 안에서만
-    if (
-      selectedCountry &&
-      !song.countries.includes(selectedCountry)
-    ) {
-      return false;
-    }
+  makeArtistFilter(countrySongs);
+  makeLanguageFilter(countrySongs);
 
-    // Artist
-    if (
-      selectedArtist !== "all" &&
-      !song.artist.includes(selectedArtist)
-    ) {
-      return false;
-    }
+  if (resetFilters) {
+    artistFilter.value = "all";
+    languageFilter.value = "all";
+    tagSearch.value = "";
+  }
 
-    // Language
-    if (
-      selectedLanguage !== "all" &&
-      !song.language.includes(selectedLanguage)
-    ) {
-      return false;
-    }
+  countryTitle.innerHTML = `
+    <span class="country-inline">
+      <span class="fi fi-${code.toLowerCase()}"></span>
+      ${escapeHTML(getCountryName(code))}
+    </span>
+  `;
+  resultContext.textContent = `${countrySongs.length}곡`;
+  renderSongs(countrySongs);
 
-    // 텍스트 검색
+  if (pushHistory) updateURLState(true);
+}
+
+function selectTag(tag, { pushHistory = true, resetFilters = true } = {}) {
+  selectedCountry = null;
+  selectedTag = tag;
+  tagSearch.value = "";
+
+  const taggedSongs = songs.filter(song => song.tags.includes(tag));
+
+  makeArtistFilter(taggedSongs);
+  makeLanguageFilter(taggedSongs);
+
+  if (resetFilters) {
+    artistFilter.value = "all";
+    languageFilter.value = "all";
+  }
+
+  countryView.hidden = true;
+  songsView.hidden = false;
+  hideRandomSong();
+
+  countryTitle.textContent = `#${tag}`;
+  resultContext.textContent = `${taggedSongs.length}곡`;
+  renderSongs(taggedSongs);
+
+  if (pushHistory) updateURLState(true);
+}
+
+function getFilteredSongs() {
+  const selectedArtist = artistFilter.value;
+  const selectedLanguage = languageFilter.value;
+  const keyword = normalizeSearchText(tagSearch.value.trim());
+
+  return songs.filter(song => {
+    if (selectedCountry && !song.countries.includes(selectedCountry)) return false;
+    if (selectedTag && !song.tags.includes(selectedTag)) return false;
+    if (selectedArtist !== "all" && !song.artist.includes(selectedArtist)) return false;
+    if (selectedLanguage !== "all" && !song.language.includes(selectedLanguage)) return false;
+
     if (keyword) {
-
       const searchableText = [
         song.title,
         ...song.artist,
         ...song.songwriters,
         ...song.tags,
-        song.memo,
-      ]
-        .map(normalizeSearchText)
-        .join(" ");
+        song.memo
+      ].map(normalizeSearchText).join(" ");
 
-      if (!searchableText.includes(keyword)) {
-        return false;
-      }
+      if (!searchableText.includes(keyword)) return false;
     }
 
     return true;
   });
+}
 
-  // 국가 목록 대신 곡 목록 표시
-  countryView.style.display = "none";
-  songsView.style.display = "block";
+function applyFilters() {
+  const hasFilter =
+    selectedTag !== null ||
+    artistFilter.value !== "all" ||
+    languageFilter.value !== "all" ||
+    tagSearch.value.trim() !== "";
 
-  // 제목
-  if (selectedCountry) {
-    countryTitle.innerHTML = `
-      <span class="fi fi-${selectedCountry.toLowerCase()}"></span>
-      ${getCountryName(selectedCountry)}
-    `;
-  } else {
-    countryTitle.textContent =
-      `검색 결과 (${filteredSongs.length}곡)`;
+  if (!selectedCountry && !hasFilter) {
+    makeArtistFilter(songs);
+    makeLanguageFilter(songs);
+    renderCountries();
+    updateURLState();
+    return;
   }
 
+  const filteredSongs = getFilteredSongs();
+  countryView.hidden = true;
+  songsView.hidden = false;
+  hideRandomSong();
+
+  if (selectedTag) {
+    countryTitle.textContent = `#${selectedTag}`;
+  } else if (selectedCountry) {
+    countryTitle.innerHTML = `
+      <span class="country-inline">
+        <span class="fi fi-${selectedCountry.toLowerCase()}"></span>
+        ${escapeHTML(getCountryName(selectedCountry))}
+      </span>
+    `;
+  } else {
+    countryTitle.textContent = "검색 결과";
+  }
+
+  resultContext.textContent = `${filteredSongs.length}곡`;
   renderSongs(filteredSongs);
   updateURLState();
 }
 
-// -------------------------------------
-// 랜덤 곡
-// -------------------------------------
-
 function getRandomSong(songArray) {
-  if (!songArray || songArray.length === 0) return null;
+  if (!songArray?.length) return null;
 
   const previousTitle = sessionStorage.getItem("previousRandomSong");
+  let candidates = songArray.filter(song => song.title !== previousTitle);
+  if (!candidates.length) candidates = songArray;
 
-  let candidates = songArray.filter(
-    song => song.title !== previousTitle
-  );
-
-  if (candidates.length === 0) {
-    candidates = songArray;
-  }
-
-  const randomIndex = Math.floor(Math.random() * candidates.length);
-  const song = candidates[randomIndex];
-
-  sessionStorage.setItem(
-    "previousRandomSong",
-    song.title
-  );
-
+  const song = candidates[Math.floor(Math.random() * candidates.length)];
+  sessionStorage.setItem("previousRandomSong", song.title);
   return song;
 }
 
-function renderRandomSong(song) {
-  const randomSong = document.getElementById("random-song");
-
-  if (!randomSong || !song) return;
-
-  randomSong.innerHTML = `
-    <div class="random-song-card">
-
-      <div class="random-song-header">
-        <span class="random-song-label">
-          랜덤 곡
-        </span>
-
-        <button
-          type="button"
-          id="random-song-button"
-        >
-          다른 곡 보기
-        </button>
-      </div>
-
-
-      <div class="song-content">
-
-        <!-- 왼쪽: 기본 정보 -->
-        <div class="song-info">
-
-          <h2>${song.title}</h2>
-
-          <div class="song-meta">
-            <div class="song-meta-line">
-
-              <span>${song.artist.join(", ")}</span>
-              <span class="meta-divider">·</span>
-
-              <span>${song.year}</span>
-              <span class="meta-divider">·</span>
-
-              <span>${song.language.join(", ")}</span>
-              <span class="meta-divider">·</span>
-
-              <span class="song-countries">
-                ${song.countries
-                  .map(code => `
-                    <span class="song-country">
-                      <span class="fi fi-${code.toLowerCase()}"></span>
-                      ${getCountryName(code)}
-                    </span>
-                  `)
-                  .join("")}
-              </span>
-
-            </div>
-
-            ${
-              song.songwriters?.length
-                ? `
-                  <div class="song-songwriters">
-                    ${song.songwriters.join(", ")}
-                  </div>
-                `
-                : ""
-            }
-
-          </div>
-
-
-          <div class="song-tags">
-            ${song.tags
-              .map(tag =>
-                `<span class="tag">${tag}</span>`
-              )
-              .join("")}
-          </div>
-
-        </div>
-
-
-        <!-- 오른쪽: 설명 + 링크 -->
-        <div class="song-details">
-
-          ${
-            song.memo
-              ? `
-                <p class="song-memo">
-                  ${song.memo}
-                </p>
-              `
-              : ""
-          }
-
-          <div class="song-links">
-
-            ${
-              song.links?.length
-                ? song.links
-                    .map(link => `
-                      <a
-                        class="blog-link"
-                        href="${link.url}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        ${link.title}
-                      </a>
-                    `)
-                    .join("")
-                : ""
-            }
-
-            ${
-              song.youtube?.length
-                ? song.youtube
-                    .map(video => `
-                      <a
-                        class="youtube-link"
-                        href="${video.url}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        ${video.title}
-                      </a>
-                    `)
-                    .join("")
-                : ""
-            }
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-
-  const button =
-    document.getElementById("random-song-button");
-
-  button?.addEventListener("click", () => {
-    const newSong = getRandomSong(songs);
-    renderRandomSong(newSong);
-  });
+function countryMarkup(countries) {
+  return countries.map(code => `
+    <span class="country-inline">
+      <span class="fi fi-${code.toLowerCase()}"></span>
+      ${escapeHTML(getCountryName(code))}
+    </span>
+  `).join("");
 }
 
-// 랜덤 곡 숨기기
-function hideRandomSong() {
-  document
-    .getElementById("random-song")
-    ?.classList.add("hidden");
+function linksMarkup(song) {
+  const links = [
+    ...song.links.map(link => ({ ...link, type: "읽기" })),
+    ...song.youtube.map(video => ({ ...video, type: "YouTube" }))
+  ];
+
+  return links.map(link => `
+    <a class="link-chip" href="${safeURL(link.url)}" target="_blank" rel="noopener noreferrer">
+      ${escapeHTML(link.title || link.type)} ↗
+    </a>
+  `).join("");
 }
 
-// 랜덤 곡 다시 보여주기
-function showRandomSong() {
-  document
-    .getElementById("random-song")
-    ?.classList.remove("hidden");
-}
-
-// -------------------------------------
-// 곡 목록 출력
-// -------------------------------------
-function renderSongs(songArray) {
-  songList.innerHTML = "";
-  hideRandomSong();
-
-  if (songArray.length === 0) {
-    songList.innerHTML = `
-      <div class="no-results">
-        검색 결과가 없습니다.
-      </div>
+function tagsMarkup(tags) {
+  return tags.map(tag => {
+    const active = selectedTag === tag;
+    return `
+      <button
+        type="button"
+        class="tag-button${active ? " is-active" : ""}"
+        data-tag="${escapeHTML(tag)}"
+        aria-pressed="${active}"
+      >#${escapeHTML(tag)}</button>
     `;
+  }).join("");
+}
+
+function renderRandomSong(song) {
+  if (!song) return;
+
+  randomSongSection.innerHTML = `
+    <article class="spotlight-card">
+      <div class="spotlight-top">
+        <span class="spotlight-label">RANDOM PICK</span>
+        <button type="button" id="random-song-button">다른 곡 보기 ↻</button>
+      </div>
+
+      <div class="spotlight-grid">
+        <div>
+          <h2 class="spotlight-title">${escapeHTML(song.title)}</h2>
+          <div class="song-byline">
+            <span>${escapeHTML(song.artist.join(", "))}</span>
+            <span class="separator">·</span>
+            <span>${escapeHTML(song.year ?? "")}</span>
+            <span class="separator">·</span>
+            <span>${escapeHTML(song.language.join(", "))}</span>
+            <span class="separator">·</span>
+            ${countryMarkup(song.countries)}
+          </div>
+          ${song.songwriters.length
+            ? `<p class="songwriters">작곡·작사 · ${escapeHTML(song.songwriters.join(", "))}</p>`
+            : ""}
+          ${song.tags.length ? `<div class="song-tags">${tagsMarkup(song.tags)}</div>` : ""}
+        </div>
+
+        <div class="spotlight-notes">
+          ${song.memo ? `<p>${escapeHTML(song.memo)}</p>` : ""}
+          ${song.links.length || song.youtube.length
+            ? `<div class="link-row">${linksMarkup(song)}</div>`
+            : ""}
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function renderSongs(songArray) {
+  if (!songArray.length) {
+    songList.innerHTML = `<div class="no-results">검색 결과가 없습니다.</div>`;
     return;
   }
 
-  songArray.forEach(song => {
-    const item = document.createElement("div");
-    if (song.links?.length > 0) {
-      item.classList.add("has-links");
+  songList.innerHTML = songArray.map(song => `
+    <article class="song-row">
+      <div class="song-main">
+        <h3 class="song-title">${escapeHTML(song.title)}</h3>
+
+        <div class="song-meta-line">
+          <span>${escapeHTML(song.artist.join(", "))}</span>
+          <span class="separator">·</span>
+          <span>${escapeHTML(song.year ?? "")}</span>
+          <span class="separator">·</span>
+          <span>${escapeHTML(song.language.join(", "))}</span>
+          <span class="separator">·</span>
+          ${countryMarkup(song.countries)}
+        </div>
+
+        ${song.songwriters.length
+          ? `<p class="songwriters">작곡·작사 · ${escapeHTML(song.songwriters.join(", "))}</p>`
+          : ""}
+
+        ${song.tags.length ? `<div class="song-tags">${tagsMarkup(song.tags)}</div>` : ""}
+      </div>
+
+      <div class="song-details">
+        ${song.memo ? `<p class="song-memo">${escapeHTML(song.memo)}</p>` : ""}
+        ${song.links.length || song.youtube.length
+          ? `<div class="link-row">${linksMarkup(song)}</div>`
+          : ""}
+      </div>
+    </article>
+  `).join("");
+}
+
+function hideRandomSong() {
+  randomSongSection.classList.add("hidden");
+}
+
+function showRandomSong() {
+  randomSongSection.classList.remove("hidden");
+}
+
+function updateURLState(addHistoryEntry = false) {
+  if (isRestoringState) return;
+
+  const params = new URLSearchParams();
+  if (selectedCountry) params.set("country", selectedCountry);
+  if (selectedTag) params.set("tag", selectedTag);
+  if (artistFilter.value !== "all") params.set("artist", artistFilter.value);
+  if (languageFilter.value !== "all") params.set("language", languageFilter.value);
+
+  const keyword = tagSearch.value.trim();
+  if (keyword) params.set("q", keyword);
+
+  const query = params.toString();
+  const newURL = query ? `${location.pathname}?${query}` : location.pathname;
+  history[addHistoryEntry ? "pushState" : "replaceState"](null, "", newURL);
+}
+
+function restoreStateFromURL() {
+  isRestoringState = true;
+
+  const params = new URLSearchParams(location.search);
+  const country = params.get("country");
+  const tag = params.get("tag");
+  const artist = params.get("artist");
+  const language = params.get("language");
+  const keyword = params.get("q") || "";
+
+  selectedCountry = null;
+  selectedTag = null;
+  artistFilter.value = "all";
+  languageFilter.value = "all";
+  tagSearch.value = keyword;
+
+  const validTag = tag && songs.some(song => song.tags.includes(tag));
+  const validCountry = !validTag && country && songs.some(song => song.countries.includes(country));
+
+  let filterSource = songs;
+
+  if (validTag) {
+    selectedTag = tag;
+    filterSource = songs.filter(song => song.tags.includes(tag));
+  } else if (validCountry) {
+    selectedCountry = country;
+    filterSource = songs.filter(song => song.countries.includes(country));
+  }
+
+  makeArtistFilter(filterSource);
+  makeLanguageFilter(filterSource);
+
+  if (artist && [...artistFilter.options].some(option => option.value === artist)) {
+    artistFilter.value = artist;
+  }
+
+  if (language && [...languageFilter.options].some(option => option.value === language)) {
+    languageFilter.value = language;
+  }
+
+  const hasFilter =
+    selectedTag !== null ||
+    selectedCountry !== null ||
+    artistFilter.value !== "all" ||
+    languageFilter.value !== "all" ||
+    keyword !== "";
+
+  if (hasFilter) {
+    const filteredSongs = getFilteredSongs();
+    countryView.hidden = true;
+    songsView.hidden = false;
+    hideRandomSong();
+
+    if (selectedTag) {
+      countryTitle.textContent = `#${selectedTag}`;
+    } else if (selectedCountry) {
+      countryTitle.innerHTML = `
+        <span class="country-inline">
+          <span class="fi fi-${selectedCountry.toLowerCase()}"></span>
+          ${escapeHTML(getCountryName(selectedCountry))}
+        </span>
+      `;
+    } else {
+      countryTitle.textContent = "검색 결과";
     }
 
-    item.innerHTML = `
-      <div class="song-content">
+    resultContext.textContent = `${filteredSongs.length}곡`;
+    renderSongs(filteredSongs);
+  } else {
+    renderCountries();
+  }
 
-        <!-- 왼쪽: 기본 정보 -->
-        <div class="song-info">
-          <h2>${song.title}</h2>
-
-          <div class="song-meta">
-            <div class="song-meta-line">
-
-              <span>${song.artist.join(", ")}</span>
-              <span class="meta-divider">·</span>
-
-              <span>${song.year}</span>
-              <span class="meta-divider">·</span>
-
-              <span>${song.language.join(", ")}</span>
-              <span class="meta-divider">·</span>
-
-              <span class="song-countries">
-                ${song.countries
-                  .map(code => `
-                    <span class="song-country">
-                      <span class="fi fi-${code.toLowerCase()}"></span>
-                      ${getCountryName(code)}
-                    </span>
-                  `)
-                  .join("")}
-              </span>
-
-            </div>
-
-            ${
-              song.songwriters.length > 0
-                ? `
-                  <div class="song-songwriters">
-                    ${song.songwriters.join(", ")}
-                  </div>
-                `
-                : ""
-            }
-
-          </div>
-
-          <div class="song-tags">
-            ${song.tags
-              .map(tag =>
-                `<span class="tag">${tag}</span>`
-              )
-              .join("")}
-          </div>
-
-        </div>
-
-
-        <!-- 오른쪽: 설명 + 링크 -->
-        <div class="song-details">
-
-          ${
-            song.memo
-              ? `
-                <p class="song-memo">
-                  ${song.memo}
-                </p>
-              `
-              : ""
-          }
-
-          <div class="song-links">
-
-            ${
-              song.links?.length > 0
-                ? song.links
-                    .map(link => `
-                      <a
-                        class="blog-link"
-                        href="${link.url}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        ${link.title}
-                      </a>
-                    `)
-                    .join("")
-                : ""
-            }
-
-            ${
-              song.youtube.length > 0
-                ? song.youtube
-                    .map(video => `
-                      <a
-                        class="youtube-link"
-                        href="${video.url}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        ${video.title}
-                      </a>
-                    `)
-                    .join("")
-                : ""
-            }
-
-          </div>
-
-        </div>
-
-      </div>
-    `;
-
-    songList.appendChild(item);
-  });
+  isRestoringState = false;
 }
+
+artistFilter.addEventListener("change", applyFilters);
+languageFilter.addEventListener("change", applyFilters);
+tagSearch.addEventListener("input", () => {
+  if (selectedTag) {
+    selectedTag = null;
+    makeArtistFilter(songs);
+    makeLanguageFilter(songs);
+    artistFilter.value = "all";
+    languageFilter.value = "all";
+  }
+  applyFilters();
+});
+countrySort.addEventListener("change", renderCountries);
+
+countryList.addEventListener("click", event => {
+  const card = event.target.closest("[data-country]");
+  if (!card) return;
+  selectCountry(card.dataset.country);
+});
+
+backButton.addEventListener("click", () => {
+  selectedCountry = null;
+  selectedTag = null;
+  tagSearch.value = "";
+  makeArtistFilter(songs);
+  makeLanguageFilter(songs);
+  artistFilter.value = "all";
+  languageFilter.value = "all";
+  renderCountries();
+  renderRandomSong(getRandomSong(songs));
+  updateURLState(true);
+});
+
+document.addEventListener("click", event => {
+  if (event.target.id === "random-song-button") {
+    renderRandomSong(getRandomSong(songs));
+    return;
+  }
+
+  const tag = event.target.closest("[data-tag]");
+  if (!tag) return;
+
+  selectTag(tag.dataset.tag);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+window.addEventListener("popstate", restoreStateFromURL);
