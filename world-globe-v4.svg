@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none">
+  <defs>
+    <linearGradient id="g" x1="120" y1="110" x2="690" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5DA8FF"/>
+      <stop offset="1" stop-color="#8B7CFF"/>
+    </linearGradient>
+  </defs>
+  <circle cx="400" cy="400" r="310" stroke="url(#g)" stroke-width="3"/>
+  <ellipse cx="400" cy="400" rx="155" ry="310" stroke="url(#g)" stroke-width="2" opacity=".72"/>
+  <ellipse cx="400" cy="400" rx="66" ry="310" stroke="url(#g)" stroke-width="2" opacity=".48"/>
+  <path d="M102 310C185 352 288 372 400 372C512 372 615 352 698 310" stroke="url(#g)" stroke-width="2" opacity=".62"/>
+  <path d="M102 490C185 448 288 428 400 428C512 428 615 448 698 490" stroke="url(#g)" stroke-width="2" opacity=".62"/>
+  <path d="M92 400H708" stroke="url(#g)" stroke-width="2" opacity=".48"/>
+  <path d="M220 242L250 205L304 188L341 203L352 238L390 251L398 284L372 310L326 304L299 331L263 324L244 289L214 278Z" fill="url(#g)" opacity=".18"/>
+  <path d="M421 211L466 188L526 198L552 222L598 231L623 267L595 296L547 292L521 320L484 308L459 335L431 318L409 280Z" fill="url(#g)" opacity=".16"/>
+  <path d="M445 355L486 345L519 372L529 420L504 450L496 503L467 549L435 528L423 484L395 458L406 414Z" fill="url(#g)" opacity=".18"/>
+  <path d="M560 492L594 474L626 490L642 522L622 550L580 555L556 531Z" fill="url(#g)" opacity=".18"/>
+</svg>

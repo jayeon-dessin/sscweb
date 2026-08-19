@@ -1,5 +1,6 @@
 let songs = [];
 let selectedCountry = null;
+let selectedTag = null;
 let isRestoringState = false;
 
 const artistFilter = document.getElementById("artist-filter");
@@ -164,6 +165,7 @@ function getCountryCounts() {
 
 function renderCountries() {
   selectedCountry = null;
+  selectedTag = null;
   countryView.hidden = false;
   songsView.hidden = true;
   showRandomSong();
@@ -199,6 +201,7 @@ function renderCountries() {
 
 function selectCountry(code, { pushHistory = true, resetFilters = true } = {}) {
   selectedCountry = code;
+  selectedTag = null;
   countryView.hidden = true;
   songsView.hidden = false;
   hideRandomSong();
@@ -226,6 +229,32 @@ function selectCountry(code, { pushHistory = true, resetFilters = true } = {}) {
   if (pushHistory) updateURLState(true);
 }
 
+function selectTag(tag, { pushHistory = true, resetFilters = true } = {}) {
+  selectedCountry = null;
+  selectedTag = tag;
+  tagSearch.value = "";
+
+  const taggedSongs = songs.filter(song => song.tags.includes(tag));
+
+  makeArtistFilter(taggedSongs);
+  makeLanguageFilter(taggedSongs);
+
+  if (resetFilters) {
+    artistFilter.value = "all";
+    languageFilter.value = "all";
+  }
+
+  countryView.hidden = true;
+  songsView.hidden = false;
+  hideRandomSong();
+
+  countryTitle.textContent = `#${tag}`;
+  resultContext.textContent = `${taggedSongs.length}곡`;
+  renderSongs(taggedSongs);
+
+  if (pushHistory) updateURLState(true);
+}
+
 function getFilteredSongs() {
   const selectedArtist = artistFilter.value;
   const selectedLanguage = languageFilter.value;
@@ -233,6 +262,7 @@ function getFilteredSongs() {
 
   return songs.filter(song => {
     if (selectedCountry && !song.countries.includes(selectedCountry)) return false;
+    if (selectedTag && !song.tags.includes(selectedTag)) return false;
     if (selectedArtist !== "all" && !song.artist.includes(selectedArtist)) return false;
     if (selectedLanguage !== "all" && !song.language.includes(selectedLanguage)) return false;
 
@@ -254,6 +284,7 @@ function getFilteredSongs() {
 
 function applyFilters() {
   const hasFilter =
+    selectedTag !== null ||
     artistFilter.value !== "all" ||
     languageFilter.value !== "all" ||
     tagSearch.value.trim() !== "";
@@ -271,7 +302,9 @@ function applyFilters() {
   songsView.hidden = false;
   hideRandomSong();
 
-  if (selectedCountry) {
+  if (selectedTag) {
+    countryTitle.textContent = `#${selectedTag}`;
+  } else if (selectedCountry) {
     countryTitle.innerHTML = `
       <span class="country-inline">
         <span class="fi fi-${selectedCountry.toLowerCase()}"></span>
@@ -322,9 +355,17 @@ function linksMarkup(song) {
 }
 
 function tagsMarkup(tags) {
-  return tags.map(tag => `
-    <button type="button" class="tag-button" data-tag="${escapeHTML(tag)}">#${escapeHTML(tag)}</button>
-  `).join("");
+  return tags.map(tag => {
+    const active = selectedTag === tag;
+    return `
+      <button
+        type="button"
+        class="tag-button${active ? " is-active" : ""}"
+        data-tag="${escapeHTML(tag)}"
+        aria-pressed="${active}"
+      >#${escapeHTML(tag)}</button>
+    `;
+  }).join("");
 }
 
 function renderRandomSong(song) {
@@ -417,6 +458,7 @@ function updateURLState(addHistoryEntry = false) {
 
   const params = new URLSearchParams();
   if (selectedCountry) params.set("country", selectedCountry);
+  if (selectedTag) params.set("tag", selectedTag);
   if (artistFilter.value !== "all") params.set("artist", artistFilter.value);
   if (languageFilter.value !== "all") params.set("language", languageFilter.value);
 
@@ -433,25 +475,32 @@ function restoreStateFromURL() {
 
   const params = new URLSearchParams(location.search);
   const country = params.get("country");
+  const tag = params.get("tag");
   const artist = params.get("artist");
   const language = params.get("language");
   const keyword = params.get("q") || "";
 
   selectedCountry = null;
-  makeArtistFilter(songs);
-  makeLanguageFilter(songs);
+  selectedTag = null;
   artistFilter.value = "all";
   languageFilter.value = "all";
   tagSearch.value = keyword;
 
-  const validCountry = country && songs.some(song => song.countries.includes(country));
+  const validTag = tag && songs.some(song => song.tags.includes(tag));
+  const validCountry = !validTag && country && songs.some(song => song.countries.includes(country));
 
-  if (validCountry) {
+  let filterSource = songs;
+
+  if (validTag) {
+    selectedTag = tag;
+    filterSource = songs.filter(song => song.tags.includes(tag));
+  } else if (validCountry) {
     selectedCountry = country;
-    const countrySongs = songs.filter(song => song.countries.includes(country));
-    makeArtistFilter(countrySongs);
-    makeLanguageFilter(countrySongs);
+    filterSource = songs.filter(song => song.countries.includes(country));
   }
+
+  makeArtistFilter(filterSource);
+  makeLanguageFilter(filterSource);
 
   if (artist && [...artistFilter.options].some(option => option.value === artist)) {
     artistFilter.value = artist;
@@ -462,21 +511,25 @@ function restoreStateFromURL() {
   }
 
   const hasFilter =
+    selectedTag !== null ||
+    selectedCountry !== null ||
     artistFilter.value !== "all" ||
     languageFilter.value !== "all" ||
     keyword !== "";
 
-  if (validCountry || hasFilter) {
+  if (hasFilter) {
     const filteredSongs = getFilteredSongs();
     countryView.hidden = true;
     songsView.hidden = false;
     hideRandomSong();
 
-    if (validCountry) {
+    if (selectedTag) {
+      countryTitle.textContent = `#${selectedTag}`;
+    } else if (selectedCountry) {
       countryTitle.innerHTML = `
         <span class="country-inline">
-          <span class="fi fi-${country.toLowerCase()}"></span>
-          ${escapeHTML(getCountryName(country))}
+          <span class="fi fi-${selectedCountry.toLowerCase()}"></span>
+          ${escapeHTML(getCountryName(selectedCountry))}
         </span>
       `;
     } else {
@@ -494,7 +547,16 @@ function restoreStateFromURL() {
 
 artistFilter.addEventListener("change", applyFilters);
 languageFilter.addEventListener("change", applyFilters);
-tagSearch.addEventListener("input", applyFilters);
+tagSearch.addEventListener("input", () => {
+  if (selectedTag) {
+    selectedTag = null;
+    makeArtistFilter(songs);
+    makeLanguageFilter(songs);
+    artistFilter.value = "all";
+    languageFilter.value = "all";
+  }
+  applyFilters();
+});
 countrySort.addEventListener("change", renderCountries);
 
 countryList.addEventListener("click", event => {
@@ -505,6 +567,7 @@ countryList.addEventListener("click", event => {
 
 backButton.addEventListener("click", () => {
   selectedCountry = null;
+  selectedTag = null;
   tagSearch.value = "";
   makeArtistFilter(songs);
   makeLanguageFilter(songs);
@@ -524,9 +587,7 @@ document.addEventListener("click", event => {
   const tag = event.target.closest("[data-tag]");
   if (!tag) return;
 
-  tagSearch.value = tag.dataset.tag;
-  applyFilters();
-  tagSearch.focus();
+  selectTag(tag.dataset.tag);
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
