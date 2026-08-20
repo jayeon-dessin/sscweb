@@ -1133,6 +1133,10 @@
       {
         "title": "Java 가사",
         "url": "https://www.youtube.com/watch?v=ESx_hy1n7HA"
+      },
+      {
+        "title": "Key Ingredient ver.",
+        "url": "https://youtu.be/JB5gfmWQzSA?si=7Ht1pfOV5WWMnepT"
       }
     ]
   },
@@ -2244,7 +2248,7 @@
   },
   {
     "title": "C'est la vie",
-    "year": "1996",
+    "year": "2012",
     "artist": ["Khaled"],
     "songwriters": ["RedOne","Alex Papaconstantinou","Bilal Hajji","Björn Djupström","AJ Junior"],
     "language" : ["아랍어","프랑스어"],
@@ -2633,7 +2637,7 @@
   },
   {
     "title": "Ojos Así",
-    "year": "2013",
+    "year": "1998",
     "artist": ["Shakira"],
     "songwriters": ["Shakira","Pablo Flores","Javier Garza"],
     "language" : ["스페인어","아랍어"],
@@ -2752,7 +2756,7 @@
   },
   {
     "title": "Mahabbatym (Махаббатым)",
-    "year": "1978",
+    "year": "2018",
     "artist": ["MOLDANAZAR"],
     "songwriters": ["MOLDANAZAR"],
     "language" : ["카자흐어"],
@@ -4604,6 +4608,602 @@
       {
         "title": "MV (Bayside Boys Remix)",
         "url": "https://www.youtube.com/watch?v=zWaymcVmJ-A"
+      }
+    ]
+  },
+  {
+    "title": "Dire-Gelt (דירה-געלט)",
+    "year": "?",
+    "artist": [""],
+    "songwriters": ["Traditional"],
+    "language" : ["이디시어"],
+    "countries": ["XX"],
+    "tags": ["유럽","민요"],
+    "memo": "집세에 관한 민요. 집세를 내지 않으면 집주인이 침대를 치워 버릴 거야!",
+    "youtube": [
+      {
+        "title": "Zupfgeigenhansel",
+        "url": "https://www.youtube.com/watch?v=VaCeykqJYNs"
+      },
+      {
+        "title": "Lutz Elias-Cassel & Massel Klezmorim",
+        "url": "https://www.youtube.com/watch?v=cnz4Spw8F8M"
+      }
+    ]
+  },
+  {
+    "title": "Salt, Pepper, Birds, and the Thought Police",
+    "year": "2021",
+    "artist": ["Mili"],
+    "songwriters": ["Yamato Kasai","momocashew"],
+    "language" : ["영어"],
+    "countries": ["CA","JP"],
+    "tags": ["재즈","게임음악"],
+    "memo": "시인 윤동주에게 바치는 헌정곡, 게임 <Library of Ruina> 수록곡. '소금과 후추와 새와 사상경찰'",
+    "youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=Dca9gJyjoAg"
+      }
+    ]
+  },
+  {
+    "title": "RTRT",
+    "year": "2016",
+    "artist": ["Mili"],
+    "songwriters": ["Yamato Kasai","momocashew"],
+    "language" : ["영어","중국어"],
+    "countries": ["CA","JP"],
+    "tags": ["인디"],
+    "memo": "'레토르트'. 이 얼 싼 쓰 우 리우 치",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=IcpzqZrpLVM"
+      },
+      {
+        "title": "Key Ingredient ver.",
+        "url": "https://www.youtube.com/watch?v=2wSY55e3GxI"
+      }
+    ]
+  },
+  {
+    "title": "Iron Lotus",
+    "year": "2021",
+    "artist": ["Mili"],
+    "songwriters": ["Yamato Kasai","momocashew"],
+    "language" : ["영어","중국어"],
+    "countries": ["CA","JP"],
+    "tags": ["인디","게임음악"],
+    "memo": "'강철 연꽃', 게임 <Library of Ruina> 테마곡. 중국풍 음악과 무협스러운 가사가 인상적이다.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=LxduFWbbndE"
+      },
+      {
+        "title": "Key Ingredient ver.",
+        "url": "https://youtu.be/0r2GNWvkd4U?si=hR4OuueKT1Mr3KQl"
+      }
+    ]
+  },
+  {
+    "title": "String Theocracy",
+    "year": "2021",
+    "artist": ["Mili"],
+    "songwriters": ["Yamato Kasai","momocashew"],
+    "language" : ["영어"],
+    "countries": ["CA","JP"],
+    "tags": ["게임음악","재즈"],
+    "memo": "'실의 신권 정치', 게임 <Library of Ruina> 테마곡, 해석은 게임을 해야 이해가 될 듯 하다(아님말고).",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=nOj_A3aZxGs"
+      },
+      {
+        "title": "Key Ingredient ver.",
+        "url": "https://youtu.be/8i0UdD-xSRw?si=OOKMKao1yJzgLz9w"
+      }
+    ]
+  },
+  {
+    "title": "Another One Bites the Dust",
+    "year": "1980",
+    "artist": ["Queen"],
+    "songwriters": ["John Deacon"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["유럽","락","펑크"],
+    "memo": "퀸의 (별로 퀸스럽지는 않은) 히트곡 중 하나. '또 한 명이 죽었군!'",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=rY0WxgSXdEE"
+      },
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=OdurVND-DSs"
+      }
+    ]
+  },
+  {
+    "title": "Don't Stop Me Now",
+    "year": "1978",
+    "artist": ["Queen"],
+    "songwriters": ["Freddie Mercury"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["유럽","락","팝"],
+    "memo": "날 막지 마, 지금 끝내주는 시간을 보내고 있으니까.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://youtu.be/HgzGwKwLmgM?si=oxBp6OwgwCnvksaj"
+      },
+      {
+        "title": "Lyric Video",
+        "url": "https://youtu.be/MHi9mKq0slA?si=KA0GSBlgrccUBmqm"
+      }
+    ]
+  },
+  {
+    "title": "We Will Rock You",
+    "year": "1977",
+    "artist": ["Queen"],
+    "songwriters": ["Brian May"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["유럽","락"],
+    "memo": "퀸의 최고 히트곡 중 하나. 짧고 단순하지만 강렬하다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://youtu.be/-tJYN-eG1zk?si=xaumcOW0Zj9NuSo9"
+      }
+    ]
+  },
+  {
+    "title": "We Are the Champions",
+    "year": "1977",
+    "artist": ["Queen"],
+    "songwriters": ["Freddie Mercury"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["유럽","락"],
+    "memo": "우리 모두가 챔피언이다!",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=04854XqcfCY"
+      },
+      {
+        "title": "Lyric Video",
+        "url": "https://youtu.be/tTYJryNgLH8?si=qSHJtV8zQjbjjeNf"
+      }
+    ]
+  },
+  {
+    "title": "Highway to Hell",
+    "year": "1979",
+    "artist": ["AC/DC"],
+    "songwriters": ["Bon Scott","Angus Young","Malcolm Young"],
+    "language" : ["영어"],
+    "countries": ["AU"],
+    "tags": ["오세아니아","하드 락","블루스 락"],
+    "memo": "고속도로에서 들으면 죽어버릴 것 같은 곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=l482T0yNkeo"
+      },
+      {
+        "title": "Live at River Plate 2009",
+        "url": "https://www.youtube.com/watch?v=gEPmA3USJdI"
+      }
+    ]
+  },
+  {
+    "title": "Back In Black",
+    "year": "1980",
+    "artist": ["AC/DC"],
+    "songwriters": ["Angus Young","Malcolm Young","Brian Johnson"],
+    "language" : ["영어"],
+    "countries": ["AU"],
+    "tags": ["오세아니아","하드 락","메탈"],
+    "memo": "인트로 기타리프가 유명한, ACDC의 대표곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=pAgnJDJN4VA"
+      },
+      {
+        "title": "Live at River Plate 2009",
+        "url": "https://www.youtube.com/watch?v=j5rGm3kdTuk"
+      }
+    ]
+  },
+  {
+    "title": "Thunderstruck",
+    "year": "1990",
+    "artist": ["AC/DC"],
+    "songwriters": ["Angus Young","Malcolm Young"],
+    "language" : ["영어"],
+    "countries": ["AU"],
+    "tags": ["오세아니아","하드 락"],
+    "memo": "ACDC의 대표곡 중 하나. THUNDER!",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=v2AC41dglnM"
+      },
+      {
+        "title": "Live at Donington 1991",
+        "url": "https://www.youtube.com/watch?v=Af0P6XEkI7Y"
+      }
+    ]
+  },
+  {
+    "title": "Stairway to Heaven",
+    "year": "1990",
+    "artist": ["Led Zeppelin"],
+    "songwriters": ["Jimmy Page","Robert Plant"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["유럽","락","블루스 락"],
+    "memo": "Led Zeppelin의 명실상부한 대표곡.",
+    "youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=QkF3oxziUI4"
+      },
+      {
+        "title": "Live",
+        "url": "https://www.youtube.com/watch?v=xbhCPt6PZIU"
+      }
+    ]
+  },
+  {
+    "title": "High and Dry",
+    "year": "1998",
+    "artist": ["Radiohead"],
+    "songwriters": ["Radiohead"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["유럽","얼터너티브락"],
+    "memo": "라디오헤드 곡 중 가장 좋아하는 노래.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=7qFfFVSerQo"
+      },
+      {
+        "title": "Live on 2 Meter Sessions",
+        "url": "https://www.youtube.com/watch?v=EhiJ1OU5NJc"
+      }
+    ]
+  },
+  {
+    "title": "Creep",
+    "year": "1992",
+    "artist": ["Radiohead"],
+    "songwriters": ["Radiohead","Albert Hammond","Mike Hazlewood"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["유럽","얼터너티브락"],
+    "memo": "라디오헤드의 대표곡 중 하나. 넌 특별하지만, 난 병신이야...",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=XFkzRNyygfk"
+      },
+      {
+        "title": "어쿠스틱 버전",
+        "url": "https://www.youtube.com/watch?v=4BX5xpB2DBM"
+      }
+    ]
+  },
+  {
+    "title": "Smells Like Teen Spirit",
+    "year": "1991",
+    "artist": ["Nirvana"],
+    "songwriters": ["Kurt Cobain","Dave Grohl","Krist Novoselic"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","얼터너티브락"],
+    "memo": "너바나의 대표곡. 강렬한 사운드.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=hTWKbfoikeg"
+      }
+    ]
+  },
+  {
+    "title": "Livin' on a Prayer",
+    "year": "1986",
+    "artist": ["Bon Jovi"],
+    "songwriters": ["Jon Bon Jovi","Richie Sambora","Desmond Child"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","하드락","메탈"],
+    "memo": "본 조비의 대표곡. Whoa-oh, livin' on a prayer!",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=lDK9QqIzhwk"
+      }
+    ]
+  },
+  {
+    "title": "Eye of the Tiger",
+    "year": "1986",
+    "artist": ["Survivor"],
+    "songwriters": ["Frankie Sullivan","Jim Peterik"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","하드락"],
+    "memo": "인트로의 일렉기타 리프(만) 너무나도 유명한 곡. 빰 빰빰빰",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=btPJPFnesV4"
+      }
+    ]
+  },
+  {
+    "title": "Sweet Child o' Mine",
+    "year": "1988",
+    "artist": ["Guns N' Roses"],
+    "songwriters": ["Steven Adler","Saul Hudson","Duff McKagan","Axl RoseIzzy Stradlin"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","하드락"],
+    "memo": "건즈 앤 로지스 최고의 히트곡. 기타 도입부만 들어도 신나는 곡",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=1w7OgIMMRc4"
+      }
+    ]
+  },
+  {
+    "title": "Under Pressure",
+    "year": "1981",
+    "artist": ["Queen","David Bowie"],
+    "songwriters": ["Roger Taylor","Freddie Mercury","David Bowie","John Deacon","Brian May"],
+    "language" : ["영어"],
+    "countries": ["GB"],
+    "tags": ["유럽","락"],
+    "memo": "퀸과 데이비드 보위의 콜라보 곡, 인트로의 베이스 리프가 유명하다. 압박과 그 극복에 관해.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=a01QQZyl-_I"
+      },
+      {
+        "title": "Queen - Live at Montreal 1981",
+        "url": "https://www.youtube.com/watch?v=dN3gax_Z7tw"
+      }
+    ]
+  },
+  {
+    "title": "Smooth Criminal",
+    "year": "1987",
+    "artist": ["Michael Jackson"],
+    "songwriters": ["Michael Jackson"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","팝","R&B"],
+    "memo": "심폐소생술 연습용 인형 '애니'에서 영감을 얻은 가사. 마이클 잭슨 퍼포먼스의 정점",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=h_D3VFfhvs4"
+      },
+      {
+        "title": "음원 (Radio Edit)",
+        "url": "https://www.youtube.com/watch?v=_mMyPJSx8RU"
+      }
+    ]
+  },
+  {
+    "title": "Over the Rainbow",
+    "year": "1939",
+    "artist": ["Judy Garland"],
+    "songwriters": ["Harold Arlen","E.Y.Harburg"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","영화음악","발라드"],
+    "memo": "1939년 영화 <오즈의 마법사> 삽입곡. 누구나 아는 고전 명곡이다.",
+    "youtube": [
+      {
+        "title": "영화 <오즈의 마법사> 중",
+        "url": "https://www.youtube.com/watch?v=PSZxmZmBfnU"
+      }
+    ]
+  },
+  {
+    "title": "When You Wish Upon a Star",
+    "year": "1940",
+    "artist": ["Cliff Edwards"],
+    "songwriters": ["Leigh Harline","Ned Washington"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","영화음악","애니메이션","디즈니"],
+    "memo": "1940년 애니메이션 영화 <피노키오> 삽입곡. 디즈니를 상징하는 곡으로 정착했다.",
+    "youtube": [
+      {
+        "title": "원곡",
+        "url": "https://www.youtube.com/watch?v=2QA039irFZE"
+      },
+      {
+        "title": "Cynthia Erivo 버전, 2022년 영화 <피노키오>",
+        "url": "https://www.youtube.com/watch?v=HSy3tE4HKsc"
+      },
+      {
+        "title": "Sara Bareilles 버전 (디즈니 100주년)",
+        "url": "https://www.youtube.com/watch?v=QhwT2jn9qHQ"
+      }
+    ]
+  },
+  {
+    "title": "Still D.R.E.",
+    "year": "1999",
+    "artist": ["Dr. Dre","Snoop Dogg"],
+    "songwriters": ["Andre Young","Shawn Carter","Melvin Bradford","Scott Storch"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","힙합"],
+    "memo": "서부 힙합을 상징하는 곡, 아마 세상에서 가장 유명한 힙합 곡일 듯.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=_CL6n0FJZpk"
+      }
+    ]
+  },
+  {
+    "title": "Thunder",
+    "year": "2017",
+    "artist": ["Imagine Dragons"],
+    "songwriters": ["Dan Reynolds","Wayne Sermon","Ben McKee","Daniel Platzman","Alex da Kid","Jayson DeZuzio","Frederick Hansen"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","신스팝","팝락"],
+    "memo": "상상용의 대표곡 중 하나. 단순하지만 중독성 높은 곡",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=fKopy74weus"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=4AqjqOqNrjw"
+      }
+    ]
+  },
+  {
+    "title": "Believer",
+    "year": "2017",
+    "artist": ["Imagine Dragons"],
+    "songwriters": ["Dan Reynolds","Wayne Sermon","Ben McKee","Daniel Platzman","Alex da Kid","Robin Fredriksson","Mattias Larsson","Justin Tranter"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","팝락"],
+    "memo": "상상용의 강렬한 대표곡. 권투하는 장면이 담긴 뮤비",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=7wtfhZwyrcc"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=4AqjqOqNrjw"
+      }
+    ]
+  },
+  {
+    "title": "Chandelier",
+    "year": "2014",
+    "artist": ["Sia"],
+    "songwriters": ["Sia Furler","Jesse Shatkin"],
+    "language" : ["영어"],
+    "countries": ["AU"],
+    "tags": ["오세아니아","팝락"],
+    "memo": "시아의 대표곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=2vjPBrBU-TM"
+      },
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=8DS-h67qEiY"
+      }
+    ]
+  },
+  {
+    "title": "愛を伝えたいだとか (사랑을 전하고 싶다든가)",
+    "year": "2017",
+    "artist": ["aimyon (あいみょん)"],
+    "songwriters": ["aimyon"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["아시아","JPOP","팝락"],
+    "memo": "남성 시점에서 쓴 복잡한 감정들. 베이스가 맛있는 곡",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=9qRCARM_LfE"
+      }
+    ]
+  },
+  {
+    "title": "God Knows...",
+    "year": "2006",
+    "artist": ["Aya Hirano (平野綾)"],
+    "songwriters": ["畑亜貴","神前暁"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["아시아","JPOP","애니메이션"],
+    "memo": "애니메이션 <스즈미야 하루히의 우울> 삽입곡. 밴드 연주 작화가 큰 반향을 일으켰다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=WWB01IuMvzA"
+      }
+    ]
+  },
+  {
+    "title": "RPG",
+    "year": "2013",
+    "artist": ["SEKAI NO OWARI"],
+    "songwriters": ["Fukase","Saori"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["아시아","JPOP","애니메이션","영화음악"],
+    "memo": "애니메이션 <짱구는 못말려> 극장판 주제가. SEKAI NO OWARI의 대표곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=Mi9uNu35Gmk"
+      },
+      {
+        "title": "라이브 (딩고뮤직)",
+        "url": "https://www.youtube.com/watch?v=mXHXZonToCU"
+      }
+    ]
+  },
+  {
+    "title": "DAYBREAK FRONTLINE",
+    "year": "2016",
+    "artist": ["IA"],
+    "songwriters": ["Orangestar"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["아시아","보컬로이드"],
+    "memo": "Orangestar의 보컬로이드 곡. 매우 빠르고 음이 높은 편",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=emrt46SRyYs"
+      }
+    ]
+  },
+  {
+    "title": "ローリンガール (롤링 걸)",
+    "year": "2010",
+    "artist": ["Hatsune Miku (初音ミク)"],
+    "songwriters": ["wowaka"],
+    "language" : ["일본어"],
+    "countries": ["JP"],
+    "tags": ["아시아","보컬로이드"],
+    "memo": "wowaka의 보컬로이드 곡. もう一回、もう一回",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=vnw8zURAxkU"
       }
     ]
   }
