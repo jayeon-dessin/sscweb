@@ -5206,5 +5206,133 @@
         "url": "https://www.youtube.com/watch?v=vnw8zURAxkU"
       }
     ]
+  },
+  {
+    "title": "Felicità",
+    "year": "1982",
+    "artist": ["Al Bano and Romina Power"],
+    "songwriters": ["Cristiano Minellono","Dario Farina","Gino De Stefani"],
+    "language" : ["이탈리아어"],
+    "countries": ["IT","US"],
+    "tags": ["유럽","산레모","팝"],
+    "memo": "1982년 산레모 최고의 흥행곡. 행복이란...",
+    "youtube": [
+      {
+        "title": "Musikladen 1982",
+        "url": "https://www.youtube.com/watch?v=xUj-lfx6vbo"
+      },
+      {
+        "title": "Ein Kessel Buntes 1986",
+        "url": "https://www.youtube.com/watch?v=wvodNUkdMds"
+      }
+    ]
+  },
+  {
+    "title": "Feel Good Inc.",
+    "year": "2005",
+    "artist": ["Gorillaz"],
+    "songwriters": ["David Jolicoeur"],
+    "language" : ["영어"],
+    "countries": ["UK"],
+    "tags": ["유럽","락","힙합"],
+    "memo": "기부니 조아",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=HyHNuVaZJ-k"
+      }
+    ]
+  },
+  {
+    "title": "On Melancholy Hill",
+    "year": "2010",
+    "artist": ["Gorillaz"],
+    "songwriters": ["Gorillaz"],
+    "language" : ["영어"],
+    "countries": ["UK"],
+    "tags": ["유럽","신스팝"],
+    "memo": "'멜랑콜리'한, 고릴라즈의 대표곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=04mfKJWDSzI"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=p00v9ZFhWJM"
+      }
+    ]
+  },
+  {
+    "title": "Love Story",
+    "year": "2008",
+    "artist": ["Taylor Swift"],
+    "songwriters": ["Taylor Swift","Nathan Chapman"],
+    "language" : ["영어"],
+    "countries": ["US"],
+    "tags": ["북아메리카","컨트리팝"],
+    "memo": "테일러 스위프트의 초기 컨트리 곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=8xg3vE8Ie_E"
+      }
+    ]
+  },
+  {
+    "title": "Izaura",
+    "year": "1976",
+    "artist": ["Stan Getz","João Gilberto","Miucha"],
+    "songwriters": ["Herivelto Martins","Roberto Roberti"],
+    "language" : ["포르투갈어","영어"],
+    "countries": ["BR"],
+    "tags": ["남아메리카","보사노바"],
+    "memo": "잔잔한 보사노바.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=0KPQ8MszhxU"
+      }
+    ]
+  },
+  {
+    "title": "Sénégal Fast Food",
+    "year": "2005",
+    "artist": ["Amadou & Mariam","Manu Chao"],
+    "songwriters": ["Manu Chao","Amadou Bagayoko","Mariam Doumbia"],
+    "language" : ["프랑스어","밤바라어"],
+    "countries": ["ML"],
+    "tags": ["아프리카","블루스"],
+    "memo": "이민/이주노동과 관련된 어려움들?",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=J43T8rEOg-I"
+      }
+    ]
+  },
+  {
+    "title": "Mbube (The Lion Sleeps Tonight)",
+    "year": "1939",
+    "artist": ["Solomon Linda's Original Evening Birds"],
+    "songwriters": ["Solomon Linda"],
+    "language" : ["줄루어"],
+    "countries": ["ZA"],
+    "tags": ["아프리카","아카펠라","애니메이션","영화음악","디즈니"],
+    "memo": "사자에 관한 단순한 구성의 줄루어 노래. 영화 <라이온 킹>에서도 사용하여 유명하다.",
+    "youtube": [
+      {
+        "title": "음원 (Solomon Linda의 원곡)",
+        "url": "https://www.youtube.com/watch?v=mrrQT4WkbNE"
+      },
+      {
+        "title": "미국의 The Weavers 버전.",
+        "url": "https://www.youtube.com/watch?v=77VUYPVMtWY"
+      },
+      {
+        "title": "(아마도 가장 익숙할) 미국의 The Tokens 버전.",
+        "url": "https://www.youtube.com/watch?v=OQlByoPdG6c"
+      }
+    ]
   }
 ]
