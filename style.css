@@ -198,6 +198,31 @@ h1 {
     overflow: hidden;
 }
 
+/* "XX"(미분류) 국가 코드를 위한 대체 국기 뱃지 */
+.flag-unclassified {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1.33333333em;
+    height: 1em;
+
+    background: #e5e7eb;
+    border-radius: 2px;
+
+    vertical-align: middle;
+}
+
+.flag-unclassified::after {
+    content: "?";
+
+    font-size: 0.7em;
+    font-weight: 700;
+    line-height: 1;
+
+    color: #8b95a1;
+}
+
 .country-name {
     font-size: 1.05rem;
     font-weight: 700;
@@ -404,6 +429,58 @@ h1 {
     min-width: 0;
 }
 
+.song-header {
+    display: flex;
+    align-items: flex-start;
+
+    gap: var(--space-3);
+}
+
+.song-header-text {
+    min-width: 0;
+    flex: 1;
+}
+
+.song-artwork {
+    flex-shrink: 0;
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    background: #eef1f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.song-artwork img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+.song-artwork.placeholder {
+    animation: song-artwork-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes song-artwork-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+}
+
+.song-artwork.no-artwork::before {
+    content: "♪";
+
+    font-size: 1.5rem;
+    color: #c7cdd6;
+}
+
 .song-meta {
     margin-bottom: var(--space-3);
 }
@@ -447,7 +524,8 @@ h1 {
     white-space: nowrap;
 }
 
-.song-country .fi {
+.song-country .fi,
+.song-country .flag-unclassified {
     font-size: 0.95rem;
 
     border: 1px solid rgba(0, 0, 0, 0.15);
@@ -591,6 +669,17 @@ a:hover {
 
     #song-list > div {
         padding: var(--space-4);
+    }
+
+    .song-artwork {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 8px;
+    }
+
+    .song-artwork.no-artwork::before {
+        font-size: 1.1rem;
     }
 
      .song-meta-line {
@@ -937,4 +1026,38 @@ hr {
 #map-reset-zoom:hover {
     background: #f0f3f7;
     border-color: #bbb;
+}
+
+#map-unclassified-button {
+    position: absolute;
+    z-index: 10;
+
+    bottom: var(--space-3);
+    left: var(--space-3);
+
+    border: 1px dashed #aab2bd;
+    background: rgba(255, 255, 255, 0.92);
+
+    padding:
+        var(--space-2)
+        var(--space-4);
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    color: #667;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.1);
+
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+}
+
+#map-unclassified-button:hover {
+    background: white;
+    border-color: #888;
 }

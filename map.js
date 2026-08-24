@@ -160,6 +160,23 @@ async function initMap() {
       .call(mapZoomBehavior.transform, d3.zoomIdentity);
   });
 
+  // "미분류"(국가 정보가 없는 곡)는 지도 위에 표시할 위치가 없으므로,
+  // 지도 하단 빈 공간에 별도 버튼으로 노출
+  const unclassifiedButton = document.getElementById("map-unclassified-button");
+  const unclassifiedCount = countryCounts.get("XX") || 0;
+
+  if (unclassifiedButton) {
+    if (unclassifiedCount > 0) {
+      unclassifiedButton.textContent = `미분류 · ${unclassifiedCount}곡`;
+      unclassifiedButton.classList.remove("hidden");
+      unclassifiedButton.addEventListener("click", () => {
+        selectCountry("XX");
+      });
+    } else {
+      unclassifiedButton.classList.add("hidden");
+    }
+  }
+
   setupMapSearch(countryCounts);
 }
 
@@ -271,6 +288,10 @@ function setupMapSearch(countryCounts) {
     .map(code => ({ code, name: getCountryName(code) }))
     .sort((a, b) => a.name.localeCompare(b.name, "ko"));
 
+  if (countryCounts.get("XX") > 0) {
+    searchableCountries.push({ code: "XX", name: "미분류" });
+  }
+
   function closeResults() {
     resultsContainer.innerHTML = "";
     resultsContainer.classList.remove("visible");
@@ -306,7 +327,7 @@ function setupMapSearch(countryCounts) {
       item.className = "map-search-result";
 
       item.innerHTML = `
-        <span class="fi fi-${match.code.toLowerCase()}"></span>
+        ${countryFlagHTML(match.code)}
         <span class="map-search-result-name">${match.name}</span>
         <span class="map-search-result-count">
           ${countryCounts.get(match.code)}곡
@@ -316,7 +337,13 @@ function setupMapSearch(countryCounts) {
       item.addEventListener("click", () => {
         input.value = "";
         closeResults();
-        zoomToCountryThenSelect(match.code);
+
+        // "미분류"는 지도상 좌표가 없으므로 줌 애니메이션 없이 바로 곡 목록으로
+        if (match.code === "XX") {
+          selectCountry("XX");
+        } else {
+          zoomToCountryThenSelect(match.code);
+        }
       });
 
       resultsContainer.appendChild(item);

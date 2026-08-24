@@ -1359,7 +1359,7 @@
     "songwriters": ["Johnvie Dela Rosa","Leonard Obero"],
     "language" : ["타갈로그어"],
     "countries": ["PH"],
-    "tags": ["블루스 락","아시아"],
+    "tags": ["블루스락","아시아"],
     "memo": "Dilaw의 대표곡. '목마름'",
     "links": [
       {
@@ -4790,7 +4790,7 @@
     "songwriters": ["Bon Scott","Angus Young","Malcolm Young"],
     "language" : ["영어"],
     "countries": ["AU"],
-    "tags": ["오세아니아","하드 락","블루스 락"],
+    "tags": ["오세아니아","하드락","블루스락"],
     "memo": "고속도로에서 들으면 죽어버릴 것 같은 곡.",
     "youtube": [
       {
@@ -4810,7 +4810,7 @@
     "songwriters": ["Angus Young","Malcolm Young","Brian Johnson"],
     "language" : ["영어"],
     "countries": ["AU"],
-    "tags": ["오세아니아","하드 락","메탈"],
+    "tags": ["오세아니아","하드락","메탈"],
     "memo": "인트로 기타리프가 유명한, ACDC의 대표곡.",
     "youtube": [
       {
@@ -4830,7 +4830,7 @@
     "songwriters": ["Angus Young","Malcolm Young"],
     "language" : ["영어"],
     "countries": ["AU"],
-    "tags": ["오세아니아","하드 락"],
+    "tags": ["오세아니아","하드락"],
     "memo": "ACDC의 대표곡 중 하나. THUNDER!",
     "youtube": [
       {
@@ -4850,7 +4850,7 @@
     "songwriters": ["Jimmy Page","Robert Plant"],
     "language" : ["영어"],
     "countries": ["GB"],
-    "tags": ["유럽","락","블루스 락"],
+    "tags": ["유럽","락","블루스락"],
     "memo": "Led Zeppelin의 명실상부한 대표곡.",
     "youtube": [
       {

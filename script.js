@@ -107,7 +107,23 @@ const regionNames = new Intl.DisplayNames(
 );
 
 function getCountryName(code) {
+  if (code === "XX") {
+    return "미분류";
+  }
   return regionNames.of(code);
+}
+
+// 국가 코드에 맞는 국기 아이콘 마크업.
+// "XX"(미분류)는 실제 국기가 없으므로 대체 뱃지를 사용
+function countryFlagHTML(code, extraClass = "") {
+
+  const classAttr = extraClass ? `${extraClass} ` : "";
+
+  if (code === "XX") {
+    return `<span class="${classAttr}flag-unclassified" aria-hidden="true"></span>`;
+  }
+
+  return `<span class="${classAttr}fi fi-${code.toLowerCase()}"></span>`;
 }
 
 // -------------------------------------
@@ -433,7 +449,7 @@ function renderCountries() {
     button.className = "country-card";
 
     button.innerHTML = `
-      <span class="country-flag fi fi-${code.toLowerCase()}"></span>
+      ${countryFlagHTML(code, "country-flag")}
 
       <span class="country-name">
         ${getCountryName(code)}
@@ -463,7 +479,7 @@ function selectCountry(code) {
   showSongsUI();
 
   countryTitle.innerHTML = `
-    <span class="fi fi-${code.toLowerCase()}"></span>
+    ${countryFlagHTML(code)}
     ${getCountryName(code)}
   `;
 
@@ -675,7 +691,7 @@ function applyFilters() {
   // 제목
   if (selectedCountry) {
     countryTitle.innerHTML = `
-      <span class="fi fi-${selectedCountry.toLowerCase()}"></span>
+      ${countryFlagHTML(selectedCountry)}
       ${getCountryName(selectedCountry)}
     `;
   } else {
@@ -715,6 +731,124 @@ function getRandomSong(songArray) {
   return song;
 }
 
+// 곡 카드 안쪽 마크업 (랜덤 곡 카드 / 목록 카드가 공유)
+function songCardMarkup(song) {
+  return `
+    <div class="song-content">
+
+      <!-- 왼쪽: 앨범 아트 + 기본 정보 -->
+      <div class="song-info">
+
+        <div class="song-header">
+          <div class="song-artwork placeholder" aria-hidden="true"></div>
+
+          <div class="song-header-text">
+            <h2>${song.title}</h2>
+
+            <div class="song-meta">
+              <div class="song-meta-line">
+
+                <span>${song.artist.join(", ")}</span>
+                <span class="meta-divider">·</span>
+
+                <span>${song.year}</span>
+                <span class="meta-divider">·</span>
+
+                <span>${song.language.join(", ")}</span>
+                <span class="meta-divider">·</span>
+
+                <span class="song-countries">
+                  ${song.countries
+                    .map(code => `
+                      <span class="song-country">
+                        ${countryFlagHTML(code)}
+                        ${getCountryName(code)}
+                      </span>
+                    `)
+                    .join("")}
+                </span>
+
+              </div>
+
+              ${
+                song.songwriters?.length
+                  ? `
+                    <div class="song-songwriters">
+                      ${song.songwriters.join(", ")}
+                    </div>
+                  `
+                  : ""
+              }
+
+            </div>
+          </div>
+        </div>
+
+        <div class="song-tags">
+          ${song.tags
+            .map(tag =>
+              `<span class="tag">${tag}</span>`
+            )
+            .join("")}
+        </div>
+
+      </div>
+
+
+      <!-- 오른쪽: 설명 + 링크 -->
+      <div class="song-details">
+
+        ${
+          song.memo
+            ? `
+              <p class="song-memo">
+                ${song.memo}
+              </p>
+            `
+            : ""
+        }
+
+        <div class="song-links">
+
+          ${
+            song.links?.length
+              ? song.links
+                  .map(link => `
+                    <a
+                      class="blog-link"
+                      href="${link.url}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      ${link.title}
+                    </a>
+                  `)
+                  .join("")
+              : ""
+          }
+
+          ${
+            song.youtube?.length
+              ? song.youtube
+                  .map(video => `
+                    <a
+                      class="youtube-link"
+                      href="${video.url}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      ${video.title}
+                    </a>
+                  `)
+                  .join("")
+              : ""
+          }
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function renderRandomSong(song) {
   const randomSong = document.getElementById("random-song");
 
@@ -736,114 +870,7 @@ function renderRandomSong(song) {
         </button>
       </div>
 
-
-      <div class="song-content">
-
-        <!-- 왼쪽: 기본 정보 -->
-        <div class="song-info">
-
-          <h2>${song.title}</h2>
-
-          <div class="song-meta">
-            <div class="song-meta-line">
-
-              <span>${song.artist.join(", ")}</span>
-              <span class="meta-divider">·</span>
-
-              <span>${song.year}</span>
-              <span class="meta-divider">·</span>
-
-              <span>${song.language.join(", ")}</span>
-              <span class="meta-divider">·</span>
-
-              <span class="song-countries">
-                ${song.countries
-                  .map(code => `
-                    <span class="song-country">
-                      <span class="fi fi-${code.toLowerCase()}"></span>
-                      ${getCountryName(code)}
-                    </span>
-                  `)
-                  .join("")}
-              </span>
-
-            </div>
-
-            ${
-              song.songwriters?.length
-                ? `
-                  <div class="song-songwriters">
-                    ${song.songwriters.join(", ")}
-                  </div>
-                `
-                : ""
-            }
-
-          </div>
-
-
-          <div class="song-tags">
-            ${song.tags
-              .map(tag =>
-                `<span class="tag">${tag}</span>`
-              )
-              .join("")}
-          </div>
-
-        </div>
-
-
-        <!-- 오른쪽: 설명 + 링크 -->
-        <div class="song-details">
-
-          ${
-            song.memo
-              ? `
-                <p class="song-memo">
-                  ${song.memo}
-                </p>
-              `
-              : ""
-          }
-
-          <div class="song-links">
-
-            ${
-              song.links?.length
-                ? song.links
-                    .map(link => `
-                      <a
-                        class="blog-link"
-                        href="${link.url}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        ${link.title}
-                      </a>
-                    `)
-                    .join("")
-                : ""
-            }
-
-            ${
-              song.youtube?.length
-                ? song.youtube
-                    .map(video => `
-                      <a
-                        class="youtube-link"
-                        href="${video.url}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        ${video.title}
-                      </a>
-                    `)
-                    .join("")
-                : ""
-            }
-          </div>
-        </div>
-      </div>
+      ${songCardMarkup(song)}
     </div>
   `;
 
@@ -854,6 +881,10 @@ function renderRandomSong(song) {
     const newSong = getRandomSong(songs);
     renderRandomSong(newSong);
   });
+
+  if (typeof loadArtworkInto === "function") {
+    loadArtworkInto(randomSong.querySelector(".song-artwork"), song);
+  }
 }
 
 // 랜덤 곡 숨기기
@@ -892,117 +923,12 @@ function renderSongs(songArray) {
       item.classList.add("has-links");
     }
 
-    item.innerHTML = `
-      <div class="song-content">
-
-        <!-- 왼쪽: 기본 정보 -->
-        <div class="song-info">
-          <h2>${song.title}</h2>
-
-          <div class="song-meta">
-            <div class="song-meta-line">
-
-              <span>${song.artist.join(", ")}</span>
-              <span class="meta-divider">·</span>
-
-              <span>${song.year}</span>
-              <span class="meta-divider">·</span>
-
-              <span>${song.language.join(", ")}</span>
-              <span class="meta-divider">·</span>
-
-              <span class="song-countries">
-                ${song.countries
-                  .map(code => `
-                    <span class="song-country">
-                      <span class="fi fi-${code.toLowerCase()}"></span>
-                      ${getCountryName(code)}
-                    </span>
-                  `)
-                  .join("")}
-              </span>
-
-            </div>
-
-            ${
-              song.songwriters.length > 0
-                ? `
-                  <div class="song-songwriters">
-                    ${song.songwriters.join(", ")}
-                  </div>
-                `
-                : ""
-            }
-
-          </div>
-
-          <div class="song-tags">
-            ${song.tags
-              .map(tag =>
-                `<span class="tag">${tag}</span>`
-              )
-              .join("")}
-          </div>
-
-        </div>
-
-
-        <!-- 오른쪽: 설명 + 링크 -->
-        <div class="song-details">
-
-          ${
-            song.memo
-              ? `
-                <p class="song-memo">
-                  ${song.memo}
-                </p>
-              `
-              : ""
-          }
-
-          <div class="song-links">
-
-            ${
-              song.links?.length > 0
-                ? song.links
-                    .map(link => `
-                      <a
-                        class="blog-link"
-                        href="${link.url}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        ${link.title}
-                      </a>
-                    `)
-                    .join("")
-                : ""
-            }
-
-            ${
-              song.youtube.length > 0
-                ? song.youtube
-                    .map(video => `
-                      <a
-                        class="youtube-link"
-                        href="${video.url}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        ${video.title}
-                      </a>
-                    `)
-                    .join("")
-                : ""
-            }
-
-          </div>
-
-        </div>
-
-      </div>
-    `;
+    item.innerHTML = songCardMarkup(song);
 
     songList.appendChild(item);
+
+    if (typeof loadArtworkInto === "function") {
+      loadArtworkInto(item.querySelector(".song-artwork"), song);
+    }
   });
 }
