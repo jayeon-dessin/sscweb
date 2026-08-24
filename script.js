@@ -2,6 +2,9 @@ let songs = [];
 let selectedCountry = null;
 let isRestoringState = false;
 
+// "countries"(목록) 또는 "map"(지도)
+let viewMode = "countries";
+
 const artistFilter = document.getElementById("artist-filter");
 const languageFilter = document.getElementById("language-filter");
 const songList = document.getElementById("song-list");
@@ -10,10 +13,75 @@ const tagSearch = document.getElementById("tag-search");
 
 const countryView = document.getElementById("country-view");
 const countryList = document.getElementById("country-list");
+const mapView = document.getElementById("map-view");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
 const countrySort =  document.getElementById("country-sort");
 const backButton = document.getElementById("back-to-countries");
+const viewTabs = document.querySelectorAll(".view-tab");
+
+// -------------------------------------
+// 국가/지도 뷰 <-> 곡 목록 뷰 전환
+// -------------------------------------
+
+// 국가를 고르는 화면(목록 또는 지도)을 보여줌
+function showBrowseUI() {
+  songsView.style.display = "none";
+
+  if (viewMode === "map") {
+    mapView.style.display = "block";
+    countryView.style.display = "none";
+  } else {
+    countryView.style.display = "block";
+    mapView.style.display = "none";
+  }
+}
+
+// 곡 목록 화면을 보여줌
+function showSongsUI() {
+  countryView.style.display = "none";
+  mapView.style.display = "none";
+  songsView.style.display = "block";
+}
+
+// 현재 viewMode에 맞게 탭 버튼 active 상태 갱신
+function setActiveViewTab() {
+  viewTabs.forEach(tab => {
+    const active = tab.dataset.mode === viewMode;
+    tab.classList.toggle("active", active);
+    tab.setAttribute("aria-selected", active ? "true" : "false");
+  });
+}
+
+// 국가/지역 선택 화면으로 돌아가기 (지정한 모드로)
+function goToBrowseView(mode) {
+
+  viewMode = mode;
+  setActiveViewTab();
+
+  selectedCountry = null;
+
+  artistFilter.value = "all";
+  languageFilter.value = "all";
+  tagSearch.value = "";
+
+  makeArtistFilter(songs);
+  makeLanguageFilter(songs);
+
+  renderCountries();
+
+  const randomSong = getRandomSong(songs);
+  renderRandomSong(randomSong);
+  showRandomSong();
+
+  updateURLState(true);
+}
+
+viewTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    goToBrowseView(tab.dataset.mode);
+  });
+});
 
 const decorativeFlags = [
   "KR", 
@@ -54,6 +122,11 @@ function updateURLState(addHistoryEntry = false) {
   }
 
   const params = new URLSearchParams();
+
+  // 뷰 모드 (기본값인 목록 뷰일 때는 생략)
+  if (viewMode !== "countries") {
+    params.set("view", viewMode);
+  }
 
   // 국가
   if (selectedCountry) {
@@ -99,10 +172,15 @@ function restoreStateFromURL() {
   isRestoringState = true;
 
   const params = new URLSearchParams(location.search);
+  const view = params.get("view");
   const country = params.get("country");
   const artist = params.get("artist");
   const language = params.get("language");
   const keyword = params.get("q");
+
+  // 뷰 모드 복원
+  viewMode = view === "map" ? "map" : "countries";
+  setActiveViewTab();
 
   // 우선 전체 상태로 초기화
   selectedCountry = null;
@@ -219,6 +297,13 @@ fetch(`sscdbg.json?v=${Date.now()}`)
     renderArchiveStats();
     renderDecorativeFlags();
     renderCountries();
+
+    // 지도 뷰 초기화 (map.js). 데이터 로드 직후 한 번만 실행되며,
+    // 실제 지도는 사용자가 "지도" 탭으로 전환할 때 이미 준비되어 있도록 미리 그려둠
+    if (typeof initMap === "function") {
+      initMap();
+    }
+
     const firstRandomSong = getRandomSong(songs);
     renderRandomSong(firstRandomSong);
     restoreStateFromURL();
@@ -268,15 +353,9 @@ function renderDecorativeFlags() {
 // 국가 목록 출력
 // -------------------------------------
 
-function renderCountries() {
+// 국가별 곡 수 계산 (목록 뷰와 지도 뷰가 공유)
+function getCountryCounts() {
 
-  selectedCountry = null;
-
-  countryView.style.display = "block";
-  songsView.style.display = "none";
-  countryList.innerHTML = "";
-
-  // 국가별 곡 수 계산
   const countryCounts = new Map();
 
   songs.forEach(song => {
@@ -291,6 +370,18 @@ function renderCountries() {
 
     });
   });
+
+  return countryCounts;
+}
+
+function renderCountries() {
+
+  selectedCountry = null;
+
+  showBrowseUI();
+  countryList.innerHTML = "";
+
+  const countryCounts = getCountryCounts();
 
   const countries = [
     ...countryCounts.keys()
@@ -369,8 +460,7 @@ function selectCountry(code) {
 
   selectedCountry = code;
 
-  countryView.style.display = "none";
-  songsView.style.display = "block";
+  showSongsUI();
 
   countryTitle.innerHTML = `
     <span class="fi fi-${code.toLowerCase()}"></span>
@@ -391,39 +481,6 @@ function selectCountry(code) {
 
   renderSongs(countrySongs);
   updateURLState(true);
-}
-
-// 국가 선택시 URL 변경
-
-function updateURL() {
-  const params = new URLSearchParams();
-
-  if (selectedCountry) {
-    params.set("country", selectedCountry);
-  }
-
-  if (artistFilter.value !== "all") {
-    params.set("artist", artistFilter.value);
-  }
-
-  if (languageFilter.value !== "all") {
-    params.set("language", languageFilter.value);
-  }
-
-  const keyword = tagSearch.value.trim();
-
-  if (keyword) {
-    params.set("q", keyword);
-  }
-
-  const query = params.toString();
-
-  const newURL =
-    query
-      ? `${location.pathname}?${query}`
-      : location.pathname;
-
-  history.replaceState(null, "", newURL);
 }
 
 // -------------------------------------
@@ -521,23 +578,7 @@ countrySort.addEventListener(
 // -------------------------------------
 
 backButton.addEventListener("click", () => {
-
-  selectedCountry = null;
-
-  artistFilter.value = "all";
-  languageFilter.value = "all";
-  tagSearch.value = "";
-
-  // 다시 전체 Artist / Language 목록으로 복구
-  makeArtistFilter(songs);
-  makeLanguageFilter(songs);
-  renderCountries();
-  updateURL();
-
-  const randomSong = getRandomSong(songs);
-  renderRandomSong(randomSong);
-  showRandomSong();
-  updateURLState(true);
+  goToBrowseView(viewMode);
 });
 
 // 뒤로가기 버튼
@@ -571,10 +612,9 @@ function applyFilters() {
     selectedLanguage !== "all" ||
     keyword !== "";
 
-  // 국가 선택도 없고 필터도 없으면 국가 목록
+  // 국가 선택도 없고 필터도 없으면 국가 목록/지도
   if (!selectedCountry && !hasFilter) {
-    countryView.style.display = "block";
-    songsView.style.display = "none";
+    showBrowseUI();
     showRandomSong();
     updateURLState();
     return;
@@ -629,9 +669,8 @@ function applyFilters() {
     return true;
   });
 
-  // 국가 목록 대신 곡 목록 표시
-  countryView.style.display = "none";
-  songsView.style.display = "block";
+  // 국가 목록/지도 대신 곡 목록 표시
+  showSongsUI();
 
   // 제목
   if (selectedCountry) {

@@ -42,6 +42,59 @@ h1 {
 }
 
 /* ========================================
+   목록/지도 뷰 전환 탭
+======================================== */
+
+.view-mode-tabs {
+    display: flex;
+    justify-content: center;
+
+    gap: var(--space-1);
+    margin: 0 auto var(--space-5);
+    padding: var(--space-1);
+
+    background: white;
+    border-radius: 999px;
+
+    box-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.08);
+
+    width: fit-content;
+}
+
+.view-tab {
+    appearance: none;
+    border: none;
+    background: transparent;
+
+    padding:
+        var(--space-2)
+        var(--space-5);
+
+    border-radius: 999px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #667;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+.view-tab:hover {
+    background: #f0f3f7;
+}
+
+.view-tab.active {
+    background: #4f8ef7;
+    color: white;
+}
+
+
+/* ========================================
    국가 선택 화면
 ======================================== */
 
@@ -581,6 +634,22 @@ a:hover {
         border-left: none;
         border-top: 1px solid #e5e7eb;
     }
+
+    .view-tab {
+        padding:
+            var(--space-2)
+            var(--space-4);
+
+        font-size: 0.9rem;
+    }
+
+    #map-reset-zoom {
+        padding:
+            var(--space-1)
+            var(--space-3);
+
+        font-size: 12px;
+    }
 }
 
 
@@ -676,4 +745,196 @@ hr {
 
     font-size: 0.9rem;
     cursor: pointer;
+}
+
+
+/* ========================================
+   지도 뷰
+======================================== */
+
+.map-controls {
+    position: relative;
+
+    margin-bottom: var(--space-4);
+}
+
+#map-country-search {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding:
+        var(--space-3)
+        var(--space-4);
+
+    font-size: 15px;
+
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+
+    background: white;
+
+    transition: all 0.2s;
+}
+
+#map-country-search:focus {
+    outline: none;
+
+    border-color: #4f8ef7;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 142, 247, 0.15);
+}
+
+#map-search-results {
+    display: none;
+
+    position: absolute;
+    z-index: 20;
+
+    top: calc(100% + var(--space-2));
+    left: 0;
+    right: 0;
+
+    max-height: 320px;
+    overflow-y: auto;
+
+    background: white;
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+#map-search-results.visible {
+    display: block;
+}
+
+.map-search-result {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    gap: var(--space-2);
+
+    padding:
+        var(--space-3)
+        var(--space-4);
+
+    border: none;
+    background: none;
+
+    font-size: 15px;
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.map-search-result:hover {
+    background: #f0f3f7;
+}
+
+.map-search-result-name {
+    flex: 1;
+}
+
+.map-search-result-count {
+    font-size: 0.82rem;
+    color: #888;
+}
+
+#map-container {
+    position: relative;
+
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: var(--space-7);
+}
+
+#world-map {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    touch-action: none;
+    cursor: grab;
+}
+
+#world-map:active {
+    cursor: grabbing;
+}
+
+.map-ocean {
+    fill: #eaf2fb;
+}
+
+.map-country {
+    fill: #dfe4ea;
+    stroke: #f5f7fa;
+    stroke-width: 0.5;
+}
+
+.map-country.has-songs {
+    fill: #8fb8f6;
+    transition: fill 0.15s;
+}
+
+.map-country.has-songs:hover {
+    fill: #4f8ef7;
+}
+
+.map-dot {
+    fill: #4f8ef7;
+    stroke: white;
+    stroke-width: 1;
+    transition: fill 0.15s;
+}
+
+.map-dot:hover {
+    fill: #2563eb;
+}
+
+.map-error-text {
+    fill: #888;
+    font-size: 14px;
+}
+
+#map-reset-zoom {
+    position: absolute;
+    z-index: 10;
+
+    top: var(--space-3);
+    right: var(--space-3);
+
+    border: 1px solid #d0d7de;
+    background: white;
+
+    padding:
+        var(--space-2)
+        var(--space-4);
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    color: #444;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.1);
+
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+}
+
+#map-reset-zoom:hover {
+    background: #f0f3f7;
+    border-color: #bbb;
 }

@@ -47,7 +47,29 @@
 
   <section id="random-song"></section>
 
-  <!-- 국가 선택 -->
+  <!-- 목록/지도 뷰 전환 -->
+  <div class="view-mode-tabs" role="tablist" aria-label="국가 보기 방식">
+    <button
+      type="button"
+      class="view-tab active"
+      data-mode="countries"
+      role="tab"
+      aria-selected="true"
+    >
+      목록
+    </button>
+    <button
+      type="button"
+      class="view-tab"
+      data-mode="map"
+      role="tab"
+      aria-selected="false"
+    >
+      지도
+    </button>
+  </div>
+
+  <!-- 국가 선택: 목록 -->
   <div id="country-view">
 
     <div class="country-controls">
@@ -64,6 +86,29 @@
 
   </div>
 
+  <!-- 국가 선택: 지도 -->
+  <div id="map-view" style="display: none;">
+
+    <div class="map-controls">
+      <input
+        type="text"
+        id="map-country-search"
+        aria-label="국가 이름으로 검색"
+        placeholder="국가 이름으로 찾기 (작은 국가는 지도에서 클릭하기 어려울 수 있어요)"
+        autocomplete="off"
+      />
+      <div id="map-search-results"></div>
+    </div>
+
+    <div id="map-container">
+      <svg id="world-map" viewBox="0 0 960 500" role="img" aria-label="세계지도. 곡이 있는 국가를 클릭하면 해당 국가의 곡 목록으로 이동합니다."></svg>
+      <button type="button" id="map-reset-zoom" title="지도 처음으로">
+        전체 보기
+      </button>
+    </div>
+
+  </div>
+
   <!-- 국가 선택 후: 곡 목록 -->
   <div id="songs-view" style="display: none;">
     <button id="back-to-countries">
@@ -73,6 +118,10 @@
     <div id="song-list"></div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="geo-data.js"></script>
   <script src="script.js"></script>
+  <script src="map.js"></script>
 </body>
 </html>
