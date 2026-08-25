@@ -444,10 +444,10 @@ h1 {
 .song-artwork {
     flex-shrink: 0;
 
-    width: 64px;
-    height: 64px;
+    width: 96px;
+    height: 96px;
 
-    border-radius: 10px;
+    border-radius: 14px;
     overflow: hidden;
 
     background: #eef1f5;
@@ -477,7 +477,7 @@ h1 {
 .song-artwork.no-artwork::before {
     content: "♪";
 
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     color: #c7cdd6;
 }
 
@@ -672,14 +672,14 @@ a:hover {
     }
 
     .song-artwork {
-        width: 48px;
-        height: 48px;
+        width: 72px;
+        height: 72px;
 
-        border-radius: 8px;
+        border-radius: 12px;
     }
 
     .song-artwork.no-artwork::before {
-        font-size: 1.1rem;
+        font-size: 1.65rem;
     }
 
      .song-meta-line {
@@ -733,6 +733,14 @@ a:hover {
     }
 
     #map-reset-zoom {
+        padding:
+            var(--space-1)
+            var(--space-3);
+
+        font-size: 12px;
+    }
+
+    #bubble-reset-zoom {
         padding:
             var(--space-1)
             var(--space-3);
@@ -1060,4 +1068,110 @@ hr {
 #map-unclassified-button:hover {
     background: white;
     border-color: #888;
+}
+
+
+/* ========================================
+   버블 뷰
+======================================== */
+
+.bubble-controls {
+    margin-bottom: var(--space-4);
+}
+
+.bubble-hint {
+    color: #666;
+    font-size: 0.9rem;
+    background: white;
+    padding: var(--space-3) var(--space-4);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+#bubble-container {
+    position: relative;
+
+    background: #fafbfc;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: var(--space-7);
+}
+
+#bubble-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    touch-action: none;
+    cursor: grab;
+}
+
+#bubble-svg:active {
+    cursor: grabbing;
+}
+
+.bubble-link {
+    stroke: #b8c4d6;
+}
+
+.bubble-node {
+    cursor: pointer;
+}
+
+.bubble-bg {
+    fill: #eef1f5;
+}
+
+.bubble-note {
+    fill: #c7cdd6;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.bubble-border {
+    stroke: rgba(0, 0, 0, 0.08);
+    stroke-width: 1.5px;
+}
+
+.bubble-node:hover .bubble-border {
+    stroke: #4f8ef7;
+    stroke-width: 2.5px;
+}
+
+#bubble-reset-zoom {
+    position: absolute;
+    z-index: 10;
+
+    top: var(--space-3);
+    right: var(--space-3);
+
+    border: 1px solid #d0d7de;
+    background: white;
+
+    padding:
+        var(--space-2)
+        var(--space-4);
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    color: #444;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.1);
+
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+}
+
+#bubble-reset-zoom:hover {
+    background: #f0f3f7;
+    border-color: #bbb;
 }

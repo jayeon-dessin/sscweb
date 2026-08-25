@@ -15,6 +15,7 @@ const countryView = document.getElementById("country-view");
 const countryList = document.getElementById("country-list");
 const mapView = document.getElementById("map-view");
 const randomView = document.getElementById("random-view");
+const bubbleView = document.getElementById("bubble-view");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
 const countrySort =  document.getElementById("country-sort");
@@ -22,16 +23,17 @@ const backButton = document.getElementById("back-to-countries");
 const viewTabs = document.querySelectorAll(".view-tab");
 
 // -------------------------------------
-// 목록/지도/랜덤 뷰 <-> 곡 목록 뷰 전환
+// 목록/지도/랜덤/버블 뷰 <-> 곡 목록 뷰 전환
 // -------------------------------------
 
-// 국가를 고르는 화면(목록, 지도, 랜덤 곡 중 현재 viewMode에 맞는 것)을 보여줌
+// 국가를 고르는 화면(목록, 지도, 랜덤 곡, 버블 중 현재 viewMode에 맞는 것)을 보여줌
 function showBrowseUI() {
   songsView.style.display = "none";
 
   countryView.style.display = viewMode === "countries" ? "block" : "none";
   mapView.style.display = viewMode === "map" ? "block" : "none";
   randomView.style.display = viewMode === "random" ? "block" : "none";
+  bubbleView.style.display = viewMode === "bubble" ? "block" : "none";
 }
 
 // 곡 목록 화면을 보여줌
@@ -39,6 +41,7 @@ function showSongsUI() {
   countryView.style.display = "none";
   mapView.style.display = "none";
   randomView.style.display = "none";
+  bubbleView.style.display = "none";
   songsView.style.display = "block";
 }
 
@@ -67,11 +70,15 @@ function goToBrowseView(mode) {
   makeLanguageFilter(songs);
 
   // renderCountries()가 국가 목록도 새로 그리고, showBrowseUI()를 통해
-  // 현재 viewMode에 맞는 화면(목록/지도/랜덤)도 함께 보여줌
+  // 현재 viewMode에 맞는 화면(목록/지도/랜덤/버블)도 함께 보여줌
   renderCountries();
 
   if (mode === "random") {
     renderRandomSong(getRandomSong(songs));
+  }
+
+  if (mode === "bubble" && typeof initBubbleView === "function") {
+    initBubbleView();
   }
 
   updateURLState(true);
@@ -195,7 +202,8 @@ function restoreStateFromURL() {
   const keyword = params.get("q");
 
   // 뷰 모드 복원
-  viewMode = view === "map" ? "map" : view === "random" ? "random" : "countries";
+  const validModes = ["map", "random", "bubble"];
+  viewMode = validModes.includes(view) ? view : "countries";
   setActiveViewTab();
 
   // 우선 전체 상태로 초기화
@@ -258,6 +266,8 @@ function restoreStateFromURL() {
   } else if (viewMode === "random") {
     // renderCountries()가 이미 showBrowseUI()로 화면은 띄웠으니 내용만 채움
     renderRandomSong(getRandomSong(songs));
+  } else if (viewMode === "bubble" && typeof initBubbleView === "function") {
+    initBubbleView();
   }
   isRestoringState = false;
 }
