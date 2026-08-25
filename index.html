@@ -20,53 +20,49 @@
       <h1>세소찾 더보기</h1>
     </div>
     <div class="site-description-box">
-      <p>전 세계의 음악을 찾아볼 수 있는 개인 음악 아카이브입니다.</p>
-      <p>음악 선정에는 개인 취향이 (많이) 반영됩니다.</p>
-      <p>곡 추천: leecm0070@gmail.com</p>
+      <p>전 세계의 음악을 찾아볼 수 있는 개인 음악 아카이브입니다. 음악 선정에는 개인 취향이 (많이) 반영됩니다. 곡 추천: leecm0070@gmail.com</p>
     </div>
+    <button type="button" id="random-dice-button" title="랜덤 곡 보기" aria-label="랜덤 곡 보기">
+      🎲
+    </button>
   </header>
+
   <p id="archive-stats"></p>
   <div id="flag-strip"></div>
 
-  <!-- 항상 표시되는 검색창 -->
-  <div class="search-bar">
-    <input
-      type="text"
-      id="tag-search"
-      aria-label="곡, 아티스트, 작곡·작사자, 언어, 태그, 설명 검색"
-      placeholder="곡, 아티스트, 작곡·작사자, 언어, 태그, 설명 검색"
-    />
-  </div>
+  <!-- 검색창 + 레이아웃 모드 전환 -->
+  <div class="controls-row">
 
-  <!-- 목록/지도/버블/랜덤 뷰 전환 -->
-  <div class="view-mode-tabs" role="tablist" aria-label="국가 보기 방식">
-    <button
-      type="button"
-      class="view-tab active"
-      data-mode="countries"
-      role="tab"
-      aria-selected="true"
-    >
-      목록
-    </button>
-    <button
-      type="button"
-      class="view-tab"
-      data-mode="map"
-      role="tab"
-      aria-selected="false"
-    >
-      지도
-    </button>
-    <button
-      type="button"
-      class="view-tab"
-      data-mode="random"
-      role="tab"
-      aria-selected="false"
-    >
-      랜덤 곡
-    </button>
+    <div class="search-bar">
+      <input
+        type="text"
+        id="tag-search"
+        aria-label="곡, 아티스트, 작곡·작사자, 언어, 태그, 설명 검색"
+        placeholder="곡, 아티스트, 작곡·작사자, 언어, 태그, 설명 검색"
+      />
+    </div>
+
+    <div class="view-mode-tabs" role="tablist" aria-label="국가 보기 방식">
+      <button
+        type="button"
+        class="view-tab"
+        data-mode="countries"
+        role="tab"
+        aria-selected="false"
+      >
+        목록
+      </button>
+      <button
+        type="button"
+        class="view-tab active"
+        data-mode="map"
+        role="tab"
+        aria-selected="true"
+      >
+        지도
+      </button>
+    </div>
+
   </div>
 
   <!-- 국가 선택: 목록 -->
@@ -79,6 +75,7 @@
         <option value="name">가나다순</option>
         <option value="count-desc">곡 많은 순</option>
         <option value="count-asc">곡 적은 순</option>
+        <option value="continent">대륙별</option>
       </select>
     </div>
 
@@ -101,17 +98,17 @@
 
   </div>
 
-  <!-- 랜덤 곡 -->
-  <div id="random-view" style="display: none;">
-    <section id="random-song"></section>
-  </div>
-
   <!-- 국가 선택 후: 곡 목록 -->
   <div id="songs-view" style="display: none;">
-    <button id="back-to-countries">
-      ← 국가/지역 선택으로
-    </button>
-    <h2 id="country-title"></h2>
+    <div class="songs-view-header">
+      <button id="back-to-countries">
+        ← 국가/지역 선택으로
+      </button>
+      <h2 id="country-title"></h2>
+      <button type="button" id="random-shuffle-button" class="hidden">
+        🎲 다른 곡
+      </button>
+    </div>
     <div id="song-list"></div>
   </div>
 

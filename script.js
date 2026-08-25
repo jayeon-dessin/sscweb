@@ -2,8 +2,8 @@ let songs = [];
 let selectedCountry = null;
 let isRestoringState = false;
 
-// "countries"(목록) / "map"(지도) / "random"(랜덤 곡)
-let viewMode = "countries";
+// "map"(지도) / "countries"(목록)
+let viewMode = "map";
 const songList = document.getElementById("song-list");
 const tagSearch = document.getElementById("tag-search");
 
@@ -11,32 +11,33 @@ const tagSearch = document.getElementById("tag-search");
 const countryView = document.getElementById("country-view");
 const countryList = document.getElementById("country-list");
 const mapView = document.getElementById("map-view");
-const randomView = document.getElementById("random-view");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
 const countrySort =  document.getElementById("country-sort");
 const backButton = document.getElementById("back-to-countries");
 const viewTabs = document.querySelectorAll(".view-tab");
+const randomDiceButton = document.getElementById("random-dice-button");
+const randomShuffleButton = document.getElementById("random-shuffle-button");
 
 // -------------------------------------
-// 목록/지도/랜덤 뷰 <-> 곡 목록 뷰 전환
+// 목록/지도 뷰 <-> 곡 목록 뷰 전환
 // -------------------------------------
 
-// 국가를 고르는 화면(목록, 지도, 랜덤 곡 중 현재 viewMode에 맞는 것)을 보여줌
+// 국가를 고르는 화면(목록, 지도 중 현재 viewMode에 맞는 것)을 보여줌
 function showBrowseUI() {
   songsView.style.display = "none";
+  randomShuffleButton.classList.add("hidden");
 
   countryView.style.display = viewMode === "countries" ? "block" : "none";
   mapView.style.display = viewMode === "map" ? "block" : "none";
-  randomView.style.display = viewMode === "random" ? "block" : "none";
 }
 
 // 곡 목록 화면을 보여줌
 function showSongsUI() {
   countryView.style.display = "none";
   mapView.style.display = "none";
-  randomView.style.display = "none";
   songsView.style.display = "block";
+  randomShuffleButton.classList.add("hidden");
 }
 
 // 현재 viewMode에 맞게 탭 버튼 active 상태 갱신
@@ -59,12 +60,8 @@ function goToBrowseView(mode) {
   tagSearch.value = "";
 
   // renderCountries()가 국가 목록도 새로 그리고, showBrowseUI()를 통해
-  // 현재 viewMode에 맞는 화면(목록/지도/랜덤)도 함께 보여줌
+  // 현재 viewMode에 맞는 화면(목록/지도)도 함께 보여줌
   renderCountries();
-
-  if (mode === "random") {
-    renderRandomSong(getRandomSong(songs));
-  }
 
   updateURLState(true);
 }
@@ -75,18 +72,43 @@ viewTabs.forEach(tab => {
   });
 });
 
+// -------------------------------------
+// 랜덤 곡 (헤더의 주사위 버튼)
+// -------------------------------------
+
+function showRandomSongDetail() {
+  const song = getRandomSong(songs);
+  if (!song) return;
+
+  selectedCountry = null;
+
+  showSongsUI();
+
+  countryTitle.textContent = "🎲 랜덤 곡";
+
+  randomShuffleButton.classList.remove("hidden");
+
+  renderSongs([song]);
+}
+
+randomDiceButton?.addEventListener("click", showRandomSongDetail);
+randomShuffleButton?.addEventListener("click", showRandomSongDetail);
+
 const decorativeFlags = [
   "KR", 
   "AF", "DZ", "AR", "AU", "AT",
   "BD", "BY", "BE", "BJ", "BO", "BA", "BR", "BG",
-  "CV", "CM", "CA", "CL", "CN", "CO", "HR", "CU", "CD", 
-  "DK", "EG", "EE", "FJ", "FI", "FR", "GE", "DE", "GH", "GR", 
+  "CV", "CM", "CA", "CL", "CN", "CO", "CI", "HR", "CU", "CD", 
+  "DK", "EG", "EE", "FJ", "FI", "FR",
+  "GE", "DE", "GH", "GR", 
   "HK", "IS", "IN", "ID", "IR", "IE", "IL", "IT", 
-  "JM", "JP", "KZ", "KE", "LB", "ML", "MX", "MD", "MN",
+  "JM", "JP", "KZ", "KE", "LB",
+  "ML", "MX", "MD", "MN", "MA",
   "NL", "NZ", "NE", "NG", "KP", "NO", 
   "PK", "PS", "PH", "PL", "PT", "PR", "RU", 
   "SA", "RS", "SO", "ZA", "ES", "SE", "SY", 
-  "TW", "TH", "TT", "TN", "TR", "UA", "GB", "US", "VN"
+  "TW", "TH", "TT", "TN", "TR", "UA", "GB", "US", "VN", "ZW",
+  "XX"
 ];
 
 // -------------------------------------
@@ -131,8 +153,8 @@ function updateURLState(addHistoryEntry = false) {
 
   const params = new URLSearchParams();
 
-  // 뷰 모드 (기본값인 목록 뷰일 때는 생략)
-  if (viewMode !== "countries") {
+  // 뷰 모드 (기본값인 지도 뷰일 때는 생략)
+  if (viewMode !== "map") {
     params.set("view", viewMode);
   }
 
@@ -174,9 +196,9 @@ function restoreStateFromURL() {
   const country = params.get("country");
   const keyword = params.get("q");
 
-  // 뷰 모드 복원
-  const validModes = ["map", "random"];
-  viewMode = validModes.includes(view) ? view : "countries";
+  // 뷰 모드 복원 (기본값: 지도)
+  const validModes = ["map", "countries"];
+  viewMode = validModes.includes(view) ? view : "map";
   setActiveViewTab();
 
   // 우선 전체 상태로 초기화
@@ -207,9 +229,6 @@ function restoreStateFromURL() {
   // 국가나 필터가 있으면 곡 목록 표시
   if (validCountry || hasFilter) {
     applyFilters();
-  } else if (viewMode === "random") {
-    // renderCountries()가 이미 showBrowseUI()로 화면은 띄웠으니 내용만 채움
-    renderRandomSong(getRandomSong(songs));
   }
   isRestoringState = false;
 }
@@ -269,8 +288,6 @@ fetch(`sscdbg.json?v=${Date.now()}`)
       initMap();
     }
 
-    const firstRandomSong = getRandomSong(songs);
-    renderRandomSong(firstRandomSong);
     restoreStateFromURL();
   })
 
@@ -351,12 +368,92 @@ function getCountryCounts() {
   return countryCounts;
 }
 
+// 대륙 표시 순서 (지리적으로 자연스러운 순서)
+const CONTINENT_ORDER = [
+  "아시아", "유럽", "아프리카", "북아메리카", "남아메리카", "오세아니아"
+];
+
+function buildCountryListItem(code, count) {
+
+  const button = document.createElement("button");
+
+  button.className = "country-card";
+
+  button.innerHTML = `
+    <span class="country-name">
+      ${getCountryName(code)}
+    </span>
+
+    <span class="country-count">
+      ${count}곡
+    </span>
+  `;
+
+  button.addEventListener("click", () => {
+    selectCountry(code);
+  });
+
+  return button;
+}
+
+function renderCountriesByContinent(countries, countryCounts) {
+
+  countryList.classList.add("grouped");
+
+  const groups = new Map();
+
+  countries.forEach(code => {
+    const continent = code === "XX" ? "미분류" : (COUNTRY_CONTINENTS[code] || "기타");
+    if (!groups.has(continent)) {
+      groups.set(continent, []);
+    }
+    groups.get(continent).push(code);
+  });
+
+  groups.forEach(list => {
+    list.sort((a, b) =>
+      getCountryName(a).localeCompare(getCountryName(b), "ko")
+    );
+  });
+
+  const orderedContinents = [
+    ...CONTINENT_ORDER.filter(continent => groups.has(continent)),
+    ...[...groups.keys()].filter(
+      continent => !CONTINENT_ORDER.includes(continent)
+    ),
+  ];
+
+  orderedContinents.forEach(continent => {
+
+    const section = document.createElement("div");
+    section.className = "continent-group";
+
+    const heading = document.createElement("h3");
+    heading.className = "continent-heading";
+    heading.textContent = continent;
+    section.appendChild(heading);
+
+    const grid = document.createElement("div");
+    grid.className = "continent-country-list";
+
+    groups.get(continent).forEach(code => {
+      grid.appendChild(
+        buildCountryListItem(code, countryCounts.get(code))
+      );
+    });
+
+    section.appendChild(grid);
+    countryList.appendChild(section);
+  });
+}
+
 function renderCountries() {
 
   selectedCountry = null;
 
   showBrowseUI();
   countryList.innerHTML = "";
+  countryList.classList.remove("grouped");
 
   const countryCounts = getCountryCounts();
 
@@ -367,6 +464,11 @@ function renderCountries() {
   // 정렬
   const sortMode =
     countrySort?.value || "name";
+
+  if (sortMode === "continent") {
+    renderCountriesByContinent(countries, countryCounts);
+    return;
+  }
 
   if (sortMode === "count-desc") {
 
@@ -401,31 +503,9 @@ function renderCountries() {
 
 
   countries.forEach(code => {
-
-    const count = countryCounts.get(code);
-
-    const button =
-      document.createElement("button");
-
-    button.className = "country-card";
-
-    button.innerHTML = `
-      ${countryFlagHTML(code, "country-flag")}
-
-      <span class="country-name">
-        ${getCountryName(code)}
-      </span>
-
-      <span class="country-count">
-        ${count}곡
-      </span>
-    `;
-
-    button.addEventListener("click", () => {
-      selectCountry(code);
-    });
-
-    countryList.appendChild(button);
+    countryList.appendChild(
+      buildCountryListItem(code, countryCounts.get(code))
+    );
   });
 }
 
@@ -703,44 +783,6 @@ function songCardMarkup(song) {
       </div>
     </div>
   `;
-}
-
-function renderRandomSong(song) {
-  const randomSong = document.getElementById("random-song");
-
-  if (!randomSong || !song) return;
-
-  randomSong.innerHTML = `
-    <div class="random-song-card">
-
-      <div class="random-song-header">
-        <span class="random-song-label">
-          랜덤 곡
-        </span>
-
-        <button
-          type="button"
-          id="random-song-button"
-        >
-          다른 곡 보기
-        </button>
-      </div>
-
-      ${songCardMarkup(song)}
-    </div>
-  `;
-
-  const button =
-    document.getElementById("random-song-button");
-
-  button?.addEventListener("click", () => {
-    const newSong = getRandomSong(songs);
-    renderRandomSong(newSong);
-  });
-
-  if (typeof loadArtworkInto === "function") {
-    loadArtworkInto(randomSong.querySelector(".song-artwork"), song);
-  }
 }
 
 // -------------------------------------

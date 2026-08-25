@@ -40,7 +40,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    background: #f5f7fa;
+    background: #eef1f5;
     border-radius: 14px;
 
     padding: var(--space-4) var(--space-6);
@@ -63,33 +63,58 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    gap: var(--space-2);
 }
 
 .site-description-box p {
     margin: 0;
 
-    background: #f5f7fa;
+    background: #eef1f5;
     border-radius: 10px;
 
-    padding: var(--space-3) var(--space-4);
+    padding: var(--space-4);
 
     color: #444;
     font-size: 0.95rem;
     line-height: 1.5;
 }
 
+#random-dice-button {
+    flex-shrink: 0;
+
+    appearance: none;
+    border: none;
+    background: #eef1f5;
+
+    width: 64px;
+    border-radius: 14px;
+
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    transition: background 0.2s;
+}
+
+#random-dice-button:hover {
+    background: #e2e6ec;
+}
+
 /* ========================================
-   목록/지도 뷰 전환 탭
+   검색 + 레이아웃 모드 전환
 ======================================== */
+
+.controls-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+}
 
 .view-mode-tabs {
     display: flex;
-    justify-content: center;
 
     gap: var(--space-1);
-    margin: 0 auto var(--space-5);
     padding: var(--space-1);
 
     background: white;
@@ -99,6 +124,7 @@ body {
         0 2px 12px rgba(0, 0, 0, 0.08);
 
     width: fit-content;
+    flex-shrink: 0;
 }
 
 .view-tab {
@@ -138,35 +164,57 @@ body {
 ======================================== */
 
 #country-list {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
 
-    grid-template-columns:
-        repeat(auto-fill, minmax(150px, 1fr));
-
-    gap: var(--space-4);
+    gap: var(--space-2);
     margin-bottom: var(--space-7);
+}
+
+#country-list.grouped {
+    display: block;
+}
+
+.continent-group {
+    margin-bottom: var(--space-6);
+}
+
+.continent-heading {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #444;
+
+    margin: 0 0 var(--space-3);
+    padding-bottom: var(--space-2);
+
+    border-bottom: 1px solid #e2e6ec;
+}
+
+.continent-country-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-2);
 }
 
 /* 마우스 올렸을 때 */
 
 .country-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 9px 24px rgba(0, 0, 0, 0.13);
+    background: #eef4ff;
+    border-color: #4f8ef7;
 }
 
 
 /* 클릭할 때 */
 
 .country-card:active {
-    transform: translateY(-1px);
+    background: #e2edff;
 }
 
 
 .country-card:focus-visible {
     outline: 3px solid rgba(79, 142, 247, 0.35);
-    outline-offset: 3px;
+    outline-offset: 2px;
 }
 
 #archive-stats {
@@ -227,46 +275,28 @@ body {
 .country-card {
     appearance: none;
 
-    border: none;
+    border: 1px solid #e2e6ec;
     background: white;
 
-    border-radius: 16px;
+    border-radius: 8px;
 
     padding:
-        var(--space-5)
-        var(--space-4);
-
-    min-height: 150px;
+        var(--space-2)
+        var(--space-3);
 
     cursor: pointer;
 
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
+    align-items: baseline;
 
-    align-items: center;
-    justify-content: center;
-
-    gap: var(--space-2);
-
-    box-shadow:
-        0 3px 12px rgba(0, 0, 0, 0.08);
+    gap: var(--space-1);
 
     transition:
-        transform 0.2s,
-        box-shadow 0.2s;
+        background 0.15s,
+        border-color 0.15s;
 }
 
-.country-flag {
-    font-size: 3.5rem;
-    margin-bottom: var(--space-2);
-
-    border: 1px solid #d0d0d0;
-    border-radius: 3px;
-
-    overflow: hidden;
-}
-
-/* "XX"(미분류) 국가 코드를 위한 대체 국기 뱃지 */
+/* "XX"(미분류) 국가 코드를 위한 대체 국기 뱃지 (곡 카드 등에서 계속 사용됨) */
 .flag-unclassified {
     display: inline-flex;
     align-items: center;
@@ -292,14 +322,14 @@ body {
 }
 
 .country-name {
-    font-size: 1.05rem;
-    font-weight: 700;
+    font-size: 0.95rem;
+    font-weight: 600;
 
     color: #2c3e50;
 }
 
 .country-count {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: #888;
 }
 
@@ -308,13 +338,21 @@ body {
    국가 선택 후 화면
 ======================================== */
 
+.songs-view-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+}
+
 #country-title {
+    flex: 1;
     text-align: center;
 
-    margin:
-        var(--space-4)
-        0
-        var(--space-5);
+    margin: 0;
 
     font-size: 1.8rem;
     color: #2c3e50;
@@ -348,6 +386,37 @@ body {
     border-color: #bbb;
 }
 
+#random-shuffle-button {
+    border: 1px solid #d0d7de;
+    background: white;
+
+    padding:
+        var(--space-2)
+        var(--space-4);
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    color: #444;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+}
+
+#random-shuffle-button:hover {
+    background: #f0f3f7;
+    border-color: #bbb;
+}
+
+/* 랜덤 곡 화면이 아닐 때는 안 보이되, 레이아웃 자리(가운데 정렬 균형)는 유지 */
+#random-shuffle-button.hidden {
+    display: inline-flex !important;
+    visibility: hidden;
+}
+
 
 /* ========================================
    필터
@@ -359,7 +428,9 @@ body {
 ======================================== */
 
 .search-bar {
-    margin-bottom: var(--space-6);
+    flex: 1 1 320px;
+    max-width: 420px;
+    min-width: 160px;
 }
 
 .search-bar input {
@@ -665,6 +736,25 @@ a:hover {
         white-space: normal;
     }
 
+    #random-dice-button {
+        width: 100%;
+        padding: var(--space-3);
+    }
+
+    .controls-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar {
+        max-width: none;
+    }
+
+    .view-mode-tabs {
+        width: 100%;
+        justify-content: center;
+    }
+
     .random-song-card {
         padding: var(--space-4);
     }
@@ -674,18 +764,13 @@ a:hover {
     }
 
     #country-list {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: var(--space-3);
+        gap: var(--space-2);
     }
 
     .country-card {
-        min-height: 125px;
-
         padding:
-            var(--space-4)
-            var(--space-2);
+            var(--space-2)
+            var(--space-3);
     }
 
     #song-list > div {
@@ -895,24 +980,55 @@ hr {
     stroke-width: 0.5;
 }
 
-.map-country.has-songs {
-    fill: #8fb8f6;
+/* 곡 수가 많을수록 진한 색 (1곡 / 2~4곡 / 5~10곡 / 11곡 이상) */
+.map-country.count-tier-1 {
+    fill: #cfe0fb;
+    transition: fill 0.15s;
+}
+
+.map-country.count-tier-2 {
+    fill: #9dc3f7;
+    transition: fill 0.15s;
+}
+
+.map-country.count-tier-3 {
+    fill: #5d97f0;
+    transition: fill 0.15s;
+}
+
+.map-country.count-tier-4 {
+    fill: #2563eb;
     transition: fill 0.15s;
 }
 
 .map-country.has-songs:hover {
-    fill: #4f8ef7;
+    fill: #1d4ed8;
 }
 
 .map-dot {
-    fill: #4f8ef7;
     stroke: white;
     stroke-width: 1;
     transition: fill 0.15s;
 }
 
-.map-dot:hover {
+.map-dot.count-tier-1 {
+    fill: #cfe0fb;
+}
+
+.map-dot.count-tier-2 {
+    fill: #9dc3f7;
+}
+
+.map-dot.count-tier-3 {
+    fill: #5d97f0;
+}
+
+.map-dot.count-tier-4 {
     fill: #2563eb;
+}
+
+.map-dot:hover {
+    fill: #1d4ed8;
 }
 
 .map-error-text {

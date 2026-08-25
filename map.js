@@ -27,6 +27,15 @@ function buildNumericToAlpha2() {
   return map;
 }
 
+// 곡 수에 따라 4단계로 색을 진하게 (1곡 / 2~4곡 / 5~10곡 / 11곡 이상)
+function countTierClass(count) {
+  if (!count || count <= 0) return "";
+  if (count === 1) return "count-tier-1";
+  if (count <= 4) return "count-tier-2";
+  if (count <= 10) return "count-tier-3";
+  return "count-tier-4";
+}
+
 async function initMap() {
 
   if (mapInitStarted) return;
@@ -92,8 +101,13 @@ async function initMap() {
     .join("path")
     .attr("class", feature => {
       const alpha2 = numericToAlpha2.get(feature.id);
-      const hasSongs = alpha2 && countryCounts.get(alpha2) > 0;
-      return "map-country" + (hasSongs ? " has-songs" : "");
+      const count = alpha2 ? countryCounts.get(alpha2) : 0;
+      const hasSongs = count > 0;
+      return [
+        "map-country",
+        hasSongs ? "has-songs" : "",
+        hasSongs ? countTierClass(count) : "",
+      ].filter(Boolean).join(" ");
     })
     .attr("data-code", feature => numericToAlpha2.get(feature.id) || "")
     .attr("d", mapPathGenerator)
@@ -124,7 +138,9 @@ async function initMap() {
   mapDotGroup.selectAll("circle.map-dot")
     .data(dotCodes)
     .join("circle")
-    .attr("class", "map-dot")
+    .attr("class", code =>
+      ["map-dot", countTierClass(countryCounts.get(code))].filter(Boolean).join(" ")
+    )
     .attr("data-code", code => code)
     .attr("cx", code => mapProjection(COUNTRY_CENTROIDS[code])[0])
     .attr("cy", code => mapProjection(COUNTRY_CENTROIDS[code])[1])
