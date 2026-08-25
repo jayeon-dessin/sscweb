@@ -4,9 +4,6 @@ let isRestoringState = false;
 
 // "countries"(목록) / "map"(지도) / "random"(랜덤 곡)
 let viewMode = "countries";
-
-const artistFilter = document.getElementById("artist-filter");
-const languageFilter = document.getElementById("language-filter");
 const songList = document.getElementById("song-list");
 const tagSearch = document.getElementById("tag-search");
 
@@ -15,7 +12,6 @@ const countryView = document.getElementById("country-view");
 const countryList = document.getElementById("country-list");
 const mapView = document.getElementById("map-view");
 const randomView = document.getElementById("random-view");
-const bubbleView = document.getElementById("bubble-view");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
 const countrySort =  document.getElementById("country-sort");
@@ -23,17 +19,16 @@ const backButton = document.getElementById("back-to-countries");
 const viewTabs = document.querySelectorAll(".view-tab");
 
 // -------------------------------------
-// 목록/지도/랜덤/버블 뷰 <-> 곡 목록 뷰 전환
+// 목록/지도/랜덤 뷰 <-> 곡 목록 뷰 전환
 // -------------------------------------
 
-// 국가를 고르는 화면(목록, 지도, 랜덤 곡, 버블 중 현재 viewMode에 맞는 것)을 보여줌
+// 국가를 고르는 화면(목록, 지도, 랜덤 곡 중 현재 viewMode에 맞는 것)을 보여줌
 function showBrowseUI() {
   songsView.style.display = "none";
 
   countryView.style.display = viewMode === "countries" ? "block" : "none";
   mapView.style.display = viewMode === "map" ? "block" : "none";
   randomView.style.display = viewMode === "random" ? "block" : "none";
-  bubbleView.style.display = viewMode === "bubble" ? "block" : "none";
 }
 
 // 곡 목록 화면을 보여줌
@@ -41,7 +36,6 @@ function showSongsUI() {
   countryView.style.display = "none";
   mapView.style.display = "none";
   randomView.style.display = "none";
-  bubbleView.style.display = "none";
   songsView.style.display = "block";
 }
 
@@ -62,23 +56,14 @@ function goToBrowseView(mode) {
 
   selectedCountry = null;
 
-  artistFilter.value = "all";
-  languageFilter.value = "all";
   tagSearch.value = "";
 
-  makeArtistFilter(songs);
-  makeLanguageFilter(songs);
-
   // renderCountries()가 국가 목록도 새로 그리고, showBrowseUI()를 통해
-  // 현재 viewMode에 맞는 화면(목록/지도/랜덤/버블)도 함께 보여줌
+  // 현재 viewMode에 맞는 화면(목록/지도/랜덤)도 함께 보여줌
   renderCountries();
 
   if (mode === "random") {
     renderRandomSong(getRandomSong(songs));
-  }
-
-  if (mode === "bubble" && typeof initBubbleView === "function") {
-    initBubbleView();
   }
 
   updateURLState(true);
@@ -156,16 +141,6 @@ function updateURLState(addHistoryEntry = false) {
     params.set("country", selectedCountry);
   }
 
-  // Artist
-  if (artistFilter.value !== "all") {
-    params.set("artist", artistFilter.value);
-  }
-
-  // Language
-  if (languageFilter.value !== "all") {
-    params.set("language", languageFilter.value);
-  }
-
   // 검색어
   const keyword = tagSearch.value.trim();
 
@@ -197,23 +172,15 @@ function restoreStateFromURL() {
   const params = new URLSearchParams(location.search);
   const view = params.get("view");
   const country = params.get("country");
-  const artist = params.get("artist");
-  const language = params.get("language");
   const keyword = params.get("q");
 
   // 뷰 모드 복원
-  const validModes = ["map", "random", "bubble"];
+  const validModes = ["map", "random"];
   viewMode = validModes.includes(view) ? view : "countries";
   setActiveViewTab();
 
   // 우선 전체 상태로 초기화
   selectedCountry = null;
-
-  makeArtistFilter(songs);
-  makeLanguageFilter(songs);
-
-  artistFilter.value = "all";
-  languageFilter.value = "all";
   tagSearch.value = "";
 
   // URL의 국가가 실제 데이터에 존재하는지 확인
@@ -230,35 +197,12 @@ function restoreStateFromURL() {
     renderCountries();
   }
 
-  // Artist 복원
-  if (
-    artist &&
-    [...artistFilter.options].some(
-      option => option.value === artist
-    )
-  ) {
-    artistFilter.value = artist;
-  }
-
-  // Language 복원
-  if (
-    language &&
-    [...languageFilter.options].some(
-      option => option.value === language
-    )
-  ) {
-    languageFilter.value = language;
-  }
-
   // 검색어 복원
   if (keyword) {
     tagSearch.value = keyword;
   }
 
-  const hasFilter =
-    artistFilter.value !== "all" ||
-    languageFilter.value !== "all" ||
-    tagSearch.value.trim() !== "";
+  const hasFilter = tagSearch.value.trim() !== "";
 
   // 국가나 필터가 있으면 곡 목록 표시
   if (validCountry || hasFilter) {
@@ -266,8 +210,6 @@ function restoreStateFromURL() {
   } else if (viewMode === "random") {
     // renderCountries()가 이미 showBrowseUI()로 화면은 띄웠으니 내용만 채움
     renderRandomSong(getRandomSong(songs));
-  } else if (viewMode === "bubble" && typeof initBubbleView === "function") {
-    initBubbleView();
   }
   isRestoringState = false;
 }
@@ -317,10 +259,6 @@ fetch(`sscdbg.json?v=${Date.now()}`)
     }));
 
 
-    // 첫 화면에서도 전체 Artist / Language 표시
-    makeArtistFilter(songs);
-    makeLanguageFilter(songs);
-
     renderArchiveStats();
     renderDecorativeFlags();
     renderCountries();
@@ -367,11 +305,23 @@ function renderDecorativeFlags() {
   }
 
 
-  flagStrip.innerHTML = decorativeFlags
-    .map(code =>
-      `<span class="fi fi-${code.toLowerCase()}"></span>`
-    )
-    .join("");
+  flagStrip.innerHTML = "";
+
+  decorativeFlags.forEach(code => {
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "flag-strip-item";
+    button.setAttribute("aria-label", getCountryName(code));
+    button.title = getCountryName(code);
+    button.innerHTML = `<span class="fi fi-${code.toLowerCase()}"></span>`;
+
+    button.addEventListener("click", () => {
+      selectCountry(code);
+    });
+
+    flagStrip.appendChild(button);
+  });
 }
 
 
@@ -498,12 +448,6 @@ function selectCountry(code) {
     song.countries.includes(code)
   );
 
-  // 선택한 국가에 존재하는 Artist / Language만 표시
-  makeArtistFilter(countrySongs);
-  makeLanguageFilter(countrySongs);
-
-  artistFilter.value = "all";
-  languageFilter.value = "all";
   tagSearch.value = "";
 
   renderSongs(countrySongs);
@@ -511,84 +455,8 @@ function selectCountry(code) {
 }
 
 // -------------------------------------
-// Artist 필터 만들기
-// -------------------------------------
-
-function makeArtistFilter(songArray) {
-
-  artistFilter.innerHTML =
-    `<option value="all">전체</option>`;
-
-  const artists = [
-    ...new Set(
-      songArray.flatMap(song => song.artist)
-    )
-  ]
-
-    .filter(Boolean)
-
-    .sort((a, b) =>
-      a.localeCompare(b, "ko")
-    );
-
-  artists.forEach(artist => {
-
-    const option =
-      document.createElement("option");
-
-    option.value = artist;
-    option.textContent = artist;
-
-    artistFilter.appendChild(option);
-  });
-}
-
-// -------------------------------------
-// Language 필터 만들기
-// -------------------------------------
-
-function makeLanguageFilter(songArray) {
-
-  languageFilter.innerHTML =
-    `<option value="all">전체</option>`;
-
-  const languages = [
-    ...new Set(
-      songArray.flatMap(song => song.language)
-    )
-  ]
-
-    .filter(Boolean)
-
-    .sort((a, b) =>
-      a.localeCompare(b, "ko")
-    );
-
-  languages.forEach(language => {
-
-    const option =
-      document.createElement("option");
-
-    option.value = language;
-    option.textContent = language;
-
-    languageFilter.appendChild(option);
-  });
-}
-
-// -------------------------------------
 // 필터 이벤트
 // -------------------------------------
-
-artistFilter.addEventListener(
-  "change",
-  applyFilters
-);
-
-languageFilter.addEventListener(
-  "change",
-  applyFilters
-);
 
 tagSearch.addEventListener(
   "input",
@@ -628,16 +496,11 @@ function normalizeSearchText(value) {
 
 function applyFilters() {
 
-  const selectedArtist = artistFilter.value;
-  const selectedLanguage = languageFilter.value;
   const keyword = normalizeSearchText(
     tagSearch.value.trim()
   );
 
-  const hasFilter =
-    selectedArtist !== "all" ||
-    selectedLanguage !== "all" ||
-    keyword !== "";
+  const hasFilter = keyword !== "";
 
   // 국가 선택도 없고 필터도 없으면 국가 목록/지도/랜덤
   if (!selectedCountry && !hasFilter) {
@@ -656,29 +519,14 @@ function applyFilters() {
       return false;
     }
 
-    // Artist
-    if (
-      selectedArtist !== "all" &&
-      !song.artist.includes(selectedArtist)
-    ) {
-      return false;
-    }
-
-    // Language
-    if (
-      selectedLanguage !== "all" &&
-      !song.language.includes(selectedLanguage)
-    ) {
-      return false;
-    }
-
-    // 텍스트 검색
+    // 텍스트 검색 (제목, 아티스트, 작곡·작사자, 언어, 태그, 설명)
     if (keyword) {
 
       const searchableText = [
         song.title,
         ...song.artist,
         ...song.songwriters,
+        ...song.language,
         ...song.tags,
         song.memo,
       ]

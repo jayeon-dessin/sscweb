@@ -15,33 +15,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>세소찾 더보기</h1>
-  <p class="site-description">
-  전 세계의 음악을 찾아볼 수 있는 개인 음악 아카이브입니다. 음악 선정에는 개인 취향이 (많이) 반영됩니다. 곡 추천: leecm0070@gmail.com
-  </p>
+  <header class="site-header">
+    <div class="site-title-box">
+      <h1>세소찾 더보기</h1>
+    </div>
+    <div class="site-description-box">
+      <p>전 세계의 음악을 찾아볼 수 있는 개인 음악 아카이브입니다.</p>
+      <p>음악 선정에는 개인 취향이 (많이) 반영됩니다. 곡 추천: leecm0070@gmail.com</p>
+    </div>
+  </header>
   <p id="archive-stats"></p>
   <div id="flag-strip"></div>
-
-  <!-- 항상 보이는 필터 -->
-  <div class="filter-bar">
-    <label for="artist-filter">Artist</label>
-    <select id="artist-filter">
-      <option value="all">전체</option>
-    </select>
-
-    <label for="language-filter">Language</label>
-    <select id="language-filter">
-      <option value="all">전체</option>
-    </select>
-  </div>
 
   <!-- 항상 표시되는 검색창 -->
   <div class="search-bar">
     <input
       type="text"
       id="tag-search"
-      aria-label="곡, 아티스트, 작곡·작사자, 태그, 설명 검색"
-      placeholder="곡, 아티스트, 작곡·작사자, 태그, 설명 검색"
+      aria-label="곡, 아티스트, 작곡·작사자, 언어, 태그, 설명 검색"
+      placeholder="곡, 아티스트, 작곡·작사자, 언어, 태그, 설명 검색"
     />
   </div>
 
@@ -64,15 +56,6 @@
       aria-selected="false"
     >
       지도
-    </button>
-    <button
-      type="button"
-      class="view-tab"
-      data-mode="bubble"
-      role="tab"
-      aria-selected="false"
-    >
-      버블
     </button>
     <button
       type="button"
@@ -105,17 +88,6 @@
   <!-- 국가 선택: 지도 -->
   <div id="map-view" style="display: none;">
 
-    <div class="map-controls">
-      <input
-        type="text"
-        id="map-country-search"
-        aria-label="국가 이름으로 검색"
-        placeholder="국가 이름으로 찾기 (작은 국가는 지도에서 클릭하기 어려울 수 있어요)"
-        autocomplete="off"
-      />
-      <div id="map-search-results"></div>
-    </div>
-
     <div id="map-container">
       <svg id="world-map" viewBox="0 0 960 500" role="img" aria-label="세계지도. 곡이 있는 국가를 클릭하면 해당 국가의 곡 목록으로 이동합니다."></svg>
       <button type="button" id="map-reset-zoom" title="지도 처음으로">
@@ -133,29 +105,6 @@
     <section id="random-song"></section>
   </div>
 
-  <!-- 곡 유사도 버블 뷰 -->
-  <div id="bubble-view" style="display: none;">
-
-    <div class="bubble-controls">
-      <p class="bubble-hint">
-        비슷한 곡끼리(같은 아티스트·작곡가·언어·태그·인접 국가) 가까이 모여요. 버블을 클릭하면 그 곡으로 이동하고, 드래그해서 옮길 수도 있어요.
-      </p>
-    </div>
-
-    <div id="bubble-container">
-      <svg id="bubble-svg" viewBox="0 0 1000 640" role="img" aria-label="곡 유사도에 따라 배치된 버블 그래프. 버블을 클릭하면 그 곡으로 이동합니다."></svg>
-      <div class="bubble-buttons">
-        <button type="button" id="bubble-reset-layout" title="버블 위치를 다시 계산해서 정리해요">
-          버블 재배치
-        </button>
-        <button type="button" id="bubble-reset-zoom" title="확대/축소를 원래대로">
-          전체 보기
-        </button>
-      </div>
-    </div>
-
-  </div>
-
   <!-- 국가 선택 후: 곡 목록 -->
   <div id="songs-view" style="display: none;">
     <button id="back-to-countries">
@@ -171,6 +120,5 @@
   <script src="album-art.js"></script>
   <script src="script.js"></script>
   <script src="map.js"></script>
-  <script src="bubble.js"></script>
 </body>
 </html>

@@ -2715,7 +2715,7 @@
     "title": "7 элемент (The 7th Element)",
     "year": "2001",
     "artist": [
-      "Витас (Vitas)"
+      "Vitas (Витас)"
     ],
     "songwriters": [
       "Витас"
@@ -5740,7 +5740,7 @@
     "title": "Австралия (오스트레일리아)",
     "year": "1997",
     "artist": [
-      "МАЙАМИ"
+      "Miami (МАЙАМИ)"
     ],
     "songwriters": [
       "Салакаев Валерий",
@@ -5910,7 +5910,7 @@
     "title": "Прощай навеки, последняя любовь",
     "year": "1989",
     "artist": [
-      "Фристайл"
+      "Freestyle (Фристайл)"
     ],
     "songwriters": [
       "Вадима Казаченко"
@@ -7575,7 +7575,7 @@
     "title": "Ој Алија Aљо (Oj Alija Aljo)",
     "year": "1993",
     "artist": [
-      "Коридор (Koridor)"
+      "Koridor (Коридор)"
     ],
     "songwriters": [
       "Ljubisa Tovirac",
@@ -9177,5 +9177,418 @@
       }
     ],
     "image": "covers/270-mbube-the-lion-sleeps-tonight-solomon-linda-s-original-eveni.jpg"
+  },
+  {
+    "title": "공군가",
+    "year": "1951",
+    "artist": [],
+    "songwriters": [
+      "최용덕",
+      "김성태"
+    ],
+    "language": [
+      "한국어"
+    ],
+    "countries": [
+      "KR"
+    ],
+    "tags": [
+      "아시아",
+      "군가"
+    ],
+    "memo": "한국전쟁 중 창작된 대한민국 공군 군가.",
+    "youtube": [
+      {
+        "title": "대한민국공군",
+        "url": "https://www.youtube.com/watch?v=VQ9Gjr9dP8c"
+      }
+    ],
+    "image": "covers/271-공군가.jpg"
+  },
+  {
+    "title": "바다로 가자",
+    "year": "1946",
+    "artist": [],
+    "songwriters": [
+      "손원일",
+      "홍은혜"
+    ],
+    "language": [
+      "한국어"
+    ],
+    "countries": [
+      "KR"
+    ],
+    "tags": [
+      "아시아",
+      "군가"
+    ],
+    "memo": "대한민국 해군 최초의 군가. 초대 해군참모총장 부부가 작사 및 작곡",
+    "youtube": [
+      {
+        "title": "국방일보",
+        "url": "https://www.youtube.com/watch?v=lzNKijtrqm4"
+      }
+    ],
+    "image": "covers/272-바다로-가자.jpg"
+  },
+  {
+    "title": "팔각모 사나이",
+    "year": "1982",
+    "artist": [],
+    "songwriters": [
+      "홍승용",
+      "김강섭"
+    ],
+    "language": [
+      "한국어"
+    ],
+    "countries": [
+      "KR"
+    ],
+    "tags": [
+      "아시아",
+      "군가"
+    ],
+    "memo": "해병대를 상징하는 군가.",
+    "youtube": [
+      {
+        "title": "국방일보",
+        "url": "https://www.youtube.com/watch?v=0fioKUKuDTw"
+      }
+    ],
+    "image": ""
+  },
+  {
+    "title": "전선을 간다",
+    "year": "1981",
+    "artist": [],
+    "songwriters": [
+      "우용삼",
+      "최창권"
+    ],
+    "language": [
+      "한국어"
+    ],
+    "countries": [
+      "KR"
+    ],
+    "tags": [
+      "아시아",
+      "군가"
+    ],
+    "memo": "육군과 공군에서 사용하는, 가장 인기 있는 군가 중 하나.",
+    "youtube": [
+      {
+        "title": "국방일보",
+        "url": "https://www.youtube.com/watch?v=CKITMkXpge8"
+      }
+    ],
+    "image": "covers/274-전선을-간다.jpg"
+  },
+  {
+    "title": "푸른 소나무",
+    "year": "1997",
+    "artist": [],
+    "songwriters": [
+      "김용범",
+      "송종근"
+    ],
+    "language": [
+      "한국어"
+    ],
+    "countries": [
+      "KR"
+    ],
+    "tags": [
+      "아시아",
+      "군가"
+    ],
+    "memo": "생각보다 최근에 작곡된 육군 대표 군가 중 하나.",
+    "youtube": [
+      {
+        "title": "국방일보",
+        "url": "https://www.youtube.com/watch?v=_FHkspxHtHc"
+      }
+    ],
+    "image": "covers/275-푸른-소나무.jpg"
+  },
+  {
+    "title": "진짜 사나이",
+    "year": "1962",
+    "artist": [],
+    "songwriters": [
+      "유호",
+      "이흥렬"
+    ],
+    "language": [
+      "한국어"
+    ],
+    "countries": [
+      "KR"
+    ],
+    "tags": [
+      "아시아",
+      "군가"
+    ],
+    "memo": "모르면 진짜 간첩인 군가.",
+    "youtube": [
+      {
+        "title": "가사",
+        "url": "https://www.youtube.com/watch?v=grIPlM4-iyM"
+      }
+    ],
+    "image": "covers/276-진짜-사나이.jpg"
+  },
+  {
+    "title": "热爱105°C的你 (105°C를 사랑하는 너)",
+    "year": "2019",
+    "artist": [
+      "A Si (阿肆)"
+    ],
+    "songwriters": [
+      "阿肆"
+    ],
+    "language": [
+      "중국어"
+    ],
+    "countries": [
+      "CN"
+    ],
+    "tags": [
+      "아시아",
+      "포크",
+      "팝",
+      "밈"
+    ],
+    "memo": "'Super Idol' 밈으로 알려진, 왓슨스 증류수 홍보곡.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=_FVvA1lUkQ8"
+      },
+      {
+        "title": "밈으로 유명한 톈이밍(田一名) 버전.",
+        "url": "https://www.youtube.com/watch?v=ZlHRhzXezAc"
+      }
+    ],
+    "image": "covers/277-热爱105-c的你-105-c를-사랑하는-너-a-si-阿肆.jpg"
+  },
+  {
+    "title": "Rivers of Babylon",
+    "year": "1970",
+    "artist": [
+      "The Melodians"
+    ],
+    "songwriters": [
+      "Brent Dowe",
+      "Trevor McNaughton"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "JM"
+    ],
+    "tags": [
+      "북아메리카",
+      "종교음악"
+    ],
+    "memo": "시편 137편의 내용을 바탕으로 한 곡. 바빌론에 끌려간 유대인들의 노래",
+    "youtube": [
+      {
+        "title": "음원 (The Melodians 원곡)",
+        "url": "https://www.youtube.com/watch?v=BXf1j8Hz2bU"
+      },
+      {
+        "title": "Boney M. 버전",
+        "url": "https://www.youtube.com/watch?v=l3QxT-w3WMo"
+      }
+    ],
+    "image": "covers/278-rivers-of-babylon-the-melodians.jpg"
+  },
+  {
+    "title": "Legend",
+    "year": "2022",
+    "artist": [
+      "Otyken"
+    ],
+    "songwriters": [
+      "Andrey Medonos",
+      "Traditional"
+    ],
+    "language": [
+      "하카스어"
+    ],
+    "countries": [
+      "RU"
+    ],
+    "tags": [
+      "아시아",
+      "포크"
+    ],
+    "memo": "시베리아 하카시야 전설의 현대적 재해석.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=tXLoP9iSU5Y"
+      }
+    ],
+    "image": "covers/279-legend-otyken.jpg"
+  },
+  {
+    "title": "Wellerman",
+    "year": "19c?",
+    "artist": [],
+    "songwriters": [
+      "Traditional"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "NZ"
+    ],
+    "tags": [
+      "오세아니아",
+      "민요",
+      "아카펠라"
+    ],
+    "memo": "뉴질랜드 고래잡이 선원들의 노동요. Nathan Evans의 아카펠라 버전이 크게 인기를 끌었다.",
+    "youtube": [
+      {
+        "title": "스코틀랜드 가수 Nathan Evans 버전",
+        "url": "https://www.youtube.com/watch?v=qP-7GNoDJ5c"
+      },
+      {
+        "title": "The Wellermen 버전",
+        "url": "https://www.youtube.com/watch?v=90Oc9Xl5Aps"
+      }
+    ],
+    "image": "covers/280-wellerman.jpg"
+  },
+  {
+    "title": "Dixie's Land",
+    "year": "1859",
+    "artist": [],
+    "songwriters": [
+      "Dan Emmett"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "US"
+    ],
+    "tags": [
+      "북아메리카",
+      "민스트럴",
+      "포크"
+    ],
+    "memo": "미국 남북 전쟁 기간 남군에 의해 사용된, 남부를 상징하는 곡 중 하나.",
+    "youtube": [
+      {
+        "title": "영어 가사",
+        "url": "https://www.youtube.com/watch?v=5OKdbc0DYpM"
+      },
+      {
+        "title": "2nd South Carolina String Band",
+        "url": "https://www.youtube.com/watch?v=wFNr9FnpZBk"
+      }
+    ],
+    "image": "covers/281-dixie-s-land.jpg"
+  },
+  {
+    "title": "NO BATIDÃO",
+    "year": "2025",
+    "artist": [
+      "ZXKAI",
+      "slxughter"
+    ],
+    "songwriters": [
+      "ZXKAI",
+      "slxughter"
+    ],
+    "language": [
+      "포르투갈어"
+    ],
+    "countries": [
+      "XX"
+    ],
+    "tags": [
+      "펑크",
+      "밈"
+    ],
+    "memo": "호불호가 갈리는 강렬한 브라질리언 펑크 곡. AI를 쓴 것 같기도 하다",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=ZB0amc1TZ3Y"
+      }
+    ],
+    "image": "covers/282-no-batidão-zxkai.jpg"
+  },
+  {
+    "title": "Ave Maria de Lourdes",
+    "year": "1873",
+    "artist": [],
+    "songwriters": [
+      "Jean Gaignet",
+      "Traditional"
+    ],
+    "language": [
+      "프랑스어"
+    ],
+    "countries": [
+      "FR"
+    ],
+    "tags": [
+      "유럽",
+      "종교음악"
+    ],
+    "memo": "'원죄 없는 마리아'에 관한 유명한 가톨릭 성가. 다양한 언어로 번역되어 불린다.",
+    "youtube": [
+      {
+        "title": "프랑스 원곡",
+        "url": "https://www.youtube.com/watch?v=DHMsh1DYYOs"
+      },
+      {
+        "title": "영어 버전 (Immaculate Mary)",
+        "url": "https://www.youtube.com/watch?v=Dcs6WPjZi0k"
+      }
+    ],
+    "image": "covers/283-ave-maria-de-lourdes.jpg"
+  },
+  {
+    "title": "L'Amour toujours",
+    "year": "2000",
+    "artist": [
+      "Gigi D'Agostino",
+      "Ola Onabule"
+    ],
+    "songwriters": [
+      "Luigino Di Agostino",
+      "Carlo Montagner",
+      "Paolo Sandrini",
+      "Diego Leoni"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "IT"
+    ],
+    "tags": [
+      "유럽",
+      "일렉트로닉"
+    ],
+    "memo": "국제적 성공을 거둔 지지 다고스티노의 대표곡. 제목만 프랑스어고 곡은 영어다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=w15oWDh02K4"
+      }
+    ],
+    "image": "covers/284-l-amour-toujours-gigi-d-agostino.jpg"
   }
 ]
