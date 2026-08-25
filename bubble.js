@@ -280,16 +280,19 @@ function initBubbleView() {
 
   bubbleSimulation = d3
     .forceSimulation(nodes)
+    .velocityDecay(0.5)
     .force(
       "link",
       d3
         .forceLink(links)
         .id(d => d.id)
-        .distance(d => 40 + (1 - d.sim) * 90)
-        .strength(d => 0.15 + d.sim * 0.5)
+        .distance(d => 12 + (1 - d.sim) * 45)
+        .strength(d => 0.25 + d.sim * 0.6)
     )
-    .force("charge", d3.forceManyBody().strength(-45))
+    .force("charge", d3.forceManyBody().strength(-16))
     .force("center", d3.forceCenter(BUBBLE_WIDTH / 2, BUBBLE_HEIGHT / 2))
+    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.04))
+    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.04))
     .force("collide", d3.forceCollide(BUBBLE_NODE_RADIUS + 3))
     .on("tick", () => {
       applyCursorForce(nodes);
@@ -304,7 +307,8 @@ function initBubbleView() {
     });
 
   // -------------------------------------
-  // 커서 인터랙션: 마우스 근처 버블이 살짝 밀려남
+  // 커서 인터랙션: 마우스 근처 버블이 아주 살짝 밀려남
+  // (너무 세게 반응하면 클릭/드래그가 어려워지므로 반경을 좁고, 힘을 약하게 유지)
   // -------------------------------------
 
   bubbleSvg
@@ -312,8 +316,8 @@ function initBubbleView() {
       const [x, y] = d3.pointer(event, bubbleInnerGroup.node());
       bubbleCursorPoint = { x, y };
 
-      if (bubbleSimulation.alpha() < 0.05) {
-        bubbleSimulation.alphaTarget(0.05).restart();
+      if (bubbleSimulation.alpha() < 0.02) {
+        bubbleSimulation.alphaTarget(0.02).restart();
       }
     })
     .on("pointerleave", () => {
@@ -345,10 +349,13 @@ function initBubbleView() {
 }
 
 // 마우스 근처의 버블을 부드럽게 밀어냄 (드래그 중인 노드는 건드리지 않음)
+// 마우스 근처의 버블을 부드럽게 밀어냄 (드래그 중인 노드는 건드리지 않음)
+// 반경을 좁고 힘을 약하게 유지해서, 클릭/드래그하려는 버블이 도망가지 않도록 함
 function applyCursorForce(nodes) {
   if (!bubbleCursorPoint) return;
 
-  const influenceRadius = 90;
+  const influenceRadius = 45;
+  const maxPush = 0.6;
 
   nodes.forEach(node => {
     if (node.fx != null || node.fy != null) return;
@@ -358,7 +365,7 @@ function applyCursorForce(nodes) {
     const distance = Math.sqrt(dx * dx + dy * dy) || 0.0001;
 
     if (distance < influenceRadius) {
-      const push = ((influenceRadius - distance) / influenceRadius) * 3;
+      const push = ((influenceRadius - distance) / influenceRadius) * maxPush;
       node.x += (dx / distance) * push;
       node.y += (dy / distance) * push;
     }
