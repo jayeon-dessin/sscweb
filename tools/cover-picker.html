@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>앨범 아트 검토 도구 (로컬 전용)</title>
+<style>
+  :root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+  }
+
+  body {
+    font-family: "Noto Sans KR", "Noto Sans", Arial, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    max-width: 780px;
+    margin: var(--space-6) auto;
+    padding: 0 var(--space-5);
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .intro {
+    color: #555;
+    background: white;
+    padding: var(--space-4);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin-bottom: var(--space-5);
+  }
+
+  .intro code {
+    background: #eef1f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  button {
+    font: inherit;
+    cursor: pointer;
+  }
+
+  #pick-folder-btn, #manual-url-btn, #skip-btn {
+    border: none;
+    background: #4f8ef7;
+    color: white;
+    padding: var(--space-3) var(--space-5);
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  #pick-folder-btn:hover, #manual-url-btn:hover {
+    background: #2563eb;
+  }
+
+  #skip-btn {
+    background: #eef1f5;
+    color: #555;
+  }
+
+  #skip-btn:hover {
+    background: #e2e6ec;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  #fallback-note {
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  #progress {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: var(--space-3);
+  }
+
+  #song-card {
+    background: white;
+    border-radius: 16px;
+    padding: var(--space-5);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  }
+
+  #song-info h2 {
+    margin: 0 0 var(--space-1);
+  }
+
+  #song-info p {
+    margin: 0 0 var(--space-4);
+    color: #666;
+  }
+
+  #song-info .query-used {
+    font-size: 0.82rem;
+    color: #999;
+    margin-bottom: var(--space-4);
+  }
+
+  #candidates {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+
+  .candidate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 2px solid transparent;
+    background: #f8f9fb;
+    border-radius: 12px;
+    padding: var(--space-2);
+    text-align: left;
+  }
+
+  .candidate-card:hover {
+    border-color: #4f8ef7;
+    background: #eef4ff;
+  }
+
+  .candidate-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: var(--space-2);
+    background: #e5e7eb;
+  }
+
+  .candidate-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.82rem;
+  }
+
+  .candidate-meta strong {
+    font-size: 0.88rem;
+    color: #222;
+  }
+
+  .candidate-meta .album {
+    color: #888;
+  }
+
+  #manual-url-row {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+
+  #manual-url {
+    flex: 1;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid #d0d7de;
+    border-radius: 10px;
+    font: inherit;
+  }
+
+  .no-candidates {
+    color: #888;
+    margin-bottom: var(--space-4);
+  }
+
+  .fetch-error {
+    color: #b3261e;
+    background: #fdecea;
+    border: 1px solid #f5c2c0;
+    border-radius: 10px;
+    padding: var(--space-3);
+    margin-bottom: var(--space-4);
+    font-size: 0.9rem;
+  }
+
+  #connection-test {
+    font-size: 0.88rem;
+    margin-top: var(--space-3);
+    padding: var(--space-3);
+    border-radius: 10px;
+  }
+
+  #connection-test.ok {
+    background: #eaf7ea;
+    color: #2e7d32;
+  }
+
+  #connection-test.fail {
+    background: #fdecea;
+    color: #b3261e;
+  }
+
+  #connection-test.pending {
+    background: #eef1f5;
+    color: #666;
+  }
+
+  #done {
+    background: white;
+    padding: var(--space-5);
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  }
+
+  #fallback-downloads a {
+    display: inline-block;
+    margin-top: var(--space-3);
+    color: #2563eb;
+    font-weight: 600;
+  }
+
+  .loading-text {
+    color: #888;
+  }
+</style>
+</head>
+<body>
+
+  <h1>앨범 아트 검토 도구</h1>
+
+  <div class="intro">
+    이 페이지는 <strong>로컬에서만 사용하는 관리자용 도구</strong>입니다 (사이트에는 포함되지 않음).
+    곡마다 iTunes에서 후보 이미지를 찾아 보여주면, 직접 눈으로 확인하고 고른 이미지만
+    <code>covers/</code> 폴더에 저장하고 <code>sscdbg.json</code>의 <code>image</code> 필드에 반영합니다.
+    한 번 저장된 곡은 다음에 다시 열어도 건너뜁니다.
+    <br><br>
+    Chrome 또는 Edge 데스크톱에서 열면 프로젝트 폴더를 선택해 자동으로 저장할 수 있고,
+    다른 브라우저에서는 파일을 하나씩 다운로드하는 방식으로 대신 동작합니다.
+    <br><br>
+    <strong>⚠️ 이 파일을 더블클릭해서 바로 열면(file://로 열리면) iTunes가 검색 요청을
+    전부 거부할 수 있습니다.</strong> 아래처럼 아주 간단한 로컬 서버로 실행해주세요:
+    <br><br>
+    <code>tools</code> 폴더 안에서 터미널을 열고,
+    <br>
+    Python이 있다면: <code>python3 -m http.server 8000</code>
+    <br>
+    Node.js가 있다면: <code>npx serve .</code>
+    <br>
+    실행한 뒤 브라우저에서 <code>http://localhost:8000/cover-picker.html</code>
+    (또는 안내된 주소)로 접속하세요.
+  </div>
+
+  <div id="connection-test" class="pending">iTunes 연결 확인 중...</div>
+
+  <div id="setup">
+    <button id="pick-folder-btn">sscweb 프로젝트 폴더 선택</button>
+    <div id="fallback-note" class="hidden">
+      이 브라우저는 폴더에 직접 저장하는 기능(File System Access API)을 지원하지 않아요.
+      대신 아래에서 <code>sscdbg.json</code> 파일을 선택해서 불러오세요.
+      이미지는 개별적으로 다운로드되며, 끝나면 갱신된 <code>sscdbg.json</code>을 다운로드할 수 있어요.
+      다운로드된 이미지는 프로젝트의 <code>covers/</code> 폴더로 직접 옮겨주세요.
+      <br><br>
+      <input type="file" id="file-input" accept="application/json">
+    </div>
+  </div>
+
+  <div id="review-area" class="hidden">
+    <div id="progress"></div>
+    <div id="song-card">
+      <div id="song-info"></div>
+      <div id="candidates"></div>
+      <div id="manual-url-row">
+        <input type="text" id="manual-url" placeholder="원하는 이미지가 없다면 직접 URL 입력">
+        <button id="manual-url-btn">이 URL 사용</button>
+      </div>
+      <button id="skip-btn">건너뛰기 (나중에 다시)</button>
+    </div>
+  </div>
+
+  <div id="done" class="hidden">
+    <p>검토가 끝났습니다.</p>
+    <div id="fallback-downloads"></div>
+  </div>
+
+<script>
+
+// -------------------------------------
+// iTunes 요청 큐 (분당 약 20회 제한에 대응)
+// -------------------------------------
+
+const ITUNES_MIN_INTERVAL_MS = 3200;
+let itunesQueue = [];
+let itunesQueueRunning = false;
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function enqueueItunesRequest(task) {
+  return new Promise(resolve => {
+    itunesQueue.push({ task, resolve });
+    runItunesQueue();
+  });
+}
+
+async function runItunesQueue() {
+  if (itunesQueueRunning) return;
+  itunesQueueRunning = true;
+
+  while (itunesQueue.length > 0) {
+    const { task, resolve } = itunesQueue.shift();
+
+    let result;
+    try {
+      const candidates = await task();
+      result = { ok: true, candidates };
+    } catch (error) {
+      console.warn("iTunes 요청 처리 중 오류:", error);
+      result = { ok: false, error: describeFetchError(error) };
+    }
+
+    resolve(result);
+
+    if (itunesQueue.length > 0) {
+      await sleep(ITUNES_MIN_INTERVAL_MS);
+    }
+  }
+
+  itunesQueueRunning = false;
+}
+
+// fetch가 던지는 에러는 브라우저 보안 정책상 구체적인 사유를 알려주지 않으므로
+// (예: CORS 차단도 "Failed to fetch"로만 나옴) 흔한 원인을 함께 안내
+function describeFetchError(error) {
+  const message = error?.message || String(error);
+
+  if (location.protocol === "file:") {
+    return (
+      `${message} — 이 페이지를 file://로 직접 열어서 iTunes가 요청을 막았을 ` +
+      `가능성이 높습니다. 아래 안내대로 로컬 서버로 실행해보세요.`
+    );
+  }
+
+  return `${message} — 네트워크 연결 또는 iTunes 서버 문제일 수 있습니다.`;
+}
+
+// -------------------------------------
+// iTunes 검색
+// -------------------------------------
+
+function upscaleArtworkUrl(url) {
+  if (!url) return url;
+  return url.replace(
+    /\/\d+x\d+(bb)?(-\d+)?\.(jpg|jpeg|png)/i,
+    "/600x600bb.$3"
+  );
+}
+
+// 제목에 붙은 한글 번역 괄호(예: "Dragostea din tei (보리수나무 아래에서의 사랑)")는
+// iTunes 검색을 방해하므로 제거하고 검색어를 만듦
+function buildSearchQuery(song) {
+  const cleanTitle = (song.title || "")
+    .replace(/\([^)]*[\uac00-\ud7a3][^)]*\)/g, "")
+    .trim();
+
+  return [cleanTitle, song.artist?.[0]].filter(Boolean).join(" ");
+}
+
+async function fetchCandidates(song) {
+  const query = buildSearchQuery(song);
+
+  const url =
+    "https://itunes.apple.com/search?" +
+    new URLSearchParams({ term: query, entity: "song", limit: "6" }).toString();
+
+  return enqueueItunesRequest(async () => {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`iTunes가 ${response.status} 상태코드를 반환했습니다`);
+    }
+
+    const data = await response.json();
+
+    return (data.results || [])
+      .map(result => ({
+        trackName: result.trackName,
+        artistName: result.artistName,
+        collectionName: result.collectionName,
+        artwork: upscaleArtworkUrl(result.artworkUrl100),
+        trackViewUrl: result.trackViewUrl,
+      }))
+      .filter(candidate => candidate.artwork);
+  });
+}
+
+// -------------------------------------
+// 파일 이름
+// -------------------------------------
+
+function slugify(text) {
+  return (text || "")
+    .toString()
+    .trim()
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 60) || "cover";
+}
+
+function coverFileName(song, index) {
+  const slug = slugify(`${song.title}-${song.artist?.[0] || ""}`);
+  const paddedIndex = String(index).padStart(3, "0");
+  return `${paddedIndex}-${slug}.jpg`;
+}
+
+// -------------------------------------
+// 상태
+// -------------------------------------
+
+let projectDirHandle = null;
+let coversDirHandle = null;
+let songsFileHandle = null;
+let songsData = null;
+let reviewQueue = [];
+let currentIndex = -1;
+let totalToReview = 0;
+let sessionSavedCount = 0;
+
+// -------------------------------------
+// 폴더 선택 (File System Access API)
+// -------------------------------------
+
+// -------------------------------------
+// 연결 테스트 (페이지를 열자마자 자동 실행)
+// -------------------------------------
+
+async function runConnectionTest() {
+  const el = document.getElementById("connection-test");
+
+  try {
+    const url =
+      "https://itunes.apple.com/search?" +
+      new URLSearchParams({ term: "test", entity: "song", limit: "1" }).toString();
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`iTunes가 ${response.status} 상태코드를 반환했습니다`);
+    }
+
+    const data = await response.json();
+
+    if (!data || typeof data.resultCount !== "number") {
+      throw new Error("iTunes 응답 형식이 예상과 다릅니다");
+    }
+
+    el.className = "ok";
+    el.textContent = "✅ iTunes 연결 확인됨 - 정상적으로 검색할 수 있어요.";
+  } catch (error) {
+    el.className = "fail";
+    el.textContent = "❌ iTunes 연결 실패: " + describeFetchError(error);
+  }
+}
+
+runConnectionTest();
+
+document.getElementById("pick-folder-btn").addEventListener("click", async () => {
+
+  if (!window.showDirectoryPicker) {
+    document.getElementById("fallback-note").classList.remove("hidden");
+    return;
+  }
+
+  try {
+    projectDirHandle = await window.showDirectoryPicker();
+    songsFileHandle = await projectDirHandle.getFileHandle("sscdbg.json");
+
+    const file = await songsFileHandle.getFile();
+    songsData = JSON.parse(await file.text());
+
+    coversDirHandle = await projectDirHandle.getDirectoryHandle("covers", {
+      create: true,
+    });
+
+    startReview();
+  } catch (error) {
+    if (error.name !== "AbortError") {
+      alert(
+        "폴더를 여는 중 문제가 발생했습니다. sscdbg.json이 있는 sscweb 폴더를 선택했는지 확인해주세요.\n\n" +
+          error.message
+      );
+    }
+  }
+});
+
+document.getElementById("file-input").addEventListener("change", async event => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  songsData = JSON.parse(await file.text());
+  projectDirHandle = null;
+  coversDirHandle = null;
+  songsFileHandle = null;
+
+  startReview();
+});
+
+// -------------------------------------
+// 검토 흐름
+// -------------------------------------
+
+function startReview() {
+  reviewQueue = songsData
+    .map((song, index) => index)
+    .filter(index => !songsData[index].image);
+
+  totalToReview = reviewQueue.length;
+  sessionSavedCount = 0;
+
+  document.getElementById("setup").classList.add("hidden");
+  document.getElementById("review-area").classList.remove("hidden");
+
+  if (reviewQueue.length === 0) {
+    finishReview();
+    return;
+  }
+
+  nextSong();
+}
+
+async function nextSong() {
+  if (reviewQueue.length === 0) {
+    finishReview();
+    return;
+  }
+
+  currentIndex = reviewQueue.shift();
+  const song = songsData[currentIndex];
+
+  renderProgress();
+  renderSongInfo(song);
+  renderLoadingCandidates();
+
+  const result = await fetchCandidates(song);
+  renderCandidates(song, result);
+}
+
+function renderProgress() {
+  const done = totalToReview - reviewQueue.length;
+  document.getElementById("progress").textContent =
+    `검토 중: ${done} / ${totalToReview} (이미지 있는 곡은 이미 건너뜀)`;
+}
+
+function renderSongInfo(song) {
+  document.getElementById("song-info").innerHTML = `
+    <h2>${escapeHTML(song.title)}</h2>
+    <p>${escapeHTML((song.artist || []).join(", "))} · ${escapeHTML(String(song.year || ""))} · ${escapeHTML((song.language || []).join(", "))}</p>
+    <div class="query-used">검색어: "${escapeHTML(buildSearchQuery(song))}"</div>
+  `;
+}
+
+function renderLoadingCandidates() {
+  document.getElementById("candidates").innerHTML =
+    `<p class="loading-text">iTunes에서 검색 중...</p>`;
+  document.getElementById("manual-url").value = "";
+}
+
+function renderCandidates(song, result) {
+  const container = document.getElementById("candidates");
+  container.innerHTML = "";
+
+  if (!result.ok) {
+    container.innerHTML = `<p class="fetch-error">⚠️ iTunes 요청 실패: ${escapeHTML(result.error)}</p>`;
+    return;
+  }
+
+  if (result.candidates.length === 0) {
+    container.innerHTML =
+      `<p class="no-candidates">iTunes에서 후보를 찾지 못했습니다. 직접 URL을 입력하거나 건너뛰세요.</p>`;
+    return;
+  }
+
+  result.candidates.forEach(candidate => {
+    const card = document.createElement("button");
+    card.type = "button";
+    card.className = "candidate-card";
+
+    card.innerHTML = `
+      <img src="${candidate.artwork}" alt="" loading="lazy">
+      <div class="candidate-meta">
+        <strong>${escapeHTML(candidate.trackName || "")}</strong>
+        <span>${escapeHTML(candidate.artistName || "")}</span>
+        <span class="album">${escapeHTML(candidate.collectionName || "")}</span>
+      </div>
+    `;
+
+    card.addEventListener("click", () => acceptImage(song, candidate.artwork));
+
+    container.appendChild(card);
+  });
+}
+
+document.getElementById("manual-url-btn").addEventListener("click", () => {
+  const url = document.getElementById("manual-url").value.trim();
+  if (!url) return;
+  acceptImage(songsData[currentIndex], url);
+});
+
+document.getElementById("skip-btn").addEventListener("click", () => {
+  nextSong();
+});
+
+async function acceptImage(song, imageUrl) {
+  const fileName = coverFileName(song, currentIndex);
+  const relativePath = `covers/${fileName}`;
+
+  try {
+    const response = await fetch(imageUrl);
+    if (!response.ok) throw new Error("이미지를 받아오지 못했습니다 (" + response.status + ")");
+    const blob = await response.blob();
+
+    if (coversDirHandle) {
+      const fileHandle = await coversDirHandle.getFileHandle(fileName, {
+        create: true,
+      });
+      const writable = await fileHandle.createWritable();
+      await writable.write(blob);
+      await writable.close();
+
+      song.image = relativePath;
+      sessionSavedCount++;
+
+      await persistSongsData();
+    } else {
+      downloadBlob(blob, fileName);
+      song.image = relativePath;
+      sessionSavedCount++;
+    }
+  } catch (error) {
+    alert("이미지를 저장하는 중 문제가 발생했습니다:\n" + error.message);
+    return;
+  }
+
+  nextSong();
+}
+
+async function persistSongsData() {
+  if (!songsFileHandle) return;
+  const writable = await songsFileHandle.createWritable();
+  await writable.write(JSON.stringify(songsData, null, 2));
+  await writable.close();
+}
+
+function finishReview() {
+  document.getElementById("review-area").classList.add("hidden");
+  document.getElementById("done").classList.remove("hidden");
+
+  const summary = document.createElement("p");
+
+  if (projectDirHandle) {
+    summary.textContent =
+      `이번 세션에서 ${sessionSavedCount}곡의 이미지가 covers/ 폴더에 저장되고 ` +
+      `sscdbg.json이 자동으로 갱신되었습니다. git status로 변경사항을 확인해보세요.`;
+    document.getElementById("done").appendChild(summary);
+  } else {
+    summary.textContent =
+      `이번 세션에서 ${sessionSavedCount}곡의 이미지를 다운로드했습니다. ` +
+      `다운로드된 이미지 파일들을 covers/ 폴더로 옮긴 뒤, 아래 버튼으로 ` +
+      `갱신된 sscdbg.json도 받아서 기존 파일을 덮어써주세요.`;
+    document.getElementById("done").appendChild(summary);
+
+    const blob = new Blob([JSON.stringify(songsData, null, 2)], {
+      type: "application/json",
+    });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "sscdbg.json";
+    link.textContent = "갱신된 sscdbg.json 다운로드";
+
+    document.getElementById("fallback-downloads").appendChild(link);
+  }
+}
+
+function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+function escapeHTML(str) {
+  const div = document.createElement("div");
+  div.textContent = String(str ?? "");
+  return div.innerHTML;
+}
+
+</script>
+</body>
+</html>

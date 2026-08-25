@@ -110,7 +110,7 @@ async function initMap() {
     .on("click", (event, feature) => {
       const alpha2 = numericToAlpha2.get(feature.id);
       if (alpha2) {
-        zoomToCountryThenSelect(alpha2);
+        selectCountry(alpha2);
       }
     });
 
@@ -131,7 +131,7 @@ async function initMap() {
     .attr("r", 4)
     .style("cursor", "pointer")
     .on("click", (event, code) => {
-      zoomToCountryThenSelect(code);
+      selectCountry(code);
     })
     .append("title")
     .text(code => `${getCountryName(code)} · ${countryCounts.get(code)}곡`);
@@ -178,97 +178,6 @@ async function initMap() {
   }
 
   setupMapSearch(countryCounts);
-}
-
-// 특정 국가로 지도를 확대한 뒤(줌 애니메이션 종료 시) 곡 목록으로 전환
-// (참고: https://observablehq.com/@d3/zoom-to-bounding-box)
-function zoomToCountryThenSelect(alpha2) {
-
-  if (!mapSvg || !mapZoomBehavior || !mapProjection) {
-    // 지도가 아직 준비되지 않았다면 바로 곡 목록으로
-    selectCountry(alpha2);
-    return;
-  }
-
-  const numericId = ALPHA2_TO_NUMERIC[alpha2];
-  const features = numericId
-    ? worldFeaturesByNumericId.get(numericId)
-    : null;
-
-  let bounds = null;
-
-  if (features && features.length) {
-    bounds = features.reduce((acc, feature) => {
-      const featureBounds = mapPathGenerator.bounds(feature);
-
-      if (!acc) return featureBounds;
-
-      return [
-        [
-          Math.min(acc[0][0], featureBounds[0][0]),
-          Math.min(acc[0][1], featureBounds[0][1])
-        ],
-        [
-          Math.max(acc[1][0], featureBounds[1][0]),
-          Math.max(acc[1][1], featureBounds[1][1])
-        ]
-      ];
-    }, null);
-  }
-
-  // 폴리곤이 화면상 너무 작은(또는 없는) 국가는 중심 좌표 기준으로
-  // 최소 크기의 박스를 만들어서 항상 적당히 확대되도록 함
-  const centroid = COUNTRY_CENTROIDS[alpha2];
-  const MIN_SPAN = 70;
-
-  if (centroid) {
-    const projected = mapProjection(centroid);
-
-    const tooSmall =
-      !bounds ||
-      (bounds[1][0] - bounds[0][0] < MIN_SPAN &&
-        bounds[1][1] - bounds[0][1] < MIN_SPAN);
-
-    if (tooSmall && projected) {
-      const [cx, cy] = projected;
-      bounds = [
-        [cx - MIN_SPAN / 2, cy - MIN_SPAN / 2],
-        [cx + MIN_SPAN / 2, cy + MIN_SPAN / 2]
-      ];
-    }
-  }
-
-  if (!bounds) {
-    selectCountry(alpha2);
-    return;
-  }
-
-  const [[x0, y0], [x1, y1]] = bounds;
-  const dx = x1 - x0;
-  const dy = y1 - y0;
-  const cx = (x0 + x1) / 2;
-  const cy = (y0 + y1) / 2;
-
-  const scale = Math.max(
-    1,
-    Math.min(14, 0.85 / Math.max(dx / MAP_WIDTH, dy / MAP_HEIGHT))
-  );
-
-  const translate = [
-    MAP_WIDTH / 2 - scale * cx,
-    MAP_HEIGHT / 2 - scale * cy
-  ];
-
-  const targetTransform = d3.zoomIdentity
-    .translate(translate[0], translate[1])
-    .scale(scale);
-
-  mapSvg.transition()
-    .duration(700)
-    .call(mapZoomBehavior.transform, targetTransform)
-    .on("end", () => {
-      selectCountry(alpha2);
-    });
 }
 
 // -------------------------------------
@@ -337,13 +246,7 @@ function setupMapSearch(countryCounts) {
       item.addEventListener("click", () => {
         input.value = "";
         closeResults();
-
-        // "미분류"는 지도상 좌표가 없으므로 줌 애니메이션 없이 바로 곡 목록으로
-        if (match.code === "XX") {
-          selectCountry("XX");
-        } else {
-          zoomToCountryThenSelect(match.code);
-        }
+        selectCountry(match.code);
       });
 
       resultsContainer.appendChild(item);
