@@ -40,7 +40,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    background: #eef1f5;
+    background: #f5f7fa;
     border-radius: 14px;
 
     padding: var(--space-4) var(--space-6);
@@ -70,7 +70,7 @@ body {
 .site-description-box p {
     margin: 0;
 
-    background: #eef1f5;
+    background: #f5f7fa;
     border-radius: 10px;
 
     padding: var(--space-3) var(--space-4);
