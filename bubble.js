@@ -9,7 +9,7 @@
 const BUBBLE_WIDTH = 1000;
 const BUBBLE_HEIGHT = 640;
 const BUBBLE_NODE_RADIUS = 22;
-const BUBBLE_KNN = 4; // 곡마다 연결할 최근접 이웃 수
+const BUBBLE_KNN = 6; // 곡마다 연결할 최근접 이웃 수
 
 let bubbleInitStarted = false;
 let bubbleSimulation = null;
@@ -61,8 +61,11 @@ function haversineDistanceKm(coordA, coordB) {
   return R * c;
 }
 
-// 두 곡의 국가 목록 중 가장 가까운 조합을 기준으로 지리적 유사도(0~1) 산출
-// (같은 국가가 하나라도 겹치면 1, 멀수록 지수적으로 감소)
+// 두 곡의 국가 목록 중 가장 가까운 "다른 나라" 조합을 기준으로 지리적 유사도(0~1) 산출.
+// 같은 나라를 공유하는 경우는 일부러 0으로 처리함 - 같은 나라 곡들은 이미 태그·아티스트
+// 등 다른 요소로 충분히 연결되므로, 여기서는 "다른 나라인데 지리적으로 가까운 경우"에만
+// 보너스를 줘서 인접국끼리 연결될 여지를 만들어줌. (같은 나라에 만점을 주면 자국 곡들이
+// 오히려 더 유리해져서, 정작 의도한 "인접국 연결"이 밀려나는 역설이 생김)
 function geoSimilarity(songA, songB) {
   const countriesA = (songA.countries || []).filter(
     code => typeof COUNTRY_CENTROIDS !== "undefined" && COUNTRY_CENTROIDS[code]
@@ -73,12 +76,13 @@ function geoSimilarity(songA, songB) {
 
   if (countriesA.length === 0 || countriesB.length === 0) return 0;
 
+  let sharesCountry = false;
   let minDistance = Infinity;
 
   countriesA.forEach(codeA => {
     countriesB.forEach(codeB => {
       if (codeA === codeB) {
-        minDistance = 0;
+        sharesCountry = true;
         return;
       }
       const distance = haversineDistanceKm(
@@ -89,6 +93,7 @@ function geoSimilarity(songA, songB) {
     });
   });
 
+  if (sharesCountry) return 0;
   if (!isFinite(minDistance)) return 0;
 
   // 반감 거리 약 2000km: 가까운 나라일수록 높은 점수, 대륙이 다르면 낮은 점수
@@ -96,8 +101,8 @@ function geoSimilarity(songA, songB) {
 }
 
 const SIMILARITY_WEIGHTS = {
-  tags: 0.35,
-  geo: 0.25,
+  geo: 0.35,
+  tags: 0.25,
   artist: 0.2,
   songwriters: 0.15,
   language: 0.05,
