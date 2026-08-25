@@ -1135,11 +1135,25 @@ hr {
 .bubble-border {
     stroke: rgba(0, 0, 0, 0.08);
     stroke-width: 1.5px;
+
+    transition:
+        stroke 0.15s,
+        stroke-width 0.15s;
 }
 
 .bubble-node:hover .bubble-border {
     stroke: #4f8ef7;
     stroke-width: 2.5px;
+}
+
+.bubble-border.bubble-similar {
+    stroke: #34c759;
+    stroke-width: 3px;
+}
+
+.bubble-link.bubble-link-active {
+    stroke: #34c759;
+    stroke-opacity: 0.7;
 }
 
 .bubble-buttons {

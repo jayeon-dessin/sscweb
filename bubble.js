@@ -180,6 +180,17 @@ function initBubbleView() {
   const nodes = songs.map((song, index) => ({ id: index, song }));
   const links = buildSimilarityLinks(songs, BUBBLE_KNN);
 
+  // 노드별 이웃 id 조회용 (hover 시 유사한 곡 하이라이트에 사용).
+  // d3.forceLink가 links의 source/target을 노드 객체 참조로 바꿔치기하기 전에
+  // 원래의 숫자 인덱스 상태에서 미리 만들어둠
+  const neighborsByNodeId = new Map();
+  links.forEach(link => {
+    if (!neighborsByNodeId.has(link.source)) neighborsByNodeId.set(link.source, new Set());
+    if (!neighborsByNodeId.has(link.target)) neighborsByNodeId.set(link.target, new Set());
+    neighborsByNodeId.get(link.source).add(link.target);
+    neighborsByNodeId.get(link.target).add(link.source);
+  });
+
   bubbleInnerGroup = bubbleSvg.append("g").attr("class", "bubble-inner");
 
   const linkGroup = bubbleInnerGroup.append("g").attr("class", "bubble-links");
@@ -224,7 +235,32 @@ function initBubbleView() {
         return;
       }
       selectSongFromBubble(d.song);
+    })
+    .on("mouseenter", (event, d) => {
+      highlightSimilarNodes(d.id);
+    })
+    .on("mouseleave", () => {
+      clearSimilarHighlight();
     });
+
+  function highlightSimilarNodes(nodeId) {
+    const neighborIds = neighborsByNodeId.get(nodeId) || new Set();
+
+    nodeGroups
+      .select(".bubble-border")
+      .classed("bubble-similar", d => neighborIds.has(d.id));
+
+    linkLines.classed("bubble-link-active", d => {
+      const sourceId = typeof d.source === "object" ? d.source.id : d.source;
+      const targetId = typeof d.target === "object" ? d.target.id : d.target;
+      return sourceId === nodeId || targetId === nodeId;
+    });
+  }
+
+  function clearSimilarHighlight() {
+    nodeGroups.select(".bubble-border").classed("bubble-similar", false);
+    linkLines.classed("bubble-link-active", false);
+  }
 
   nodeGroups
     .append("clipPath")
@@ -291,7 +327,7 @@ function initBubbleView() {
       d3
         .forceLink(links)
         .id(d => d.id)
-        .distance(d => 18 + (1 - d.sim) * 65)
+        .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
         .strength(d => 0.25 + d.sim * 0.6)
     )
     .force("charge", d3.forceManyBody().strength(-24))
