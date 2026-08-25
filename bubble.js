@@ -286,13 +286,13 @@ function initBubbleView() {
       d3
         .forceLink(links)
         .id(d => d.id)
-        .distance(d => 12 + (1 - d.sim) * 45)
+        .distance(d => 18 + (1 - d.sim) * 65)
         .strength(d => 0.25 + d.sim * 0.6)
     )
-    .force("charge", d3.forceManyBody().strength(-16))
+    .force("charge", d3.forceManyBody().strength(-24))
     .force("center", d3.forceCenter(BUBBLE_WIDTH / 2, BUBBLE_HEIGHT / 2))
-    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.04))
-    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.04))
+    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.03))
+    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.03))
     .force("collide", d3.forceCollide(BUBBLE_NODE_RADIUS + 3))
     .on("tick", () => {
       applyCursorForce(nodes);
@@ -346,9 +346,21 @@ function initBubbleView() {
       .duration(600)
       .call(bubbleZoomBehavior.transform, d3.zoomIdentity);
   });
+
+  // -------------------------------------
+  // 버블 재배치: 드래그 등으로 흐트러진 위치를 다시 계산해서 정리
+  // -------------------------------------
+
+  const resetLayoutButton = document.getElementById("bubble-reset-layout");
+  resetLayoutButton?.addEventListener("click", () => {
+    nodes.forEach(node => {
+      node.fx = null;
+      node.fy = null;
+    });
+    bubbleSimulation.alpha(1).restart();
+  });
 }
 
-// 마우스 근처의 버블을 부드럽게 밀어냄 (드래그 중인 노드는 건드리지 않음)
 // 마우스 근처의 버블을 부드럽게 밀어냄 (드래그 중인 노드는 건드리지 않음)
 // 반경을 좁고 힘을 약하게 유지해서, 클릭/드래그하려는 버블이 도망가지 않도록 함
 function applyCursorForce(nodes) {

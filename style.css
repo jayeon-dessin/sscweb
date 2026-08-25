@@ -740,7 +740,7 @@ a:hover {
         font-size: 12px;
     }
 
-    #bubble-reset-zoom {
+    .bubble-buttons button {
         padding:
             var(--space-1)
             var(--space-3);
@@ -1142,13 +1142,18 @@ hr {
     stroke-width: 2.5px;
 }
 
-#bubble-reset-zoom {
+.bubble-buttons {
     position: absolute;
     z-index: 10;
 
     top: var(--space-3);
     right: var(--space-3);
 
+    display: flex;
+    gap: var(--space-2);
+}
+
+.bubble-buttons button {
     border: 1px solid #d0d7de;
     background: white;
 
@@ -1171,7 +1176,7 @@ hr {
         border-color 0.2s;
 }
 
-#bubble-reset-zoom:hover {
+.bubble-buttons button:hover {
     background: #f0f3f7;
     border-color: #bbb;
 }

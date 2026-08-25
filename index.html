@@ -144,9 +144,14 @@
 
     <div id="bubble-container">
       <svg id="bubble-svg" viewBox="0 0 1000 640" role="img" aria-label="곡 유사도에 따라 배치된 버블 그래프. 버블을 클릭하면 그 곡으로 이동합니다."></svg>
-      <button type="button" id="bubble-reset-zoom" title="처음 배치로">
-        전체 보기
-      </button>
+      <div class="bubble-buttons">
+        <button type="button" id="bubble-reset-layout" title="버블 위치를 다시 계산해서 정리해요">
+          버블 재배치
+        </button>
+        <button type="button" id="bubble-reset-zoom" title="확대/축소를 원래대로">
+          전체 보기
+        </button>
+      </div>
     </div>
 
   </div>
