@@ -17,7 +17,6 @@ const countrySort =  document.getElementById("country-sort");
 const backButton = document.getElementById("back-to-countries");
 const viewTabs = document.querySelectorAll(".view-tab");
 const randomDiceButton = document.getElementById("random-dice-button");
-const randomShuffleButton = document.getElementById("random-shuffle-button");
 
 // -------------------------------------
 // 목록/지도 뷰 <-> 곡 목록 뷰 전환
@@ -26,7 +25,6 @@ const randomShuffleButton = document.getElementById("random-shuffle-button");
 // 국가를 고르는 화면(목록, 지도 중 현재 viewMode에 맞는 것)을 보여줌
 function showBrowseUI() {
   songsView.style.display = "none";
-  randomShuffleButton.classList.add("hidden");
 
   countryView.style.display = viewMode === "countries" ? "block" : "none";
   mapView.style.display = viewMode === "map" ? "block" : "none";
@@ -37,7 +35,6 @@ function showSongsUI() {
   countryView.style.display = "none";
   mapView.style.display = "none";
   songsView.style.display = "block";
-  randomShuffleButton.classList.add("hidden");
 }
 
 // 현재 viewMode에 맞게 탭 버튼 active 상태 갱신
@@ -86,29 +83,23 @@ function showRandomSongDetail() {
 
   countryTitle.textContent = "🎲 랜덤 곡";
 
-  randomShuffleButton.classList.remove("hidden");
-
   renderSongs([song]);
 }
 
 randomDiceButton?.addEventListener("click", showRandomSongDetail);
-randomShuffleButton?.addEventListener("click", showRandomSongDetail);
 
 const decorativeFlags = [
   "KR", 
   "AF", "DZ", "AR", "AU", "AT",
   "BD", "BY", "BE", "BJ", "BO", "BA", "BR", "BG",
-  "CV", "CM", "CA", "CL", "CN", "CO", "CI", "HR", "CU", "CD", 
-  "DK", "EG", "EE", "FJ", "FI", "FR",
-  "GE", "DE", "GH", "GR", 
+  "CV", "CI", "CM", "CA", "CL", "CN", "CO", "HR", "CU", "CD", 
+  "DK", "EG", "EE", "FJ", "FI", "FR", "GE", "DE", "GH", "GR", 
   "HK", "IS", "IN", "ID", "IR", "IE", "IL", "IT", 
-  "JM", "JP", "KZ", "KE", "LB",
-  "ML", "MX", "MD", "MN", "MA",
+  "JM", "JP", "KZ", "KE", "LB", "MA", "ML", "MX", "MD", "MN",
   "NL", "NZ", "NE", "NG", "KP", "NO", 
   "PK", "PS", "PH", "PL", "PT", "PR", "RU", 
   "SA", "RS", "SO", "ZA", "ES", "SE", "SY", 
-  "TW", "TH", "TT", "TN", "TR", "UA", "GB", "US", "VN", "ZW",
-  "XX"
+  "TW", "TH", "TT", "TN", "TR", "UA", "GB", "US", "VN", "ZW"
 ];
 
 // -------------------------------------
@@ -380,6 +371,8 @@ function buildCountryListItem(code, count) {
   button.className = "country-card";
 
   button.innerHTML = `
+    ${countryFlagHTML(code, "country-list-flag")}
+
     <span class="country-name">
       ${getCountryName(code)}
     </span>

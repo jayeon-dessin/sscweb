@@ -40,7 +40,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    background: #eef1f5;
+    background: #f5f7fa;
     border-radius: 14px;
 
     padding: var(--space-4) var(--space-6);
@@ -68,7 +68,7 @@ body {
 .site-description-box p {
     margin: 0;
 
-    background: #eef1f5;
+    background: #f5f7fa;
     border-radius: 10px;
 
     padding: var(--space-4);
@@ -83,15 +83,28 @@ body {
 
     appearance: none;
     border: none;
-    background: #eef1f5;
+    background: #f5f7fa;
 
-    width: 64px;
+    padding: 0 var(--space-5);
     border-radius: 14px;
 
-    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+    white-space: nowrap;
+
     cursor: pointer;
 
     transition: background 0.2s;
+}
+
+#random-dice-button .dice-emoji {
+    font-size: 1.8rem;
 }
 
 #random-dice-button:hover {
@@ -321,6 +334,11 @@ body {
     color: #8b95a1;
 }
 
+.country-list-flag {
+    font-size: 0.95rem;
+    border-radius: 2px;
+}
+
 .country-name {
     font-size: 0.95rem;
     font-weight: 600;
@@ -386,37 +404,6 @@ body {
     border-color: #bbb;
 }
 
-#random-shuffle-button {
-    border: 1px solid #d0d7de;
-    background: white;
-
-    padding:
-        var(--space-2)
-        var(--space-4);
-
-    border-radius: 10px;
-
-    font-size: 14px;
-    cursor: pointer;
-
-    color: #444;
-
-    transition:
-        background 0.2s,
-        border-color 0.2s;
-}
-
-#random-shuffle-button:hover {
-    background: #f0f3f7;
-    border-color: #bbb;
-}
-
-/* 랜덤 곡 화면이 아닐 때는 안 보이되, 레이아웃 자리(가운데 정렬 균형)는 유지 */
-#random-shuffle-button.hidden {
-    display: inline-flex !important;
-    visibility: hidden;
-}
-
 
 /* ========================================
    필터
@@ -428,8 +415,8 @@ body {
 ======================================== */
 
 .search-bar {
-    flex: 1 1 320px;
-    max-width: 420px;
+    flex: 1 1 640px;
+    max-width: 840px;
     min-width: 160px;
 }
 
