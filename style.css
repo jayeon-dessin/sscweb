@@ -32,7 +32,7 @@ body {
     align-items: stretch;
 
     gap: var(--space-4);
-    margin-bottom: var(--space-5);
+    margin-bottom: var(--space-2);
 }
 
 .site-title-box {
@@ -234,7 +234,7 @@ body {
     text-align: center;
     color: #888;
     font-size: 0.9rem;
-    margin: var(--space-2) 0 var(--space-5);
+    margin: 0 0 var(--space-5);
 }
 
 #flag-strip {
@@ -252,7 +252,8 @@ body {
         var(--space-6);
 }
 
-#flag-strip .fi {
+#flag-strip .fi,
+#flag-strip .flag-unclassified {
     font-size: 1.2rem;
 }
 
@@ -706,8 +707,8 @@ a:hover {
 @media (max-width: 750px) {
 
     body {
-        margin-top: var(--space-5);
-        padding: 0 var(--space-4);
+        margin-top: var(--space-4);
+        padding: 0 var(--space-3);
     }
 
     .site-header {
@@ -723,9 +724,32 @@ a:hover {
         white-space: normal;
     }
 
+    .site-description-box p {
+        font-size: 0.9rem;
+    }
+
     #random-dice-button {
         width: 100%;
         padding: var(--space-3);
+    }
+
+    #archive-stats {
+        margin-bottom: var(--space-4);
+    }
+
+    #flag-strip {
+        gap: var(--space-2);
+        margin: var(--space-4) auto;
+    }
+
+    /* 국기가 너무 작으면 손가락으로 누르기 힘드므로 터치 영역을 키움 */
+    .flag-strip-item {
+        padding: 6px;
+    }
+
+    #flag-strip .fi,
+    #flag-strip .flag-unclassified {
+        font-size: 1.4rem;
     }
 
     .controls-row {
@@ -737,26 +761,23 @@ a:hover {
         max-width: none;
     }
 
+    .search-bar input {
+        font-size: 16px;
+    }
+
     .view-mode-tabs {
         width: 100%;
         justify-content: center;
-    }
-
-    .random-song-card {
-        padding: var(--space-4);
-    }
-
-    .random-song-header {
-        align-items: flex-start;
     }
 
     #country-list {
         gap: var(--space-2);
     }
 
+    /* 목록 칩도 손가락으로 누르기 편하게 여유를 좀 더 둠 */
     .country-card {
         padding:
-            var(--space-2)
+            var(--space-3)
             var(--space-3);
     }
 
@@ -825,12 +846,37 @@ a:hover {
         font-size: 0.9rem;
     }
 
+    .songs-view-header {
+        justify-content: center;
+    }
+
+    #back-to-countries {
+        width: 100%;
+    }
+
+    #country-title {
+        order: -1;
+        font-size: 1.5rem;
+    }
+
     #map-reset-zoom {
         padding:
             var(--space-1)
             var(--space-3);
 
         font-size: 12px;
+    }
+
+    #map-unclassified-button {
+        font-size: 12px;
+
+        padding:
+            var(--space-1)
+            var(--space-3);
+    }
+
+    .about-content {
+        padding: var(--space-4);
     }
 }
 
@@ -846,58 +892,32 @@ hr {
 }
 
 /* ========================================
-랜덤 곡
+   소개 탭
 ======================================== */
 
-#random-song {
-    margin-bottom: var(--space-5);
+.about-content {
+    max-width: 720px;
+    margin: 0 auto var(--space-7);
+
+    background: white;
+    border-radius: 16px;
+
+    padding: var(--space-6);
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+
+    line-height: 1.8;
 }
 
-.random-song-card {
-    padding: var(--space-5);
-
-    border: 1px solid #d8e5da;
-    border-radius: 12px;
-
-    background-color: #f3f8f9;
+.about-content h2 {
+    margin: 0 0 var(--space-4);
+    color: #2c3e50;
 }
 
-.random-song-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    gap: var(--space-3);
-
-    margin-bottom: var(--space-3);
-}
-
-.random-song-label {
-    font-size: 0.85rem;
-    font-weight: 600;
-
-    color: #667a80;
-}
-
-.random-song-card h2 {
-    margin: 0 0 var(--space-2);
-}
-
-#random-song-button {
-    border: none;
-    background: none;
-
-    padding: 0;
-
-    font: inherit;
-    font-size: 0.9rem;
-
-    cursor: pointer;
-    color: #66806a;
-}
-
-#random-song-button:hover {
-    text-decoration: underline;
+.about-content p {
+    margin: 0 0 var(--space-3);
+    color: #444;
 }
 
 .country-controls {

@@ -2,7 +2,7 @@ let songs = [];
 let selectedCountry = null;
 let isRestoringState = false;
 
-// "map"(지도) / "countries"(목록)
+// "map"(지도) / "countries"(목록) / "about"(소개)
 let viewMode = "map";
 const songList = document.getElementById("song-list");
 const tagSearch = document.getElementById("tag-search");
@@ -11,6 +11,7 @@ const tagSearch = document.getElementById("tag-search");
 const countryView = document.getElementById("country-view");
 const countryList = document.getElementById("country-list");
 const mapView = document.getElementById("map-view");
+const aboutView = document.getElementById("about-view");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
 const countrySort =  document.getElementById("country-sort");
@@ -19,21 +20,23 @@ const viewTabs = document.querySelectorAll(".view-tab");
 const randomDiceButton = document.getElementById("random-dice-button");
 
 // -------------------------------------
-// 목록/지도 뷰 <-> 곡 목록 뷰 전환
+// 목록/지도/소개 뷰 <-> 곡 목록 뷰 전환
 // -------------------------------------
 
-// 국가를 고르는 화면(목록, 지도 중 현재 viewMode에 맞는 것)을 보여줌
+// 국가를 고르는 화면(목록, 지도, 소개 중 현재 viewMode에 맞는 것)을 보여줌
 function showBrowseUI() {
   songsView.style.display = "none";
 
   countryView.style.display = viewMode === "countries" ? "block" : "none";
   mapView.style.display = viewMode === "map" ? "block" : "none";
+  aboutView.style.display = viewMode === "about" ? "block" : "none";
 }
 
 // 곡 목록 화면을 보여줌
 function showSongsUI() {
   countryView.style.display = "none";
   mapView.style.display = "none";
+  aboutView.style.display = "none";
   songsView.style.display = "block";
 }
 
@@ -87,20 +90,6 @@ function showRandomSongDetail() {
 }
 
 randomDiceButton?.addEventListener("click", showRandomSongDetail);
-
-const decorativeFlags = [
-  "KR", 
-  "AF", "DZ", "AR", "AU", "AT",
-  "BD", "BY", "BE", "BJ", "BO", "BA", "BR", "BG",
-  "CV", "CI", "CM", "CA", "CL", "CN", "CO", "HR", "CU", "CD", 
-  "DK", "EG", "EE", "FJ", "FI", "FR", "GE", "DE", "GH", "GR", 
-  "HK", "IS", "IN", "ID", "IR", "IE", "IL", "IT", 
-  "JM", "JP", "KZ", "KE", "LB", "MA", "ML", "MX", "MD", "MN",
-  "NL", "NZ", "NE", "NG", "KP", "NO", 
-  "PK", "PS", "PH", "PL", "PT", "PR", "RU", 
-  "SA", "RS", "SO", "ZA", "ES", "SE", "SY", 
-  "TW", "TH", "TT", "TN", "TR", "UA", "GB", "US", "VN", "ZW"
-];
 
 // -------------------------------------
 // 국가 코드 → 한국어 국가명
@@ -188,7 +177,7 @@ function restoreStateFromURL() {
   const keyword = params.get("q");
 
   // 뷰 모드 복원 (기본값: 지도)
-  const validModes = ["map", "countries"];
+  const validModes = ["map", "countries", "about"];
   viewMode = validModes.includes(view) ? view : "map";
   setActiveViewTab();
 
@@ -315,14 +304,22 @@ function renderDecorativeFlags() {
 
   flagStrip.innerHTML = "";
 
-  decorativeFlags.forEach(code => {
+  // 실제 곡이 있는 국가를 기준으로 국기 목록을 자동 생성
+  // (새 국가가 sscdbg.json에 추가되면 코드 수정 없이 자동으로 여기 반영됨)
+  const flagCodes = [...getCountryCounts().keys()].sort((a, b) => {
+    if (a === "XX") return 1;
+    if (b === "XX") return -1;
+    return getCountryName(a).localeCompare(getCountryName(b), "ko");
+  });
+
+  flagCodes.forEach(code => {
 
     const button = document.createElement("button");
     button.type = "button";
     button.className = "flag-strip-item";
     button.setAttribute("aria-label", getCountryName(code));
     button.title = getCountryName(code);
-    button.innerHTML = `<span class="fi fi-${code.toLowerCase()}"></span>`;
+    button.innerHTML = countryFlagHTML(code);
 
     button.addEventListener("click", () => {
       selectCountry(code);

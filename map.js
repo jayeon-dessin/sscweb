@@ -19,6 +19,11 @@ let mapDotGroup = null;
 // (예: 호주 본토 + Ashmore and Cartier Is.처럼 한 나라가 여러 조각으로 나뉘기도 함)
 const worldFeaturesByNumericId = new Map();
 
+// 렌더링된 폴리곤이 이 값(px²)보다 작으면 클릭하기 어려우니 점 마커로 보완
+// (960x500 viewBox 기준. 기존에 수동으로 관리하던 15개국 소국 목록과
+// 거의 일치하도록 보정한 값 - 국가가 새로 추가돼도 자동으로 판단됨)
+const SMALL_COUNTRY_AREA_THRESHOLD = 50;
+
 function buildNumericToAlpha2() {
   const map = new Map();
   Object.entries(ALPHA2_TO_NUMERIC).forEach(([alpha2, numeric]) => {
@@ -128,12 +133,47 @@ async function initMap() {
       }
     });
 
-  // 작은 국가를 위한 점 마커 (데이터에 곡이 있는 것만)
+  // 작은 국가를 위한 점 마커: 곡이 있는 국가 중, 실제 렌더링된 폴리곤
+  // 면적이 기준치보다 작은 곳을 찾아 자동으로 추가 (수동 목록 관리 불필요)
   mapDotGroup = mapInnerGroup.append("g").attr("class", "map-dot-markers");
 
-  const dotCodes = SMALL_COUNTRY_CODES.filter(
-    code => countryCounts.get(code) > 0 && COUNTRY_CENTROIDS[code]
-  );
+  const dotCodes = [];
+
+  worldFeaturesByNumericId.forEach((features, numericId) => {
+    const alpha2 = numericToAlpha2.get(numericId);
+    if (!alpha2 || !(countryCounts.get(alpha2) > 0) || !COUNTRY_CENTROIDS[alpha2]) {
+      return;
+    }
+
+    const totalArea = features.reduce(
+      (sum, feature) => sum + Math.abs(mapPathGenerator.area(feature)),
+      0
+    );
+
+    if (totalArea < SMALL_COUNTRY_AREA_THRESHOLD) {
+      dotCodes.push(alpha2);
+    }
+  });
+
+  // 실제 보이는 점(r=4)은 작아서 특히 터치로는 누르기 어려우므로,
+  // 눈에는 안 보이지만 훨씬 넓은 히트 영역을 점 밑에 깔아둠
+  // (hover 툴팁(title)도 여기서 처리 - 실제 점은 pointer-events:none이라 이벤트를 못 받음)
+  mapDotGroup.selectAll("circle.map-dot-hit-area")
+    .data(dotCodes)
+    .join("circle")
+    .attr("class", "map-dot-hit-area")
+    .attr("data-code", code => code)
+    .attr("cx", code => mapProjection(COUNTRY_CENTROIDS[code])[0])
+    .attr("cy", code => mapProjection(COUNTRY_CENTROIDS[code])[1])
+    .attr("r", 12)
+    .attr("fill", "transparent")
+    .style("pointer-events", "all")
+    .style("cursor", "pointer")
+    .on("click", (event, code) => {
+      selectCountry(code);
+    })
+    .append("title")
+    .text(code => `${getCountryName(code)} · ${countryCounts.get(code)}곡`);
 
   mapDotGroup.selectAll("circle.map-dot")
     .data(dotCodes)
@@ -145,12 +185,7 @@ async function initMap() {
     .attr("cx", code => mapProjection(COUNTRY_CENTROIDS[code])[0])
     .attr("cy", code => mapProjection(COUNTRY_CENTROIDS[code])[1])
     .attr("r", 4)
-    .style("cursor", "pointer")
-    .on("click", (event, code) => {
-      selectCountry(code);
-    })
-    .append("title")
-    .text(code => `${getCountryName(code)} · ${countryCounts.get(code)}곡`);
+    .style("pointer-events", "none");
 
   // 확대/축소
   mapZoomBehavior = d3.zoom()
@@ -162,6 +197,9 @@ async function initMap() {
       // 점 마커와 테두리는 확대해도 화면상 크기가 일정하게 유지되도록 보정
       mapDotGroup.selectAll("circle.map-dot")
         .attr("r", 4 / event.transform.k);
+
+      mapDotGroup.selectAll("circle.map-dot-hit-area")
+        .attr("r", 12 / event.transform.k);
 
       mapInnerGroup.selectAll("path.map-country")
         .attr("stroke-width", 0.5 / event.transform.k);

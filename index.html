@@ -20,7 +20,7 @@
       <h1>세소찾 더보기</h1>
     </div>
     <div class="site-description-box">
-      <p>전 세계의 음악을 찾아볼 수 있는 개인 음악 아카이브입니다. 음악 선정에는 개인 취향이 (많이) 반영됩니다. 곡 추천: leecm0070@gmail.com</p>
+      <p>전 세계의 음악을 찾아볼 수 있는 개인 음악 아카이브입니다.<br>음악 선정에는 개인 취향이 (많이) 반영됩니다. 곡 추천: leecm0070@gmail.com</p>
     </div>
     <button type="button" id="random-dice-button" title="랜덤 곡 보기" aria-label="랜덤 곡 보기">
       <span class="dice-emoji">🎲</span>
@@ -62,6 +62,15 @@
       >
         지도
       </button>
+      <button
+        type="button"
+        class="view-tab"
+        data-mode="about"
+        role="tab"
+        aria-selected="false"
+      >
+        소개
+      </button>
     </div>
 
   </div>
@@ -97,6 +106,23 @@
       </button>
     </div>
 
+  </div>
+
+  <!--
+    소개 탭 (자유롭게 직접 수정하세요!)
+    아래 <div class="about-content"> 안의 내용만 원하는 대로 바꾸면 됩니다.
+    문단(<p>)을 얼마든지 추가/삭제해도 사이트 동작에는 영향이 없습니다.
+  -->
+  <div id="about-view" style="display: none;">
+    <div class="about-content">
+      <h2>프로젝트 소개</h2>
+      <p>
+        세계의 소리를 찾아서
+      </p>
+      <p>
+        '세소찾' 프로젝트는 다양한 외국어 곡들을 소개하기 위해 2023년 5월 시작되었습니다. 기존에는 블로그 글을 통해서 한 곡씩 소개하였으나, 글로 다루지 못한 더 많은 곡들을 소개하기 위해 2026년 '세소찾 더보기' 사이트가 만들어졌습니다.
+      </p>
+    </div>
   </div>
 
   <!-- 국가 선택 후: 곡 목록 -->
