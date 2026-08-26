@@ -210,6 +210,90 @@ body {
     gap: var(--space-2);
 }
 
+
+/* ========================================
+   연표 (곡을 연대별로 탐색)
+======================================== */
+
+#timeline-list {
+    margin-bottom: var(--space-7);
+}
+
+.timeline-group {
+    margin-bottom: var(--space-6);
+}
+
+.timeline-heading {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #444;
+
+    margin: 0 0 var(--space-3);
+    padding-bottom: var(--space-2);
+
+    border-bottom: 1px solid #e2e6ec;
+}
+
+.timeline-song-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-2);
+}
+
+.timeline-song-chip {
+    appearance: none;
+
+    border: 1px solid #e2e6ec;
+    background: white;
+
+    border-radius: 8px;
+
+    padding:
+        var(--space-2)
+        var(--space-3);
+
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: baseline;
+
+    gap: var(--space-2);
+
+    transition:
+        background 0.15s,
+        border-color 0.15s;
+}
+
+.timeline-song-chip:hover {
+    background: #eef4ff;
+    border-color: #4f8ef7;
+}
+
+.timeline-song-chip:focus-visible {
+    outline: 3px solid rgba(79, 142, 247, 0.35);
+    outline-offset: 2px;
+}
+
+.timeline-song-year {
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    color: #4f8ef7;
+}
+
+.timeline-song-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    color: #2c3e50;
+}
+
+.timeline-song-artist {
+    font-size: 0.82rem;
+    color: #888;
+}
+
 /* 마우스 올렸을 때 */
 
 .country-card:hover {
@@ -758,6 +842,7 @@ a:hover {
     }
 
     .search-bar {
+        flex: 0 0 auto;
         max-width: none;
     }
 

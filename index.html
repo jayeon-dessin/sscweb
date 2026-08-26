@@ -65,6 +65,15 @@
       <button
         type="button"
         class="view-tab"
+        data-mode="timeline"
+        role="tab"
+        aria-selected="false"
+      >
+        연표
+      </button>
+      <button
+        type="button"
+        class="view-tab"
         data-mode="about"
         role="tab"
         aria-selected="false"
@@ -108,6 +117,11 @@
 
   </div>
 
+  <!-- 국가 선택: 연표 (곡을 연대별로 탐색) -->
+  <div id="timeline-view" style="display: none;">
+    <div id="timeline-list"></div>
+  </div>
+
   <!--
     소개 탭 (자유롭게 직접 수정하세요!)
     아래 <div class="about-content"> 안의 내용만 원하는 대로 바꾸면 됩니다.
@@ -115,12 +129,13 @@
   -->
   <div id="about-view" style="display: none;">
     <div class="about-content">
-      <h2>프로젝트 소개</h2>
+      <h2>세소찾 더보기 소개</h2>
       <p>
-        세계의 소리를 찾아서
+        여기에 원하는 소개 문구를 자유롭게 적어주세요.
       </p>
       <p>
-        '세소찾' 프로젝트는 다양한 외국어 곡들을 소개하기 위해 2023년 5월 시작되었습니다. 기존에는 블로그 글을 통해서 한 곡씩 소개하였으나, 글로 다루지 못한 더 많은 곡들을 소개하기 위해 2026년 '세소찾 더보기' 사이트가 만들어졌습니다.
+        예: 이 아카이브를 만든 계기, 곡을 고르는 기준, 자주 받는 질문,
+        연락처 등을 자유롭게 적을 수 있어요.
       </p>
     </div>
   </div>

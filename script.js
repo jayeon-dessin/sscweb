@@ -2,7 +2,7 @@ let songs = [];
 let selectedCountry = null;
 let isRestoringState = false;
 
-// "map"(지도) / "countries"(목록) / "about"(소개)
+// "map"(지도) / "countries"(목록) / "timeline"(연표) / "about"(소개)
 let viewMode = "map";
 const songList = document.getElementById("song-list");
 const tagSearch = document.getElementById("tag-search");
@@ -11,6 +11,8 @@ const tagSearch = document.getElementById("tag-search");
 const countryView = document.getElementById("country-view");
 const countryList = document.getElementById("country-list");
 const mapView = document.getElementById("map-view");
+const timelineView = document.getElementById("timeline-view");
+const timelineList = document.getElementById("timeline-list");
 const aboutView = document.getElementById("about-view");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
@@ -20,15 +22,16 @@ const viewTabs = document.querySelectorAll(".view-tab");
 const randomDiceButton = document.getElementById("random-dice-button");
 
 // -------------------------------------
-// 목록/지도/소개 뷰 <-> 곡 목록 뷰 전환
+// 목록/지도/연표/소개 뷰 <-> 곡 목록 뷰 전환
 // -------------------------------------
 
-// 국가를 고르는 화면(목록, 지도, 소개 중 현재 viewMode에 맞는 것)을 보여줌
+// 국가를 고르는 화면(목록, 지도, 연표, 소개 중 현재 viewMode에 맞는 것)을 보여줌
 function showBrowseUI() {
   songsView.style.display = "none";
 
   countryView.style.display = viewMode === "countries" ? "block" : "none";
   mapView.style.display = viewMode === "map" ? "block" : "none";
+  timelineView.style.display = viewMode === "timeline" ? "block" : "none";
   aboutView.style.display = viewMode === "about" ? "block" : "none";
 }
 
@@ -36,6 +39,7 @@ function showBrowseUI() {
 function showSongsUI() {
   countryView.style.display = "none";
   mapView.style.display = "none";
+  timelineView.style.display = "none";
   aboutView.style.display = "none";
   songsView.style.display = "block";
 }
@@ -60,8 +64,12 @@ function goToBrowseView(mode) {
   tagSearch.value = "";
 
   // renderCountries()가 국가 목록도 새로 그리고, showBrowseUI()를 통해
-  // 현재 viewMode에 맞는 화면(목록/지도)도 함께 보여줌
+  // 현재 viewMode에 맞는 화면(목록/지도/연표/소개)도 함께 보여줌
   renderCountries();
+
+  if (mode === "timeline") {
+    renderTimeline();
+  }
 
   updateURLState(true);
 }
@@ -76,17 +84,22 @@ viewTabs.forEach(tab => {
 // 랜덤 곡 (헤더의 주사위 버튼)
 // -------------------------------------
 
-function showRandomSongDetail() {
-  const song = getRandomSong(songs);
+// 곡 하나만 곡 목록 화면에 표시 (랜덤 곡, 연표에서 곡 클릭 등에서 공용으로 사용)
+function showSingleSongDetail(song, titleText) {
   if (!song) return;
 
   selectedCountry = null;
 
   showSongsUI();
 
-  countryTitle.textContent = "🎲 랜덤 곡";
+  countryTitle.textContent = titleText;
 
   renderSongs([song]);
+}
+
+function showRandomSongDetail() {
+  const song = getRandomSong(songs);
+  showSingleSongDetail(song, "🎲 랜덤 곡");
 }
 
 randomDiceButton?.addEventListener("click", showRandomSongDetail);
@@ -177,7 +190,7 @@ function restoreStateFromURL() {
   const keyword = params.get("q");
 
   // 뷰 모드 복원 (기본값: 지도)
-  const validModes = ["map", "countries", "about"];
+  const validModes = ["map", "countries", "timeline", "about"];
   viewMode = validModes.includes(view) ? view : "map";
   setActiveViewTab();
 
@@ -209,6 +222,9 @@ function restoreStateFromURL() {
   // 국가나 필터가 있으면 곡 목록 표시
   if (validCountry || hasFilter) {
     applyFilters();
+  } else if (viewMode === "timeline") {
+    // renderCountries()가 이미 showBrowseUI()로 화면은 띄웠으니 내용만 채움
+    renderTimeline();
   }
   isRestoringState = false;
 }
@@ -496,6 +512,130 @@ function renderCountries() {
     countryList.appendChild(
       buildCountryListItem(code, countryCounts.get(code))
     );
+  });
+}
+
+// -------------------------------------
+// 연표 (곡을 연대별로 탐색)
+// -------------------------------------
+
+// sscdbg.json의 year 필드는 형식이 다양함:
+// 정확한 연도(1975, "1975"), 대략적 연도("1580?", "2008?"),
+// 연대("1950s", "1940s?"), 세기("19c?"), 완전 미상("?") 등.
+// 전부 안전하게 파싱해서 정렬 기준값과 그룹(연대) 라벨을 뽑아냄
+function parseSongYear(raw) {
+
+  if (raw === undefined || raw === null || raw === "") {
+    return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: Infinity };
+  }
+
+  const str = String(raw).trim();
+
+  if (str === "?") {
+    return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: Infinity };
+  }
+
+  // 세기 표기: "19c?", "18c?", "20c?"
+  let match = str.match(/^(\d{1,2})c\??$/i);
+  if (match) {
+    const century = parseInt(match[1], 10);
+    const startYear = (century - 1) * 100;
+    return {
+      sortValue: startYear + 50,
+      groupLabel: `${century}세기`,
+      groupSortValue: startYear,
+    };
+  }
+
+  // 연대 표기: "1950s", "1970s", "1940s?"
+  match = str.match(/^(\d{4})s\??$/);
+  if (match) {
+    const decadeStart = parseInt(match[1], 10);
+    return {
+      sortValue: decadeStart,
+      groupLabel: `${decadeStart}년대`,
+      groupSortValue: decadeStart,
+    };
+  }
+
+  // 정확하거나 대략적인 연도: "1926", "1580?", "2008?"
+  match = str.match(/^(\d{3,4})\??$/);
+  if (match) {
+    const year = parseInt(match[1], 10);
+    const decadeStart = Math.floor(year / 10) * 10;
+    return {
+      sortValue: year,
+      groupLabel: `${decadeStart}년대`,
+      groupSortValue: decadeStart,
+    };
+  }
+
+  // 파싱할 수 없는 형식은 안전하게 미상으로 처리
+  return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: Infinity };
+}
+
+function renderTimeline() {
+
+  timelineList.innerHTML = "";
+
+  const groups = new Map();
+
+  songs.forEach(song => {
+    const parsed = parseSongYear(song.year);
+
+    if (!groups.has(parsed.groupLabel)) {
+      groups.set(parsed.groupLabel, {
+        groupSortValue: parsed.groupSortValue,
+        entries: [],
+      });
+    }
+
+    groups.get(parsed.groupLabel).entries.push({
+      song,
+      sortValue: parsed.sortValue,
+    });
+  });
+
+  const orderedGroups = [...groups.entries()].sort(
+    (a, b) => a[1].groupSortValue - b[1].groupSortValue
+  );
+
+  orderedGroups.forEach(([label, group]) => {
+
+    group.entries.sort((a, b) => a.sortValue - b.sortValue);
+
+    const section = document.createElement("div");
+    section.className = "timeline-group";
+
+    const heading = document.createElement("h3");
+    heading.className = "timeline-heading";
+    heading.textContent = `${label} · ${group.entries.length}곡`;
+    section.appendChild(heading);
+
+    const list = document.createElement("div");
+    list.className = "timeline-song-list";
+
+    group.entries.forEach(({ song }) => {
+
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "timeline-song-chip";
+
+      chip.innerHTML = `
+        <span class="timeline-song-year">${song.year}</span>
+        <span class="timeline-song-title">${song.title}</span>
+        <span class="timeline-song-artist">${song.artist.join(", ")}</span>
+      `;
+
+      chip.addEventListener("click", () => {
+        showSingleSongDetail(song, song.title);
+      });
+
+      list.appendChild(chip);
+    });
+
+    section.appendChild(list);
+    timelineList.appendChild(section);
   });
 }
 
