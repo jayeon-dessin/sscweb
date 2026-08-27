@@ -574,9 +574,7 @@ function parseSongYear(raw) {
   return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: -Infinity };
 }
 
-function renderTimeline() {
-
-  timelineList.innerHTML = "";
+function groupSongsByTimelinePeriod() {
 
   const groups = new Map();
 
@@ -596,16 +594,63 @@ function renderTimeline() {
     });
   });
 
-  const orderedGroups = [...groups.entries()].sort(
+  return [...groups.entries()].sort(
     (a, b) => a[1].groupSortValue - b[1].groupSortValue
   );
+}
 
-  orderedGroups.forEach(([label, group]) => {
+// 연대별 곡 수 히스토그램. 막대를 클릭하면 아래 목록의 해당 연대로 스크롤됨.
+// "연도 미상"은 시간축 위에 놓을 수 없으므로 막대그래프에서는 제외함(목록에는 그대로 있음)
+function renderTimelineHistogram(orderedGroups) {
+
+  const container = document.getElementById("timeline-histogram");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  const chronological = orderedGroups
+    .map(([label, group], index) => ({ label, group, index }))
+    .filter(item => item.label !== "연도 미상");
+
+  if (chronological.length === 0) return;
+
+  const maxCount = Math.max(
+    ...chronological.map(item => item.group.entries.length)
+  );
+
+  chronological.forEach(({ label, group, index }) => {
+
+    const bar = document.createElement("button");
+    bar.type = "button";
+    bar.className = "timeline-histogram-bar";
+    bar.style.height = `${Math.max((group.entries.length / maxCount) * 100, 4)}%`;
+    bar.title = `${label} · ${group.entries.length}곡`;
+
+    bar.addEventListener("click", () => {
+      document
+        .getElementById(`timeline-group-${index}`)
+        ?.scrollIntoView?.({ behavior: "smooth", block: "start" });
+    });
+
+    container.appendChild(bar);
+  });
+}
+
+function renderTimeline() {
+
+  timelineList.innerHTML = "";
+
+  const orderedGroups = groupSongsByTimelinePeriod();
+
+  renderTimelineHistogram(orderedGroups);
+
+  orderedGroups.forEach(([label, group], index) => {
 
     group.entries.sort((a, b) => a.sortValue - b.sortValue);
 
     const section = document.createElement("div");
     section.className = "timeline-group";
+    section.id = `timeline-group-${index}`;
 
     const heading = document.createElement("h3");
     heading.className = "timeline-heading";
@@ -921,6 +966,59 @@ function songCardMarkup(song) {
 // 관련곡 (같은 아티스트 우선, 부족하면 같은 태그로 보충)
 // -------------------------------------
 
+// 두 [경도, 위도] 좌표 사이의 거리 (km, haversine 공식)
+function haversineDistanceKm(coordA, coordB) {
+  const [lon1, lat1] = coordA;
+  const [lon2, lat2] = coordB;
+
+  const R = 6371;
+  const toRad = deg => (deg * Math.PI) / 180;
+
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+// 두 곡의 국가 목록 중 가장 가까운 조합의 거리 (km). 국가 좌표가 없으면 Infinity
+function minCountryDistance(songA, songB) {
+
+  const countriesA = (songA.countries || []).filter(
+    code => typeof COUNTRY_CENTROIDS !== "undefined" && COUNTRY_CENTROIDS[code]
+  );
+  const countriesB = (songB.countries || []).filter(
+    code => typeof COUNTRY_CENTROIDS !== "undefined" && COUNTRY_CENTROIDS[code]
+  );
+
+  if (countriesA.length === 0 || countriesB.length === 0) {
+    return Infinity;
+  }
+
+  let minDistance = Infinity;
+
+  countriesA.forEach(codeA => {
+    countriesB.forEach(codeB => {
+      if (codeA === codeB) {
+        minDistance = 0;
+        return;
+      }
+      const distance = haversineDistanceKm(
+        COUNTRY_CENTROIDS[codeA],
+        COUNTRY_CENTROIDS[codeB]
+      );
+      if (distance < minDistance) minDistance = distance;
+    });
+  });
+
+  return minDistance;
+}
+
+// 관련곡: 같은 아티스트 우선 -> 부족하면 같은 태그 -> 그래도 부족하면
+// 지리적으로 가까운 국가의 곡으로 채움
 function findRelatedSongs(song, limit = 5) {
 
   const artistSet = new Set(song.artist || []);
@@ -928,6 +1026,7 @@ function findRelatedSongs(song, limit = 5) {
 
   const sameArtist = [];
   const sameTag = [];
+  const rest = [];
 
   songs.forEach(other => {
 
@@ -937,10 +1036,28 @@ function findRelatedSongs(song, limit = 5) {
       sameArtist.push(other);
     } else if ((other.tags || []).some(tag => tagSet.has(tag))) {
       sameTag.push(other);
+    } else {
+      rest.push(other);
     }
   });
 
-  return [...sameArtist, ...sameTag].slice(0, limit);
+  let related = [...sameArtist, ...sameTag];
+
+  if (related.length < limit) {
+
+    const remaining = limit - related.length;
+
+    const nearby = rest
+      .map(other => ({ other, distance: minCountryDistance(song, other) }))
+      .filter(entry => entry.distance < Infinity)
+      .sort((a, b) => a.distance - b.distance)
+      .slice(0, remaining)
+      .map(entry => entry.other);
+
+    related = [...related, ...nearby];
+  }
+
+  return related.slice(0, limit);
 }
 
 function renderRelatedSongs(container, song) {
