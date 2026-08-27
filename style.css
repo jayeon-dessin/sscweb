@@ -766,6 +766,83 @@ a:hover {
 
 
 /* ========================================
+   관련곡
+======================================== */
+
+.related-songs-container:empty {
+    display: none;
+}
+
+.related-songs-heading {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #444;
+
+    margin:
+        var(--space-5)
+        0
+        var(--space-3);
+
+    padding-top: var(--space-4);
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.related-songs-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-2);
+}
+
+.related-song-chip {
+    appearance: none;
+
+    border: 1px solid #e2e6ec;
+    background: #f8f9fb;
+
+    border-radius: 8px;
+
+    padding:
+        var(--space-2)
+        var(--space-3);
+
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: baseline;
+
+    gap: var(--space-2);
+
+    transition:
+        background 0.15s,
+        border-color 0.15s;
+}
+
+.related-song-chip:hover {
+    background: #eef4ff;
+    border-color: #4f8ef7;
+}
+
+.related-song-chip:focus-visible {
+    outline: 3px solid rgba(79, 142, 247, 0.35);
+    outline-offset: 2px;
+}
+
+.related-song-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    color: #2c3e50;
+}
+
+.related-song-artist {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+
+/* ========================================
    태그
 ======================================== */
 
@@ -1003,6 +1080,21 @@ hr {
 .about-content p {
     margin: 0 0 var(--space-3);
     color: #444;
+}
+
+.about-content ul {
+    margin: var(--space-2) 0 0;
+    padding-left: var(--space-5);
+
+    color: #444;
+}
+
+.about-content li {
+    margin-bottom: var(--space-2);
+}
+
+.about-content li:last-child {
+    margin-bottom: 0;
 }
 
 .country-controls {

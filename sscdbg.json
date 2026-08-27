@@ -7779,8 +7779,7 @@
       "momocashew"
     ],
     "language": [
-      "영어",
-      "중국어"
+      "영어"
     ],
     "countries": [
       "CA",
@@ -9878,5 +9877,86 @@
       }
     ],
     "image": "covers/301-kare-nanhasi-hallelujah-chicken-run-band.jpg"
+  },
+  {
+    "title": "Nuestra Canción",
+    "year": "2015",
+    "artist": [
+      "Monsieur Periné","Vicente García"
+    ],
+    "songwriters": [
+      "Vicente García","Catalina García","Santiago Prieto","Miguel Guerra"
+    ],
+    "language": [
+      "스페인어"
+    ],
+    "countries": [
+      "CO"
+    ],
+    "tags": [
+      "재즈","라틴팝","인디"
+    ],
+    "memo": "'우리의 노래', 2021년 틱톡을 통해 널리 퍼진 곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=KY6-Svb0xtM"
+      }
+    ],
+    "image": "covers/302-nuestra-cancion.jpg"
+  },
+  {
+    "title": "NO ME IMPORTA",
+    "year": "2024",
+    "artist": [
+      "Lali"
+    ],
+    "songwriters": [
+      "Mariana Espósito","Martin D'Agosto","Mauro De Tommaso","Isabela Teran Lieban","Federico Barreto"
+    ],
+    "language": [
+      "스페인어"
+    ],
+    "countries": [
+      "AR"
+    ],
+    "tags": [
+      "팝락","펑크"
+    ],
+    "memo": "(남들이 뭐라 하든) '난 신경쓰지 않아'. 반항과 해방",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=S5epcbupTeo"
+      }
+    ],
+    "image": "covers/303-no-me-importa.jpg"
+  },
+  {
+    "title": "Medzi Medzi",
+    "year": "1950s?",
+    "artist": [
+      "E.T.Mensah"
+    ],
+    "songwriters": [
+      "E.T.Mensah"
+    ],
+    "language": [
+      "트위어"
+    ],
+    "countries": [
+      "GH"
+    ],
+    "tags": [
+      "재즈","하이라이프"
+    ],
+    "memo": "'하이라이프의 왕' E.T.Mensah의 곡 중 하나. 전통을 기억하라!",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=mumPIxyCdTA"
+      }
+    ],
+    "image": "covers/304-medzi-medzi.jpg"
   }
 ]

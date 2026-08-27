@@ -526,13 +526,13 @@ function renderCountries() {
 function parseSongYear(raw) {
 
   if (raw === undefined || raw === null || raw === "") {
-    return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: Infinity };
+    return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: -Infinity };
   }
 
   const str = String(raw).trim();
 
   if (str === "?") {
-    return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: Infinity };
+    return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: -Infinity };
   }
 
   // 세기 표기: "19c?", "18c?", "20c?"
@@ -571,7 +571,7 @@ function parseSongYear(raw) {
   }
 
   // 파싱할 수 없는 형식은 안전하게 미상으로 처리
-  return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: Infinity };
+  return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: -Infinity };
 }
 
 function renderTimeline() {
@@ -912,7 +912,71 @@ function songCardMarkup(song) {
         </div>
       </div>
     </div>
+
+    <div class="related-songs-container"></div>
   `;
+}
+
+// -------------------------------------
+// 관련곡 (같은 아티스트 우선, 부족하면 같은 태그로 보충)
+// -------------------------------------
+
+function findRelatedSongs(song, limit = 5) {
+
+  const artistSet = new Set(song.artist || []);
+  const tagSet = new Set(song.tags || []);
+
+  const sameArtist = [];
+  const sameTag = [];
+
+  songs.forEach(other => {
+
+    if (other === song) return;
+
+    if ((other.artist || []).some(artist => artistSet.has(artist))) {
+      sameArtist.push(other);
+    } else if ((other.tags || []).some(tag => tagSet.has(tag))) {
+      sameTag.push(other);
+    }
+  });
+
+  return [...sameArtist, ...sameTag].slice(0, limit);
+}
+
+function renderRelatedSongs(container, song) {
+
+  if (!container) return;
+
+  const related = findRelatedSongs(song);
+
+  if (related.length === 0) {
+    return;
+  }
+
+  container.innerHTML = `
+    <h3 class="related-songs-heading">관련곡</h3>
+    <div class="related-songs-list"></div>
+  `;
+
+  const list = container.querySelector(".related-songs-list");
+
+  related.forEach(relatedSong => {
+
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "related-song-chip";
+
+    chip.innerHTML = `
+      <span class="related-song-title">${relatedSong.title}</span>
+      <span class="related-song-artist">${relatedSong.artist.join(", ")}</span>
+    `;
+
+    chip.addEventListener("click", () => {
+      showSingleSongDetail(relatedSong, relatedSong.title);
+    });
+
+    list.appendChild(chip);
+  });
 }
 
 // -------------------------------------
@@ -942,6 +1006,12 @@ function renderSongs(songArray) {
 
     if (typeof loadArtworkInto === "function") {
       loadArtworkInto(item.querySelector(".song-artwork"), song);
+    }
+
+    // 곡 하나만 상세로 보여주는 경우(랜덤 곡, 연표, 관련곡 클릭 등)에만
+    // 관련곡을 채움 - 국가별 목록처럼 여러 곡이 쭉 나열될 때는 생략
+    if (songArray.length === 1) {
+      renderRelatedSongs(item.querySelector(".related-songs-container"), song);
     }
   });
 }
