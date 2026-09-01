@@ -3776,7 +3776,7 @@
     "year": "1972",
     "artist": [],
     "songwriters": [
-      "Traditional",
+      "Traditional", "Seán Ó Riada",
       "Seán Clárach Mac Dómhnaill"
     ],
     "language": [
@@ -5768,9 +5768,10 @@
   },
   {
     "title": "Come Out, Ye Black and Tans",
-    "year": "1972",
+    "year": "1960s",
     "artist": [],
     "songwriters": [
+      "Traditional",
       "Dominic Behan",
       "Piaras Mac Gearailt"
     ],
@@ -5781,9 +5782,9 @@
       "IE"
     ],
     "tags": [
-      "민요"
+      "아일랜드독립전쟁","풍자","민요"
     ],
-    "memo": "'덤벼라, Black and Tans!'. 영국군을 비꼬면서 덤빌 테면 덤벼 보라는 곡.",
+    "memo": "'덤벼라, Black and Tans!'. 영국군을 비꼬면서 덤빌 테면 덤벼 보라는 곡. 멜로디는 민요 Rosc Catha na Mumhan에서 따왔다.",
     "youtube": [
       {
         "title": "The Wolfe Tones",
@@ -5820,7 +5821,7 @@
     "tags": [
       "인디"
     ],
-    "memo": "미트볼 서브마린(샌드위치)를 소재로 한, 연인을 찾아가는 노래라는 듯하다.",
+    "memo": "미트볼 서브마린(샌드위치)를 소재로 한, 연인을 찾아가는 노래.",
     "youtube": [
       {
         "title": "음원",
