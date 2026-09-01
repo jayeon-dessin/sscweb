@@ -10067,7 +10067,7 @@
     "title": "Gut Genug",
     "year": "2026",
     "artist": [
-      "KitschKrieg","Blumengarten","Shirin David"
+      "KITSCHKRIEG","Blumengarten","Shirin David"
     ],
     "songwriters": [
       "Jennifer Allendörfer", "Luís Cruz", "Barbara Davidavičius", "Rayan Djima", "Samuel Eickmann", "Christoph Erkes", "Lars Hammerstein", "Christian Meyerholz"
@@ -10147,5 +10147,59 @@
       }
     ],
     "image": "covers/311-nway-oo-kant-kaw.jpg"
+  },
+  {
+    "title": "Have Visa No Have Rice",
+    "year": "2011",
+    "artist": [
+      "The Cambodian Space Project"
+    ],
+    "songwriters": [
+      "Srey Thy"
+    ],
+    "language": [
+      "크메르어"
+    ],
+    "countries": [
+      "KH","AU"
+    ],
+    "tags": [
+      "사이키델릭락"
+    ],
+    "memo": "프랑스에 간 캄보디아인의 먹을 것에 대한 고충을 표현한 재치 있는 곡. 비자는 있는데 쌀밥이 없다니!",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=I1oG4x2Y_HE"
+      }
+    ],
+    "image": "covers/312-have-visa-no-have-rice.jpg"
+  },
+  {
+    "title": "Watany Al Kabir (وطني الكبير)",
+    "year": "1990s",
+    "artist": [
+      "Ibrahim Hesnawi (إبراهيم حسناوي)"
+    ],
+    "songwriters": [
+      "Ibrahim Hesnawi"
+    ],
+    "language": [
+      "아랍어"
+    ],
+    "countries": [
+      "LY"
+    ],
+    "tags": [
+      "레게","펑크"
+    ],
+    "memo": "리비아의 레게 곡. '나의 위대한 조국', 자유와 각성에 관해.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=eh5sK-Ryd3o"
+      }
+    ],
+    "image": "covers/313-watany-al-kabir.jpg"
   }
 ]
