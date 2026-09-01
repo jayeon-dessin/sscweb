@@ -32,13 +32,14 @@ function buildNumericToAlpha2() {
   return map;
 }
 
-// 곡 수에 따라 4단계로 색을 진하게 (1곡 / 2~4곡 / 5~10곡 / 11곡 이상)
+// 곡 수에 따라 5단계로 색을 진하게 (1곡 / 2~4곡 / 5~10곡 / 11~20곡 / 21곡 이상)
 function countTierClass(count) {
   if (!count || count <= 0) return "";
   if (count === 1) return "count-tier-1";
   if (count <= 4) return "count-tier-2";
   if (count <= 10) return "count-tier-3";
-  return "count-tier-4";
+  if (count <= 20) return "count-tier-4";
+  return "count-tier-5";
 }
 
 async function initMap() {

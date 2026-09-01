@@ -1206,29 +1206,34 @@ hr {
     stroke-width: 0.5;
 }
 
-/* 곡 수가 많을수록 진한 색 (1곡 / 2~4곡 / 5~10곡 / 11곡 이상) */
+/* 곡 수가 많을수록 진한 색 (1곡 / 2~4곡 / 5~10곡 / 11~20곡 / 21곡 이상) */
 .map-country.count-tier-1 {
-    fill: #cfe0fb;
+    fill: #a3c4f3;
     transition: fill 0.15s;
 }
 
 .map-country.count-tier-2 {
-    fill: #9dc3f7;
+    fill: #82a6ec;
     transition: fill 0.15s;
 }
 
 .map-country.count-tier-3 {
-    fill: #5d97f0;
+    fill: #6089e6;
     transition: fill 0.15s;
 }
 
 .map-country.count-tier-4 {
-    fill: #2563eb;
+    fill: #3e6cdf;
+    transition: fill 0.15s;
+}
+
+.map-country.count-tier-5 {
+    fill: #1d4ed8;
     transition: fill 0.15s;
 }
 
 .map-country.has-songs:hover {
-    fill: #1d4ed8;
+    fill: #1544ab;
 }
 
 .map-dot {
@@ -1238,23 +1243,27 @@ hr {
 }
 
 .map-dot.count-tier-1 {
-    fill: #cfe0fb;
+    fill: #a3c4f3;
 }
 
 .map-dot.count-tier-2 {
-    fill: #9dc3f7;
+    fill: #82a6ec;
 }
 
 .map-dot.count-tier-3 {
-    fill: #5d97f0;
+    fill: #6089e6;
 }
 
 .map-dot.count-tier-4 {
-    fill: #2563eb;
+    fill: #3e6cdf;
+}
+
+.map-dot.count-tier-5 {
+    fill: #1d4ed8;
 }
 
 .map-dot:hover {
-    fill: #1d4ed8;
+    fill: #1544ab;
 }
 
 .map-error-text {

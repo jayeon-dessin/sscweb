@@ -9960,7 +9960,7 @@
     "image": "covers/304-medzi-medzi.jpg"
   },
   {
-    "title": "阳光彩虹小白马 (양광채홍소백마)",
+    "title": "阳光彩虹小白马 (햇살, 무지개, 작은 백마)",
     "year": "2018",
     "artist": [
       "Wowkie Zhang (大张伟)"
@@ -9977,7 +9977,7 @@
     "tags": [
       "밈","팝"
     ],
-    "memo": "'햇살, 무지개, 작은 백마'. 자주 반복되는 内个(nèige)라는 단어 때문에 밈이 되었다.",
+    "memo": "위로와 희망을 주는 밝은 노래. 자주 반복되는 内个(nèige)라는 단어 때문에 밈이 되었다.",
     "youtube": [
       {
         "title": "MV",
@@ -10050,7 +10050,7 @@
       "Sylvain Vanholme","Raymond Vincent","David MacKay","Pyotr Tchaikovsky"
     ],
     "language": [
-      ""
+      "영어"
     ],
     "countries": [
       "BE"
@@ -10070,5 +10070,63 @@
       }
     ],
     "image": "covers/308-daydream.jpg"
+  },
+  {
+    "title": "Gut Genug",
+    "year": "2026",
+    "artist": [
+      "KitschKrieg","Blumengarten","Shirin David"
+    ],
+    "songwriters": [
+      "Jennifer Allendörfer", "Luís Cruz", "Barbara Davidavičius", "Rayan Djima", "Samuel Eickmann", "Christoph Erkes", "Lars Hammerstein", "Christian Meyerholz"
+    ],
+    "language": [
+      "독일어"
+    ],
+    "countries": [
+      "DE"
+    ],
+    "tags": [
+      "밈","힙합","팝"
+    ],
+    "memo": "너는 충분히 훌륭해(Du bist gut genug). 밈이 되어 세계적 인기를 끈 곡",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=0GnA8VYOfko"
+      }
+    ],
+    "image": "covers/309-gut-genug.jpg"
+  },
+  {
+    "title": "Jožin z bažin",
+    "year": "1977",
+    "artist": [
+      "Banjo Band"
+    ],
+    "songwriters": [
+      "Ivan Mládek"
+    ],
+    "language": [
+      "체코어"
+    ],
+    "countries": [
+      "CZ"
+    ],
+    "tags": [
+      "밈","재즈","코미디"
+    ],
+    "memo": "'늪지대의 요진', 늪지대에 사는 괴물 조진을 잡으려는 남자의 이야기. 2008년 폴란드에서 밈이 되어 유튜브에서 인기를 끌었다.",
+    "youtube": [
+      {
+        "title": "1978? 방송. 이상한 아저씨들의 이상한 공연",
+        "url": "https://www.youtube.com/watch?v=FuOhQZP821o"
+      },
+      {
+        "title": "폴란드어 버전",
+        "url": "https://www.youtube.com/watch?v=ZNIR0Y6dE3I"
+      }
+    ],
+    "image": "covers/310-jozin-z-bazin.jpg"
   }
 ]
