@@ -3685,13 +3685,13 @@
     "links": [
       {
         "title": "블로그 해설",
-        "url": "https://jdessin.tistory.com/80"
+        "url": "https://jdessin.tistory.com/81"
       }
     ],
     "youtube": [
       {
         "title": "MV",
-        "url": "https://www.youtube.com/watch?v=t-_SbDuqxQc"
+        "url": "https://www.youtube.com/watch?v=5dWeeUIZFgA"
       },
       {
         "title": "미국의 가수 Marc Anthony의 스페인어 번안곡, Vivir Mi Vida(MV)",
@@ -4253,7 +4253,7 @@
     "youtube": [
       {
         "title": "MV",
-        "url": "https://www.youtube.com/watch?v=VHoT4N43jK8"
+        "url": "https://www.youtube.com/watch?v=j-RpvIuazmc"
       },
       {
         "title": "영국의 밴드 Coldplay 피처링 버전.",
@@ -4863,7 +4863,7 @@
       },
       {
         "title": "파키스탄 듀오 Zeb & Haniya의 현대적인 버전. (Coke Studio Pakistan)",
-        "url": "https://www.youtube.com/watch?v=9oGSq6iGSjQ"
+        "url": "https://www.youtube.com/watch?v=GuY-2sHJYhg"
       }
     ],
     "image": "covers/141-bibi-sanam-jaanam-بی-بی-صنم-جانم.jpg"
@@ -8506,10 +8506,6 @@
       {
         "title": "MV",
         "url": "https://www.youtube.com/watch?v=7wtfhZwyrcc"
-      },
-      {
-        "title": "음원",
-        "url": "https://www.youtube.com/watch?v=4AqjqOqNrjw"
       }
     ],
     "image": "covers/257-believer-imagine-dragons.jpg"
@@ -9347,35 +9343,31 @@
     "image": "covers/285-24k-magic-bruno-mars.jpg"
   },
   {
-    "title": "24K Magic",
-    "year": "2016",
+    "title": "Samurai",
+    "year": "2021",
     "artist": [
-      "Bruno Mars"
+      "Cairokee"
     ],
     "songwriters": [
-      "Bruno Mars",
-      "Philip Lawrence",
-      "Christopher Brody Brown"
+      "Atwa","Cairokee"
     ],
     "language": [
-      "영어"
+      "아랍어"
     ],
     "countries": [
-      "US"
+      "EG"
     ],
     "tags": [
-      "펑크",
-      "R&B",
-      "디스코"
+      "신스팝","락"
     ],
-    "memo": "브루노 마스의 대표곡. 24K magic in the air",
+    "memo": "카이로키의 대표곡. 사무라이",
     "youtube": [
       {
         "title": "MV",
         "url": "https://youtu.be/UqyT8IEBkvY?si=pxIMXsa2YBmzmzxD"
       }
     ],
-    "image": "covers/286-24k-magic-bruno-mars.jpg"
+    "image": "covers/286-samurai-cairokee.jpg"
   },
   {
     "title": "Grenade",
