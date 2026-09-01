@@ -610,7 +610,7 @@
       "Kino (Кино)"
     ],
     "songwriters": [
-      "Виктор Цой"
+      "Victor Tsoi"
     ],
     "language": [
       "러시아어"
@@ -644,7 +644,7 @@
       "Kino (Кино)"
     ],
     "songwriters": [
-      "Виктор Цой"
+      "Victor Tsoi"
     ],
     "language": [
       "러시아어"
@@ -2284,8 +2284,8 @@
     "year": "1938",
     "artist": [],
     "songwriters": [
-      "Матвей Блантер",
-      "Михаил Исаковский"
+      "Matvey Blanter",
+      "Mikhail Isakovsky"
     ],
     "language": [
       "러시아어"
@@ -2392,7 +2392,7 @@
     "year": "1860",
     "artist": [],
     "songwriters": [
-      "Иван Ларионов"
+      "Ivan Larionov"
     ],
     "language": [
       "러시아어"
@@ -2423,7 +2423,7 @@
     "artist": [],
     "songwriters": [
       "Matti Jurva",
-      "Tatu Pekkarinen"
+      "Tatu Pekkarinen","Traditional"
     ],
     "language": [
       "핀란드어",
@@ -2535,7 +2535,7 @@
     "year": "1790",
     "artist": [],
     "songwriters": [
-      "Семен Климовський"
+      "Semen Klymovskyi"
     ],
     "language": [
       "우크라이나어"
@@ -2639,7 +2639,7 @@
       "Vitas (Витас)"
     ],
     "songwriters": [
-      "Витас"
+      "Vitas"
     ],
     "language": [
       "러시아어"
@@ -2844,7 +2844,7 @@
     "year": "1912",
     "artist": [],
     "songwriters": [
-      "Василий Агапкин"
+      "Vasily Agapkin"
     ],
     "language": [
       "러시아어"
@@ -3468,9 +3468,9 @@
       "Željko Grmuša (Жељко Грмуша)"
     ],
     "songwriters": [
-      "Жељко Грмуша",
-      "Ненад Тинтор",
-      "Слободан Врга"
+      "Željko Grmuša",
+      "Nenad Tintor",
+      "Slovodan Vrga"
     ],
     "language": [
       "세르보크로아트어"
@@ -5309,8 +5309,8 @@
     "year": "1978",
     "artist": [],
     "songwriters": [
-      "Владимир Шаинский",
-      "Михаил Матусовский"
+      "Vladimir Shainsky",
+      "Mikhail Matusovsky"
     ],
     "language": [
       "러시아어"
@@ -5333,7 +5333,7 @@
   },
   {
     "title": "Deus, Pátria, Rei",
-    "year": "20c?",
+    "year": "1970s?",
     "artist": [],
     "songwriters": [
       "José Campos e Sousa",
@@ -5574,9 +5574,9 @@
       "Miami (МАЙАМИ)"
     ],
     "songwriters": [
-      "Салакаев Валерий",
-      "Ярославцев Владимир",
-      "Дворецкий Дмитрий"
+      "Valery Salakayev",
+      "Dmitry Dvoretsky",
+      "Vladimir Yaroslavtsev"
     ],
     "language": [
       "러시아어"
@@ -5739,14 +5739,14 @@
       "Freestyle (Фристайл)"
     ],
     "songwriters": [
-      "Вадима Казаченко"
+      "Vadim Kazachenko"
     ],
     "language": [
       "러시아어"
     ],
     "countries": [
-      "RU",
-      "UA"
+      "UA",
+      "RU"
     ],
     "tags": [
       "디스코",
@@ -6865,7 +6865,7 @@
       "Katya Lel (Катя Лель)"
     ],
     "songwriters": [
-      "Максим Фадеев"
+      "Maksim Fadeev"
     ],
     "language": [
       "러시아어"
@@ -9958,5 +9958,117 @@
       }
     ],
     "image": "covers/304-medzi-medzi.jpg"
+  },
+  {
+    "title": "阳光彩虹小白马 (양광채홍소백마)",
+    "year": "2018",
+    "artist": [
+      "Wowkie Zhang (大张伟)"
+    ],
+    "songwriters": [
+      "大张伟"
+    ],
+    "language": [
+      "중국어"
+    ],
+    "countries": [
+      "CN"
+    ],
+    "tags": [
+      "밈","팝"
+    ],
+    "memo": "'햇살, 무지개, 작은 백마'. 자주 반복되는 内个(nèige)라는 단어 때문에 밈이 되었다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=YG4iTGjuoKw"
+      }
+    ],
+    "image": "covers/305-yangguangcaihong.jpg"
+  },
+  {
+    "title": "Inferno",
+    "year": "2019",
+    "artist": [
+      "Mrs. GREEN APPLE"
+    ],
+    "songwriters": [
+      "大森元貴"
+    ],
+    "language": [
+      "일본어"
+    ],
+    "countries": [
+      "JP"
+    ],
+    "tags": [
+      "JPOP","애니메이션","팝락"
+    ],
+    "memo": "청사과의 대표곡 중 하나.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=wfCcs0vLysk"
+      }
+    ],
+    "image": "covers/306-inferno.jpg"
+  },
+  {
+    "title": "Heavy Foot",
+    "year": "2025",
+    "artist": [
+      "Mon Rovîa"
+    ],
+    "songwriters": [
+      "Cooper Holzman","Andrew Lowe","Eric Cromartie","Grant Averill"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "LR","US"
+    ],
+    "tags": [
+      "포크"
+    ],
+    "memo": "라이베리아 출신 싱어송라이터 몬 로비아의 대표곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=vyXccqTlhoI"
+      }
+    ],
+    "image": "covers/307-heavy-foot.jpg"
+  },
+  {
+    "title": "Daydream",
+    "year": "1969",
+    "artist": [
+      "Wallace Collection"
+    ],
+    "songwriters": [
+      "Sylvain Vanholme","Raymond Vincent","David MacKay","Pyotr Tchaikovsky"
+    ],
+    "language": [
+      ""
+    ],
+    "countries": [
+      "BE"
+    ],
+    "tags": [
+      "프로그레시브락"
+    ],
+    "memo": "차이코프스키 멜로디를 차용한 심포닉 팝. 유럽을 중심으로 크게 히트",
+    "youtube": [
+      {
+        "title": "Wallace Collection 원곡",
+        "url": "https://www.youtube.com/watch?v=60ejKrj38j8"
+      },
+      {
+        "title": "널리 알려진 독일의 Günter Kallmann Choir 버전",
+        "url": "https://www.youtube.com/watch?v=rQACwgrYwKM"
+      }
+    ],
+    "image": "covers/308-daydream.jpg"
   }
 ]
