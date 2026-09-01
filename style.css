@@ -1082,6 +1082,23 @@ a:hover {
     .about-content {
         padding: var(--space-4);
     }
+
+    .about-icon {
+        font-size: 2rem;
+    }
+
+    .about-intro {
+        padding:
+            var(--space-3)
+            var(--space-4);
+
+        font-size: 0.95rem;
+    }
+
+    .about-rule {
+        padding:
+            var(--space-3);
+    }
 }
 
 
@@ -1114,29 +1131,91 @@ hr {
     line-height: 1.8;
 }
 
-.about-content h2 {
-    margin: 0 0 var(--space-4);
-    color: #2c3e50;
+.about-hero {
+    text-align: center;
+    margin-bottom: var(--space-6);
 }
 
-.about-content p {
-    margin: 0 0 var(--space-3);
-    color: #444;
-}
-
-.about-content ul {
-    margin: var(--space-2) 0 0;
-    padding-left: var(--space-5);
-
-    color: #444;
-}
-
-.about-content li {
+.about-icon {
+    font-size: 2.5rem;
     margin-bottom: var(--space-2);
 }
 
-.about-content li:last-child {
-    margin-bottom: 0;
+.about-hero h2 {
+    margin: 0 0 var(--space-3);
+    color: #2c3e50;
+}
+
+.about-stat-badge {
+    display: inline-block;
+
+    margin: 0;
+    padding:
+        var(--space-1)
+        var(--space-4);
+
+    background: #eef4ff;
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4f8ef7;
+}
+
+.about-intro {
+    margin: 0 0 var(--space-6);
+    padding:
+        var(--space-4)
+        var(--space-5);
+
+    background: #f8f9fb;
+    border-left: 4px solid #4f8ef7;
+    border-radius: 0 12px 12px 0;
+
+    font-size: 1.02rem;
+    line-height: 1.9;
+    color: #333;
+}
+
+.about-intro strong {
+    color: #2563eb;
+}
+
+.about-rules-heading {
+    margin: 0 0 var(--space-4);
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.about-rules {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.about-rule {
+    display: flex;
+    align-items: flex-start;
+
+    gap: var(--space-3);
+    padding:
+        var(--space-3)
+        var(--space-4);
+
+    background: #f8f9fb;
+    border-radius: 10px;
+}
+
+.about-rule-icon {
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+
+.about-rule p {
+    margin: 0;
+    color: #444;
+    line-height: 1.7;
 }
 
 .country-controls {

@@ -10120,5 +10120,32 @@
       }
     ],
     "image": "covers/310-jozin-z-bazin.jpg"
+  },
+  {
+    "title": "Nway Oo Kant Kaw",
+    "year": "2003",
+    "artist": [
+      "Htoo Eain Thin (ထူးအိမ်သင်)"
+    ],
+    "songwriters": [
+      "Htoo Eain Thin"
+    ],
+    "language": [
+      "미얀마어"
+    ],
+    "countries": [
+      "MM"
+    ],
+    "tags": [
+      "발라드"
+    ],
+    "memo": "'초여름의 Kant Kaw 꽃'. 지금까지도 사랑받는 미얀마의 대표 발라드 곡 중 하나.",
+    "youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=CE7vu-JF_r0"
+      }
+    ],
+    "image": "covers/311-nway-oo-kant-kaw.jpg"
   }
 ]

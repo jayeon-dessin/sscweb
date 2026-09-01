@@ -305,6 +305,17 @@ function renderArchiveStats() {
 
   stats.textContent =
     `총 ${songs.length}곡 · ${countries.length}개 국가·지역`;
+
+  renderAboutStats(countries.length);
+}
+
+// 소개 탭의 통계 뱃지 (실제 곡 수를 자동으로 반영)
+function renderAboutStats(countryCount) {
+  const badge = document.getElementById("about-stat-badge");
+  if (!badge) return;
+
+  badge.textContent =
+    `현재 ${songs.length}곡 · ${countryCount}개 국가·지역 수집 중`;
 }
 
 function renderDecorativeFlags() {
