@@ -10282,7 +10282,6 @@
     ],
     "image": "covers/317-the-final-countdown.jpg"
   },
-  [
   {
     "title": "My Way",
     "year": "1969",
@@ -10384,10 +10383,7 @@
   {
     "title": "Danza Kuduro",
     "year": "2010",
-    "artist": [
-      "Don Omar",
-      "Lucenzo"
-    ],
+    "artist": ["Don Omar","Lucenzo"],
     "songwriters": [
       "Lucenzo",
       "William Landrón",
@@ -10415,5 +10411,4 @@
     ],
     "image": "covers/323-danza-kuduro.jpg"
   }
-]
 ]
