@@ -215,49 +215,55 @@ body {
    연표 (곡을 연대별로 탐색)
 ======================================== */
 
-#timeline-histogram {
-    display: flex;
-    align-items: flex-end;
-
-    gap: 3px;
-    height: 100px;
-
-    padding: var(--space-3);
-    margin-bottom: var(--space-6);
-
-    background: white;
-    border-radius: 12px;
-
-    box-shadow:
-        0 2px 12px rgba(0, 0, 0, 0.08);
-}
-
-.timeline-histogram-bar {
-    appearance: none;
-    border: none;
-
-    flex: 1;
-    min-width: 2px;
-
-    background: #9dc3f7;
-    border-radius: 2px 2px 0 0;
-
-    cursor: pointer;
-
-    transition: background 0.15s;
-}
-
-.timeline-histogram-bar:hover {
-    background: #2563eb;
-}
-
 #timeline-list {
+    position: relative;
+
     margin-bottom: var(--space-7);
+    padding-left: 28px;
+}
+
+/* 세로로 이어지는 타임라인 축 */
+#timeline-list::before {
+    content: "";
+    position: absolute;
+
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+
+    width: 2px;
+    background: #dbe3ee;
 }
 
 .timeline-group {
+    position: relative;
+
     margin-bottom: var(--space-6);
     scroll-margin-top: var(--space-5);
+}
+
+/* 각 연대를 나타내는 점(노드) - 축 위에 놓임 */
+.timeline-group::before {
+    content: "";
+    position: absolute;
+
+    left: -28px;
+    top: 4px;
+
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    background: #4f8ef7;
+    border: 3px solid white;
+
+    box-shadow: 0 0 0 2px #4f8ef7;
+}
+
+/* "연도 미상" 그룹은 시간축 위 정확한 위치가 없으므로 점 색을 다르게 */
+.timeline-group-unknown::before {
+    background: #b0b8c4;
+    box-shadow: 0 0 0 2px #b0b8c4;
 }
 
 .timeline-heading {
@@ -938,18 +944,7 @@ a:hover {
     }
 
     #flag-strip {
-        gap: var(--space-2);
-        margin: var(--space-4) auto;
-    }
-
-    /* 국기가 너무 작으면 손가락으로 누르기 힘드므로 터치 영역을 키움 */
-    .flag-strip-item {
-        padding: 6px;
-    }
-
-    #flag-strip .fi,
-    #flag-strip .flag-unclassified {
-        font-size: 1.4rem;
+        display: none;
     }
 
     .controls-row {
@@ -1098,6 +1093,20 @@ a:hover {
     .about-rule {
         padding:
             var(--space-3);
+    }
+
+    #timeline-list {
+        padding-left: 20px;
+    }
+
+    #timeline-list::before {
+        left: 4px;
+    }
+
+    .timeline-group::before {
+        left: -20px;
+        width: 10px;
+        height: 10px;
     }
 }
 

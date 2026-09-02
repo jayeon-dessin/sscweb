@@ -610,78 +610,11 @@ function groupSongsByTimelinePeriod() {
   );
 }
 
-// 연대별 곡 수 히스토그램. 막대를 클릭하면 아래 목록의 해당 연대로 스크롤됨.
-// "연도 미상"은 시간축 위에 놓을 수 없으므로 막대그래프에서는 제외함(목록에는 그대로 있음).
-// 20세기 이전은 그룹 수가 많고 곡 수는 적어서 막대가 너무 잘게 쪼개지므로,
-// 히스토그램에서만 "20세기 이전" 막대 하나로 합침 (아래 상세 목록은 원래대로 세분화 유지)
-function renderTimelineHistogram(orderedGroups) {
-
-  const container = document.getElementById("timeline-histogram");
-  if (!container) return;
-
-  container.innerHTML = "";
-
-  const PRE_20TH_CENTURY_CUTOFF = 1900;
-
-  const chronological = orderedGroups
-    .map(([label, group], index) => ({ label, group, index }))
-    .filter(item => item.label !== "연도 미상");
-
-  if (chronological.length === 0) return;
-
-  const preModern = chronological.filter(
-    item => item.group.groupSortValue < PRE_20TH_CENTURY_CUTOFF
-  );
-  const modern = chronological.filter(
-    item => item.group.groupSortValue >= PRE_20TH_CENTURY_CUTOFF
-  );
-
-  const bars = [];
-
-  if (preModern.length > 0) {
-    bars.push({
-      label: "20세기 이전",
-      count: preModern.reduce((sum, item) => sum + item.group.entries.length, 0),
-      // 병합된 막대를 클릭하면 그 중 가장 이른 연대(목록에서 제일 먼저 나오는 곳)로 스크롤
-      scrollToIndex: Math.min(...preModern.map(item => item.index)),
-    });
-  }
-
-  modern.forEach(item => {
-    bars.push({
-      label: item.label,
-      count: item.group.entries.length,
-      scrollToIndex: item.index,
-    });
-  });
-
-  const maxCount = Math.max(...bars.map(bar => bar.count));
-
-  bars.forEach(({ label, count, scrollToIndex }) => {
-
-    const bar = document.createElement("button");
-    bar.type = "button";
-    bar.className = "timeline-histogram-bar";
-    bar.style.height = `${Math.max((count / maxCount) * 100, 4)}%`;
-    bar.title = `${label} · ${count}곡`;
-
-    bar.addEventListener("click", () => {
-      document
-        .getElementById(`timeline-group-${scrollToIndex}`)
-        ?.scrollIntoView?.({ behavior: "smooth", block: "start" });
-    });
-
-    container.appendChild(bar);
-  });
-}
-
 function renderTimeline() {
 
   timelineList.innerHTML = "";
 
   const orderedGroups = groupSongsByTimelinePeriod();
-
-  renderTimelineHistogram(orderedGroups);
 
   orderedGroups.forEach(([label, group], index) => {
 
@@ -690,6 +623,10 @@ function renderTimeline() {
     const section = document.createElement("div");
     section.className = "timeline-group";
     section.id = `timeline-group-${index}`;
+
+    if (label === "연도 미상") {
+      section.classList.add("timeline-group-unknown");
+    }
 
     const heading = document.createElement("h3");
     heading.className = "timeline-heading";

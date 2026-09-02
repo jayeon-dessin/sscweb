@@ -343,18 +343,13 @@
       "FR"
     ],
     "tags": [
-      "샹송",
-      "번안"
+      "샹송"
     ],
     "memo": "My Way의 원곡. '습관처럼'",
     "youtube": [
       {
         "title": "Lyric Video",
         "url": "https://www.youtube.com/watch?v=qjpRSREHX1Y"
-      },
-      {
-        "title": "프랭크 시나트라 - My Way (번안곡)",
-        "url": "https://www.youtube.com/watch?v=qQzdAsjWGPg"
       }
     ],
     "image": "covers/010-comme-d-habitude-claude-françois.jpg"
@@ -403,9 +398,9 @@
     ],
     "tags": [
       "민요",
-      "번안"
+      "번안","어린이"
     ],
-    "memo": "독일 슈바벤 지방의 민요. 한국어 번안곡명은 '옹달샘'.",
+    "memo": "독일 슈바벤 지방의 민요. 동요 '옹달샘'의 원곡.",
     "links": [
       {
         "title": "블로그 해설",
@@ -475,7 +470,7 @@
       "NZ"
     ],
     "tags": [
-      "민요"
+      "민요","번안"
     ],
     "memo": "뉴질랜드 마오리족의 사랑 노래. 세계대전을 통해 마오리 전사들에게서 전 세계로 퍼진 곡. 한국어 번안곡명은 '연가'",
     "links": [
@@ -3060,15 +3055,11 @@
     "tags": [
       "댄스"
     ],
-    "memo": "포르투갈계 프랑스인 Lucenzo의 대표곡. 쿠두루(Kuduro)는 앙골라의 음악 장르. 푸에르토리코의 Don Omar와 함께한 스페인어 버전 'Danza Kuduro'가 크게 흥행하였다.",
+    "memo": "포르투갈계 프랑스인 Lucenzo의 대표곡. 쿠두루(Kuduro)는 앙골라의 음악 장르. Don Omar와 함께한 스페인어 버전 'Danza Kuduro'가 크게 흥행하였다.",
     "youtube": [
       {
         "title": "MV",
         "url": "https://www.youtube.com/watch?v=uv9CjsQNtf4"
-      },
-      {
-        "title": "유명한 Don Omar의 'Danza Kuduro' 버전, MV",
-        "url": "https://www.youtube.com/watch?v=7zp1TbLFPp8"
       }
     ],
     "image": "covers/090-vem-dançar-kuduro-lucenzo.jpg"
@@ -3144,8 +3135,7 @@
       "Jason Crest"
     ],
     "songwriters": [
-      "Michael Antony Deighan",
-      "Mike Wilsh"
+      "Michael Deighan","Michael Wilshaw"
     ],
     "language": [
       "영어"
@@ -3154,19 +3144,13 @@
       "GB"
     ],
     "tags": [
-      "번안",
-      "샹송",
-      "샹젤리제"
+      "팝","락"
     ],
     "memo": "샹젤리제(Les Champs-Élysées)의 원곡.",
     "youtube": [
       {
-        "title": "음원",
-        "url": "https://www.youtube.com/watch?v=L41mF1tANVU"
-      },
-      {
-        "title": "미국의 가수 Joe Dassin의 번안곡, Les Champs-Élysées(샹젤리제) (Lyric Video).",
-        "url": "https://www.youtube.com/watch?v=1JhYYUWOBBs"
+        "title": "음원(?)",
+        "url": "https://www.youtube.com/watch?v=aKYUrxWRLHk"
       }
     ],
     "image": "covers/093-waterloo-road-jason-crest.jpg"
@@ -3663,9 +3647,7 @@
     "artist": [
       "Khaled"
     ],
-    "songwriters": [
-      "RedOne",
-      "Alex P",
+    "songwriters": ["RedOne","Alex P",
       "Bilal Hajji",
       "Björn Djupström",
       "AJ Junior"
@@ -3692,10 +3674,6 @@
       {
         "title": "MV",
         "url": "https://www.youtube.com/watch?v=5dWeeUIZFgA"
-      },
-      {
-        "title": "미국의 가수 Marc Anthony의 스페인어 번안곡, Vivir Mi Vida(MV)",
-        "url": "https://www.youtube.com/watch?v=YXnjy5YlDwk"
       }
     ],
     "image": "covers/108-c-est-la-vie-khaled.jpg"
@@ -4351,22 +4329,17 @@
       "CM"
     ],
     "tags": [
-      "월드컵",
-      "마코사"
+      "마코사","군가"
     ],
     "memo": "군가를 바탕으로 만들어진 곡, 여러 언어가 섞여 있다. 2010년 월드컵 주제가 Waka Waka의 원곡.",
     "youtube": [
       {
-        "title": "원곡 뮤비(Golden Sounds). 유명한 부분은 7분 28초부터",
+        "title": "뮤비(Golden Sounds). 유명한 부분은 7분 28초부터",
         "url": "https://www.youtube.com/watch?v=OdrEisrvY7g"
       },
       {
-        "title": "원곡 음원",
+        "title": "음원",
         "url": "https://www.youtube.com/watch?v=Zmr4KAPk958"
-      },
-      {
-        "title": "Shakira, Freshlyground - Waka Waka (This time for Africa)",
-        "url": "https://www.youtube.com/watch?v=pRpeEdMmmQ0"
       }
     ],
     "image": "covers/127-zangaléwa-golden-sounds.jpg"
@@ -6004,7 +5977,7 @@
         "url": "https://www.youtube.com/watch?v=sgBldNsK-xw"
       },
       {
-        "title": "캐나다 가수 Céline Dion 버전, 2024 올림픽",
+        "title": "캐나다 가수 Céline Dion, 2024 올림픽",
         "url": "https://www.youtube.com/watch?v=9wQ-GYnKPYM"
       }
     ],
@@ -6037,7 +6010,7 @@
         "url": "https://www.youtube.com/watch?v=TdWEhMOrRpQ"
       },
       {
-        "title": "영국의 소프라노 Sarah Brightman과 함께 부른, Time To Say Goodbye 버전 (Live From Teatro Del Silenzio 2007)",
+        "title": "영국의 소프라노 Sarah Brightman과 함께 부른, Time To Say Goodbye (Live From Teatro Del Silenzio 2007)",
         "url": "https://www.youtube.com/watch?v=4L_yCwFD6Jo"
       }
     ],
@@ -6586,7 +6559,6 @@
       "프랑스어"
     ],
     "countries": [
-      "US",
       "FR"
     ],
     "tags": [
@@ -6709,7 +6681,7 @@
       "영어"
     ],
     "countries": [
-      "NO"
+      "NO","GB"
     ],
     "tags": [
       "하우스",
@@ -7060,7 +7032,7 @@
       "프랑스어"
     ],
     "countries": [
-      "US"
+      "FR","US"
     ],
     "tags": [
       "R&B",
@@ -7090,7 +7062,7 @@
       "프랑스어"
     ],
     "countries": [
-      "US"
+      "FR","US"
     ],
     "tags": [
       "R&B",
@@ -7558,7 +7530,7 @@
       "영어"
     ],
     "countries": [
-      "NO"
+      "NO","GB"
     ],
     "tags": [
       "일렉트로닉",
@@ -9623,8 +9595,7 @@
     "title": "Shape of You",
     "year": "2017",
     "artist": [
-      "Justin Bieber",
-      "Ludacris"
+      "Ed Sheeran"
     ],
     "songwriters": [
       "Ed Sheeran",
@@ -9802,17 +9773,13 @@
       "ES"
     ],
     "tags": [
-      "오페라"
+      "콘트라단사"
     ],
     "memo": "쿠바풍의 스페인 춤곡. 프랑스어로 번안되어 비제의 오페라 <카르멘>의 아리아 'Habanera'로 사용되었다.",
     "youtube": [
       {
-        "title": "스페인어 원곡",
+        "title": "José Ferrero, Bartomeu Jaume",
         "url": "https://www.youtube.com/watch?v=KekeN8rjFHk"
-      },
-      {
-        "title": "오페라 <카르멘>의 'Habanera'. (André Rieu & Carmen Monarcha)",
-        "url": "https://www.youtube.com/watch?v=icJRTdpS2pU"
       }
     ],
     "image": "covers/299-el-arreglito.jpg"
@@ -10202,5 +10169,251 @@
       }
     ],
     "image": "covers/313-watany-al-kabir.jpg"
+  },
+  {
+    "title": "Sur le pont d'Avignon",
+    "year": "15c?",
+    "artist": [],
+    "songwriters": [
+      "Traditional"
+    ],
+    "language": [
+      "프랑스어"
+    ],
+    "countries": [
+      "FR"
+    ],
+    "tags": [
+      "어린이"
+    ],
+    "memo": "프랑스 동요. '아비뇽 다리 위에서' 인사하는 다양한 직업의 사람들",
+    "youtube": [
+      {
+        "title": "Boutchoo!",
+        "url": "https://www.youtube.com/watch?v=iLvVZny4HzQ"
+      },
+      {
+        "title": "Comptines et chansons",
+        "url": "https://www.youtube.com/watch?v=uJKfxtYAt0s"
+      }
+    ],
+    "image": "covers/314-sur-le-pont-d-avignon.jpg"
+  },
+  {
+    "title": "Tu vuò fà l'americano",
+    "year": "1956",
+    "artist": ["Renato Carosone"],
+    "songwriters": [
+      "Renato Carosone","Nicola Salerno"
+    ],
+    "language": [
+      "나폴리어"
+    ],
+    "countries": [
+      "IT"
+    ],
+    "tags": [
+      "스윙","재즈"
+    ],
+    "memo": "미국인처럼 행동하는 이탈리아인에 대한 풍자곡. 2010년 Yolanda Be Cool과 DCUP의 하우스 버전 'We No Speak Americano'가 크게 유행했다.",
+    "youtube": [
+      {
+        "title": "원곡 (2007 Remastered)",
+        "url": "https://www.youtube.com/watch?v=ARRKNB07Ixc"
+      },
+      {
+        "title": "'We No Speak Americano' (MV)",
+        "url": "https://www.youtube.com/watch?v=7E9Ed9DUQoQ"
+      }
+    ],
+    "image": "covers/315-tu-vuò-fà-l'americano.jpg"
+  },
+  {
+    "title": "99 Luftballons",
+    "year": "1983",
+    "artist": ["Nena"],
+    "songwriters": [
+      "Carlo Karges","Uwe Fahrenkrog-Petersen"
+    ],
+    "language": [
+      "독일어"
+    ],
+    "countries": [
+      "DE"
+    ],
+    "tags": [
+      "신스팝","락","평화"
+    ],
+    "memo": "'풍선 99개'로 때문에 일어난 핵전쟁. 유럽과 북미에서 크게 인기를 얻은 서독의 반전 노래.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=Fpu5a0Bl8eY"
+      }
+    ],
+    "image": "covers/316-99-luftballons.jpg"
+  },
+  {
+    "title": "The Final Countdown",
+    "year": "1986",
+    "artist": ["Europe"],
+    "songwriters": [
+      "Joey Tempest"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "SE"
+    ],
+    "tags": [
+      "하드락","메탈"
+    ],
+    "memo": "스포츠 경기에서 자주 쓰이는 비장한 오프닝 음악.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=9jK-NcRmVcw"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=4hj8M8XZpis"
+      }
+    ],
+    "image": "covers/317-the-final-countdown.jpg"
+  },
+  [
+  {
+    "title": "My Way",
+    "year": "1969",
+    "artist": ["Frank Sinatra"],
+    "songwriters": ["Paul Anka", "Claude François", "Jacques Revaux","Gilles Thibaut"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["팝", "재즈", "번안"],
+    "memo": "Comme d'habitude의 영어 번안곡. 프랭크 시나트라의 대표곡이자 스탠다드 팝의 상징.",
+    "youtube": [
+      {
+        "title": "음원 (2008 Remastered)",
+        "url": "https://www.youtube.com/watch?v=qQzdAsjWGPg"
+      }
+    ],
+    "image": "covers/318-my-way.jpg"
+  },
+  {
+    "title": "Les Champs-Élysées",
+    "year": "1969",
+    "artist": ["Joe Dassin"],
+    "songwriters": ["Pierre Delanoë", "Michael Wilshaw", "Michael Deighan"],
+    "language": ["프랑스어"],
+    "countries": ["FR","US"],
+    "tags": ["샹송", "번안"],
+    "memo": "Waterloo Road의 프랑스어 번안곡. 파리 샹젤리제 거리를 노래한, 프랑스를 대표하는 샹송. 프랑스계 미국인 가수 Joe Dassin이 불렀다.",
+    "youtube": [
+      {
+        "title": "Lyric Video",
+        "url": "https://www.youtube.com/watch?v=1JhYYUWOBBs"
+      },
+      {
+        "title": "Chœur de l’Armée Française, Orchestre de la Garde Républicaine, Aurore Tillac",
+        "url": "https://www.youtube.com/watch?v=yQ0GPZXq0H4"
+      }
+    ],
+    "image": "covers/319-les-champs-elysees.jpg"
+  },
+  {
+    "title": "Vivir Mi Vida",
+    "year": "2013",
+    "artist": ["Marc Anthony"],
+    "songwriters": ["Khaled","RedOne", "Alex P", "Bilal Hajji", "Björn Djupström"],
+    "language": ["스페인어"],
+    "countries": ["US"],
+    "tags": ["댄스", "번안", "살사", "라틴팝"],
+    "memo": "C'est la vie의 스페인어 번안곡. 푸에르토리코계 가수 Marc Anthony의 대표 히트곡.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=YXnjy5YlDwk"
+      }
+    ],
+    "image": "covers/320-vivir-mi-vida.jpg"
+  },
+  {
+    "title": "Waka Waka (This Time for Africa)",
+    "year": "2010",
+    "artist": ["Shakira", "Freshlyground"],
+    "songwriters": ["Shakira", "John Hill", "Jean Paul Zé Bella", "Victor Dooh Belley", "Emile Kojidie", "Annie Anzouer"],
+    "language": ["영어","팡어","코사어","스페인어"],
+    "countries": ["CO", "ZA"],
+    "tags": ["월드컵", "댄스", "팝"],
+    "memo": "카메룬 곡 Zangaléwa를 샘플링한 2010년 남아공 월드컵 공식 응원가.",
+    "youtube": [
+      {
+        "title": "영어 버전 MV",
+        "url": "https://www.youtube.com/watch?v=pRpeEdMmmQ0"
+      },
+      {
+        "title": "스페인어 버전 MV",
+        "url": "https://www.youtube.com/watch?v=dzsuE5ugxf4"
+      }
+    ],
+    "image": "covers/321-waka-waka.jpg"
+  },
+  {
+    "title": "Habanera",
+    "year": "1875",
+    "artist": [],
+    "songwriters": ["Sebastián Iradier","Georges Bizet"],
+    "language": ["프랑스어"],
+    "countries": ["FR"],
+    "tags": ["오페라", "클래식", "번안"],
+    "memo": "스페인 무곡 El Arreglito의 멜로디를 차용한, 비제의 오페라 <카르멘> 속 아리아.",
+    "links": [],
+    "youtube": [
+      {
+        "title": "Angela Gheorghiu (프랑스어 자막)",
+        "url": "https://www.youtube.com/watch?v=tSsNFPk2vNA"
+      },
+      {
+        "title": "André Rieu & Carmen Monarcha",
+        "url": "https://www.youtube.com/watch?v=icJRTdpS2pU"
+      }
+    ],
+    "image": "covers/322-habanera.jpg"
+  },
+  {
+    "title": "Danza Kuduro",
+    "year": "2010",
+    "artist": [
+      "Don Omar",
+      "Lucenzo"
+    ],
+    "songwriters": [
+      "Lucenzo",
+      "William Landrón",
+      "Faouze Barkati",
+      "Fabrice Toigo"
+    ],
+    "language": [
+      "포르투갈어",
+      "스페인어"
+    ],
+    "countries": [
+      "PR",
+      "PT",
+      "FR"
+    ],
+    "tags": [
+      "댄스","라틴팝"
+    ],
+    "memo": "푸에르토리코의 Don Omar와 함께한, 'Vem dançar kuduro'의 스페인어 버전.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=7zp1TbLFPp8"
+      }
+    ],
+    "image": "covers/323-danza-kuduro.jpg"
   }
+]
 ]
