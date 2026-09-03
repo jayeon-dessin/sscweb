@@ -695,6 +695,65 @@ body {
     color: #c7cdd6;
 }
 
+
+/* ---------- 국가 선택 시 1차 화면: 간략 카드 ---------- */
+
+#song-list.song-list-compact {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fill, minmax(240px, 1fr));
+
+    gap: var(--space-3);
+}
+
+.song-card-compact {
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-3);
+
+    padding: var(--space-3);
+    margin-bottom: 0;
+
+    cursor: pointer;
+}
+
+.song-artwork-compact {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+}
+
+.song-artwork-compact.no-artwork::before {
+    font-size: 1.4rem;
+}
+
+.compact-song-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.compact-song-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.compact-song-artist {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    margin-top: 2px;
+
+    font-size: 0.82rem;
+    color: #888;
+}
+
 .song-meta {
     margin-bottom: var(--space-3);
 }
@@ -990,6 +1049,22 @@ a:hover {
 
     .song-artwork.no-artwork::before {
         font-size: 1.65rem;
+    }
+
+    /* 간략 카드는 모바일에서도 작게 유지 (위 .song-artwork 72px보다 우선 적용) */
+    .song-artwork-compact {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 8px;
+    }
+
+    .song-artwork-compact.no-artwork::before {
+        font-size: 1.2rem;
+    }
+
+    #song-list.song-list-compact {
+        grid-template-columns: 1fr;
     }
 
      .song-meta-line {

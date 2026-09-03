@@ -16,8 +16,7 @@
       "DE"
     ],
     "tags": [
-      "디스코",
-      "몽골"
+      "디스코","몽골","칭기즈칸"
     ],
     "memo": "디스코 밴드 징기스 칸의 동명의 대표곡. 몽골의 정복자 칭기즈 칸(징기스 칸)에 관한 노래",
     "youtube": [
@@ -26,7 +25,7 @@
         "url": "https://www.youtube.com/watch?v=1AXlVZRpweI"
       }
     ],
-    "image": "covers/000-dschinghis-khan-dschinghis-khan.jpg"
+    "image": "covers/000-dschinghis-khan.jpg"
   },
   {
     "title": "Machu Picchu",
@@ -45,8 +44,7 @@
       "DE"
     ],
     "tags": [
-      "디스코",
-      "잉카"
+      "디스코","잉카","전설"
     ],
     "memo": "징기스 칸의 덜 유명한 곡. 잉카 문명의 몰락에 관한 전설에 관해 노래한다.",
     "links": [
@@ -80,18 +78,16 @@
       "DE"
     ],
     "tags": [
-      "디스코",
-      "러시아",
-      "밈"
+      "디스코","러시아","모스크바","밈"
     ],
-    "memo": "징기스 칸의 또다른 대표곡. 주제는 모스크바, 때문에 러시아 곡으로 오해받기도 한다.",
+    "memo": "'모스크바', 러시아 곡으로 오해받기도 하는 징기스 칸의 대표곡",
     "youtube": [
       {
         "title": "ZDF Starparade 1979",
         "url": "https://www.youtube.com/watch?v=lyuFLU2Zqz0"
       }
     ],
-    "image": "covers/002-moskau-dschinghis-khan.jpg"
+    "image": "covers/000-dschinghis-khan.jpg"
   },
   {
     "title": "Pistolero",
@@ -110,10 +106,9 @@
       "DE"
     ],
     "tags": [
-      "디스코",
-      "멕시코"
+      "디스코","멕시코","총"
     ],
-    "memo": "징기스 칸의 덜 유명한 곡. 서부 개척시대의 멕시코를 주제로 한다.",
+    "memo": "'총잡이', 서부 개척시대의 멕시코를 주제로 한다.",
     "youtube": [
       {
         "title": "Die Pyramide 1981",
@@ -129,10 +124,7 @@
       "Wir sind Helden"
     ],
     "songwriters": [
-      "Judith Holofernes",
-      "Pola Roy",
-      "Mark Tavassol",
-      "Jean-Michel Tourette"
+      "Judith Holofernes","Pola Roy","Mark Tavassol","Jean-Michel Tourette"
     ],
     "language": [
       "독일어"
@@ -141,9 +133,9 @@
       "DE"
     ],
     "tags": [
-      "팝"
+      "팝","팝록"
     ],
-    "memo": "중독성 있는 독일 팝. 역재생한 뮤직비디오가 특이하다.",
+    "memo": "'단 한 단어', 중독성 있는 독일 팝. 역재생한 뮤직비디오가 특이하다.",
     "youtube": [
       {
         "title": "MV",
@@ -153,18 +145,16 @@
     "image": "covers/004-nur-ein-wort-wir-sind-helden.jpg"
   },
   {
-    "title": "The girl from Ipanema (Garota de Ipanema)",
+    "title": "The Girl from Ipanema (Garota de Ipanema)",
     "year": 1964,
     "artist": [
-      "Antônio Carlos Jobim",
       "Astrud Gilberto",
       "João Gilberto",
       "Stan Getz"
     ],
     "songwriters": [
       "Antônio Carlos Jobim",
-      "Vinícius de Moraes",
-      "Norman Gimbel"
+      "Vinícius de Moraes"
     ],
     "language": [
       "포르투갈어",
@@ -175,9 +165,9 @@
       "US"
     ],
     "tags": [
-      "보사노바"
+      "보사노바","재즈"
     ],
-    "memo": "보사노바의 전설 조빙의 대표곡.",
+    "memo": "보사노바의 전설 조빙의 대표곡. 1962년 작곡되었으나 1964년 Getz/Gilberto 음반으로 세계적으로 알려졌다.",
     "links": [
       {
         "title": "블로그 해설",
@@ -186,14 +176,18 @@
     ],
     "youtube": [
       {
-        "title": "음원",
+        "title": "영어 버전 음원 (Getz/Gilberto, 1964)",
         "url": "https://www.youtube.com/watch?v=N-TKOh0zsvU"
+      },
+      {
+        "title": "초기 포르투갈어 버전 (Pery Ribeiro, 1962)",
+        "url": "https://www.youtube.com/watch?v=jc6nMjX9pNU"
       }
     ],
-    "image": "covers/005-the-girl-from-ipanema-garota-de-ipanema-antônio-carlos-jobim.jpg"
+    "image": "covers/005-the-girl-from-ipanema.jpg"
   },
   {
-    "title": "Dragostea din tei (보리수나무 아래에서의 사랑)",
+    "title": "Dragostea din tei",
     "year": 2003,
     "artist": [
       "O-Zone"
@@ -208,7 +202,7 @@
       "MD"
     ],
     "tags": [
-      "댄스"
+      "댄스","신스팝","디스코"
     ],
     "memo": "'누마누마', 몰도바 최고의 글로벌 히트.",
     "links": [
@@ -227,7 +221,7 @@
         "url": "https://www.youtube.com/watch?v=f7P5Q2IIT4U"
       }
     ],
-    "image": "covers/006-dragostea-din-tei-보리수나무-아래에서의-사랑-o-zone.jpg"
+    "image": "covers/006-dragostea-din-tei.jpg"
   },
   {
     "title": "Griechischer Wein",
@@ -243,12 +237,10 @@
       "Michael Kunze"
     ],
     "countries": [
-      "AT",
-      "DE"
+      "AT"
     ],
     "tags": [
-      "팝",
-      "그리스"
+      "팝","그리스","서독","술"
     ],
     "memo": "서독의 그리스인 노동자들의 애환을 담은 곡. 독일인들의 국민가요 중 하나",
     "youtube": [
@@ -277,7 +269,7 @@
       "FR"
     ],
     "tags": [
-      "일렉트로닉"
+      "일렉트로닉","하우스","자연"
     ],
     "memo": "자연으로의 회귀 + 전자음악.",
     "links": [
@@ -313,8 +305,7 @@
       "US"
     ],
     "tags": [
-      "일렉트로닉",
-      "포크"
+      "일렉트로닉","민요","하우스","북미원주민"
     ],
     "memo": "미국 와이오밍/오클라호마 지역 원주민 아라파호족의 멜로디를 차용한 전자음악.",
     "youtube": [
@@ -343,7 +334,7 @@
       "FR"
     ],
     "tags": [
-      "샹송"
+      "샹송","팝","번안"
     ],
     "memo": "My Way의 원곡. '습관처럼'",
     "youtube": [
@@ -356,7 +347,7 @@
   },
   {
     "title": "Ça pik un peu quand même",
-    "year": 2026,
+    "year": 2025,
     "artist": [
       "Miki"
     ],
@@ -371,9 +362,9 @@
       "FR"
     ],
     "tags": [
-      "일렉트로닉"
+      "신스팝","팝"
     ],
-    "memo": "프랑스 싱어송라이터 miki의 곡. 뮤비가 인상적(?)임.",
+    "memo": "'그래도 좀 아프네', 한국 혼혈의 프랑스 싱어송라이터 miki의 곡. 뮤비가 인상적(?)임.",
     "youtube": [
       {
         "title": "MV",
@@ -397,8 +388,7 @@
       "DE"
     ],
     "tags": [
-      "민요",
-      "번안","어린이"
+      "민요","번안","어린이"
     ],
     "memo": "독일 슈바벤 지방의 민요. 동요 '옹달샘'의 원곡.",
     "links": [
@@ -434,8 +424,7 @@
       "US"
     ],
     "tags": [
-      "민요",
-      "하와이"
+      "민요","하와이","이별"
     ],
     "memo": "하와이의 여왕이 만든, 하와이를 대표하는 이별 노래.",
     "links": [
@@ -452,6 +441,10 @@
       {
         "title": "Tia Carrere",
         "url": "https://www.youtube.com/watch?v=v6cYHXcWAN0"
+      },
+      {
+        "title": "한국어 번안곡, 박인희 - 알로하오에 (1974)",
+        "url": "https://www.youtube.com/watch?v=AmHBC2PmM0c"
       }
     ],
     "image": "covers/013-aloha-ʻoe.jpg"
@@ -470,9 +463,9 @@
       "NZ"
     ],
     "tags": [
-      "민요","번안"
+      "민요","번안","전설"
     ],
-    "memo": "뉴질랜드 마오리족의 사랑 노래. 세계대전을 통해 마오리 전사들에게서 전 세계로 퍼진 곡. 한국어 번안곡명은 '연가'",
+    "memo": "마오리 전설을 바탕으로 한 사랑 노래. 세계대전을 통해 마오리 전사들에게서 전 세계로 퍼진 곡. '비바람이 치던 바다~'로 시작하는 한국어 번안곡도 유명하다",
     "links": [
       {
         "title": "블로그 해설",
@@ -487,6 +480,10 @@
       {
         "title": "The Kiwi Sound",
         "url": "https://www.youtube.com/watch?v=nqr4wamt1-g"
+      },
+      {
+        "title": "한국어 번안곡, 해바라기 - 연가 (1985)",
+        "url": "https://www.youtube.com/watch?v=gClLG1Xka9E"
       }
     ],
     "image": "covers/014-pokarekare-ana.jpg"
@@ -508,8 +505,7 @@
       "DE"
     ],
     "tags": [
-      "권주가",
-      "폴카"
+      "권주가","폴카","술"
     ],
     "memo": "술자리 노래; 천국에는 맥주가 없기에, 우리는 지금 여기서 마신다.",
     "youtube": [
@@ -520,10 +516,6 @@
       {
         "title": "영화 Die Fischerin vom Bodensee(1956)",
         "url": "https://www.youtube.com/watch?v=xf42pd2d6Dw"
-      },
-      {
-        "title": "케냐의 Rolling Tunes가 부른, 가장 잘 알려진 버전. 영어 + 키쿠유어",
-        "url": "https://www.youtube.com/watch?v=iZ62leeztW4"
       }
     ],
     "image": "covers/015-im-himmel-gibt-s-kein-bier.jpg"
@@ -545,7 +537,7 @@
       "JP"
     ],
     "tags": [
-      "보컬로이드"
+      "보컬로이드","JPOP","도쿄"
     ],
     "memo": "YOASOBI의 작곡가 Ayase의 보컬로이드(하츠네 미쿠) 곡.",
     "links": [
@@ -583,7 +575,7 @@
       "JP"
     ],
     "tags": [
-      "보컬로이드"
+      "보컬로이드","피아노록","기타"
     ],
     "memo": "스리이의 보컬로이드(카가미네 렌) 곡. 트랜스젠더에 대한 은유?",
     "youtube": [
@@ -596,7 +588,7 @@
         "url": "https://www.youtube.com/watch?v=pWLhidOSYOs"
       }
     ],
-    "image": "covers/017-テレキャスタービーボーイ-텔레캐스터-비보이-three-すりぃ.jpg"
+    "image": "covers/017-テレキャスタービーボーイ.jpg"
   },
   {
     "title": "Группа крови (혈액형)",
@@ -614,10 +606,9 @@
       "RU"
     ],
     "tags": [
-      "소련",
-      "락"
+      "소련","록","피","포스트펑크","뉴웨이브"
     ],
-    "memo": "소련의 락 밴드 키노의 대표곡. 전쟁 반대의 메시지",
+    "memo": "소련의 록 밴드 키노의 대표곡. 전쟁 반대의 메시지",
     "links": [
       {
         "title": "블로그 해설",
@@ -630,7 +621,7 @@
         "url": "https://www.youtube.com/watch?v=xtxjm7ciwmc"
       }
     ],
-    "image": "covers/018-группа-крови-혈액형-kino-кино.jpg"
+    "image": "covers/018-группа-крови.jpg"
   },
   {
     "title": "Кончится лето",
@@ -648,8 +639,7 @@
       "RU"
     ],
     "tags": [
-      "소련",
-      "락"
+      "소련","록","포스트펑크","뉴웨이브"
     ],
     "memo": "'여름이 끝나간다', 키노의 마지막 앨범 <Чёрный альбом>수록곡",
     "youtube": [
@@ -662,7 +652,7 @@
         "url": "https://www.youtube.com/watch?v=6VqiMQoMXmw"
       }
     ],
-    "image": "covers/019-кончится-лето-kino-кино.jpg"
+    "image": "covers/019-кончится-лето.jpg"
   },
   {
     "title": "Rain",
@@ -682,9 +672,7 @@
       "JP"
     ],
     "tags": [
-      "JPOP",
-      "애니메이션",
-      "영화음악"
+      "JPOP","애니메이션","영화음악"
     ],
     "memo": "SEKAI NO OWARI의, 개인적으로 좋아하는 노래.",
     "youtube": [
@@ -706,8 +694,7 @@
       "Leslie Chung (張國榮)"
     ],
     "songwriters": [
-      "顧嘉煇",
-      "黃霑"
+      "顧嘉煇","黃霑"
     ],
     "language": [
       "광동어"
@@ -716,7 +703,7 @@
       "HK"
     ],
     "tags": [
-      "영화음악"
+      "영화음악","칸토팝","발라드"
     ],
     "memo": "영화 <영웅본색> 주제가. 홍콩 느와르를 대표하는 곡",
     "links": [
@@ -740,8 +727,7 @@
       "Leslie Chung (張國榮)"
     ],
     "songwriters": [
-      "顧嘉煇",
-      "黃霑"
+      "顧嘉煇","黃霑"
     ],
     "language": [
       "광동어"
@@ -750,7 +736,7 @@
       "HK"
     ],
     "tags": [
-      "영화음악"
+      "영화음악","발라드","칸토팝"
     ],
     "memo": "영화 <영웅본색 2> 주제가. 비관적이고 허무한 분위기",
     "youtube": [
@@ -778,7 +764,7 @@
       "HK"
     ],
     "tags": [
-      "영화음악"
+      "영화음악","무술"
     ],
     "memo": "중국 장쑤성 전통 연주곡을 편곡한 노래. 영화 <황비홍> 주제가.",
     "youtube": [
@@ -787,7 +773,7 @@
         "url": "https://www.youtube.com/watch?v=Gz2Jq8iYruI"
       },
       {
-        "title": "MV, 락 느낌",
+        "title": "MV, 록 느낌",
         "url": "https://www.youtube.com/watch?v=U_EgeFUTbW4"
       }
     ],
@@ -810,9 +796,7 @@
       "US"
     ],
     "tags": [
-      "게임음악",
-      "이탈리아",
-      "클래식"
+      "게임음악","클래식","문명","다빈치","과학"
     ],
     "memo": "'하늘을 나는 꿈', 게임 <문명 6> 주제가. 레오나르도 다빈치의(것으로 알려진) 노트를 바탕으로 하여, 인류의 비행에 대한 꿈을 표현했다.",
     "links": [
@@ -840,7 +824,7 @@
       "Stamatis Spanoudakis (Σταμάτης Σπανουδάκης)"
     ],
     "songwriters": [
-      "Σταμάτης Σπανουδάκης"
+      "Stamatis Spanoudakis"
     ],
     "language": [
       "그리스어"
@@ -849,11 +833,9 @@
       "GR"
     ],
     "tags": [
-      "동로마제국",
-      "콘스탄티노폴리스",
-      "클래식"
+      "동로마제국","이스탄불","클래식","전설"
     ],
-    "memo": "콘스탄티노폴리스 함락과 동로마 제국의 멸망, 그리고 콘스탄티누스 11세에 관한 전설. '당신은 번개처럼 오시리라'",
+    "memo": "콘스탄티노폴리스 함락과 동로마 제국의 멸망, 그리고 콘스탄티노스 11세에 관한 전설. '당신은 번개처럼 오시리라'",
     "links": [
       {
         "title": "블로그 해설",
@@ -870,7 +852,7 @@
         "url": "https://www.youtube.com/watch?v=6gar6MONCKs"
       }
     ],
-    "image": "covers/025-θά-ρθεις-σαν-αστραπή-thá-rtheis-san-astrapí-stamatis-spanoud.jpg"
+    "image": "covers/025-θά-ρθεις-σαν-αστραπή-thá-rtheis-san-astrapí.jpg"
   },
   {
     "title": "Norwegian Wood (This Bird Has Flown)",
@@ -889,9 +871,9 @@
       "GB"
     ],
     "tags": [
-      "락"
+      "록","포크록","노르웨이"
     ],
-    "memo": "비틀즈의 <러버 소울> 수록곡, 존 레논 작곡. 인도 전통 악기 시타르 소리가 들어간다.",
+    "memo": "비틀즈의 <러버 소울> 수록곡, 존 레논 작곡. 인도 전통 악기 시타르(를 잘 못 치는) 소리가 들어간다.",
     "links": [
       {
         "title": "블로그 해설",
@@ -923,7 +905,7 @@
       "GB"
     ],
     "tags": [
-      "락"
+      "록","팝록"
     ],
     "memo": "비틀즈의 대표곡. 폴 매카트니 작곡",
     "youtube": [
@@ -959,7 +941,7 @@
       "GB"
     ],
     "tags": [
-      "어린이"
+      "어린이","팝","잠수함"
     ],
     "memo": "잠수함 소리가 들어간, 비틀즈의 동요스러운 노래. 레논-매카트니 작곡. 개인적으로 좋아한다.",
     "youtube": [
@@ -986,7 +968,7 @@
       "GB"
     ],
     "tags": [
-      "락"
+      "록","포크록","태양"
     ],
     "memo": "11집 Abbey Road 수록곡, 조지 해리슨 작곡. 어두운 날들은 지나고 밝은 태양이 찾아올 것",
     "youtube": [
@@ -1014,7 +996,7 @@
       "GB"
     ],
     "tags": [
-      "락"
+      "록","팝록","인생"
     ],
     "memo": "폴 매카트니 작곡, 비틀즈의 마지막 앨범 <Let It Be>의 타이틀곡. 그냥 내버려 두자.",
     "youtube": [
@@ -1042,7 +1024,7 @@
       "GB"
     ],
     "tags": [
-      "락"
+      "록","팝록"
     ],
     "memo": "폴 매카트니 작곡, 9집 <The Beatles> 수록곡. 제목은 딱히 의미 있는 말은 아니다.",
     "youtube": [
@@ -1069,7 +1051,7 @@
       "JP"
     ],
     "tags": [
-      "JPOP"
+      "JPOP","신스팝","번개"
     ],
     "memo": "요네즈 켄시 4집 <BOOTLEG> 수록곡. '봄의 우레'",
     "links": [
@@ -1084,7 +1066,7 @@
         "url": "https://www.youtube.com/watch?v=zkNzxsaCunU"
       }
     ],
-    "image": "covers/032-春雷-춘뢰-kenshi-yonezu-米津玄師.jpg"
+    "image": "covers/032-bootleg-yonezu-kenshi.jpg"
   },
   {
     "title": "かいじゅうのマーチ (괴수의 행진곡)",
@@ -1102,7 +1084,7 @@
       "JP"
     ],
     "tags": [
-      "JPOP"
+      "JPOP","신스팝"
     ],
     "memo": "요네즈 켄시 4집 <BOOTLEG> 수록곡. 개인적으로 좋아해서 등록했다.",
     "youtube": [
@@ -1111,7 +1093,7 @@
         "url": "https://www.youtube.com/watch?v=_AfZwbht5yE"
       }
     ],
-    "image": "covers/033-かいじゅうのマーチ-괴수의-행진곡-kenshi-yonezu-米津玄師.jpg"
+    "image": "covers/032-bootleg-yonezu-kenshi.jpg"
   },
   {
     "title": "ピースサイン (피스 사인)",
@@ -1129,10 +1111,9 @@
       "JP"
     ],
     "tags": [
-      "JPOP",
-      "애니메이션"
+      "JPOP","애니메이션","락","나히아"
     ],
-    "memo": "<나의 히어로 아카데미아> 오프닝곡. 4집 <BOOTLEG> 수록",
+    "memo": "<나의 히어로 아카데미아> 오프닝곡. 4집에도 수록",
     "youtube": [
       {
         "title": "MV",
@@ -1157,7 +1138,7 @@
       "JP"
     ],
     "tags": [
-      "JPOP"
+      "JPOP","팝록","레몬"
     ],
     "memo": "요네즈 켄시의 대표곡.",
     "youtube": [
@@ -1184,8 +1165,7 @@
       "JP"
     ],
     "tags": [
-      "JPOP",
-      "애니메이션"
+      "JPOP","애니메이션","락"
     ],
     "memo": "애니메이션 <체인소 맨> 오프닝. 그냥 질러버리는 광기어린 곡",
     "youtube": [
@@ -1206,14 +1186,13 @@
       "Fela Kuti"
     ],
     "language": [
-      "요루바어",
-      "나이지리아피진영어"
+      "요루바어","나이지리아피진영어"
     ],
     "countries": [
       "NG"
     ],
     "tags": [
-      "아프로비트"
+      "아프로비트","물"
     ],
     "memo": "물에게는 적이 없다 - 물의 생명력, 그리고 '흑인의 힘'과 저항에 관한 은유",
     "links": [
@@ -1249,9 +1228,7 @@
       "SE"
     ],
     "tags": [
-      "디스코",
-      "유로비전",
-      "나폴레옹"
+      "디스코","유로비전","나폴레옹"
     ],
     "memo": "나폴레옹의 마지막 전투, 워털루 전투에 빗댄 사랑 이야기. 1974 유로비전 우승",
     "links": [
@@ -1290,7 +1267,7 @@
       "SE"
     ],
     "tags": [
-      "디스코"
+      "디스코","팝","댄스"
     ],
     "memo": "ABBA 최고의 히트곡.",
     "youtube": [
@@ -1326,9 +1303,9 @@
       "SE"
     ],
     "tags": [
-      "디스코"
+      "디스코","팝"
     ],
-    "memo": "신디사이저 도입부가 인상적인 곡.",
+    "memo": "신디사이저 도입부가 인상적인 곡. 자정이 지나면 남자 한 명을 보내 주세요",
     "youtube": [
       {
         "title": "MV",
@@ -1344,9 +1321,7 @@
       "ABBA"
     ],
     "songwriters": [
-      "Benny Andersson",
-      "Björn Ulvaeus",
-      "Stig Anderson"
+      "Benny Andersson","Björn Ulvaeus","Stig Anderson"
     ],
     "language": [
       "영어"
@@ -1355,16 +1330,16 @@
       "SE"
     ],
     "tags": [
-      "락"
+      "팝록","팝"
     ],
-    "memo": "동명의 3집 앨범 타이틀곡. 뮤지컬 <맘마 미아!>의 제목이 이 곡에서 유래했다.",
+    "memo": "ABBA의 3집 앨범 <ABBA> 타이틀곡. 뮤지컬 <맘마 미아!>의 제목이 이 곡에서 유래했다.",
     "youtube": [
       {
         "title": "MV",
         "url": "https://www.youtube.com/watch?v=unfzfe8f9NI"
       },
       {
-        "title": "영화 <맘마 미아> 버전(메릴 스트립)",
+        "title": "영화 <맘마 미아> 버전(Meryl Streep)",
         "url": "https://www.youtube.com/watch?v=DUjB9LTtzGg"
       }
     ],
@@ -1377,8 +1352,7 @@
       "ABBA"
     ],
     "songwriters": [
-      "Benny Andersson",
-      "Björn Ulvaeus"
+      "Benny Andersson","Björn Ulvaeus"
     ],
     "language": [
       "영어"
@@ -1387,7 +1361,7 @@
       "SE"
     ],
     "tags": [
-      "팝"
+      "팝","발라드"
     ],
     "memo": "아바의 잔잔한 곡 중 하나. 마지막 부분은 스톡홀름 국제학교 어린이 합창단이 참여",
     "youtube": [
@@ -1420,7 +1394,7 @@
       "CU"
     ],
     "tags": [
-      "라틴팝"
+      "라틴팝","댄스"
     ],
     "memo": "라틴팝을 대표하는 곡 중 하나. '춤추며'",
     "links": [
@@ -1463,7 +1437,7 @@
       "PR"
     ],
     "tags": [
-      "라틴팝"
+      "라틴팝","레게톤","라디오"
     ],
     "memo": "엔리케 이글레시아스의 대표곡. '라디오 볼륨을 키워 줘'",
     "youtube": [
@@ -1495,7 +1469,7 @@
       "GB"
     ],
     "tags": [
-      "락"
+      "록","블루스록"
     ],
     "memo": "롤링 스톤스의 대표곡",
     "youtube": [
@@ -1524,8 +1498,7 @@
       "IN"
     ],
     "tags": [
-      "영화음악",
-      "발리우드"
+      "영화음악","발리우드"
     ],
     "memo": "영화 <첸나이 익스프레스> 삽입곡.",
     "links": [
@@ -1540,15 +1513,14 @@
         "url": "https://www.youtube.com/watch?v=dodDteh-m3Q"
       }
     ],
-    "image": "covers/046-कश-म-र-म-त-कन-य-क-म-र-kashmir-main-tu-kanyakumari-sunidhi-ch.jpg"
+    "image": "covers/046-kashmir-main-tu-kanyakumari.jpg"
   },
   {
     "title": "Ievan Polkka",
     "year": "19c?",
     "artist": [],
     "songwriters": [
-      "Traditional",
-      "Eino Kettunen"
+      "Traditional","Eino Kettunen"
     ],
     "language": [
       "핀란드어"
@@ -1557,9 +1529,7 @@
       "FI"
     ],
     "tags": [
-      "민요",
-      "폴카",
-      "보컬로이드"
+      "민요","폴카","보컬로이드"
     ],
     "memo": "중독성 있는 핀한드 사보(Savo) 지역 노래. 하츠네 미쿠의 '파돌리기송'으로도 잘 알려져 있다.",
     "links": [
@@ -1589,8 +1559,7 @@
     "year": "19c?",
     "artist": [],
     "songwriters": [
-      "Traditional",
-      "Reino Helismaa"
+      "Traditional","Reino Helismaa"
     ],
     "language": [
       "핀란드어"
@@ -1599,9 +1568,7 @@
       "FI"
     ],
     "tags": [
-      "민요",
-      "폴카",
-      "계속전쟁"
+      "민요","폴카","전쟁"
     ],
     "memo": "카렐리야 Säkkijärvi 지역 민요, Viljo Vesterinen에 의해 대중화. 계속전쟁 기간 동안 핀란드군이 소련군의 무선 지뢰 기폭을 방해하기 위해 반복하여 송출했다.",
     "youtube": [
@@ -1625,9 +1592,7 @@
     "year": "1926",
     "artist": [],
     "songwriters": [
-      "Giacomo Puccini",
-      "Giuseppe Adami",
-      "Renato Simoni"
+      "Giacomo Puccini","Giuseppe Adami","Renato Simoni"
     ],
     "language": [
       "이탈리아어"
@@ -1636,7 +1601,7 @@
       "IT"
     ],
     "tags": [
-      "오페라"
+      "오페라","클래식"
     ],
     "memo": "푸치니의 오페라 <투란도트> 3막 아리아. '아무도 잠들지 말라'",
     "links": [
@@ -1662,9 +1627,7 @@
     "year": "1898",
     "artist": [],
     "songwriters": [
-      "Eduardo di Capua",
-      "Alfredo Mazzucchi",
-      "Giovanni Capurro"
+      "Eduardo di Capua","Alfredo Mazzucchi","Giovanni Capurro"
     ],
     "language": [
       "나폴리어"
@@ -1673,8 +1636,7 @@
       "IT"
     ],
     "tags": [
-      "가곡",
-      "나폴리"
+      "칸초네","나폴리","태양"
     ],
     "memo": "나폴리의 가곡, '오 나의 태양'.",
     "youtube": [
@@ -1694,8 +1656,7 @@
     "year": "1853",
     "artist": [],
     "songwriters": [
-      "Giuseppe Verdi",
-      "Francesco Maria Piave"
+      "Giuseppe Verdi","Francesco Maria Piave"
     ],
     "language": [
       "이탈리아어"
@@ -1704,8 +1665,7 @@
       "IT"
     ],
     "tags": [
-      "오페라",
-      "권주가"
+      "오페라","클래식","권주가"
     ],
     "memo": "베르디의 오페라, <라 트라비아타> 1막의 '축배의 노래'.",
     "youtube": [
@@ -1739,7 +1699,7 @@
       "IT"
     ],
     "tags": [
-      "오페라"
+      "오페라","클래식"
     ],
     "memo": "베르디의 오페라, <리골레토> 3막의 '여자의 마음'.",
     "youtube": [
@@ -1767,7 +1727,7 @@
       "EG"
     ],
     "tags": [
-      "팝"
+      "팝","아랍팝"
     ],
     "memo": "언젠가부터 알게 된 이집트를 대표하는 가요 중 하나. '언제나 당신과 함께'",
     "links": [
@@ -1786,10 +1746,10 @@
         "url": "https://www.youtube.com/watch?v=572u3bz-RFw"
       }
     ],
-    "image": "covers/053-تملي-معاك-tamally-maak-amr-diab-عمرو-دياب.jpg"
+    "image": "covers/053-tamally-maak.jpg"
   },
   {
-    "title": "نور العين (Nour El Ein/Nour El Ain)",
+    "title": "نور العين (Nour El Ein)",
     "year": "1996",
     "artist": [
       "Amr Diab (عمرو دياب)"
@@ -1805,7 +1765,7 @@
       "EG"
     ],
     "tags": [
-      "팝"
+      "팝","아랍팝"
     ],
     "memo": "아므르 디압의 대표곡 중 하나. '눈빛'",
     "youtube": [
@@ -1814,7 +1774,7 @@
         "url": "https://www.youtube.com/watch?v=KLJA-srM_yM"
       }
     ],
-    "image": "covers/054-نور-العين-nour-el-ein-nour-el-ain-amr-diab-عمرو-دياب.jpg"
+    "image": "covers/054-nour-el-ein.jpg"
   },
   {
     "title": "world.execute(me)",
@@ -1834,8 +1794,7 @@
       "CA"
     ],
     "tags": [
-      "Java",
-      "인디"
+      "컴퓨터","인디","락"
     ],
     "memo": "Java 형식의 가사가 특이한 곡.",
     "links": [
@@ -1863,9 +1822,7 @@
       "Future"
     ],
     "songwriters": [
-      "Future",
-      "Metro Boomin",
-      "Tommy Butler"
+      "Future","Metro Boomin","Tommy Butler"
     ],
     "language": [
       "영어"
@@ -1874,7 +1831,7 @@
       "US"
     ],
     "tags": [
-      "힙합"
+      "힙합","마스크"
     ],
     "memo": "개인적으로 좋아하는 힙합 곡",
     "youtube": [
@@ -1892,9 +1849,7 @@
       "John Denver"
     ],
     "songwriters": [
-      "Bill Danoff",
-      "Taffy Nivert",
-      "John Denver"
+      "Bill Danoff","Taffy Nivert","John Denver"
     ],
     "language": [
       "영어"
@@ -1903,8 +1858,7 @@
       "US"
     ],
     "tags": [
-      "컨트리",
-      "웨스트버지니아"
+      "컨트리","웨스트버지니아"
     ],
     "memo": "컨트리 장르 중 가장 유명한 곡. 시골길 운전에 필수",
     "youtube": [
@@ -1922,8 +1876,7 @@
       "David Allan Coe"
     ],
     "songwriters": [
-      "Dean Dillon",
-      "Linda Hargrove"
+      "Dean Dillon","Linda Hargrove"
     ],
     "language": [
       "영어"
@@ -1932,8 +1885,7 @@
       "US"
     ],
     "tags": [
-      "컨트리",
-      "테네시"
+      "컨트리","테네시","술"
     ],
     "memo": "연인을 다양한 술에 비유하는, 감미로운 사랑 노래.",
     "links": [
@@ -1962,8 +1914,7 @@
     "title": "For Evigt",
     "year": "2016",
     "artist": [
-      "Volbeat",
-      "Johan Olsen"
+      "Volbeat","Johan Olsen"
     ],
     "songwriters": [
       "Michael Poulsen"
@@ -1976,9 +1927,9 @@
       "DK"
     ],
     "tags": [
-      "락"
+      "하드록"
     ],
-    "memo": "밴드 하다가 알게 된 신나는 락 음악. '영원히'",
+    "memo": "밴드 하다가 알게 된 신나는 음악. '영원히'",
     "links": [
       {
         "title": "블로그 해설",
@@ -1989,6 +1940,10 @@
       {
         "title": "MV",
         "url": "https://www.youtube.com/watch?v=TAhyZegVkhw"
+      },
+      {
+        "title": "영어 버전 'The Bliss'",
+        "url": "https://www.youtube.com/watch?v=xv11vZj4Z0g"
       }
     ],
     "image": "covers/059-for-evigt-volbeat.jpg"
@@ -2011,7 +1966,7 @@
       "GB"
     ],
     "tags": [
-      "뉴웨이브"
+      "뉴웨이브","신스팝","비디오","라디오"
     ],
     "memo": "비디오가 라디오를 죽였다. 미디어의 변화를 상징하는 곡.",
     "youtube": [
@@ -2039,8 +1994,7 @@
       "AU"
     ],
     "tags": [
-      "뉴웨이브",
-      "락"
+      "뉴웨이브","팝록","레게"
     ],
     "memo": "비공식 국가 수준의, 호주를 상징하는 곡 중 하나. 코믹하면서도 비판적인 가사",
     "youtube": [
@@ -2073,9 +2027,9 @@
       "US"
     ],
     "tags": [
-      "디스코"
+      "디스코","냉전"
     ],
-    "memo": "서부 개척에 대한 19세기 격언에 기반한 곡. Pet Shop Boys 버전에서는 동구권의 붕괴를 상징한다.",
+    "memo": "서부 개척에 대한 19세기 격언에 기반한 곡. Pet Shop Boys 버전은 동구권의 붕괴를 상징한다.",
     "youtube": [
       {
         "title": "MV (Village People)",
@@ -2095,8 +2049,7 @@
       "Chen Fen-Lan (陳芬蘭)"
     ],
     "songwriters": [
-      "孫儀",
-      "翁清溪"
+      "孫儀","翁清溪"
     ],
     "language": [
       "중국어"
@@ -2105,7 +2058,7 @@
       "TW"
     ],
     "tags": [
-      "팝"
+      "만도팝","발라드"
     ],
     "memo": "'달빛이 나의 마음을 대신해요'. 등려군(鄧麗君, Teresa Teng)의 리메이크 버전이 유명하다.",
     "links": [
@@ -2137,8 +2090,7 @@
       "Teresa Teng (鄧麗君)"
     ],
     "songwriters": [
-      "Traditional",
-      "莊奴(庄奴)"
+      "Traditional","莊奴(庄奴)"
     ],
     "language": [
       "중국어"
@@ -2147,9 +2099,7 @@
       "TW"
     ],
     "tags": [
-      "팝",
-      "민요",
-      "번안"
+      "만도팝","민요","번안","발라드"
     ],
     "memo": "등려군의 중화권을 대표하는 사랑노래, 원곡은 인도네시아 민요 'Dayung Sampan'. 동명의 영화로 인해 한국에서도 흥행했다.",
     "youtube": [
@@ -2178,11 +2128,10 @@
       "스페인어"
     ],
     "countries": [
-      "CU",
-      "US"
+      "CU","US"
     ],
     "tags": [
-      "라틴팝"
+      "라틴팝","살사"
     ],
     "memo": "어릴 적 처음 들은 살사 곡. '웃고 울고'",
     "links": [
@@ -2220,7 +2169,7 @@
       "PH"
     ],
     "tags": [
-      "블루스락"
+      "블루스록","얼터너티브록","발라드"
     ],
     "memo": "Dilaw의 대표곡. '목마름'",
     "links": [
@@ -2259,7 +2208,7 @@
       "PH"
     ],
     "tags": [
-      "시티팝"
+      "시티팝","마닐라","이별"
     ],
     "memo": "친구를 타국으로 떠나보내는 마음에 관하여.",
     "youtube": [
@@ -2289,9 +2238,7 @@
       "RU"
     ],
     "tags": [
-      "민요",
-      "군가",
-      "소련"
+      "민요","군가","전쟁","소련"
     ],
     "memo": "2차 세계대전 기간 소련에서 유행한 국민 노래. 카츄샤는 예카테리나의 애칭",
     "links": [
@@ -2328,8 +2275,7 @@
       "VN"
     ],
     "tags": [
-      "발라드",
-      "밈"
+      "발라드","밈"
     ],
     "memo": "'닛몰캐쉬'의 틱톡 영상으로 한국에서 유명해진 베트남 곡. '걱정 없이'",
     "links": [
@@ -2366,8 +2312,7 @@
       "VN"
     ],
     "tags": [
-      "일렉트로닉",
-      "밈"
+      "일렉트로닉","팝","밈"
     ],
     "memo": "틱톡 '제로투 댄스'로 유명해진 곡. '2분 더'",
     "youtube": [
@@ -2396,8 +2341,7 @@
       "RU"
     ],
     "tags": [
-      "민요",
-      "게임음악"
+      "민요","게임음악","테트리스"
     ],
     "memo": "템포와 강약 조절이 인상적인 러시아 민요, '칼린카'는 양백당나무의 열매 이름. 테트리스 BGM으로도 사용되어 유명하다.",
     "youtube": [
@@ -2417,8 +2361,7 @@
     "year": "1942",
     "artist": [],
     "songwriters": [
-      "Matti Jurva",
-      "Tatu Pekkarinen","Traditional"
+      "Matti Jurva","Tatu Pekkarinen","Traditional"
     ],
     "language": [
       "핀란드어",
@@ -2428,11 +2371,9 @@
       "FI"
     ],
     "tags": [
-      "프로파간다",
-      "군가",
-      "계속전쟁"
+      "번안","군가","전쟁","소련"
     ],
-    "memo": "소련군과 소련 외무장관 몰로토프를 풍자한 핀란드의 전시 프로파간다 노래. 선율은 러시아 민요 'Ухарь-купец'에 기반함",
+    "memo": "소련군과 소련 외무장관 몰로토프를 풍자한 핀란드의 전시 노래. 선율은 러시아 민요 'Ухарь-купец'에 기반함",
     "youtube": [
       {
         "title": "Solistiyhtye Suomi 버전",
@@ -2463,10 +2404,7 @@
       "ZA"
     ],
     "tags": [
-      "예루살렘",
-      "종교음악",
-      "가스펠",
-      "하우스"
+      "예루살렘","종교음악","가스펠","하우스"
     ],
     "memo": "댄스 챌린지를 통해 세계적으로 흥행한, 성가 기반의 신나는 하우스 곡. 성지 예루살렘에 대한 노래",
     "links": [
@@ -2503,8 +2441,7 @@
       "UA"
     ],
     "tags": [
-      "카자크",
-      "민요"
+      "카자크","민요","매","이별"
     ],
     "memo": "카자크의 작별에 관한, 폴란드/우크라이나 지역 민요. '매들이여'",
     "links": [
@@ -2539,8 +2476,7 @@
       "UA"
     ],
     "tags": [
-      "카자크",
-      "민요"
+      "카자크","민요","다뉴브"
     ],
     "memo": "우크라이나 민요, '카자크는 다뉴브 강을 건넜다'. 한국 음악 교과서에 수록되기도 했다.",
     "youtube": [
@@ -2569,9 +2505,7 @@
       "CN"
     ],
     "tags": [
-      "윈난성",
-      "민요",
-      "밈"
+      "윈난성","민요","밈"
     ],
     "memo": "리믹스로 유명해진 중국 윈난(운남)성 미두(弥渡)현 민요. 중국 민간전설 '양축설화'에 기반한 가사",
     "youtube": [
@@ -2594,13 +2528,8 @@
       "Alicia Keys"
     ],
     "songwriters": [
-      "Shawn Carter",
-      "Alexander Shuckburgh",
-      "Janet Sewell-Ulepic",
-      "Angela Hunte",
-      "Alicia Keys",
-      "Sylvia Robinson",
-      "Bert Keyes"
+      "Shawn Carter","Alexander Shuckburgh","Janet Sewell-Ulepic",
+      "Angela Hunte","Alicia Keys","Sylvia Robinson","Bert Keyes"
     ],
     "language": [
       "영어"
@@ -2609,8 +2538,7 @@
       "US"
     ],
     "tags": [
-      "뉴욕",
-      "힙합"
+      "뉴욕","힙합"
     ],
     "memo": "'Empire State' 뉴욕을 위한 헌정곡.",
     "links": [
@@ -2643,8 +2571,7 @@
       "RU"
     ],
     "tags": [
-      "신스팝",
-      "밈"
+      "댄스팝","밈","하우스"
     ],
     "memo": "외계에서 온 듯한 복장과 음악. 가사에서는 '이 노래를 들려주러 왔어'를 반복한다.",
     "youtube": [
@@ -2671,8 +2598,7 @@
       "PL"
     ],
     "tags": [
-      "힙합",
-      "밈"
+      "힙합","팝랩","밈"
     ],
     "memo": "마약 중독자의 노래, '하얀 장어(코카인) 어딨어?'. 춤추는 소(Polish Cow) 밈으로 유명하다.",
     "youtube": [
@@ -2703,8 +2629,7 @@
       "US"
     ],
     "tags": [
-      "게임음악",
-      "가스펠"
+      "게임음악","가스펠","문명"
     ],
     "memo": "스와힐리어 주기도문, 게임 <문명 4> 테마곡.",
     "youtube": [
@@ -2726,9 +2651,7 @@
       "Natalia Lafourcade"
     ],
     "songwriters": [
-      "Daniela Azpiazu",
-      "Natalia Lafourcade",
-      "Anthony López"
+      "Daniela Azpiazu","Natalia Lafourcade","Anthony López"
     ],
     "language": [
       "스페인어"
@@ -2737,7 +2660,7 @@
       "MX"
     ],
     "tags": [
-      "라틴팝"
+      "팝","얼터너티브팝","쿰비아"
     ],
     "memo": "애인에 대한 원망, '충분하지 않아'.",
     "links": [
@@ -2803,7 +2726,7 @@
   },
   {
     "title": "Greensleeves",
-    "year": "1580?",
+    "year": "16c?",
     "artist": [],
     "songwriters": [
       "Traditional"
@@ -2815,9 +2738,9 @@
       "GB"
     ],
     "tags": [
-      "민요"
+      "민요","발라드"
     ],
-    "memo": "잘 알려진 영국 민요. 헨리 8세가 작곡하였다는 전설이 있으며, 셰익스피어의 작품에서도 언급된다.",
+    "memo": "잘 알려진 잉글랜드 민요. 헨리 8세가 작곡하였다는 전설이 있으며, 셰익스피어의 작품에서도 언급된다.",
     "youtube": [
       {
         "title": "Celtic Ladies 버전",
@@ -2848,7 +2771,7 @@
       "RU"
     ],
     "tags": [
-      "군가"
+      "군가","전쟁","이별"
     ],
     "memo": "'슬라브 여인의 작별' - 러시아 제국 시대부터 군인들 사이에서 인기를 끈 곡. 가사는 여러 버전이 있다. 탐보프 주의 주가",
     "youtube": [
@@ -2879,7 +2802,7 @@
       "JP"
     ],
     "tags": [
-      "JPOP"
+      "JPOP","문학"
     ],
     "memo": "신나는 자살 노래. 단편소설 <타나토스의 유혹(タナトスの誘惑)>을 바탕으로 함.",
     "youtube": [
@@ -2913,7 +2836,7 @@
       "IS"
     ],
     "tags": [
-      "포스트락"
+      "포스트록","드림팝"
     ],
     "memo": "물웅덩이에 뛰어들기, 그리고 희망. Sigur Rós의 대표곡",
     "links": [
@@ -2947,8 +2870,7 @@
       "AT"
     ],
     "tags": [
-      "캐롤",
-      "종교음악"
+      "캐롤","종교음악"
     ],
     "memo": "고요한 밤, 거룩한 밤.",
     "links": [
@@ -2973,8 +2895,7 @@
     "title": "La Seine",
     "year": "2011",
     "artist": [
-      "Vanessa Paradis",
-      "-M-"
+      "Vanessa Paradis","-M-"
     ],
     "songwriters": [
       "Matthieu Chedid"
@@ -2986,8 +2907,7 @@
       "FR"
     ],
     "tags": [
-      "영화음악",
-      "애니메이션"
+      "영화음악","애니메이션","팝","팝록","샹송"
     ],
     "memo": "애니메이션 영화 <파리의 유령(Un monstre à Paris)> 삽입곡. '센 강'",
     "youtube": [
@@ -3005,9 +2925,7 @@
       "VIDEOCLUB"
     ],
     "songwriters": [
-      "Adèle Castillon",
-      "Esteban Capron",
-      "Matthieu Reynaud"
+      "Adèle Castillon","Esteban Capron","Matthieu Reynaud"
     ],
     "language": [
       "프랑스어"
@@ -3016,9 +2934,7 @@
       "FR"
     ],
     "tags": [
-      "일렉트로닉",
-      "신스팝",
-      "밈"
+      "일렉트로닉","신스팝","밈"
     ],
     "memo": "몽환적인 느낌의, VIDEOCLUB의 대표곡. 'There's nothing we can do' 밈으로도 유명하다.",
     "youtube": [
@@ -3030,11 +2946,10 @@
     "image": "covers/089-amour-plastique-videoclub.jpg"
   },
   {
-    "title": "Vem dançar kuduro",
+    "title": "Amour plastique",
     "year": "2010",
     "artist": [
-      "Lucenzo",
-      "Big Ali"
+      "Lucenzo","Big Ali"
     ],
     "songwriters": [
       "Lucenzo",
@@ -3053,7 +2968,7 @@
       "US"
     ],
     "tags": [
-      "댄스"
+      "댄스","쿠두루"
     ],
     "memo": "포르투갈계 프랑스인 Lucenzo의 대표곡. 쿠두루(Kuduro)는 앙골라의 음악 장르. Don Omar와 함께한 스페인어 버전 'Danza Kuduro'가 크게 흥행하였다.",
     "youtube": [
@@ -3087,7 +3002,7 @@
       "CL"
     ],
     "tags": [
-      "락"
+      "록","어린이"
     ],
     "memo": "칠레의 어린이 TV 프로그램 <31 Minutos>의 삽입곡. 자전거 보조 바퀴를 뗀 것을 거대한 인생의 성취처럼 노래하는 유쾌한 곡",
     "youtube": [
@@ -3115,9 +3030,7 @@
       "JP"
     ],
     "tags": [
-      "애니메이션",
-      "JPOP",
-      "디스코"
+      "애니메이션","JPOP","펑크","팝록","디스코"
     ],
     "memo": "<신세기 에반게리온> 오프닝곡. 소년이여 신화가 되어라!",
     "youtube": [
@@ -3144,7 +3057,7 @@
       "GB"
     ],
     "tags": [
-      "팝","락"
+      "사이키델릭팝","팝록","번안"
     ],
     "memo": "샹젤리제(Les Champs-Élysées)의 원곡.",
     "youtube": [
@@ -3173,9 +3086,7 @@
       "IT"
     ],
     "tags": [
-      "디스코",
-      "팝",
-      "산레모"
+      "디스코","팝","산레모"
     ],
     "memo": "'그건 너를 사랑하기 때문이야'",
     "youtube": [
@@ -3207,9 +3118,9 @@
       "IR"
     ],
     "tags": [
-      "사이키델릭락"
+      "사이키델릭록","사이키델릭팝","발라드"
     ],
-    "memo": "얼음꽃(납매)에 비유한 사랑 이야기. 이란 락의 전설 쿠로시 야그마에이의 데뷔 앨범 대표곡.",
+    "memo": "얼음꽃(납매)에 비유한 사랑 이야기. 이란 록의 전설 쿠로시 야그마에이의 데뷔 앨범 대표곡.",
     "links": [
       {
         "title": "블로그 해설",
@@ -3241,7 +3152,7 @@
       "CD"
     ],
     "tags": [
-      "콩고룸바"
+      "콩고룸바","수쿠","팝"
     ],
     "memo": "자존심 때문에 사랑을 말하지 않은 것을 후회하는 룸바 곡.",
     "links": [
@@ -3278,8 +3189,7 @@
       "ID"
     ],
     "tags": [
-      "버추얼",
-      "팝"
+      "버추얼","팝"
     ],
     "memo": "버추얼 유튜버 코보 카나에루의 곡. '오! 사랑이여'",
     "links": [
@@ -3313,9 +3223,7 @@
       "AT"
     ],
     "tags": [
-      "종교음악",
-      "클래식",
-      "밈"
+      "종교음악","클래식","밈"
     ],
     "memo": "모차르트의 레퀴엠 D단조 K.626 부속가(Sequentia) 중 Lacrimosa. 모차르트는 미완성 상태로 사망했고, 남은 부분은 쥐스마이어가 완성함.",
     "links": [
@@ -3346,7 +3254,7 @@
       "竹内まりや"
     ],
     "language": [
-      "일본어"
+      "일본어","영어"
     ],
     "countries": [
       "JP"
@@ -3422,9 +3330,7 @@
       "BA"
     ],
     "tags": [
-      "유고전쟁",
-      "터보포크",
-      "밈"
+      "전쟁","터보포크","밈"
     ],
     "memo": "정신 나갈 것 같이 강렬한 보스니아산 전시 애국 음악.",
     "links": [
@@ -3463,11 +3369,7 @@
       "RS"
     ],
     "tags": [
-      "프로파간다",
-      "터보포크",
-      "유고전쟁",
-      "케밥",
-      "밈"
+      "터보포크","전쟁","케밥","밈"
     ],
     "memo": "세르비아의 전시 反크로아티아, 反이슬람 애국(?) 음악, 'Remove Kebab' 밈으로 유명하다. 원제목은 '카라지치여, 세르비아인을 보우하소서'. 공격적인 가사에 주의",
     "youtube": [
@@ -3494,9 +3396,7 @@
       "HR"
     ],
     "tags": [
-      "터보포크",
-      "유고전쟁",
-      "밈"
+      "터보포크","전쟁","밈"
     ],
     "memo": "크로아티아의 전시 애국 음악. 어깨에 총올리고 노래부르는 MV가 인상적.",
     "youtube": [
@@ -3523,7 +3423,7 @@
       "KE"
     ],
     "tags": [
-      "팝"
+      "팝","호텔팝","레게"
     ],
     "memo": "뎀 머쉬룸즈의 호텔 팝. 케냐에 온 방문객을 환영하는 내용",
     "links": [
@@ -3598,7 +3498,7 @@
       "KP"
     ],
     "tags": [
-      "프로파간다"
+      "선전가요"
     ],
     "memo": "한국에서도 유명한, 북한의 이상한 김일성-김정일 찬양곡. 요즘은 잘 안쓴다는 것 같다.",
     "links": [
@@ -3611,6 +3511,10 @@
       {
         "title": "MV(?)",
         "url": "https://www.youtube.com/watch?v=-iEfP_cbfQw"
+      },
+      {
+        "title": "왕재산경음악단 버전",
+        "url": "https://www.youtube.com/watch?v=LUhvIbTjq-I"
       }
     ],
     "image": "covers/106-장군님-축지법-쓰신다.jpg"
@@ -3630,7 +3534,7 @@
       "KP"
     ],
     "tags": [
-      "프로파간다"
+      "선전가요","공산주의"
     ],
     "memo": "천리마 운동 찬가, 해외에서 인기가 많은 편.",
     "youtube": [
@@ -3660,8 +3564,7 @@
       "DZ"
     ],
     "tags": [
-      "라이",
-      "댄스"
+      "라이","댄스","인생"
     ],
     "memo": "신나는 알제리 라이. 인생은 원래 그런 거니까 즐겨라!",
     "links": [
@@ -3694,9 +3597,9 @@
       "BD"
     ],
     "tags": [
-      "락"
+      "록","얼터너티브록"
     ],
-    "memo": "방글라데시 락. '언제쯤'",
+    "memo": "방글라데시 록. '언제쯤'",
     "links": [
       {
         "title": "블로그 해설",
@@ -3764,8 +3667,7 @@
       "IE"
     ],
     "tags": [
-      "켈트",
-      "민요"
+      "민요","문학"
     ],
     "memo": "민속 멜로디 + 자코바이트의 난을 바탕으로 한 시에서 가사를 발췌한, 사랑하는 이를 기리는 노래. '나의 용맹한 그대'",
     "links": [
@@ -3810,8 +3712,7 @@
       "AU"
     ],
     "tags": [
-      "락",
-      "조약"
+      "뉴웨이브","팝", "호주원주민"
     ],
     "memo": "호주 원주민과 이주민 사이 '조약'에 대한 곡. 욜릉우어파 두왈어 방언인 Gumatj어 가사가 포함됨.",
     "links": [
@@ -3845,7 +3746,7 @@
       "AU"
     ],
     "tags": [
-      "포크"
+      "민요","호주원주민","발라드"
     ],
     "memo": "욜릉우 전통 찬가를 바탕으로 한, 호주 원주민이자 맹인 아티스트 Gurrumul의 대표곡. 잔잔한 멜로디가 듣기 좋다.",
     "youtube": [
@@ -3876,7 +3777,7 @@
       "TH"
     ],
     "tags": [
-      "사이키델릭팝"
+      "사이키델릭팝","인디"
     ],
     "memo": "태국 밴드 FOLK9의 히트곡. '선글라스'",
     "links": [
@@ -3914,8 +3815,7 @@
       "NL"
     ],
     "tags": [
-      "댄스",
-      "유로비전"
+      "댄스","팝","유로비전","유럽"
     ],
     "memo": "2024 유로비전 참가곡. 별도의 논란으로 실격되었지만 곡 히트는 성공했다.",
     "links": [
@@ -3953,8 +3853,7 @@
       "TR"
     ],
     "tags": [
-      "시",
-      "사이키델릭락"
+      "문학","아나톨리안록","사이키델릭포크"
     ],
     "memo": "중세 시인 Yunus Emre의 시에서 가져온 가사. '우리의 이름은 나태'",
     "links": [
@@ -3989,8 +3888,7 @@
       "CV"
     ],
     "tags": [
-      "모르나",
-      "상투메프린시페"
+      "모르나","상투메프린시페"
     ],
     "memo": "카보베르데를 떠나 상투메에서 일하는 사람과 그 가족들의 애환. '그리움'",
     "links": [
@@ -4025,7 +3923,7 @@
       "GE"
     ],
     "tags": [
-      "민요"
+      "민요","댄스"
     ],
     "memo": "조지아 아자리야(Adjara) 지방 민요.",
     "links": [
@@ -4066,7 +3964,7 @@
       "MN"
     ],
     "tags": [
-      "메탈"
+      "포크메탈","포크록"
     ],
     "memo": "몽골식 메탈. 옛 유산과 가치를 잃어버린 현대인에 대한 일침, '어째서인가?'",
     "links": [
@@ -4081,7 +3979,7 @@
         "url": "https://www.youtube.com/watch?v=v4xZUr0BEfE"
       }
     ],
-    "image": "covers/119-yuve-yuve-yu-the-hu.jpg"
+    "image": "covers/119-the-gereg.jpg"
   },
   {
     "title": "Wolf Totem",
@@ -4103,7 +4001,7 @@
       "MN"
     ],
     "tags": [
-      "메탈"
+      "포크메탈","포크록"
     ],
     "memo": "몽골 왕자 초그트가 쓴 시를 바탕으로 한, 첫 글자가 반복되는 가사.",
     "youtube": [
@@ -4112,7 +4010,7 @@
         "url": "https://www.youtube.com/watch?v=jM8dCGIm6yc"
       }
     ],
-    "image": "covers/120-wolf-totem-the-hu.jpg"
+    "image": "covers/119-the-gereg.jpg"
   },
   {
     "title": "Tous Les Mêmes",
@@ -4130,8 +4028,7 @@
       "BE"
     ],
     "tags": [
-      "일렉트로닉",
-      "팝"
+      "댄스","일렉트로팝"
     ],
     "memo": "연인 간의 갈등. 남녀 반반으로 분장한 뮤비가 인상적이다. '다 똑같아'",
     "links": [
@@ -4164,8 +4061,7 @@
       "BE"
     ],
     "tags": [
-      "댄스",
-      "콩고룸바"
+      "댄스","팝","콩고룸바","아버지"
     ],
     "memo": "아버지의 부재에 관한 노래, 스트로마에의 대표곡. Papa, où t'es?(아빠, 어디에 있어?) AI로 만든 합창 버전이 갑자기 인기를 많이 끌기도 했다.",
     "youtube": [
@@ -4192,8 +4088,7 @@
       "BE"
     ],
     "tags": [
-      "팝",
-      "댄스"
+      "댄스","하우스"
     ],
     "memo": "스트로마에의 신나는 댄스곡. '그리고 우리는 춤춘다'",
     "youtube": [
@@ -4225,7 +4120,7 @@
       "FR"
     ],
     "tags": [
-      "애니메이션"
+      "애니메이션","얼터너티브팝"
     ],
     "memo": "애니메이션 <아케인 2> 삽입곡. 작중 에코와 파우더 사이를 나타내는 노래. '나의 최고의 적'",
     "youtube": [
@@ -4257,8 +4152,7 @@
       "CO"
     ],
     "tags": [
-      "라틴팝",
-      "락"
+      "라틴팝","팝록"
     ],
     "memo": "샤키라의 초기 곡 중 하나. '도둑들은 어디에?'",
     "links": [
@@ -4294,8 +4188,7 @@
       "CO"
     ],
     "tags": [
-      "일렉트로닉",
-      "팝"
+      "일렉트로닉","댄스팝"
     ],
     "memo": "중동풍 멜로디와 아랍어 가사가 들어간, 샤키라의 독특한 곡 중 하나. '(당신의) 그 눈'",
     "youtube": [
@@ -4304,7 +4197,7 @@
         "url": "https://www.youtube.com/watch?v=5BzkbSq7pww"
       }
     ],
-    "image": "covers/126-ojos-así-shakira.jpg"
+    "image": "covers/125-dónde-están-los-ladrones-shakira.jpg"
   },
   {
     "title": "Zangaléwa",
@@ -4329,7 +4222,7 @@
       "CM"
     ],
     "tags": [
-      "마코사","군가"
+      "마코사","군가","월드컵"
     ],
     "memo": "군가를 바탕으로 만들어진 곡, 여러 언어가 섞여 있다. 2010년 월드컵 주제가 Waka Waka의 원곡.",
     "youtube": [
@@ -4361,7 +4254,7 @@
       "CA"
     ],
     "tags": [
-      "월드컵"
+      "월드컵","레게퓨전"
     ],
     "memo": "원래 소말리아에 대한 곡이었으나, 2010년 남아공 월드컵 당시 코카콜라의 프로모션 곡으로 크게 흥행.",
     "youtube": [
@@ -4389,7 +4282,7 @@
       "DZ"
     ],
     "tags": [
-      "블루스"
+      "블루스","티슈마렌"
     ],
     "memo": "데저트 블루스 곡. '사막이여, 네게 묻는다'",
     "links": [
@@ -4423,7 +4316,7 @@
       "CN"
     ],
     "tags": [
-      "팝"
+      "만도팝","일렉트로팝"
     ],
     "memo": "고통에서 벗어나게 해주소서.",
     "links": [
@@ -4458,8 +4351,7 @@
       "DE"
     ],
     "tags": [
-      "러시아",
-      "디스코"
+      "러시아","디스코","밈"
     ],
     "memo": "러시아 제국 말기의 수도승 라스푸틴에 얽힌 이야기.",
     "links": [
@@ -4492,7 +4384,7 @@
       "KZ"
     ],
     "tags": [
-      "인디"
+      "인디","발라드"
     ],
     "memo": "몰다나자르의 잔잔한 사랑노래.",
     "links": [
@@ -4533,7 +4425,7 @@
       "NO"
     ],
     "tags": [
-      "유로비전"
+      "유로비전","포크","포크팝"
     ],
     "memo": "1980년 유로비전 참가곡. 수력발전소 건설로 인한 사미인 주거 지역 파괴 문제, 그리고 그에 대한 시위가 배경이 되는 곡이다. '사미의 땅'",
     "links": [
@@ -4572,7 +4464,7 @@
       "NO"
     ],
     "tags": [
-      "신스팝"
+      "신스팝","뉴웨이브"
     ],
     "memo": "인트로 신스 사운드가 매우 유명한 곡.",
     "youtube": [
@@ -4601,7 +4493,7 @@
       "BJ"
     ],
     "tags": [
-      "팝"
+      "팝","아프리카"
     ],
     "memo": "아프리카에 축복을.",
     "links": [
@@ -4639,7 +4531,7 @@
       "TT"
     ],
     "tags": [
-      "칼립소"
+      "칼립소","술"
     ],
     "memo": "미군 주둔과 매춘으로 망가지는 사회에 대한 노래. 긍정적으로 개사된 Andrews Sisters 버전이 미국에서 크게 흥행하였다.",
     "links": [
@@ -4752,7 +4644,7 @@
     ],
     "tags": [
       "산레모",
-      "유로비전"
+      "유로비전","록"
     ],
     "memo": "'터프한 사람이 되고 싶었어'. 어릴 적 꿈꾸던 이상향, 그리고 좌절에 관한 이야기.",
     "links": [
@@ -4795,7 +4687,7 @@
       "PK"
     ],
     "tags": [
-      "수피"
+      "수피","문학"
     ],
     "memo": "18세기 신학자 Bulleh Shah의 시를 바탕으로 한 곡. 그대는 사원과 모스크로 달려가지만, 그대 마음속에는 한 번도 들어서지 못했구나.",
     "links": [
@@ -4875,7 +4767,7 @@
         "url": "https://www.youtube.com/watch?v=91GTuZWCQmY"
       }
     ],
-    "image": "covers/142-судно-molchat-doma-молчат-дома.jpg"
+    "image": "covers/142-molchat-doma-2.jpg"
   },
   {
     "title": "На Дне",
@@ -4904,7 +4796,7 @@
         "url": "https://www.youtube.com/watch?v=haBeRluizqI"
       }
     ],
-    "image": "covers/143-на-дне-molchat-doma-молчат-дома.jpg"
+    "image": "covers/142-molchat-doma-2.jpg"
   },
   {
     "title": "Ich hab die Nacht geträumet",
@@ -5690,7 +5582,7 @@
       "GB"
     ],
     "tags": [
-      "락"
+      "록"
     ],
     "memo": "퀸의 대표곡. 곡 스타일이 다양하게 바뀌는 것이 재밌다.",
     "youtube": [
@@ -6243,7 +6135,7 @@
       "CA"
     ],
     "tags": [
-      "사이키델릭락",
+      "사이키델릭록",
       "포크",
       "인디"
     ],
@@ -6759,7 +6651,7 @@
     ],
     "tags": [
       "팝",
-      "팝락"
+      "팝록"
     ],
     "memo": "블랙핑크 로제와 브루노 마스의 콜라보. 술게임",
     "youtube": [
@@ -7500,7 +7392,7 @@
       "CO"
     ],
     "tags": [
-      "팝락"
+      "팝록"
     ],
     "memo": "'장님, 귀머거리, 벙어리'. 사랑에 빠져 아무것도 하지 못하는 상태를 노래한다.",
     "youtube": [
@@ -7561,8 +7453,8 @@
       "GB"
     ],
     "tags": [
-      "얼터너티브락",
-      "락"
+      "얼터너티브록",
+      "록"
     ],
     "memo": "알람과 서프라이즈를 없애 주세요. 물이 차오르는 뮤비가 기억에 남는다.",
     "youtube": [
@@ -7825,7 +7717,7 @@
       "GB"
     ],
     "tags": [
-      "락",
+      "록",
       "펑크"
     ],
     "memo": "퀸의 (별로 퀸스럽지는 않은) 히트곡 중 하나. '또 한 명이 죽었군!'",
@@ -7857,7 +7749,7 @@
       "GB"
     ],
     "tags": [
-      "락",
+      "록",
       "팝"
     ],
     "memo": "날 막지 마, 지금 끝내주는 시간을 보내고 있으니까.",
@@ -7889,7 +7781,7 @@
       "GB"
     ],
     "tags": [
-      "락"
+      "록"
     ],
     "memo": "퀸의 최고 히트곡 중 하나. 짧고 단순하지만 강렬하다.",
     "youtube": [
@@ -7916,7 +7808,7 @@
       "GB"
     ],
     "tags": [
-      "락"
+      "록"
     ],
     "memo": "우리 모두가 챔피언이다!",
     "youtube": [
@@ -7949,8 +7841,8 @@
       "AU"
     ],
     "tags": [
-      "하드락",
-      "블루스락"
+      "하드록",
+      "블루스록"
     ],
     "memo": "고속도로에서 들으면 죽어버릴 것 같은 곡.",
     "youtube": [
@@ -7983,7 +7875,7 @@
       "AU"
     ],
     "tags": [
-      "락",
+      "록",
       "메탈"
     ],
     "memo": "인트로 기타리프가 유명한, ACDC의 대표곡.",
@@ -8016,7 +7908,7 @@
       "AU"
     ],
     "tags": [
-      "하드락"
+      "하드록"
     ],
     "memo": "ACDC의 대표곡 중 하나. THUNDER!",
     "youtube": [
@@ -8048,8 +7940,8 @@
       "GB"
     ],
     "tags": [
-      "락",
-      "블루스락"
+      "록",
+      "블루스록"
     ],
     "memo": "Led Zeppelin의 명실상부한 대표곡.",
     "youtube": [
@@ -8080,7 +7972,7 @@
       "GB"
     ],
     "tags": [
-      "얼터너티브락"
+      "얼터너티브록"
     ],
     "memo": "라디오헤드 곡 중 가장 좋아하는 노래.",
     "youtube": [
@@ -8113,7 +8005,7 @@
       "GB"
     ],
     "tags": [
-      "얼터너티브락"
+      "얼터너티브록"
     ],
     "memo": "라디오헤드의 대표곡 중 하나. 넌 특별하지만, 난 병신이야...",
     "youtube": [
@@ -8146,7 +8038,7 @@
       "US"
     ],
     "tags": [
-      "얼터너티브락"
+      "얼터너티브록"
     ],
     "memo": "너바나의 대표곡. 강렬한 사운드.",
     "youtube": [
@@ -8175,7 +8067,7 @@
       "US"
     ],
     "tags": [
-      "하드락",
+      "하드록",
       "메탈"
     ],
     "memo": "본 조비의 대표곡. Whoa-oh, livin' on a prayer!",
@@ -8204,7 +8096,7 @@
       "US"
     ],
     "tags": [
-      "하드락"
+      "하드록"
     ],
     "memo": "인트로의 일렉기타 리프(만) 너무나도 유명한 곡. 빰 빰빰빰",
     "youtube": [
@@ -8234,7 +8126,7 @@
       "US"
     ],
     "tags": [
-      "하드락"
+      "하드록"
     ],
     "memo": "건즈 앤 로지스 최고의 히트곡. 기타 도입부만 들어도 신나는 곡",
     "youtube": [
@@ -8266,7 +8158,7 @@
       "GB"
     ],
     "tags": [
-      "락"
+      "록"
     ],
     "memo": "퀸과 데이비드 보위의 콜라보 곡, 인트로의 베이스 리프가 유명하다. 압박과 그 극복에 관해.",
     "youtube": [
@@ -8434,7 +8326,7 @@
     ],
     "tags": [
       "신스팝",
-      "팝락"
+      "팝록"
     ],
     "memo": "상상용의 대표곡 중 하나. 단순하지만 중독성 높은 곡",
     "youtube": [
@@ -8472,7 +8364,7 @@
       "US"
     ],
     "tags": [
-      "팝락"
+      "팝록"
     ],
     "memo": "상상용의 강렬한 대표곡. 권투하는 장면이 담긴 뮤비",
     "youtube": [
@@ -8500,7 +8392,7 @@
       "AU"
     ],
     "tags": [
-      "팝락"
+      "팝록"
     ],
     "memo": "시아의 대표곡.",
     "youtube": [
@@ -8532,7 +8424,7 @@
     ],
     "tags": [
       "JPOP",
-      "팝락"
+      "팝록"
     ],
     "memo": "남성 시점에서 쓴 복잡한 감정들. 베이스가 맛있는 곡",
     "youtube": [
@@ -8711,7 +8603,7 @@
       "GB"
     ],
     "tags": [
-      "락",
+      "록",
       "힙합"
     ],
     "memo": "기부니 조아",
@@ -9331,7 +9223,7 @@
       "EG"
     ],
     "tags": [
-      "신스팝","락"
+      "신스팝","록"
     ],
     "memo": "카이로키의 대표곡. 사무라이",
     "youtube": [
@@ -9543,7 +9435,7 @@
       "US"
     ],
     "tags": [
-      "팝락"
+      "팝록"
     ],
     "memo": "이매진 드래곤즈 초창기 곡 중 하나.",
     "youtube": [
@@ -9580,7 +9472,7 @@
       "US"
     ],
     "tags": [
-      "팝"
+      "팝","댄스팝","R&B"
     ],
     "memo": "저스틴 비버의 초창기 대히트곡. 유튜브에서 가장 싫어요가 많은 뮤직비디오",
     "youtube": [
@@ -9685,7 +9577,7 @@
       "MA"
     ],
     "tags": [
-      "팝"
+      "팝","월드컵"
     ],
     "memo": "모로코 프로듀서 RedOne이 프로듀싱한 Magic System의 대표곡.",
     "youtube": [
@@ -9742,9 +9634,8 @@
       "RU"
     ],
     "tags": [
-      "민요",
-      "시",
-      "게임음악"
+      "민요","문학",
+      "게임음악","테트리스"
     ],
     "memo": "테트리스 BGM으로도 유명한 러시아 민요, 가사는 Nikolay Nekrasov의 시를 기반으로 함. '방물장수들'",
     "youtube": [
@@ -9773,7 +9664,7 @@
       "ES"
     ],
     "tags": [
-      "콘트라단사"
+      "댄스","번안"
     ],
     "memo": "쿠바풍의 스페인 춤곡. 프랑스어로 번안되어 비제의 오페라 <카르멘>의 아리아 'Habanera'로 사용되었다.",
     "youtube": [
@@ -9800,7 +9691,7 @@
       "FR"
     ],
     "tags": [
-      "오페라"
+      "오페라","클래식"
     ],
     "memo": "비제의 오페라 <카르멘>의 대표곡. '투우사의 노래'",
     "youtube": [
@@ -9827,7 +9718,7 @@
       "ZW"
     ],
     "tags": [
-      "치무렝가"
+      "치무렝가","포크"
     ],
     "memo": "Hallelujah Chicken Run Band의 대표곡. '과거와 현재'",
     "youtube": [
@@ -9881,7 +9772,7 @@
       "AR"
     ],
     "tags": [
-      "팝락","펑크"
+      "팝록","펑크"
     ],
     "memo": "(남들이 뭐라 하든) '난 신경쓰지 않아'. 반항과 해방",
     "youtube": [
@@ -9962,7 +9853,7 @@
       "JP"
     ],
     "tags": [
-      "JPOP","애니메이션","팝락"
+      "JPOP","애니메이션","팝록"
     ],
     "memo": "청사과의 대표곡 중 하나.",
     "youtube": [
@@ -10016,7 +9907,7 @@
       "BE"
     ],
     "tags": [
-      "프로그레시브락"
+      "프로그레시브록"
     ],
     "memo": "차이코프스키 멜로디를 차용한 심포닉 팝. 유럽을 중심으로 크게 히트",
     "youtube": [
@@ -10047,7 +9938,7 @@
       "DE"
     ],
     "tags": [
-      "밈","힙합","팝"
+      "힙합","팝","밈"
     ],
     "memo": "너는 충분히 훌륭해(Du bist gut genug). 밈이 되어 세계적 인기를 끈 곡",
     "youtube": [
@@ -10132,7 +10023,7 @@
       "KH","AU"
     ],
     "tags": [
-      "사이키델릭락"
+      "사이키델릭록"
     ],
     "memo": "프랑스에 간 캄보디아인의 먹을 것에 대한 고충을 표현한 재치 있는 곡. 비자는 있는데 쌀밥이 없다니!",
     "youtube": [
@@ -10242,7 +10133,7 @@
       "DE"
     ],
     "tags": [
-      "신스팝","락","평화"
+      "신스팝","록","전쟁","평화"
     ],
     "memo": "'풍선 99개'로 때문에 일어난 핵전쟁. 유럽과 북미에서 크게 인기를 얻은 서독의 반전 노래.",
     "youtube": [
@@ -10267,7 +10158,7 @@
       "SE"
     ],
     "tags": [
-      "하드락","메탈"
+      "하드록","메탈"
     ],
     "memo": "스포츠 경기에서 자주 쓰이는 비장한 오프닝 음악.",
     "youtube": [
@@ -10289,7 +10180,7 @@
     "songwriters": ["Paul Anka", "Claude François", "Jacques Revaux","Gilles Thibaut"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["팝", "재즈", "번안"],
+    "tags": ["팝", "재즈", "번안","인생"],
     "memo": "Comme d'habitude의 영어 번안곡. 프랭크 시나트라의 대표곡이자 스탠다드 팝의 상징.",
     "youtube": [
       {
@@ -10306,7 +10197,7 @@
     "songwriters": ["Pierre Delanoë", "Michael Wilshaw", "Michael Deighan"],
     "language": ["프랑스어"],
     "countries": ["FR","US"],
-    "tags": ["샹송", "번안"],
+    "tags": ["샹송","번안","파리"],
     "memo": "Waterloo Road의 프랑스어 번안곡. 파리 샹젤리제 거리를 노래한, 프랑스를 대표하는 샹송. 프랑스계 미국인 가수 Joe Dassin이 불렀다.",
     "youtube": [
       {
@@ -10400,7 +10291,7 @@
       "FR"
     ],
     "tags": [
-      "댄스","라틴팝"
+      "댄스","라틴팝","쿠두루"
     ],
     "memo": "푸에르토리코의 Don Omar와 함께한, 'Vem dançar kuduro'의 스페인어 버전.",
     "youtube": [
@@ -10410,5 +10301,30 @@
       }
     ],
     "image": "covers/323-danza-kuduro.jpg"
+  },
+  {
+    "title": "Erè Mèla Mèla(ኧረ መላ መላ)",
+    "year": "1975",
+    "artist": ["Mahmoud Ahmed (ማሕሙድ አሕመድ)"],
+    "songwriters": [
+      "Mahmoud Ahmed"
+    ],
+    "language": [
+      "암하라어"
+    ],
+    "countries": [
+      "ET"
+    ],
+    "tags": [
+      "재즈","에티오재즈"
+    ],
+    "memo": "에티오피아 재즈 곡. 제목은 '어쩌면 좋나?' 정도의 뜻인 듯.",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=6UbITQT4ZFE"
+      }
+    ],
+    "image": "covers/324-ere-mela-mela.jpg"
   }
 ]

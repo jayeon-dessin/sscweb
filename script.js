@@ -2,6 +2,11 @@ let songs = [];
 let selectedCountry = null;
 let isRestoringState = false;
 
+// 국가의 간략 카드 목록에서 곡 하나를 클릭해 상세 화면으로 들어간 경우,
+// 뒤로가기를 누르면 (전체 브라우즈 화면이 아니라) 그 국가의 간략 목록으로
+// 돌아가야 하므로 어느 국가에서 왔는지 기억해둠
+let compactListReturnCountry = null;
+
 // "map"(지도) / "countries"(목록) / "timeline"(연표) / "about"(소개)
 let viewMode = "map";
 const songList = document.getElementById("song-list");
@@ -60,6 +65,7 @@ function goToBrowseView(mode) {
   setActiveViewTab();
 
   selectedCountry = null;
+  compactListReturnCountry = null;
 
   tagSearch.value = "";
 
@@ -84,11 +90,17 @@ viewTabs.forEach(tab => {
 // 랜덤 곡 (헤더의 주사위 버튼)
 // -------------------------------------
 
-// 곡 하나만 곡 목록 화면에 표시 (랜덤 곡, 연표에서 곡 클릭 등에서 공용으로 사용)
-function showSingleSongDetail(song, titleText) {
+// 곡 하나만 곡 목록 화면에 표시 (랜덤 곡, 연표에서 곡 클릭, 관련곡 클릭,
+// 국가 간략 목록에서 곡 클릭 등에서 공용으로 사용)
+function showSingleSongDetail(song, titleText, options = {}) {
   if (!song) return;
 
-  selectedCountry = null;
+  const { preserveCountry = false } = options;
+
+  if (!preserveCountry) {
+    selectedCountry = null;
+    compactListReturnCountry = null;
+  }
 
   showSongsUI();
 
@@ -667,6 +679,7 @@ function renderTimeline() {
 function selectCountry(code) {
 
   selectedCountry = code;
+  compactListReturnCountry = null;
 
   showSongsUI();
 
@@ -681,7 +694,7 @@ function selectCountry(code) {
 
   tagSearch.value = "";
 
-  renderSongs(countrySongs);
+  renderSongs(countrySongs, { compact: true });
   updateURLState(true);
 }
 
@@ -704,7 +717,13 @@ countrySort.addEventListener(
 // -------------------------------------
 
 backButton.addEventListener("click", () => {
-  goToBrowseView(viewMode);
+  if (compactListReturnCountry) {
+    const country = compactListReturnCountry;
+    compactListReturnCountry = null;
+    selectCountry(country);
+  } else {
+    goToBrowseView(viewMode);
+  }
 });
 
 // 뒤로가기 버튼
@@ -726,6 +745,10 @@ function normalizeSearchText(value) {
 }
 
 function applyFilters() {
+
+  // 검색어를 입력하면 (곡 상세 화면에서 검색했더라도) 항상 새로운 목록
+  // 화면으로 이동하는 것이므로, 상세 화면 전용 뒤로가기 상태는 초기화
+  compactListReturnCountry = null;
 
   const keyword = normalizeSearchText(
     tagSearch.value.trim()
@@ -786,7 +809,7 @@ function applyFilters() {
       `검색 결과 (${filteredSongs.length}곡)`;
   }
 
-  renderSongs(filteredSongs);
+  renderSongs(filteredSongs, { compact: !!selectedCountry });
   updateURLState();
 }
 
@@ -995,7 +1018,7 @@ function minCountryDistance(songA, songB) {
 
 // 관련곡: 같은 아티스트 우선 -> 부족하면 같은 태그 -> 그래도 부족하면
 // 지리적으로 가까운 국가의 곡으로 채움
-function findRelatedSongs(song, limit = 5) {
+function findRelatedSongs(song, limit = 4) {
 
   const artistSet = new Set(song.artist || []);
   const tagSet = new Set(song.tags || []);
@@ -1073,10 +1096,26 @@ function renderRelatedSongs(container, song) {
 }
 
 // -------------------------------------
-// 곡 목록 출력
+// 곡 목록 출력 (간략 카드 / 일반 카드)
 // -------------------------------------
-function renderSongs(songArray) {
+
+// 국가를 골랐을 때 1차로 보여주는 간략 카드: 이미지 + 제목 + 가수만
+function compactSongCardMarkup(song) {
+  return `
+    <div class="song-artwork song-artwork-compact placeholder"></div>
+    <div class="compact-song-info">
+      <div class="compact-song-title">${song.title}</div>
+      <div class="compact-song-artist">${song.artist.join(", ")}</div>
+    </div>
+  `;
+}
+
+function renderSongs(songArray, options = {}) {
+
+  const { compact = false } = options;
+
   songList.innerHTML = "";
+  songList.classList.toggle("song-list-compact", compact);
 
   if (songArray.length === 0) {
     songList.innerHTML = `
@@ -1089,6 +1128,26 @@ function renderSongs(songArray) {
 
   songArray.forEach(song => {
     const item = document.createElement("div");
+
+    if (compact) {
+
+      item.className = "song-card-compact";
+      item.innerHTML = compactSongCardMarkup(song);
+
+      item.addEventListener("click", () => {
+        compactListReturnCountry = selectedCountry;
+        showSingleSongDetail(song, song.title, { preserveCountry: true });
+      });
+
+      songList.appendChild(item);
+
+      if (typeof loadArtworkInto === "function") {
+        loadArtworkInto(item.querySelector(".song-artwork"), song);
+      }
+
+      return;
+    }
+
     if (song.links?.length > 0) {
       item.classList.add("has-links");
     }
@@ -1101,7 +1160,7 @@ function renderSongs(songArray) {
       loadArtworkInto(item.querySelector(".song-artwork"), song);
     }
 
-    // 곡 하나만 상세로 보여주는 경우(랜덤 곡, 연표, 관련곡 클릭 등)에만
+    // 곡 하나만 상세로 보여주는 경우(랜덤 곡, 연표, 관련곡, 간략 카드 클릭 등)에만
     // 관련곡을 채움 - 국가별 목록처럼 여러 곡이 쭉 나열될 때는 생략
     if (songArray.length === 1) {
       renderRelatedSongs(item.querySelector(".related-songs-container"), song);
