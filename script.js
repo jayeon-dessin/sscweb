@@ -26,6 +26,7 @@ const aboutView = document.getElementById("about-view");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
 const countrySort =  document.getElementById("country-sort");
+const tagSort = document.getElementById("tag-sort");
 const backButton = document.getElementById("back-to-countries");
 const viewTabs = document.querySelectorAll(".view-tab");
 const randomDiceButton = document.getElementById("random-dice-button");
@@ -332,17 +333,14 @@ fetch(`sscdbg.json?v=${Date.now()}`)
     );
   });
 
+// 국기 띠 위에 표시하던 "총 N곡 · M개 국가·지역" 텍스트는 제거했지만,
+// 소개 탭 통계 뱃지는 계속 써야 하므로 국가 수 계산은 유지함
 function renderArchiveStats() {
-  const stats = document.getElementById("archive-stats");
-
   const countries = [
     ...new Set(
       songs.flatMap(song => song.countries)
     )
   ].filter(Boolean);
-
-  stats.textContent =
-    `총 ${songs.length}곡 · ${countries.length}개 국가·지역`;
 
   renderAboutStats(countries.length);
 }
@@ -702,6 +700,23 @@ function renderTimeline() {
 // 태그 (많이 쓰인 순으로 정렬, 클릭하면 해당 태그의 곡)
 // -------------------------------------
 
+// 태그 하나의 사용 빈도에 따라 워드클라우드 글자 크기/굵기를 계산
+// (제곱근 스케일 - 최댓값과 최솟값 차이가 커도 너무 극단적으로 벌어지지 않게)
+function tagCloudStyle(count, minCount, maxCount) {
+  const MIN_REM = 0.85;
+  const MAX_REM = 2.6;
+
+  const t = maxCount === minCount
+    ? 0.5
+    : (Math.sqrt(count) - Math.sqrt(minCount)) /
+      (Math.sqrt(maxCount) - Math.sqrt(minCount));
+
+  return {
+    fontSize: `${MIN_REM + t * (MAX_REM - MIN_REM)}rem`,
+    fontWeight: 400 + Math.round(t * 400), // 400(가장 작음) ~ 800(가장 큼)
+  };
+}
+
 function renderTagsList() {
 
   tagsList.innerHTML = "";
@@ -714,7 +729,16 @@ function renderTagsList() {
     });
   });
 
+  const counts = [...tagCounts.values()];
+  const minCount = Math.min(...counts);
+  const maxCount = Math.max(...counts);
+
+  const sortMode = tagSort?.value || "count-desc";
+
   const orderedTags = [...tagCounts.entries()].sort((a, b) => {
+    if (sortMode === "name") {
+      return a[0].localeCompare(b[0], "ko");
+    }
     if (b[1] !== a[1]) return b[1] - a[1];
     return a[0].localeCompare(b[0], "ko");
   });
@@ -725,10 +749,12 @@ function renderTagsList() {
     chip.type = "button";
     chip.className = "tag-chip";
 
-    chip.innerHTML = `
-      <span class="tag-chip-name">#${tag}</span>
-      <span class="tag-chip-count">${count}곡</span>
-    `;
+    const style = tagCloudStyle(count, minCount, maxCount);
+    chip.style.fontSize = style.fontSize;
+    chip.style.fontWeight = style.fontWeight;
+
+    chip.title = `${tag} · ${count}곡`;
+    chip.textContent = `#${tag}`;
 
     chip.addEventListener("click", () => {
       selectTag(tag);
@@ -801,6 +827,11 @@ tagSearch.addEventListener(
 countrySort.addEventListener(
   "change",
   renderCountries
+);
+
+tagSort?.addEventListener(
+  "change",
+  renderTagsList
 );
 
 // -------------------------------------

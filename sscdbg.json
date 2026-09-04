@@ -2679,7 +2679,7 @@
     "songwriters": ["Traditional"],
     "language": ["몽골어"],
     "countries": ["MN"],
-    "tags": ["민요", "칭기즈칸"],
+    "tags": ["민요", "칭기즈칸","몽골"],
     "memo": "칭기즈 칸에 대한 노래. 몽골 전통 창법을 들어볼 수 있다.",
     "youtube": [
       {"title": "Batzorig Vaanchig", "url": "https://www.youtube.com/watch?v=p_5yt5IX38I"},
@@ -2710,7 +2710,7 @@
     "language": ["영어"],
     "countries": ["US"],
     "tags": ["팝", "댄스"],
-    "memo": "마이클 잭슨 6집의 대표곡 중 하나. 전주가 좋다",
+    "memo": "마이클 잭슨 6집의 대표곡 중 하나. 전주가 좋다.",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=oRdxUFDoQe0"},
       {"title": "음원", "url": "https://www.youtube.com/watch?v=kOn-HdEg6AQ"}

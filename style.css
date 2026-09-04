@@ -343,56 +343,36 @@ body {
 ======================================== */
 
 #tags-list {
-    display: flex;
-    flex-wrap: wrap;
+    text-align: center;
+    line-height: 2.3;
 
-    gap: var(--space-2);
-    margin-bottom: var(--space-7);
+    max-width: 900px;
+    margin: 0 auto var(--space-7);
 }
 
 .tag-chip {
     appearance: none;
+    border: none;
+    background: none;
 
-    border: 1px solid #e2e6ec;
-    background: white;
-
-    border-radius: 8px;
-
-    padding:
-        var(--space-2)
-        var(--space-3);
+    display: inline;
+    padding: 0 var(--space-1);
+    margin: 0;
 
     cursor: pointer;
+    color: #3a4a5c;
 
-    display: inline-flex;
-    align-items: baseline;
-
-    gap: var(--space-2);
-
-    transition:
-        background 0.15s,
-        border-color 0.15s;
+    transition: color 0.15s;
 }
 
 .tag-chip:hover {
-    background: #eef4ff;
-    border-color: #4f8ef7;
+    color: #4f8ef7;
 }
 
 .tag-chip:focus-visible {
-    outline: 3px solid rgba(79, 142, 247, 0.35);
+    outline: 2px solid rgba(79, 142, 247, 0.35);
     outline-offset: 2px;
-}
-
-.tag-chip-name {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #2c3e50;
-}
-
-.tag-chip-count {
-    font-size: 0.82rem;
-    color: #888;
+    border-radius: 4px;
 }
 
 /* 마우스 올렸을 때 */
@@ -413,13 +393,6 @@ body {
 .country-card:focus-visible {
     outline: 3px solid rgba(79, 142, 247, 0.35);
     outline-offset: 2px;
-}
-
-#archive-stats {
-    text-align: center;
-    color: #888;
-    font-size: 0.9rem;
-    margin: 0 0 var(--space-5);
 }
 
 #flag-strip {
@@ -773,22 +746,22 @@ body {
     display: flex;
     align-items: center;
 
-    gap: var(--space-3);
+    gap: var(--space-2);
 
-    padding: var(--space-3);
+    padding: var(--space-2);
     margin-bottom: 0;
 
     cursor: pointer;
 }
 
 .song-artwork-compact {
-    width: 56px;
-    height: 56px;
+    width: 72px;
+    height: 72px;
     border-radius: 10px;
 }
 
 .song-artwork-compact.no-artwork::before {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 }
 
 .compact-song-info {
@@ -1061,10 +1034,6 @@ a:hover {
         padding: var(--space-3);
     }
 
-    #archive-stats {
-        margin-bottom: var(--space-4);
-    }
-
     #flag-strip {
         display: none;
     }
@@ -1116,14 +1085,14 @@ a:hover {
 
     /* 간략 카드는 모바일에서도 작게 유지 (위 .song-artwork 72px보다 우선 적용) */
     .song-artwork-compact {
-        width: 48px;
-        height: 48px;
+        width: 60px;
+        height: 60px;
 
         border-radius: 8px;
     }
 
     .song-artwork-compact.no-artwork::before {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     #song-list.song-list-compact {

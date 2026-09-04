@@ -28,7 +28,6 @@
     </button>
   </header>
 
-  <p id="archive-stats"></p>
   <div id="flag-strip"></div>
 
   <!-- 검색창 + 레이아웃 모드 전환 -->
@@ -133,6 +132,16 @@
 
   <!-- 국가 선택: 태그 (많이 쓰인 순으로 정렬) -->
   <div id="tags-view" style="display: none;">
+
+    <div class="country-controls">
+      <label for="tag-sort">태그 정렬</label>
+
+      <select id="tag-sort">
+        <option value="count-desc">많이 쓰인 순</option>
+        <option value="name">가나다순</option>
+      </select>
+    </div>
+
     <div id="tags-list"></div>
   </div>
 
@@ -153,7 +162,7 @@
       </div>
 
       <p class="about-intro">
-        세계의 소리를 찾아서, 일명 <strong>세소찾</strong> 프로젝트는 다양한 외국어 곡들을 모으기 위해 2023년 5월 시작되었습니다. 기존에는 블로그 글을 통해서 한 곡씩 소개하였으나, 더 많은 곡을 다루고자 2026년 6월 <strong>세소찾 더보기</strong> 사이트가 만들어졌습니다.
+        세계의 소리를 찾아서, 일명 <strong>세소찾</strong> 프로젝트는 다양한 외국어 곡들을 모으기 위해 <strong>2023년 5월</strong> 시작되었습니다. 기존에는 블로그 글을 통해서 한 곡씩 소개하였으나, 더 많은 곡을 다루고자 <strong>2026년 6월</strong>, '세소찾 더보기' 사이트가 만들어졌습니다.
       </p>
 
       <h3 class="about-rules-heading">곡 등록 기준</h3>
