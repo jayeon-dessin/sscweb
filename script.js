@@ -754,7 +754,7 @@ function renderTagsList() {
     chip.style.fontWeight = style.fontWeight;
 
     chip.title = `${tag} · ${count}곡`;
-    chip.textContent = `#${tag}`;
+    chip.textContent = tag;
 
     chip.addEventListener("click", () => {
       selectTag(tag);
@@ -776,14 +776,15 @@ function selectCountry(code) {
 
   showSongsUI();
 
-  countryTitle.innerHTML = `
-    ${countryFlagHTML(code)}
-    ${getCountryName(code)}
-  `;
-
   const countrySongs = songs.filter(song =>
     song.countries.includes(code)
   );
+
+  countryTitle.innerHTML = `
+    ${countryFlagHTML(code)}
+    ${getCountryName(code)}
+    <span class="country-title-count">${countrySongs.length}곡</span>
+  `;
 
   tagSearch.value = "";
 
@@ -803,11 +804,14 @@ function selectTag(tag) {
 
   showSongsUI();
 
-  countryTitle.textContent = `#${tag}`;
-
   const tagSongs = songs.filter(song =>
     (song.tags || []).includes(tag)
   );
+
+  countryTitle.innerHTML = `
+    ${tag}
+    <span class="country-title-count">${tagSongs.length}곡</span>
+  `;
 
   tagSearch.value = "";
 
@@ -937,9 +941,13 @@ function applyFilters() {
     countryTitle.innerHTML = `
       ${countryFlagHTML(selectedCountry)}
       ${getCountryName(selectedCountry)}
+      <span class="country-title-count">${filteredSongs.length}곡</span>
     `;
   } else if (selectedTag) {
-    countryTitle.textContent = `#${selectedTag}`;
+    countryTitle.innerHTML = `
+      ${selectedTag}
+      <span class="country-title-count">${filteredSongs.length}곡</span>
+    `;
   } else {
     countryTitle.textContent =
       `검색 결과 (${filteredSongs.length}곡)`;

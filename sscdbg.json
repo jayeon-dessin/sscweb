@@ -34,7 +34,7 @@
     "songwriters": ["Ralph Siegel", "Bernd Meinunger"],
     "language": ["독일어"],
     "countries": ["DE"],
-    "tags": ["디스코", "잉카", "전설"],
+    "tags": ["디스코", "남미원주민", "전설"],
     "memo": "징기스 칸의 덜 유명한 곡. 잉카 문명의 몰락에 관한 전설에 관해 노래한다.",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/63"}
@@ -43,6 +43,21 @@
       {"title": "인트로 포함 풀버전", "url": "https://www.youtube.com/watch?v=HFvKe-8eYvU"}
     ],
     "image": "covers/001-machu-picchu-dschinghis-khan.jpg"
+  },
+  {
+    "title": "Waltz of the Flowers (Вальс цветов)",
+    "year": 1892,
+    "artist": [],
+    "songwriters": ["Pyotr Tchaikovsky"],
+    "language": [],
+    "countries": ["RU"],
+    "tags": ["클래식","왈츠","호두까기인형","발레"],
+    "memo": "발레 '호두까기 인형(Щелкунчик/The Nutcracker, Op. 71)' 중 꽃의 요정의 춤, 일명 '꽃의 왈츠'.",
+    "youtube": [
+      {"title": "London Festival Orchestra", "url": "https://www.youtube.com/watch?v=QxHkLdQy5f0"},
+      {"title": "Concertgebouworkest", "url": "https://www.youtube.com/watch?v=Zp1aDnVySf8"}
+    ],
+    "image": "covers/002-tchaikovsky.jpg"
   },
   {
     "title": "Pistolero",
@@ -521,6 +536,21 @@
     "image": "covers/032-bootleg-yonezu-kenshi.jpg"
   },
   {
+    "title": "For Elise (Für Elise)",
+    "year": 1810,
+    "artist": [],
+    "songwriters": ["Ludwig van Beethoven"],
+    "language": [],
+    "countries": ["DE"],
+    "tags": ["클래식"],
+    "memo": "엘리제를 위하여.",
+    "youtube": [
+      {"title": "Rousseau", "url": "https://www.youtube.com/watch?v=wfF0zHeU3Zs"},
+      {"title": "Marnie Laird (Brooklyn Classical)", "url": "https://www.youtube.com/watch?v=2fcX2dWmR6g"}
+    ],
+    "image": "covers/033-beethoven.jpg"
+  },
+  {
     "title": "かいじゅうのマーチ (괴수의 행진곡)",
     "year": 2017,
     "artist": ["Kenshi Yonezu (米津玄師)"],
@@ -996,7 +1026,7 @@
     "songwriters": ["Colin Hay", "Ron Strykert"],
     "language": ["영어"],
     "countries": ["AU"],
-    "tags": ["뉴웨이브", "팝록", "레게"],
+    "tags": ["뉴웨이브","팝록","레게","호주"],
     "memo": "비공식 국가 수준의, 호주를 상징하는 곡 중 하나. 코믹하면서도 비판적인 가사",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=XfR9iY5y94s"},
@@ -1192,7 +1222,7 @@
     "songwriters": ["Kgaogelo Moagi", "Nomcebo"],
     "language": ["줄루어"],
     "countries": ["ZA"],
-    "tags": ["예루살렘", "종교음악", "가스펠", "하우스"],
+    "tags": ["예루살렘","종교음악","가스펠","하우스","댄스"],
     "memo": "댄스 챌린지를 통해 세계적으로 흥행한, 성가 기반의 신나는 하우스 곡. 성지 예루살렘에 대한 노래",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/64"}
@@ -1597,7 +1627,7 @@
       {"title": "Symphony Orchestra & Grand Choir of the Collegium Musicum Berlin", "url": "https://www.youtube.com/watch?v=MafAZeag1_0"},
       {"title": "RIAS Chamber Choir · Berlin Radio Symphony Orchestra", "url": "https://www.youtube.com/watch?v=BzsrqaLgdpk"}
     ],
-    "image": "covers/098-lacrimosa.jpg"
+    "image": "covers/098-mozart.jpg"
   },
   {
     "title": "プラスティック ラブ(Plastic Love)",
@@ -1926,7 +1956,7 @@
     "songwriters": ["Traditional"],
     "language": ["조지아어"],
     "countries": ["GE"],
-    "tags": ["민요", "댄스"],
+    "tags": ["민요", "무곡"],
     "memo": "조지아 아자리야(Adjara) 지방 민요.",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/102"}
@@ -1967,6 +1997,21 @@
       {"title": "MV", "url": "https://www.youtube.com/watch?v=jM8dCGIm6yc"}
     ],
     "image": "covers/119-the-gereg.jpg"
+  },
+    {
+    "title": "Clair de Lune",
+    "year": 1905,
+    "artist": [],
+    "songwriters": ["Claude Debussy"],
+    "language": [],
+    "countries": ["FR"],
+    "tags": ["클래식","달"],
+    "memo": "드뷔시의 <베르가마스크 모음곡> 중 '달빛'.",
+    "youtube": [
+      {"title": "Wiener Philharmoniker(?)", "url": "https://www.youtube.com/watch?v=JXMdei-UTfw"},
+      {"title": "Czech Philharmony choir Brno, Czech Radio symphony orchestra", "url": "https://www.youtube.com/watch?v=5j1dYi2Q_C0"}
+    ],
+    "image": "covers/120-debussy.jpg"
   },
   {
     "title": "Tous Les Mêmes",
@@ -2072,6 +2117,20 @@
       {"title": "MV", "url": "https://www.youtube.com/watch?v=B3gbisdtJnA"}
     ],
     "image": "covers/125-dónde-están-los-ladrones-shakira.jpg"
+  },
+  {
+    "title": "Waltz No.2 ",
+    "year": "1956?",
+    "artist": [],
+    "songwriters": ["Dmitri Shostakovich","Levon Atovmyan"],
+    "language": [],
+    "countries": ["RU"],
+    "tags": ["클래식","왈츠","소련"],
+    "memo": "바리에테 관현악단을 위한 모음곡 1번 제7악장. 재즈 오케스트라 모음곡(1938)으로 잘못 알려져 있다.",
+    "youtube": [
+      {"title": "음악", "url": "https://www.youtube.com/watch?v=mmCnQDUSO4I"}
+    ],
+    "image": "covers/126-shostakovich.jpg"
   },
   {
     "title": "Zangaléwa",
@@ -2383,6 +2442,20 @@
       {"title": "MV", "url": "https://www.youtube.com/watch?v=nwBi5YVO004"}
     ],
     "image": "covers/142-molchat-doma-2.jpg"
+  },
+  {
+    "title": "Sabre Dance (Танец с саблями)",
+    "year": "1942",
+    "artist": [],
+    "songwriters": ["Aram Khachaturian"],
+    "language": [],
+    "countries": ["AM"],
+    "tags": ["클래식","소련","발레","무곡"],
+    "memo": "가야네 모음곡 No.3 중 '칼의 춤'. 색소폰과 아르메니아 전통 음악 요소의 결합",
+    "youtube": [
+      {"title": "음악", "url": "https://www.youtube.com/watch?v=mmCnQDUSO4I"}
+    ],
+    "image": "covers/143-khachaturian.jpg"
   },
   {
     "title": "Ich hab die Nacht geträumet",
@@ -2796,6 +2869,21 @@
     "image": "covers/171-come-out-ye-black-and-tans.jpg"
   },
   {
+    "title": "First Delphic Hymn to Apollo (Παιὰν εἰς Ἀπόλλωνα)",
+    "year": "-128?",
+    "artist": [],
+    "songwriters": ["Athenaeus"],
+    "language": ["고대그리스어"],
+    "countries": ["GB"],
+    "tags": ["고대","종교음악"],
+    "memo": "델포이 신전에서 발견된 2개의 아폴론 찬가 중 첫 번째. 5박자 운율",
+    "youtube": [
+      {"title": "Thanasis Kleopas", "url": "https://www.youtube.com/watch?v=tbA8WF4V0tg"},
+      {"title": "Christodoulos Halaris", "url": "https://www.youtube.com/watch?v=4gyTx7-l3MM"}
+    ],
+    "image": "covers/172-delphic-hymns.jpg"
+  },
+  {
     "title": "Daisy Bell (Bicycle Built For Two)",
     "year": "1892",
     "artist": [],
@@ -3011,6 +3099,34 @@
       {"title": "MV", "url": "https://www.youtube.com/watch?v=xA1TJrx5ZI8"}
     ],
     "image": "covers/187-khayal-خيال-kazdoura.jpg"
+  },
+    {
+    "title": "Akakaw",
+    "year": "2023",
+    "artist": ["Renata Flores","Los Mirlos"],
+    "songwriters": ["Renata Flores"],
+    "language": ["스페인어","케추아어"],
+    "countries": ["PE"],
+    "tags": ["힙합", "남미원주민","레게톤","쿰비아"],
+    "memo": "페루의 쿰비아 밴드 Los Mirlos와 래퍼 Renata Flores의 콜라보, '불타오르고 있어'",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=JrqSnbQkOdw"}
+    ],
+    "image": "covers/188-akakaw.jpg"
+  },
+    {
+    "title": "Chicago Freestyle",
+    "year": "2020",
+    "artist": ["Drake","Giveon"],
+    "songwriters": ["Aubrey Graham","Giveon Evans","Rupert Thomas Jr.","Noel Cadastre","Marshall Mathers","Jeff Bass","Steve King"],
+    "language": ["영어"],
+    "countries": ["CA", "US"],
+    "tags": ["힙합", "R&B"],
+    "memo": "몽환적인 분위기의 트랩 소울",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=p9pf5EyOgcs"}
+    ],
+    "image": "covers/189-chicago-freestyle.jpg"
   },
   {
     "title": "踊り子 (무희)",
@@ -3288,6 +3404,34 @@
     "image": "covers/207-daft-punk-1.jpg"
   },
   {
+    "title": "Uz Maršala Tita (Уз маршала Тита)",
+    "year": "1943",
+    "artist": ["Daft Punk","Julian Casablancas"],
+    "songwriters": ["Vladimir Nazor","Oskar Danon"],
+    "language": ["세르보크로아트어"],
+    "countries": ["HR","BA"],
+    "tags": ["전쟁","선전가요"],
+    "memo": "유고슬라비아 파르티잔 지도자 티토를 찬양하는 2차대전 시기 곡.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=a5uQMwRMHcs"}
+    ],
+    "image": "covers/208-tito.jpg"
+  },
+  {
+    "title": "Instant Crush",
+    "year": "2013",
+    "artist": ["Daft Punk","Julian Casablancas"],
+    "songwriters": ["Thomas Bangalter", "Guy Manuel De Homem-Christo","Julian Casablancas"],
+    "language": ["영어"],
+    "countries": ["FR","US"],
+    "tags": ["신스팝", "록", "일렉트로닉","뉴웨이브"],
+    "memo": "줄리안 카사블랑카스와 함께한, 개인적으로 좋아하는 소프트한 다펑 곡.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=a5uQMwRMHcs"}
+    ],
+    "image": "covers/209-daft-punk-2.jpg"
+  },
+  {
     "title": "Get Lucky",
     "year": "2013",
     "artist": ["Daft Punk", "Pharrell Williams", "Nile Rodgers"],
@@ -3300,7 +3444,7 @@
       {"title": "MV", "url": "https://youtu.be/CCHdMIEGaaM?si=3PPYINChW_T4L0ck"},
       {"title": "음원", "url": "https://youtu.be/5NV6Rdv1a3I?si=5x19hB4dAJiYmxdS"}
     ],
-    "image": "covers/209-get-lucky-daft-punk.jpg"
+    "image": "covers/209-daft-punk-2.jpg"
   },
   {
     "title": "925",
@@ -4568,7 +4712,7 @@
     "songwriters": ["Sebastián Iradier"],
     "language": ["스페인어"],
     "countries": ["ES"],
-    "tags": ["댄스", "번안", "카르멘"],
+    "tags": ["무곡", "번안", "카르멘"],
     "memo": "쿠바풍의 스페인 춤곡. 프랑스어로 번안되어 비제의 오페라 <카르멘>의 아리아 'Habanera'로 사용되었다.",
     "youtube": [
       {"title": "José Ferrero, Bartomeu Jaume", "url": "https://www.youtube.com/watch?v=KekeN8rjFHk"}
@@ -4652,7 +4796,7 @@
     "songwriters": ["大张伟"],
     "language": ["중국어"],
     "countries": ["CN"],
-    "tags": ["밈", "팝"],
+    "tags": ["밈", "만도팝"],
     "memo": "위로와 희망을 주는 밝은 노래. 자주 반복되는 内个(nèige)라는 단어 때문에 밈이 되었다.",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=YG4iTGjuoKw"}
@@ -4897,7 +5041,7 @@
     "songwriters": ["Sebastián Iradier", "Georges Bizet"],
     "language": ["프랑스어"],
     "countries": ["FR"],
-    "tags": ["오페라", "클래식", "번안"],
+    "tags": ["오페라", "클래식", "번안","무곡"],
     "memo": "스페인 무곡 El Arreglito의 멜로디를 차용한, 비제의 오페라 <카르멘> 속 아리아.",
     "links": [],
     "youtube": [
@@ -4933,5 +5077,135 @@
       {"title": "음원", "url": "https://www.youtube.com/watch?v=6UbITQT4ZFE"}
     ],
     "image": "covers/324-ere-mela-mela.jpg"
+  },
+  {
+    "title": "Salvadoreñas",
+    "year": "1984",
+    "artist": ["Los Hermanos Flores"],
+    "songwriters": ["Los Hermanos Flores"],
+    "language": ["스페인어"],
+    "countries": ["SV"],
+    "tags": ["쿰비아"],
+    "memo": "'엘살바도르 여자들'의 아름다움에 대한 쿰비아 곡.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=yt7I2lNBeyw"}
+    ],
+    "image": "covers/325-salvadorenas.jpg"
+  },
+  {
+    "title": "Bártfai Emlék Csárdás, Op.31",
+    "year": 1858,
+    "artist": [],
+    "songwriters": ["Béla Kéler"],
+    "language": [],
+    "countries": ["HU"],
+    "tags": ["클래식","무곡","집시"],
+    "memo": "'바르트퍼의 추억'. 브람스가 민요로 착각하여 재구성해 헝가리 무곡 제5번이 되었다.",
+    "youtube": [
+      {"title": "Bártfai Emlék Csárdás, Op.31 (Erinnerung an Bartfeld)", "url": "https://www.youtube.com/watch?v=tmHmlqU_FKA"}
+    ],
+    "image": "covers/326-bela-keler.jpg"
+  },
+  {
+    "title": "Hungarian Dance No.5 (Ungarische Tänze Nr.5)",
+    "year": 1869,
+    "artist": [],
+    "songwriters": ["Johannes Brahms"],
+    "language": [],
+    "countries": ["DE"],
+    "tags": ["클래식","무곡","헝가리"],
+    "memo": "헝가리 음악가 Béla Kéler의 곡 'Bártfai Emlék'을 편곡한 곡, 인지도는 훨씬 좋다. 민요로 착각했다는 듯",
+    "youtube": [
+      {"title": "Hungarian Symphony Orchestra Budapest", "url": "https://www.youtube.com/watch?v=Nzo3atXtm54"},
+      {"title": "Wiener Philharmoniker", "url": "https://www.youtube.com/watch?v=PyCHVikkt-E"}
+    ],
+    "image": "covers/327-brahms.jpg"
+  },
+  {
+    "title": "The Maiden's Prayer (Modlitwa dziewicy)",
+    "year": 1856,
+    "artist": [],
+    "songwriters": ["Tekla Bądarzewska"],
+    "language": [],
+    "countries": ["PL"],
+    "tags": ["클래식"],
+    "memo": "'소녀의 기도', 바다르체프스카의 짧은 피아노 곡. 미국에서 컨트리 곡으로 녹음되기도 함.",
+    "youtube": [
+      {"title": "Lang Lang", "url": "https://www.youtube.com/watch?v=rubmFnMBwq8"},
+      {"title": "Marek & Vacek", "url": "https://www.youtube.com/watch?v=sLToioGXP9g"},
+      {"title": "미국의 Bob Wills의 컨트리 버전", "url": "https://www.youtube.com/watch?v=dqTlW4zcTDM"}
+    ],
+    "image": "covers/328-bądarzewska.jpg"
+  },
+  {
+    "title": "Triumphal March (Marcia Trionfale)",
+    "year": 1871,
+    "artist": [],
+    "songwriters": ["Giuseppe Verdi"],
+    "language": ["이탈리아어"],
+    "countries": ["IT"],
+    "tags": ["클래식","오페라","이집트","아이다"],
+    "memo": "오페라 <아이다> 2막, 이집트군의 개선 행진곡.",
+    "youtube": [
+      {"title": "Wiener Philharmoniker(?)", "url": "https://www.youtube.com/watch?v=JXMdei-UTfw"},
+      {"title": "Czech Philharmony choir Brno, Czech Radio symphony orchestra", "url": "https://www.youtube.com/watch?v=5j1dYi2Q_C0"}
+    ],
+    "image": "covers/329-aida.jpg"
+  },
+  {
+    "title": "As It Was",
+    "year": 2022,
+    "artist": ["Harry Styles"],
+    "songwriters": ["Harry Styles","Kid Harpoon","Tyler Johnson"],
+    "language": ["영어"],
+    "countries": ["GB"],
+    "tags": ["신스팝","뉴웨이브"],
+    "memo": "예전 같지 않은 삶. 변화에 대하여",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=H5v3kku4y6Q"}
+    ],
+    "image": "covers/330-harrys-house.jpg"
+  },
+  {
+    "title": "Bratet D'Mam Oshana (ܒܪܬܐ ܕܡܡ ܐܘܫܥܢܐ)",
+    "year": 1982,
+    "artist": ["Sargon Gabriel (ܣܪܓܘܢ ܓܒܪܐܝܠ)"],
+    "songwriters": ["Hikmet Hermiz Shabo"],
+    "language": ["아시리아어"],
+    "countries": ["IQ"],
+    "tags": ["포크","아시리아"],
+    "memo": "'오샤나 아저씨네 딸'. 아시리아인 가수 Sargon Gabriel의 히트곡",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=GhrokY-n7F8"}
+    ],
+    "image": "covers/331-sargon-gabriel.jpg"
+  },
+  {
+    "title": "Come and Get Your Love",
+    "year": 1973,
+    "artist": ["Redbone"],
+    "songwriters": ["Lolly Vegas"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["팝락","디스코","소울","북미원주민","영화음악"],
+    "memo": "Redbone 최대 히트곡. 영화 <가디언즈 오브 갤럭시> 오프닝곡으로도 유명하다.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=GhrokY-n7F8"}
+    ],
+    "image": "covers/332-come-and-get-your-love.jpg"
+  },
+  {
+    "title": "Mentiras",
+    "year": 2009,
+    "artist": ["Los Amigos Invisibles"],
+    "songwriters": ["José Pardo","Mauricio Arcas"],
+    "language": ["스페인어"],
+    "countries": ["VE"],
+    "tags": ["팝락","펑크","팝"],
+    "memo": "'거짓말'. 베네수엘라 밴드 Los Amigos Invisibles의 대표곡",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/6g-qZIktAtc?si=iOauE1zPvMqJsUF_"}
+    ],
+    "image": "covers/333-mentiras.jpg"
   }
 ]
