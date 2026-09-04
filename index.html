@@ -74,6 +74,15 @@
       <button
         type="button"
         class="view-tab"
+        data-mode="tags"
+        role="tab"
+        aria-selected="false"
+      >
+        태그
+      </button>
+      <button
+        type="button"
+        class="view-tab"
         data-mode="about"
         role="tab"
         aria-selected="false"
@@ -122,6 +131,11 @@
     <div id="timeline-list"></div>
   </div>
 
+  <!-- 국가 선택: 태그 (많이 쓰인 순으로 정렬) -->
+  <div id="tags-view" style="display: none;">
+    <div id="tags-list"></div>
+  </div>
+
   <!--
     소개 탭 (자유롭게 직접 수정하세요!)
     - 도입 문단(.about-intro)의 문장은 자유롭게 바꿔도 됩니다.
@@ -139,7 +153,7 @@
       </div>
 
       <p class="about-intro">
-        세계의 소리를 찾아서, 일명 <strong>세소찾</strong> 프로젝트는 다양한 외국어 곡들을 모으기 위해 <strong>2023년 5월</strong> 시작되었습니다. 기존에는 블로그 글을 통해서 한 곡씩 소개하였으나, 더 많은 곡을 다루고자 <strong>2026년 6월</strong>, '세소찾 더보기' 사이트가 만들어졌습니다.
+        세계의 소리를 찾아서, 일명 <strong>세소찾</strong> 프로젝트는 다양한 외국어 곡들을 모으기 위해 2023년 5월 시작되었습니다. 기존에는 블로그 글을 통해서 한 곡씩 소개하였으나, 더 많은 곡을 다루고자 2026년 6월 <strong>세소찾 더보기</strong> 사이트가 만들어졌습니다.
       </p>
 
       <h3 class="about-rules-heading">곡 등록 기준</h3>
@@ -154,7 +168,7 @@
         <div class="about-rule">
           <span class="about-rule-icon">❓</span>
           <p>
-            번안곡, 리메이크곡이 원곡보다 유명하거나 그에 준하는 경우 원곡과 별개의 곡으로 등록될 수 있습니다. (아직 명확한 기준은 없습니다.)
+            번안곡, 리메이크곡이 원곡보다 유명하거나 그에 준하는 경우 원곡과 별개의 곡으로 등록될 수 있습니다.
           </p>
         </div>
         <div class="about-rule">
@@ -176,12 +190,7 @@
           </p>
         </div>
       </div>
-      <p>
-        곡 정보는 손으로 입력하여 오류가 있을 수 있습니다. 오류를 발견하신 경우, 상단의 이메일로 제보 부탁드립니다.
-      </p>
-      <p>
-        최종 수정일 2026.09.03
-      </p>
+
     </div>
   </div>
 

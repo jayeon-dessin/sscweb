@@ -337,6 +337,64 @@ body {
     color: #888;
 }
 
+
+/* ========================================
+   태그 (많이 쓰인 순으로 정렬)
+======================================== */
+
+#tags-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-2);
+    margin-bottom: var(--space-7);
+}
+
+.tag-chip {
+    appearance: none;
+
+    border: 1px solid #e2e6ec;
+    background: white;
+
+    border-radius: 8px;
+
+    padding:
+        var(--space-2)
+        var(--space-3);
+
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: baseline;
+
+    gap: var(--space-2);
+
+    transition:
+        background 0.15s,
+        border-color 0.15s;
+}
+
+.tag-chip:hover {
+    background: #eef4ff;
+    border-color: #4f8ef7;
+}
+
+.tag-chip:focus-visible {
+    outline: 3px solid rgba(79, 142, 247, 0.35);
+    outline-offset: 2px;
+}
+
+.tag-chip-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.tag-chip-count {
+    font-size: 0.82rem;
+    color: #888;
+}
+
 /* 마우스 올렸을 때 */
 
 .country-card:hover {
@@ -371,7 +429,7 @@ body {
 
     gap: var(--space-1);
 
-    max-width: 1000px;
+    max-width: 1010px;
 
     margin:
         var(--space-5)
@@ -491,6 +549,11 @@ body {
 
     gap: var(--space-3);
     margin-bottom: var(--space-5);
+}
+
+/* 랜덤 곡: 뒤로가기 버튼/제목 없이 곡 카드가 바로 나옴 */
+.songs-view-no-header .songs-view-header {
+    display: none;
 }
 
 #country-title {

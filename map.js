@@ -20,9 +20,9 @@ let mapDotGroup = null;
 const worldFeaturesByNumericId = new Map();
 
 // 렌더링된 폴리곤이 이 값(px²)보다 작으면 클릭하기 어려우니 점 마커로 보완
-// (960x500 viewBox 기준. 기존에 수동으로 관리하던 15개국 소국 목록과
-// 거의 일치하도록 보정한 값 - 국가가 새로 추가돼도 자동으로 판단됨)
-const SMALL_COUNTRY_AREA_THRESHOLD = 50;
+// (960x500 viewBox 기준. 정말 작은 나라만 남기도록 엄격하게 잡음 -
+// 실제 데이터 기준 17.09(IL)와 26.28(TW) 사이에 자연스러운 간격이 있어 20으로 설정)
+const SMALL_COUNTRY_AREA_THRESHOLD = 20;
 
 function buildNumericToAlpha2() {
   const map = new Map();
