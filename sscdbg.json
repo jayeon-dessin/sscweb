@@ -2874,7 +2874,7 @@
     "artist": [],
     "songwriters": ["Athenaeus"],
     "language": ["고대그리스어"],
-    "countries": ["GB"],
+    "countries": ["GR"],
     "tags": ["고대","종교음악"],
     "memo": "델포이 신전에서 발견된 2개의 아폴론 찬가 중 첫 번째. 5박자 운율",
     "youtube": [
@@ -3501,6 +3501,20 @@
       {"title": "음원", "url": "https://www.youtube.com/watch?v=r5sPW726vBA"}
     ],
     "image": "covers/212-lolo-zouaï-1.jpg"
+  },
+  {
+    "title": "大展鴻圖(대전홍도)",
+    "year": "2024",
+    "artist": ["SKAI ISYOURGOD (攬佬)"],
+    "songwriters": ["SKAI ISYOURGOD", "刘夫阳"],
+    "language": ["중국어","광동어"],
+    "countries": ["CN"],
+    "tags": ["힙합","만도팝","트랩","밈"],
+    "memo": "홍콩 경극 인트로를 사용한 힙합 곡. '원대한 계획을 크게 펼치다'",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=tFkgMiQBpoI"}
+    ],
+    "image": "covers/213-大展鴻圖.jpg"
   },
   {
     "title": "Santa Lucia",
@@ -4395,7 +4409,7 @@
     "songwriters": ["阿肆"],
     "language": ["중국어"],
     "countries": ["CN"],
-    "tags": ["포크", "팝", "밈"],
+    "tags": ["포크", "만도팝", "밈"],
     "memo": "'Super Idol' 밈으로 알려진, 왓슨스 증류수 홍보곡.",
     "youtube": [
       {"title": "음원", "url": "https://www.youtube.com/watch?v=_FVvA1lUkQ8"},
