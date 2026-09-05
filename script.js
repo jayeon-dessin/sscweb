@@ -1243,13 +1243,24 @@ function renderRelatedSongs(container, song) {
 // 곡 목록 출력 (간략 카드 / 일반 카드)
 // -------------------------------------
 
+// 가수가 없으면 작곡가로 대체
+function displayArtist(song) {
+  if (song.artist && song.artist.length > 0) {
+    return song.artist.join(", ");
+  }
+  if (song.songwriters && song.songwriters.length > 0) {
+    return song.songwriters.join(", ");
+  }
+  return "";
+}
+
 // 국가를 골랐을 때 1차로 보여주는 간략 카드: 이미지 + 제목 + 가수만
 function compactSongCardMarkup(song) {
   return `
     <div class="song-artwork song-artwork-compact placeholder"></div>
     <div class="compact-song-info">
       <div class="compact-song-title">${song.title}</div>
-      <div class="compact-song-artist">${song.artist.join(", ")}</div>
+      <div class="compact-song-artist">${displayArtist(song)}</div>
     </div>
   `;
 }

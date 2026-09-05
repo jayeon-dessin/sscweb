@@ -542,7 +542,7 @@
     "songwriters": ["Ludwig van Beethoven"],
     "language": [],
     "countries": ["DE"],
-    "tags": ["클래식"],
+    "tags": ["클래식","피아노"],
     "memo": "엘리제를 위하여.",
     "youtube": [
       {"title": "Rousseau", "url": "https://www.youtube.com/watch?v=wfF0zHeU3Zs"},
@@ -900,7 +900,7 @@
     "songwriters": ["momocashew", "Yamato Kasai"],
     "language": ["영어"],
     "countries": ["JP", "CA"],
-    "tags": ["컴퓨터", "인디", "락"],
+    "tags": ["컴퓨터", "인디", "락","아트팝"],
     "memo": "Java 형식의 가사가 특이한 곡.",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/51"}
@@ -918,7 +918,7 @@
     "songwriters": ["Mili", "momocashew"],
     "language": ["영어"],
     "countries": ["CA", "JP"],
-    "tags": ["인디"],
+    "tags": ["인디","아트팝"],
     "memo": "미트볼 서브마린(샌드위치)를 소재로 한, 연인을 찾아가는 노래.",
     "youtube": [
       {"title": "음원", "url": "https://www.youtube.com/watch?v=NPoYb4mbiOg"}
@@ -3406,7 +3406,7 @@
   {
     "title": "Uz Maršala Tita (Уз маршала Тита)",
     "year": "1943",
-    "artist": ["Daft Punk","Julian Casablancas"],
+    "artist": [],
     "songwriters": ["Vladimir Nazor","Oskar Danon"],
     "language": ["세르보크로아트어"],
     "countries": ["HR","BA"],
@@ -3661,7 +3661,7 @@
       {"title": "MV", "url": "https://www.youtube.com/watch?v=x9WO2ieJMYk"},
       {"title": "Straight Up Punjab 2019", "url": "https://www.youtube.com/watch?v=H2gmeNH_oZ0"}
     ],
-    "image": "covers/223-mundian-to-bach-ke-ਮ-ਡ-ਆ-ਤ-ਬ-ਚ-ਕ-panjabi-mc.jpg"
+    "image": "covers/223-mundian-to-bach-ke.jpg"
   },
   {
     "title": "Tunak Tunak Tun (ਤੁਣਕ ਤੁਣਕ ਤੁਨ)",
@@ -3675,7 +3675,7 @@
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=eZ2PtEx9-ls"}
     ],
-    "image": "covers/224-tunak-tunak-tun-ਤ-ਣਕ-ਤ-ਣਕ-ਤ-ਨ-daler-mehndi.jpg"
+    "image": "covers/224-tunak-tunak-tun.jpg"
   },
   {
     "title": "Aal Izz Well",
@@ -3706,6 +3706,35 @@
     "image": "covers/225-3-idiots.jpg"
   },
   {
+    "title": "言って。(말해줘.)",
+    "year": "2017",
+    "artist": ["Yorushika (ヨルシカ)"],
+    "songwriters": ["n-buna"],
+    "language": ["일본어"],
+    "countries": ["JP"],
+    "tags": ["JPOP","록"],
+    "memo": "중의적 표현을 사용해 표현한, 떠나간 연인에 대한 그리움.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/F64yFFnZfkI?si=LFaU0NKkVztcNGzB"}
+    ],
+    "image": "covers/226-itte-yorushika.jpg"
+  },
+  {
+    "title": "Endless Rain (エンドレス・レイン)",
+    "year": "1989",
+    "artist": ["X JAPAN"],
+    "songwriters": ["YOSHIKI"],
+    "language": ["일본어","영어"],
+    "countries": ["JP"],
+    "tags": ["발라드","록발라드"],
+    "memo": "한국에서 인기 있는, 엑스재팬의 대표곡 중 하나.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/QhOFg_3RV5Q?si=sFvEQbL8H1e2zpzF"},
+      {"title": "The Last Live", "url": "https://www.youtube.com/watch?v=7rwJIeN1M7o"}
+    ],
+    "image": "covers/227-endless-rain.jpg"
+  },
+  {
     "title": "The Spectre",
     "year": "2017",
     "artist": ["Alan Walker"],
@@ -3731,7 +3760,7 @@
     "youtube": [
       {"title": "MV", "url": "https://youtu.be/u5CVsCnxyXg?si=0PYXgPyrsju80SNa"}
     ],
-    "image": "covers/229-no-surprises-radiohead.jpg"
+    "image": "covers/229-ok-computer-radiohead.jpg"
   },
   {
     "title": "WAHALA",
@@ -3791,6 +3820,21 @@
       {"title": "Lyric Video", "url": "https://www.youtube.com/watch?v=Dca9gJyjoAg"}
     ],
     "image": "covers/233-salt-pepper-birds-and-the-thought-police-mili.jpg"
+  },
+  {
+    "title": "Wish You Were Here",
+    "year": "1975",
+    "artist": ["Pink Floyd"],
+    "songwriters": ["David Gilmour", "Roger Waters"],
+    "language": ["영어"],
+    "countries": ["GB"],
+    "tags": ["프로그레시브록","포크록"],
+    "memo": "시드 배럿을 기리며. 핑크 플로이드의 대표곡",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=K6qj09OHvjw"},
+      {"title": "PULSE 콘서트", "url": "https://www.youtube.com/watch?v=84Tq-eAJIk4"}
+    ],
+    "image": "covers/234-wish-you-were-here.jpg"
   },
   {
     "title": "Iron Lotus",
@@ -3880,6 +3924,20 @@
       {"title": "Lyric Video", "url": "https://youtu.be/tTYJryNgLH8?si=qSHJtV8zQjbjjeNf"}
     ],
     "image": "covers/239-news-of-the-world-queen.jpg"
+  },
+  {
+    "title": "Hidden Place",
+    "year": "2001",
+    "artist": ["Björk"],
+    "songwriters": ["Björk Guðmundsdóttir"],
+    "language": ["영어"],
+    "countries": ["IS"],
+    "tags": ["일렉트로닉","아트팝"],
+    "memo": "'숨겨진 장소에 간직할 거야'. 신비하고 기괴한 곡",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=54LQ_AO1gDI"}
+    ],
+    "image": "covers/240-vespertine.jpg"
   },
   {
     "title": "Highway to Hell",
@@ -4131,6 +4189,20 @@
     "image": "covers/256-evolve-imagine-dragons.jpg"
   },
   {
+    "title": "Superstition",
+    "year": "1972",
+    "artist": ["Stevie Wonder"],
+    "songwriters": ["Stevie Wonder"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["펑크","소울","팝"],
+    "memo": "스티비 원더의 대표곡. 미신에 대하여",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=0CFuCYNx-1g"}
+    ],
+    "image": "covers/257-talking-book-stevie-wonder.jpg"
+  },
+  {
     "title": "Chandelier",
     "year": "2014",
     "artist": ["Sia"],
@@ -4330,7 +4402,7 @@
     "youtube": [
       {"title": "대한민국공군", "url": "https://www.youtube.com/watch?v=VQ9Gjr9dP8c"}
     ],
-    "image": "covers/271-공군가.jpg"
+    "image": "covers/271-국군.jpg"
   },
   {
     "title": "바다로 가자",
@@ -4344,7 +4416,7 @@
     "youtube": [
       {"title": "국방일보", "url": "https://www.youtube.com/watch?v=lzNKijtrqm4"}
     ],
-    "image": "covers/272-해군.jpg"
+    "image": "covers/271-국군.jpg"
   },
   {
     "title": "팔각모 사나이",
@@ -4358,7 +4430,7 @@
     "youtube": [
       {"title": "국방일보", "url": "https://www.youtube.com/watch?v=0fioKUKuDTw"}
     ],
-    "image": "covers/272-해군.jpg"
+    "image": "covers/271-국군.jpg"
   },
   {
     "title": "전선을 간다",
@@ -4372,7 +4444,7 @@
     "youtube": [
       {"title": "국방일보", "url": "https://www.youtube.com/watch?v=CKITMkXpge8"}
     ],
-    "image": "covers/274-군가.jpg"
+    "image": "covers/271-국군.jpg"
   },
   {
     "title": "푸른 소나무",
@@ -4386,7 +4458,7 @@
     "youtube": [
       {"title": "국방일보", "url": "https://www.youtube.com/watch?v=_FHkspxHtHc"}
     ],
-    "image": "covers/274-군가.jpg"
+    "image": "covers/271-국군.jpg"
   },
   {
     "title": "진짜 사나이",
@@ -4400,7 +4472,78 @@
     "youtube": [
       {"title": "가사", "url": "https://www.youtube.com/watch?v=grIPlM4-iyM"}
     ],
-    "image": "covers/274-군가.jpg"
+    "image": "covers/271-국군.jpg"
+  },
+  {
+    "title": "Lucy In The Sky With Diamonds",
+    "year": "1967",
+    "artist": ["The Beatles"],
+    "songwriters": ["John Lennon", "Paul McCartney"],
+    "language": ["영어"],
+    "countries": ["GB"],
+    "tags": ["사이키델릭록", "사이키델릭팝"],
+    "memo": "몽환적인 사이키델릭록. 마약(LSD) 암시에 관해서는 논쟁이 있다.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=LgR6UNeQxXE"},
+      {"title": "음원 (Remastered 2009)", "url": "https://www.youtube.com/watch?v=naoknj1ebqI"}
+    ],
+    "image": "covers/272-sgt-pepper-beatles.jpg"
+  },
+  {
+    "title": "Here Comes Your Man",
+    "year": "1989",
+    "artist": ["Pixies"],
+    "songwriters": ["John Lennon", "Paul McCartney"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["인디","얼터너티브록","팝"],
+    "memo": "캘리포니아 지진으로 죽는 부랑자들에 관한 곡. (그런 것 치고는 밝은 곡)",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=tPgf_btTFlc"}
+    ],
+    "image": "covers/273-doolittle-pixies.jpg"
+  },
+  {
+    "title": "Sweden",
+    "year": "2011",
+    "artist": [],
+    "songwriters": ["C418"],
+    "language": [],
+    "countries": ["DE"],
+    "tags": ["피아노","앰비언트","게임음악","마인크래프트"],
+    "memo": "마인크래프트 BGM 중 가장 유명한 곡 중 하나.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=aBkTkxKDduc"}
+    ],
+    "image": "covers/274-minecraft.jpg"
+  },
+  {
+    "title": "Minecraft",
+    "year": "2011",
+    "artist": [],
+    "songwriters": ["C418"],
+    "language": [],
+    "countries": ["DE"],
+    "tags": ["앰비언트","게임음악","마인크래프트"],
+    "memo": "게임과 같은 제목의 또다른 유명한 BGM.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=aBkTkxKDduc"}
+    ],
+    "image": "covers/274-minecraft.jpg"
+  },
+  {
+    "title": "Luv(sic) Part 3",
+    "year": "2005",
+    "artist": ["Nujabes","Shing02"],
+    "songwriters": ["Nujabes","Shing02"],
+    "language": ["영어"],
+    "countries": ["JP"],
+    "tags": ["재즈랩","힙합"],
+    "memo": "누자베스와 싱고투의 Luv(sic) 6부작 중 세 번째",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=Y4HWvsGs0rY"}
+    ],
+    "image": "covers/275-luvsic-nujabes.jpg"
   },
   {
     "title": "热爱105°C的你 (105°C를 사랑하는 너)",
@@ -4415,7 +4558,7 @@
       {"title": "음원", "url": "https://www.youtube.com/watch?v=_FVvA1lUkQ8"},
       {"title": "밈으로 유명한 톈이밍(田一名) 버전.", "url": "https://www.youtube.com/watch?v=ZlHRhzXezAc"}
     ],
-    "image": "covers/277-热爱105-c的你-105-c를-사랑하는-너-a-si-阿肆.jpg"
+    "image": "covers/277-super-idol.jpg"
   },
   {
     "title": "Rivers of Babylon",
@@ -5142,7 +5285,7 @@
     "songwriters": ["Tekla Bądarzewska"],
     "language": [],
     "countries": ["PL"],
-    "tags": ["클래식"],
+    "tags": ["클래식","피아노"],
     "memo": "'소녀의 기도', 바다르체프스카의 짧은 피아노 곡. 미국에서 컨트리 곡으로 녹음되기도 함.",
     "youtube": [
       {"title": "Lang Lang", "url": "https://www.youtube.com/watch?v=rubmFnMBwq8"},
