@@ -418,7 +418,7 @@
     "songwriters": ["Stamatis Spanoudakis"],
     "language": ["그리스어"],
     "countries": ["GR"],
-    "tags": ["동로마제국", "이스탄불", "클래식", "전설", "번개"],
+    "tags": ["비잔틴", "이스탄불", "클래식", "전설", "번개"],
     "memo": "콘스탄티노폴리스 함락과 동로마 제국의 멸망, 그리고 콘스탄티노스 11세에 관한 전설. '당신은 번개처럼 오시리라'",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/36"}
@@ -1630,6 +1630,35 @@
     "image": "covers/098-mozart.jpg"
   },
   {
+    "title": "Rondo Alla Turca (Piano Sonata No.11)",
+    "year": "1785",
+    "artist": [""],
+    "songwriters": ["Wolfgang Amadeus Mozart"],
+    "language": [],
+    "countries": ["AT"],
+    "tags": ["클래식","오스만","피아노"],
+    "memo": "'터키 행진곡'. 사실 행진곡은 아니다.",
+    "youtube": [
+      {"title": "Yundi", "url": "https://www.youtube.com/watch?v=n2Tru4Qa3pc"},
+      {"title": "Elisso Bolkvadze(?)", "url": "https://www.youtube.com/watch?v=quxTnEEETbo"}
+    ],
+    "image": "covers/098-mozart.jpg"
+  },
+  {
+    "title": "Eine Kleine Nachtmusik, I. Allegro",
+    "year": "1787",
+    "artist": [""],
+    "songwriters": ["Wolfgang Amadeus Mozart"],
+    "language": [],
+    "countries": ["AT"],
+    "tags": ["클래식"],
+    "memo": "Serenade No. 13 in G major, '아이네 클라이네 나흐트무지크' 1악장. 현악 사중주",
+    "youtube": [
+      {"title": "Academy of St Martin in the Fields", "url": "https://www.youtube.com/watch?v=UhPBT0dA_oA"}
+    ],
+    "image": "covers/098-mozart.jpg"
+  },
+  {
     "title": "プラスティック ラブ(Plastic Love)",
     "year": "1984",
     "artist": ["Mariya Takeuchi (竹内まりや)"],
@@ -2444,16 +2473,16 @@
     "image": "covers/142-molchat-doma-2.jpg"
   },
   {
-    "title": "Sabre Dance (Танец с саблями)",
+    "title": "Sabre Dance (Танец с саблями / Սուսերով պար)",
     "year": "1942",
     "artist": [],
     "songwriters": ["Aram Khachaturian"],
     "language": [],
     "countries": ["AM"],
     "tags": ["클래식","소련","발레","무곡"],
-    "memo": "가야네 모음곡 No.3 중 '칼의 춤'. 색소폰과 아르메니아 전통 음악 요소의 결합",
+    "memo": "가야네 모음곡 No.3 중 '칼의 춤', 색소폰과 아르메니아 전통 음악 요소의 결합. 미국에서도 크게 흥행했다.",
     "youtube": [
-      {"title": "음악", "url": "https://www.youtube.com/watch?v=mmCnQDUSO4I"}
+      {"title": "Berliner Philharmoniker", "url": "https://www.youtube.com/watch?v=mUQHGpxrz-8"}
     ],
     "image": "covers/143-khachaturian.jpg"
   },
@@ -4546,6 +4575,20 @@
     "image": "covers/275-luvsic-nujabes.jpg"
   },
   {
+    "title": "Erlkönig",
+    "year": "1815",
+    "artist": [],
+    "songwriters": ["Franz Schubert","Johann Wolfgang von Goethe"],
+    "language": ["독일어"],
+    "countries": ["AT","DE"],
+    "tags": ["클래식","문학"],
+    "memo": "괴테의 시 '마왕'을 바탕으로 한 가곡.",
+    "youtube": [
+      {"title": "Oxfordsong 영상 버전 (Daniel Norman, Sholto Kynoch)", "url": "https://www.youtube.com/watch?v=JS91p-vmSf0"}
+    ],
+    "image": "covers/276-schubert.jpg"
+  },
+  {
     "title": "热爱105°C的你 (105°C를 사랑하는 너)",
     "year": "2019",
     "artist": ["A Si (阿肆)"],
@@ -4760,6 +4803,20 @@
       {"title": "MV", "url": "https://youtu.be/tvTRZJ-4EyI?si=JmSnFx7hsPzVMeoD"}
     ],
     "image": "covers/290-damn-kendrick-lamar.jpg"
+  },
+  {
+    "title": "Le Temps des cathédrales",
+    "year": "1998",
+    "artist": ["Bruno Pelletier"],
+    "songwriters": ["Riccardo Cocciante","Luc Plamondon"],
+    "language": ["프랑스어"],
+    "countries": ["FR","CA"],
+    "tags": ["샹송","뮤지컬","문학","파리"],
+    "memo": "빅토르 위고의 소설을 원작으로 한 뮤지컬 <Notre Dame de Paris> 중 '대성당의 시대'.",
+    "youtube": [
+      {"title": "Bruno Pelletier", "url": "https://www.youtube.com/watch?v=EocLKUzsaoc"}
+    ],
+    "image": "covers/291-notre-dame.jpg"
   },
   {
     "title": "Demons",
@@ -5426,7 +5483,7 @@
     "year": 1987,
     "artist": ["Sankomota"],
     "songwriters": ["Sankomota"],
-    "language": ["영어","세소토어"],
+    "language": ["영어","세소토어?"],
     "countries": ["LS"],
     "tags": ["재즈","아프로비트","팝락"],
     "memo": "별똥별이 너의 소원을 이루어 줄 거야. 희망찬 아프리카 리듬",
@@ -5448,5 +5505,19 @@
       {"title": "MV", "url": "https://www.youtube.com/watch?v=wqCpjFMvz-k"}
     ],
     "image": "covers/339-7-seconds.jpg"
+  },
+  {
+    "title": "Şımarık (Kiss Kiss)",
+    "year": 1997,
+    "artist": ["Tarkan"],
+    "songwriters": ["Sezen Aksu","Tarkan"],
+    "language": ["튀르키예어"],
+    "countries": ["TR"],
+    "tags": ["팝","댄스팝"],
+    "memo": "유럽에서 크게 히트한 튀르키예 곡. '제멋대로인' 여자에 관해",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=wqCpjFMvz-k"}
+    ],
+    "image": "covers/340-simarik.jpg"
   }
 ]
