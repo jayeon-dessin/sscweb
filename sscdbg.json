@@ -909,7 +909,7 @@
       {"title": "Java 가사", "url": "https://www.youtube.com/watch?v=ESx_hy1n7HA"},
       {"title": "Key Ingredient ver.", "url": "https://youtu.be/JB5gfmWQzSA?si=7Ht1pfOV5WWMnepT"}
     ],
-    "image": "covers/055-world-execute-me-mili.jpg"
+    "image": "covers/055-miracle-milk-mili.jpg"
   },
   {
     "title": "Meatball Submarine",
@@ -5364,5 +5364,89 @@
       {"title": "MV", "url": "https://youtu.be/6g-qZIktAtc?si=iOauE1zPvMqJsUF_"}
     ],
     "image": "covers/333-mentiras.jpg"
+  },
+  {
+    "title": "Makhelaw Magalou (ما خلاو ما قالو)",
+    "year": 2022,
+    "artist": ["Manal (منال)"],
+    "songwriters": ["Manal","Blaise Batisse","Mounir Maarouf","NYZK"],
+    "language": ["아랍어"],
+    "countries": ["MA"],
+    "tags": ["아랍팝"],
+    "memo": "'걔네들은 하지 않은 말이 없어'.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=07gpeX2-pIE"}
+    ],
+    "image": "covers/334-makhelaw-magalou.jpg"
+  },
+  {
+    "title": "Cambio Dolor",
+    "year": 1988,
+    "artist": ["Natalia Oreiro"],
+    "songwriters": ["Pablo Durand","Fernando López Rossi"],
+    "language": ["스페인어"],
+    "countries": ["UY"],
+    "tags": ["라틴팝","드라마"],
+    "memo": "'고통을 맞바꿔', 아르헨티나 TV시리즈 <Muñeca Brava> 테마곡으로도 유명하다.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/G6OYDUomYwI?si=VWDl9dOgpiHn7O6m"}
+    ],
+    "image": "covers/335-cambio-dolor.jpg"
+  },
+  {
+    "title": "Piffiit Nutaat",
+    "year": 1973,
+    "artist": ["Sumé"],
+    "songwriters": ["Malik Høegh","Per Berthelsen"],
+    "language": ["그린란드어"],
+    "countries": ["GL"],
+    "tags": ["사이키델릭락"],
+    "memo": "'새로운 시대', 덴마크의 식민 지배를 비판하고 그린란드 독립운동을 지지하는 내용.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=9SFVntcDv3Q"}
+    ],
+    "image": "covers/336-sumut-sume.jpg"
+  },
+  {
+    "title": "Janona",
+    "year": 1973,
+    "artist": ["Gʻaybulla Tursunov"],
+    "songwriters": ["Gʻaybulla Tursunov"],
+    "language": ["우즈베크어"],
+    "countries": ["UZ"],
+    "tags": ["팝","이별","발라드"],
+    "memo": "연인에게 배신당한 뒤의 고통과 그리움.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/uVCDKfV69wA?si=4Nt1L3zzvxR7nIDW"}
+    ],
+    "image": "covers/337-janona-tursunov.jpg"
+  },
+  {
+    "title": "Shooting Star",
+    "year": 1987,
+    "artist": ["Sankomota"],
+    "songwriters": ["Sankomota"],
+    "language": ["영어","세소토어"],
+    "countries": ["LS"],
+    "tags": ["재즈","아프로비트","팝락"],
+    "memo": "별똥별이 너의 소원을 이루어 줄 거야. 희망찬 아프리카 리듬",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=3k_dFGDE0uo"}
+    ],
+    "image": "covers/338-shooting-star-sankomota.jpg"
+  },
+  {
+    "title": "7 Seconds",
+    "year": 1994,
+    "artist": ["Youssou N'Dour","Neneh Cherry"],
+    "songwriters": ["Youssou N'Dour","Neneh Cherry","Cameron McVey","Jonathan Sharp"],
+    "language": ["월로프어","영어","프랑스어"],
+    "countries": ["SN","SE"],
+    "tags": ["팝","R&B"],
+    "memo": "태어난 뒤 처음 7초 동안은 피부색과 차별을 알지 못한다, 인종주의를 넘어선 평등과 공존의 메시지.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=wqCpjFMvz-k"}
+    ],
+    "image": "covers/339-7-seconds.jpg"
   }
 ]
