@@ -747,7 +747,7 @@
     "image": "covers/045-i-can-t-get-no-satisfaction-the-rolling-stones.jpg"
   },
   {
-    "title": "कश्मीर में तू कन्याकुमारी (Kashmir Main Tu Kanyakumari)",
+    "title": "Kashmir Main Tu Kanyakumari (कश्मीर में तू कन्याकुमारी)",
     "year": 2013,
     "artist": ["Sunidhi Chauhan, Arijit Singh, Neeti Mohan"],
     "songwriters": ["Vishal Dadlani", "Shekhar Ravjiani", "Amitabh Bhattacharya"],
@@ -1207,7 +1207,7 @@
     "songwriters": ["Matti Jurva", "Tatu Pekkarinen", "Traditional"],
     "language": ["핀란드어", "러시아어"],
     "countries": ["FI"],
-    "tags": ["번안", "군가", "전쟁", "소련"],
+    "tags": ["번안","군가","전쟁","소련","풍자"],
     "memo": "소련군과 소련 외무장관 몰로토프를 풍자한 핀란드의 전시 노래. 선율은 러시아 민요 'Ухарь-купец'에 기반함",
     "youtube": [
       {"title": "Solistiyhtye Suomi 버전", "url": "https://www.youtube.com/watch?v=WNtgV4J-ayA"},
@@ -3533,7 +3533,7 @@
     "image": "covers/212-lolo-zouaï-1.jpg"
   },
   {
-    "title": "大展鴻圖(대전홍도)",
+    "title": "大展鴻圖 (대전홍도)",
     "year": "2024",
     "artist": ["SKAI ISYOURGOD (攬佬)"],
     "songwriters": ["SKAI ISYOURGOD", "刘夫阳"],
@@ -4397,7 +4397,7 @@
     "songwriters": ["Manu Chao", "Amadou Bagayoko", "Mariam Doumbia"],
     "language": ["프랑스어", "밤바라어"],
     "countries": ["ML"],
-    "tags": ["블루스", "티슈마렌", "아프로비트"],
+    "tags": ["블루스", "티슈마렌"],
     "memo": "이민/이주노동과 관련된 어려움들?",
     "youtube": [
       {"title": "음원", "url": "https://www.youtube.com/watch?v=J43T8rEOg-I"}
@@ -5550,13 +5550,13 @@
     ],
     "image": "covers/342-erika.jpg"
   },
-    {
+  {
     "title": "Scotland the Brave",
     "year": "1870s",
     "artist": [],
     "songwriters": ["Traditional"],
     "language": [],
-    "countries": ["UK"],
+    "countries": ["GB"],
     "tags": ["스코틀랜드",""],
     "memo": "스코틀랜드를 상징하는 곡. 백파이프 연주자들이 맨날 연주하는 곡",
     "youtube": [
@@ -5564,5 +5564,49 @@
       {"title": "가사 있는 버전", "url": "https://www.youtube.com/watch?v=GowMI4wvmU4"}
     ],
     "image": "covers/343-scotland.jpg"
+  },
+  {
+    "title": "Scotland the Brave",
+    "year": "1870s",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language": [],
+    "countries": ["GB"],
+    "tags": ["스코틀랜드",""],
+    "memo": "스코틀랜드를 상징하는 곡. 백파이프 연주자들이 맨날 연주하는 곡",
+    "youtube": [
+      {"title": "음악", "url": "https://www.youtube.com/watch?v=xqeYKf8tdsU"},
+      {"title": "가사 있는 버전", "url": "https://www.youtube.com/watch?v=GowMI4wvmU4"}
+    ],
+    "image": "covers/343-scotland.jpg"
+  },
+  {
+    "title": "Soa fa nisy",
+    "year": "2024",
+    "artist": ["Lion Hill"],
+    "songwriters": ["Lion Hill"],
+    "language": ["말라가시어"],
+    "countries": ["MG"],
+    "tags": ["R&B","아프로비츠","소울"],
+    "memo": "'네가 있어서 다행이야'. 마다가스카르 알앤비",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=0U03TYMB7zY"}
+    ],
+    "image": "covers/344-soa-fa-nisy.jpg"
+  },
+  {
+    "title": "Kijiti",
+    "year": "1920s?",
+    "artist": ["Siti binti Saad"],
+    "songwriters": ["Lion Hill"],
+    "language": ["스와힐리어"],
+    "countries": ["TZ"],
+    "tags": ["타아랍","풍자"],
+    "memo": "잔지바르 타아랍 장르 대표곡. 여성에 대한 법정의 부정의를 비판하는 내용을 담았다.",
+    "youtube": [
+      {"title": "Bi Kidude", "url": "https://www.youtube.com/watch?v=-JSehvMPytw"},
+      {"title": "Siti Muharam", "url": "https://www.youtube.com/watch?v=sVo5hiS2y8Y"}
+    ],
+    "image": "covers/345-siti-binti-saad.jpg"
   }
 ]
