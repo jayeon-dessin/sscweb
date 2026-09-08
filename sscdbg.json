@@ -1489,7 +1489,7 @@
     "image": "covers/089-amour-plastique-videoclub.jpg"
   },
   {
-    "title": "Amour plastique",
+    "title": "Vem Dançar Kuduro",
     "year": "2010",
     "artist": ["Lucenzo", "Big Ali"],
     "songwriters": ["Lucenzo", "Ali Fitzgerald Moore", "Faouze Barkati", "Fabrice Toigo"],
@@ -5608,5 +5608,19 @@
       {"title": "Siti Muharam", "url": "https://www.youtube.com/watch?v=sVo5hiS2y8Y"}
     ],
     "image": "covers/345-siti-binti-saad.jpg"
+  },
+  {
+    "title": "Build Me Up Buttercup",
+    "year": "1968",
+    "artist": ["The Foundations"],
+    "songwriters": ["Mike d'Abo","Tony Macaulay"],
+    "language": ["영어"],
+    "countries": ["GB"],
+    "tags": ["팝","소울","버블검"],
+    "memo": "The Foundations의 싱글.",
+    "youtube": [
+      {"title": "Lyric Video", "url": "https://youtu.be/hSofzQURQDk?si=76QQgWDcgb4z6DvW"}
+    ],
+    "image": "covers/346-build-me-up-buttercup.jpg"
   }
 ]
