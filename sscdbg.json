@@ -5551,17 +5551,17 @@
     "image": "covers/342-erika.jpg"
   },
   {
-    "title": "Scotland the Brave",
-    "year": "1870s",
+    "title": "Auld Lang Syne",
+    "year": "?",
     "artist": [],
-    "songwriters": ["Traditional"],
-    "language": [],
+    "songwriters": ["Traditional", "Robert Burns"],
+    "language": ["스코트어"],
     "countries": ["GB"],
-    "tags": ["스코틀랜드",""],
-    "memo": "스코틀랜드를 상징하는 곡. 백파이프 연주자들이 맨날 연주하는 곡",
+    "tags": ["스코틀랜드","이별","번안"],
+    "memo": "'작별'. 오랫동안 사귀었던-",
     "youtube": [
-      {"title": "음악", "url": "https://www.youtube.com/watch?v=xqeYKf8tdsU"},
-      {"title": "가사 있는 버전", "url": "https://www.youtube.com/watch?v=GowMI4wvmU4"}
+      {"title": "스코트어 버전", "url": "https://www.youtube.com/watch?v=i4pN0zn16jk"},
+      {"title": "...", "url": "https://www.youtube.com/watch?v=to1xT93IlUI"}
     ],
     "image": "covers/343-scotland.jpg"
   },
