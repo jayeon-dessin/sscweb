@@ -3443,7 +3443,7 @@
     "tags": ["전쟁","선전가요"],
     "memo": "유고슬라비아 파르티잔 지도자 티토를 찬양하는 2차대전 시기 곡.",
     "youtube": [
-      {"title": "MV", "url": "https://www.youtube.com/watch?v=a5uQMwRMHcs"}
+      {"title": "가사 (영어 자막)", "url": "https://www.youtube.com/watch?v=G4nqsKeJJ-A"}
     ],
     "image": "covers/208-tito.jpg"
   },
@@ -5622,5 +5622,81 @@
       {"title": "Lyric Video", "url": "https://youtu.be/hSofzQURQDk?si=76QQgWDcgb4z6DvW"}
     ],
     "image": "covers/346-build-me-up-buttercup.jpg"
+  },
+  {
+    "title": "Dernière Danse",
+    "year": "2013",
+    "artist": ["Indila"],
+    "songwriters": ["Indila","Skalpovich"],
+    "language": ["프랑스어"],
+    "countries": ["FR"],
+    "tags": ["팝","오페라팝"],
+    "memo": "'마지막 춤', 독특한 오케스트라 팝. 다양한 리믹스 버전들도 인기를 끌었다.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=K5KAc5CoCuk"},
+      {"title": "Live Orchestre A Cordes", "url": "https://www.youtube.com/watch?v=niMdqOaWHqE"}
+    ],
+    "image": "covers/347-derniere-danse.jpg"
+  },
+  {
+    "title": "Can't Help Falling in Love",
+    "year": "1961",
+    "artist": ["Elvis Presley"],
+    "songwriters": ["Hugo Peretti","Luigi Creatore","George David Weiss"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["팝","영화음악","발라드"],
+    "memo": "영화 <블루 하와이> 삽입곡. 세대를 넘어 사랑받는 엘비스 프레슬리의 명곡",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=vGJTaP6anOU"}
+    ],
+    "image": "covers/348-blue-hawaii.jpg"
+  },
+  {
+    "title": "Plaisir d'amour",
+    "year": "1784",
+    "artist": [],
+    "songwriters": ["Jean-Paul-Égide Martini","Jean-Pierre Claris de Florian"],
+    "language": ["프랑스어"],
+    "countries": ["FR"],
+    "tags": ["샹송","문학","로망스"],
+    "memo": "'사랑의 기쁨'. 소설 <셀레스틴(Célestine)>에 등장하는 시를 가사로 함. Can't Help Falling in Love의 원본 멜로디.",
+    "youtube": [
+      {"title": "그리스 가수 Nana Mouskouri 버전", "url": "https://www.youtube.com/watch?v=7FAV2PrrRUs"},
+      {"title": "프랑스 가수 Claire Lefilliâtre 버전", "url": "https://www.youtube.com/watch?v=zqAxVrBwoqg"}
+    ],
+    "image": "covers/349-jean-paul-egide-martini.jpg"
+  },
+  {
+    "title": "Pedro",
+    "year": "1980",
+    "artist": ["Raffaella Carrà"],
+    "songwriters": ["Franco Bracardi","Gianni Boncompagni","Paolo Ormi"],
+    "language": ["이탈리아어"],
+    "countries": ["IT"],
+    "tags": ["팝","디스코","밈"],
+    "memo": "페드로 페드로 페드로. 2024년의 리믹스 버전이 밈이 되었다.",
+    "youtube": [
+      {"title": "원곡", "url": "https://www.youtube.com/watch?v=iMZOrEbS7cU"},
+      {"title": "리믹스 버전 (Jaxomy, Agatino Romero)", "url": "https://www.youtube.com/watch?v=HxL19VWL9TM"}
+    ],
+    "image": "covers/350-pedro.jpg"
+  },
+  {
+    "title": "Cotton-Eyed Joe",
+    "year": "19c?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["포크","민요","컨트리","밈"],
+    "memo": "미국 남부 민요, 스웨덴 밴드 Rednex의 버전이 밈이 되었다.",
+    "youtube": [
+      {"title": "Bill Monroe 버전", "url": "https://www.youtube.com/watch?v=NK2sbpzF0w0"},
+      {"title": "Rednex (스웨덴) 버전", "url": "https://youtu.be/mOYZaiDZ7BM?si=9R9MkabHymwlcAiT"},
+      {"title": "The Chieftains (아일랜드) & Ricky Skaggs 버전", "url": "https://www.youtube.com/watch?v=jSMbH2mQ4d8"},
+      {"title": "Lee Matthews 버전", "url": "https://www.youtube.com/watch?v=liVyZ4IzRLM"}
+    ],
+    "image": "covers/351-cotton-eyed-joe.jpg"
   }
 ]
