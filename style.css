@@ -679,7 +679,7 @@ body {
 
 /* ---------- 국가 선택 시 1차 화면: 간략 카드 ---------- */
 
-#song-list.song-list-compact {
+.song-list-compact {
     display: grid;
     grid-template-columns:
         repeat(auto-fill, minmax(150px, 1fr));
@@ -955,7 +955,7 @@ a:hover {
         font-size: 1.65rem;
     }
 
-    #song-list.song-list-compact {
+    .song-list-compact {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-3);
     }
