@@ -1,0 +1,13 @@
+{
+    "title": "",
+    "year": "",
+    "artist": [""],
+    "songwriters": [""],
+    "language": [""],
+    "countries": [""],
+    "tags": [""],
+    "memo": "",
+    "youtube": [
+      {"title": "", "url": ""}
+    ]
+  }

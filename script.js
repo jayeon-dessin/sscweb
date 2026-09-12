@@ -3,13 +3,13 @@ let selectedCountry = null;
 let selectedTag = null;
 let isRestoringState = false;
 
-// 국가/태그의 간략 카드 목록에서 곡 하나를 클릭해 상세 화면으로 들어간 경우,
+// 국가/태그/전체 목록의 간략 카드에서 곡 하나를 클릭해 상세 화면으로 들어간 경우,
 // 뒤로가기를 누르면 (전체 브라우즈 화면이 아니라) 그 간략 목록으로
 // 돌아가야 하므로 어디서 왔는지 기억해둠
-// { type: "country" | "tag", value: string } | null
+// { type: "country" | "tag" | "all", value?: string } | null
 let compactListReturnTo = null;
 
-// "map"(지도) / "countries"(목록) / "timeline"(연표) / "tags"(태그) / "about"(소개)
+// "map"(지도) / "countries"(목록) / "all"(전체) / "tags"(태그) / "about"(소개)
 let viewMode = "map";
 const songList = document.getElementById("song-list");
 const tagSearch = document.getElementById("tag-search");
@@ -18,8 +18,9 @@ const tagSearch = document.getElementById("tag-search");
 const countryView = document.getElementById("country-view");
 const countryList = document.getElementById("country-list");
 const mapView = document.getElementById("map-view");
-const timelineView = document.getElementById("timeline-view");
-const timelineList = document.getElementById("timeline-list");
+const allView = document.getElementById("all-view");
+const allList = document.getElementById("all-list");
+const allSort = document.getElementById("all-sort");
 const tagsView = document.getElementById("tags-view");
 const tagsList = document.getElementById("tags-list");
 const aboutView = document.getElementById("about-view");
@@ -32,17 +33,17 @@ const viewTabs = document.querySelectorAll(".view-tab");
 const randomDiceButton = document.getElementById("random-dice-button");
 
 // -------------------------------------
-// 목록/지도/연표/태그/소개 뷰 <-> 곡 목록 뷰 전환
+// 목록/지도/전체/태그/소개 뷰 <-> 곡 목록 뷰 전환
 // -------------------------------------
 
-// 국가를 고르는 화면(목록, 지도, 연표, 태그, 소개 중 현재 viewMode에 맞는 것)을 보여줌
+// 국가를 고르는 화면(목록, 지도, 전체, 태그, 소개 중 현재 viewMode에 맞는 것)을 보여줌
 function showBrowseUI() {
   songsView.style.display = "none";
   songsView.classList.remove("songs-view-no-header");
 
   countryView.style.display = viewMode === "countries" ? "block" : "none";
   mapView.style.display = viewMode === "map" ? "block" : "none";
-  timelineView.style.display = viewMode === "timeline" ? "block" : "none";
+  allView.style.display = viewMode === "all" ? "block" : "none";
   tagsView.style.display = viewMode === "tags" ? "block" : "none";
   aboutView.style.display = viewMode === "about" ? "block" : "none";
 }
@@ -51,7 +52,7 @@ function showBrowseUI() {
 function showSongsUI() {
   countryView.style.display = "none";
   mapView.style.display = "none";
-  timelineView.style.display = "none";
+  allView.style.display = "none";
   tagsView.style.display = "none";
   aboutView.style.display = "none";
   songsView.style.display = "block";
@@ -80,11 +81,12 @@ function goToBrowseView(mode) {
   tagSearch.value = "";
 
   // renderCountries()가 국가 목록도 새로 그리고, showBrowseUI()를 통해
-  // 현재 viewMode에 맞는 화면(목록/지도/연표/태그/소개)도 함께 보여줌
+  // 현재 viewMode에 맞는 화면(목록/지도/전체/태그/소개)도 함께 보여줌
   renderCountries();
 
-  if (mode === "timeline") {
-    renderTimeline();
+  if (mode === "all") {
+    allSongsCurrentPage = 1;
+    renderAllSongsList();
   }
 
   if (mode === "tags") {
@@ -92,6 +94,15 @@ function goToBrowseView(mode) {
   }
 
   updateURLState(true);
+}
+
+// 전체 곡 목록 화면으로 가볍게 복귀 (정렬/페이지 상태는 그대로 유지) -
+// 전체 목록의 간략 카드에서 곡을 보고 뒤로가기 할 때 사용
+function showAllSongsList() {
+  viewMode = "all";
+  setActiveViewTab();
+  showBrowseUI();
+  renderAllSongsList();
 }
 
 viewTabs.forEach(tab => {
@@ -227,7 +238,7 @@ function restoreStateFromURL() {
   const keyword = params.get("q");
 
   // 뷰 모드 복원 (기본값: 지도)
-  const validModes = ["map", "countries", "timeline", "tags", "about"];
+  const validModes = ["map", "countries", "all", "tags", "about"];
   viewMode = validModes.includes(view) ? view : "map";
   setActiveViewTab();
 
@@ -259,9 +270,10 @@ function restoreStateFromURL() {
   // 국가나 필터가 있으면 곡 목록 표시
   if (validCountry || hasFilter) {
     applyFilters();
-  } else if (viewMode === "timeline") {
+  } else if (viewMode === "all") {
     // renderCountries()가 이미 showBrowseUI()로 화면은 띄웠으니 내용만 채움
-    renderTimeline();
+    allSongsCurrentPage = 1;
+    renderAllSongsList();
   } else if (viewMode === "tags") {
     renderTagsList();
   }
@@ -563,23 +575,23 @@ function renderCountries() {
 }
 
 // -------------------------------------
-// 연표 (곡을 연대별로 탐색)
+// 전체 곡 목록 (등록순/창작년도순 정렬, 페이지 넘김)
 // -------------------------------------
 
 // sscdbg.json의 year 필드는 형식이 다양함:
 // 정확한 연도(1975, "1975"), 대략적 연도("1580?", "2008?"),
 // 연대("1950s", "1940s?"), 세기("19c?"), 완전 미상("?") 등.
-// 전부 안전하게 파싱해서 정렬 기준값과 그룹(연대) 라벨을 뽑아냄
+// 전부 안전하게 파싱해서 정렬 기준값을 뽑아냄 (미상은 항상 맨 뒤로)
 function parseSongYear(raw) {
 
   if (raw === undefined || raw === null || raw === "") {
-    return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: -Infinity };
+    return { sortValue: Infinity };
   }
 
   const str = String(raw).trim();
 
   if (str === "?") {
-    return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: -Infinity };
+    return { sortValue: Infinity };
   }
 
   // 세기 표기: "19c?", "18c?", "20c?"
@@ -587,114 +599,90 @@ function parseSongYear(raw) {
   if (match) {
     const century = parseInt(match[1], 10);
     const startYear = (century - 1) * 100;
-    return {
-      sortValue: startYear + 50,
-      groupLabel: `${century}세기`,
-      groupSortValue: startYear,
-    };
+    return { sortValue: startYear + 50 };
   }
 
   // 연대 표기: "1950s", "1970s", "1940s?"
   match = str.match(/^(\d{4})s\??$/);
   if (match) {
-    const decadeStart = parseInt(match[1], 10);
-    return {
-      sortValue: decadeStart,
-      groupLabel: `${decadeStart}년대`,
-      groupSortValue: decadeStart,
-    };
+    return { sortValue: parseInt(match[1], 10) };
   }
 
   // 정확하거나 대략적인 연도: "1926", "1580?", "2008?"
   match = str.match(/^(\d{3,4})\??$/);
   if (match) {
-    const year = parseInt(match[1], 10);
-    const decadeStart = Math.floor(year / 10) * 10;
-    return {
-      sortValue: year,
-      groupLabel: `${decadeStart}년대`,
-      groupSortValue: decadeStart,
-    };
+    return { sortValue: parseInt(match[1], 10) };
   }
 
   // 파싱할 수 없는 형식은 안전하게 미상으로 처리
-  return { sortValue: Infinity, groupLabel: "연도 미상", groupSortValue: -Infinity };
+  return { sortValue: Infinity };
 }
 
-function groupSongsByTimelinePeriod() {
+const ALL_SONGS_PAGE_SIZE = 24;
+let allSongsCurrentPage = 1;
 
-  const groups = new Map();
+function sortedAllSongs() {
 
-  songs.forEach(song => {
-    const parsed = parseSongYear(song.year);
+  const sortMode = allSort?.value || "registered-asc";
 
-    if (!groups.has(parsed.groupLabel)) {
-      groups.set(parsed.groupLabel, {
-        groupSortValue: parsed.groupSortValue,
-        entries: [],
-      });
-    }
+  const indexed = songs.map((song, index) => ({ song, index }));
 
-    groups.get(parsed.groupLabel).entries.push({
-      song,
-      sortValue: parsed.sortValue,
+  if (sortMode.startsWith("year")) {
+    indexed.sort((a, b) => {
+      const diff = parseSongYear(a.song.year).sortValue - parseSongYear(b.song.year).sortValue;
+      return diff !== 0 ? diff : a.index - b.index;
     });
-  });
+  }
+  // "registered"는 이미 원본(JSON 등록) 순서이므로 별도 정렬 불필요
 
-  return [...groups.entries()].sort(
-    (a, b) => a[1].groupSortValue - b[1].groupSortValue
-  );
+  let ordered = indexed.map(entry => entry.song);
+
+  if (sortMode.endsWith("desc")) {
+    ordered = ordered.reverse();
+  }
+
+  return ordered;
 }
 
-function renderTimeline() {
+function renderAllSongsList() {
 
-  timelineList.innerHTML = "";
+  const ordered = sortedAllSongs();
+  const totalPages = Math.max(1, Math.ceil(ordered.length / ALL_SONGS_PAGE_SIZE));
 
-  const orderedGroups = groupSongsByTimelinePeriod();
+  allSongsCurrentPage = Math.min(Math.max(1, allSongsCurrentPage), totalPages);
 
-  orderedGroups.forEach(([label, group], index) => {
+  const start = (allSongsCurrentPage - 1) * ALL_SONGS_PAGE_SIZE;
+  const pageSongs = ordered.slice(start, start + ALL_SONGS_PAGE_SIZE);
 
-    group.entries.sort((a, b) => a.sortValue - b.sortValue);
+  renderCompactSongGrid(allList, pageSongs, { returnTo: { type: "all" } });
 
-    const section = document.createElement("div");
-    section.className = "timeline-group";
-    section.id = `timeline-group-${index}`;
+  const indicator = document.getElementById("all-page-indicator");
+  if (indicator) {
+    indicator.textContent = `${allSongsCurrentPage} / ${totalPages}`;
+  }
 
-    if (label === "연도 미상") {
-      section.classList.add("timeline-group-unknown");
-    }
-
-    const heading = document.createElement("h3");
-    heading.className = "timeline-heading";
-    heading.textContent = `${label} · ${group.entries.length}곡`;
-    section.appendChild(heading);
-
-    const list = document.createElement("div");
-    list.className = "timeline-song-list";
-
-    group.entries.forEach(({ song }) => {
-
-      const chip = document.createElement("button");
-      chip.type = "button";
-      chip.className = "timeline-song-chip";
-
-      chip.innerHTML = `
-        <span class="timeline-song-year">${song.year}</span>
-        <span class="timeline-song-title">${song.title}</span>
-        <span class="timeline-song-artist">${song.artist.join(", ")}</span>
-      `;
-
-      chip.addEventListener("click", () => {
-        showSingleSongDetail(song, song.title);
-      });
-
-      list.appendChild(chip);
-    });
-
-    section.appendChild(list);
-    timelineList.appendChild(section);
-  });
+  const prevBtn = document.getElementById("all-prev-page");
+  const nextBtn = document.getElementById("all-next-page");
+  if (prevBtn) prevBtn.disabled = allSongsCurrentPage <= 1;
+  if (nextBtn) nextBtn.disabled = allSongsCurrentPage >= totalPages;
 }
+
+allSort?.addEventListener("change", () => {
+  allSongsCurrentPage = 1;
+  renderAllSongsList();
+});
+
+document.getElementById("all-prev-page")?.addEventListener("click", () => {
+  allSongsCurrentPage -= 1;
+  renderAllSongsList();
+  document.getElementById("all-view")?.scrollIntoView?.({ block: "start" });
+});
+
+document.getElementById("all-next-page")?.addEventListener("click", () => {
+  allSongsCurrentPage += 1;
+  renderAllSongsList();
+  document.getElementById("all-view")?.scrollIntoView?.({ block: "start" });
+});
 
 // -------------------------------------
 // 태그 (많이 쓰인 순으로 정렬, 클릭하면 해당 태그의 곡)
@@ -768,6 +756,16 @@ function renderTagsList() {
 // 국가 선택
 // -------------------------------------
 
+// 배열을 무작위로 섞음 (Fisher-Yates)
+function shuffleArray(array) {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 function selectCountry(code) {
 
   selectedCountry = code;
@@ -776,8 +774,8 @@ function selectCountry(code) {
 
   showSongsUI();
 
-  const countrySongs = songs.filter(song =>
-    song.countries.includes(code)
+  const countrySongs = shuffleArray(
+    songs.filter(song => song.countries.includes(code))
   );
 
   countryTitle.innerHTML = `
@@ -848,6 +846,8 @@ backButton.addEventListener("click", () => {
     compactListReturnTo = null;
     if (returnTo.type === "tag") {
       selectTag(returnTo.value);
+    } else if (returnTo.type === "all") {
+      showAllSongsList();
     } else {
       selectCountry(returnTo.value);
     }
@@ -1100,159 +1100,12 @@ function songCardMarkup(song) {
         </div>
       </div>
     </div>
-
-    <div class="related-songs-container"></div>
   `;
-}
-
-// -------------------------------------
-// 관련곡 (같은 아티스트 우선, 부족하면 같은 태그로 보충)
-// -------------------------------------
-
-// 두 [경도, 위도] 좌표 사이의 거리 (km, haversine 공식)
-function haversineDistanceKm(coordA, coordB) {
-  const [lon1, lat1] = coordA;
-  const [lon2, lat2] = coordB;
-
-  const R = 6371;
-  const toRad = deg => (deg * Math.PI) / 180;
-
-  const dLat = toRad(lat2 - lat1);
-  const dLon = toRad(lon2 - lon1);
-
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
-
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-}
-
-// 두 곡의 국가 목록 중 가장 가까운 조합의 거리 (km). 국가 좌표가 없으면 Infinity
-function minCountryDistance(songA, songB) {
-
-  const countriesA = (songA.countries || []).filter(
-    code => typeof COUNTRY_CENTROIDS !== "undefined" && COUNTRY_CENTROIDS[code]
-  );
-  const countriesB = (songB.countries || []).filter(
-    code => typeof COUNTRY_CENTROIDS !== "undefined" && COUNTRY_CENTROIDS[code]
-  );
-
-  if (countriesA.length === 0 || countriesB.length === 0) {
-    return Infinity;
-  }
-
-  let minDistance = Infinity;
-
-  countriesA.forEach(codeA => {
-    countriesB.forEach(codeB => {
-      if (codeA === codeB) {
-        minDistance = 0;
-        return;
-      }
-      const distance = haversineDistanceKm(
-        COUNTRY_CENTROIDS[codeA],
-        COUNTRY_CENTROIDS[codeB]
-      );
-      if (distance < minDistance) minDistance = distance;
-    });
-  });
-
-  return minDistance;
-}
-
-// 관련곡: 같은 아티스트 우선 -> 부족하면 같은 태그 -> 그래도 부족하면
-// 지리적으로 가까운 국가의 곡으로 채움
-function findRelatedSongs(song, limit = 4) {
-
-  const artistSet = new Set(song.artist || []);
-  const tagSet = new Set(song.tags || []);
-
-  const sameArtist = [];
-  const sameTag = [];
-  const rest = [];
-
-  songs.forEach(other => {
-
-    if (other === song) return;
-
-    if ((other.artist || []).some(artist => artistSet.has(artist))) {
-      sameArtist.push(other);
-    } else if ((other.tags || []).some(tag => tagSet.has(tag))) {
-      sameTag.push(other);
-    } else {
-      rest.push(other);
-    }
-  });
-
-  let related = [...sameArtist, ...sameTag];
-
-  if (related.length < limit) {
-
-    const remaining = limit - related.length;
-
-    const nearby = rest
-      .map(other => ({ other, distance: minCountryDistance(song, other) }))
-      .filter(entry => entry.distance < Infinity)
-      .sort((a, b) => a.distance - b.distance)
-      .slice(0, remaining)
-      .map(entry => entry.other);
-
-    related = [...related, ...nearby];
-  }
-
-  return related.slice(0, limit);
-}
-
-function renderRelatedSongs(container, song) {
-
-  if (!container) return;
-
-  const related = findRelatedSongs(song);
-
-  if (related.length === 0) {
-    return;
-  }
-
-  container.innerHTML = `
-    <h3 class="related-songs-heading">관련곡</h3>
-    <div class="related-songs-list"></div>
-  `;
-
-  const list = container.querySelector(".related-songs-list");
-
-  related.forEach(relatedSong => {
-
-    const chip = document.createElement("button");
-    chip.type = "button";
-    chip.className = "related-song-chip";
-
-    chip.innerHTML = `
-      <span class="related-song-title">${relatedSong.title}</span>
-      <span class="related-song-artist">${relatedSong.artist.join(", ")}</span>
-    `;
-
-    chip.addEventListener("click", () => {
-      showSingleSongDetail(relatedSong, relatedSong.title);
-    });
-
-    list.appendChild(chip);
-  });
 }
 
 // -------------------------------------
 // 곡 목록 출력 (간략 카드 / 일반 카드)
 // -------------------------------------
-
-// 가수가 없으면 작곡가로 대체
-function displayArtist(song) {
-  if (song.artist && song.artist.length > 0) {
-    return song.artist.join(", ");
-  }
-  if (song.songwriters && song.songwriters.length > 0) {
-    return song.songwriters.join(", ");
-  }
-  return "";
-}
 
 // 국가를 골랐을 때 1차로 보여주는 간략 카드: 이미지 + 제목 + 가수만
 function compactSongCardMarkup(song) {
@@ -1260,7 +1113,7 @@ function compactSongCardMarkup(song) {
     <div class="song-artwork song-artwork-compact placeholder"></div>
     <div class="compact-song-info">
       <div class="compact-song-title">${song.title}</div>
-      <div class="compact-song-artist">${displayArtist(song)}</div>
+      <div class="compact-song-artist">${song.artist.join(", ")}</div>
     </div>
   `;
 }
@@ -1281,29 +1134,17 @@ function renderSongs(songArray, options = {}) {
     return;
   }
 
+  if (compact) {
+    renderCompactSongGrid(songList, songArray, {
+      returnTo: selectedTag
+        ? { type: "tag", value: selectedTag }
+        : { type: "country", value: selectedCountry },
+    });
+    return;
+  }
+
   songArray.forEach(song => {
     const item = document.createElement("div");
-
-    if (compact) {
-
-      item.className = "song-card-compact";
-      item.innerHTML = compactSongCardMarkup(song);
-
-      item.addEventListener("click", () => {
-        compactListReturnTo = selectedTag
-          ? { type: "tag", value: selectedTag }
-          : { type: "country", value: selectedCountry };
-        showSingleSongDetail(song, song.title, { preserveContext: true });
-      });
-
-      songList.appendChild(item);
-
-      if (typeof loadArtworkInto === "function") {
-        loadArtworkInto(item.querySelector(".song-artwork"), song);
-      }
-
-      return;
-    }
 
     if (song.links?.length > 0) {
       item.classList.add("has-links");
@@ -1316,11 +1157,38 @@ function renderSongs(songArray, options = {}) {
     if (typeof loadArtworkInto === "function") {
       loadArtworkInto(item.querySelector(".song-artwork"), song);
     }
+  });
+}
 
-    // 곡 하나만 상세로 보여주는 경우(랜덤 곡, 연표, 관련곡, 간략 카드 클릭 등)에만
-    // 관련곡을 채움 - 국가별 목록처럼 여러 곡이 쭉 나열될 때는 생략
-    if (songArray.length === 1) {
-      renderRelatedSongs(item.querySelector(".related-songs-container"), song);
+// 간략 카드(이미지+제목+가수) 그리드를 임의의 컨테이너에 렌더링.
+// 국가/태그 화면(#song-list)과 전체 곡 목록(#all-list)에서 공용으로 사용
+function renderCompactSongGrid(container, songArray, { returnTo } = {}) {
+
+  container.innerHTML = "";
+
+  if (songArray.length === 0) {
+    container.innerHTML = `
+      <div class="no-results">
+        검색 결과가 없습니다.
+      </div>
+    `;
+    return;
+  }
+
+  songArray.forEach(song => {
+    const item = document.createElement("div");
+    item.className = "song-card-compact";
+    item.innerHTML = compactSongCardMarkup(song);
+
+    item.addEventListener("click", () => {
+      compactListReturnTo = returnTo || null;
+      showSingleSongDetail(song, song.title, { preserveContext: true });
+    });
+
+    container.appendChild(item);
+
+    if (typeof loadArtworkInto === "function") {
+      loadArtworkInto(item.querySelector(".song-artwork"), song);
     }
   });
 }

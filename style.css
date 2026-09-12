@@ -212,129 +212,57 @@ body {
 
 
 /* ========================================
-   연표 (곡을 연대별로 탐색)
+   전체 곡 목록
 ======================================== */
 
-#timeline-list {
-    position: relative;
-
-    margin-bottom: var(--space-7);
-    padding-left: 28px;
+#all-list {
+    margin-bottom: var(--space-5);
 }
 
-/* 세로로 이어지는 타임라인 축 */
-#timeline-list::before {
-    content: "";
-    position: absolute;
-
-    left: 6px;
-    top: 6px;
-    bottom: 6px;
-
-    width: 2px;
-    background: #dbe3ee;
-}
-
-.timeline-group {
-    position: relative;
-
-    margin-bottom: var(--space-6);
-    scroll-margin-top: var(--space-5);
-}
-
-/* 각 연대를 나타내는 점(노드) - 축 위에 놓임 */
-.timeline-group::before {
-    content: "";
-    position: absolute;
-
-    left: -28px;
-    top: 4px;
-
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-
-    background: #4f8ef7;
-    border: 3px solid white;
-
-    box-shadow: 0 0 0 2px #4f8ef7;
-}
-
-/* "연도 미상" 그룹은 시간축 위 정확한 위치가 없으므로 점 색을 다르게 */
-.timeline-group-unknown::before {
-    background: #b0b8c4;
-    box-shadow: 0 0 0 2px #b0b8c4;
-}
-
-.timeline-heading {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #444;
-
-    margin: 0 0 var(--space-3);
-    padding-bottom: var(--space-2);
-
-    border-bottom: 1px solid #e2e6ec;
-}
-
-.timeline-song-list {
+#all-pagination {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
-    gap: var(--space-2);
+    gap: var(--space-4);
+    margin-bottom: var(--space-7);
 }
 
-.timeline-song-chip {
+#all-pagination button {
     appearance: none;
 
-    border: 1px solid #e2e6ec;
+    border: 1px solid #d0d7de;
     background: white;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
     padding:
         var(--space-2)
-        var(--space-3);
+        var(--space-4);
 
+    font-size: 14px;
     cursor: pointer;
 
-    display: inline-flex;
-    align-items: baseline;
-
-    gap: var(--space-2);
+    color: #444;
 
     transition:
-        background 0.15s,
-        border-color 0.15s;
+        background 0.2s,
+        border-color 0.2s;
 }
 
-.timeline-song-chip:hover {
-    background: #eef4ff;
-    border-color: #4f8ef7;
+#all-pagination button:hover:not(:disabled) {
+    background: #f0f3f7;
+    border-color: #bbb;
 }
 
-.timeline-song-chip:focus-visible {
-    outline: 3px solid rgba(79, 142, 247, 0.35);
-    outline-offset: 2px;
+#all-pagination button:disabled {
+    opacity: 0.4;
+    cursor: default;
 }
 
-.timeline-song-year {
-    font-size: 0.78rem;
-    font-weight: 700;
-
-    color: #4f8ef7;
-}
-
-.timeline-song-title {
-    font-size: 0.95rem;
-    font-weight: 600;
-
-    color: #2c3e50;
-}
-
-.timeline-song-artist {
-    font-size: 0.82rem;
-    color: #888;
+#all-page-indicator {
+    font-size: 0.9rem;
+    color: #666;
 }
 
 
@@ -923,83 +851,6 @@ a:hover {
 
 .youtube-link {
     color: #2563eb;
-}
-
-
-/* ========================================
-   관련곡
-======================================== */
-
-.related-songs-container:empty {
-    display: none;
-}
-
-.related-songs-heading {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #444;
-
-    margin:
-        var(--space-5)
-        0
-        var(--space-3);
-
-    padding-top: var(--space-4);
-
-    border-top: 1px solid #e5e7eb;
-}
-
-.related-songs-list {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: var(--space-2);
-}
-
-.related-song-chip {
-    appearance: none;
-
-    border: 1px solid #e2e6ec;
-    background: #f8f9fb;
-
-    border-radius: 8px;
-
-    padding:
-        var(--space-2)
-        var(--space-3);
-
-    cursor: pointer;
-
-    display: inline-flex;
-    align-items: baseline;
-
-    gap: var(--space-2);
-
-    transition:
-        background 0.15s,
-        border-color 0.15s;
-}
-
-.related-song-chip:hover {
-    background: #eef4ff;
-    border-color: #4f8ef7;
-}
-
-.related-song-chip:focus-visible {
-    outline: 3px solid rgba(79, 142, 247, 0.35);
-    outline-offset: 2px;
-}
-
-.related-song-title {
-    font-size: 0.9rem;
-    font-weight: 600;
-
-    color: #2c3e50;
-}
-
-.related-song-artist {
-    font-size: 0.8rem;
-    color: #888;
 }
 
 
