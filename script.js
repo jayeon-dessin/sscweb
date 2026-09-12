@@ -581,17 +581,17 @@ function renderCountries() {
 // sscdbg.json의 year 필드는 형식이 다양함:
 // 정확한 연도(1975, "1975"), 대략적 연도("1580?", "2008?"),
 // 연대("1950s", "1940s?"), 세기("19c?"), 완전 미상("?") 등.
-// 전부 안전하게 파싱해서 정렬 기준값을 뽑아냄 (미상은 항상 맨 뒤로)
+// 전부 안전하게 파싱해서 정렬 기준값을 뽑아냄 (미상은 가장 오래된 곡으로 취급)
 function parseSongYear(raw) {
 
   if (raw === undefined || raw === null || raw === "") {
-    return { sortValue: Infinity };
+    return { sortValue: -Infinity };
   }
 
   const str = String(raw).trim();
 
   if (str === "?") {
-    return { sortValue: Infinity };
+    return { sortValue: -Infinity };
   }
 
   // 세기 표기: "19c?", "18c?", "20c?"
@@ -615,7 +615,7 @@ function parseSongYear(raw) {
   }
 
   // 파싱할 수 없는 형식은 안전하게 미상으로 처리
-  return { sortValue: Infinity };
+  return { sortValue: -Infinity };
 }
 
 const ALL_SONGS_PAGE_SIZE = 24;
@@ -1109,11 +1109,15 @@ function songCardMarkup(song) {
 
 // 국가를 골랐을 때 1차로 보여주는 간략 카드: 이미지 + 제목 + 가수만
 function compactSongCardMarkup(song) {
+  const performerText = song.artist?.length
+    ? song.artist.join(", ")
+    : (song.songwriters || []).join(", ");
+
   return `
     <div class="song-artwork song-artwork-compact placeholder"></div>
     <div class="compact-song-info">
       <div class="compact-song-title">${song.title}</div>
-      <div class="compact-song-artist">${song.artist.join(", ")}</div>
+      <div class="compact-song-artist">${performerText}</div>
     </div>
   `;
 }
