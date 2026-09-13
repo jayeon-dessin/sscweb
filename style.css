@@ -212,57 +212,74 @@ body {
 
 
 /* ========================================
-   전체 곡 목록
+   연표 (곡을 연대/연도별로 탐색)
 ======================================== */
 
-#all-list {
-    margin-bottom: var(--space-5);
-}
+#timeline-list {
+    position: relative;
 
-#all-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: var(--space-4);
     margin-bottom: var(--space-7);
+    padding-left: 28px;
 }
 
-#all-pagination button {
-    appearance: none;
+/* 세로로 이어지는 타임라인 축 */
+#timeline-list::before {
+    content: "";
+    position: absolute;
 
-    border: 1px solid #d0d7de;
-    background: white;
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
 
-    border-radius: 10px;
+    width: 2px;
+    background: #dbe3ee;
+}
 
-    padding:
-        var(--space-2)
-        var(--space-4);
+.timeline-group {
+    position: relative;
 
-    font-size: 14px;
-    cursor: pointer;
+    margin-bottom: var(--space-6);
+    scroll-margin-top: var(--space-5);
+}
 
+/* 각 연대/연도를 나타내는 점(노드) - 축 위에 놓임 */
+.timeline-group::before {
+    content: "";
+    position: absolute;
+
+    left: -28px;
+    top: 4px;
+
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    background: #4f8ef7;
+    border: 3px solid white;
+
+    box-shadow: 0 0 0 2px #4f8ef7;
+}
+
+/* "연도 미상" 그룹은 시간축 위 정확한 위치가 없으므로 점 색을 다르게 */
+.timeline-group-unknown::before {
+    background: #b0b8c4;
+    box-shadow: 0 0 0 2px #b0b8c4;
+}
+
+.timeline-heading {
+    font-size: 1.05rem;
+    font-weight: 700;
     color: #444;
 
-    transition:
-        background 0.2s,
-        border-color 0.2s;
+    margin: 0 0 var(--space-3);
+    padding-bottom: var(--space-2);
+
+    border-bottom: 1px solid #e2e6ec;
 }
 
-#all-pagination button:hover:not(:disabled) {
-    background: #f0f3f7;
-    border-color: #bbb;
-}
-
-#all-pagination button:disabled {
-    opacity: 0.4;
-    cursor: default;
-}
-
-#all-page-indicator {
-    font-size: 0.9rem;
-    color: #666;
+/* 그룹 안의 곡 목록은 국가/태그 화면과 같은 간략 카드(.song-list-compact) 그리드를 그대로 씀 */
+.timeline-group .song-list-compact {
+    margin-bottom: 0;
 }
 
 
@@ -958,6 +975,20 @@ a:hover {
     .song-list-compact {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-3);
+    }
+
+    #timeline-list {
+        padding-left: 20px;
+    }
+
+    #timeline-list::before {
+        left: 4px;
+    }
+
+    .timeline-group::before {
+        left: -20px;
+        width: 10px;
+        height: 10px;
     }
 
      .song-meta-line {

@@ -1,7 +1,7 @@
 [
   {
     "title": "Dschinghis Khan",
-    "year": 1979,
+    "year": "1979",
     "artist": [
       "Dschinghis Khan"
     ],
@@ -31,7 +31,7 @@
   },
   {
     "title": "Moskau",
-    "year": 1979,
+    "year": "1979",
     "artist": [
       "Dschinghis Khan"
     ],
@@ -62,7 +62,7 @@
   },
   {
     "title": "Machu Picchu",
-    "year": 1980,
+    "year": "1980",
     "artist": [
       "Dschinghis Khan"
     ],
@@ -98,7 +98,7 @@
   },
   {
     "title": "Waltz of the Flowers (Вальс цветов)",
-    "year": 1892,
+    "year": "1892",
     "artist": [],
     "songwriters": [
       "Pyotr Tchaikovsky"
@@ -128,7 +128,7 @@
   },
   {
     "title": "Pistolero",
-    "year": 1981,
+    "year": "1981",
     "artist": [
       "Dschinghis Khan"
     ],
@@ -158,7 +158,7 @@
   },
   {
     "title": "Nur ein Wort",
-    "year": 2005,
+    "year": "2005",
     "artist": [
       "Wir sind Helden"
     ],
@@ -189,7 +189,7 @@
   },
   {
     "title": "The Girl from Ipanema (Garota de Ipanema)",
-    "year": 1964,
+    "year": "1964",
     "artist": [
       "Astrud Gilberto",
       "João Gilberto",
@@ -232,7 +232,7 @@
   },
   {
     "title": "Dragostea din tei",
-    "year": 2003,
+    "year": "2003",
     "artist": [
       "O-Zone"
     ],
@@ -271,7 +271,7 @@
   },
   {
     "title": "Griechischer Wein",
-    "year": 1974,
+    "year": "1974",
     "artist": [
       "Udo Jürgens"
     ],
@@ -302,7 +302,7 @@
   },
   {
     "title": "Canopée",
-    "year": 2017,
+    "year": "2017",
     "artist": [
       "Polo&Pan",
       "Victoria Lafaurie"
@@ -339,7 +339,7 @@
   },
   {
     "title": "Ani Kuni",
-    "year": 2021,
+    "year": "2021",
     "artist": [
       "Polo&Pan"
     ],
@@ -372,7 +372,7 @@
   },
   {
     "title": "Comme d'habitude",
-    "year": 1967,
+    "year": "1967",
     "artist": [
       "Claude François"
     ],
@@ -403,7 +403,7 @@
   },
   {
     "title": "Ça pik un peu quand même",
-    "year": 2025,
+    "year": "2025",
     "artist": [
       "Miki"
     ],
@@ -432,7 +432,7 @@
   },
   {
     "title": "Drunten im Unterland",
-    "year": 1836,
+    "year": "1836",
     "artist": [],
     "songwriters": [
       "Traditional",
@@ -470,7 +470,7 @@
   },
   {
     "title": "Aloha ʻOe",
-    "year": 1878,
+    "year": "1878",
     "artist": [],
     "songwriters": [
       "Liliʻuokalani"
@@ -512,7 +512,7 @@
   },
   {
     "title": "Pokarekare Ana",
-    "year": 1914,
+    "year": "1914",
     "artist": [],
     "songwriters": [
       "Traditional"
@@ -553,7 +553,7 @@
   },
   {
     "title": "Im Himmel Gibt's Kein Bier",
-    "year": 1956,
+    "year": "1956",
     "artist": [],
     "songwriters": [
       "Ralph Maria Siegel",
@@ -585,7 +585,7 @@
   },
   {
     "title": "幽霊東京 (유령도쿄)",
-    "year": 2019,
+    "year": "2019",
     "artist": [
       "Ayase",
       "Hatsune Miku (初音ミク)"
@@ -625,7 +625,7 @@
   },
   {
     "title": "テレキャスタービーボーイ (텔레캐스터 비보이)",
-    "year": 2019,
+    "year": "2019",
     "artist": [
       "Three (すりぃ)",
       "Kagamine Len (鏡音レン)"
@@ -659,7 +659,7 @@
   },
   {
     "title": "Группа крови (Gruppa Krovi)",
-    "year": 1988,
+    "year": "1988",
     "artist": [
       "Kino (Кино)"
     ],
@@ -696,7 +696,7 @@
   },
   {
     "title": "Кончится лето (Konchitsya leto)",
-    "year": 1990,
+    "year": "1990",
     "artist": [
       "Kino (Кино)"
     ],
@@ -730,7 +730,7 @@
   },
   {
     "title": "Rain",
-    "year": 2017,
+    "year": "2017",
     "artist": [
       "SEKAI NO OWARI"
     ],
@@ -765,7 +765,7 @@
   },
   {
     "title": "當年情 (당년정)",
-    "year": 1986,
+    "year": "1986",
     "artist": [
       "Leslie Chung (張國榮)"
     ],
@@ -801,7 +801,7 @@
   },
   {
     "title": "奔向未來日子 (분향미래일자)",
-    "year": 1988,
+    "year": "1988",
     "artist": [
       "Leslie Chung (張國榮)"
     ],
@@ -831,7 +831,7 @@
   },
   {
     "title": "男兒當自強 (남아당자강)",
-    "year": 1990,
+    "year": "1990",
     "artist": [
       "George Lam (林子祥)"
     ],
@@ -864,7 +864,7 @@
   },
   {
     "title": "Sogno di Volare",
-    "year": 2016,
+    "year": "2016",
     "artist": [
       "Christopher Tin"
     ],
@@ -906,7 +906,7 @@
   },
   {
     "title": "Θά 'ρθεις σαν αστραπή (Thá 'rtheis san astrapí)",
-    "year": 1998,
+    "year": "1998",
     "artist": [
       "Stamatis Spanoudakis (Σταμάτης Σπανουδάκης)"
     ],
@@ -947,7 +947,7 @@
   },
   {
     "title": "Norwegian Wood (This Bird Has Flown)",
-    "year": 1965,
+    "year": "1965",
     "artist": [
       "The Beatles"
     ],
@@ -983,7 +983,7 @@
   },
   {
     "title": "Hey Jude",
-    "year": 1968,
+    "year": "1968",
     "artist": [
       "The Beatles"
     ],
@@ -1020,7 +1020,7 @@
   },
   {
     "title": "Yellow Submarine",
-    "year": 1966,
+    "year": "1966",
     "artist": [
       "The Beatles"
     ],
@@ -1049,7 +1049,7 @@
   },
   {
     "title": "Here Comes the Sun",
-    "year": 1969,
+    "year": "1969",
     "artist": [
       "The Beatles"
     ],
@@ -1078,7 +1078,7 @@
   },
   {
     "title": "Let It Be",
-    "year": 1970,
+    "year": "1970",
     "artist": [
       "The Beatles"
     ],
@@ -1108,7 +1108,7 @@
   },
   {
     "title": "Ob-La-Di, Ob-La-Da",
-    "year": 1968,
+    "year": "1968",
     "artist": [
       "The Beatles"
     ],
@@ -1137,7 +1137,7 @@
   },
   {
     "title": "春雷 (춘뢰)",
-    "year": 2017,
+    "year": "2017",
     "artist": [
       "Kenshi Yonezu (米津玄師)"
     ],
@@ -1172,7 +1172,7 @@
   },
   {
     "title": "For Elise (Für Elise)",
-    "year": 1810,
+    "year": "1810",
     "artist": [],
     "songwriters": [
       "Ludwig van Beethoven"
@@ -1200,7 +1200,7 @@
   },
   {
     "title": "かいじゅうのマーチ (괴수의 행진곡)",
-    "year": 2017,
+    "year": "2017",
     "artist": [
       "Kenshi Yonezu (米津玄師)"
     ],
@@ -1228,7 +1228,7 @@
   },
   {
     "title": "ピースサイン (피스 사인)",
-    "year": 2017,
+    "year": "2017",
     "artist": [
       "Kenshi Yonezu (米津玄師)"
     ],
@@ -1258,7 +1258,7 @@
   },
   {
     "title": "Lemon",
-    "year": 2018,
+    "year": "2018",
     "artist": [
       "Kenshi Yonezu (米津玄師)"
     ],
@@ -1286,7 +1286,7 @@
   },
   {
     "title": "KICK BACK",
-    "year": 2022,
+    "year": "2022",
     "artist": [
       "Kenshi Yonezu (米津玄師)"
     ],
@@ -1315,7 +1315,7 @@
   },
   {
     "title": "Water No Get Enemy",
-    "year": 1975,
+    "year": "1975",
     "artist": [
       "Fela Kuti"
     ],
@@ -1350,7 +1350,7 @@
   },
   {
     "title": "Waterloo",
-    "year": 1974,
+    "year": "1974",
     "artist": [
       "ABBA"
     ],
@@ -1392,7 +1392,7 @@
   },
   {
     "title": "Dancing Queen",
-    "year": 1976,
+    "year": "1976",
     "artist": [
       "ABBA"
     ],
@@ -1431,7 +1431,7 @@
   },
   {
     "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
-    "year": 1979,
+    "year": "1979",
     "artist": [
       "ABBA"
     ],
@@ -1460,7 +1460,7 @@
   },
   {
     "title": "Mamma Mia",
-    "year": 1975,
+    "year": "1975",
     "artist": [
       "ABBA"
     ],
@@ -1494,7 +1494,7 @@
   },
   {
     "title": "I Have a Dream",
-    "year": 1979,
+    "year": "1979",
     "artist": [
       "ABBA"
     ],
@@ -1523,7 +1523,7 @@
   },
   {
     "title": "Bailando",
-    "year": 2014,
+    "year": "2014",
     "artist": [
       "Enrique Iglesias",
       "Descemer Bueno",
@@ -1563,7 +1563,7 @@
   },
   {
     "title": "Súbeme la Radio",
-    "year": 2017,
+    "year": "2017",
     "artist": [
       "Enrique Iglesias",
       "Descemer Bueno",
@@ -1606,7 +1606,7 @@
   },
   {
     "title": "(I Can’t Get No) Satisfaction",
-    "year": 1965,
+    "year": "1965",
     "artist": [
       "The Rolling Stones"
     ],
@@ -2495,43 +2495,29 @@
     "image": "covers/067-raining-in-manila-lola-amour.jpg"
   },
   {
-    "title": "Катюша (Katyusha)",
-    "year": "1938",
-    "artist": [],
+    "title": "Midnight City",
+    "year": "2011",
+    "artist": ["M83"],
     "songwriters": [
-      "Matvey Blanter",
-      "Mikhail Isakovsky"
+      "Anthony Gonzalez","Yann Gonzalez","Morgan Kibby","Justin Meldal-Johnsen"
     ],
     "language": [
-      "러시아어"
+      "영어"
     ],
     "countries": [
-      "RU"
+      "FR"
     ],
     "tags": [
-      "민요",
-      "군가",
-      "전쟁",
-      "소련"
+      "일렉트로닉","신스팝","드림팝","뉴웨이브"
     ],
-    "memo": "2차 세계대전 기간 소련에서 유행한 국민 노래. 카츄샤는 예카테리나의 애칭",
-    "links": [
-      {
-        "title": "블로그 해설",
-        "url": "https://jdessin.tistory.com/61"
-      }
-    ],
+    "memo": "몽환적인 신스 팝.",
     "youtube": [
       {
-        "title": "Alexandrov Ensemble(Red Army Choir)",
-        "url": "https://www.youtube.com/watch?v=sqgP8xBcz2g"
-      },
-      {
-        "title": "Георгий Виноградов 버전 (한국어 자막)",
-        "url": "https://www.youtube.com/watch?v=Rc0WOYHReSA"
+        "title": "MV",
+        "url": "https://youtu.be/dX3k_QDnzHE?si=LFGMaqyp0D1DLKWm"
       }
     ],
-    "image": "covers/068-катюша-katyusha.jpg"
+    "image": "covers/068-midnight-city-m83.jpg"
   },
   {
     "title": "Vô Tư",
@@ -2633,7 +2619,77 @@
         "url": "https://www.youtube.com/watch?v=mgUdwsQyY_s"
       }
     ],
-    "image": "covers/071-калинка-kalinka.jpg"
+    "image": "covers/071-red-army.jpg"
+  },
+  {
+    "title": "Катюша (Katyusha)",
+    "year": "1938",
+    "artist": [],
+    "songwriters": [
+      "Matvey Blanter",
+      "Mikhail Isakovsky"
+    ],
+    "language": [
+      "러시아어"
+    ],
+    "countries": [
+      "RU"
+    ],
+    "tags": [
+      "민요",
+      "군가",
+      "전쟁",
+      "소련"
+    ],
+    "memo": "2차 세계대전 기간 소련에서 유행한 국민 노래. 카츄샤는 예카테리나의 애칭",
+    "links": [
+      {
+        "title": "블로그 해설",
+        "url": "https://jdessin.tistory.com/61"
+      }
+    ],
+    "youtube": [
+      {
+        "title": "Alexandrov Ensemble(Red Army Choir)",
+        "url": "https://www.youtube.com/watch?v=sqgP8xBcz2g"
+      },
+      {
+        "title": "Георгий Виноградов 버전 (한국어 자막)",
+        "url": "https://www.youtube.com/watch?v=Rc0WOYHReSA"
+      }
+    ],
+    "image": "covers/071-red-army.jpg"
+  },
+  {
+    "title": "Прощание славянки (Farewell of Slavianka)",
+    "year": "1912",
+    "artist": [],
+    "songwriters": [
+      "Vasily Agapkin"
+    ],
+    "language": [
+      "러시아어"
+    ],
+    "countries": [
+      "RU"
+    ],
+    "tags": [
+      "군가",
+      "전쟁",
+      "이별"
+    ],
+    "memo": "'슬라브 여인의 작별' - 러시아 제국 시대부터 군인들 사이에서 인기를 끈 곡. 가사는 여러 버전이 있다. 탐보프 주의 주가",
+    "youtube": [
+      {
+        "title": "1967년 작사된 소련 버전 (Alexandrov Ensemble)",
+        "url": "https://www.youtube.com/watch?v=h9_8YyFl-uY"
+      },
+      {
+        "title": "1997년 작사된 백군 버전 (영어 자막)",
+        "url": "https://www.youtube.com/watch?v=iXnc0JrWkOA"
+      }
+    ],
+    "image": "covers/071-red-army.jpg"
   },
   {
     "title": "Njet Molotoff",
@@ -3072,35 +3128,29 @@
     "image": "covers/083-greensleeves.jpg"
   },
   {
-    "title": "Прощание славянки (Farewell of Slavianka)",
-    "year": "1912",
-    "artist": [],
+    "title": "Time To Rise",
+    "year": "2021",
+    "artist": ["VannDa (វណ្ណដា)","Master Kong Nay (គង់ ណៃ)"],
     "songwriters": [
-      "Vasily Agapkin"
+      "VannDa","Songha"
     ],
     "language": [
-      "러시아어"
+      "크메르어"
     ],
     "countries": [
-      "RU"
+      "KH"
     ],
     "tags": [
-      "군가",
-      "전쟁",
-      "이별"
+      "힙합","팝"
     ],
-    "memo": "'슬라브 여인의 작별' - 러시아 제국 시대부터 군인들 사이에서 인기를 끈 곡. 가사는 여러 버전이 있다. 탐보프 주의 주가",
+    "memo": "래퍼 VannDa와 전통악기 명인 Master Kong Nay의 합작. 캄보디아 문화의 부활을 위하여",
     "youtube": [
       {
-        "title": "1967년 작사된 소련 버전 (Alexandrov Ensemble)",
-        "url": "https://www.youtube.com/watch?v=h9_8YyFl-uY"
-      },
-      {
-        "title": "1997년 작사된 백군 버전 (영어 자막)",
-        "url": "https://www.youtube.com/watch?v=iXnc0JrWkOA"
+        "title": "MV",
+        "url": "https://youtu.be/rvje5oblrLw?si=K36zQwnNIneN9tlG"
       }
     ],
-    "image": "covers/084-прощание-славянки-farewell-of-slavianka.jpg"
+    "image": "covers/084-time-to-rise-vannda.jpg"
   },
   {
     "title": "夜に駆ける (밤을 달리다)",
@@ -3175,7 +3225,7 @@
     "title": "Stille Nacht, heilige Nacht",
     "year": "1818",
     "artist": [
-      ""
+      
     ],
     "songwriters": [
       "Franz Xaver Gruber",
@@ -3556,7 +3606,7 @@
     "title": "Lacrimosa",
     "year": "1791",
     "artist": [
-      ""
+      
     ],
     "songwriters": [
       "Wolfgang Amadeus Mozart",
@@ -3596,7 +3646,7 @@
     "title": "Rondo Alla Turca (Piano Sonata No.11)",
     "year": "1785",
     "artist": [
-      ""
+      
     ],
     "songwriters": [
       "Wolfgang Amadeus Mozart"
@@ -3627,7 +3677,7 @@
     "title": "Eine Kleine Nachtmusik, I. Allegro",
     "year": "1787",
     "artist": [
-      ""
+      
     ],
     "songwriters": [
       "Wolfgang Amadeus Mozart"
@@ -6602,7 +6652,7 @@
     "title": "W moim ogródecku",
     "year": "?",
     "artist": [
-      ""
+      
     ],
     "songwriters": [
       "Traditional"
@@ -6629,7 +6679,7 @@
     "title": "Guantanamera",
     "year": "1929",
     "artist": [
-      ""
+      
     ],
     "songwriters": [
       "José Martí",
@@ -6662,7 +6712,7 @@
     "title": "Isa Lei",
     "year": "1910s?",
     "artist": [
-      ""
+      
     ],
     "songwriters": [
       "Traditional"
@@ -7474,7 +7524,7 @@
     ],
     "songwriters": [
       "Thomas Bangalter",
-      "Guy Manuel De Homem-Christo"
+      "Guy Manuel De Homem-Christo", "Anthony Moore"
     ],
     "language": [
       "영어"
@@ -7492,6 +7542,30 @@
       {
         "title": "MV",
         "url": "https://youtu.be/FGBhQbmPwH8?si=Z8ZAJF-NWc32FhGC"
+      }
+    ],
+    "image": "covers/207-daft-punk-1.jpg"
+  },
+  {
+    "title": "Veridis Quo",
+    "year": "2001",
+    "artist": [
+      "Daft Punk"
+    ],
+    "songwriters": [
+      "Thomas Bangalter",
+      "Guy Manuel De Homem-Christo"
+    ],
+    "language": [],
+    "countries": ["FR"],
+    "tags": [
+      "디스코","하우스","일렉트로닉"
+    ],
+    "memo": "언어유희적 제목(베리 디스코)의 곡. 가사 없는 반복적인 신스 멜로디",
+    "youtube": [
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=TCd6PfxOy0Y"
       }
     ],
     "image": "covers/207-daft-punk-1.jpg"
@@ -8363,7 +8437,7 @@
     "title": "Dire-Gelt (דירה-געלט)",
     "year": "?",
     "artist": [
-      ""
+      
     ],
     "songwriters": [
       "Traditional"
@@ -9619,7 +9693,7 @@
       "밤바라어"
     ],
     "countries": [
-      "ML"
+      "ML","FR","ES"
     ],
     "tags": [
       "블루스",
@@ -10019,7 +10093,7 @@
     "tags": [
       "포크",
       "만도팝",
-      "밈"
+      "밈","광고음악"
     ],
     "memo": "'Super Idol' 밈으로 알려진, 왓슨스 증류수 홍보곡.",
     "youtube": [
@@ -10174,10 +10248,9 @@
       "XX"
     ],
     "tags": [
-      "브라질리언펑크",
-      "밈"
+      "브라질리언펑크","AI","밈"
     ],
-    "memo": "호불호가 갈리는 강렬한 브라질리언 펑크 곡. AI를 쓴 것 같기도 하다",
+    "memo": "호불호가 갈리는 강렬한 브라질리언 펑크 곡.",
     "youtube": [
       {
         "title": "음원",
@@ -12166,8 +12239,7 @@
       "GB"
     ],
     "tags": [
-      "스코틀랜드",
-      ""
+      "스코틀랜드"
     ],
     "memo": "스코틀랜드를 상징하는 곡. 백파이프 연주자들이 맨날 연주하는 곡",
     "youtube": [
@@ -12183,13 +12255,13 @@
     "image": "covers/343-scotland.jpg"
   },
   {
-    "title": "Soa fa nisy",
-    "year": "2024",
+    "title": "Malaso",
+    "year": "1995",
     "artist": [
-      "Lion Hill"
+      "Régis Gizavo"
     ],
     "songwriters": [
-      "Lion Hill"
+      "Régis Gizavo"
     ],
     "language": [
       "말라가시어"
@@ -12198,18 +12270,20 @@
       "MG"
     ],
     "tags": [
-      "R&B",
-      "아프로비츠",
-      "소울"
+      "포크","블루스"
     ],
-    "memo": "'네가 있어서 다행이야'. 마다가스카르 알앤비",
+    "memo": "'소 도둑'들에 의해 삶을 파괴당한 목동의 노래.",
     "youtube": [
       {
-        "title": "MV",
-        "url": "https://www.youtube.com/watch?v=0U03TYMB7zY"
+        "title": "공연 영상",
+        "url": "https://www.youtube.com/watch?v=4yirdx9Ao9o"
+      },
+      {
+        "title": "Madagascar All Stars",
+        "url": "https://www.youtube.com/watch?v=wnzPjcnPvn4"
       }
     ],
-    "image": "covers/344-soa-fa-nisy.jpg"
+    "image": "covers/344-malaso.jpg"
   },
   {
     "title": "Kijiti",
@@ -12291,7 +12365,7 @@
     ],
     "tags": [
       "팝",
-      "오페라팝"
+      "오케스트럴팝"
     ],
     "memo": "'마지막 춤', 독특한 오케스트라 팝. 다양한 리믹스 버전들도 인기를 끌었다.",
     "youtube": [
@@ -12476,7 +12550,7 @@
         "url": "https://youtu.be/pbZrLrYQ6mo?si=IxViyk-1hlBNkL5U"
       }
     ],
-    "image": "covers/378-天国-mrs-green-apple.jpg"
+    "image": "covers/352-天国-mrs-green-apple.jpg"
   },
   {
     "title": "Whatever",
@@ -12505,7 +12579,7 @@
         "url": "https://www.youtube.com/watch?v=EHfx9LXzxpw"
       }
     ],
-    "image": "covers/379-whatever-oasis.jpg"
+    "image": "covers/353-whatever-oasis.jpg"
   },
   {
     "title": "Don't Look Back in Anger",
@@ -12534,7 +12608,7 @@
         "url": "https://youtu.be/cmpRLQZkTb8?si=16nIMzllSB00neVV"
       }
     ],
-    "image": "covers/380-don-t-look-back-in-anger-oasis.jpg"
+    "image": "covers/354-don-t-look-back-in-anger-oasis.jpg"
   },
   {
     "title": "California Dreamin'",
@@ -12564,7 +12638,7 @@
         "url": "https://youtu.be/N-aK6JnyFmk?si=ciizYGNAbGBe10ph"
       }
     ],
-    "image": "covers/381-california-dreamin-the-mamas-papas.jpg"
+    "image": "covers/355-california-dreamin-the-mamas-papas.jpg"
   },
   {
     "title": "Runaway",
@@ -12600,7 +12674,7 @@
         "url": "https://www.youtube.com/watch?v=Bm5iA4Zupek"
       }
     ],
-    "image": "covers/382-runaway-kanye-west.jpg"
+    "image": "covers/356-runaway-kanye-west.jpg"
   },
   {
     "title": "Save Your Tears",
@@ -12637,7 +12711,7 @@
         "url": "https://youtu.be/LIIDh-qI9oI?si=m7ImZm9UCFMtvD1v"
       }
     ],
-    "image": "covers/383-save-your-tears-the-weeknd.jpg"
+    "image": "covers/357-save-your-tears-the-weeknd.jpg"
   },
   {
     "title": "thank u, next",
@@ -12671,7 +12745,7 @@
         "url": "http://youtube.com/watch?v=EEhZAHZQyf4"
       }
     ],
-    "image": "covers/384-thank-u-next-ariana-grande.jpg"
+    "image": "covers/358-thank-u-next-ariana-grande.jpg"
   },
   {
     "title": "Jailhouse Rock",
@@ -12699,7 +12773,7 @@
         "url": "https://www.youtube.com/watch?v=gj0Rz-uP4Mk"
       }
     ],
-    "image": "covers/385-jailhouse-rock-elvis-presley.jpg"
+    "image": "covers/359-jailhouse-rock-elvis-presley.jpg"
   },
   {
     "title": "Buttercup",
@@ -12731,7 +12805,7 @@
         "url": "https://www.youtube.com/watch?v=eYDI8b5Nn5s"
       }
     ],
-    "image": "covers/386-buttercup-jack-stauber.jpg"
+    "image": "covers/360-buttercup-jack-stauber.jpg"
   },
   {
     "title": "I Will Survive",
@@ -12760,7 +12834,7 @@
         "url": "https://youtu.be/6dYWe1c3OyU?si=Hi71dJdES_Dfy4tn"
       }
     ],
-    "image": "covers/387-i-will-survive-gloria-gaynor.jpg"
+    "image": "covers/361-i-will-survive-gloria-gaynor.jpg"
   },
   {
     "title": "You are my sunshine",
@@ -12795,6 +12869,318 @@
         "url": "https://www.youtube.com/watch?v=xvPolI-pBCw"
       }
     ],
-    "image": "covers/388-you-are-my-sunshine-jimmie-davis.jpg"
+    "image": "covers/362-you-are-my-sunshine-jimmie-davis.jpg"
+  },
+  {
+    "title": "따잇하는 재미",
+    "year": "2025",
+    "artist": [],
+    "songwriters": ["슝좍1","다하카"],
+    "language": ["한국어"],
+    "countries": ["KR"],
+    "tags": ["AI","게임음악","JPOP","창팝"],
+    "memo": "굉장히 잘 만들어진 AI 창팝 곡. 특별히 넣었다.",
+    "youtube": [
+      {"title": "MV(?)", "url": "https://www.youtube.com/watch?v=m86NdkAoCV4"}
+    ],
+    "image": "covers/363-따잇.jpg"
+  },
+  {
+    "title": "Me Gustas Tú",
+    "year": "2001",
+    "artist": ["Manu Chao"],
+    "songwriters": ["Manu Chao"],
+    "language": ["스페인어"],
+    "countries": ["ES","FR"],
+    "tags": ["레게","라틴팝"],
+    "memo": "'널 좋아해'. 반복적이고 중독성 있는 곡",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=rs6Y4kZ8qtw"}
+    ],
+    "image": "covers/364-esperanza-manu-chao.jpg"
+  },
+  {
+    "title": "La Perla",
+    "year": "2021",
+    "artist": ["Sofia Kourtesis"],
+    "songwriters": ["Sofia Kourtesis"],
+    "language": ["스페인어"],
+    "countries": ["PE"],
+    "tags": ["일렉트로닉","하우스"],
+    "memo": "'진주'. 바다, 그리고 아버지를 생각하며.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=WY1bZjXKKWA"}
+    ],
+    "image": "covers/365-la-perla-sofia-kourtesis.jpg"
+  },
+  {
+    "title": "Oxygène Part IV",
+    "year": "1977",
+    "artist": ["Jean-Michel Jarre"],
+    "songwriters": ["Jean-Michel Jarre"],
+    "language": [],
+    "countries": ["FR"],
+    "tags": ["일렉트로닉","뉴웨이브","앰비언트"],
+    "memo": "장미셸 자르의 대표곡 중 하나. 광고 등에서도 많이 사용된다.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=kSIMVnPA994"}
+    ],
+    "image": "covers/366-oxygene-jean-michel-jarre.jpg"
+  },
+  {
+    "title": "Circles",
+    "year": "2019",
+    "artist": ["Post Malone"],
+    "songwriters": ["Austin Post","Louis Bell","Kaan Güneşberk","Adam Feeney","William Walsh","Tyler Armes"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["인디","팝","얼터너티브팝"],
+    "memo": "도망가려 해도 원을 그리며 제자리로 오는 모습.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/wXhTHyIgQ_U?si=3Hl80v-sDbIayPd4"}
+    ],
+    "image": "covers/367-circles-post-malone.jpg"
+  },
+  {
+    "title": "Dreamers",
+    "year": "2022",
+    "artist": ["정국","Fahad Al Kubaisi (فهد الكبيسي)"],
+    "songwriters": ["Jung Kook","Mustapha El Ouardi","Patrick Devine","RedOne"],
+    "language": ["영어","아랍어"],
+    "countries": ["KR","QA"],
+    "tags": ["월드컵","팝"],
+    "memo": "2022 월드컵 주제가. 꿈꾸는 우리는 해낼 수 있어.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=IwzkfMmNMpM"}
+    ],
+    "image": "covers/368-dreamers-jungkook.jpg"
+  },
+  {
+    "title": "Miłość w Zakopanem",
+    "year": "2017",
+    "artist": ["Sławomir"],
+    "songwriters": ["Sławomir Zapała"],
+    "language": ["폴란드어"],
+    "countries": ["PL"],
+    "tags": ["록","디스코"],
+    "memo": "'자코파네에서의 사랑'. 폴란드에서 크게 히트한 신나는 곡",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=n2hJA78YuWw"},
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=MssS3LGcJrs"}
+    ],
+    "image": "covers/369-greatest-hits-slawomir.jpg"
+  },
+  {
+    "title": "志明與春嬌 (지명여춘교)",
+    "year": "1999",
+    "artist": ["Mayday (五月天)"],
+    "songwriters": ["五月天","陳建良"],
+    "language": ["민남어"],
+    "countries": ["TW"],
+    "tags": ["록","팝","이별"],
+    "memo": "대만 밴드 오월천의 민남어 이별 노래.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=5VUUGZ1-nlY"}
+    ],
+    "image": "covers/370-지명여춘교.jpg"
+  },
+  {
+    "title": "Viva la Vida",
+    "year": "2008",
+    "artist": ["Coldplay"],
+    "songwriters": ["Guy Berryman","Jonny Buckland","Will Champion","Chris Martin"],
+    "language": ["영어"],
+    "countries": ["GB"],
+    "tags": ["팝","락","오케스트럴팝"],
+    "memo": "'인생 만세', 혁명으로 몰락한 군주의 곡.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/dvgZkm1xWPE?si=B1FlxsbMDmlAknr6"}
+    ],
+    "image": "covers/371-viva-la-vida.jpg"
+  },
+  {
+    "title": "Emerald Sword",
+    "year": "1998",
+    "artist": ["Rhapsody of Fire"],
+    "songwriters": ["Alex Staropoli","Luca Turilli"],
+    "language": ["영어"],
+    "countries": ["IT"],
+    "tags": ["메탈","판타지"],
+    "memo": "왕을 위하여, 대지를 위하여, 산맥을 위하여. 에메랄드 검을 찾아나서리라! 몬더그린으로도 유명한 곡.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=y5kLxQGbRYg"}
+    ],
+    "image": "covers/372-emerald-sword.jpg"
+  },
+  {
+    "title": "白金ディスコ (백금디스코)",
+    "year": "2012",
+    "artist": ["Yuka Iguchi (井口裕香)"],
+    "songwriters": ["神前暁"],
+    "language": ["일본어"],
+    "countries": ["JP"],
+    "tags": ["애니메이션","디스코"],
+    "memo": "애니메이션 <니세모노가타리> 삽입곡이자 이야기 시리즈 히트곡 중 하나. 일본풍 디스코",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=71bXPAIVwAE"}
+    ],
+    "image": "covers/373-monogatari.jpg"
+  },
+  {
+    "title": "恋愛サーキュレーション (연애 서큘레이션)",
+    "year": "2010",
+    "artist": ["Kana Hanazawa (花澤香菜)"],
+    "songwriters": ["神前暁"],
+    "language": ["일본어"],
+    "countries": ["JP"],
+    "tags": ["애니메이션","JPOP"],
+    "memo": "애니메이션 <바케모노가타리> 삽입곡. 가볍고 경쾌한 브라스",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=uKxyLmbOc0Q"}
+    ],
+    "image": "covers/373-monogatari.jpg"
+  },
+  {
+    "title": "Dreams",
+    "year": "1992",
+    "artist": ["The Cranberries"],
+    "songwriters": ["Noel Hogan","Dolores O'Riordan"],
+    "language": ["영어"],
+    "countries": ["IE"],
+    "tags": ["얼터너티브록","드림팝"],
+    "memo": "첫사랑에 관한 노래. 광동어 번안곡 '몽중인'으로도 유명하다.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/Yam5uK6e-bQ?si=XJHkQ4xpe_BYxk5c"}
+    ],
+    "image": "covers/374-dreams-the-cranberries.jpg"
+  },
+  {
+    "title": "夢中人 (몽중인)",
+    "year": "1994",
+    "artist": ["Faye Wong (王菲)"],
+    "songwriters": ["Noel Hogan","Dolores O'Riordan","周禮茂"],
+    "language": ["광동어"],
+    "countries": ["HK"],
+    "tags": ["얼터너티브록","드림팝","영화음악","번안","칸토팝"],
+    "memo": "The Cranberries의 'Dreams'를 번안한 곡. 영화 <중경삼림> 삽입곡",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=hN2jOHeI5tc"}
+    ],
+    "image": "covers/375-몽중인.jpg"
+  },
+  {
+    "title": "Still Alive",
+    "year": "2007",
+    "artist": ["Ellen McLain"],
+    "songwriters": ["Jonathan Coulton"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["게임음악","어쿠스틱록"],
+    "memo": "게임 <포탈> 엔딩곡. 아직 살아있는 이들을 위해서.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=Y6ljFaKRTrI"}
+    ],
+    "image": "covers/376-portal.jpg"
+  },
+  {
+    "title": "Cara Mia Addio!",
+    "year": "2011",
+    "artist": ["Ellen McLain"],
+    "songwriters": ["Mike Morasky"],
+    "language": ["이탈리아어"],
+    "countries": ["US"],
+    "tags": ["게임음악","어쿠스틱록"],
+    "memo": "게임 <포탈 2> 엔딩곡. '사랑하는 그이여 안녕히!'",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=tL_TFXbSnLY"},
+      {"title": "MV(?)", "url": "https://www.youtube.com/watch?v=u3UiwJE8UH0"}
+    ],
+    "image": "covers/376-portal.jpg"
+  },
+  {
+    "title": "Przybieżeli do Betlejem",
+    "year": "17c",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language": ["폴란드어"],
+    "countries": ["PL"],
+    "tags": ["캐롤","종교음악"],
+    "memo": "'그들(목자들)이 베들레헴으로 달려왔다', 폴란드 캐롤.",
+    "youtube": [
+      {"title": "Golec uOrkiestra, Sound'n'Grace", "url": "https://www.youtube.com/watch?v=Ss8lbkrIZ9Y"},
+      {"title": "Mała Armia Janosika", "url": "https://www.youtube.com/watch?v=U1Rax-YH0t0"}
+    ],
+    "image": "covers/377-przybiezeli-do-betlejem.jpg"
+  },
+  {
+    "title": "Axel F",
+    "year": "1984",
+    "artist": ["Harold Faltermeyer"],
+    "songwriters": ["Harold Faltermeyer"],
+    "language": [],
+    "countries": ["DE"],
+    "tags": ["신스팝","일렉트로닉","영화음악"],
+    "memo": "영화 <Beverly Hills Cop> 메인테마곡. 싸이 <챔피언>이 샘플링한 원곡.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=V4kWpi2HnPU"}
+    ],
+    "image": "covers/378-axel-f.jpg"
+  },
+  {
+    "title": "Rain",
+    "year": "1987",
+    "artist": ["Ryuichi Sakamoto"],
+    "songwriters": ["Ryuichi Sakamoto"],
+    "language": [],
+    "countries": ["JP"],
+    "tags": ["클래식","뉴에이지","영화음악"],
+    "memo": "영화 <마지막 황제> 삽입곡.",
+    "youtube": [
+      {"title": "음원 (Brussells Philharmonic)", "url": "https://www.youtube.com/watch?v=0Wdblp8g61s"}
+    ],
+    "image": "covers/379-ryuichi-sakamoto.jpg"
+  },
+  {
+    "title": "Pretender",
+    "year": "2019",
+    "artist": ["Official Hige Dandism (Official髭男dism)"],
+    "songwriters": ["藤原聡"],
+    "language": ["일본어"],
+    "countries": ["JP"],
+    "tags": ["JPOP","팝록"],
+    "memo": "히게단의 대표곡. 너의 운명의 사람은 내가 아니야",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=TQ8WlA2GXbk"}
+    ],
+    "image": "covers/380-pretender-higedan.jpg"
+  },
+  {
+    "title": "LADY",
+    "year": "2023",
+    "artist": ["Kenshi Yonezu (米津玄師)"],
+    "songwriters": ["米津玄師","mabanua"],
+    "language": ["일본어"],
+    "countries": ["JP"],
+    "tags": ["JPOP","광고음악"],
+    "memo": "켄시의 (평소와 다르게) 밝고 활기찬 사랑노래.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=DdF-u3fe5pg"}
+    ],
+    "image": "covers/381-lady-yonezu-kenshi.jpg"
+  },
+  {
+    "title": "Levitating",
+    "year": "2020",
+    "artist": ["Dua Lipa","DaBaby"],
+    "songwriters": ["Dua Lipa","Clarence Coffee Jr.","Sarah Hudson","Stephen Kozmeniuk","DaBaby"],
+    "language": ["영어"],
+    "countries": ["GB","US"],
+    "tags": ["팝","디스코","펑크"],
+    "memo": "두아리파의 대표곡 중 하나. 떠다니는 기분.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=TUVcZfQe-Kw"},
+      {"title": "Animated MV", "url": "https://www.youtube.com/watch?v=N000qglmmY0"}
+    ],
+    "image": "covers/382-levitating-dualipa.jpg"
   }
 ]
