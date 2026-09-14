@@ -1156,16 +1156,6 @@ hr {
     touch-action: none;
 }
 
-.bubble-link {
-    stroke: #d7dee8;
-    stroke-width: 1;
-}
-
-.bubble-link.bubble-link-active {
-    stroke: #34a853;
-    stroke-width: 2;
-}
-
 .bubble-bg {
     fill: white;
 }

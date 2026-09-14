@@ -1,7 +1,7 @@
 // -------------------------------------
 // 버블 뷰 (D3 force simulation, 곡 유사도 기반)
-// script.js가 이미 로드한 songs / showSingleSongDetail 등을 그대로 사용하고,
-// geo-data.js의 COUNTRY_CENTROIDS로 지리적 유사도를 계산합니다.
+// script.js가 이미 로드한 songs / showSingleSongDetail / renderCompactSongGrid 등을
+// 그대로 사용하고, geo-data.js의 COUNTRY_CENTROIDS로 지리적 유사도를 계산합니다.
 // -------------------------------------
 
 let bubbleInitStarted = false;
@@ -10,10 +10,11 @@ let bubbleInnerGroup = null;
 let bubbleSimulation = null;
 let bubbleZoomBehavior = null;
 let bubbleNodesData = null;
+let bubbleGroupsByKey = null; // 이미지 경로 -> 그 이미지를 공유하는 곡 배열
 
 const BUBBLE_WIDTH = 1000;
 const BUBBLE_HEIGHT = 640;
-const BUBBLE_RADIUS = 16;
+const BUBBLE_RADIUS = 20;
 
 // 두 [경도, 위도] 좌표 사이의 거리 (km, haversine 공식)
 function haversineDistanceKm(coordA, coordB) {
@@ -82,7 +83,8 @@ function geoSimilarity(songA, songB) {
 }
 
 // 두 곡의 종합 유사도 (0~1)
-// 가중치: 지리 35% / 태그 25% / 아티스트 20% / 작곡·작사자 15% / 언어 5%
+// 가중치: 지리 45% / 태그 22% / 아티스트 18% / 작곡·작사자 12% / 언어 3%
+// (원래는 지리 35%였는데, 지리적 인접성의 비중을 조금 더 키움)
 function computeSimilarity(songA, songB) {
   const geoSim = geoSimilarity(songA, songB);
   const tagSim = jaccardSimilarity(songA.tags, songB.tags);
@@ -91,23 +93,24 @@ function computeSimilarity(songA, songB) {
   const langSim = jaccardSimilarity(songA.language, songB.language);
 
   return (
-    geoSim * 0.35 +
-    tagSim * 0.25 +
-    artistSim * 0.20 +
-    writerSim * 0.15 +
-    langSim * 0.05
+    geoSim * 0.45 +
+    tagSim * 0.22 +
+    artistSim * 0.18 +
+    writerSim * 0.12 +
+    langSim * 0.03
   );
 }
 
-// 곡마다 가장 유사한 K곡과 연결 (KNN, 중복 링크 제거)
-function buildSimilarityLinks(songArray, k = 6) {
+// 곡마다 가장 유사한 K곡과 연결 (KNN, 중복 링크 제거).
+// 화면에 선을 그리진 않지만, 배치(force simulation)와 마우스오버 강조에 계속 쓰임
+function buildSimilarityLinks(representativeSongs, k = 6) {
 
   const links = [];
   const seenPairs = new Set();
 
-  songArray.forEach((song, i) => {
+  representativeSongs.forEach((song, i) => {
 
-    const nearest = songArray
+    const nearest = representativeSongs
       .map((other, j) => ({ index: j, sim: computeSimilarity(song, other) }))
       .filter(entry => entry.index !== i)
       .sort((a, b) => b.sim - a.sim)
@@ -124,6 +127,82 @@ function buildSimilarityLinks(songArray, k = 6) {
   return links;
 }
 
+// 같은 앨범 이미지를 쓰는 곡들을 하나의 버블(그룹)로 묶음.
+// 이미지가 없거나, 이미지가 있어도 그 이미지를 쓰는 곡이 자기 하나뿐이면 단일 곡 버블
+function groupSongsByImage(songArray) {
+
+  const byImage = new Map();
+  songArray.forEach(song => {
+    if (!song.image) return;
+    if (!byImage.has(song.image)) byImage.set(song.image, []);
+    byImage.get(song.image).push(song);
+  });
+
+  bubbleGroupsByKey = new Map();
+
+  const seenImages = new Set();
+  const nodeGroups = [];
+
+  songArray.forEach(song => {
+
+    if (song.image && byImage.get(song.image).length > 1) {
+      if (seenImages.has(song.image)) return;
+      seenImages.add(song.image);
+
+      const groupSongs = byImage.get(song.image);
+      bubbleGroupsByKey.set(song.image, groupSongs);
+      nodeGroups.push({ songs: groupSongs, groupKey: song.image });
+    } else {
+      nodeGroups.push({ songs: [song], groupKey: null });
+    }
+  });
+
+  return nodeGroups;
+}
+
+// 그룹(버블 하나)의 대표 곡 - 유사도 계산·제목 표시 등에 사용
+function representativeSongOf(group) {
+  return group.songs[0];
+}
+
+// 곡 수에 따라 버블 반지름을 키움 (면적이 곡 수에 비례하도록 제곱근 스케일)
+function bubbleRadiusFor(group) {
+  return BUBBLE_RADIUS * Math.sqrt(group.songs.length);
+}
+
+// 그룹(버블) 하나를 선택했을 때: 곡이 하나면 바로 상세로,
+// 여러 곡이 묶여있으면 국가/태그 화면과 같은 간략 카드 목록으로 보여줌
+function selectBubbleGroup(group) {
+
+  if (group.songs.length === 1) {
+    showSingleSongDetail(group.songs[0], group.songs[0].title);
+    return;
+  }
+
+  selectedCountry = null;
+  selectedTag = null;
+  compactListReturnTo = null;
+
+  showSongsUI();
+
+  countryTitle.innerHTML = `
+    같은 이미지를 쓰는 곡
+    <span class="country-title-count">${group.songs.length}곡</span>
+  `;
+
+  songList.classList.add("song-list-compact");
+  renderCompactSongGrid(songList, group.songs, {
+    returnTo: { type: "bubbleGroup", value: group.groupKey },
+  });
+}
+
+// 뒤로가기에서 특정 그룹으로 복귀할 때 사용 (script.js의 back-button 핸들러가 호출)
+function selectBubbleGroupByKey(groupKey) {
+  const groupSongs = bubbleGroupsByKey?.get(groupKey);
+  if (!groupSongs) return;
+  selectBubbleGroup({ songs: groupSongs, groupKey });
+}
+
 function initBubbleView() {
 
   if (bubbleInitStarted) return;
@@ -132,16 +211,18 @@ function initBubbleView() {
   bubbleSvg = d3.select("#bubble-svg");
   bubbleInnerGroup = bubbleSvg.append("g").attr("class", "bubble-inner");
 
-  bubbleNodesData = songs.map((song, i) => ({ id: i, song }));
-  const links = buildSimilarityLinks(songs, 6);
+  const nodeGroups = groupSongsByImage(songs);
+  bubbleNodesData = nodeGroups.map((group, i) => ({
+    id: i,
+    group,
+    radius: bubbleRadiusFor(group),
+  }));
 
-  const linkSel = bubbleInnerGroup
-    .append("g")
-    .attr("class", "bubble-links")
-    .selectAll("line.bubble-link")
-    .data(links)
-    .join("line")
-    .attr("class", "bubble-link");
+  // 화면에는 그리지 않지만, 배치와 마우스오버 이웃 강조에 계속 사용
+  const links = buildSimilarityLinks(
+    bubbleNodesData.map(n => representativeSongOf(n.group)),
+    6
+  );
 
   const nodeSel = bubbleInnerGroup
     .append("g")
@@ -154,29 +235,29 @@ function initBubbleView() {
 
   nodeSel.append("circle")
     .attr("class", "bubble-bg")
-    .attr("r", BUBBLE_RADIUS);
+    .attr("r", d => d.radius);
 
-  // 앨범 이미지가 있는 곡만 원형으로 잘라서 채움 (없으면 음표 아이콘 유지)
+  // 앨범 이미지가 있는 곡(그룹)만 원형으로 잘라서 채움 (없으면 음표 아이콘 유지)
   nodeSel.append("clipPath")
     .attr("id", d => `bubble-clip-${d.id}`)
     .append("circle")
-    .attr("r", BUBBLE_RADIUS);
+    .attr("r", d => d.radius);
 
   nodeSel
-    .filter(d => !!d.song.image)
+    .filter(d => !!representativeSongOf(d.group).image)
     .append("image")
     .attr("class", "bubble-image")
     .attr("clip-path", d => `url(#bubble-clip-${d.id})`)
-    .attr("x", -BUBBLE_RADIUS)
-    .attr("y", -BUBBLE_RADIUS)
-    .attr("width", BUBBLE_RADIUS * 2)
-    .attr("height", BUBBLE_RADIUS * 2)
+    .attr("x", d => -d.radius)
+    .attr("y", d => -d.radius)
+    .attr("width", d => d.radius * 2)
+    .attr("height", d => d.radius * 2)
     .attr("preserveAspectRatio", "xMidYMid slice")
-    .attr("href", d => d.song.image)
-    .attr("xlink:href", d => d.song.image);
+    .attr("href", d => representativeSongOf(d.group).image)
+    .attr("xlink:href", d => representativeSongOf(d.group).image);
 
   nodeSel
-    .filter(d => !d.song.image)
+    .filter(d => !representativeSongOf(d.group).image)
     .append("text")
     .attr("class", "bubble-note")
     .attr("text-anchor", "middle")
@@ -185,13 +266,19 @@ function initBubbleView() {
 
   nodeSel.append("circle")
     .attr("class", "bubble-border")
-    .attr("r", BUBBLE_RADIUS);
+    .attr("r", d => d.radius);
 
   nodeSel.append("title")
-    .text(d => `${d.song.title} - ${(d.song.artist || []).join(", ")}`);
+    .text(d => {
+      const rep = representativeSongOf(d.group);
+      if (d.group.songs.length === 1) {
+        return `${rep.title} - ${(rep.artist || []).join(", ")}`;
+      }
+      return `${rep.title} 외 ${d.group.songs.length - 1}곡 (같은 이미지)`;
+    });
 
   nodeSel.on("click", (event, d) => {
-    showSingleSongDetail(d.song, d.song.title);
+    selectBubbleGroup(d.group);
   });
 
   function neighborIdsOf(nodeId) {
@@ -207,20 +294,12 @@ function initBubbleView() {
 
   nodeSel.on("mouseenter", (event, d) => {
     const neighborIds = neighborIdsOf(d.id);
-
     nodeSel.select(".bubble-border")
       .classed("bubble-similar", n => neighborIds.has(n.id));
-
-    linkSel.classed("bubble-link-active", l => {
-      const s = typeof l.source === "object" ? l.source.id : l.source;
-      const t = typeof l.target === "object" ? l.target.id : l.target;
-      return s === d.id || t === d.id;
-    });
   });
 
   nodeSel.on("mouseleave", () => {
     nodeSel.select(".bubble-border").classed("bubble-similar", false);
-    linkSel.classed("bubble-link-active", false);
   });
 
   const drag = d3.drag()
@@ -252,14 +331,8 @@ function initBubbleView() {
     .force("charge", d3.forceManyBody().strength(-42))
     .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.03))
     .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.03))
-    .force("collide", d3.forceCollide(BUBBLE_RADIUS + 9))
+    .force("collide", d3.forceCollide(d => d.radius + 9))
     .on("tick", () => {
-      linkSel
-        .attr("x1", d => d.source.x)
-        .attr("y1", d => d.source.y)
-        .attr("x2", d => d.target.x)
-        .attr("y2", d => d.target.y);
-
       nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
     });
 

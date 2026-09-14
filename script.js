@@ -899,6 +899,8 @@ backButton.addEventListener("click", () => {
       selectTag(returnTo.value);
     } else if (returnTo.type === "timeline") {
       showTimelineList();
+    } else if (returnTo.type === "bubbleGroup" && typeof selectBubbleGroupByKey === "function") {
+      selectBubbleGroupByKey(returnTo.value);
     } else {
       selectCountry(returnTo.value);
     }
