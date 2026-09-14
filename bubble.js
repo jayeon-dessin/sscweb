@@ -103,7 +103,7 @@ function computeSimilarity(songA, songB) {
 
 // 곡마다 가장 유사한 K곡과 연결 (KNN, 중복 링크 제거).
 // 화면에 선을 그리진 않지만, 배치(force simulation)와 마우스오버 강조에 계속 쓰임
-function buildSimilarityLinks(representativeSongs, k = 6) {
+function buildSimilarityLinks(representativeSongs, k = 4) {
 
   const links = [];
   const seenPairs = new Set();
@@ -328,9 +328,9 @@ function initBubbleView() {
         .id(d => d.id)
         .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
     )
-    .force("charge", d3.forceManyBody().strength(-45))
-    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.005))
-    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.005))
+    .force("charge", d3.forceManyBody().strength(-120))
+    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.01))
+    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.01))
     .force("collide", d3.forceCollide(d => d.radius + 5))
     .on("tick", () => {
       nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
