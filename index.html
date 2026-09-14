@@ -82,6 +82,15 @@
       <button
         type="button"
         class="view-tab"
+        data-mode="language"
+        role="tab"
+        aria-selected="false"
+      >
+        언어
+      </button>
+      <button
+        type="button"
+        class="view-tab"
         data-mode="about"
         role="tab"
         aria-selected="false"
@@ -173,6 +182,21 @@
     </div>
 
     <div id="tags-list"></div>
+  </div>
+
+  <!-- 국가 선택: 언어 (많이 쓰인 순으로 정렬) -->
+  <div id="language-view" style="display: none;">
+
+    <div class="country-controls">
+      <label for="language-sort">언어 정렬</label>
+
+      <select id="language-sort">
+        <option value="count-desc">많이 쓰인 순</option>
+        <option value="name">가나다순</option>
+      </select>
+    </div>
+
+    <div id="language-list"></div>
   </div>
 
   <!--

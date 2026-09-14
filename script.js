@@ -1,15 +1,16 @@
 let songs = [];
 let selectedCountry = null;
 let selectedTag = null;
+let selectedLanguage = null;
 let isRestoringState = false;
 
-// 국가/태그/연표 목록의 간략 카드에서 곡 하나를 클릭해 상세 화면으로 들어간 경우,
+// 국가/태그/언어/연표 목록의 간략 카드에서 곡 하나를 클릭해 상세 화면으로 들어간 경우,
 // 뒤로가기를 누르면 (전체 브라우즈 화면이 아니라) 그 간략 목록으로
 // 돌아가야 하므로 어디서 왔는지 기억해둠
-// { type: "country" | "tag" | "timeline", value?: string } | null
+// { type: "country" | "tag" | "language" | "timeline", value?: string } | null
 let compactListReturnTo = null;
 
-// "map"(지도) / "countries"(목록) / "timeline"(연표) / "tags"(태그) / "about"(소개)
+// "map"(지도) / "countries"(목록) / "timeline"(연표) / "tags"(태그) / "language"(언어) / "about"(소개)
 let viewMode = "map";
 const songList = document.getElementById("song-list");
 const tagSearch = document.getElementById("tag-search");
@@ -23,6 +24,9 @@ const timelineList = document.getElementById("timeline-list");
 const timelineSort = document.getElementById("timeline-sort");
 const tagsView = document.getElementById("tags-view");
 const tagsList = document.getElementById("tags-list");
+const languageView = document.getElementById("language-view");
+const languageList = document.getElementById("language-list");
+const languageSort = document.getElementById("language-sort");
 const aboutView = document.getElementById("about-view");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
@@ -33,10 +37,10 @@ const viewTabs = document.querySelectorAll(".view-tab");
 const randomDiceButton = document.getElementById("random-dice-button");
 
 // -------------------------------------
-// 목록/지도/전체/태그/소개 뷰 <-> 곡 목록 뷰 전환
+// 목록/지도/연표/태그/언어/소개 뷰 <-> 곡 목록 뷰 전환
 // -------------------------------------
 
-// 국가를 고르는 화면(목록, 지도, 전체, 태그, 소개 중 현재 viewMode에 맞는 것)을 보여줌
+// 국가를 고르는 화면(목록, 지도, 연표, 태그, 언어, 소개 중 현재 viewMode에 맞는 것)을 보여줌
 function showBrowseUI() {
   songsView.style.display = "none";
   songsView.classList.remove("songs-view-no-header");
@@ -45,6 +49,7 @@ function showBrowseUI() {
   mapView.style.display = viewMode === "map" ? "block" : "none";
   timelineView.style.display = viewMode === "timeline" ? "block" : "none";
   tagsView.style.display = viewMode === "tags" ? "block" : "none";
+  languageView.style.display = viewMode === "language" ? "block" : "none";
   aboutView.style.display = viewMode === "about" ? "block" : "none";
 }
 
@@ -54,6 +59,7 @@ function showSongsUI() {
   mapView.style.display = "none";
   timelineView.style.display = "none";
   tagsView.style.display = "none";
+  languageView.style.display = "none";
   aboutView.style.display = "none";
   songsView.style.display = "block";
   songsView.classList.remove("songs-view-no-header");
@@ -76,12 +82,13 @@ function goToBrowseView(mode) {
 
   selectedCountry = null;
   selectedTag = null;
+  selectedLanguage = null;
   compactListReturnTo = null;
 
   tagSearch.value = "";
 
   // renderCountries()가 국가 목록도 새로 그리고, showBrowseUI()를 통해
-  // 현재 viewMode에 맞는 화면(목록/지도/연표/태그/소개)도 함께 보여줌
+  // 현재 viewMode에 맞는 화면(목록/지도/연표/태그/언어/소개)도 함께 보여줌
   renderCountries();
 
   if (mode === "timeline") {
@@ -90,6 +97,10 @@ function goToBrowseView(mode) {
 
   if (mode === "tags") {
     renderTagsList();
+  }
+
+  if (mode === "language") {
+    renderLanguageList();
   }
 
   updateURLState(true);
@@ -228,7 +239,7 @@ function restoreStateFromURL() {
   const keyword = params.get("q");
 
   // 뷰 모드 복원 (기본값: 지도)
-  const validModes = ["map", "countries", "timeline", "tags", "about"];
+  const validModes = ["map", "countries", "timeline", "tags", "language", "about"];
   viewMode = validModes.includes(view) ? view : "map";
   setActiveViewTab();
 
@@ -265,6 +276,8 @@ function restoreStateFromURL() {
     renderTimeline();
   } else if (viewMode === "tags") {
     renderTagsList();
+  } else if (viewMode === "language") {
+    renderLanguageList();
   }
   isRestoringState = false;
 }
@@ -714,10 +727,10 @@ function showTimelineList() {
 timelineSort?.addEventListener("change", renderTimeline);
 
 // -------------------------------------
-// 태그 (많이 쓰인 순으로 정렬, 클릭하면 해당 태그의 곡)
+// 태그 / 언어 공용: 워드클라우드 (많이 쓰인 순으로 정렬, 클릭하면 해당 값의 곡)
 // -------------------------------------
 
-// 태그 하나의 사용 빈도에 따라 워드클라우드 글자 크기/굵기를 계산
+// 값 하나의 사용 빈도에 따라 워드클라우드 글자 크기/굵기를 계산
 // (제곱근 스케일 - 최댓값과 최솟값 차이가 커도 너무 극단적으로 벌어지지 않게)
 function tagCloudStyle(count, minCount, maxCount) {
   const MIN_REM = 0.85;
@@ -734,25 +747,29 @@ function tagCloudStyle(count, minCount, maxCount) {
   };
 }
 
-function renderTagsList() {
-
-  tagsList.innerHTML = "";
-
-  const tagCounts = new Map();
-
+// 곡의 특정 배열 필드(tags/language)에서 값별 사용 횟수를 셈
+function computeFieldCounts(fieldName) {
+  const counts = new Map();
   songs.forEach(song => {
-    (song.tags || []).forEach(tag => {
-      tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+    (song[fieldName] || []).forEach(value => {
+      counts.set(value, (counts.get(value) || 0) + 1);
     });
   });
+  return counts;
+}
 
-  const counts = [...tagCounts.values()];
-  const minCount = Math.min(...counts);
-  const maxCount = Math.max(...counts);
+// 워드클라우드를 임의의 컨테이너에 렌더링 (태그 화면, 언어 화면에서 공용으로 사용)
+function renderWordCloud(container, counts, sortMode, onSelect) {
 
-  const sortMode = tagSort?.value || "count-desc";
+  container.innerHTML = "";
 
-  const orderedTags = [...tagCounts.entries()].sort((a, b) => {
+  if (counts.size === 0) return;
+
+  const countValues = [...counts.values()];
+  const minCount = Math.min(...countValues);
+  const maxCount = Math.max(...countValues);
+
+  const ordered = [...counts.entries()].sort((a, b) => {
     if (sortMode === "name") {
       return a[0].localeCompare(b[0], "ko");
     }
@@ -760,7 +777,7 @@ function renderTagsList() {
     return a[0].localeCompare(b[0], "ko");
   });
 
-  orderedTags.forEach(([tag, count]) => {
+  ordered.forEach(([label, count]) => {
 
     const chip = document.createElement("button");
     chip.type = "button";
@@ -770,15 +787,33 @@ function renderTagsList() {
     chip.style.fontSize = style.fontSize;
     chip.style.fontWeight = style.fontWeight;
 
-    chip.title = `${tag} · ${count}곡`;
-    chip.textContent = tag;
+    chip.title = `${label} · ${count}곡`;
+    chip.textContent = label;
 
     chip.addEventListener("click", () => {
-      selectTag(tag);
+      onSelect(label);
     });
 
-    tagsList.appendChild(chip);
+    container.appendChild(chip);
   });
+}
+
+function renderTagsList() {
+  renderWordCloud(
+    tagsList,
+    computeFieldCounts("tags"),
+    tagSort?.value || "count-desc",
+    selectTag
+  );
+}
+
+function renderLanguageList() {
+  renderWordCloud(
+    languageList,
+    computeFieldCounts("language"),
+    languageSort?.value || "count-desc",
+    selectLanguage
+  );
 }
 
 // -------------------------------------
@@ -799,6 +834,7 @@ function selectCountry(code) {
 
   selectedCountry = code;
   selectedTag = null;
+  selectedLanguage = null;
   compactListReturnTo = null;
 
   showSongsUI();
@@ -827,6 +863,7 @@ function selectTag(tag) {
 
   selectedTag = tag;
   selectedCountry = null;
+  selectedLanguage = null;
   compactListReturnTo = null;
 
   showSongsUI();
@@ -843,6 +880,34 @@ function selectTag(tag) {
   tagSearch.value = "";
 
   renderSongs(tagSongs, { compact: true });
+  updateURLState(true);
+}
+
+// -------------------------------------
+// 언어 선택
+// -------------------------------------
+
+function selectLanguage(lang) {
+
+  selectedLanguage = lang;
+  selectedCountry = null;
+  selectedTag = null;
+  compactListReturnTo = null;
+
+  showSongsUI();
+
+  const languageSongs = songs.filter(song =>
+    (song.language || []).includes(lang)
+  );
+
+  countryTitle.innerHTML = `
+    ${lang}
+    <span class="country-title-count">${languageSongs.length}곡</span>
+  `;
+
+  tagSearch.value = "";
+
+  renderSongs(languageSongs, { compact: true });
   updateURLState(true);
 }
 
@@ -865,6 +930,11 @@ tagSort?.addEventListener(
   renderTagsList
 );
 
+languageSort?.addEventListener(
+  "change",
+  renderLanguageList
+);
+
 // -------------------------------------
 // 국가 목록으로 돌아가기
 // -------------------------------------
@@ -875,6 +945,8 @@ backButton.addEventListener("click", () => {
     compactListReturnTo = null;
     if (returnTo.type === "tag") {
       selectTag(returnTo.value);
+    } else if (returnTo.type === "language") {
+      selectLanguage(returnTo.value);
     } else if (returnTo.type === "timeline") {
       showTimelineList();
     } else {
@@ -915,8 +987,8 @@ function applyFilters() {
 
   const hasFilter = keyword !== "";
 
-  // 국가/태그 선택도 없고 필터도 없으면 국가 목록/지도/랜덤
-  if (!selectedCountry && !selectedTag && !hasFilter) {
+  // 국가/태그/언어 선택도 없고 필터도 없으면 국가 목록/지도/랜덤
+  if (!selectedCountry && !selectedTag && !selectedLanguage && !hasFilter) {
     showBrowseUI();
     updateURLState();
     return;
@@ -936,6 +1008,14 @@ function applyFilters() {
     if (
       selectedTag &&
       !(song.tags || []).includes(selectedTag)
+    ) {
+      return false;
+    }
+
+    // 언어를 골랐으면 그 언어 안에서만
+    if (
+      selectedLanguage &&
+      !(song.language || []).includes(selectedLanguage)
     ) {
       return false;
     }
@@ -977,12 +1057,17 @@ function applyFilters() {
       ${selectedTag}
       <span class="country-title-count">${filteredSongs.length}곡</span>
     `;
+  } else if (selectedLanguage) {
+    countryTitle.innerHTML = `
+      ${selectedLanguage}
+      <span class="country-title-count">${filteredSongs.length}곡</span>
+    `;
   } else {
     countryTitle.textContent =
       `검색 결과 (${filteredSongs.length}곡)`;
   }
 
-  renderSongs(filteredSongs, { compact: !!(selectedCountry || selectedTag) });
+  renderSongs(filteredSongs, { compact: !!(selectedCountry || selectedTag || selectedLanguage) });
   updateURLState();
 }
 
@@ -1168,11 +1253,15 @@ function renderSongs(songArray, options = {}) {
   }
 
   if (compact) {
-    renderCompactSongGrid(songList, songArray, {
-      returnTo: selectedTag
-        ? { type: "tag", value: selectedTag }
-        : { type: "country", value: selectedCountry },
-    });
+    let returnTo;
+    if (selectedTag) {
+      returnTo = { type: "tag", value: selectedTag };
+    } else if (selectedLanguage) {
+      returnTo = { type: "language", value: selectedLanguage };
+    } else {
+      returnTo = { type: "country", value: selectedCountry };
+    }
+    renderCompactSongGrid(songList, songArray, { returnTo });
     return;
   }
 
