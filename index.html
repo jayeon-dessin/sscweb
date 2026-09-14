@@ -82,11 +82,11 @@
       <button
         type="button"
         class="view-tab"
-        data-mode="language"
+        data-mode="bubble"
         role="tab"
         aria-selected="false"
       >
-        언어
+        버블
       </button>
       <button
         type="button"
@@ -184,19 +184,27 @@
     <div id="tags-list"></div>
   </div>
 
-  <!-- 국가 선택: 언어 (많이 쓰인 순으로 정렬) -->
-  <div id="language-view" style="display: none;">
+  <!-- 곡 유사도 버블 뷰 -->
+  <div id="bubble-view" style="display: none;">
 
-    <div class="country-controls">
-      <label for="language-sort">언어 정렬</label>
-
-      <select id="language-sort">
-        <option value="count-desc">많이 쓰인 순</option>
-        <option value="name">가나다순</option>
-      </select>
+    <div class="bubble-controls">
+      <p class="bubble-hint">
+        비슷한 곡끼리(같은 아티스트·작곡가·언어·태그·인접 국가) 가까이 모여요. 버블을 클릭하면 그 곡으로 이동하고, 드래그해서 옮길 수도 있어요.
+      </p>
     </div>
 
-    <div id="language-list"></div>
+    <div id="bubble-container">
+      <svg id="bubble-svg" viewBox="0 0 1000 640" role="img" aria-label="곡 유사도에 따라 배치된 버블 그래프. 버블을 클릭하면 그 곡으로 이동합니다."></svg>
+      <div class="bubble-buttons">
+        <button type="button" id="bubble-reset-layout" title="버블 위치를 다시 계산해서 정리해요">
+          버블 재배치
+        </button>
+        <button type="button" id="bubble-reset-zoom" title="확대/축소를 원래대로">
+          전체 보기
+        </button>
+      </div>
+    </div>
+
   </div>
 
   <!--
@@ -274,5 +282,6 @@
   <script src="album-art.js"></script>
   <script src="script.js"></script>
   <script src="map.js"></script>
+  <script src="bubble.js"></script>
 </body>
 </html>

@@ -9031,7 +9031,7 @@
     "image": "covers/249-eye-of-the-tiger-survivor.jpg"
   },
   {
-    "title": "Sweet Child o' Mine",
+    "title": "Sweet Child O' Mine",
     "year": "1988",
     "artist": [
       "Guns N' Roses"
@@ -9899,7 +9899,7 @@
     "image": "covers/271-국군.jpg"
   },
   {
-    "title": "Lucy In The Sky With Diamonds",
+    "title": "Lucy in the Sky with Diamonds",
     "year": "1967",
     "artist": [
       "The Beatles"
@@ -12622,7 +12622,7 @@
       "US"
     ],
     "tags": [
-      "팝",
+      "팝","캘리포니아",
       "포크록",
       "사이키델릭팝"
     ],
@@ -13264,5 +13264,94 @@
       {"title": "Trondheim Symphony Orchestra", "url": "https://www.youtube.com/watch?v=hQM97_iNXhk"}
     ],
     "image": "covers/388-wagner.jpg"
+  },
+  {
+    "title": "Dayung Sampan",
+    "year": "?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language": ["마인어"],
+    "countries": ["ID"],
+    "tags": ["민요"],
+    "memo": "'쪽배의 노를 저어라', 첨밀밀의 원곡. 인도네시아 반텐 지역 민요",
+    "youtube": [
+      {"title": "Aida Mustafa 버전", "url": "https://www.youtube.com/watch?v=Avm-VwRG7es"},
+      {"title": "Laurance Tanza 버전", "url": "https://www.youtube.com/watch?v=24Hre-X56IQ"},
+      {"title": "등려군의 마인어 버전", "url": "https://www.youtube.com/watch?v=y9Ng8ptnVFE"}
+    ],
+    "image": "covers/389-dayung-sampan.jpg"
+  },
+  {
+    "title": "Canta Canta, Minha Gente",
+    "year": "1974",
+    "artist": ["Martinho da Vila"],
+    "songwriters": ["Martinho da Vila"],
+    "language": ["포르투갈어"],
+    "countries": ["BR"],
+    "tags": ["삼바","포크"],
+    "memo": "'노래하자, 나의 사람들아!'. 낙관적인 분위기의 삼바.",
+    "youtube": [
+      {"title": "Lyric Video", "url": "https://www.youtube.com/watch?v=yAU0nKFZuJ8"},
+      {"title": "다양한 아티스트들의 콜라보 버전, Sambabook", "url": "https://www.youtube.com/watch?v=X4Tp_TmjHRs"}
+    ],
+    "image": "covers/390-canta-canta.jpg"
+  },
+  {
+    "title": "Guten Morgen Sonnenschein",
+    "year": "1977",
+    "artist": ["Nana Mouskouri (Νάνα Μούσχουρη)"],
+    "songwriters": ["Martinho da Vila","Peter Reber"],
+    "language": ["독일어"],
+    "countries": ["GR"],
+    "tags": ["삼바","포크","번안","드라마"],
+    "memo": "'좋은 아침이야, 햇살아!'. 2025년 TV시리즈 <카산드라>에 삽입되어 크게 인기를 끌었다.",
+    "youtube": [
+      {"title": "Lyric Video", "url": "https://www.youtube.com/watch?v=XWxRAMHmXBU"},
+      {"title": "공연 영상", "url": "https://www.youtube.com/watch?v=Vshg-hNUEjo"}
+    ],
+    "image": "covers/391-guten-morgen.jpg"
+  },
+  {
+    "title": "Without Me",
+    "year": "2002",
+    "artist": ["Eminem"],
+    "songwriters": ["Marshall Mathers","Jeff Bass","Kevin Bell","Anne Dudley","Malcolm McLaren","Trevor Horn"],
+    "language": ["독일어"],
+    "countries": ["GR"],
+    "tags": ["힙합","코미디"],
+    "memo": "공격적인 가사의, 에미넴의 대표곡 중 하나. 만화 느낌의 뮤직비디오.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=YVkUvmDQ3HY"}
+    ],
+    "image": "covers/392-without-me.jpg"
+  },
+  {
+    "title": "Hotel California",
+    "year": "1977",
+    "artist": ["Eagles"],
+    "songwriters": ["Don Felder","Don Henley","Glenn Frey"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["록","캘리포니아"],
+    "memo": "기타 솔로가 유명한 이글스의 대표곡.",
+    "youtube": [
+      {"title": "MV (Live 1977)", "url": "https://www.youtube.com/watch?v=09839DpTctU"},
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=dLl4PZtxia8"}
+    ],
+    "image": "covers/393-hotel-california.jpg"
+  },
+  {
+    "title": "INDUSTRY BABY",
+    "year": "2021",
+    "artist": ["Lil Nas X","Jack Harlow"],
+    "songwriters": ["Montero Hill","Jackman Harlow","Mark Williams","Raul Cubina","Roy Lenzo","Denzel Baptiste","David Biral","Kanye West","Nick Lee"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["힙합","트랩","팝랩"],
+    "memo": "Lil Nas X의 대표곡 중 하나. 뮤비 주의",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=UTHLKHL_whs"}
+    ],
+    "image": "covers/394-montero-lil-nas-x.jpg"
   }
 ]

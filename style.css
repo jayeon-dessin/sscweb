@@ -1121,6 +1121,120 @@ hr {
 }
 
 /* ========================================
+   버블 뷰
+======================================== */
+
+.bubble-controls {
+    margin-bottom: var(--space-4);
+}
+
+.bubble-hint {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+#bubble-container {
+    position: relative;
+
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+
+    margin-bottom: var(--space-7);
+}
+
+#bubble-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 1000 / 640;
+
+    background: #f8f9fb;
+
+    touch-action: none;
+}
+
+.bubble-link {
+    stroke: #d7dee8;
+    stroke-width: 1;
+}
+
+.bubble-link.bubble-link-active {
+    stroke: #34a853;
+    stroke-width: 2;
+}
+
+.bubble-bg {
+    fill: white;
+}
+
+.bubble-note {
+    fill: #b7c0cc;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.bubble-border {
+    fill: none;
+    stroke: #c7cfda;
+    stroke-width: 1.5;
+
+    transition: stroke 0.15s, stroke-width 0.15s;
+}
+
+.bubble-node:hover .bubble-border {
+    stroke: #4f8ef7;
+    stroke-width: 2;
+}
+
+.bubble-border.bubble-similar {
+    stroke: #34a853;
+    stroke-width: 2.5;
+}
+
+.bubble-buttons {
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+
+    display: flex;
+    gap: var(--space-2);
+}
+
+.bubble-buttons button {
+    appearance: none;
+
+    border: 1px solid #d0d7de;
+    background: white;
+
+    border-radius: 10px;
+
+    padding:
+        var(--space-2)
+        var(--space-4);
+
+    font-size: 13px;
+    cursor: pointer;
+
+    color: #444;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.1);
+
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+}
+
+.bubble-buttons button:hover {
+    background: #f0f3f7;
+    border-color: #bbb;
+}
+
+
+/* ========================================
    소개 탭
 ======================================== */
 
