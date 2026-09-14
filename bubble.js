@@ -94,8 +94,8 @@ function computeSimilarity(songA, songB) {
 
   return (
     geoSim * 0.1 +
-    tagSim * 0.3 +
-    artistSim * 0.4 +
+    tagSim * 0.4 +
+    artistSim * 0.3 +
     writerSim * 0.1 +
     langSim * 0.1
   );
@@ -326,7 +326,7 @@ function initBubbleView() {
       "link",
       d3.forceLink(links)
         .id(d => d.id)
-        .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
+        .distance(d => (6 + (1 - d.sim) * 65) * 1.2)
     )
     .force("charge", d3.forceManyBody().strength(-120))
     .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.03))
