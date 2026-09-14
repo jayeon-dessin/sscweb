@@ -329,9 +329,9 @@ function initBubbleView() {
         .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
     )
     .force("charge", d3.forceManyBody().strength(-120))
-    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.01))
-    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.01))
-    .force("collide", d3.forceCollide(d => d.radius + 5))
+    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.03))
+    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.03))
+    .force("collide", d3.forceCollide(d => d.radius + 3))
     .on("tick", () => {
       nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
     });
