@@ -186,7 +186,7 @@ function selectBubbleGroup(group) {
   showSongsUI();
 
   countryTitle.innerHTML = `
-    이미지를 공유하는 곡
+    이 이미지를 공유하는 곡
     <span class="country-title-count">${group.songs.length}곡</span>
   `;
 
@@ -328,9 +328,9 @@ function initBubbleView() {
         .id(d => d.id)
         .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
     )
-    .force("charge", d3.forceManyBody().strength(-42))
-    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.007))
-    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.007))
+    .force("charge", d3.forceManyBody().strength(-45))
+    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.005))
+    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.005))
     .force("collide", d3.forceCollide(d => d.radius + 5))
     .on("tick", () => {
       nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
