@@ -93,9 +93,9 @@ function computeSimilarity(songA, songB) {
   const langSim = jaccardSimilarity(songA.language, songB.language);
 
   return (
-    geoSim * 0.3 +
-    tagSim * 0.2 +
-    artistSim * 0.2 +
+    geoSim * 0.1 +
+    tagSim * 0.3 +
+    artistSim * 0.3 +
     writerSim * 0.15 +
     langSim * 0.15
   );
@@ -329,8 +329,8 @@ function initBubbleView() {
         .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
     )
     .force("charge", d3.forceManyBody().strength(-42))
-    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.01))
-    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.01))
+    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.007))
+    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.007))
     .force("collide", d3.forceCollide(d => d.radius + 5))
     .on("tick", () => {
       nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);

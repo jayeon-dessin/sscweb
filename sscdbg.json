@@ -1197,6 +1197,21 @@
     "image": "covers/033-beethoven.jpg"
   },
   {
+    "title": "교향곡 9번 4악장 (Sinfonie Nr.9 4.Satz)",
+    "year": "1824?",
+    "artist": [],
+    "songwriters": ["Ludwig van Beethoven","Friedrich Schiller"],
+    "language": ["독일어"],
+    "countries": ["DE"],
+    "tags": ["클래식","유럽","문학"],
+    "memo": "베토벤 최고의 교향곡. 합창 부분 '환희의 송가(Ode an die Freude/Ode to Joy)'는 프리드리히 실러의 시를 바탕으로 하여 쓰여졌으며, 유럽연합 찬가로 사용된다.",
+    "youtube": [
+      {"title": "Deutsche Kammerphilharmonie Bremen", "url": "https://www.youtube.com/watch?v=cep8Ru4TL4k"},
+      {"title": "유럽찬가 (독일어, 한국어 자막)", "url": "https://www.youtube.com/watch?v=hM9KE0u_qFw"}
+    ],
+    "image": "covers/033-beethoven.jpg"
+  },
+  {
     "title": "かいじゅうのマーチ (괴수의 행진곡)",
     "year": "2017",
     "artist": [
@@ -8922,7 +8937,7 @@
         "url": "https://www.youtube.com/watch?v=EhiJ1OU5NJc"
       }
     ],
-    "image": "covers/245-high-and-dry-radiohead.jpg"
+    "image": "covers/245-the-bends-radiohead.jpg"
   },
   {
     "title": "Creep",
@@ -10905,7 +10920,41 @@
         "url": "https://www.youtube.com/watch?v=g2ULycjl_g0"
       }
     ],
-    "image": "covers/300-couplets-du-toréador-votre-toast-je-peux-vous-le-rendre.jpg"
+    "image": "covers/300-carmen-bizet.jpg"
+  },
+  {
+    "title": "Habanera",
+    "year": "1875",
+    "artist": [],
+    "songwriters": [
+      "Sebastián Iradier",
+      "Georges Bizet"
+    ],
+    "language": [
+      "프랑스어"
+    ],
+    "countries": [
+      "FR"
+    ],
+    "tags": [
+      "오페라",
+      "클래식",
+      "번안",
+      "무곡"
+    ],
+    "memo": "스페인 무곡 El Arreglito의 멜로디를 차용한, 비제의 오페라 <카르멘> 속 아리아.",
+    "links": [],
+    "youtube": [
+      {
+        "title": "Angela Gheorghiu (프랑스어 자막)",
+        "url": "https://www.youtube.com/watch?v=tSsNFPk2vNA"
+      },
+      {
+        "title": "André Rieu & Carmen Monarcha",
+        "url": "https://www.youtube.com/watch?v=icJRTdpS2pU"
+      }
+    ],
+    "image": "covers/300-carmen-bizet.jpg"
   },
   {
     "title": "Kare Nanhasi",
@@ -11579,38 +11628,19 @@
     "image": "covers/321-waka-waka.jpg"
   },
   {
-    "title": "Habanera",
-    "year": "1875",
+    "title": "Funiculì, Funiculà",
+    "year": "1880",
     "artist": [],
-    "songwriters": [
-      "Sebastián Iradier",
-      "Georges Bizet"
-    ],
-    "language": [
-      "프랑스어"
-    ],
-    "countries": [
-      "FR"
-    ],
-    "tags": [
-      "오페라",
-      "클래식",
-      "번안",
-      "무곡"
-    ],
-    "memo": "스페인 무곡 El Arreglito의 멜로디를 차용한, 비제의 오페라 <카르멘> 속 아리아.",
-    "links": [],
+    "songwriters": ["Luigi Denza","Peppino Turco"],
+    "language": ["나폴리어"],
+    "countries": ["IT"],
+    "tags": ["나폴리","광고음악"],
+    "memo": "베수비오 산의 첫 강삭철도 건설을 기념하여 만들어진 홍보곡. 이탈리아 하면 생각날 정도로 크게 히트한 곡이다. 얌머 얌머",
     "youtube": [
-      {
-        "title": "Angela Gheorghiu (프랑스어 자막)",
-        "url": "https://www.youtube.com/watch?v=tSsNFPk2vNA"
-      },
-      {
-        "title": "André Rieu & Carmen Monarcha",
-        "url": "https://www.youtube.com/watch?v=icJRTdpS2pU"
-      }
+      {"title": "I Cantori della Montagna", "url": "https://www.youtube.com/watch?v=XW0W7j04iRQ"},
+      {"title": "Luciano Pavarotti", "url": "https://www.youtube.com/watch?v=yTSAZAHiOa8"}
     ],
-    "image": "covers/322-habanera.jpg"
+    "image": "covers/322-funiculi-funicula.jpg"
   },
   {
     "title": "Danza Kuduro",
@@ -11729,7 +11759,7 @@
     "image": "covers/326-bela-keler.jpg"
   },
   {
-    "title": "Hungarian Dance No.5 (Ungarische Tänze Nr.5)",
+    "title": "헝가리 무곡 제5번 (Ungarische Tänze Nr.5)",
     "year": 1869,
     "artist": [],
     "songwriters": [
@@ -13369,7 +13399,7 @@
     ],
     "image": "covers/394-montero-lil-nas-x.jpg"
   },
-    {
+  {
     "title": "Cake By The Ocean",
     "year": "2015",
     "artist": ["DNCE"],
@@ -13382,5 +13412,77 @@
       {"title": "MV", "url": "https://www.youtube.com/watch?v=vWaRiD5ym74"}
     ],
     "image": "covers/395-swaay-dnce.jpg"
+  },
+  {
+    "title": "Gangsta's Paradise",
+    "year": "1995",
+    "artist": ["Coolio","L.V."],
+    "songwriters": ["Artis Ivey Jr.","Larry Sanders","Doug Rasheed","Stevie Wonder"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["힙합","갱스터랩"],
+    "memo": "빈민가의 현실을 고발하는 가사. 90년대 힙합 명곡",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/fPO76Jlnz6c?si=eI85_t__JLjSagpG"}
+    ],
+    "image": "covers/396-gangstas-paradise.jpg"
+  },
+  {
+    "title": "丘丘 (Qiu Qiu)",
+    "year": "2022",
+    "artist": ["Young Drug (回春丹)"],
+    "songwriters": ["刘西蒙"],
+    "language": ["중국어","광동어"],
+    "countries": ["CN"],
+    "tags": ["밈","인디","락"],
+    "memo": "찹츄 찹찹츄. 밈이 되어버린 중국 밴드 회춘단의 곡.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=XQglsRW3B-M"},
+      {"title": "가사 + 한국어 번역", "url": "https://www.youtube.com/watch?v=IHvR_MvM_bE"}
+    ],
+    "image": "covers/397-butterfly-회춘단.jpg"
+  },
+  {
+    "title": "I Miss U (好想你)",
+    "year": "2014",
+    "artist": ["Joyce Chu (四叶草)"],
+    "songwriters": ["Namewee (黃明志)"],
+    "language": ["중국어"],
+    "countries": ["MY"],
+    "tags": ["만도팝","포크"],
+    "memo": "말레이시아 화교 가수 쥬쥬아이의 대표곡. 하오샹니",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=fdQgPu3iUYk"},
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=oVZ5DjqLR_w"}
+    ],
+    "image": "covers/398-haoxiangni.jpg"
+  },
+  {
+    "title": "7 years",
+    "year": "2015",
+    "artist": ["Lukas Graham"],
+    "songwriters": ["Lukas Forchhammer","Stefan Forrest","Morten Ristorp","Morten Pilegaard"],
+    "language": ["영어"],
+    "countries": ["DK"],
+    "tags": ["인생","팝","소울"],
+    "memo": "루카스 그레이엄의 대표곡. 내가 일곱 살이었을때...",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=LHCob76kigA"}
+    ],
+    "image": "covers/399-7years-lucas-graham.jpg"
+  },
+  {
+    "title": "Skyfall",
+    "year": "2012",
+    "artist": ["Adele"],
+    "songwriters": ["Adele Adkins","Paul Epworth"],
+    "language": ["영어"],
+    "countries": ["GB"],
+    "tags": ["영화음악","오케스트럴팝"],
+    "memo": "영화 <007 스카이폴> 주제가이자 아델을 대표하는 곡 중 하나. 하늘이 무너질 때...",
+    "youtube": [
+      {"title": "Lyric Video", "url": "https://www.youtube.com/watch?v=DeumyOzKqgI"}
+    ],
+    "image": "covers/400-skyfall-adele.jpg"
   }
 ]
