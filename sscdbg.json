@@ -7401,36 +7401,34 @@
     "image": "covers/201-faded-alan-walker.jpg"
   },
   {
-    "title": "Blinding Lights",
-    "year": "2019",
-    "artist": [
-      "The Weeknd"
-    ],
-    "songwriters": [
-      "Abel Tesfaye",
-      "Ahmad Balshe",
-      "Jason Quenneville",
-      "Max Martin",
-      "Oscar Holter"
-    ],
-    "language": [
-      "영어"
-    ],
-    "countries": [
-      "CA"
-    ],
-    "tags": [
-      "신스팝",
-      "댄스"
-    ],
-    "memo": "The Weeknd의 첫 번째 히트곡. 80년대스러운 신스",
+    "title": "Lost Stars",
+    "year": "2014",
+    "artist": ["Adam Levine"],
+    "songwriters": ["Gregg Alexander","Danielle Brisebois","Nick Lashley","Nick Southwood"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["팝록","영화음악","팝"],
+    "memo": "영화 <비긴 어게인> OST. 한국에서 유난히 인기가 좋다.",
     "youtube": [
-      {
-        "title": "MV",
-        "url": "https://www.youtube.com/watch?v=4NRXx6U8ABQ"
-      }
+      {"title": "영화", "url": "https://www.youtube.com/watch?v=cL4uhaQ58Rk"},
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=5U-JroWwFkw"}
     ],
-    "image": "covers/202-blinding-lights-the-weeknd.jpg"
+    "image": "covers/202-v-maroon-5.jpg"
+  },
+  {
+    "title": "Sugar",
+    "year": "2014",
+    "artist": ["Maroon 5"],
+    "songwriters": ["Mike Posner","Adam Levine","Joshua Coleman","Lukasz Gottwald","Jacob Kasher Hindlin","Henry Walter"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["소울","디스코","펑크팝"],
+    "memo": "마룬5 5집 히트곡 중 하나.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=09R8_2nJtjg"},
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=BNORkjGS_W0"}
+    ],
+    "image": "covers/202-v-maroon-5.jpg"
   },
   {
     "title": "APT.",
@@ -8971,7 +8969,7 @@
   },
   {
     "title": "High and Dry",
-    "year": "1998",
+    "year": "1995",
     "artist": [
       "Radiohead"
     ],
@@ -8987,7 +8985,7 @@
     "tags": [
       "얼터너티브록"
     ],
-    "memo": "라디오헤드 곡 중 가장 좋아하는 노래.",
+    "memo": "라디오헤드 2집 대표곡. 대중적인 곡이지만 정작 라디오머리 본인들은 별로 안 좋아하는 듯",
     "youtube": [
       {
         "title": "MV",
@@ -8997,6 +8995,20 @@
         "title": "Live on 2 Meter Sessions",
         "url": "https://www.youtube.com/watch?v=EhiJ1OU5NJc"
       }
+    ],
+    "image": "covers/245-the-bends-radiohead.jpg"
+  },
+  {
+    "title": "Fake Plastic Trees",
+    "year": "1995",
+    "artist": ["Radiohead"],
+    "songwriters": ["Radiohead"],
+    "language": ["영어"],
+    "countries": ["GB"],
+    "tags": ["얼터너티브록"],
+    "memo": "라디오헤드 2집, 플라스틱 나무로 대표되는 가짜 사랑, 가짜 행복에 관하여",
+    "youtube": [
+      {"title": "MV","url": "https://youtu.be/n5h0qHwNrHk?si=wJ1X51KstRQHaQmK"}
     ],
     "image": "covers/245-the-bends-radiohead.jpg"
   },
@@ -10789,7 +10801,34 @@
         "url": "https://www.youtube.com/watch?v=_dK2tDK9grQ"
       }
     ],
-    "image": "covers/294-shape-of-you-justin-bieber.jpg"
+    "image": "covers/294-divide-ed-sheeran.jpg"
+  },
+  {
+    "title": "Perfect",
+    "year": "2017",
+    "artist": [
+      "Ed Sheeran"
+    ],
+    "songwriters": [
+      "Ed Sheeran",
+      "Will Hicks"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "GB"
+    ],
+    "tags": [
+      "팝","발라드"
+    ],
+    "memo": "에드 시런 3집 수록곡.",
+    "youtube": [
+      {"title": "MV","url": "https://www.youtube.com/watch?v=2Vv-BfVoq4g"},
+      {"title": "Beyoncé와의 듀엣 버전","url": "https://www.youtube.com/watch?v=817P8W8-mGE"},
+      {"title": "Lyric Video","url": "https://www.youtube.com/watch?v=iKzRIweSBLA"}
+    ],
+    "image": "covers/294-divide-ed-sheeran.jpg"
   },
   {
     "title": "Wake Me Up",
@@ -12754,7 +12793,65 @@
         "url": "https://www.youtube.com/watch?v=Bm5iA4Zupek"
       }
     ],
-    "image": "covers/356-runaway-kanye-west.jpg"
+    "image": "covers/356-my-beautiful-kanye-west.jpg"
+  },
+  {
+    "title": "Runaway",
+    "year": "2010",
+    "artist": [
+      "Kanye West","Rihanna","Kid Cudi"
+    ],
+    "songwriters": [
+      "Kanye West","Scott Mescudi","Jeffrey Bhasker","Stacy Ferguson","Terius Nash","Malik Yusef","Warren Trotter"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "US","BB"
+    ],
+    "tags": [
+      "R&B","힙합","팝랩"
+    ],
+    "memo": "칸예 5집의 명곡, '모든 빛'. 엘튼 존이 연주한 전주(Interlude)가 별도의 곡으로 수록되어 있으며, 표시된 피처링 외에도 다양한 아티스트들의 목소리가 들어가 있다.",
+    "youtube": [
+      {"title": "MV","url": "https://www.youtube.com/watch?v=HAfFfqiYLp0"},
+      {"title": "음원 (Interlude)","url": "https://www.youtube.com/watch?v=WHxRd_va950"},
+      {"title": "음원","url": "https://www.youtube.com/watch?v=DTq4XEliPag"}
+    ],
+    "image": "covers/356-my-beautiful-kanye-west.jpg"
+  },
+  {
+    "title": "Blinding Lights",
+    "year": "2019",
+    "artist": [
+      "The Weeknd"
+    ],
+    "songwriters": [
+      "Abel Tesfaye",
+      "Ahmad Balshe",
+      "Jason Quenneville",
+      "Max Martin",
+      "Oscar Holter"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "CA"
+    ],
+    "tags": [
+      "신스팝",
+      "댄스"
+    ],
+    "memo": "The Weeknd의 첫 번째 히트곡. 80년대스러운 신스",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=4NRXx6U8ABQ"
+      }
+    ],
+    "image": "covers/357-after-hours-the-weeknd.jpg"
   },
   {
     "title": "Save Your Tears",
@@ -12780,7 +12877,7 @@
       "팝",
       "R&B"
     ],
-    "memo": "'네 눈물은 아껴 둬', 나중을 위해. 아리아나 그란데와의 리믹스 버전도 좋다.",
+    "memo": "'네 눈물은 아껴 둬', 더 위켄드 4집 수록곡. 아리아나 그란데와의 리믹스 버전도 좋다.",
     "youtube": [
       {
         "title": "MV",
@@ -12791,7 +12888,37 @@
         "url": "https://youtu.be/LIIDh-qI9oI?si=m7ImZm9UCFMtvD1v"
       }
     ],
-    "image": "covers/357-save-your-tears-the-weeknd.jpg"
+    "image": "covers/357-after-hours-the-weeknd.jpg"
+  },
+  {
+    "title": "In Your Eyes",
+    "year": "2020",
+    "artist": [
+      "The Weeknd"
+    ],
+    "songwriters": [
+      "Abel Tesfaye",
+      "Ahmad Balshe",
+      "Max Martin",
+      "Oscar Holter"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "CA"
+    ],
+    "tags": [
+      "신스팝",
+      "뉴웨이브"
+    ],
+    "memo": "더 위켄드 4집 수록곡. 네 눈동자 속에, 네 안에서 타오르는 무언가가 보여.",
+    "youtube": [
+      {"title": "음원","url": "https://www.youtube.com/watch?v=E3QiD99jPAg"},
+      {"title": "MV","url": "https://youtu.be/dqRZDebPIGs?si=S7bnVLmlSMbbWIm-"},
+      {"title": "리믹스 버전 (Doja Cat)","url": "https://www.youtube.com/watch?v=ozMBCFd7fFM"}
+    ],
+    "image": "covers/357-after-hours-the-weeknd.jpg"
   },
   {
     "title": "thank u, next",
@@ -13524,5 +13651,64 @@
       {"title": "Lyric Video", "url": "https://www.youtube.com/watch?v=DeumyOzKqgI"}
     ],
     "image": "covers/400-skyfall-adele.jpg"
+  },
+  {
+    "title": "SICKO MODE",
+    "year": "2018",
+    "artist": ["Travis Scott","Drake"],
+    "songwriters": ["Jacques Webster II","Aubrey Graham","Khalif Brown","John Hawkins","Chauncey Hollis","Ozan Yildirim","Cydel Young","Tim Gomringer","Kevin Gomringer","Mirsad Dervić","Rogét Chahayed","Brytavious Chambers","Mike Dean","Luther Campbell","Harry Wayne Casey","Richard Finch","Christopher Wallace","Osten Harvey","Bryan Higgins","Trevor Smith","James Jackson","Malik Taylor","Keith Elam","Christopher Martin","Kamaal Fareed","Ali Shaheed Muhammad","Tyrone Taylor","Fred Scruggs","Kirk Jones","Chylow Parker","O'Shea Jackson"],
+    "language": ["영어"],
+    "countries": ["US","CA"],
+    "tags": ["프로그레시브랩","트랩","힙합"],
+    "memo": "곡 분위기가 다양하게 바뀌는 트래비스 스캇의 대표곡. 작곡가가 뭐이렇게 많을까",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=6ONRf7h3Mdk"}
+    ],
+    "image": "covers/401-astroworld-travis-scott.jpg"
+  },
+  {
+    "title": "Titanium",
+    "year": "2011",
+    "artist": ["David Guetta","Sia"],
+    "songwriters": ["David Guetta","Sia Furler","Giorgio Tuinfort","Nick van de Wall"],
+    "language": ["영어"],
+    "countries": ["FR","AU"],
+    "tags": ["하우스","일렉트로닉","댄스","팝"],
+    "memo": "총알을 막아내는 티타늄처럼.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=JRfuAukYTKg"}
+    ],
+    "image": "covers/402-titanium.jpg"
+  },
+  {
+    "title": "Young Dumb & Broke",
+    "year": "2017",
+    "artist": ["Khalid"],
+    "songwriters": ["Khalid Robinson","Joel Little","Talay Riley"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["R&B"],
+    "memo": "우리는 어리고, 어리석고, 가난한 고등학생들이야.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=g9Aaf1fWdLQ"},
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=IPfJnp1guPc"}
+    ],
+    "image": "covers/403-american-teen-khalid.jpg"
+  },
+  {
+    "title": "500 Miles",
+    "year": "1961",
+    "artist": ["Hedy West"],
+    "songwriters": ["Hedy West"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["포크"],
+    "memo": "집에서 500마일(805km)이나 떨어져 있어요...",
+    "youtube": [
+      {"title": "Hedy West", "url": "https://www.youtube.com/watch?v=rwnNdqpCF8Q"},
+      {"title": "Bobby Bare 버전", "url": "https://www.youtube.com/watch?v=EPcCA4HThS4"},
+      {"title": "Peter, Paul and Mary 버전", "url": "https://youtu.be/UJmbn1sQw2A?si=LxMJ8SePkcQRWtPK"}
+    ],
+    "image": "covers/404-hedy-west.jpg"
   }
 ]
