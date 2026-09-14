@@ -156,15 +156,36 @@ function initBubbleView() {
     .attr("class", "bubble-bg")
     .attr("r", BUBBLE_RADIUS);
 
-  nodeSel.append("circle")
-    .attr("class", "bubble-border")
+  // 앨범 이미지가 있는 곡만 원형으로 잘라서 채움 (없으면 음표 아이콘 유지)
+  nodeSel.append("clipPath")
+    .attr("id", d => `bubble-clip-${d.id}`)
+    .append("circle")
     .attr("r", BUBBLE_RADIUS);
 
-  nodeSel.append("text")
+  nodeSel
+    .filter(d => !!d.song.image)
+    .append("image")
+    .attr("class", "bubble-image")
+    .attr("clip-path", d => `url(#bubble-clip-${d.id})`)
+    .attr("x", -BUBBLE_RADIUS)
+    .attr("y", -BUBBLE_RADIUS)
+    .attr("width", BUBBLE_RADIUS * 2)
+    .attr("height", BUBBLE_RADIUS * 2)
+    .attr("preserveAspectRatio", "xMidYMid slice")
+    .attr("href", d => d.song.image)
+    .attr("xlink:href", d => d.song.image);
+
+  nodeSel
+    .filter(d => !d.song.image)
+    .append("text")
     .attr("class", "bubble-note")
     .attr("text-anchor", "middle")
     .attr("dy", "0.35em")
     .text("♪");
+
+  nodeSel.append("circle")
+    .attr("class", "bubble-border")
+    .attr("r", BUBBLE_RADIUS);
 
   nodeSel.append("title")
     .text(d => `${d.song.title} - ${(d.song.artist || []).join(", ")}`);
@@ -228,10 +249,10 @@ function initBubbleView() {
         .id(d => d.id)
         .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
     )
-    .force("charge", d3.forceManyBody().strength(-24))
+    .force("charge", d3.forceManyBody().strength(-42))
     .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.03))
     .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.03))
-    .force("collide", d3.forceCollide(BUBBLE_RADIUS + 3))
+    .force("collide", d3.forceCollide(BUBBLE_RADIUS + 9))
     .on("tick", () => {
       linkSel
         .attr("x1", d => d.source.x)
