@@ -674,7 +674,6 @@
     "tags": [
       "소련",
       "록",
-      "피",
       "포스트펑크",
       "뉴웨이브"
     ],
@@ -1741,7 +1740,7 @@
     "tags": [
       "민요",
       "폴카",
-      "전쟁"
+      "전쟁","2차대전"
     ],
     "memo": "카렐리야 Säkkijärvi 지역 민요, Viljo Vesterinen에 의해 대중화. 계속전쟁 기간 동안 핀란드군이 소련군의 무선 지뢰 기폭을 방해하기 위해 반복하여 송출했다.",
     "youtube": [
@@ -1796,7 +1795,7 @@
         "url": "https://www.youtube.com/watch?v=97SC9MZAFYA"
       }
     ],
-    "image": "covers/049-nessun-dorma.jpg"
+    "image": "covers/049-puccini.jpg"
   },
   {
     "title": "'O Sole Mio",
@@ -1865,7 +1864,7 @@
         "url": "https://www.youtube.com/watch?v=tEZM6xJu6_Q"
       }
     ],
-    "image": "covers/051-brindisi-libiamo-ne-lieti-calici.jpg"
+    "image": "covers/051-verdi.jpg"
   },
   {
     "title": "La donna è mobile",
@@ -1892,7 +1891,70 @@
         "url": "https://www.youtube.com/watch?v=xCFEk6Y8TmM"
       }
     ],
-    "image": "covers/052-la-donna-è-mobile.jpg"
+    "image": "covers/051-verdi.jpg"
+  },
+  {
+    "title": "Triumphal March (Marcia Trionfale)",
+    "year": 1871,
+    "artist": [],
+    "songwriters": [
+      "Giuseppe Verdi"
+    ],
+    "language": [
+      "이탈리아어"
+    ],
+    "countries": [
+      "IT"
+    ],
+    "tags": [
+      "클래식",
+      "오페라",
+      "이집트",
+      "아이다"
+    ],
+    "memo": "오페라 <아이다> 2막, 이집트군의 개선 행진곡.",
+    "youtube": [
+      {
+        "title": "Wiener Philharmoniker(?)",
+        "url": "https://www.youtube.com/watch?v=JXMdei-UTfw"
+      },
+      {
+        "title": "Czech Philharmony choir Brno, Czech Radio symphony orchestra",
+        "url": "https://www.youtube.com/watch?v=5j1dYi2Q_C0"
+      }
+    ],
+    "image": "covers/051-verdi.jpg"
+  },
+  {
+    "title": "Battle Hymn of the Republic",
+    "year": "1862",
+    "artist": [],
+    "songwriters": [
+      "Julia Ward Howe",
+      "William Steffe",
+      "Traditional"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "US"
+    ],
+    "tags": [
+      "군가","전쟁","종교음악","미국남북전쟁"
+    ],
+    "memo": "남북전쟁 중 북군에서 쓰인 애국적인 곡. 찬송가나 응원가 등으로도 자주 사용된다. 멜로디는 전쟁 이전 곡 'John Brown's Body'에서 가져왔다.",
+    "youtube": [
+      {
+        "title": "가사",
+        "url": "https://www.youtube.com/watch?v=sfuLrny00t4"
+      },
+      {
+        "title": "도널드 트럼프 대통령 취임식 (2025)",
+        "url": "https://www.youtube.com/watch?v=9xV67B74YCA"
+      }
+    ],
+    "image": "covers/052-battle-hymn.jpg"
   },
   {
     "title": "تملي معاك (Tamally Maak)",
@@ -2650,7 +2712,7 @@
     "tags": [
       "민요",
       "군가",
-      "전쟁",
+      "전쟁","2차대전",
       "소련"
     ],
     "memo": "2차 세계대전 기간 소련에서 유행한 국민 노래. 카츄샤는 예카테리나의 애칭",
@@ -2687,7 +2749,7 @@
     ],
     "tags": [
       "군가",
-      "전쟁",
+      "전쟁","2차대전","적백내전",
       "이별"
     ],
     "memo": "'슬라브 여인의 작별' - 러시아 제국 시대부터 군인들 사이에서 인기를 끈 곡. 가사는 여러 버전이 있다. 탐보프 주의 주가",
@@ -2722,7 +2784,7 @@
     "tags": [
       "번안",
       "군가",
-      "전쟁",
+      "전쟁","2차대전",
       "소련",
       "풍자"
     ],
@@ -3796,7 +3858,7 @@
       "BA"
     ],
     "tags": [
-      "전쟁",
+      "전쟁","유고전쟁",
       "터보포크",
       "밈"
     ],
@@ -3838,7 +3900,7 @@
     ],
     "tags": [
       "터보포크",
-      "전쟁",
+      "전쟁","유고전쟁",
       "케밥",
       "밈"
     ],
@@ -3868,7 +3930,7 @@
     ],
     "tags": [
       "터보포크",
-      "전쟁",
+      "전쟁","유고전쟁",
       "밈"
     ],
     "memo": "크로아티아의 전시 애국 음악. 어깨에 총올리고 노래부르는 MV가 인상적.",
@@ -6274,7 +6336,7 @@
     ],
     "tags": [
       "민중가요",
-      "전쟁"
+      "전쟁","2차대전"
     ],
     "memo": "이탈리아 노동요에서 유래한, 레시스텐차를 위한 헌정곡. 다만 2차대전 당시 불리지는 않은 듯하다.",
     "youtube": [
@@ -6376,7 +6438,7 @@
       "IE"
     ],
     "tags": [
-      "전쟁",
+      "1차대전",
       "풍자",
       "민요"
     ],
@@ -6565,8 +6627,7 @@
       "FR"
     ],
     "tags": [
-      "샹송",
-      "전쟁",
+      "샹송","2차대전",
       "인생"
     ],
     "memo": "'아니요, 전혀 후회하지 않아요.' 프랑스 외인부대에 헌정된 곡",
@@ -7611,7 +7672,7 @@
       "BA"
     ],
     "tags": [
-      "전쟁",
+      "전쟁","2차대전",
       "선전가요"
     ],
     "memo": "유고슬라비아 파르티잔 지도자 티토를 찬양하는 2차대전 시기 곡.",
@@ -8116,7 +8177,7 @@
     ],
     "tags": [
       "터보포크",
-      "전쟁",
+      "전쟁","유고전쟁",
       "풍자"
     ],
     "memo": "보스니아 지도자 알리야 이제트베고비치를 까는 세르비아 노래.",
@@ -9787,7 +9848,7 @@
       "KR"
     ],
     "tags": [
-      "군가"
+      "군가","한국전쟁"
     ],
     "memo": "한국전쟁 중 창작된 대한민국 공군 군가.",
     "youtube": [
@@ -9813,7 +9874,7 @@
       "KR"
     ],
     "tags": [
-      "군가"
+      "군가","한국전쟁"
     ],
     "memo": "대한민국 해군 최초의 군가. 초대 해군참모총장 부부가 작사 및 작곡",
     "youtube": [
@@ -10239,8 +10300,7 @@
       "US"
     ],
     "tags": [
-      "민스트럴",
-      "포크"
+      "민스트럴","포크","미국남북전쟁"
     ],
     "memo": "미국 남북 전쟁 기간 남군에 의해 사용된, 남부를 상징하는 곡 중 하나.",
     "youtube": [
@@ -10920,15 +10980,14 @@
         "url": "https://www.youtube.com/watch?v=g2ULycjl_g0"
       }
     ],
-    "image": "covers/300-carmen-bizet.jpg"
+    "image": "covers/300-bizet.jpg"
   },
   {
     "title": "Habanera",
     "year": "1875",
     "artist": [],
     "songwriters": [
-      "Sebastián Iradier",
-      "Georges Bizet"
+      "Georges Bizet","Sebastián Iradier"
     ],
     "language": [
       "프랑스어"
@@ -10954,7 +11013,7 @@
         "url": "https://www.youtube.com/watch?v=icJRTdpS2pU"
       }
     ],
-    "image": "covers/300-carmen-bizet.jpg"
+    "image": "covers/300-bizet.jpg"
   },
   {
     "title": "Kare Nanhasi",
@@ -11436,8 +11495,7 @@
     "tags": [
       "신스팝",
       "록",
-      "전쟁",
-      "평화"
+      "전쟁"
     ],
     "memo": "'풍선 99개'로 때문에 일어난 핵전쟁. 유럽과 북미에서 크게 인기를 얻은 서독의 반전 노래.",
     "youtube": [
@@ -11820,36 +11878,19 @@
     "image": "covers/328-bądarzewska.jpg"
   },
   {
-    "title": "Triumphal March (Marcia Trionfale)",
-    "year": 1871,
-    "artist": [],
-    "songwriters": [
-      "Giuseppe Verdi"
-    ],
-    "language": [
-      "이탈리아어"
-    ],
-    "countries": [
-      "IT"
-    ],
-    "tags": [
-      "클래식",
-      "오페라",
-      "이집트",
-      "아이다"
-    ],
-    "memo": "오페라 <아이다> 2막, 이집트군의 개선 행진곡.",
+    "title": "Old Town Road",
+    "year": "2018",
+    "artist": ["Lil Nas X"],
+    "songwriters": ["Montero Hill","Trent Reznor","Atticus Ross","Kiowa Roukema"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["트랩","컨트리","힙합"],
+    "memo": "컨트리와 힙합이 섞인, Lil Nas X의 데뷔곡이자 메가히트곡. 컨트리 가수 Billy Ray Cyrus와의 리믹스 버전이 가장 유명하다.",
     "youtube": [
-      {
-        "title": "Wiener Philharmoniker(?)",
-        "url": "https://www.youtube.com/watch?v=JXMdei-UTfw"
-      },
-      {
-        "title": "Czech Philharmony choir Brno, Czech Radio symphony orchestra",
-        "url": "https://www.youtube.com/watch?v=5j1dYi2Q_C0"
-      }
+      {"title": "원곡 (가사)", "url": "https://www.youtube.com/watch?v=vdGqNAhzBVo"},
+      {"title": "MV (ft. Billy Ray Cyrus)", "url": "https://youtu.be/r7qovpFAGrQ?si=LwLleu77P5bQz7kY"}
     ],
-    "image": "covers/329-aida.jpg"
+    "image": "covers/329-old-town-road.jpg"
   },
   {
     "title": "As It Was",
@@ -12223,7 +12264,7 @@
     ],
     "tags": [
       "군가",
-      "전쟁",
+      "전쟁","2차대전",
       "밈"
     ],
     "memo": "2차대전 기간 독일군 군가. 나치 독일을 상징하는 곡처럼 자리잡았다.",
@@ -13259,7 +13300,7 @@
     "songwriters": ["Agim Doçi","Edmond Zhulali"],
     "language": ["알바니아어"],
     "countries": ["AL"],
-    "tags": ["전쟁","코소보","군가"],
+    "tags": ["전쟁","코소보","군가","유고전쟁"],
     "memo": "코소보 전쟁 기간 동안 (친알바니아) 코소보 해방군에서 사용된 군가.",
     "youtube": [
       {"title": "공연 영상", "url": "https://youtu.be/7pdFlxdJlsQ?si=tJK8eGyV_yzORBcC"}

@@ -9,5 +9,6 @@
     "memo": "",
     "youtube": [
       {"title": "", "url": ""}
-    ]
+    ],
+    "image": "covers/.jpg"
   }
