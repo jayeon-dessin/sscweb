@@ -14,7 +14,7 @@ let bubbleGroupsByKey = null; // 이미지 경로 -> 그 이미지를 공유하�
 
 const BUBBLE_WIDTH = 1000;
 const BUBBLE_HEIGHT = 640;
-const BUBBLE_RADIUS = 20;
+const BUBBLE_RADIUS = 25;
 
 // 두 [경도, 위도] 좌표 사이의 거리 (km, haversine 공식)
 function haversineDistanceKm(coordA, coordB) {
@@ -186,7 +186,7 @@ function selectBubbleGroup(group) {
   showSongsUI();
 
   countryTitle.innerHTML = `
-    같은 이미지를 쓰는 곡
+    이미지를 공유하는 곡
     <span class="country-title-count">${group.songs.length}곡</span>
   `;
 
@@ -331,7 +331,7 @@ function initBubbleView() {
     .force("charge", d3.forceManyBody().strength(-42))
     .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.03))
     .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.03))
-    .force("collide", d3.forceCollide(d => d.radius + 9))
+    .force("collide", d3.forceCollide(d => d.radius + 5))
     .on("tick", () => {
       nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
     });

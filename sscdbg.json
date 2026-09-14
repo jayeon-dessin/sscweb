@@ -5685,7 +5685,39 @@
         "url": "https://www.youtube.com/watch?v=Zi_XLOBDo_Y"
       }
     ],
-    "image": "covers/150-billie-jean-michael-jackson.jpg"
+    "image": "covers/150-thriller-michael-jackson.jpg"
+  },
+    {
+    "title": "Beat It",
+    "year": "1982",
+    "artist": [
+      "Michael Jackson"
+    ],
+    "songwriters": [
+      "Michael Jackson"
+    ],
+    "language": [
+      "영어"
+    ],
+    "countries": [
+      "US"
+    ],
+    "tags": [
+      "팝",
+      "댄스"
+    ],
+    "memo": "마이클 잭슨 6집의 대표곡 중 하나. 전주가 좋다.",
+    "youtube": [
+      {
+        "title": "MV",
+        "url": "https://www.youtube.com/watch?v=oRdxUFDoQe0"
+      },
+      {
+        "title": "음원",
+        "url": "https://www.youtube.com/watch?v=kOn-HdEg6AQ"
+      }
+    ],
+    "image": "covers/150-thriller-michael-jackson.jpg"
   },
   {
     "title": "Hava Nagila (הָבָה נָגִילָה)",
@@ -6163,36 +6195,19 @@
     "image": "covers/165-австралия-오스트레일리아-майами.jpg"
   },
   {
-    "title": "Beat It",
-    "year": "1982",
-    "artist": [
-      "Michael Jackson"
-    ],
-    "songwriters": [
-      "Michael Jackson"
-    ],
-    "language": [
-      "영어"
-    ],
-    "countries": [
-      "US"
-    ],
-    "tags": [
-      "팝",
-      "댄스"
-    ],
-    "memo": "마이클 잭슨 6집의 대표곡 중 하나. 전주가 좋다.",
+    "title": "Moves Like Jagger",
+    "year": "2011",
+    "artist": ["Maroon 5","Christina Aguilera"],
+    "songwriters": ["Adam Levine","Benny Blanco","Ammar Malik","Shellback"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["디스코","일렉트로팝","댄스팝"],
+    "memo": "I got the moves like Jagger. 롤링 스톤스의 믹 재거처럼!",
     "youtube": [
-      {
-        "title": "MV",
-        "url": "https://www.youtube.com/watch?v=oRdxUFDoQe0"
-      },
-      {
-        "title": "음원",
-        "url": "https://www.youtube.com/watch?v=kOn-HdEg6AQ"
-      }
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=iEPTlhBmwRg"},
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=suRsxpoAc5w"}
     ],
-    "image": "covers/166-beat-it-michael-jackson.jpg"
+    "image": "covers/166-moves-like-jagger.jpg"
   },
   {
     "title": "L'internationale (인터내셔널가)",
@@ -13353,5 +13368,19 @@
       {"title": "MV", "url": "https://www.youtube.com/watch?v=UTHLKHL_whs"}
     ],
     "image": "covers/394-montero-lil-nas-x.jpg"
+  },
+    {
+    "title": "Cake By The Ocean",
+    "year": "2015",
+    "artist": ["DNCE"],
+    "songwriters": ["Joseph Jonas","Justin Tranter","Mattias Larsson","Robin Fredriksson"],
+    "language": ["영어"],
+    "countries": ["US","KR"],
+    "tags": ["팝","댄스","펑크","디스코"],
+    "memo": "밴드 DNCE의 히트곡. 안 그런 것 같지만 선정적인 주제",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=vWaRiD5ym74"}
+    ],
+    "image": "covers/395-swaay-dnce.jpg"
   }
 ]
