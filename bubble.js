@@ -93,11 +93,11 @@ function computeSimilarity(songA, songB) {
   const langSim = jaccardSimilarity(songA.language, songB.language);
 
   return (
-    geoSim * 0.45 +
-    tagSim * 0.22 +
-    artistSim * 0.18 +
-    writerSim * 0.12 +
-    langSim * 0.03
+    geoSim * 0.3 +
+    tagSim * 0.2 +
+    artistSim * 0.2 +
+    writerSim * 0.15 +
+    langSim * 0.15
   );
 }
 
