@@ -10,11 +10,12 @@ let bubbleInnerGroup = null;
 let bubbleSimulation = null;
 let bubbleZoomBehavior = null;
 let bubbleNodesData = null;
+let bubbleLinks = null; // 현재 가중치 기준 KNN 링크 (가중치 바뀌면 다시 계산됨)
 let bubbleGroupsByKey = null; // 이미지 경로 -> 그 이미지를 공유하는 곡 배열
 
 const BUBBLE_WIDTH = 1000;
 const BUBBLE_HEIGHT = 640;
-const BUBBLE_RADIUS = 25;
+const BUBBLE_RADIUS = 20;
 
 // 두 [경도, 위도] 좌표 사이의 거리 (km, haversine 공식)
 function haversineDistanceKm(coordA, coordB) {
@@ -82,9 +83,18 @@ function geoSimilarity(songA, songB) {
   return Math.max(0, 1 - minDistance / MAX_MEANINGFUL_DISTANCE_KM);
 }
 
-// 두 곡의 종합 유사도 (0~1)
-// 가중치: 지리 45% / 태그 22% / 아티스트 18% / 작곡·작사자 12% / 언어 3%
-// (원래는 지리 35%였는데, 지리적 인접성의 비중을 조금 더 키움)
+// 5가지 요소의 가중치. 슬라이더로 실시간 조절 가능 (합이 100이 아니어도
+// computeSimilarity에서 알아서 비율로 정규화함)
+const DEFAULT_BUBBLE_WEIGHTS = {
+  geo: 45,
+  tag: 22,
+  artist: 18,
+  writer: 12,
+  language: 3,
+};
+let bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS };
+
+// 두 곡의 종합 유사도 (0~1). bubbleWeights를 정규화해서 가중 평균을 냄
 function computeSimilarity(songA, songB) {
   const geoSim = geoSimilarity(songA, songB);
   const tagSim = jaccardSimilarity(songA.tags, songB.tags);
@@ -92,18 +102,27 @@ function computeSimilarity(songA, songB) {
   const writerSim = jaccardSimilarity(songA.songwriters, songB.songwriters);
   const langSim = jaccardSimilarity(songA.language, songB.language);
 
+  const totalWeight =
+    bubbleWeights.geo +
+    bubbleWeights.tag +
+    bubbleWeights.artist +
+    bubbleWeights.writer +
+    bubbleWeights.language;
+
+  if (totalWeight <= 0) return 0;
+
   return (
-    geoSim * 0.25 +
-    tagSim * 0.35 +
-    artistSim * 0.2 +
-    writerSim * 0.1 +
-    langSim * 0.1
-  );
+    geoSim * bubbleWeights.geo +
+    tagSim * bubbleWeights.tag +
+    artistSim * bubbleWeights.artist +
+    writerSim * bubbleWeights.writer +
+    langSim * bubbleWeights.language
+  ) / totalWeight;
 }
 
 // 곡마다 가장 유사한 K곡과 연결 (KNN, 중복 링크 제거).
 // 화면에 선을 그리진 않지만, 배치(force simulation)와 마우스오버 강조에 계속 쓰임
-function buildSimilarityLinks(representativeSongs, k = 4) {
+function buildSimilarityLinks(representativeSongs, k = 6) {
 
   const links = [];
   const seenPairs = new Set();
@@ -186,7 +205,7 @@ function selectBubbleGroup(group) {
   showSongsUI();
 
   countryTitle.innerHTML = `
-    이 이미지를 공유하는 곡
+    같은 이미지를 쓰는 곡
     <span class="country-title-count">${group.songs.length}곡</span>
   `;
 
@@ -219,7 +238,7 @@ function initBubbleView() {
   }));
 
   // 화면에는 그리지 않지만, 배치와 마우스오버 이웃 강조에 계속 사용
-  const links = buildSimilarityLinks(
+  bubbleLinks = buildSimilarityLinks(
     bubbleNodesData.map(n => representativeSongOf(n.group)),
     6
   );
@@ -283,7 +302,7 @@ function initBubbleView() {
 
   function neighborIdsOf(nodeId) {
     const ids = new Set();
-    links.forEach(l => {
+    bubbleLinks.forEach(l => {
       const s = typeof l.source === "object" ? l.source.id : l.source;
       const t = typeof l.target === "object" ? l.target.id : l.target;
       if (s === nodeId) ids.add(t);
@@ -324,14 +343,14 @@ function initBubbleView() {
     .velocityDecay(0.5)
     .force(
       "link",
-      d3.forceLink(links)
+      d3.forceLink(bubbleLinks)
         .id(d => d.id)
-        .distance(d => (6 + (1 - d.sim) * 65) * 1.2)
+        .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
     )
-    .force("charge", d3.forceManyBody().strength(-120))
+    .force("charge", d3.forceManyBody().strength(-42))
     .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.03))
     .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.03))
-    .force("collide", d3.forceCollide(d => d.radius + 3))
+    .force("collide", d3.forceCollide(d => d.radius + 9))
     .on("tick", () => {
       nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
     });
@@ -357,3 +376,80 @@ function initBubbleView() {
       .call(bubbleZoomBehavior.transform, d3.zoomIdentity);
   });
 }
+
+// -------------------------------------
+// 가중치 슬라이더 (실시간으로 유사도 재계산 + 버블 재배치)
+// -------------------------------------
+
+// 가중치가 바뀌면 KNN 링크를 다시 계산하고, 돌아가는 시뮬레이션에
+// 새 링크를 넣어서 다시 배치되도록 함
+function applyBubbleWeightChange() {
+
+  if (!bubbleInitStarted || !bubbleSimulation || !bubbleNodesData) return;
+
+  bubbleLinks = buildSimilarityLinks(
+    bubbleNodesData.map(n => representativeSongOf(n.group)),
+    6
+  );
+
+  bubbleSimulation.force(
+    "link",
+    d3.forceLink(bubbleLinks)
+      .id(d => d.id)
+      .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
+  );
+
+  bubbleSimulation.alpha(1).restart();
+}
+
+function setupBubbleWeightControls() {
+
+  const sliderKeyToId = {
+    geo: "bubble-weight-geo",
+    tag: "bubble-weight-tag",
+    artist: "bubble-weight-artist",
+    writer: "bubble-weight-writer",
+    language: "bubble-weight-language",
+  };
+
+  // 슬라이더를 드래그하는 동안 매번 447곡을 전부 재계산하면 버벅이므로,
+  // 손을 뗀 뒤 잠깐 멈췄을 때 한 번만 재계산 (디바운스)
+  let debounceTimer = null;
+
+  function scheduleRecompute() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(applyBubbleWeightChange, 250);
+  }
+
+  function syncValueLabel(id, value) {
+    const label = document.querySelector(`.bubble-weight-value[data-for="${id}"]`);
+    if (label) label.textContent = value;
+  }
+
+  Object.entries(sliderKeyToId).forEach(([key, id]) => {
+
+    const input = document.getElementById(id);
+    if (!input) return;
+
+    input.addEventListener("input", () => {
+      bubbleWeights[key] = parseInt(input.value, 10);
+      syncValueLabel(id, input.value);
+      scheduleRecompute();
+    });
+  });
+
+  document.getElementById("bubble-weight-reset")?.addEventListener("click", () => {
+
+    bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS };
+
+    Object.entries(sliderKeyToId).forEach(([key, id]) => {
+      const input = document.getElementById(id);
+      if (input) input.value = DEFAULT_BUBBLE_WEIGHTS[key];
+      syncValueLabel(id, DEFAULT_BUBBLE_WEIGHTS[key]);
+    });
+
+    applyBubbleWeightChange();
+  });
+}
+
+setupBubbleWeightControls();
