@@ -15,7 +15,7 @@ let bubbleGroupsByKey = null; // 이미지 경로 -> 그 이미지를 공유하�
 
 const BUBBLE_WIDTH = 1000;
 const BUBBLE_HEIGHT = 640;
-const BUBBLE_RADIUS = 20;
+const BUBBLE_RADIUS = 25;
 
 // 두 [경도, 위도] 좌표 사이의 거리 (km, haversine 공식)
 function haversineDistanceKm(coordA, coordB) {
@@ -86,11 +86,11 @@ function geoSimilarity(songA, songB) {
 // 5가지 요소의 가중치. 슬라이더로 실시간 조절 가능 (합이 100이 아니어도
 // computeSimilarity에서 알아서 비율로 정규화함)
 const DEFAULT_BUBBLE_WEIGHTS = {
-  geo: 45,
-  tag: 22,
-  artist: 18,
-  writer: 12,
-  language: 3,
+  geo: 20,
+  tag: 30,
+  artist: 20,
+  writer: 15,
+  language: 15,
 };
 let bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS };
 
@@ -122,7 +122,7 @@ function computeSimilarity(songA, songB) {
 
 // 곡마다 가장 유사한 K곡과 연결 (KNN, 중복 링크 제거).
 // 화면에 선을 그리진 않지만, 배치(force simulation)와 마우스오버 강조에 계속 쓰임
-function buildSimilarityLinks(representativeSongs, k = 6) {
+function buildSimilarityLinks(representativeSongs, k = 4) {
 
   const links = [];
   const seenPairs = new Set();
@@ -347,10 +347,10 @@ function initBubbleView() {
         .id(d => d.id)
         .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
     )
-    .force("charge", d3.forceManyBody().strength(-42))
+    .force("charge", d3.forceManyBody().strength(-100))
     .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.03))
     .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.03))
-    .force("collide", d3.forceCollide(d => d.radius + 9))
+    .force("collide", d3.forceCollide(d => d.radius + 5))
     .on("tick", () => {
       nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
     });
@@ -396,7 +396,7 @@ function applyBubbleWeightChange() {
     "link",
     d3.forceLink(bubbleLinks)
       .id(d => d.id)
-      .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
+      .distance(d => (9 + (1 - d.sim) * 65) * 1.2)
   );
 
   bubbleSimulation.alpha(1).restart();
