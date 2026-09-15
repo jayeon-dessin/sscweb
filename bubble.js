@@ -12,6 +12,7 @@ let bubbleZoomBehavior = null;
 let bubbleNodesData = null;
 let bubbleLinks = null; // 현재 가중치 기준 KNN 링크 (가중치 바뀌면 다시 계산됨)
 let bubbleGroupsByKey = null; // 이미지 경로 -> 그 이미지를 공유하는 곡 배열
+let bubbleFreqMaps = null; // tags/artist/songwriters/language 값별 등장 횟수 (희귀도 가중치용)
 
 const BUBBLE_WIDTH = 1000;
 const BUBBLE_HEIGHT = 640;
@@ -35,7 +36,8 @@ function haversineDistanceKm(coordA, coordB) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-// Jaccard 유사도 (교집합 크기 / 합집합 크기)
+// Jaccard 유사도 (교집합 크기 / 합집합 크기) - 희귀도를 고려하지 않는 기본형.
+// 지금은 안 쓰고, 아래 희귀도 가중 버전(weightedJaccardSimilarity)을 씀
 function jaccardSimilarity(a, b) {
   const setA = new Set(a || []);
   const setB = new Set(b || []);
@@ -47,6 +49,49 @@ function jaccardSimilarity(a, b) {
 
   const union = new Set([...setA, ...setB]).size;
   return union === 0 ? 0 : intersection / union;
+}
+
+// 전체 곡 중에서 특정 필드(tags/artist/songwriters/language)의 값별 등장 횟수를 셈.
+// 예: 언어별로 '영어'가 175곡, '아이슬란드어'가 1곡처럼 -> 희귀도 가중치 계산에 씀
+function buildFrequencyMap(songArray, field) {
+  const freq = new Map();
+  songArray.forEach(song => {
+    (song[field] || []).forEach(value => {
+      freq.set(value, (freq.get(value) || 0) + 1);
+    });
+  });
+  return freq;
+}
+
+// 희귀도 가중 Jaccard 유사도. 흔한 값(예: 영어, 팝)을 공유하는 건 약하게,
+// 희귀한 값(예: 아이슬란드어, 특정 소수 태그)을 공유하는 건 강하게 반영함.
+// (그냥 Jaccard를 쓰면 흔한 값 하나만 같아도 아무 관련 없는 곡들이 전부
+// 서로 "유사"하다고 나오면서 허브가 되어버리는 문제가 있어서 도입함)
+function weightedJaccardSimilarity(a, b, freqMap) {
+
+  const setA = new Set(a || []);
+  const setB = new Set(b || []);
+
+  if (setA.size === 0 && setB.size === 0) return 0;
+
+  const allValues = new Set([...setA, ...setB]);
+  if (allValues.size === 0) return 0;
+
+  let weightedIntersection = 0;
+  let weightedUnion = 0;
+
+  allValues.forEach(value => {
+    const count = freqMap?.get(value) || 1;
+    // 등장 횟수가 많을수록(흔할수록) 가중치가 작아짐 (log 스케일로 완만하게)
+    const weight = 1 / Math.log2(count + 1.5);
+
+    weightedUnion += weight;
+    if (setA.has(value) && setB.has(value)) {
+      weightedIntersection += weight;
+    }
+  });
+
+  return weightedUnion === 0 ? 0 : weightedIntersection / weightedUnion;
 }
 
 // 두 곡의 지리적 유사도 (0~1). 같은 나라끼리는 0으로 둠 -
@@ -97,10 +142,10 @@ let bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS };
 // 두 곡의 종합 유사도 (0~1). bubbleWeights를 정규화해서 가중 평균을 냄
 function computeSimilarity(songA, songB) {
   const geoSim = geoSimilarity(songA, songB);
-  const tagSim = jaccardSimilarity(songA.tags, songB.tags);
-  const artistSim = jaccardSimilarity(songA.artist, songB.artist);
-  const writerSim = jaccardSimilarity(songA.songwriters, songB.songwriters);
-  const langSim = jaccardSimilarity(songA.language, songB.language);
+  const tagSim = weightedJaccardSimilarity(songA.tags, songB.tags, bubbleFreqMaps?.tags);
+  const artistSim = weightedJaccardSimilarity(songA.artist, songB.artist, bubbleFreqMaps?.artist);
+  const writerSim = weightedJaccardSimilarity(songA.songwriters, songB.songwriters, bubbleFreqMaps?.songwriters);
+  const langSim = weightedJaccardSimilarity(songA.language, songB.language, bubbleFreqMaps?.language);
 
   const totalWeight =
     bubbleWeights.geo +
@@ -230,6 +275,15 @@ function initBubbleView() {
   bubbleSvg = d3.select("#bubble-svg");
   bubbleInnerGroup = bubbleSvg.append("g").attr("class", "bubble-inner");
 
+  // 희귀도 가중치 계산에 쓸 값별 등장 횟수는 곡 전체 기준으로 한 번만 구해둠
+  // (가중치 슬라이더를 조작해도 이 등장 횟수 자체는 안 바뀌므로 다시 계산할 필요 없음)
+  bubbleFreqMaps = {
+    tags: buildFrequencyMap(songs, "tags"),
+    artist: buildFrequencyMap(songs, "artist"),
+    songwriters: buildFrequencyMap(songs, "songwriters"),
+    language: buildFrequencyMap(songs, "language"),
+  };
+
   const nodeGroups = groupSongsByImage(songs);
   bubbleNodesData = nodeGroups.map((group, i) => ({
     id: i,
@@ -347,9 +401,9 @@ function initBubbleView() {
         .id(d => d.id)
         .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
     )
-    .force("charge", d3.forceManyBody().strength(-100))
-    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.03))
-    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.03))
+    .force("charge", d3.forceManyBody().strength(-120))
+    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.02))
+    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.02))
     .force("collide", d3.forceCollide(d => d.radius + 5))
     .on("tick", () => {
       nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
@@ -396,7 +450,7 @@ function applyBubbleWeightChange() {
     "link",
     d3.forceLink(bubbleLinks)
       .id(d => d.id)
-      .distance(d => (9 + (1 - d.sim) * 65) * 1.2)
+      .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
   );
 
   bubbleSimulation.alpha(1).restart();
