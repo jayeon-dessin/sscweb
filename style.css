@@ -1263,14 +1263,25 @@ hr {
 }
 
 .bubble-node {
+    /* 위치(translate)는 물리 시뮬레이션이 매 프레임 갱신하므로 여기엔
+       transition을 안 둠 (두면 오히려 버블이 밀리듯 보임) */
+}
+
+.bubble-visual {
     transition: transform 0.15s ease;
+}
+
+.bubble-hit-area {
+    fill: transparent;
+    stroke: none;
+    pointer-events: all;
 }
 
 .bubble-link {
     stroke: #34a853;
     stroke-width: 1.5;
 
-    opacity: 0;
+    opacity: 0.15;
     pointer-events: none;
 
     transition: opacity 0.15s ease;

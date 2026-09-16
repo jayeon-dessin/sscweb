@@ -132,8 +132,8 @@ function geoSimilarity(songA, songB) {
 // 5가지 요소의 가중치. 슬라이더로 실시간 조절 가능 (합이 100이 아니어도
 // computeSimilarity에서 알아서 비율로 정규화함)
 const DEFAULT_BUBBLE_WEIGHTS = {
-  geo: 20,
-  tag: 35,
+  geo: 25,
+  tag: 30,
   artist: 20,
   writer: 10,
   language: 15,
@@ -399,17 +399,23 @@ function initBubbleView() {
     .attr("class", "bubble-node")
     .style("cursor", "pointer");
 
-  nodeSel.append("circle")
+  // 실제 보이는 그림(배경/이미지/테두리 등)은 이 그룹 안에만 넣고,
+  // hover 시 이 그룹만 확대함 - 마우스 판정 영역(히트 영역)은 따로 고정 크기로
+  // 둬서, 버블이 커지는 동안 판정 경계가 마우스 위치를 스쳐 지나가며
+  // mouseenter/mouseleave가 반복 발생해 깜빡이던 문제를 없앰
+  const visualSel = nodeSel.append("g").attr("class", "bubble-visual");
+
+  visualSel.append("circle")
     .attr("class", "bubble-bg")
     .attr("r", d => d.radius);
 
   // 앨범 이미지가 있는 곡(그룹)만 원형으로 잘라서 채움 (없으면 음표 아이콘 유지)
-  nodeSel.append("clipPath")
+  visualSel.append("clipPath")
     .attr("id", d => `bubble-clip-${d.id}`)
     .append("circle")
     .attr("r", d => d.radius);
 
-  nodeSel
+  visualSel
     .filter(d => !!representativeSongOf(d.group).image)
     .append("image")
     .attr("class", "bubble-image")
@@ -422,7 +428,7 @@ function initBubbleView() {
     .attr("href", d => representativeSongOf(d.group).image)
     .attr("xlink:href", d => representativeSongOf(d.group).image);
 
-  nodeSel
+  visualSel
     .filter(d => !representativeSongOf(d.group).image)
     .append("text")
     .attr("class", "bubble-note")
@@ -430,9 +436,15 @@ function initBubbleView() {
     .attr("dy", "0.35em")
     .text("♪");
 
-  nodeSel.append("circle")
+  visualSel.append("circle")
     .attr("class", "bubble-border")
     .attr("r", d => d.radius);
+
+  // 실제로 마우스 이벤트를 받는 투명한 히트 영역. 크기가 고정이라
+  // hover 중에도 판정 경계가 안 흔들림 (bubble-visual보다 나중에 그려서 맨 위에 옴)
+  nodeSel.append("circle")
+    .attr("class", "bubble-hit-area")
+    .attr("r", d => d.radius + 4);
 
   nodeSel.append("title")
     .text(d => {
@@ -443,7 +455,9 @@ function initBubbleView() {
       return `${rep.title} 외 ${d.group.songs.length - 1}곡 (같은 이미지)`;
     });
 
-  nodeSel.on("click", (event, d) => {
+  const hitAreaSel = nodeSel.select(".bubble-hit-area");
+
+  hitAreaSel.on("click", (event, d) => {
     if (bubblePreviewedNodeId === d.id) {
       // 미리보기 상태였던 버블을 한 번 더 클릭 -> 진짜로 그 곡(들)로 이동
       hideBubblePreview();
@@ -473,16 +487,23 @@ function initBubbleView() {
     return ids;
   }
 
-  // 평소엔 translate만, hover 중인 버블만 살짝 확대. tick과 hover 둘 다 이 함수로 그림
+  // 노드 <g> 자체는 위치(translate)만 담당. 히트 영역 크기는 이걸로 안 바뀜
   function nodeTransform(d) {
-    const scale = d.hovered ? 1.35 : 1;
-    return `translate(${d.x},${d.y}) scale(${scale})`;
+    return `translate(${d.x},${d.y})`;
   }
 
-  nodeSel.on("mouseenter", (event, d) => {
+  // 실제로 보이는 그림(.bubble-visual)만 hover 시 확대. 마우스 판정 영역과는
+  // 분리되어 있어서, 커지는 동안 판정 경계가 마우스를 스쳐 지나가며
+  // mouseenter/mouseleave가 반복 발생해 깜빡이던 문제가 없음
+  function visualTransform(d) {
+    return d.hovered ? "scale(1.35)" : "scale(1)";
+  }
+
+  hitAreaSel.on("mouseenter", (event, d) => {
 
     d.hovered = true;
-    d3.select(event.currentTarget).attr("transform", nodeTransform(d));
+    d3.select(event.currentTarget.parentNode).select(".bubble-visual")
+      .attr("transform", visualTransform(d));
 
     const neighborIds = neighborIdsOf(d.id);
     nodeSel.select(".bubble-border")
@@ -495,10 +516,11 @@ function initBubbleView() {
     });
   });
 
-  nodeSel.on("mouseleave", (event, d) => {
+  hitAreaSel.on("mouseleave", (event, d) => {
 
     d.hovered = false;
-    d3.select(event.currentTarget).attr("transform", nodeTransform(d));
+    d3.select(event.currentTarget.parentNode).select(".bubble-visual")
+      .attr("transform", visualTransform(d));
 
     nodeSel.select(".bubble-border").classed("bubble-similar", false);
     linkSel.classed("bubble-link-active", false);
