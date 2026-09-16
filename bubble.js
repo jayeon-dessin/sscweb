@@ -133,17 +133,26 @@ function geoSimilarity(songA, songB) {
 // computeSimilarity에서 알아서 비율로 정규화함)
 const DEFAULT_BUBBLE_WEIGHTS = {
   geo: 20,
-  tag: 30,
+  tag: 35,
   artist: 20,
-  writer: 15,
+  writer: 10,
   language: 15,
 };
-let bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS };
+const bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS }; // 고정값 - 사이트에서 조절 불가
 
 // 두 곡의 종합 유사도 (0~1). bubbleWeights를 정규화해서 가중 평균을 냄
 function computeSimilarity(songA, songB) {
   const geoSim = geoSimilarity(songA, songB);
-  const tagSim = weightedJaccardSimilarity(songA.tags, songB.tags, bubbleFreqMaps?.tags);
+
+  // 태그는 여러 곡이 합쳐진 그룹(버블)일 경우, 합친 태그 목록으로 계산한 뒤
+  // 곡 수(제곱근 기하평균)로 나눠서 - 곡이 많이 묶인 그룹일수록 태그가
+  // 많아져서 뭐든 잘 겹치는 것처럼 보이는 걸 막음. 단일 곡끼리는 그룹
+  // 크기가 둘 다 1이라 나누는 값이 1이 되어 원래 계산과 동일함
+  const groupSizeA = songA._groupSize || 1;
+  const groupSizeB = songB._groupSize || 1;
+  const rawTagSim = weightedJaccardSimilarity(songA.tags, songB.tags, bubbleFreqMaps?.tags);
+  const tagSim = rawTagSim / Math.sqrt(groupSizeA * groupSizeB);
+
   const artistSim = weightedJaccardSimilarity(songA.artist, songB.artist, bubbleFreqMaps?.artist);
   const writerSim = weightedJaccardSimilarity(songA.songwriters, songB.songwriters, bubbleFreqMaps?.songwriters);
   const langSim = weightedJaccardSimilarity(songA.language, songB.language, bubbleFreqMaps?.language);
@@ -168,7 +177,7 @@ function computeSimilarity(songA, songB) {
 
 // 곡마다 가장 유사한 K곡과 연결 (KNN, 중복 링크 제거).
 // 화면에 선을 그리진 않지만, 배치(force simulation)와 마우스오버 강조에 계속 쓰임
-function buildSimilarityLinks(representativeSongs, k = 4) {
+function buildSimilarityLinks(representativeSongs, k = 3) {
 
   const links = [];
   const seenPairs = new Set();
@@ -236,9 +245,25 @@ function groupSongsByImage(songArray) {
   return nodeGroups;
 }
 
-// 그룹(버블 하나)의 대표 곡 - 유사도 계산·제목 표시 등에 사용
+// 그룹(버블 하나)의 대표 곡 - 이미지·제목 등 화면 표시용으로만 사용
 function representativeSongOf(group) {
   return group.songs[0];
+}
+
+// 유사도(KNN) 계산 전용: 그룹 안 모든 곡의 태그를 합쳐서 쓰되, 곡이 여러 개
+// 묶인 그룹일수록 그 태그 목록으로 인한 유사도 기여가 옅어지도록
+// _groupSize를 같이 담아둠 (computeSimilarity에서 이 값으로 나눔)
+function similarityProfileFor(group) {
+  const rep = representativeSongOf(group);
+
+  const combinedTags = new Set();
+  group.songs.forEach(song => (song.tags || []).forEach(tag => combinedTags.add(tag)));
+
+  return {
+    ...rep,
+    tags: [...combinedTags],
+    _groupSize: group.songs.length,
+  };
 }
 
 // 곡 수에 따라 버블 반지름을 키움 (면적이 곡 수에 비례하도록 제곱근 스케일)
@@ -351,8 +376,8 @@ function initBubbleView() {
 
   // 화면에는 그리지 않지만, 배치와 마우스오버 이웃 강조에 계속 사용
   bubbleLinks = buildSimilarityLinks(
-    bubbleNodesData.map(n => representativeSongOf(n.group)),
-    6
+    bubbleNodesData.map(n => similarityProfileFor(n.group)),
+    3
   );
 
   // 평소엔 안 보이다가, 버블에 마우스를 올렸을 때만 연결선이 나타남
@@ -540,80 +565,3 @@ function initBubbleView() {
       .call(bubbleZoomBehavior.transform, d3.zoomIdentity);
   });
 }
-
-// -------------------------------------
-// 가중치 슬라이더 (실시간으로 유사도 재계산 + 버블 재배치)
-// -------------------------------------
-
-// 가중치가 바뀌면 KNN 링크를 다시 계산하고, 돌아가는 시뮬레이션에
-// 새 링크를 넣어서 다시 배치되도록 함
-function applyBubbleWeightChange() {
-
-  if (!bubbleInitStarted || !bubbleSimulation || !bubbleNodesData) return;
-
-  bubbleLinks = buildSimilarityLinks(
-    bubbleNodesData.map(n => representativeSongOf(n.group)),
-    6
-  );
-
-  bubbleSimulation.force(
-    "link",
-    d3.forceLink(bubbleLinks)
-      .id(d => d.id)
-      .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
-  );
-
-  bubbleSimulation.alpha(1).restart();
-}
-
-function setupBubbleWeightControls() {
-
-  const sliderKeyToId = {
-    geo: "bubble-weight-geo",
-    tag: "bubble-weight-tag",
-    artist: "bubble-weight-artist",
-    writer: "bubble-weight-writer",
-    language: "bubble-weight-language",
-  };
-
-  // 슬라이더를 드래그하는 동안 매번 447곡을 전부 재계산하면 버벅이므로,
-  // 손을 뗀 뒤 잠깐 멈췄을 때 한 번만 재계산 (디바운스)
-  let debounceTimer = null;
-
-  function scheduleRecompute() {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(applyBubbleWeightChange, 250);
-  }
-
-  function syncValueLabel(id, value) {
-    const label = document.querySelector(`.bubble-weight-value[data-for="${id}"]`);
-    if (label) label.textContent = value;
-  }
-
-  Object.entries(sliderKeyToId).forEach(([key, id]) => {
-
-    const input = document.getElementById(id);
-    if (!input) return;
-
-    input.addEventListener("input", () => {
-      bubbleWeights[key] = parseInt(input.value, 10);
-      syncValueLabel(id, input.value);
-      scheduleRecompute();
-    });
-  });
-
-  document.getElementById("bubble-weight-reset")?.addEventListener("click", () => {
-
-    bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS };
-
-    Object.entries(sliderKeyToId).forEach(([key, id]) => {
-      const input = document.getElementById(id);
-      if (input) input.value = DEFAULT_BUBBLE_WEIGHTS[key];
-      syncValueLabel(id, DEFAULT_BUBBLE_WEIGHTS[key]);
-    });
-
-    applyBubbleWeightChange();
-  });
-}
-
-setupBubbleWeightControls();

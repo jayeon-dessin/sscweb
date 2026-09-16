@@ -45,14 +45,14 @@
     "image": "covers/001-machu-picchu-dschinghis-khan.jpg"
   },
   {
-    "title": "Waltz of the Flowers (Вальс цветов)",
+    "title": "꽃의 왈츠 (Вальс цветов)",
     "year": "1892",
     "artist": [],
     "songwriters": ["Pyotr Tchaikovsky"],
     "language": [],
     "countries": ["RU"],
     "tags": ["클래식", "왈츠", "호두까기인형", "발레"],
-    "memo": "발레 '호두까기 인형(Щелкунчик/The Nutcracker, Op. 71)' 중 꽃의 요정의 춤, 일명 '꽃의 왈츠'.",
+    "memo": "발레 '호두까기 인형(Щелкунчик/The Nutcracker, Op. 71)' 중 꽃의 요정의 춤.",
     "youtube": [
       {"title": "London Festival Orchestra", "url": "https://www.youtube.com/watch?v=QxHkLdQy5f0"},
       {"title": "Concertgebouworkest", "url": "https://www.youtube.com/watch?v=Zp1aDnVySf8"}
@@ -66,7 +66,7 @@
     "songwriters": ["Ralph Siegel", "Bernd Meinunger"],
     "language": ["독일어"],
     "countries": ["DE"],
-    "tags": ["디스코", "멕시코", "총"],
+    "tags": ["디스코", "멕시코"],
     "memo": "'총잡이', 서부 개척시대의 멕시코를 주제로 한다.",
     "youtube": [
       {"title": "Die Pyramide 1981", "url": "https://www.youtube.com/watch?v=UiyB1PriUus"}
@@ -94,7 +94,7 @@
     "songwriters": ["Antônio Carlos Jobim", "Vinícius de Moraes"],
     "language": ["포르투갈어", "영어"],
     "countries": ["BR", "US"],
-    "tags": ["보사노바", "재즈"],
+    "tags": ["보사노바","재즈","리우데자네이루"],
     "memo": "보사노바의 전설 조빙의 대표곡. 1962년 작곡되었으나 1964년 Getz/Gilberto 음반으로 세계적으로 알려졌다.",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/25"}
@@ -144,7 +144,7 @@
     "songwriters": ["Alexandre Grynszpan", "Paul Armand-Delille"],
     "language": ["프랑스어"],
     "countries": ["FR"],
-    "tags": ["일렉트로닉", "하우스", "자연"],
+    "tags": ["일렉트로닉", "하우스"],
     "memo": "자연으로의 회귀 + 전자음악.",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/45"}
@@ -292,7 +292,7 @@
     "songwriters": ["すりぃ"],
     "language": ["일본어"],
     "countries": ["JP"],
-    "tags": ["보컬로이드", "피아노록", "기타"],
+    "tags": ["보컬로이드", "피아노록"],
     "memo": "스리이의 보컬로이드(카가미네 렌) 곡. 트랜스젠더에 대한 은유?",
     "youtube": [
       {"title": "카가미네 렌(鏡音レン), long ver. (+MV)", "url": "https://www.youtube.com/watch?v=i-DZukWFR64"},
@@ -525,7 +525,7 @@
     "songwriters": ["John Lennon", "Paul McCartney"],
     "language": ["영어"],
     "countries": ["GB"],
-    "tags": ["록앤롤","록","소련"],
+    "tags": ["로큰롤","록","소련"],
     "memo": "소련 가는 노래...지만 딱히 진지하진 않은, 일종의 패러디 곡.",
     "youtube": [
       {"title": "Lyric Video", "url": "https://www.youtube.com/watch?v=nS5_EQgbuLc"}
@@ -550,14 +550,14 @@
     "image": "covers/032-bootleg-yonezu-kenshi.jpg"
   },
   {
-    "title": "For Elise (Für Elise)",
+    "title": "엘리제를 위하여 (Für Elise)",
     "year": "1810",
     "artist": [],
     "songwriters": ["Ludwig van Beethoven"],
     "language": [],
     "countries": ["DE"],
     "tags": ["클래식", "피아노"],
-    "memo": "엘리제를 위하여.",
+    "memo": "베토벤의 대표곡 중 하나.",
     "youtube": [
       {"title": "Rousseau", "url": "https://www.youtube.com/watch?v=wfF0zHeU3Zs"},
       {"title": "Marnie Laird (Brooklyn Classical)", "url": "https://www.youtube.com/watch?v=2fcX2dWmR6g"}
@@ -600,7 +600,7 @@
     "songwriters": ["米津玄師"],
     "language": ["일본어"],
     "countries": ["JP"],
-    "tags": ["JPOP", "애니메이션", "록", "나히아"],
+    "tags": ["JPOP", "애니메이션", "록"],
     "memo": "<나의 히어로 아카데미아> 오프닝곡. 4집에도 수록",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=9aJVr5tTTWk"}
@@ -659,7 +659,7 @@
     "songwriters": ["Benny Andersson", "Björn Ulvaeus", "Stig Anderson"],
     "language": ["스웨덴어", "영어"],
     "countries": ["SE"],
-    "tags": ["디스코", "유로비전", "나폴레옹"],
+    "tags": ["디스코", "유로비전", "나폴레옹전쟁"],
     "memo": "나폴레옹의 마지막 전투, 워털루 전투에 빗댄 사랑 이야기. 1974 유로비전 우승",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/41"}
@@ -825,7 +825,22 @@
       {"title": "Oulu Hotshots 버전 (영어 자막)", "url": "https://www.youtube.com/watch?v=A14gZxbn0kM"},
       {"title": "1939년 Viljo Vesterinen, Dallapé 오케스트라 버전 (보컬X)", "url": "https://www.youtube.com/watch?v=gZx1zl_sVTI"}
     ],
-    "image": "covers/048-säkkijärven-polkka.jpg"
+    "image": "covers/048-winter-war.jpg"
+  },
+  {
+    "title": "Njet Molotoff",
+    "year": "1942",
+    "artist": [],
+    "songwriters": ["Matti Jurva", "Tatu Pekkarinen", "Traditional"],
+    "language": ["핀란드어", "러시아어"],
+    "countries": ["FI"],
+    "tags": ["번안", "군가", "전쟁", "2차대전", "소련", "풍자"],
+    "memo": "소련군과 소련 외무장관 몰로토프를 풍자한 핀란드의 전시 노래. 선율은 러시아 민요 'Ухарь-купец'에 기반함",
+    "youtube": [
+      {"title": "Solistiyhtye Suomi 버전", "url": "https://www.youtube.com/watch?v=WNtgV4J-ayA"},
+      {"title": "가사 (영어 자막)", "url": "https://www.youtube.com/watch?v=sD4loScPD0Y"}
+    ],
+    "image": "covers/048-winter-war.jpg"
   },
   {
     "title": "Nessun Dorma",
@@ -877,7 +892,7 @@
     "image": "covers/051-verdi.jpg"
   },
   {
-    "title": "La donna è mobile",
+    "title": "La donna è mobile (여자의 마음)",
     "year": "1851",
     "artist": [],
     "songwriters": ["Giuseppe Verdi", "Francesco Maria Piave"],
@@ -891,14 +906,14 @@
     "image": "covers/051-verdi.jpg"
   },
   {
-    "title": "Triumphal March (Marcia Trionfale)",
+    "title": "개선 행진곡 (Marcia Trionfale)",
     "year": 1871,
     "artist": [],
     "songwriters": ["Giuseppe Verdi"],
     "language": ["이탈리아어"],
     "countries": ["IT"],
     "tags": ["클래식", "오페라", "이집트", "아이다"],
-    "memo": "오페라 <아이다> 2막, 이집트군의 개선 행진곡.",
+    "memo": "오페라 <아이다> 2막, 이집트군의 개선 행진곡(Triumphal March).",
     "youtube": [
       {"title": "Wiener Philharmoniker(?)", "url": "https://www.youtube.com/watch?v=JXMdei-UTfw"},
       {"title": "Czech Philharmony choir Brno, Czech Radio symphony orchestra", "url": "https://www.youtube.com/watch?v=5j1dYi2Q_C0"}
@@ -912,13 +927,41 @@
     "songwriters": ["Julia Ward Howe", "William Steffe", "Traditional"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["군가", "전쟁", "종교음악", "미국남북전쟁"],
+    "tags": ["군가", "전쟁", "종교음악", "남북전쟁"],
     "memo": "남북전쟁 중 북군에서 쓰인 애국적인 곡. 찬송가나 응원가 등으로도 자주 사용된다. 멜로디는 전쟁 이전 곡 'John Brown's Body'에서 가져왔다.",
     "youtube": [
       {"title": "가사", "url": "https://www.youtube.com/watch?v=sfuLrny00t4"},
       {"title": "도널드 트럼프 대통령 취임식 (2025)", "url": "https://www.youtube.com/watch?v=9xV67B74YCA"}
     ],
-    "image": "covers/052-battle-hymn.jpg"
+    "image": "covers/052-america.jpg"
+  },
+  {
+    "title": "Yankee Doodle",
+    "year": "1756?",
+    "artist": [],
+    "songwriters": ["Richard Shuckburgh","Edward Bangs","Traditional"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["군가", "전쟁", "어린이", "7년전쟁","코네티컷"],
+    "memo": "7년 전쟁, 미국 독립 전쟁 시기부터 불려온 미국의 군가. 준 국가 취급을 받는 미국을 대표하는 곡 중 하나이자 코네티컷 주 주가,",
+    "youtube": [
+      {"title": "가사", "url": "https://www.youtube.com/watch?v=65SCziAGthw"}
+    ],
+    "image": "covers/052-america.jpg"
+  },
+  {
+    "title": "Marching Through Georgia",
+    "year": "1856",
+    "artist": [],
+    "songwriters": ["Henry Clay Work"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["군가", "전쟁", "남북전쟁","조지아"],
+    "memo": "남북전쟁 막바지 북군의 행진곡.",
+    "youtube": [
+      {"title": "가사", "url": "https://www.youtube.com/watch?v=H-jtYT5COvU"}
+    ],
+    "image": "covers/052-america.jpg"
   },
   {
     "title": "تملي معاك (Tamally Maak)",
@@ -1280,7 +1323,7 @@
     "songwriters": ["Vasily Agapkin"],
     "language": ["러시아어"],
     "countries": ["RU"],
-    "tags": ["군가", "전쟁", "2차대전", "적백내전", "이별"],
+    "tags": ["군가", "전쟁", "이별", "적백내전"],
     "memo": "'슬라브 여인의 작별' - 러시아 제국 시대부터 군인들 사이에서 인기를 끈 곡. 가사는 여러 버전이 있다. 탐보프 주의 주가",
     "youtube": [
       {"title": "1967년 작사된 소련 버전 (Alexandrov Ensemble)", "url": "https://www.youtube.com/watch?v=h9_8YyFl-uY"},
@@ -1289,19 +1332,32 @@
     "image": "covers/071-red-army.jpg"
   },
   {
-    "title": "Njet Molotoff",
-    "year": "1942",
+    "title": "Красная Армия всех сильней (Krasnaya Armiya vsekh sil'ney)",
+    "year": "1920",
     "artist": [],
-    "songwriters": ["Matti Jurva", "Tatu Pekkarinen", "Traditional"],
-    "language": ["핀란드어", "러시아어"],
-    "countries": ["FI"],
-    "tags": ["번안", "군가", "전쟁", "2차대전", "소련", "풍자"],
-    "memo": "소련군과 소련 외무장관 몰로토프를 풍자한 핀란드의 전시 노래. 선율은 러시아 민요 'Ухарь-купец'에 기반함",
+    "songwriters": ["Pavel Gorinshtein","Samuel Pokrass"],
+    "language": ["러시아어"],
+    "countries": ["RU"],
+    "tags": ["군가", "전쟁", "적백내전"],
+    "memo": "'붉은 군대는 가장 강력하다'. 적백내전 시기 쓰여진 행진곡.",
     "youtube": [
-      {"title": "Solistiyhtye Suomi 버전", "url": "https://www.youtube.com/watch?v=WNtgV4J-ayA"},
-      {"title": "가사 (영어 자막)", "url": "https://www.youtube.com/watch?v=sD4loScPD0Y"}
+      {"title": "가사 (영어 자막)", "url": "https://www.youtube.com/watch?v=vA-W_MPg9ec"}
     ],
-    "image": "covers/072-njet-molotoff.jpg"
+    "image": "covers/071-red-army.jpg"
+  },
+  {
+    "title": "Was ist des Deutschen Vaterland",
+    "year": "1813",
+    "artist": [],
+    "songwriters": ["Ernst Moritz Arndt"],
+    "language": ["독일어"],
+    "countries": ["DE"],
+    "tags": ["선전가요", "민족주의", "독일"],
+    "memo": "'독일인의 조국은 무엇인가', 독일 민족의 통일된 국가를 건설하고자 하는 곡. 오 나인 나인 나인~~",
+    "youtube": [
+      {"title": "가사 (+독음, 번역)", "url": "https://www.youtube.com/watch?v=ChvFAv1B0qc"}
+    ],
+    "image": "covers/072-great-germany.jpg"
   },
   {
     "title": "Jerusalema",
@@ -1310,7 +1366,7 @@
     "songwriters": ["Kgaogelo Moagi", "Nomcebo"],
     "language": ["줄루어"],
     "countries": ["ZA"],
-    "tags": ["예루살렘", "종교음악", "가스펠", "하우스", "댄스"],
+    "tags": ["예루살렘", "종교음악", "가스펠", "하우스", "댄스","아프로팝"],
     "memo": "댄스 챌린지를 통해 세계적으로 흥행한, 성가 기반의 신나는 하우스 곡. 성지 예루살렘에 대한 노래",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/64"}
@@ -1328,7 +1384,7 @@
     "songwriters": ["Traditional"],
     "language": ["폴란드어", "우크라이나어"],
     "countries": ["PL", "UA"],
-    "tags": ["카자크", "민요", "매", "이별"],
+    "tags": ["카자크", "민요", "이별"],
     "memo": "카자크의 작별에 관한, 폴란드/우크라이나 지역 민요. '매들이여'",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/65"}
@@ -1376,7 +1432,7 @@
     "songwriters": ["Shawn Carter", "Alexander Shuckburgh", "Janet Sewell-Ulepic", "Angela Hunte", "Alicia Keys", "Sylvia Robinson", "Bert Keyes"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["뉴욕", "힙합", "팝랩"],
+    "tags": ["뉴욕", "힙합", "팝랩","미국북동부"],
     "memo": "'Empire State' 뉴욕을 위한 헌정곡.",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/68"}
@@ -1455,7 +1511,7 @@
     "songwriters": ["Ahmed Ololade", "Olamide Adedeji"],
     "language": ["요루바어", "나이지리아피진영어"],
     "countries": ["NG"],
-    "tags": ["아프로비츠"],
+    "tags": ["아프로비츠","아프로팝"],
     "memo": "성공한 뒤 윗공기를 마시며 느끼는 고독에 관하여.",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/110"}
@@ -1520,7 +1576,7 @@
     "language": ["아이슬란드어"],
     "countries": ["IS"],
     "tags": ["포스트록", "드림팝"],
-    "memo": "물웅덩이에 뛰어들기, 그리고 희망. Sigur Rós의 대표곡",
+    "memo": "물웅덩이에 뛰어들기, 그리고 희망. 시규어 로스의 대표곡",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/77"}
     ],
@@ -1717,14 +1773,14 @@
     "image": "covers/098-mozart.jpg"
   },
   {
-    "title": "Rondo Alla Turca (Piano Sonata No.11)",
+    "title": "터키 행진곡 (Piano Sonata No.11)",
     "year": "1785",
     "artist": [],
     "songwriters": ["Wolfgang Amadeus Mozart"],
     "language": [],
     "countries": ["AT"],
     "tags": ["클래식", "오스만", "피아노"],
-    "memo": "'터키 행진곡'. 사실 행진곡은 아니다.",
+    "memo": "Rondo Alla Turca, 사실 행진곡은 아니다.",
     "youtube": [
       {"title": "Yundi", "url": "https://www.youtube.com/watch?v=n2Tru4Qa3pc"},
       {"title": "Elisso Bolkvadze(?)", "url": "https://www.youtube.com/watch?v=quxTnEEETbo"}
@@ -1803,7 +1859,7 @@
     "songwriters": ["Željko Grmuša", "Nenad Tintor", "Slovodan Vrga"],
     "language": ["세르보크로아트어"],
     "countries": ["RS"],
-    "tags": ["터보포크", "전쟁", "유고전쟁", "케밥", "밈"],
+    "tags": ["터보포크", "전쟁", "유고전쟁", "밈"],
     "memo": "세르비아의 전시 反크로아티아, 反이슬람 애국(?) 음악, 'Remove Kebab' 밈으로 유명하다. 원제목은 '카라지치여, 세르비아인을 보우하소서'. 공격적인 가사에 주의",
     "youtube": [
       {"title": "MV(?) (다국어 자막 제공)", "url": "https://www.youtube.com/watch?v=chA5IiTB4wg"}
@@ -1885,7 +1941,7 @@
     "songwriters": ["남응손", "김길학"],
     "language": ["한국어"],
     "countries": ["KP"],
-    "tags": ["선전가요", "공산주의"],
+    "tags": ["선전가요","공산주의"],
     "memo": "천리마 운동 찬가, 해외에서 인기가 많은 편.",
     "youtube": [
       {"title": "보천보전자악단 버전 (보컬 김광숙)", "url": "https://www.youtube.com/watch?v=_OPWJac4krMw"}
@@ -2054,7 +2110,7 @@
     "songwriters": ["Armando Zeferino Soares"],
     "language": ["카보베르데크리올"],
     "countries": ["CV"],
-    "tags": ["모르나", "상투메프린시페"],
+    "tags": ["모르나", "상투메프린시페","발라드"],
     "memo": "카보베르데를 떠나 상투메에서 일하는 사람과 그 가족들의 애환. '그리움'",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/101"}
@@ -2254,7 +2310,7 @@
     "songwriters": ["Jean Paul Zé Bella", "Victor Dooh Belley", "Emile Kojidie", "Annie Anzouer"],
     "language": ["팡어", "에원도어", "프랑스어", "두알라어", "카메룬피진영어"],
     "countries": ["CM"],
-    "tags": ["마코사", "군가", "월드컵"],
+    "tags": ["마코사","군가","월드컵","댄스","아프로팝"],
     "memo": "군가를 바탕으로 만들어진 곡, 여러 언어가 섞여 있다. 2010년 월드컵 주제가 Waka Waka의 원곡.",
     "youtube": [
       {"title": "뮤비(Golden Sounds). 유명한 부분은 7분 28초부터", "url": "https://www.youtube.com/watch?v=OdrEisrvY7g"},
@@ -2269,7 +2325,7 @@
     "songwriters": ["K'naan"],
     "language": ["영어"],
     "countries": ["SO", "CA"],
-    "tags": ["월드컵", "레게퓨전"],
+    "tags": ["월드컵", "레게"],
     "memo": "원래 소말리아에 대한 곡이었으나, 2010년 남아공 월드컵 당시 코카콜라의 프로모션 곡으로 크게 흥행.",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=WTJSt4wP2ME"}
@@ -2635,7 +2691,7 @@
     "songwriters": ["Ed Sheeran", "Joseph Addison", "Mugeez Abdul Rashid", "Nana Richard Abiona"],
     "language": ["영어", "트위어"],
     "countries": ["GH", "GB"],
-    "tags": ["아프로비츠", "팝"],
+    "tags": ["아프로비츠", "팝","아프로팝"],
     "memo": "에드 시런이 참여한 가나 스타일의 아프로비츠 곡.",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=vtIFDniOWjY"}
@@ -2649,7 +2705,7 @@
     "songwriters": ["Divine Ikubor", "Andre Vibez", "Michael Hunter"],
     "language": ["나이지리아피진영어"],
     "countries": ["NG"],
-    "tags": ["아프로비츠", "팝"],
+    "tags": ["아프로비츠", "팝","아프로팝"],
     "memo": "2022년 크게 히트한 아프로비츠 곡.",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=CQLsdm1ZYAw"},
@@ -2723,7 +2779,7 @@
     "songwriters": ["Stephen Foster"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["포크", "민스트럴", "어린이"],
+    "tags": ["포크", "민스트럴", "어린이","미국남부"],
     "memo": "미국 남부를 상징하는 곡 중 하나. 동요로 사용되기도 한다.",
     "youtube": [
       {"title": "Connie Francis", "url": "https://www.youtube.com/watch?v=GUPRVkhBtVA"},
@@ -2812,7 +2868,7 @@
     "songwriters": ["José Pepe Garza, Vince Gilligan"],
     "language": ["스페인어"],
     "countries": ["US", "MX"],
-    "tags": ["드라마", "뉴멕시코"],
+    "tags": ["드라마", "뉴멕시코","미국서부"],
     "memo": "'검정과 파랑'. <브레이킹 배드> 시즌2 동명의 에피소드에서 등장하는 곡.",
     "youtube": [
       {"title": "MV (영어 자막)", "url": "https://www.youtube.com/watch?v=_ykOTpzuZN0"}
@@ -2943,14 +2999,29 @@
     "songwriters": ["Eugène Pottier", "Pierre De Geyter"],
     "language": ["프랑스어"],
     "countries": ["FR"],
-    "tags": ["민중가요", "사회주의"],
-    "memo": "사회주의, 국제주의를 상징하는 민중가요. 다양한 언어로 번역되어 불려진다.",
+    "tags": ["민중가요", "사회주의","파리","번안"],
+    "memo": "파리 코뮌 때 만들어진(작사된) 사회주의, 국제주의를 상징하는 민중가요. 다양한 언어로 번역되어 불려진다.",
     "youtube": [
       {"title": "프랑스어 원곡 (영어 자막)", "url": "https://www.youtube.com/watch?v=IcS_sjbJNDI"},
       {"title": "러시아어(소련) 버전", "url": "https://www.youtube.com/watch?v=t8EMx7Y16Vo"},
       {"title": "독일어(동독) 버전", "url": "https://www.youtube.com/watch?v=L9Sy6BP_CNY"}
     ],
-    "image": "covers/167-l-internationale-인터내셔널가.jpg"
+    "image": "covers/167-communism.jpg"
+  },
+    {
+    "title": "Der heimliche Aufmarsch",
+    "year": "1929",
+    "artist": [],
+    "songwriters": ["Erich Weinert","Wladimir Vogel"],
+    "language": ["독일어"],
+    "countries": ["DE"],
+    "tags": ["문학","공산주의","사회주의","선전가요","번안"],
+    "memo": "'비밀 행진', 노동자와 농민이 단결해 파시스트들의 소련 공격을 저지하자는 내용. 2차대전 이후에는 'Der Offene Aufmarsch'(공개 행진)으로 개사되어 불려졌고, 다양한 언어로 번안되었다.",
+    "youtube": [
+      {"title": "1931년 영화 <Niemandsland>의 Ernst Busch 버전", "url": "https://www.youtube.com/watch?v=HYJmGaBMQJ8"},
+      {"title": "1957년 개사된 '공개 행진' 버전", "url": "https://www.youtube.com/watch?v=tAxadstFhzo"}
+    ],
+    "image": "covers/167-communism.jpg"
   },
   {
     "title": "Bella Ciao",
@@ -3095,7 +3166,7 @@
     "songwriters": ["Charles Dumont", "Michel Vaucaire"],
     "language": ["프랑스어"],
     "countries": ["FR"],
-    "tags": ["샹송", "2차대전", "인생"],
+    "tags": ["샹송", "인생"],
     "memo": "'아니요, 전혀 후회하지 않아요.' 프랑스 외인부대에 헌정된 곡",
     "youtube": [
       {"title": "음원", "url": "https://www.youtube.com/watch?v=Q3Kvu6Kgp88"}
@@ -3369,7 +3440,7 @@
     "songwriters": ["Sérgio Mendes", "John Powell", "Carlinhos Brown", "Mikael Mutti"],
     "language": ["영어"],
     "countries": ["US", "BR"],
-    "tags": ["애니메이션", "삼바", "힙합"],
+    "tags": ["애니메이션", "삼바", "힙합","리우데자네이루"],
     "memo": "애니메이션 영화 <리오> 수록곡. 브라질스러운 매력을 잘 살렸다.",
     "youtube": [
       {"title": "음원", "url": "https://www.youtube.com/watch?v=FRE-yvXslbU"},
@@ -4342,7 +4413,7 @@
     "songwriters": ["Andre Young", "Shawn Carter", "Melvin Bradford", "Scott Storch"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["힙합", "갱스터랩"],
+    "tags": ["힙합","갱스터랩","미국서부"],
     "memo": "서부 힙합을 상징하는 곡, 아마 세상에서 가장 유명한 힙합 곡일 듯.",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=_CL6n0FJZpk"}
@@ -4623,6 +4694,20 @@
     "image": "covers/271-국군.jpg"
   },
   {
+    "title": "빨간 마후라",
+    "year": "1964",
+    "artist": ["쟈니 브라더스"],
+    "songwriters": ["황문평", "한운사"],
+    "language": ["한국어"],
+    "countries": ["KR"],
+    "tags": ["군가","영화음악"],
+    "memo": "영화 <빨간 마후라> 주제가로 발표되어 이후 정식 군가로 채택된 곡.",
+    "youtube": [
+      {"title": "가사", "url": "https://youtu.be/hlKOdn0tEeM?si=AXksTXYGIBKV_MWX"}
+    ],
+    "image": "covers/271-국군.jpg"
+  },
+  {
     "title": "바다로 가자",
     "year": "1946",
     "artist": [],
@@ -4764,7 +4849,7 @@
     "image": "covers/275-luvsic-nujabes.jpg"
   },
   {
-    "title": "Erlkönig",
+    "title": "Erlkönig (마왕)",
     "year": "1815",
     "artist": [],
     "songwriters": ["Franz Schubert", "Johann Wolfgang von Goethe"],
@@ -4843,8 +4928,8 @@
     "songwriters": ["Dan Emmett"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["민스트럴", "포크", "미국남북전쟁"],
-    "memo": "미국 남북 전쟁 기간 남군에 의해 사용된, 남부를 상징하는 곡 중 하나.",
+    "tags": ["민스트럴", "포크", "전쟁","남북전쟁","미국남부"],
+    "memo": "미국 남북 전쟁 기간 남군에 의해 사용된 곡. (정작 작사가는 북부 지지자였다.)",
     "youtube": [
       {"title": "영어 가사", "url": "https://www.youtube.com/watch?v=5OKdbc0DYpM"},
       {"title": "2nd South Carolina String Band", "url": "https://www.youtube.com/watch?v=wFNr9FnpZBk"}
@@ -4857,9 +4942,9 @@
     "artist": ["ZXKAI", "slxughter"],
     "songwriters": ["ZXKAI", "slxughter"],
     "language": ["포르투갈어"],
-    "countries": ["XX"],
-    "tags": ["브라질리언펑크", "AI", "밈"],
-    "memo": "호불호가 갈리는 강렬한 브라질리언 펑크 곡.",
+    "countries": ["BR"],
+    "tags": ["브라질리언펑크", "펑크", "밈"],
+    "memo": "호불호가 갈리는 강렬한 브라질리언 펑크 곡. 진짜 브라질 노래인지는 조금 의문",
     "youtube": [
       {"title": "음원", "url": "https://www.youtube.com/watch?v=ZB0amc1TZ3Y"}
     ],
@@ -5088,7 +5173,7 @@
     "songwriters": ["Magic System", "RedOne", "Bilal Hajji", "John Mamann", "Alex P", "Chawki"],
     "language": ["영어", "프랑스어"],
     "countries": ["CI", "MA"],
-    "tags": ["팝", "월드컵", "댄스"],
+    "tags": ["팝", "월드컵", "댄스","아프로팝"],
     "memo": "모로코 프로듀서 RedOne이 프로듀싱한 Magic System의 대표곡.",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=BAkqJT_sMKQ"}
@@ -5102,7 +5187,7 @@
     "songwriters": ["Magic System", "RedOne", "Bilal Hajji", "John Mamann", "Alex P", "Chawki"],
     "language": ["프랑스어"],
     "countries": ["CI"],
-    "tags": ["댄스", "주글루"],
+    "tags": ["댄스", "주글루","아프로팝"],
     "memo": "'첫 번째 바보'. 가사는 아비장 방언으로 구성되어 있다.",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=RJMpeYwifEU"}
@@ -5519,7 +5604,7 @@
     "songwriters": ["Los Hermanos Flores"],
     "language": ["스페인어"],
     "countries": ["SV"],
-    "tags": ["쿰비아"],
+    "tags": ["쿰비아","라틴팝"],
     "memo": "'엘살바도르 여자들'의 아름다움에 대한 쿰비아 곡.",
     "youtube": [
       {"title": "음원", "url": "https://www.youtube.com/watch?v=yt7I2lNBeyw"}
@@ -5909,8 +5994,8 @@
     "songwriters": ["Traditional"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["포크", "민요", "컨트리", "밈"],
-    "memo": "미국 남부 민요, 스웨덴 밴드 Rednex의 버전이 가장 널리 알려져 있다. 밈으로도 유명하다",
+    "tags": ["포크", "민요", "컨트리", "밈","미국남부"],
+    "memo": "미국 민요, 스웨덴 밴드 Rednex의 버전이 가장 널리 알려져 있다. 밈으로도 유명하다",
     "youtube": [
       {"title": "Bill Monroe 버전", "url": "https://www.youtube.com/watch?v=NK2sbpzF0w0"},
       {"title": "Rednex (스웨덴) 버전", "url": "https://youtu.be/mOYZaiDZ7BM?si=9R9MkabHymwlcAiT"},
@@ -5969,7 +6054,7 @@
     "songwriters": ["John Phillips", "Michelle Phillips"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["팝", "캘리포니아", "포크록", "사이키델릭팝"],
+    "tags": ["팝", "캘리포니아", "포크록", "사이키델릭팝","미국서부"],
     "memo": "고전 포크록 명곡. 햇살 가득한 캘리포니아를 그리며.",
     "youtube": [
       {"title": "공연 영상", "url": "https://youtu.be/N-aK6JnyFmk?si=ciizYGNAbGBe10ph"}
@@ -6115,7 +6200,7 @@
     "songwriters": ["Jimmie Davis", "Charles Mitchell"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["컨트리", "태양", "선전가요", "루이지애나"],
+    "tags": ["컨트리", "태양", "선전가요", "루이지애나","미국남부"],
     "memo": "루이지애나 주의 주가. 가수 지미 데이비스는 이후 루이지애나 주지사를 역임했다.",
     "youtube": [
       {"title": "원곡", "url": "https://www.youtube.com/watch?v=ckKeQNCyPBU"},
@@ -6589,7 +6674,7 @@
     "songwriters": ["Don Felder", "Don Henley", "Glenn Frey"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["록", "캘리포니아"],
+    "tags": ["록", "캘리포니아","미국서부"],
     "memo": "기타 솔로가 유명한 이글스의 대표곡.",
     "youtube": [
       {"title": "MV (Live 1977)", "url": "https://www.youtube.com/watch?v=09839DpTctU"},
@@ -6904,7 +6989,7 @@
     "image": "covers/414-jackson-5.jpg"
   },
   {
-    "title": "I Want You Back",
+    "title": "ロキ (로키)",
     "year": "1968",
     "artist": ["Kagamine Lin (鏡音リン)","Mikito-P (みきとP)"],
     "songwriters": ["Mikito-P"],
@@ -6916,5 +7001,180 @@
       {"title": "MV", "url": "https://www.youtube.com/watch?v=Xg-qfsKN2_E"}
     ],
     "image": "covers/415-roki-mikito-p.jpg"
+  },
+  {
+    "title": "Home on the Range",
+    "year": "1870s",
+    "artist": [],
+    "songwriters": ["Brewster M. Higley","Daniel E. Kelley"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["포크","캔자스"],
+    "memo": "미국 서부를 상징하는 곡 중 하나이자, 캔자스 주의 주가. 안빈낙도의 삶",
+    "youtube": [
+      {"title": "가사", "url": "https://www.youtube.com/watch?v=qgfQSSnzDLI"},
+      {"title": "Roy Rogers", "url": "https://www.youtube.com/watch?v=0KlZuk5N2co"}
+    ],
+    "image": "covers/416-home-on-the-range.jpg"
+  },
+  {
+    "title": "Theme from New York, New York",
+    "year": "1977",
+    "artist": ["Liza Minnelli"],
+    "songwriters": ["John Kander","Fred Ebb"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["뮤지컬","재즈","영화음악","뉴욕","미국북동부"],
+    "memo": "마틴 스콜세이지의 뮤지컬 영화 <뉴욕, 뉴욕> OST. Frank Sinatra 버전으로도 유명하다.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=5-pyc_z7WbY"},
+      {"title": "Frank Sinatra", "url": "https://www.youtube.com/watch?v=le1QF3uoQNg"}
+    ],
+    "image": "covers/417-nyny.jpg"
+  },
+  {
+    "title": "Drum Bun",
+    "year": "1856",
+    "artist": [],
+    "songwriters": ["Ștefan Nosievici"],
+    "language": ["루마니아어"],
+    "countries": ["RO"],
+    "tags": ["군가", "이별","전쟁","1차대전"],
+    "memo": "'작별'. 루마니아 독립 전쟁과 1차대전기 불려진 단순하고 중독성 있는 행진곡.",
+    "youtube": [
+      {"title": "가사", "url": "https://www.youtube.com/watch?v=lfXpvBJzAMY"},
+      {"title": "가사 (+한국어 번역)", "url": "https://www.youtube.com/watch?v=wTPrI0rQaeA"}
+    ],
+    "image": "covers/418-romania.jpg"
+  },
+  {
+    "title": "Allah, Souriya, w Bashar(اللّٰه، سورِيا و بشار)",
+    "year": "1856",
+    "artist": [],
+    "songwriters": ["Rami Kazour"],
+    "language": ["아랍어"],
+    "countries": ["SY"],
+    "tags": ["선전가요","밈","일렉트로닉"],
+    "memo": "'신, 시리아, 그리고 바샤르'. 바트당 정권을 지지하는 곡. 노래가 좋아서(?) 바트주의 정권이 망한 뒤에도 밈이 되었다.",
+    "youtube": [
+      {"title": "영어 번역", "url": "https://www.youtube.com/watch?v=YgiyWGyJcIc"},
+      {"title": "가사 (+한국어 번역)", "url": "https://youtu.be/2nuo4FIBQHk?si=C0ulvYcoTj1jVM7_"}
+    ],
+    "image": "covers/419-allah-syria.jpg"
+  },
+  {
+    "title": "Serce w plecaku",
+    "year": "1933",
+    "artist": [],
+    "songwriters": ["Michał Zieliński"],
+    "language": ["폴란드어"],
+    "countries": ["PL"],
+    "tags": ["군가","전쟁","2차대전"],
+    "memo": "'배낭 속의 마음'. 2차대전기 폴란드 파르티잔 사이에서 유행한, 군가 치고는 상당히 밝은 곡.",
+    "youtube": [
+      {"title": "가사 (짧은 버전)", "url": "https://www.youtube.com/watch?v=_-A2wJNZyKQ"},
+      {"title": "긴 버전 (Chór Polskiego Radia, Orkiestra Polskiego Radia)", "url": "https://www.youtube.com/watch?v=jkxrMq2jD-0"}
+    ],
+    "image": "covers/420-poland.jpg"
+  },
+  {
+    "title": "İzmir Marşı",
+    "year": "1910s?",
+    "artist": [],
+    "songwriters": ["?"],
+    "language": ["튀르키예어"],
+    "countries": ["TR"],
+    "tags": ["군가","선전가요","전쟁","이즈미르"],
+    "memo": "튀르키예 독립 전쟁에서의 아타튀르크의 이즈미르(스미르나) 탈환을 기념하는 '이즈미르 행진곡'. 원래 캅카스 전선을 위해 작곡되었다는 설도 있다. 정확한 기원은 불명.",
+    "youtube": [
+      {"title": "음악", "url": "https://www.youtube.com/watch?v=6ws7DSi1VPs"},
+      {"title": "Haluk Levent의 현대적인? 버전.", "url": "https://www.youtube.com/watch?v=7jxuiDKBxg4"}
+    ],
+    "image": "covers/421-ataturk.jpg"
+  },
+  {
+    "title": "라데츠키 행진곡 (Radetzkymarsch)",
+    "year": "1848",
+    "artist": [],
+    "songwriters": ["Johann Strauss I"],
+    "language": [],
+    "countries": ["AT"],
+    "tags": ["군가","오스트리아","클래식","나폴레옹전쟁"],
+    "memo": "오스트리아 제국의 장군 요제프 라데츠키에게 헌정된 곡. Radetzky March",
+    "youtube": [
+      {"title": "Vienna Philharmonic", "url": "https://www.youtube.com/watch?v=xhEGMSOIptw"}
+    ],
+    "image": "covers/422-johann-strauss-i.jpg"
+  },
+  {
+    "title": "The British Grenadiers",
+    "year": "17c?",
+    "artist": [],
+    "songwriters": ["?"],
+    "language": ["영어"],
+    "countries": ["GB"],
+    "tags": ["군가"],
+    "memo": "영국군 척탄병들에게 헌정된 곡.",
+    "youtube": [
+      {"title": "가사 (한국어 자막)", "url": "https://www.youtube.com/watch?v=flLOcYNRH38"}
+    ],
+    "image": "covers/423-britain.jpg"
+  },
+  {
+    "title": "Quizás, Quizás, Quizás",
+    "year": "1947",
+    "artist": ["Bobby Capó","Osvaldo Farrés"],
+    "songwriters": ["Osvaldo Farrés"],
+    "language": ["스페인어"],
+    "countries": ["CU","PR"],
+    "tags": ["팝"],
+    "memo": "'어쩌면, 어쩌면, 어쩌면'. 쿠바 작곡가 오스발도 파레스의 히트곡.",
+    "youtube": [
+      {"title": "Trio Los Panchos", "url": "https://www.youtube.com/watch?v=zdJ0KLJ3PmQ"},
+      {"title": "Nat King Cole 버전. 영어 악센트가 많이 들어가 있다", "url": "https://www.youtube.com/watch?v=x2IYc576nbo"}
+    ],
+    "image": "covers/424-osvaldo-farres.jpg"
+  },
+  {
+    "title": "Starálfur",
+    "year": "1999",
+    "artist": ["Sigur Rós"],
+    "songwriters": ["Jón Þór Birgisson","Georg Hólm","Kjartan Sveinsson","Ágúst Ævar Gunnarsson"],
+    "language": ["아이슬란드어"],
+    "countries": ["IS"],
+    "tags": ["포스트록","드림팝"],
+    "memo": "'바라보는 엘프'. 시규어 로스 2집 수록곡",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=7fEUUnXDnbk"}
+    ],
+    "image": "covers/425-Ágætis-Byrjun.jpg"
+  },
+  {
+    "title": "Tu Falta De Querer",
+    "year": "2015",
+    "artist": ["Mon Lafarte"],
+    "songwriters": ["Mon Laferte","Anthony López"],
+    "language": ["아이슬란드어"],
+    "countries": ["CL","MX"],
+    "tags": ["팝록","발라드","얼터너티브팝"],
+    "memo": "'너의 사랑이 부족해도', 애절한 라틴 발라드.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/WT-VE9OyAJk?si=8tPsY__DNcRjn-uB"}
+    ],
+    "image": "covers/426-mo-lafarte-1.jpg"
+  },
+  {
+    "title": "Outer Wilds",
+    "year": "2019",
+    "artist": [],
+    "songwriters": ["Andrew Prahlow"],
+    "language": [],
+    "countries": ["US"],
+    "tags": ["게임음악","앰비언트"],
+    "memo": "동명의 게임 OST.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=Xpkc-NU1KA0"}
+    ],
+    "image": "covers/427-outer-wilds.jpg"
   }
 ]
