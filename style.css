@@ -1268,7 +1268,13 @@ hr {
 }
 
 .bubble-visual {
-    transition: transform 0.15s ease;
+    transition: filter 0.15s ease;
+}
+
+/* hover 시 크기는 그대로 두고, 살짝 밝아지는 은은한 글로우로만 강조
+   (크기를 바꾸면 판정 경계가 마우스를 스치며 깜빡이는 문제가 있었음) */
+.bubble-node-hovered .bubble-visual {
+    filter: drop-shadow(0 0 6px rgba(79, 142, 247, 0.65));
 }
 
 .bubble-hit-area {
@@ -1299,9 +1305,9 @@ hr {
     transition: stroke 0.15s, stroke-width 0.15s;
 }
 
-.bubble-node:hover .bubble-border {
+.bubble-node-hovered .bubble-border {
     stroke: #4f8ef7;
-    stroke-width: 2;
+    stroke-width: 2.5;
 }
 
 .bubble-border.bubble-similar {

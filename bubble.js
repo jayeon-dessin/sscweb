@@ -98,6 +98,13 @@ function weightedJaccardSimilarity(a, b, freqMap) {
 // 두 곡의 지리적 유사도 (0~1). 같은 나라끼리는 0으로 둠 -
 // 같은 나라는 이미 아티스트/언어 등 다른 요소로 연결될 가능성이 높으므로,
 // 지리적 유사도는 "다른 나라인데 가까운 경우"에 보너스를 주는 용도로 씀
+// 같은 나라를 "물리적으로 이 정도는 떨어져 있다"고 볼 기준 거리(km).
+// 실제 국경을 맞댄 나라끼리는 이보다 더 가까울 수도 있음(예: 남북한 194.8km) -
+// 그래서 이 값은 그보다 확실히 작게 잡아서, "같은 나라"가 실제 인접국보다
+// 무조건 조금이라도 더 가깝게(=더 유사하게) 나오도록 함. 다만 0km(완전히
+// 같은 지점)으로 치진 않으므로 절대적인 1위 보장은 아님
+const SAME_COUNTRY_NOMINAL_DISTANCE_KM = 100;
+
 function geoSimilarity(songA, songB) {
 
   const countriesA = (songA.countries || []).filter(
@@ -113,11 +120,9 @@ function geoSimilarity(songA, songB) {
 
   countriesA.forEach(codeA => {
     countriesB.forEach(codeB => {
-      if (codeA === codeB) return; // 같은 나라는 0으로 취급하므로 거리 계산에서 제외
-      const distance = haversineDistanceKm(
-        COUNTRY_CENTROIDS[codeA],
-        COUNTRY_CENTROIDS[codeB]
-      );
+      const distance = codeA === codeB
+        ? SAME_COUNTRY_NOMINAL_DISTANCE_KM
+        : haversineDistanceKm(COUNTRY_CENTROIDS[codeA], COUNTRY_CENTROIDS[codeB]);
       if (distance < minDistance) minDistance = distance;
     });
   });
@@ -132,10 +137,10 @@ function geoSimilarity(songA, songB) {
 // 5가지 요소의 가중치. 슬라이더로 실시간 조절 가능 (합이 100이 아니어도
 // computeSimilarity에서 알아서 비율로 정규화함)
 const DEFAULT_BUBBLE_WEIGHTS = {
-  geo: 25,
+  geo: 20,
   tag: 30,
   artist: 20,
-  writer: 10,
+  writer: 15,
   language: 15,
 };
 const bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS }; // 고정값 - 사이트에서 조절 불가
@@ -492,18 +497,13 @@ function initBubbleView() {
     return `translate(${d.x},${d.y})`;
   }
 
-  // 실제로 보이는 그림(.bubble-visual)만 hover 시 확대. 마우스 판정 영역과는
-  // 분리되어 있어서, 커지는 동안 판정 경계가 마우스를 스쳐 지나가며
-  // mouseenter/mouseleave가 반복 발생해 깜빡이던 문제가 없음
-  function visualTransform(d) {
-    return d.hovered ? "scale(1.35)" : "scale(1)";
-  }
-
   hitAreaSel.on("mouseenter", (event, d) => {
 
-    d.hovered = true;
-    d3.select(event.currentTarget.parentNode).select(".bubble-visual")
-      .attr("transform", visualTransform(d));
+    // 크기를 키우는 대신 클래스만 토글 - 테두리 강조/글로우는 CSS(:hover 아님,
+    // 명시적 클래스)로 처리. 처음 접속 직후 시뮬레이션이 아직 활발히 움직이는
+    // 동안 버블 크기 자체가 바뀌면 판정 경계가 마우스를 스치며 깜빡이던
+    // 문제가 있었어서, 크기는 아예 안 바꾸는 쪽으로 바꿈
+    d3.select(event.currentTarget.parentNode).classed("bubble-node-hovered", true);
 
     const neighborIds = neighborIdsOf(d.id);
     nodeSel.select(".bubble-border")
@@ -518,9 +518,7 @@ function initBubbleView() {
 
   hitAreaSel.on("mouseleave", (event, d) => {
 
-    d.hovered = false;
-    d3.select(event.currentTarget.parentNode).select(".bubble-visual")
-      .attr("transform", visualTransform(d));
+    d3.select(event.currentTarget.parentNode).classed("bubble-node-hovered", false);
 
     nodeSel.select(".bubble-border").classed("bubble-similar", false);
     linkSel.classed("bubble-link-active", false);

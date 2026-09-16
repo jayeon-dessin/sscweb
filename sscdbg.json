@@ -1077,7 +1077,7 @@
     "songwriters": ["Dean Dillon", "Linda Hargrove"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["컨트리", "테네시", "술"],
+    "tags": ["컨트리", "테네시", "술","미국남부"],
     "memo": "연인을 다양한 술에 비유하는, 감미로운 사랑 노래.",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/52"}
@@ -7009,7 +7009,7 @@
     "songwriters": ["Brewster M. Higley","Daniel E. Kelley"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["포크","캔자스"],
+    "tags": ["포크","캔자스","미국서부","미국중서부"],
     "memo": "미국 서부를 상징하는 곡 중 하나이자, 캔자스 주의 주가. 안빈낙도의 삶",
     "youtube": [
       {"title": "가사", "url": "https://www.youtube.com/watch?v=qgfQSSnzDLI"},
@@ -7161,7 +7161,7 @@
     "youtube": [
       {"title": "MV", "url": "https://youtu.be/WT-VE9OyAJk?si=8tPsY__DNcRjn-uB"}
     ],
-    "image": "covers/426-mo-lafarte-1.jpg"
+    "image": "covers/426-mon-lafarte-1.jpg"
   },
   {
     "title": "Outer Wilds",
