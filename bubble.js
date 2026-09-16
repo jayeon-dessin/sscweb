@@ -13,6 +13,7 @@ let bubbleNodesData = null;
 let bubbleLinks = null; // 현재 가중치 기준 KNN 링크 (가중치 바뀌면 다시 계산됨)
 let bubbleGroupsByKey = null; // 이미지 경로 -> 그 이미지를 공유하는 곡 배열
 let bubbleFreqMaps = null; // tags/artist/songwriters/language 값별 등장 횟수 (희귀도 가중치용)
+let bubblePreviewedNodeId = null; // 한 번 클릭해서 옆에 미리보기가 떠 있는 버블의 id
 
 const BUBBLE_WIDTH = 1000;
 const BUBBLE_HEIGHT = 640;
@@ -176,7 +177,7 @@ function buildSimilarityLinks(representativeSongs, k = 4) {
 
     const candidates = representativeSongs
       .map((other, j) => ({ index: j, sim: computeSimilarity(song, other) }))
-      .filter(entry => entry.index !== i);
+      .filter(entry => entry.index !== i && entry.sim > 0); // 조금도 안 겹치는 곡은 억지로 뽑지 않음
 
     // .sort()는 안정 정렬이라, 점수가 동점이면 원래 배열 순서(index가 작은 쪽)가
     // 항상 유리해짐. 가중치를 한두 요소에 몰면 동점이 아주 많아지는데, 이때
@@ -278,6 +279,52 @@ function selectBubbleGroupByKey(groupKey) {
   selectBubbleGroup({ songs: groupSongs, groupKey });
 }
 
+// 버블을 처음 클릭했을 때 옆에 간단한 정보를 보여줌 (아직 페이지 이동은 안 함)
+function showBubblePreview(d) {
+
+  const panel = document.getElementById("bubble-preview");
+  if (!panel) return;
+
+  const rep = representativeSongOf(d.group);
+  const count = d.group.songs.length;
+
+  panel.classList.remove("hidden");
+
+  const artwork = panel.querySelector(".bubble-preview-artwork");
+  if (artwork) {
+    artwork.innerHTML = "";
+    artwork.classList.add("placeholder");
+    artwork.classList.remove("no-artwork");
+    if (typeof loadArtworkInto === "function") {
+      loadArtworkInto(artwork, rep);
+    }
+  }
+
+  const titleEl = document.getElementById("bubble-preview-title");
+  if (titleEl) {
+    titleEl.textContent = count > 1 ? `${rep.title} 외 ${count - 1}곡` : rep.title;
+  }
+
+  const artistEl = document.getElementById("bubble-preview-artist");
+  if (artistEl) {
+    const performers = rep.artist?.length ? rep.artist : (rep.songwriters || []);
+    artistEl.textContent = performers.join(", ");
+  }
+
+  const metaEl = document.getElementById("bubble-preview-meta");
+  if (metaEl) {
+    const metaParts = [];
+    if (rep.year) metaParts.push(rep.year);
+    if (rep.tags?.length) metaParts.push(rep.tags.slice(0, 3).join(", "));
+    metaEl.textContent = metaParts.join(" · ");
+  }
+}
+
+function hideBubblePreview() {
+  bubblePreviewedNodeId = null;
+  document.getElementById("bubble-preview")?.classList.add("hidden");
+}
+
 function initBubbleView() {
 
   if (bubbleInitStarted) return;
@@ -307,6 +354,16 @@ function initBubbleView() {
     bubbleNodesData.map(n => representativeSongOf(n.group)),
     6
   );
+
+  // 평소엔 안 보이다가, 버블에 마우스를 올렸을 때만 연결선이 나타남
+  // (노드보다 먼저 그려야 선이 버블 아래에 깔림)
+  const linkSel = bubbleInnerGroup
+    .append("g")
+    .attr("class", "bubble-links")
+    .selectAll("line.bubble-link")
+    .data(bubbleLinks)
+    .join("line")
+    .attr("class", "bubble-link");
 
   const nodeSel = bubbleInnerGroup
     .append("g")
@@ -362,7 +419,22 @@ function initBubbleView() {
     });
 
   nodeSel.on("click", (event, d) => {
-    selectBubbleGroup(d.group);
+    if (bubblePreviewedNodeId === d.id) {
+      // 미리보기 상태였던 버블을 한 번 더 클릭 -> 진짜로 그 곡(들)로 이동
+      hideBubblePreview();
+      selectBubbleGroup(d.group);
+    } else {
+      // 처음 클릭한 버블(또는 다른 버블로 갈아탄 경우) -> 옆에 미리보기만 표시
+      bubblePreviewedNodeId = d.id;
+      showBubblePreview(d);
+    }
+  });
+
+  // 배경(빈 곳)을 클릭하면 미리보기 닫기
+  bubbleSvg.on("click", event => {
+    if (event.target === bubbleSvg.node()) {
+      hideBubblePreview();
+    }
   });
 
   function neighborIdsOf(nodeId) {
@@ -376,14 +448,35 @@ function initBubbleView() {
     return ids;
   }
 
+  // 평소엔 translate만, hover 중인 버블만 살짝 확대. tick과 hover 둘 다 이 함수로 그림
+  function nodeTransform(d) {
+    const scale = d.hovered ? 1.35 : 1;
+    return `translate(${d.x},${d.y}) scale(${scale})`;
+  }
+
   nodeSel.on("mouseenter", (event, d) => {
+
+    d.hovered = true;
+    d3.select(event.currentTarget).attr("transform", nodeTransform(d));
+
     const neighborIds = neighborIdsOf(d.id);
     nodeSel.select(".bubble-border")
       .classed("bubble-similar", n => neighborIds.has(n.id));
+
+    linkSel.classed("bubble-link-active", l => {
+      const s = typeof l.source === "object" ? l.source.id : l.source;
+      const t = typeof l.target === "object" ? l.target.id : l.target;
+      return s === d.id || t === d.id;
+    });
   });
 
-  nodeSel.on("mouseleave", () => {
+  nodeSel.on("mouseleave", (event, d) => {
+
+    d.hovered = false;
+    d3.select(event.currentTarget).attr("transform", nodeTransform(d));
+
     nodeSel.select(".bubble-border").classed("bubble-similar", false);
+    linkSel.classed("bubble-link-active", false);
   });
 
   const drag = d3.drag()
@@ -417,7 +510,13 @@ function initBubbleView() {
     .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.02))
     .force("collide", d3.forceCollide(d => d.radius + 5))
     .on("tick", () => {
-      nodeSel.attr("transform", d => `translate(${d.x},${d.y})`);
+      linkSel
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+
+      nodeSel.attr("transform", nodeTransform);
     });
 
   bubbleZoomBehavior = d3.zoom()
