@@ -174,9 +174,20 @@ function buildSimilarityLinks(representativeSongs, k = 4) {
 
   representativeSongs.forEach((song, i) => {
 
-    const nearest = representativeSongs
+    const candidates = representativeSongs
       .map((other, j) => ({ index: j, sim: computeSimilarity(song, other) }))
-      .filter(entry => entry.index !== i)
+      .filter(entry => entry.index !== i);
+
+    // .sort()는 안정 정렬이라, 점수가 동점이면 원래 배열 순서(index가 작은 쪽)가
+    // 항상 유리해짐. 가중치를 한두 요소에 몰면 동점이 아주 많아지는데, 이때
+    // 매번 배열 앞쪽 곡만 뽑히는 걸 막기 위해 정렬 전에 후보 순서를 섞어서
+    // 동점 처리가 공평하게(무작위로) 되도록 함
+    for (let x = candidates.length - 1; x > 0; x--) {
+      const y = Math.floor(Math.random() * (x + 1));
+      [candidates[x], candidates[y]] = [candidates[y], candidates[x]];
+    }
+
+    const nearest = candidates
       .sort((a, b) => b.sim - a.sim)
       .slice(0, k);
 
