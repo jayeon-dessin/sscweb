@@ -2689,7 +2689,7 @@
     "year": "2024",
     "artist": ["FUSE ODG", "Ed Sheeran", "Mugeez"],
     "songwriters": ["Ed Sheeran", "Joseph Addison", "Mugeez Abdul Rashid", "Nana Richard Abiona"],
-    "language": ["영어", "트위어"],
+    "language": ["영어", "아칸어"],
     "countries": ["GH", "GB"],
     "tags": ["아프로비츠", "팝","아프로팝"],
     "memo": "에드 시런이 참여한 가나 스타일의 아프로비츠 곡.",
@@ -3276,6 +3276,20 @@
     "image": "covers/184-dtmf-bad-bunny.jpg"
   },
   {
+    "title": "Lo Que Le Pasó a Hawaii",
+    "year": "2025",
+    "artist": ["Bad Bunny"],
+    "songwriters": ["Tainy","Marco Borrero","Flor Morales Ramos","Big Jay","Luis Amed Irizarry"],
+    "language": ["스페인어"],
+    "countries": ["PR"],
+    "tags": ["히바로","힙합","하와이","푸에르토리코"],
+    "memo": "'하와이에 일어난 일', 푸에르토리코의 젠트리피케이션에 관해. 미국의 식민지화로 하와이가 어떻게 되었는지 기억하고, 푸에르토리코가 그 운명을 피하게 하라.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=uvfDaZ4ZT80"}
+    ],
+    "image": "covers/184-dtmf-bad-bunny.jpg"
+  },
+  {
     "title": "Imouha",
     "year": "2024",
     "artist": ["Etran de L'Aïr"],
@@ -3326,6 +3340,9 @@
     "countries": ["PE"],
     "tags": ["힙합", "남미원주민", "레게톤", "쿰비아"],
     "memo": "페루의 쿰비아 밴드 Los Mirlos와 래퍼 Renata Flores의 콜라보, '불타오르고 있어'",
+    "links": [
+      {"title": "블로그 해설", "url": "https://jdessin.tistory.com/167"}
+    ],
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=JrqSnbQkOdw"}
     ],
@@ -5039,7 +5056,7 @@
     "title": "I Like It",
     "year": "2018",
     "artist": ["Cardi B", "Bad Bunny", "J Balvin"],
-    "songwriters": ["Almanzar", "Benito Martínez", "José Osorio", "Raphael", "Thorpe", "Vincent Watson", "Xavier Vargas", "Edgar Vargas", "Luian Malave", "Edgar Machuca", "Marcos Masís", "Noah Assad", "Tony Pabón", "Manny Rodriguez", "Benny Bonnilla"],
+    "songwriters": ["Almanzar", "Benito Martínez", "José Osorio", "Raphael", "Thorpe", "Vincent Watson", "Xavier Vargas", "Edgar Vargas", "Luian Malave", "Edgar Machuca", "Tainy", "Noah Assad", "Tony Pabón", "Manny Rodriguez", "Benny Bonnilla"],
     "language": ["영어", "스페인어"],
     "countries": ["US", "PR", "CO"],
     "tags": ["힙합", "트랩", "라틴트랩"],
@@ -5230,7 +5247,7 @@
     "songwriters": ["Georges Bizet", "Henri Meilhac", "Ludovic Halévy"],
     "language": ["프랑스어"],
     "countries": ["FR"],
-    "tags": ["오페라", "클래식", "카르멘"],
+    "tags": ["오페라", "클래식"],
     "memo": "비제의 오페라 <카르멘>의 대표곡. '투우사의 노래'",
     "youtube": [
       {"title": "Andrei Kymach, Beethoven Orchester Bonn", "url": "https://www.youtube.com/watch?v=g2ULycjl_g0"}
@@ -5244,9 +5261,8 @@
     "songwriters": ["Georges Bizet", "Sebastián Iradier"],
     "language": ["프랑스어"],
     "countries": ["FR"],
-    "tags": ["오페라", "클래식", "카르멘", "번안", "무곡"],
+    "tags": ["오페라", "클래식", "번안"],
     "memo": "스페인 무곡 El Arreglito의 멜로디를 차용한, 비제의 오페라 <카르멘> 속 아리아.",
-    "links": [],
     "youtube": [
       {"title": "Angela Gheorghiu (프랑스어 자막)", "url": "https://www.youtube.com/watch?v=tSsNFPk2vNA"},
       {"title": "André Rieu & Carmen Monarcha", "url": "https://www.youtube.com/watch?v=icJRTdpS2pU"}
@@ -5300,7 +5316,7 @@
     "year": "1950s?",
     "artist": ["E.T.Mensah"],
     "songwriters": ["E.T.Mensah"],
-    "language": ["트위어"],
+    "language": ["아칸어"],
     "countries": ["GH"],
     "tags": ["재즈", "하이라이프"],
     "memo": "'하이라이프의 왕' E.T.Mensah의 곡 중 하나. 전통을 기억하라!",
@@ -6276,7 +6292,21 @@
     "youtube": [
       {"title": "MV", "url": "https://youtu.be/wXhTHyIgQ_U?si=3Hl80v-sDbIayPd4"}
     ],
-    "image": "covers/367-circles-post-malone.jpg"
+    "image": "covers/367-hollywoods-bleeding.jpg"
+  },
+  {
+    "title": "Hollywood's Bleeding",
+    "year": "2019",
+    "artist": ["Post Malone"],
+    "songwriters": ["Austin Post", "Louis Bell", "Brian Lee", "Adam Feeney", "Billy Walsh", "Carter Lang"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["인디", "팝", "R&B"],
+    "memo": "할리우드는 피를 흘리지만, 우린 이곳을 집이라고 불러.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=w5GrxfjuTTI"}
+    ],
+    "image": "covers/367-hollywoods-bleeding.jpg"
   },
   {
     "title": "Dreamers",
@@ -7176,5 +7206,64 @@
       {"title": "음원", "url": "https://www.youtube.com/watch?v=Xpkc-NU1KA0"}
     ],
     "image": "covers/427-outer-wilds.jpg"
+  },
+  {
+    "title": "Eight Concert Etudes Op. 40 Prelude",
+    "year": "2000",
+    "artist": [],
+    "songwriters": ["Nikolai Kapustin"],
+    "language": [],
+    "countries": ["RU"],
+    "tags": ["클래식","재즈","피아노"],
+    "memo": "세소찾더보기에 최초로 들어온 추천곡. 재즈풍의 피아노",
+    "youtube": [
+      {"title": "음원", "url": "https://youtu.be/A-_RzCevOaY?si=r2vf8rQAKaSJpD33"},
+      {"title": "Cateen", "url": "https://youtu.be/bndboMqTeW0?si=7xGwWmkMY9T7Vjc4"}
+    ],
+    "image": "covers/428-kapustin.jpg"
+  },
+  {
+    "title": "The Entertainer",
+    "year": "1902",
+    "artist": [],
+    "songwriters": ["Scott Joplin"],
+    "language": [],
+    "countries": ["US"],
+    "tags": ["피아노","래그타임"],
+    "memo": "영화 <스팅> 주제가로 유명해진, 가장 유명한 래그타임 곡.",
+    "youtube": [
+      {"title": "음악", "url": "https://www.youtube.com/watch?v=EQlPq4z2gBc"},
+      {"title": "영화 <The Sting> 사운드트랙", "url": "https://www.youtube.com/watch?v=mAfj5XgUC5U"}
+    ],
+    "image": "covers/429-scott-joplin.jpg"
+  },
+  {
+    "title": "Samba de Janeiro",
+    "year": "1997",
+    "artist": ["Bellini"],
+    "songwriters": ["Gottfried Engels","Ramon Zenker","Airto Moreira","Hugo Fattoruso"],
+    "language": ["포르투갈어"],
+    "countries": ["DE"],
+    "tags": ["하우스","댄스","삼바","리우데자네이루"],
+    "memo": "삼바 하면 생각나는 곡..이지만, 사실 삼바는 아니다. Airto Moreira의 'Tombo In 7/4'를 샘플링한 곡.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=HAiHEQblKeQ"}
+    ],
+    "image": "covers/430-bellini.jpg"
+  },
+  {
+    "title": "Sunflower",
+    "year": "2018",
+    "artist": ["Post Malone","Swae Lee"],
+    "songwriters": ["Austin Post","Khalif Brown","Carl Rosen","Carter Lang","Louis Bell","William Walsh"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["힙합","R&B","애니메이션","드림팝"],
+    "memo": "애니메이션 <스파이더맨: 뉴 유니버스> 삽입곡. 넌 해바라기야",
+    "youtube": [
+      {"title": "MV(영화)", "url": "https://www.youtube.com/watch?v=ApXoWvfEYVU"},
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=3E78T8h5EhA"}
+    ],
+    "image": "covers/430-spider-verse.jpg"
   }
 ]

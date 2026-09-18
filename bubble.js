@@ -553,7 +553,7 @@ function initBubbleView() {
     .force("charge", d3.forceManyBody().strength(-120))
     .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.02))
     .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.02))
-    .force("collide", d3.forceCollide(d => d.radius + 5))
+    .force("collide", d3.forceCollide(d => d.radius + 3))
     .on("tick", () => {
       linkSel
         .attr("x1", d => d.source.x)
