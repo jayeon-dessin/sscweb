@@ -137,11 +137,11 @@ function geoSimilarity(songA, songB) {
 // 5가지 요소의 가중치. 슬라이더로 실시간 조절 가능 (합이 100이 아니어도
 // computeSimilarity에서 알아서 비율로 정규화함)
 const DEFAULT_BUBBLE_WEIGHTS = {
-  geo: 50,
-  tag: 15,
+  geo: 30,
+  tag: 30,
   artist: 15,
-  writer: 5,
-  language: 10,
+  writer: 10,
+  language: 15,
 };
 const bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS }; // 고정값 - 사이트에서 조절 불가
 
@@ -180,9 +180,28 @@ function computeSimilarity(songA, songB) {
   ) / totalWeight;
 }
 
-// 곡마다 가장 유사한 K곡과 연결 (KNN, 중복 링크 제거).
+// 곡마다 연결할 최소/최대 개수. 가장 유사한 곡과의 유사도가 이 정도로 낮으면
+// MIN_LINK_COUNT개만, 이 정도로 높으면 MAX_LINK_COUNT개까지 연결함
+// (관련성이 뚜렷한 곡은 여러 곡과 이어지고, 애매한 곡은 억지로 연결선을
+// 늘리지 않도록 함). 두 기준값 사이는 부드럽게 보간됨
+const MIN_LINK_COUNT = 2;
+const MAX_LINK_COUNT = 5;
+const LOW_SIM_FOR_LINK_COUNT = 0.2;
+const HIGH_SIM_FOR_LINK_COUNT = 0.6;
+
+// 가장 유사한 곡과의 유사도 하나만 보고, 그 곡에 연결할 개수(k)를 정함
+function linkCountFor(topSim) {
+  const t = Math.max(
+    0,
+    Math.min(1, (topSim - LOW_SIM_FOR_LINK_COUNT) / (HIGH_SIM_FOR_LINK_COUNT - LOW_SIM_FOR_LINK_COUNT))
+  );
+  return Math.round(MIN_LINK_COUNT + t * (MAX_LINK_COUNT - MIN_LINK_COUNT));
+}
+
+// 곡마다 가장 유사한 곡들과 연결 (KNN, 중복 링크 제거). 연결 개수는 고정이
+// 아니라 곡마다 다름 - linkCountFor 참고.
 // 화면에 선을 그리진 않지만, 배치(force simulation)와 마우스오버 강조에 계속 쓰임
-function buildSimilarityLinks(representativeSongs, k = 3) {
+function buildSimilarityLinks(representativeSongs) {
 
   const links = [];
   const seenPairs = new Set();
@@ -202,9 +221,11 @@ function buildSimilarityLinks(representativeSongs, k = 3) {
       [candidates[x], candidates[y]] = [candidates[y], candidates[x]];
     }
 
-    const nearest = candidates
-      .sort((a, b) => b.sim - a.sim)
-      .slice(0, k);
+    const sorted = candidates.sort((a, b) => b.sim - a.sim);
+
+    const topSim = sorted.length ? sorted[0].sim : 0;
+    const k = linkCountFor(topSim);
+    const nearest = sorted.slice(0, k);
 
     nearest.forEach(entry => {
       const key = i < entry.index ? `${i}-${entry.index}` : `${entry.index}-${i}`;
@@ -381,8 +402,7 @@ function initBubbleView() {
 
   // 화면에는 그리지 않지만, 배치와 마우스오버 이웃 강조에 계속 사용
   bubbleLinks = buildSimilarityLinks(
-    bubbleNodesData.map(n => similarityProfileFor(n.group)),
-    3
+    bubbleNodesData.map(n => similarityProfileFor(n.group))
   );
 
   // 평소엔 안 보이다가, 버블에 마우스를 올렸을 때만 연결선이 나타남
@@ -551,8 +571,8 @@ function initBubbleView() {
         .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
     )
     .force("charge", d3.forceManyBody().strength(-120))
-    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.02))
-    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.02))
+    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.05))
+    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.05))
     .force("collide", d3.forceCollide(d => d.radius + 3))
     .on("tick", () => {
       linkSel

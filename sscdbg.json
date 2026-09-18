@@ -7293,5 +7293,35 @@
       {"title": "가사 (+독음, 번역)", "url": "https://www.youtube.com/watch?v=ChvFAv1B0qc"}
     ],
     "image": "covers/433-great-germany.jpg"
+  },
+  {
+    "title": "Пусть бегут неуклюже (Pust' begut neuklyuzhe)",
+    "year": "1971",
+    "artist": ["Vladimir Ferapontov (Владимир Ферапонтов)"],
+    "songwriters": ["Vladimir Shainsky","Alexander Timofeevskiy"],
+    "language": ["러시아어"],
+    "countries": ["RU"],
+    "tags": ["애니메이션", "어린이", "소련"],
+    "memo": "애니메이션 <체부라시카(Чебурашка)>에서 악어 게나가 부르는 생일 노래.",
+    "youtube": [
+      {"title": "영상", "url": "https://www.youtube.com/watch?v=EbAPd1491X8"},
+      {"title": "Большой детский хор ЦТ и ВР", "url": "https://www.youtube.com/watch?v=GwcQagQWqvg"}
+    ],
+    "image": "covers/434-gena.jpg"
+  },
+  {
+    "title": "Prince Ali",
+    "year": "1992",
+    "artist": ["Robin Williams"],
+    "songwriters": ["Alan Menken","Howard Ashman"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["애니메이션", "디즈니","영화음악"],
+    "memo": "디즈니 애니메이션 영화 <알라딘> 삽입곡.",
+    "youtube": [
+      {"title": "애니메이션", "url": "https://www.youtube.com/watch?v=4mDBzvCdnPU"},
+      {"title": "실사화 (Will Smith)", "url": "https://www.youtube.com/watch?v=eGLSPyGszjo"}
+    ],
+    "image": "covers/435-aladdin.jpg"
   }
 ]
