@@ -137,9 +137,9 @@ function geoSimilarity(songA, songB) {
 // 5가지 요소의 가중치. 슬라이더로 실시간 조절 가능 (합이 100이 아니어도
 // computeSimilarity에서 알아서 비율로 정규화함)
 const DEFAULT_BUBBLE_WEIGHTS = {
-  geo: 30,
-  tag: 25,
-  artist: 25,
+  geo: 25,
+  tag: 35,
+  artist: 20,
   writer: 10,
   language: 10,
 };
@@ -585,7 +585,7 @@ function initBubbleView() {
     });
 
   bubbleZoomBehavior = d3.zoom()
-    .scaleExtent([0.2, 5])
+    .scaleExtent([0.05, 5])
     .on("zoom", event => {
       bubbleInnerGroup.attr("transform", event.transform);
     });
