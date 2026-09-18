@@ -964,6 +964,20 @@
     "image": "covers/052-america.jpg"
   },
   {
+    "title": "Over There",
+    "year": "1917",
+    "artist": [],
+    "songwriters": ["George M. Cohan"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["군가", "전쟁", "1차대전","2차대전"],
+    "memo": "세계대전 기간 사용된 미군 군가. 양키들이 간다!",
+    "youtube": [
+      {"title": "The Eric Rogers Chorale and Orchestra", "url": "https://www.youtube.com/watch?v=kKx9oPyh0KM"}
+    ],
+    "image": "covers/052-america.jpg"
+  },
+  {
     "title": "تملي معاك (Tamally Maak)",
     "year": "2000",
     "artist": ["Amr Diab (عمرو دياب)"],
@@ -1296,7 +1310,7 @@
       {"title": "Alexandrov Ensemble(Red Army Choir)", "url": "https://www.youtube.com/watch?v=oCc7ySI9YMw"},
       {"title": "아타리 테트리스 BGM", "url": "https://www.youtube.com/watch?v=mgUdwsQyY_s"}
     ],
-    "image": "covers/071-red-army.jpg"
+    "image": "covers/071-kalinka.jpg"
   },
   {
     "title": "Катюша (Katyusha)",
@@ -1314,22 +1328,7 @@
       {"title": "Alexandrov Ensemble(Red Army Choir)", "url": "https://www.youtube.com/watch?v=sqgP8xBcz2g"},
       {"title": "Георгий Виноградов 버전 (한국어 자막)", "url": "https://www.youtube.com/watch?v=Rc0WOYHReSA"}
     ],
-    "image": "covers/071-red-army.jpg"
-  },
-  {
-    "title": "Прощание славянки (Farewell of Slavianka)",
-    "year": "1912",
-    "artist": [],
-    "songwriters": ["Vasily Agapkin"],
-    "language": ["러시아어"],
-    "countries": ["RU"],
-    "tags": ["군가", "전쟁", "이별", "적백내전"],
-    "memo": "'슬라브 여인의 작별' - 러시아 제국 시대부터 군인들 사이에서 인기를 끈 곡. 가사는 여러 버전이 있다. 탐보프 주의 주가",
-    "youtube": [
-      {"title": "1967년 작사된 소련 버전 (Alexandrov Ensemble)", "url": "https://www.youtube.com/watch?v=h9_8YyFl-uY"},
-      {"title": "1997년 작사된 백군 버전 (영어 자막)", "url": "https://www.youtube.com/watch?v=iXnc0JrWkOA"}
-    ],
-    "image": "covers/071-red-army.jpg"
+    "image": "covers/072-ussr.jpg"
   },
   {
     "title": "Красная Армия всех сильней (Krasnaya Armiya vsekh sil'ney)",
@@ -1343,21 +1342,7 @@
     "youtube": [
       {"title": "가사 (영어 자막)", "url": "https://www.youtube.com/watch?v=vA-W_MPg9ec"}
     ],
-    "image": "covers/071-red-army.jpg"
-  },
-  {
-    "title": "Was ist des Deutschen Vaterland",
-    "year": "1813",
-    "artist": [],
-    "songwriters": ["Ernst Moritz Arndt"],
-    "language": ["독일어"],
-    "countries": ["DE"],
-    "tags": ["선전가요", "민족주의", "독일"],
-    "memo": "'독일인의 조국은 무엇인가', 독일 민족의 통일된 국가를 건설하고자 하는 곡. 오 나인 나인 나인~~",
-    "youtube": [
-      {"title": "가사 (+독음, 번역)", "url": "https://www.youtube.com/watch?v=ChvFAv1B0qc"}
-    ],
-    "image": "covers/072-great-germany.jpg"
+    "image": "covers/072-ussr.jpg"
   },
   {
     "title": "Jerusalema",
@@ -5863,12 +5848,26 @@
     "songwriters": ["Herms Niel"],
     "language": ["독일어"],
     "countries": ["DE"],
-    "tags": ["군가", "전쟁", "2차대전", "밈"],
+    "tags": ["군가", "전쟁", "2차대전", "밈", "꽃"],
     "memo": "2차대전 기간 독일군 군가. 나치 독일을 상징하는 곡처럼 자리잡았다.",
     "youtube": [
       {"title": "음원 (영상이 자주 잘려서 주기적으로 링크 교체 필요)", "url": "https://youtu.be/VClI7NywlYA?si=3wIaiI8oTz70V447"}
     ],
-    "image": "covers/342-erika.jpg"
+    "image": "covers/342-nazigermany.jpg"
+  },
+  {
+    "title": "Edelweiß",
+    "year": 1939,
+    "artist": [],
+    "songwriters": ["Herms Niel"],
+    "language": ["독일어"],
+    "countries": ["DE"],
+    "tags": ["군가", "전쟁", "2차대전","꽃"],
+    "memo": "원조 에델바이스. 독일군 산악부대의 군가",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=JW21xAYLy7I"}
+    ],
+    "image": "covers/342-nazigermany.jpg"
   },
   {
     "title": "Auld Lang Syne",
@@ -7265,5 +7264,34 @@
       {"title": "MV", "url": "https://www.youtube.com/watch?v=3E78T8h5EhA"}
     ],
     "image": "covers/431-spider-verse.jpg"
+  },
+  {
+    "title": "Прощание славянки (Farewell of Slavianka)",
+    "year": "1912",
+    "artist": [],
+    "songwriters": ["Vasily Agapkin"],
+    "language": ["러시아어"],
+    "countries": ["RU"],
+    "tags": ["군가", "전쟁", "이별", "적백내전"],
+    "memo": "'슬라브 여인의 작별' - 러시아 제국 시대부터 군인들 사이에서 인기를 끈 곡. 가사는 여러 버전이 있다. 탐보프 주의 주가",
+    "youtube": [
+      {"title": "1967년 작사된 소련 버전 (Alexandrov Ensemble)", "url": "https://www.youtube.com/watch?v=h9_8YyFl-uY"},
+      {"title": "1997년 작사된 백군 버전 (영어 자막)", "url": "https://www.youtube.com/watch?v=iXnc0JrWkOA"}
+    ],
+    "image": "covers/432-slavianka.jpg"
+  },
+  {
+    "title": "Was ist des Deutschen Vaterland",
+    "year": "1813",
+    "artist": [],
+    "songwriters": ["Ernst Moritz Arndt"],
+    "language": ["독일어"],
+    "countries": ["DE"],
+    "tags": ["선전가요", "민족주의", "독일"],
+    "memo": "'독일인의 조국은 무엇인가', 독일 민족의 통일된 국가를 건설하고자 하는 곡. 오 나인 나인 나인~~",
+    "youtube": [
+      {"title": "가사 (+독음, 번역)", "url": "https://www.youtube.com/watch?v=ChvFAv1B0qc"}
+    ],
+    "image": "covers/433-great-germany.jpg"
   }
 ]
