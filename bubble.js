@@ -137,9 +137,9 @@ function geoSimilarity(songA, songB) {
 // 5가지 요소의 가중치. 슬라이더로 실시간 조절 가능 (합이 100이 아니어도
 // computeSimilarity에서 알아서 비율로 정규화함)
 const DEFAULT_BUBBLE_WEIGHTS = {
-  geo: 30,
-  tag: 30,
-  artist: 15,
+  geo: 35,
+  tag: 25,
+  artist: 20,
   writer: 10,
   language: 15,
 };
@@ -571,8 +571,8 @@ function initBubbleView() {
         .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
     )
     .force("charge", d3.forceManyBody().strength(-120))
-    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.05))
-    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.05))
+    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.03))
+    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.03))
     .force("collide", d3.forceCollide(d => d.radius + 3))
     .on("tick", () => {
       linkSel
