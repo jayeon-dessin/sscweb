@@ -30,7 +30,9 @@ const countryTitle = document.getElementById("country-title");
 const countrySort =  document.getElementById("country-sort");
 const tagSort = document.getElementById("tag-sort");
 const backButton = document.getElementById("back-to-countries");
-const viewTabs = document.querySelectorAll(".view-tab");
+// .view-tab-external(버블 탭처럼 진짜 다른 페이지로 이동하는 링크)은
+// 여기서 관리하는 "화면 안에서 뷰 전환" 로직 대상이 아니므로 제외
+const viewTabs = document.querySelectorAll(".view-tab:not(.view-tab-external)");
 const randomDiceButton = document.getElementById("random-dice-button");
 
 // -------------------------------------

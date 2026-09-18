@@ -171,6 +171,13 @@ body {
     color: white;
 }
 
+/* 버블 탭처럼 <a>로 만든, 다른 페이지로 진짜 이동하는 탭 */
+.view-tab-external {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
 
 /* ========================================
    국가 선택 화면
@@ -1126,6 +1133,79 @@ hr {
 
 .hidden {
     display: none !important;
+}
+
+/* ========================================
+   버블 전용 페이지 (bubble.html)
+   - 버블 뷰만 따로 뗀 화면이라, body의 1100px 폭 제한을 풀고
+     헤더 아래 나머지 공간을 전부 버블 그래프에 씀
+======================================== */
+
+body.bubble-page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.bubble-page-header {
+    flex: 0 0 auto;
+
+    padding: var(--space-3) var(--space-5);
+    margin-bottom: 0;
+}
+
+.bubble-back-link {
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.bubble-back-link:hover {
+    text-decoration: underline;
+}
+
+body.bubble-page .bubble-controls {
+    flex: 0 0 auto;
+    padding: 0 var(--space-5);
+    margin-bottom: var(--space-3);
+}
+
+body.bubble-page .bubble-main-row {
+    flex: 1 1 auto;
+    min-height: 0;
+
+    margin: 0 var(--space-5) var(--space-5);
+}
+
+body.bubble-page #bubble-container {
+    height: 100%;
+}
+
+body.bubble-page #bubble-svg {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+}
+
+@media (max-width: 750px) {
+    .bubble-page-header {
+        padding: var(--space-3);
+    }
+
+    body.bubble-page .bubble-controls {
+        padding: 0 var(--space-3);
+    }
+
+    body.bubble-page .bubble-main-row {
+        margin: 0 var(--space-3) var(--space-3);
+    }
 }
 
 /* ========================================
