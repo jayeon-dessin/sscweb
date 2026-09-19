@@ -903,12 +903,11 @@ a:hover {
 ======================================== */
 @media (max-width: 750px) {
 
-    .bubble-main-row {
-        flex-direction: column;
-    }
-
     #bubble-preview {
-        width: 100%;
+        left: var(--space-2);
+        right: var(--space-2);
+        bottom: var(--space-2);
+        width: auto;
     }
 
     body {
@@ -1171,12 +1170,6 @@ body.bubble-page {
     text-decoration: underline;
 }
 
-body.bubble-page .bubble-controls {
-    flex: 0 0 auto;
-    padding: 0 var(--space-5);
-    margin-bottom: var(--space-3);
-}
-
 body.bubble-page .bubble-main-row {
     flex: 1 1 auto;
     min-height: 0;
@@ -1199,10 +1192,6 @@ body.bubble-page #bubble-svg {
         padding: var(--space-3);
     }
 
-    body.bubble-page .bubble-controls {
-        padding: 0 var(--space-3);
-    }
-
     body.bubble-page .bubble-main-row {
         margin: 0 var(--space-3) var(--space-3);
     }
@@ -1211,16 +1200,6 @@ body.bubble-page #bubble-svg {
 /* ========================================
    버블 뷰
 ======================================== */
-
-.bubble-controls {
-    margin-bottom: var(--space-4);
-}
-
-.bubble-hint {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
 
 .bubble-main-row {
     display: flex;
@@ -1241,9 +1220,14 @@ body.bubble-page #bubble-svg {
     overflow: hidden;
 }
 
+/* 버블을 클릭하면 옆이 아니라 버블 화면 위에 떠서 보이는 작은 미리보기 창 */
 #bubble-preview {
-    flex-shrink: 0;
+    position: absolute;
+    bottom: var(--space-3);
+    right: var(--space-3);
     width: 260px;
+    max-height: calc(100% - var(--space-3) * 2);
+    overflow-y: auto;
 
     display: flex;
     flex-direction: column;
@@ -1254,11 +1238,37 @@ body.bubble-page #bubble-svg {
     padding: var(--space-4);
 
     box-shadow:
-        0 2px 12px rgba(0, 0, 0, 0.08);
+        0 8px 28px rgba(0, 0, 0, 0.22);
+
+    z-index: 5;
 }
 
 #bubble-preview.hidden {
     display: none;
+}
+
+#bubble-preview-close {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+
+    appearance: none;
+    border: none;
+    background: transparent;
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #888;
+    cursor: pointer;
+}
+
+#bubble-preview-close:hover {
+    background: #f0f3f7;
+    color: #333;
 }
 
 .bubble-preview-artwork {

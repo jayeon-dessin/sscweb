@@ -1319,7 +1319,7 @@
     "songwriters": ["Matvey Blanter", "Mikhail Isakovsky"],
     "language": ["러시아어"],
     "countries": ["RU"],
-    "tags": ["민요", "군가", "전쟁", "2차대전", "소련"],
+    "tags": ["군가", "전쟁", "2차대전", "소련","재즈"],
     "memo": "2차 세계대전 기간 소련에서 유행한 국민 노래. 카츄샤는 예카테리나의 애칭",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/61"}
@@ -1577,7 +1577,7 @@
     "songwriters": ["Franz Xaver Gruber", "Joseph Mohr"],
     "language": ["독일어"],
     "countries": ["AT"],
-    "tags": ["캐롤", "종교음악"],
+    "tags": ["크리스마스", "종교음악"],
     "memo": "고요한 밤, 거룩한 밤.",
     "links": [
       {"title": "블로그 해설", "url": "https://jdessin.tistory.com/82"}
@@ -3787,7 +3787,7 @@
     "songwriters": ["José Feliciano"],
     "language": ["스페인어", "영어"],
     "countries": ["PR"],
-    "tags": ["캐롤", "라틴팝"],
+    "tags": ["크리스마스", "라틴팝"],
     "memo": "너무나도 유명한 크리스마스 캐롤.",
     "youtube": [
       {"title": "음원", "url": "https://www.youtube.com/watch?v=N8NcQzMQN_U"}
@@ -5707,7 +5707,7 @@
     "songwriters": ["Lolly Vegas"],
     "language": ["영어"],
     "countries": ["US"],
-    "tags": ["팝록", "디스코", "소울", "북미원주민", "영화음악", "가오갤"],
+    "tags": ["팝록", "디스코", "소울", "북미원주민", "가오갤"],
     "memo": "Redbone 최대 히트곡. 영화 <가디언즈 오브 갤럭시> 오프닝곡으로도 유명하다.",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=BA4rSO-h9Io"}
@@ -6230,7 +6230,7 @@
     "songwriters": ["슝좍1", "다하카"],
     "language": ["한국어"],
     "countries": ["KR"],
-    "tags": ["AI", "게임음악", "JPOP", "메이플"],
+    "tags": ["AI", "코미디", "JPOP"],
     "memo": "굉장히 잘 만들어진 AI 창팝 곡. 특별히 넣었다.",
     "youtube": [
       {"title": "MV(?)", "url": "https://www.youtube.com/watch?v=m86NdkAoCV4"}
@@ -6470,7 +6470,7 @@
     "songwriters": ["Traditional"],
     "language": ["폴란드어"],
     "countries": ["PL"],
-    "tags": ["캐롤", "종교음악"],
+    "tags": ["크리스마스", "종교음악"],
     "memo": "'그들(목자들)이 베들레헴으로 달려왔다', 폴란드 캐롤.",
     "youtube": [
       {"title": "Golec uOrkiestra, Sound'n'Grace", "url": "https://www.youtube.com/watch?v=Ss8lbkrIZ9Y"},
@@ -7323,5 +7323,147 @@
       {"title": "실사화 (Will Smith)", "url": "https://www.youtube.com/watch?v=eGLSPyGszjo"}
     ],
     "image": "covers/435-aladdin.jpg"
+  },
+  {
+    "title": "Пластинки (Plastinki)",
+    "year": "2018",
+    "artist": ["Дурной Вкус (Durnoy Vkus)"],
+    "songwriters": ["Andrey Degtyarev"],
+    "language": ["러시아어"],
+    "countries": ["RU"],
+    "tags": ["포스트펑크","두머"],
+    "memo": "'레코드 판'. 바깥의 모든 일이 귀찮아, 동이 틀 때까지 오래된 레코드나 듣자고.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=ccMHSE3VEqg"}
+    ],
+    "image": "covers/436-plastinki.jpg"
+  },
+  {
+    "title": "Supernatural",
+    "year": "2024",
+    "artist": ["NewJeans"],
+    "songwriters": ["250","Pharrell Williams","Ylva Dimberg","Gigi","민지"],
+    "language": ["영어","일본어","한국어"],
+    "countries": ["KR","VN","AU"],
+    "tags": ["팝","댄스팝","뉴잭스윙"],
+    "memo": "뉴진스의 계약 분쟁 이전 마지막 앨범인 일본 데뷔 더블싱글 중 하나. 퍼렐 윌리엄스의 'Back of My Mind'를 샘플링한 곡.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=ZncbtRo7RXs"}
+    ],
+    "image": "covers/437-supernatural.jpg"
+  },
+  {
+    "title": "Dance The Night Away",
+    "year": "2018",
+    "artist": ["TWICE"],
+    "songwriters": ["휘성","Anne Judith Wik","Moonshine","Cazzi Opeia","오승은","Andreas Baertels"],
+    "language": ["영어","일본어","한국어"],
+    "countries": ["KR","JP","TW"],
+    "tags": ["KPOP","팝","일렉트로닉"],
+    "memo": "트와이스의 여름 노래. 시원한 브라스",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=Fm5iP0S1z9w"}
+    ],
+    "image": "covers/438-dtna-twice.jpg"
+  },
+  {
+    "title": "Heal the World",
+    "year": "1991",
+    "artist": ["Michael Jackson"],
+    "songwriters": ["Michael Jackson"],
+    "language": ["영어","일본어","한국어"],
+    "countries": ["KR","JP","TW"],
+    "tags": ["블루스","팝"],
+    "memo": "더 나은 세상을 위하여.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=BWf-eARnf6U"}
+    ],
+    "image": "covers/439-dangerous-mj.jpg"
+  },
+  {
+    "title": "Hollywood",
+    "year": "2015",
+    "artist": ["검정치마"],
+    "songwriters": ["검정치마"],
+    "language": ["한국어","영어"],
+    "countries": ["KR","US"],
+    "tags": ["신스팝","인디","일렉트로닉"],
+    "memo": "사랑 노래 같지만 사실 양귀비꽃을 표현한 곡. 개인적으로 정말 좋아하는 곡이다.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=uuGtrxDsrws"},
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=gu0UGVvB8QU"}
+    ],
+    "image": "covers/440-hollywood-blackskirts.jpg"
+  },
+  {
+    "title": "Money",
+    "year": "2021",
+    "artist": ["Lisa (ลิซ่า)"],
+    "songwriters": ["24","Bekuh Boom","R.Tee","Vince"],
+    "language": ["영어"],
+    "countries": ["TH"],
+    "tags": ["KPOP","힙합"],
+    "memo": "블랙핑크 리사의 싱글 곡.",
+    "youtube": [
+      {"title": "EXCLUSIVE PERFORMANCE VIDEO", "url": "https://www.youtube.com/watch?v=dNCWe_6HAM8"}
+    ],
+    "image": "covers/441-lalisa.jpg"
+  },
+  {
+    "title": "Silence",
+    "year": "2017",
+    "artist": ["Marshmello","Khalid"],
+    "songwriters": ["Christopher Comstock","Khalid Robinson"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["댄스","일렉트로닉"],
+    "memo": "난 너무 오랫동안 침묵해 왔어.",
+    "youtube": [
+      {"title": "Lyric Video", "url": "https://www.youtube.com/watch?v=tk36ovCMsU8"}
+    ],
+    "image": "covers/442-silence-marshmello.jpg"
+  },
+  {
+    "title": "Snowman",
+    "year": "2017",
+    "artist": ["Sia"],
+    "songwriters": ["Sia Furler","Greg Kurstin"],
+    "language": ["영어"],
+    "countries": ["AU"],
+    "tags": ["크리스마스","팝"],
+    "memo": "눈사람 씨, 울지 마세요.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/gset79KMmt0?si=tsCWpNapFtkGzM2g"}
+    ],
+    "image": "covers/443-snowman-sia.jpg"
+  },
+  {
+    "title": "The First Noel (The First Nowell)",
+    "year": "?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language": ["영어"],
+    "countries": ["GB"],
+    "tags": ["크리스마스","민요","종교음악"],
+    "memo": "잉글랜드 콘월 지역 캐롤. 한국어 번안곡명은 '저 들 밖에 한밤중에'",
+    "youtube": [
+      {"title": "Rosemary Siemens 버전", "url": "https://www.youtube.com/watch?v=wNpwKJtOJ_Y"},
+      {"title": "Pentatonix 버전", "url": "https://www.youtube.com/watch?v=0u5UvnKlCTA"}
+    ],
+    "image": "covers/444-noel.jpg"
+  },
+  {
+    "title": "How Long",
+    "year": "2017",
+    "artist": ["Charlie Puth"],
+    "songwriters": ["Charlie Puth","Jacob Kasher","Justin Franks"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["팝","펑크","R&B"],
+    "memo": "바람 핀 연인을 질책하는 곡. '얼마나 오랫동안' 이러고 다닌거야?",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=CwfoyVa980U"}
+    ],
+    "image": "covers/445-voicenotes-charlie-puth.jpg"
   }
 ]

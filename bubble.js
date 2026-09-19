@@ -137,11 +137,11 @@ function geoSimilarity(songA, songB) {
 // 5가지 요소의 가중치. 슬라이더로 실시간 조절 가능 (합이 100이 아니어도
 // computeSimilarity에서 알아서 비율로 정규화함)
 const DEFAULT_BUBBLE_WEIGHTS = {
-  geo: 25,
-  tag: 35,
+  geo: 20,
+  tag: 30,
   artist: 20,
-  writer: 10,
-  language: 10,
+  writer: 15,
+  language: 15,
 };
 const bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS }; // 고정값 - 사이트에서 조절 불가
 
@@ -501,6 +501,11 @@ function initBubbleView() {
     }
   });
 
+  // 미리보기 창의 닫기(×) 버튼
+  document.getElementById("bubble-preview-close")?.addEventListener("click", () => {
+    hideBubblePreview();
+  });
+
   function neighborIdsOf(nodeId) {
     const ids = new Set();
     bubbleLinks.forEach(l => {
@@ -517,32 +522,78 @@ function initBubbleView() {
     return `translate(${d.x},${d.y})`;
   }
 
-  hitAreaSel.on("mouseenter", (event, d) => {
+  // -------------------------------------
+  // 마우스오버 강조: mouseenter/mouseleave 대신 "지금 마우스 좌표에서
+  // 가장 가까운 버블이 뭔가"를 직접 계산하는 방식.
+  //
+  // mouseenter/mouseleave는 "마우스가 움직여서" 안팎으로 지나갈 때만
+  // 발생함. 그런데 이 버블들은 force simulation으로 계속 움직이기 때문에,
+  // 마우스는 가만히 있는데 버블이 마우스 밑으로 들어왔다 나갔다 하는
+  // 경우가 흔함 - 이때는 마우스가 안 움직였으니 mouseenter/mouseleave가
+  // 아예 안 뜨거나(호버 상태가 실제로는 벗어났는데 안 풀림 = 계속 켜져
+  // 있는 것처럼 보임), 버블이 스쳐 지나가는 순간에만 잠깐 켜졌다 꺼지며
+  // 깜빡이는 것처럼 보임. 그래서 매 tick(버블이 움직일 때)마다, 그리고
+  // 마우스가 움직일 때마다 "지금 마우스 좌표를 기준으로 봤을 때 어떤
+  // 버블이 호버되어야 하는가"를 다시 계산해서 항상 실제 상태와 맞춤
+  let bubbleHoveredNodeId = null;
+  let bubbleLastPointerEvent = null; // tick마다 같은 마우스 좌표로 다시 계산할 때 씀
 
-    // 크기를 키우는 대신 클래스만 토글 - 테두리 강조/글로우는 CSS(:hover 아님,
-    // 명시적 클래스)로 처리. 처음 접속 직후 시뮬레이션이 아직 활발히 움직이는
-    // 동안 버블 크기 자체가 바뀌면 판정 경계가 마우스를 스치며 깜빡이던
-    // 문제가 있었어서, 크기는 아예 안 바꾸는 쪽으로 바꿈
-    d3.select(event.currentTarget.parentNode).classed("bubble-node-hovered", true);
+  function findHoveredNodeId(pointerEvent) {
+    if (!pointerEvent) return null;
 
-    const neighborIds = neighborIdsOf(d.id);
+    // bubbleInnerGroup 기준 좌표로 변환 - 확대/축소(zoom)나 화면 크기와
+    // 상관없이 버블의 x/y(force simulation 좌표)와 같은 기준이 됨
+    const [mx, my] = d3.pointer(pointerEvent, bubbleInnerGroup.node());
+
+    let closestId = null;
+    let closestDistance = Infinity;
+
+    bubbleNodesData.forEach(n => {
+      const dx = n.x - mx;
+      const dy = n.y - my;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const hitRadius = n.radius + 4; // bubble-hit-area 반지름과 동일
+
+      if (distance <= hitRadius && distance < closestDistance) {
+        closestDistance = distance;
+        closestId = n.id;
+      }
+    });
+
+    return closestId;
+  }
+
+  function applyHoverHighlight(nodeId) {
+    if (nodeId === bubbleHoveredNodeId) return; // 바뀐 게 없으면 DOM 안 건드림
+    bubbleHoveredNodeId = nodeId;
+
+    nodeSel.classed("bubble-node-hovered", n => n.id === nodeId);
+
+    const neighborIds = nodeId === null ? null : neighborIdsOf(nodeId);
     nodeSel.select(".bubble-border")
-      .classed("bubble-similar", n => neighborIds.has(n.id));
+      .classed("bubble-similar", n => !!neighborIds && neighborIds.has(n.id));
 
     linkSel.classed("bubble-link-active", l => {
+      if (nodeId === null) return false;
       const s = typeof l.source === "object" ? l.source.id : l.source;
       const t = typeof l.target === "object" ? l.target.id : l.target;
-      return s === d.id || t === d.id;
+      return s === nodeId || t === nodeId;
     });
-  });
+  }
 
-  hitAreaSel.on("mouseleave", (event, d) => {
+  function refreshHoverFromLastPointer() {
+    applyHoverHighlight(findHoveredNodeId(bubbleLastPointerEvent));
+  }
 
-    d3.select(event.currentTarget.parentNode).classed("bubble-node-hovered", false);
-
-    nodeSel.select(".bubble-border").classed("bubble-similar", false);
-    linkSel.classed("bubble-link-active", false);
-  });
+  bubbleSvg
+    .on("pointermove", event => {
+      bubbleLastPointerEvent = event;
+      applyHoverHighlight(findHoveredNodeId(event));
+    })
+    .on("pointerleave", () => {
+      bubbleLastPointerEvent = null;
+      applyHoverHighlight(null);
+    });
 
   const drag = d3.drag()
     .on("start", (event, d) => {
@@ -568,12 +619,12 @@ function initBubbleView() {
       "link",
       d3.forceLink(bubbleLinks)
         .id(d => d.id)
-        .distance(d => (12 + (1 - d.sim) * 65) * 1.2)
+        .distance(d => (18 + (1 - d.sim) * 65) * 1.2)
     )
-    .force("charge", d3.forceManyBody().strength(-110))
-    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.03))
-    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.03))
-    .force("collide", d3.forceCollide(d => d.radius + 3))
+    .force("charge", d3.forceManyBody().strength(-120))
+    .force("x", d3.forceX(BUBBLE_WIDTH / 2).strength(0.02))
+    .force("y", d3.forceY(BUBBLE_HEIGHT / 2).strength(0.02))
+    .force("collide", d3.forceCollide(d => d.radius + 5))
     .on("tick", () => {
       linkSel
         .attr("x1", d => d.source.x)
@@ -582,10 +633,14 @@ function initBubbleView() {
         .attr("y2", d => d.target.y);
 
       nodeSel.attr("transform", nodeTransform);
+
+      // 버블들이 움직였으니, 마우스는 가만히 있어도 호버 상태가 바뀌었을
+      // 수 있음 - 매 tick마다 다시 확인 (위 설명 참고)
+      refreshHoverFromLastPointer();
     });
 
   bubbleZoomBehavior = d3.zoom()
-    .scaleExtent([0.05, 5])
+    .scaleExtent([0.2, 5])
     .on("zoom", event => {
       bubbleInnerGroup.attr("transform", event.transform);
     });
