@@ -137,10 +137,10 @@ function geoSimilarity(songA, songB) {
 // 5가지 요소의 가중치. 슬라이더로 실시간 조절 가능 (합이 100이 아니어도
 // computeSimilarity에서 알아서 비율로 정규화함)
 const DEFAULT_BUBBLE_WEIGHTS = {
-  geo: 75,
-  tag: 5,
-  artist: 5,
-  writer: 5,
+  geo: 50,
+  tag: 10,
+  artist: 15,
+  writer: 15,
   language: 10,
 };
 const bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS }; // 고정값 - 사이트에서 조절 불가
@@ -185,9 +185,9 @@ function computeSimilarity(songA, songB) {
 // (관련성이 뚜렷한 곡은 여러 곡과 이어지고, 애매한 곡은 억지로 연결선을
 // 늘리지 않도록 함). 두 기준값 사이는 부드럽게 보간됨
 const MIN_LINK_COUNT = 2;
-const MAX_LINK_COUNT = 7;
+const MAX_LINK_COUNT = 5;
 const LOW_SIM_FOR_LINK_COUNT = 0.3;
-const HIGH_SIM_FOR_LINK_COUNT = 0.7;
+const HIGH_SIM_FOR_LINK_COUNT = 0.6;
 
 // 가장 유사한 곡과의 유사도 하나만 보고, 그 곡에 연결할 개수(k)를 정함
 function linkCountFor(topSim) {
