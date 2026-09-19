@@ -904,10 +904,12 @@ a:hover {
 @media (max-width: 750px) {
 
     #bubble-preview {
+        top: auto;
         left: var(--space-2);
         right: var(--space-2);
         bottom: var(--space-2);
         width: auto;
+        transform: none;
     }
 
     body {
@@ -1223,10 +1225,11 @@ body.bubble-page #bubble-svg {
 /* 버블을 클릭하면 옆이 아니라 버블 화면 위에 떠서 보이는 작은 미리보기 창 */
 #bubble-preview {
     position: absolute;
-    bottom: var(--space-3);
-    right: var(--space-3);
-    width: 260px;
-    max-height: calc(100% - var(--space-3) * 2);
+    top: 50%;
+    right: var(--space-5);
+    transform: translateY(-50%);
+    width: 320px;
+    max-height: calc(100% - var(--space-5) * 2);
     overflow-y: auto;
 
     display: flex;

@@ -137,9 +137,9 @@ function geoSimilarity(songA, songB) {
 // 5가지 요소의 가중치. 슬라이더로 실시간 조절 가능 (합이 100이 아니어도
 // computeSimilarity에서 알아서 비율로 정규화함)
 const DEFAULT_BUBBLE_WEIGHTS = {
-  geo: 55,
-  tag: 20,
-  artist: 10,
+  geo: 75,
+  tag: 5,
+  artist: 5,
   writer: 5,
   language: 10,
 };
