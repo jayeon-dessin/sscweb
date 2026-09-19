@@ -137,11 +137,11 @@ function geoSimilarity(songA, songB) {
 // 5가지 요소의 가중치. 슬라이더로 실시간 조절 가능 (합이 100이 아니어도
 // computeSimilarity에서 알아서 비율로 정규화함)
 const DEFAULT_BUBBLE_WEIGHTS = {
-  geo: 20,
+  geo: 35,
   tag: 30,
-  artist: 20,
-  writer: 15,
-  language: 15,
+  artist: 15,
+  writer: 10,
+  language: 10,
 };
 const bubbleWeights = { ...DEFAULT_BUBBLE_WEIGHTS }; // 고정값 - 사이트에서 조절 불가
 
@@ -184,10 +184,10 @@ function computeSimilarity(songA, songB) {
 // MIN_LINK_COUNT개만, 이 정도로 높으면 MAX_LINK_COUNT개까지 연결함
 // (관련성이 뚜렷한 곡은 여러 곡과 이어지고, 애매한 곡은 억지로 연결선을
 // 늘리지 않도록 함). 두 기준값 사이는 부드럽게 보간됨
-const MIN_LINK_COUNT = 2;
+const MIN_LINK_COUNT = 1;
 const MAX_LINK_COUNT = 5;
-const LOW_SIM_FOR_LINK_COUNT = 0.2;
-const HIGH_SIM_FOR_LINK_COUNT = 0.6;
+const LOW_SIM_FOR_LINK_COUNT = 0.3;
+const HIGH_SIM_FOR_LINK_COUNT = 0.7;
 
 // 가장 유사한 곡과의 유사도 하나만 보고, 그 곡에 연결할 개수(k)를 정함
 function linkCountFor(topSim) {
@@ -529,14 +529,46 @@ function initBubbleView() {
   // mouseenter/mouseleave는 "마우스가 움직여서" 안팎으로 지나갈 때만
   // 발생함. 그런데 이 버블들은 force simulation으로 계속 움직이기 때문에,
   // 마우스는 가만히 있는데 버블이 마우스 밑으로 들어왔다 나갔다 하는
-  // 경우가 흔함 - 이때는 마우스가 안 움직였으니 mouseenter/mouseleave가
-  // 아예 안 뜨거나(호버 상태가 실제로는 벗어났는데 안 풀림 = 계속 켜져
-  // 있는 것처럼 보임), 버블이 스쳐 지나가는 순간에만 잠깐 켜졌다 꺼지며
-  // 깜빡이는 것처럼 보임. 그래서 매 tick(버블이 움직일 때)마다, 그리고
-  // 마우스가 움직일 때마다 "지금 마우스 좌표를 기준으로 봤을 때 어떤
-  // 버블이 호버되어야 하는가"를 다시 계산해서 항상 실제 상태와 맞춤
+  // 경우가 흔함. 그래서 매 tick(버블이 움직일 때)마다, 그리고 마우스가
+  // 움직일 때마다 "지금 마우스 좌표를 기준으로 봤을 때 어떤 버블이
+  // 호버되어야 하는가"를 다시 계산해서 항상 실제 상태와 맞춤.
+  //
+  // 강조 표시를 켜고 끌 때도, 매번 버블 311개·연결선 수백 개를 전부
+  // 훑어서 클래스를 다시 계산(nodeSel.classed(예측함수))하지 않고, 바뀐
+  // 버블/그 이웃/연결선 몇 개만 직접 켜고 끄도록 최소화함 - 원래는 이
+  // "전체를 매번 다시 훑는" 계산 비용 때문에 화면이 버벅이면서 깜빡이는
+  // 것처럼 보였음
   let bubbleHoveredNodeId = null;
   let bubbleLastPointerEvent = null; // tick마다 같은 마우스 좌표로 다시 계산할 때 씀
+
+  const nodeElementsById = nodeSel.nodes(); // id === 배열 인덱스라 바로 접근 가능
+  const borderElementsById = nodeElementsById.map(
+    el => el.querySelector(".bubble-border")
+  );
+
+  // 버블 id -> 그 버블과 이어진 연결선 <line> 엘리먼트들 (호버 강조용)
+  const linkElementsByIndex = linkSel.nodes();
+  const linkElementsByNodeId = new Map();
+  bubbleLinks.forEach((l, i) => {
+    const s = typeof l.source === "object" ? l.source.id : l.source;
+    const t = typeof l.target === "object" ? l.target.id : l.target;
+    const el = linkElementsByIndex[i];
+    if (!linkElementsByNodeId.has(s)) linkElementsByNodeId.set(s, []);
+    if (!linkElementsByNodeId.has(t)) linkElementsByNodeId.set(t, []);
+    linkElementsByNodeId.get(s).push(el);
+    linkElementsByNodeId.get(t).push(el);
+  });
+
+  function setNodeHighlighted(nodeId, isOn) {
+    if (nodeId === null) return;
+    nodeElementsById[nodeId]?.classList.toggle("bubble-node-hovered", isOn);
+    neighborIdsOf(nodeId).forEach(neighborId => {
+      borderElementsById[neighborId]?.classList.toggle("bubble-similar", isOn);
+    });
+    (linkElementsByNodeId.get(nodeId) || []).forEach(el => {
+      el.classList.toggle("bubble-link-active", isOn);
+    });
+  }
 
   function findHoveredNodeId(pointerEvent) {
     if (!pointerEvent) return null;
@@ -564,21 +596,10 @@ function initBubbleView() {
   }
 
   function applyHoverHighlight(nodeId) {
-    if (nodeId === bubbleHoveredNodeId) return; // 바뀐 게 없으면 DOM 안 건드림
+    if (nodeId === bubbleHoveredNodeId) return; // 바뀐 게 없으면 아무것도 안 함
+    setNodeHighlighted(bubbleHoveredNodeId, false);
     bubbleHoveredNodeId = nodeId;
-
-    nodeSel.classed("bubble-node-hovered", n => n.id === nodeId);
-
-    const neighborIds = nodeId === null ? null : neighborIdsOf(nodeId);
-    nodeSel.select(".bubble-border")
-      .classed("bubble-similar", n => !!neighborIds && neighborIds.has(n.id));
-
-    linkSel.classed("bubble-link-active", l => {
-      if (nodeId === null) return false;
-      const s = typeof l.source === "object" ? l.source.id : l.source;
-      const t = typeof l.target === "object" ? l.target.id : l.target;
-      return s === nodeId || t === nodeId;
-    });
+    setNodeHighlighted(bubbleHoveredNodeId, true);
   }
 
   function refreshHoverFromLastPointer() {
@@ -646,6 +667,14 @@ function initBubbleView() {
     });
 
   bubbleSvg.call(bubbleZoomBehavior);
+
+  // d3.zoom은 기본적으로 더블클릭하면 그 지점을 중심으로 확대하는 동작이
+  // 내장돼 있음. 그런데 이 화면은 버블을 "한 번 클릭 -> 미리보기, 같은
+  // 버블 한 번 더 클릭 -> 상세로 이동"하는 구조라, 같은 버블을 빠르게 두 번
+  // 클릭하면 브라우저 입장에서는 더블클릭으로 인식돼서 화면이 갑자기
+  // 확 커지는(zoom) 부작용이 있었음. 이게 "깜빡이는 것처럼 보인다"고
+  // 느껴졌던 것의 실제 원인이라, 더블클릭 확대 기능 자체를 꺼서 해결함
+  bubbleSvg.on("dblclick.zoom", null);
 
   document.getElementById("bubble-reset-layout")?.addEventListener("click", () => {
     bubbleNodesData.forEach(n => {
