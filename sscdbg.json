@@ -6786,14 +6786,14 @@
     "title": "I Miss U (好想你)",
     "year": "2014",
     "artist": ["Joyce Chu (四叶草)"],
-    "songwriters": ["Namewee (黃明志)"],
+    "songwriters": ["Namewee"],
     "language": ["중국어"],
     "countries": ["MY"],
     "tags": ["만도팝", "포크"],
     "memo": "말레이시아 화교 가수 쥬쥬아이의 대표곡. 하오샹니",
     "youtube": [
       {"title": "MV", "url": "https://www.youtube.com/watch?v=fdQgPu3iUYk"},
-      {"title": "MV", "url": "https://www.youtube.com/watch?v=oVZ5DjqLR_w"}
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=oVZ5DjqLR_w"}
     ],
     "image": "covers/398-haoxiangni.jpg"
   },
@@ -7367,18 +7367,18 @@
     "image": "covers/437-supernatural.jpg"
   },
   {
-    "title": "Dance The Night Away",
-    "year": "2018",
-    "artist": ["TWICE"],
-    "songwriters": ["휘성","Anne Judith Wik","Moonshine","Cazzi Opeia","오승은","Andreas Baertels"],
-    "language": ["영어","한국어"],
-    "countries": ["KR","JP","TW"],
-    "tags": ["KPOP","팝","일렉트로닉"],
-    "memo": "트와이스의 여름 노래. 시원한 브라스",
+    "title": "Qué Será, Será (Whatever Will Be, Will Be)",
+    "year": "1956",
+    "artist": ["Doris Day"],
+    "songwriters": ["Jay Livingston","Ray Evans"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["영화음악","팝"],
+    "memo": "영화 <The Man Who Knew Too Much> 주제가. 스페인어로 '뭐든 되는 대로 될 것'이라는 뜻이긴 한데 비문이다.",
     "youtube": [
-      {"title": "MV", "url": "https://www.youtube.com/watch?v=Fm5iP0S1z9w"}
+      {"title": "영화", "url": "https://www.youtube.com/watch?v=xZbKHDPPrrc"}
     ],
-    "image": "covers/438-dtna-twice.jpg"
+    "image": "covers/438-que-sera-sera.jpg"
   },
   {
     "title": "Heal the World",
@@ -7713,5 +7713,75 @@
       {"title": "음악(가사, 영어 번역)", "url": "https://www.youtube.com/watch?v=WPzbGpe8HN0"}
     ],
     "image": "covers/461-nepal-folk.jpg"
+  },
+  {
+    "title": "ВИРТУАЛЬНАЯ ЛЮБОВЬ (VIRTUAL LOVE)",
+    "year": "2008",
+    "artist": ["Tanin Jazz"],
+    "songwriters": ["Tania Haroshka"],
+    "language": ["러시아어"],
+    "countries": ["BY"],
+    "tags": ["신스팝","하우스"],
+    "memo": "메시지를 보내며 하는 장거리 연애.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=XXEFaMlOIhE"}
+    ],
+    "image": "covers/462-virtual-love.jpg"
+  },
+  {
+    "title": "City of Stars",
+    "year": "2016",
+    "artist": ["Ryan Gosling","Emma Stone"],
+    "songwriters": ["Justin Hurwitz","Benj Pasek","Justin Paul"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["영화음악","재즈팝"],
+    "memo": "영화 <라라랜드> OST.",
+    "youtube": [
+      {"title": "음원", "url": "https://youtu.be/GTWqwSNQCcg?si=JQa4y5lSgVddtFeQ"}
+    ],
+    "image": "covers/463-la-la-land.jpg"
+  },
+  {
+    "title": "Treasure",
+    "year": "2012",
+    "artist": ["Bruno Mars"],
+    "songwriters": ["Bruno Mars","Philip Lawrence","Ari Levine","Phredley Brown","Thibaut Berland","Christopher Khan"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["디스코","펑크팝","소울","신스팝"],
+    "memo": "인트로가 밈이 된, 브루노 마스의 히트곡.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=nPvuNsRccVw"}
+    ],
+    "image": "covers/464-unorthodox-bruno-mars.jpg"
+  },
+  {
+    "title": "HandClap",
+    "year": "2016",
+    "artist": ["Fitz and The Tantrums"],
+    "songwriters": ["Fitz and The Tantrums","Eric Frederic","Sam Hollander"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["인디","댄스팝","일렉트로닉"],
+    "memo": "2018년경 한국에서 역주행한 곡.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/Y2V6yjjPbX0?si=Da87PdND7VdvgDve"}
+    ],
+    "image": "covers/465-handclap.jpg"
+  },
+  {
+    "title": "3roos Elneel",
+    "year": "2016",
+    "artist": ["Alsarah & The Nubatones"],
+    "songwriters": ["Alsarah & The Nubatones","A. Elgadi"],
+    "language": ["아랍어"],
+    "countries": ["SD","US"],
+    "tags": ["아프로팝","누비아","포크"],
+    "memo": "'나일강의 신부', 누비아 스타일의 곡.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=Pk-fhXPbCt0"}
+    ],
+    "image": "covers/466-3roos-elneel.jpg"
   }
 ]
