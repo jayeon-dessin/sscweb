@@ -250,7 +250,21 @@
       {"title": "The Kiwi Sound", "url": "https://www.youtube.com/watch?v=nqr4wamt1-g"},
       {"title": "한국어 번안곡, 해바라기 - 연가 (1985)", "url": "https://www.youtube.com/watch?v=gClLG1Xka9E"}
     ],
-    "image": "covers/014-pokarekare-ana.jpg"
+    "image": "covers/014-maori.jpg"
+  },
+  {
+    "title": "Tama Ngākau Mārie",
+    "year": "1914",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language": ["마오리어"],
+    "countries": ["NZ"],
+    "tags": ["민요","종교음악"],
+    "memo": "'평화의 아들', 마오리 전통 찬송가.",
+    "youtube": [
+      {"title": "Aotearoa Maori Chorale", "url": "https://youtu.be/uykV_OnHYOo?si=T63w0c4ZrQIiVZ9q"}
+    ],
+    "image": "covers/014-maori.jpg"
   },
   {
     "title": "Im Himmel Gibt's Kein Bier",
@@ -733,7 +747,7 @@
     "title": "Bailando",
     "year": "2014",
     "artist": ["Enrique Iglesias", "Descemer Bueno", "Gente De Zona"],
-    "songwriters": ["Enrique Iglesias", "Descemer Bueno", "Alexander Delgado", "Randy Malcom Martínez"],
+    "songwriters": ["Enrique Iglesias", "Descemer Bueno", "Alexander Delgado", "Randy Malcom"],
     "language": ["스페인어"],
     "countries": ["ES", "CU"],
     "tags": ["라틴팝", "댄스"],
@@ -7465,5 +7479,239 @@
       {"title": "MV", "url": "https://www.youtube.com/watch?v=CwfoyVa980U"}
     ],
     "image": "covers/445-voicenotes-charlie-puth.jpg"
+  },
+  {
+    "title": "Dancing in the Moonlight",
+    "year": "1970",
+    "artist": ["Boffalongo"],
+    "songwriters": ["Sherman Kelly"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["팝","소프트록","달"],
+    "memo": "달빛 아래 춤추며.",
+    "youtube": [
+      {"title": "Boffalongo 원곡", "url": "https://www.youtube.com/watch?v=r6dFjDQx_BQ"},
+      {"title": "Toploader 버전", "url": "https://youtu.be/0yBnIUX0QAE?si=7dD9WcUzCofyOiUw"}
+    ],
+    "image": "covers/446-dancing-in-the-moonlight.jpg"
+  },
+  {
+    "title": "Alone Again (Naturally)",
+    "year": "1972",
+    "artist": ["Gilbert O'Sullivan"],
+    "songwriters": ["Gilbert O'Sullivan"],
+    "language": ["영어"],
+    "countries": ["IE"],
+    "tags": ["팝","소프트록","발라드"],
+    "memo": "우울한 가사의 팝 발라드. 당연하게도, 다시금 혼자.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=gU3ubk8u7dA"},
+      {"title": "MV (2024)", "url": "https://www.youtube.com/watch?v=6Fv7Jkccf34"}
+    ],
+    "image": "covers/447-alone-again.jpg"
+  },
+  {
+    "title": "Can't Take My Eyes Off You",
+    "year": "1967",
+    "artist": ["Frankie Valli"],
+    "songwriters": ["Bob Crewe","Bob Gaudio"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["팝","소울"],
+    "memo": "I Love You Baby~로 잘 알려진 고전 명곡.",
+    "youtube": [
+      {"title": "음원", "url": "https://youtu.be/J36z7AnhvOM?si=5sCuQteGocK7biz1"},
+      {"title": "Morten Harket 버전", "url": "https://youtu.be/3pYqVj-FyBk?si=R0XTjrsZj41YCv3h"}
+    ],
+    "image": "covers/448-cant-take-my-eyes.jpg"
+  },
+  {
+    "title": "Yellow",
+    "year": "2000",
+    "artist": ["Coldplay"],
+    "songwriters": ["Chris Martin","Jonny Buckland","Guy Berryman","Will Champion"],
+    "language": ["영어"],
+    "countries": ["GB"],
+    "tags": ["얼터너티브록","팝록"],
+    "memo": "Yellow의 중의적 의미를 이용한 가사.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/yKNxeF4KMsY?si=S7RGm2R2RGxAGoT_"}
+    ],
+    "image": "covers/449-parachutes-coldplay.jpg"
+  },
+  {
+    "title": "Misty",
+    "year": "1954",
+    "artist": [],
+    "songwriters": ["Erroll Garner"],
+    "language": [],
+    "countries": ["US"],
+    "tags": ["재즈"],
+    "memo": "에롤 가너의 재즈 곡, 가사는 나중에 붙여짐.",
+    "youtube": [
+      {"title": "원곡(inst)", "url": "https://youtu.be/UOLEEkYO4MA?si=ndyHpif1antMyi0q"},
+      {"title": "Johnny Mathis 버전", "url": "https://youtu.be/DkC9bCuahC8?si=5xrqHgDnIMFdJEmq"},
+      {"title": "Ella Fitzgerald 버전. 가장 유명한 듯", "url": "https://youtu.be/rPOlakkBlj8?si=LHo9va2UlTn8yBLC"}
+    ],
+    "image": "covers/450-erroll-garner.jpg"
+  },
+  {
+    "title": "What a Wonderful World",
+    "year": "1967",
+    "artist": ["Louis Armstrong"],
+    "songwriters": ["Bob Thiele","George David Weiss"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["R&B","팝","발라드"],
+    "memo": "이 얼마나 멋진 세상인가. 영화 <굿모닝 베트남>에서 역설적인 BGM으로 사용되었다.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=rBrd_3VMC3c"},
+      {"title": "BBC 공연", "url": "https://www.youtube.com/watch?v=CaCSuzR4DwM"}
+    ],
+    "image": "covers/451-what-a-wonderful-world.jpg"
+  },
+  {
+    "title": "Isn't She Lovely",
+    "year": "1976",
+    "artist": ["Stevie Wonder"],
+    "songwriters": ["Stevie Wonder"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["소울"],
+    "memo": "딸의 탄생을 축하하며 쓴 가사. 시각을 뛰어넘은 사랑",
+    "youtube": [
+      {"title": "음원", "url": "https://youtu.be/oE56g61mW44?si=-yhyPkax3JNNCC7f"}
+    ],
+    "image": "covers/452-isnt-she-lovely.jpg"
+  },
+  {
+    "title": "Kung Fu Fighting",
+    "year": "1974",
+    "artist": ["Carl Douglas"],
+    "songwriters": ["Carl Douglas"],
+    "language": ["영어"],
+    "countries": ["JM","GB"],
+    "tags": ["디스코"],
+    "memo": "한창 중국무술이 인기를 끌 때 만들어진, 약간은 차별적이지만 신나는 곡.",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=bjnFXgdyyLw"},
+      {"title": "영화 <쿵푸 팬더>, CeeLo Green & Jack Black 버전", "url": "https://www.youtube.com/watch?v=XJgF5LLue8c"}
+    ],
+    "image": "covers/453-kung-fu-fighting.jpg"
+  },
+  {
+    "title": "La Bamba",
+    "year": "17c?",
+    "artist": [],
+    "songwriters": ["Traditional"],
+    "language": ["스페인어"],
+    "countries": ["MX"],
+    "tags": ["민요","로큰롤"],
+    "memo": "멕시코 베라크루즈 주의 민요. 1958년 Ritchie Valens, 1987년 Los Lobos 버전으로 널리 알려졌다.",
+    "youtube": [
+      {"title": "Ritche Valens 버전", "url": "https://www.youtube.com/watch?v=0ymdjg9v8zM"},
+      {"title": "가장 널리 알려진 Los Lobos 버전. Valens의 인생을 담은 영화 <La Bamba>에 삽입", "url": "https://www.youtube.com/watch?v=nLAWPrCUQQ0"}
+    ],
+    "image": "covers/454-la-bamba.jpg"
+  },
+  {
+    "title": "Waltzing Matilda",
+    "year": "1895",
+    "artist": [],
+    "songwriters": ["Banjo Paterson"],
+    "language": ["영어"],
+    "countries": ["AU"],
+    "tags": ["민요","부시발라드","호주"],
+    "memo": "호주를 대표하는 곡 중 하나. 선율은 스코틀랜드 민요에서 따 왔다.",
+    "youtube": [
+      {"title": "Slim Dusty 버전", "url": "https://youtu.be/FqtttbbYfSM?si=MATUDlUTK9F7po4T"},
+      {"title": "합창 버전", "url": "https://www.youtube.com/watch?v=WZ52jOcXlfc"},
+      {"title": "문명 6 호주 BGM (원자 시대)", "url": "https://www.youtube.com/watch?v=oNoy6AJ3-HY"}
+    ],
+    "image": "covers/455-waltzing-matilda.jpg"
+  },
+  {
+    "title": "Το Τραγούδι Του Καιρού (Happy Day)",
+    "year": "2016",
+    "artist": ["Kostas Doxas (Κώστας Δόξας)"],
+    "songwriters": ["Lampros Konstantaras","Konstantinos Pantzis"],
+    "language": ["그리스어","영어"],
+    "countries": ["GR"],
+    "tags": ["팝","라이코"],
+    "memo": "'날씨의 노래'. 그리스 아침방송 기상예보에서 사용된 중독성 있는 곡",
+    "youtube": [
+      {"title": "Lyric Video", "url": "https://www.youtube.com/watch?v=r9z6zAZ92uY"}
+    ],
+    "image": "covers/456-kalimera.jpg"
+  },
+  {
+    "title": "La Gozadera",
+    "year": "2015",
+    "artist": ["Gente De Zona","Marc Anthony"],
+    "songwriters": ["Alexander Delgado","Randy Malcom","Arbise González"],
+    "language": ["스페인어"],
+    "countries": ["CU","US"],
+    "tags": ["라틴팝","레게톤"],
+    "memo": "신나는 파티 레게톤.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=VMp55KH_3wo"}
+    ],
+    "image": "covers/457-la-gozadera.jpg"
+  },
+  {
+    "title": "A Thousand Years",
+    "year": "2011",
+    "artist": ["Christina Perri"],
+    "songwriters": ["Christina Perri","David Hodges"],
+    "language": ["영어"],
+    "countries": ["US"],
+    "tags": ["발라드","팝","포크","영화음악"],
+    "memo": "영화 <브레이킹 던 part 1> 삽입곡.",
+    "youtube": [
+      {"title": "MV", "url": "https://www.youtube.com/watch?v=VMp55KH_3wo"}
+    ],
+    "image": "covers/458-a-thousand-years.jpg"
+  },
+  {
+    "title": "Tunnista tuntiin",
+    "year": "2024",
+    "artist": ["Ege Zulu","Behm"],
+    "songwriters": ["Eugene Mokulu","Rita Behm","Saleh Masaadi","Kyösti Salokorpi"],
+    "language": ["핀란드어"],
+    "countries": ["FI"],
+    "tags": ["팝","R&B"],
+    "memo": "'매 순간' 네가 그리워.",
+    "youtube": [
+      {"title": "MV", "url": "https://youtu.be/ShTKNTQNCls?si=xS3w72jH6zThk8tF"}
+    ],
+    "image": "covers/459-tunnista-tuntiin.jpg"
+  },
+  {
+    "title": "Naro, Beman (نرو٬ بمان)",
+    "year": "2013",
+    "artist": ["Pallett (پالت)"],
+    "songwriters": ["Omid Nemati","Kaveh Afagh"],
+    "language": ["페르시아어"],
+    "countries": ["IR"],
+    "tags": ["팝","인디","포크"],
+    "memo": "'가지 마, 남아 줘'. 이란의 퓨전 곡",
+    "youtube": [
+      {"title": "음원", "url": "https://www.youtube.com/watch?v=AtbmsunGucc"}
+    ],
+    "image": "covers/460-naro-beman.jpg"
+  },
+  {
+    "title": "Resham Firiri (रेशम फिरिरि)",
+    "year": "1969",
+    "artist": ["Sunder Shrestha","Dwarika Lal Joshi"],
+    "songwriters": ["Traditional","Buddhi Pariyar"],
+    "language": ["네팔어"],
+    "countries": ["NP"],
+    "tags": ["민요"],
+    "memo": "네팔 포하라 지역 민요를 수집하여 녹음한 곡.",
+    "youtube": [
+      {"title": "음악(가사, 영어 번역)", "url": "https://www.youtube.com/watch?v=WPzbGpe8HN0"}
+    ],
+    "image": "covers/461-nepal-folk.jpg"
   }
 ]

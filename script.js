@@ -9,7 +9,7 @@ let isRestoringState = false;
 // { type: "country" | "tag" | "timeline", value?: string } | null
 let compactListReturnTo = null;
 
-// "map"(지도) / "countries"(목록) / "timeline"(연표) / "tags"(태그) / "bubble"(버블) / "about"(소개)
+// "map"(지도) / "countries"(목록) / "timeline"(연표) / "tags"(태그) / "about"(소개)
 let viewMode = "map";
 const songList = document.getElementById("song-list");
 const tagSearch = document.getElementById("tag-search");
@@ -23,23 +23,20 @@ const timelineList = document.getElementById("timeline-list");
 const timelineSort = document.getElementById("timeline-sort");
 const tagsView = document.getElementById("tags-view");
 const tagsList = document.getElementById("tags-list");
-const bubbleView = document.getElementById("bubble-view");
 const aboutView = document.getElementById("about-view");
 const songsView = document.getElementById("songs-view");
 const countryTitle = document.getElementById("country-title");
 const countrySort =  document.getElementById("country-sort");
 const tagSort = document.getElementById("tag-sort");
 const backButton = document.getElementById("back-to-countries");
-// .view-tab-external(버블 탭처럼 진짜 다른 페이지로 이동하는 링크)은
-// 여기서 관리하는 "화면 안에서 뷰 전환" 로직 대상이 아니므로 제외
-const viewTabs = document.querySelectorAll(".view-tab:not(.view-tab-external)");
+const viewTabs = document.querySelectorAll(".view-tab");
 const randomDiceButton = document.getElementById("random-dice-button");
 
 // -------------------------------------
-// 목록/지도/연표/태그/버블/소개 뷰 <-> 곡 목록 뷰 전환
+// 목록/지도/연표/태그/소개 뷰 <-> 곡 목록 뷰 전환
 // -------------------------------------
 
-// 국가를 고르는 화면(목록, 지도, 연표, 태그, 버블, 소개 중 현재 viewMode에 맞는 것)을 보여줌
+// 국가를 고르는 화면(목록, 지도, 연표, 태그, 소개 중 현재 viewMode에 맞는 것)을 보여줌
 function showBrowseUI() {
   songsView.style.display = "none";
   songsView.classList.remove("songs-view-no-header");
@@ -48,7 +45,6 @@ function showBrowseUI() {
   mapView.style.display = viewMode === "map" ? "block" : "none";
   timelineView.style.display = viewMode === "timeline" ? "block" : "none";
   tagsView.style.display = viewMode === "tags" ? "block" : "none";
-  bubbleView.style.display = viewMode === "bubble" ? "block" : "none";
   aboutView.style.display = viewMode === "about" ? "block" : "none";
 }
 
@@ -58,7 +54,6 @@ function showSongsUI() {
   mapView.style.display = "none";
   timelineView.style.display = "none";
   tagsView.style.display = "none";
-  bubbleView.style.display = "none";
   aboutView.style.display = "none";
   songsView.style.display = "block";
   songsView.classList.remove("songs-view-no-header");
@@ -86,7 +81,7 @@ function goToBrowseView(mode) {
   tagSearch.value = "";
 
   // renderCountries()가 국가 목록도 새로 그리고, showBrowseUI()를 통해
-  // 현재 viewMode에 맞는 화면(목록/지도/연표/태그/버블/소개)도 함께 보여줌
+  // 현재 viewMode에 맞는 화면(목록/지도/연표/태그/소개)도 함께 보여줌
   renderCountries();
 
   if (mode === "timeline") {
@@ -95,10 +90,6 @@ function goToBrowseView(mode) {
 
   if (mode === "tags") {
     renderTagsList();
-  }
-
-  if (mode === "bubble" && typeof initBubbleView === "function") {
-    initBubbleView();
   }
 
   updateURLState(true);
@@ -237,7 +228,7 @@ function restoreStateFromURL() {
   const keyword = params.get("q");
 
   // 뷰 모드 복원 (기본값: 지도)
-  const validModes = ["map", "countries", "timeline", "tags", "bubble", "about"];
+  const validModes = ["map", "countries", "timeline", "tags", "about"];
   viewMode = validModes.includes(view) ? view : "map";
   setActiveViewTab();
 
@@ -274,8 +265,6 @@ function restoreStateFromURL() {
     renderTimeline();
   } else if (viewMode === "tags") {
     renderTagsList();
-  } else if (viewMode === "bubble" && typeof initBubbleView === "function") {
-    initBubbleView();
   }
   isRestoringState = false;
 }
@@ -901,8 +890,6 @@ backButton.addEventListener("click", () => {
       selectTag(returnTo.value);
     } else if (returnTo.type === "timeline") {
       showTimelineList();
-    } else if (returnTo.type === "bubbleGroup" && typeof selectBubbleGroupByKey === "function") {
-      selectBubbleGroupByKey(returnTo.value);
     } else {
       selectCountry(returnTo.value);
     }
